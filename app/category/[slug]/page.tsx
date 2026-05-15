@@ -92,7 +92,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
         {/* Hero Component */}
         <CategoryHero 
-          category={category}
+          category={category as Category}
           categoryName={categoryName}
           description={description}
         />
