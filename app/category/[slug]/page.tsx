@@ -4,6 +4,7 @@ import tools from '@/data/tools.json';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
+import CategoryHero from './CategoryHero';
 
 type Tool = (typeof tools)[0];
 type Category = Tool['category'];
@@ -89,21 +90,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           </Link>
         </div>
 
-        <div className="mb-10">
-          <div className="bg-gradient-to-br from-slate-50 to-white dark:from-gray-950 dark:to-gray-900 backdrop-blur-xl border border-white/60 dark:border-white/10 shadow-xl rounded-3xl p-8 sm:p-12">
-            <div className="text-center">
-              <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} mb-4`}>
-                {categoryName}
-              </span>
-              <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
-                {categoryName} Tools
-              </h1>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
-                {description}
-              </p>
-            </div>
-          </div>
-        </div>
+        {/* Hero Component */}
+        <CategoryHero 
+          category={category}
+          categoryName={categoryName}
+          description={description}
+        />
 
         <div className={`h-px bg-gradient-to-r from-transparent via-${categorySlug.toLowerCase()}-300 dark:via-${categorySlug.toLowerCase()}-500/20 to-transparent mb-10 mx-auto max-w-2xl`} />
 
