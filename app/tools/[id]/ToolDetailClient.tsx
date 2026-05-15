@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { ArrowRight, Home } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 
+type Example = {
+  prompt: string;
+  image_url: string;
+};
+
 type Tool = {
   id: number;
   name: string;
@@ -13,6 +18,7 @@ type Tool = {
   affiliate_link: string | null;
   icon_url: string;
   pricing: string;
+  examples?: Example[];
 };
 
 const categoryFeatures: Record<string, string[]> = {
@@ -161,6 +167,34 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
             ))}
           </div>
         </div>
+
+        {/* Examples Section */}
+        {tool.examples && tool.examples.length > 0 && (
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">🎨 Examples & Prompts</h2>
+            <div className="space-y-6">
+              {tool.examples.map((example, index) => (
+                <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                  {/* Image */}
+                  <div className="rounded-2xl overflow-hidden shadow-lg">
+                    <img
+                      src={example.image_url}
+                      alt={`Example ${index + 1}`}
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                  {/* Prompt */}
+                  <div className="bg-slate-100 dark:bg-slate-800 rounded-2xl p-6">
+                    <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">Prompt</h3>
+                    <p className="text-slate-700 dark:text-slate-300 font-mono text-sm leading-relaxed">
+                      {example.prompt}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Related Tools Section */}
         {relatedTools.length > 0 && (
