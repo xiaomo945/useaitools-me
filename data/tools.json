@@ -1,0 +1,292 @@
+[
+  {
+    "id": 1,
+    "name": "Midjourney",
+    "description": "最著名的AI图像生成工具，能创建高质量的艺术作品。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://midjourney.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "A majestic dragon flying over a misty mountain at sunset, fantasy art style, highly detailed",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      },
+      {
+        "prompt": "Cyberpunk cityscape with neon lights, rainy streets, cinematic lighting",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "DALL-E 3",
+    "description": "OpenAI开发的强大图像生成工具，通过文字描述生成图片。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://openai.com/dall-e-3",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "A cozy cabin in the woods during a snowstorm, warm lights glowing through windows",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      },
+      {
+        "prompt": "An astronaut riding a horse on Mars, wearing a space suit, realistic photography",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Stable Diffusion",
+    "description": "开源的AI图像生成工具，可以本地部署，高度可定制。",
+    "category": "Image",
+    "pricing": "Open Source",
+    "url": "https://stability.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Japanese garden in spring, cherry blossoms, traditional architecture, peaceful atmosphere",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      },
+      {
+        "prompt": "Steampunk mechanical owl with intricate gears, Victorian style, studio photography",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Canva Magic Design",
+    "description": "Canva的AI设计工具，快速创建专业的设计作品。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://canva.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Modern coffee shop social media post design, warm colors, friendly vibe",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      },
+      {
+        "prompt": "Professional business presentation template with clean design and blue accents",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Notion AI",
+    "description": "集成在Notion中的AI助手，帮助写作、总结、翻译等。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://notion.so",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 6,
+    "name": "ChatGPT",
+    "description": "OpenAI的大语言模型，可以对话、写作、编程、分析等。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://chat.openai.com",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 7,
+    "name": "GitHub Copilot",
+    "description": "AI编程助手，实时提供代码建议。",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://github.com/copilot",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 8,
+    "name": "ElevenLabs",
+    "description": "高质量的AI语音生成工具，能创建逼真的语音。",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://elevenlabs.io",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 9,
+    "name": "Runway ML",
+    "description": "AI视频编辑和生成平台，专业视频制作工具。",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://runwayml.com",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 10,
+    "name": "Perplexity AI",
+    "description": "AI搜索引擎，提供带有引用的准确回答。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://perplexity.ai",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 11,
+    "name": "Whisper",
+    "description": "OpenAI的语音转文字工具，支持多种语言。",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://openai.com/research/whisper",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 12,
+    "name": "Pika Labs",
+    "description": "AI视频生成工具，从文本创建动画视频。",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://pika.art",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 13,
+    "name": "Cursor",
+    "description": "专为AI设计的代码编辑器，内置强大的Copilot功能。",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://cursor.so",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 14,
+    "name": "Obsidian Copilot",
+    "description": "Obsidian笔记软件的AI插件，增强知识管理。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://obsidian.md",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 15,
+    "name": "Suno AI",
+    "description": "AI音乐生成工具，能根据文字描述创作歌曲。",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://suno.ai",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 16,
+    "name": "Sora",
+    "description": "OpenAI的最新视频生成模型，能创建高质量视频。",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://openai.com/sora",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 17,
+    "name": "Tabnine",
+    "description": "AI代码补全工具，支持多种编程语言和IDE。",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://tabnine.com",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 18,
+    "name": "Jasper",
+    "description": "企业级AI写作平台，用于营销和内容创作。",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://jasper.ai",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 19,
+    "name": "Adobe Firefly",
+    "description": "Adobe的创意AI工具，用于生成图像、文字效果等。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://firefly.adobe.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Watercolor painting of a sunset over the ocean, soft brush strokes, warm colors",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      },
+      {
+        "prompt": "3D text effect \"DREAM\" floating in clouds, golden hour lighting, magical atmosphere",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Claude",
+    "description": "Anthropic的先进AI助手，擅长推理、写作、分析和编程任务。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://claude.ai",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 21,
+    "name": "Gemini",
+    "description": "Google的多模态AI助手，能理解文本、图像、音频等。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://gemini.google.com",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 22,
+    "name": "Writesonic",
+    "description": "AI写作平台，用于创建SEO优化的文章、博客和营销文案。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://writesonic.com",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 23,
+    "name": "Rytr",
+    "description": "AI写作助手，帮助快速创建高质量内容。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://rytr.me",
+    "affiliate_link": "",
+    "icon_url": ""
+  },
+  {
+    "id": 24,
+    "name": "QuillBot",
+    "description": "AI驱动的改写和写作工具，帮助提高词汇量和风格。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://quillbot.com",
+    "affiliate_link": "",
+    "icon_url": ""
+  }
+]
