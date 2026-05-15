@@ -69,13 +69,13 @@ const colorMap: Record<Category, {
 };
 
 interface CategoryHeroProps {
-  category: Category;
+  category: string;
   categoryName: string;
   description: string;
 }
 
 export default function CategoryHero({ category, categoryName, description }: CategoryHeroProps) {
-  const colors = colorMap[category];
+  const colors = colorMap[category as Category];
 
   return (
     <div className="mb-10">
