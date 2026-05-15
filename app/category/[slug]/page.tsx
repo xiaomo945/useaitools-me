@@ -90,15 +90,15 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         </div>
 
         <div className="mb-10">
-          <div className={`bg-gradient-to-br from-${categorySlug.toLowerCase()}-50/80 via-white to-${categorySlug.toLowerCase()}-50/80 dark:from-gray-900 dark:to-gray-900 backdrop-blur-xl border border-white/60 dark:border-white/10 shadow-xl rounded-3xl p-8 sm:p-12`}>
+          <div className="bg-gradient-to-br from-slate-50 to-white dark:from-gray-950 dark:to-gray-900 backdrop-blur-xl border border-white/60 dark:border-white/10 shadow-xl rounded-3xl p-8 sm:p-12">
             <div className="text-center">
-              <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-semibold ${colors.bg} text-white mb-4`}>
+              <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} mb-4`}>
                 {categoryName}
               </span>
               <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
                 {categoryName} Tools
               </h1>
-              <p className="text-lg text-slate-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
                 {description}
               </p>
             </div>
