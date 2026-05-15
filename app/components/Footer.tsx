@@ -28,7 +28,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://dev.to/jiongxiaomo"
+              href="https://dev.to/xiaomo"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-500 hover:text-slate-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-300"
