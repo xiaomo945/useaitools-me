@@ -14,10 +14,18 @@ type Tool = {
   url: string;
   affiliate_link: string;
   icon_url: string;
+  examples?: any[];
 };
 
 // 类型断言确保数据符合我们的类型要求
 const typedTools = tools as Tool[];
+
+// Helper function to get affiliate link from environment variable or fallback to JSON
+function getAffiliateLink(tool: Tool): string {
+  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
+  const envLink = process.env[envVarName];
+  return envLink || tool.affiliate_link;
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
@@ -53,11 +61,18 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
     notFound();
   }
 
-  // Get related tools from the same category
+  // Enrich tool with affiliate link from environment variable
+  const enrichedTool = {
+    ...tool,
+    affiliate_link: getAffiliateLink(tool)
+  };
+
+  // Get related tools from the same category and enrich them too
   const relatedTools = typedTools
     .filter(t => t.category === tool.category && t.id !== tool.id)
     .sort(() => Math.random() - 0.5)
-    .slice(0, 3);
+    .slice(0, 3)
+    .map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
 
-  return <ToolDetailClient tool={tool} relatedTools={relatedTools} />;
+  return <ToolDetailClient tool={enrichedTool} relatedTools={relatedTools} />;
 }

@@ -36,6 +36,13 @@ const colorMap: Record<Category, { bg: string; bgDark: string; text: string; tex
   Video:      { bg: 'bg-indigo-500', bgDark: 'bg-indigo-500/20', text: 'text-indigo-300', textLight: 'text-indigo-600', border: 'border-indigo-300', ring: 'hover:shadow-indigo-500/20' }
 };
 
+// Helper function to get affiliate link from environment variable or fallback to JSON
+function getAffiliateLink(tool: Tool): string {
+  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
+  const envLink = process.env[envVarName];
+  return envLink || tool.affiliate_link;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const categorySlug = slug.charAt(0).toUpperCase() + slug.slice(1);
@@ -70,7 +77,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  const categoryTools = tools.filter(t => t.category === category);
+  // Enrich tools with affiliate links from environment variables
+  const categoryTools = tools
+    .filter(t => t.category === category)
+    .map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
   const colors = colorMap[category];
   const description = categoryDescriptions[category];
   const categoryName = categoryNames[category];
