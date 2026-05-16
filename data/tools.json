@@ -97,7 +97,17 @@
     "pricing": "Freemium",
     "url": "https://chat.openai.com",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Write a professional email to request a meeting with a potential client for a product demo",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Draft a comprehensive blog post about the benefits of remote work for modern companies",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 7,
@@ -277,7 +287,17 @@
     "pricing": "Paid",
     "url": "https://jasper.ai",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Generate a compelling product description for a new smartwatch with health monitoring features",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create engaging social media posts for a coffee brand launch campaign",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 19,
@@ -307,7 +327,17 @@
     "pricing": "Freemium",
     "url": "https://claude.ai",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Write a thoughtful analysis of the ethical implications of artificial intelligence in healthcare",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Draft a creative short story about a time traveler who accidentally changes history",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 21,
@@ -317,7 +347,17 @@
     "pricing": "Freemium",
     "url": "https://gemini.google.com",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Write a research summary comparing renewable energy sources for a sustainability report",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create a detailed travel itinerary for a 7-day trip to Japan with cultural recommendations",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 22,
@@ -327,7 +367,17 @@
     "pricing": "Freemium",
     "url": "https://writesonic.com",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Generate an SEO-optimized blog post about digital marketing strategies for small businesses",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Write compelling meta descriptions and headlines for an e-commerce website selling organic skincare products",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 23,
@@ -337,7 +387,17 @@
     "pricing": "Freemium",
     "url": "https://rytr.me",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Write a persuasive landing page copy for a SaaS project management tool",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create engaging video script ideas for a YouTube channel about personal finance",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 24,
@@ -347,7 +407,17 @@
     "pricing": "Freemium",
     "url": "https://quillbot.com",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Paraphrase this academic paragraph about climate change into a more casual and engaging tone",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Expand and elaborate this brief bullet point summary into a comprehensive paragraph",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 51,
