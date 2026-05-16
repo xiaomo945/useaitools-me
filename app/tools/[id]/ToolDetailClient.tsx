@@ -218,6 +218,8 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
                         src={example.image_url}
                         alt={`Example ${index + 1}`}
                         className="w-full h-auto object-cover"
+                        width="600"
+                        height="400"
                         loading="lazy"
                       />
                       {/* Shimmer overlay on hover */}

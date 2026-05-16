@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;900&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -9,9 +8,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: var(--font-inter), sans-serif;
   --font-mono: var(--font-geist-mono);
-  --font-serif: 'Playfair Display', serif;
+  --font-serif: var(--font-playfair-display), serif;
 }
 
 @media (prefers-color-scheme: dark) {
