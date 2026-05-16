@@ -366,7 +366,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
               return (
                 <div
                   key={tool.id}
-                  className="shimmer-card bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
+                  className="shimmer-card bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up"
                   style={{ 
                     willChange: 'transform', 
                     animationDelay: `${index * 50}ms`,
@@ -389,7 +389,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                       </div>
                     </div>
                   </div>
-                  <p className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
                     {tool.description}
                   </p>
                   <Link
@@ -418,7 +418,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
             return (
               <div
                 key={tool.id}
-                className="shimmer-card bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
+                className="shimmer-card bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up"
                 style={{ 
                   animationDelay: `${index * 50}ms`,
                   willChange: 'transform'
@@ -441,7 +441,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => toggleCompare(tool.id)}
-                        className={`w-6 h-6 rounded border-2 transition-all duration-200 flex items-center justify-center ${
+                        className={`w-6 h-6 rounded border-2 transition-all duration-300 ease-out flex items-center justify-center ${
                           isSelectedForCompare 
                             ? 'bg-emerald-500 border-emerald-500 text-white' 
                             : 'border-slate-300 dark:border-slate-600 hover:border-emerald-400'
@@ -462,7 +462,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                   </div>
 
                   {/* Description */}
-                  <p className="text-slate-600 dark:text-gray-300 leading-relaxed mb-5 line-clamp-2">
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-4 mb-4 line-clamp-2">
                     {highlightText(tool.description, search)}
                   </p>
 
@@ -475,7 +475,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                     <div className="flex items-center gap-2">
                       <Link
                         href={`/compare?tool=${tool.id}`}
-                        className="inline-flex items-center gap-2 px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-slate-100 dark:hover:bg-slate-700 hover:border-slate-400 dark:hover:border-slate-500 focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none"
+                        className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         Compare
                         <svg
