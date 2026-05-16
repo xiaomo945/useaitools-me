@@ -87,7 +87,17 @@
     "pricing": "Freemium",
     "url": "https://notion.so",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Summarize this 30-minute team meeting transcript into key action items and decisions",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Organize and structure these scattered project notes into a clear, actionable plan",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 6,
@@ -167,7 +177,17 @@
     "pricing": "Freemium",
     "url": "https://perplexity.ai",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Research and summarize the latest trends in AI-powered productivity tools for 2026",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Compare the features and pricing of top project management software with citations",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 11,
@@ -227,7 +247,17 @@
     "pricing": "Freemium",
     "url": "https://obsidian.md",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Connect and summarize related notes about machine learning from my vault",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Extract key insights and create a mind map outline from this research paper",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 15,
