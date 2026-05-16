@@ -127,7 +127,17 @@
     "pricing": "Paid",
     "url": "https://github.com/copilot",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Write a function to validate email addresses with regex in TypeScript",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Refactor this messy Python script for better readability and performance",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 8,
@@ -237,7 +247,17 @@
     "pricing": "Freemium",
     "url": "https://cursor.so",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Debug this React component that's throwing a useState hook error",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Explain this complex algorithm and suggest optimizations",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 14,
@@ -307,7 +327,17 @@
     "pricing": "Freemium",
     "url": "https://tabnine.com",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Complete this C# async method for reading data from a database",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Suggest test cases for this user authentication function",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 18,
