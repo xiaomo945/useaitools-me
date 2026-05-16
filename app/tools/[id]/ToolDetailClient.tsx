@@ -174,22 +174,33 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">🎨 Examples & Prompts</h2>
             <div className="space-y-6">
               {tool.examples.map((example, index) => (
-                <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  {/* Image */}
-                  <div className="rounded-2xl overflow-hidden shadow-lg">
-                    <img
-                      src={example.image_url}
-                      alt={`Example ${index + 1}`}
-                      className="w-full h-auto object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                  {/* Prompt */}
-                  <div className="bg-slate-100 dark:bg-slate-800 rounded-2xl p-6">
-                    <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">Prompt</h3>
-                    <p className="text-slate-700 dark:text-slate-300 font-mono text-sm leading-relaxed">
-                      {example.prompt}
-                    </p>
+                <div 
+                  key={index} 
+                  className="pb-6 border-b border-gray-100 dark:border-gray-800 last:pb-0 last:border-b-0"
+                >
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Image */}
+                    <div 
+                      className="rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ease-out"
+                      style={{ 
+                        willChange: 'transform',
+                        transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' 
+                      }}
+                    >
+                      <img
+                        src={example.image_url}
+                        alt={`Example ${index + 1}`}
+                        className="w-full h-auto object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    {/* Prompt */}
+                    <div className="bg-gray-50 dark:bg-gray-800/60 rounded-lg p-4">
+                      <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">Prompt</h3>
+                      <p className="text-gray-700 dark:text-gray-300 font-mono text-sm leading-relaxed">
+                        {example.prompt}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
