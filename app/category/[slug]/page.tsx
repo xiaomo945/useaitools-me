@@ -86,9 +86,46 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   const description = categoryDescriptions[category];
   const categoryName = categoryNames[category];
 
+  // CollectionPage Schema
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    'name': `${categoryName} AI Tools - Use AI Tools`,
+    'description': description,
+    'url': `https://useaitools.me/category/${slug}`,
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Use AI Tools',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': 'https://useaitools.me/logo.png'
+      }
+    },
+    'author': {
+      '@type': 'Organization',
+      'name': 'Use AI Tools'
+    },
+    'mainEntity': {
+      '@type': 'ItemList',
+      'numberOfItems': categoryTools.length,
+      'itemListElement': categoryTools.map((tool, index) => ({
+        '@type': 'ListItem',
+        'position': index + 1,
+        'name': tool.name,
+        'url': `https://useaitools.me/tools/${tool.id}`,
+        'description': tool.description
+      }))
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="mb-8">
           <Link
             href="/"

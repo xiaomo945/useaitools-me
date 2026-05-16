@@ -65,6 +65,18 @@ export default function RootLayout({
               "name": "Use AI Tools",
               "url": "https://useaitools.me",
               "description": "Handpicked directory of 50+ AI tools across Writing, Image, Productivity, Code, Audio, and Video.",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Use AI Tools",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://useaitools.me/logo.png"
+                }
+              },
+              "author": {
+                "@type": "Organization",
+                "name": "Use AI Tools"
+              },
               "potentialAction": {
                 "@type": "SearchAction",
                 "target": "https://useaitools.me/?search={search_term_string}",
