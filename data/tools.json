@@ -117,7 +117,17 @@
     "pricing": "Freemium",
     "url": "https://elevenlabs.io",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create a deep, authoritative voiceover for a nature documentary about African wildlife",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Generate a warm, friendly podcast intro with subtle background music",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 9,
@@ -127,7 +137,17 @@
     "pricing": "Freemium",
     "url": "https://runwayml.com",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Remove the background from this video clip and replace with a futuristic cityscape",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Transform this footage into a cinematic slow-motion sequence with color grading",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 10,
@@ -147,7 +167,17 @@
     "pricing": "Open Source",
     "url": "https://openai.com/research/whisper",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Transcribe this 2-hour podcast episode into text with timestamps and speaker identification",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Convert this Japanese audio file to English text with high accuracy",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 12,
@@ -157,7 +187,17 @@
     "pricing": "Freemium",
     "url": "https://pika.art",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Generate a cartoon video of a cute robot dancing in a cyberpunk city",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create an animated scene of a cozy coffee shop with steam rising from cups",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 13,
@@ -187,7 +227,17 @@
     "pricing": "Freemium",
     "url": "https://suno.ai",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create an upbeat pop song about summer vacation with catchy chorus and guitar melody",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Generate a mellow jazz instrumental piece with piano and saxophone solo",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 16,
@@ -197,7 +247,17 @@
     "pricing": "Freemium",
     "url": "https://openai.com/sora",
     "affiliate_link": "",
-    "icon_url": ""
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Generate a video of a majestic whale swimming through bioluminescent deep ocean",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create a cinematic scene of a futuristic Tokyo street with flying cars and neon lights",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   },
   {
     "id": 17,
