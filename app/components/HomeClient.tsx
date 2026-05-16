@@ -56,10 +56,13 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
     localStorage.setItem('savedTools', JSON.stringify(newSavedIds));
   };
   
-  // Randomly select 3 featured tools
+  // Randomly select 3 featured tools - using Fisher-Yates shuffle for better randomness
   const [featuredTools] = useState(() => {
-    // Create a copy to avoid mutating original
-    const shuffled = [...initialTools].sort(() => 0.5 - Math.random());
+    const shuffled = [...initialTools];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
     return shuffled.slice(0, 3);
   });
 
@@ -334,13 +337,18 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {featuredTools.map((tool) => {
+            {featuredTools.map((tool, index) => {
               const colors = getCategoryColors(tool.category);
               return (
                 <div
                   key={tool.id}
-                  className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out"
-                  style={{ willChange: 'transform' }}
+                  className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
+                  style={{ 
+                    willChange: 'transform', 
+                    animationDelay: `${index * 50}ms`,
+                    opacity: 0,
+                    animationFillMode: 'forwards'
+                  }}
                 >
                   <div className="flex items-start justify-between gap-3 mb-4">
                     <div className="flex items-center gap-3">
