@@ -488,6 +488,15 @@
     "url": "https://veed.io",
     "affiliate_link": "",
     "icon_url": "",
-    "examples": []
+    "examples": [
+      {
+        "prompt": "Add automatic subtitles in English to this 5-minute product demo video and style them for social media",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Remove the background from this interview footage and replace it with a professional office background",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   }
 ]
