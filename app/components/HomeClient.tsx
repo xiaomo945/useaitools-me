@@ -49,7 +49,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
   const [savedIds, setSavedIds] = useState<number[]>([]);
   const [selectedForCompare, setSelectedForCompare] = useState<number[]>([]);
   const [heartBurst, setHeartBurst] = useState<{ [key: number]: boolean }>({});
-  const heartBurstRefs = useRef<{ [key: number]: HTMLDivElement | null }>({});
+  const heartBurstRefs = useRef<{ [key: number]: HTMLSpanElement | null }>({});
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -552,7 +552,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                         }`}
                         aria-label={isSaved ? `Unsave ${tool.name}` : `Save ${tool.name}`}
                       >
-                        <span ref={el => heartBurstRefs.current[tool.id] = el}>
+                        <span ref={el => { heartBurstRefs.current[tool.id] = el; }}>
                           {heartBurst[tool.id] && (
                             <span className="heart-burst absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                           )}
