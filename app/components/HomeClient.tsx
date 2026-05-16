@@ -3,6 +3,28 @@
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 
+// 高亮搜索关键词的辅助函数
+const highlightText = (text: string, searchTerm: string) => {
+  if (!searchTerm.trim()) {
+    return <>{text}</>;
+  }
+
+  const parts = text.split(new RegExp(`(${searchTerm})`, 'gi'));
+  return (
+    <>
+      {parts.map((part, i) =>
+        part.toLowerCase() === searchTerm.toLowerCase() ? (
+          <span key={i} className="bg-yellow-200 dark:bg-yellow-800 rounded px-1">
+            {part}
+          </span>
+        ) : (
+          part
+        )
+      )}
+    </>
+  );
+};
+
 type Tool = {
   id: number;
   name: string;
@@ -271,8 +293,19 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                       placeholder="Search 50+ AI tools..."
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
-                      className="w-full px-5 py-4 pl-14 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-slate-200 dark:border-gray-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all duration-300 ease-out"
+                      className="w-full px-5 py-4 pl-14 pr-12 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-slate-200 dark:border-gray-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all duration-300 ease-out"
                     />
+                    {search && (
+                      <button
+                        onClick={() => setSearch('')}
+                        className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1.5 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full transition-all duration-200"
+                        aria-label="Clear search"
+                      >
+                        <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    )}
                   </div>
                   <Link
                     href="/saved"
@@ -407,7 +440,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                         {tool.name.charAt(0)}
                       </div>
                       <h3 className="font-semibold text-xl text-slate-900 dark:text-white">
-                        {tool.name}
+                        {highlightText(tool.name, search)}
                       </h3>
                     </div>
                     <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
@@ -417,7 +450,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
 
                   {/* Description */}
                   <p className="text-slate-600 dark:text-gray-300 leading-relaxed mb-6">
-                    {tool.description}
+                    {highlightText(tool.description, search)}
                   </p>
 
                   {/* Footer */}
@@ -510,9 +543,24 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 />
               </svg>
             </div>
-            <p className="text-slate-500 dark:text-slate-500 text-lg font-medium">
+            <p className="text-slate-500 dark:text-slate-500 text-lg font-medium mb-4">
               No tools found. Try a different search term or category.
             </p>
+            <div className="flex flex-wrap justify-center gap-2 mt-4">
+              <span className="text-sm text-slate-400 dark:text-slate-500">Try searching:</span>
+              {['ChatGPT', 'Midjourney', 'GitHub Copilot', 'DALL-E', 'Notion AI'].map((suggestion) => (
+                <button
+                  key={suggestion}
+                  onClick={() => {
+                    setSearch(suggestion);
+                    setSelectedCategory('All');
+                  }}
+                  className="px-3 py-1.5 text-sm bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                >
+                  {suggestion}
+                </button>
+              ))}
+            </div>
           </div>
         )}
 
