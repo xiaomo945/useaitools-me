@@ -202,12 +202,13 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">🔗 Related Tools</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {relatedTools.map((relatedTool) => {
+              {relatedTools.map((relatedTool, index) => {
                 const relatedColors = getCategoryColors(relatedTool.category);
                 return (
                   <div
                     key={relatedTool.id}
-                    className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
+                    className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
+                    style={{ animationDelay: `${index * 50}ms` }}
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <div className={`w-10 h-10 rounded-lg ${relatedColors.bg}/10 dark:${relatedColors.bgDark} ${relatedColors.textLight} dark:${relatedColors.text} flex items-center justify-center text-lg font-bold`}>
