@@ -339,6 +339,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 <div
                   key={tool.id}
                   className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out"
+                  style={{ willChange: 'transform' }}
                 >
                   <div className="flex items-start justify-between gap-3 mb-4">
                     <div className="flex items-center gap-3">
@@ -383,7 +384,10 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
               <div
                 key={tool.id}
                 className={`bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm dark:shadow-xl rounded-2xl overflow-hidden group hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up ${colors.ring}`}
-                style={{ animationDelay: `${index * 50}ms` }}
+                style={{ 
+                  animationDelay: `${index * 50}ms`,
+                  willChange: 'transform'
+                }}
               >
                 {/* Category Color Bar - 3px Height */}
                 <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
