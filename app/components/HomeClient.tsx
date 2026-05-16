@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
 // 高亮搜索关键词的辅助函数
@@ -47,6 +47,9 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
   const [savedIds, setSavedIds] = useState<number[]>([]);
+  const [selectedForCompare, setSelectedForCompare] = useState<number[]>([]);
+  const [heartBurst, setHeartBurst] = useState<{ [key: number]: boolean }>({});
+  const heartBurstRefs = useRef<{ [key: number]: HTMLDivElement | null }>({});
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -69,13 +72,34 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
     }
   }, []);
   
-  // Save toggle function
+  // Save toggle function with heart burst effect
   const toggleSave = (id: number) => {
     const newSavedIds = savedIds.includes(id)
       ? savedIds.filter((savedId) => savedId !== id)
       : [...savedIds, id];
     setSavedIds(newSavedIds);
     localStorage.setItem('savedTools', JSON.stringify(newSavedIds));
+    
+    if (!savedIds.includes(id)) {
+      setHeartBurst(prev => ({ ...prev, [id]: true }));
+      setTimeout(() => {
+        setHeartBurst(prev => ({ ...prev, [id]: false }));
+      }, 500);
+    }
+  };
+
+  // Toggle tool for comparison
+  const toggleCompare = (id: number) => {
+    setSelectedForCompare(prev => {
+      if (prev.includes(id)) {
+        return prev.filter(toolId => toolId !== id);
+      } else {
+        if (prev.length >= 2) {
+          return prev.slice(1).concat(id);
+        }
+        return prev.concat(id);
+      }
+    });
   };
   
   // Randomly select 3 featured tools - using Fisher-Yates shuffle for better randomness
@@ -207,11 +231,21 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
 
   const [showBanner, setShowBanner] = useState(true);
 
+  const tooltipMap: Record<string, string> = {
+    'All': 'Browse all AI tools',
+    'Writing': 'Discover AI Writing assistants',
+    'Image': 'Explore AI Image generators',
+    'Productivity': 'Boost productivity with AI',
+    'Code': 'AI Coding companions',
+    'Audio': 'AI Audio tools',
+    'Video': 'AI Video creation'
+  };
+
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
+    <div className="min-h-screen bg-slate-50 dark:bg-gray-950 relative overflow-hidden">
       {/* Announcement Banner */}
       {showBanner && (
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-4">
+        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-4 z-10 relative">
           <div className="max-w-7xl mx-auto flex items-center justify-center gap-3">
             <span className="text-lg">🚀</span>
             <p className="text-center text-sm sm:text-base font-medium">
@@ -229,22 +263,27 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           </div>
         </div>
       )}
-      <div className="py-12 sm:py-16">
+      <div className="py-12 sm:py-16 relative z-10">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <img src="/logo.png" alt="Use AI Tools" className="h-12 sm:h-14 w-auto mx-auto mb-3" />
-          <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2">
-            Use AI Tools
+        {/* Hero Section with Glow */}
+        <div className="text-center mb-16 relative">
+          {/* Background Breathing Glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent rounded-full blur-3xl animate-breathe pointer-events-none" />
+          
+          <img src="/logo.png" alt="Use AI Tools" className="h-12 sm:h-14 w-auto mx-auto mb-3 relative z-10" />
+          <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight mb-2 relative z-10">
+            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+              Use AI Tools
+            </span>
           </h1>
-          <p className="text-2xl sm:text-3xl font-light text-emerald-600 dark:text-emerald-400 mb-4">
+          <p className="text-2xl sm:text-3xl font-light text-emerald-600 dark:text-emerald-400 mb-4 relative z-10">
             Your AI Toolbox
           </p>
-          <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+          <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-8 relative z-10">
             Discover, compare & choose the best AI tools for every task. Curated weekly.
           </p>
           
@@ -305,6 +344,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={buttonStyle}
+                  title={tooltipMap[category]}
                 >
                   {category}
                 </button>
@@ -326,7 +366,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
               return (
                 <div
                   key={tool.id}
-                  className="bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
+                  className="shimmer-card bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
                   style={{ 
                     willChange: 'transform', 
                     animationDelay: `${index * 50}ms`,
@@ -372,11 +412,13 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           {filteredTools.map((tool, index) => {
             const colors = getCategoryColors(tool.category);
             const pricingColors = getPricingColors(tool.pricing);
+            const isSaved = savedIds.includes(tool.id);
+            const isSelectedForCompare = selectedForCompare.includes(tool.id);
             
             return (
               <div
                 key={tool.id}
-                className={`bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up`}
+                className="shimmer-card bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
                 style={{ 
                   animationDelay: `${index * 50}ms`,
                   willChange: 'transform'
@@ -386,7 +428,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
                 
                 <div className="p-5">
-                  {/* Tool Header */}
+                  {/* Tool Header with Compare Checkbox */}
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
                       <div className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`} style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -396,9 +438,27 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                         {highlightText(tool.name, search)}
                       </h3>
                     </div>
-                    <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
-                      {tool.pricing}
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => toggleCompare(tool.id)}
+                        className={`w-6 h-6 rounded border-2 transition-all duration-200 flex items-center justify-center ${
+                          isSelectedForCompare 
+                            ? 'bg-emerald-500 border-emerald-500 text-white' 
+                            : 'border-slate-300 dark:border-slate-600 hover:border-emerald-400'
+                        }`}
+                        aria-label={`Select ${tool.name} for comparison`}
+                        title="Select for comparison"
+                      >
+                        {isSelectedForCompare && (
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        )}
+                      </button>
+                      <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
+                        {tool.pricing}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Description */}
@@ -436,7 +496,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                         href={tool.affiliate_link || tool.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 border border-emerald-300 dark:border-emerald-600/30 text-emerald-600 dark:text-emerald-400 text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-emerald-50 dark:hover:bg-emerald-950/20 hover:text-white hover:bg-emerald-600 dark:hover:border-emerald-600 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none"
+                        className="inline-flex items-center gap-2 px-4 py-2 border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         Visit Website
                         <svg
@@ -461,13 +521,19 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                       </a>
                       <button
                         onClick={() => toggleSave(tool.id)}
-                        className={`inline-flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ease-out ${
-                          savedIds.includes(tool.id)
+                        className={`inline-flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ease-out relative overflow-hidden ${
+                          isSaved
                             ? 'bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300 hover:bg-rose-200 dark:hover:bg-rose-500/30'
                             : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
                         }`}
+                        aria-label={isSaved ? `Unsave ${tool.name}` : `Save ${tool.name}`}
                       >
-                        ❤️ {savedIds.includes(tool.id) ? 'Saved' : 'Save'}
+                        <span ref={el => heartBurstRefs.current[tool.id] = el}>
+                          {heartBurst[tool.id] && (
+                            <span className="heart-burst absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                          )}
+                        </span>
+                        ❤️ {isSaved ? 'Saved' : 'Save'}
                       </button>
                     </div>
                   </div>
@@ -497,7 +563,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
               </svg>
             </div>
             <p className="text-slate-500 dark:text-slate-500 text-lg font-medium mb-4">
-              No tools found. Try a different search term or category.
+              So empty, so serene. Try a different search maybe?
             </p>
             <div className="flex flex-wrap justify-center gap-2 mt-4">
               <span className="text-sm text-slate-400 dark:text-slate-500">Try searching:</span>
@@ -556,6 +622,47 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
         </p>
       </div>
       </div>
+
+      {/* Comparison Bar */}
+      {selectedForCompare.length > 0 && (
+        <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 border-t border-slate-200 dark:border-gray-800 shadow-2xl z-50 transform transition-transform duration-300 ease-out">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                  {selectedForCompare.length === 1 ? '1 tool selected' : '2 tools selected'}
+                </span>
+                <div className="flex items-center gap-2">
+                  {selectedForCompare.map((toolId) => {
+                    const tool = initialTools.find(t => t.id === toolId);
+                    if (!tool) return null;
+                    const colors = getCategoryColors(tool.category);
+                    return (
+                      <span key={tool.id} className={`px-3 py-1 rounded-full text-xs font-semibold ${colors.bgDark} ${colors.textLight} dark:${colors.text}`}>
+                        {tool.name}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => setSelectedForCompare([])}
+                  className="px-3 py-2 text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
+                >
+                  Clear
+                </button>
+                <Link
+                  href={`/compare?tool=${selectedForCompare[0]}${selectedForCompare[1] ? `&tool=${selectedForCompare[1]}` : ''}`}
+                  className="px-6 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                >
+                  Compare Now →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
