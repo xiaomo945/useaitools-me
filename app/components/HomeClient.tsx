@@ -404,6 +404,29 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           </div>
         </div>
 
+        {/* Blog Entry Card */}
+        <div className="mb-16">
+          <Link href="/blog" className="block">
+            <div className="bg-gradient-to-br from-emerald-50/90 via-white to-teal-50/90 dark:from-emerald-950/70 dark:via-gray-900 dark:to-teal-950/70 backdrop-blur-xl border border-emerald-200/60 dark:border-emerald-500/10 shadow-xl shadow-emerald-500/5 dark:shadow-2xl dark:shadow-emerald-500/5 rounded-3xl p-8 sm:p-10 hover:shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-1 transition-all duration-300 ease-out">
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl mb-3">📝</div>
+                <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
+                  AI Tool Comparisons & Guides
+                </h2>
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
+                  In-depth reviews to help you choose the perfect tool
+                </p>
+                <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300">
+                  Explore Blog →
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </div>
+
         {/* Gradient Separator Line */}
         <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 dark:via-emerald-700/40 to-transparent mb-16 mx-auto max-w-2xl" />
 
@@ -468,18 +491,17 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
 
                   {/* Footer */}
                   <div className="flex items-center justify-between gap-3">
-                    <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text}`}>
+                    <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} whitespace-nowrap`}>
                       {tool.category}
                     </span>
                     
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1.5 sm:gap-2">
                       <Link
                         href={`/compare?tool=${tool.id}`}
-                        className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none"
+                        className="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
-                        Compare
                         <svg
-                          className="w-4 h-4"
+                          className="w-3.5 h-3.5 sm:w-4 sm:h-4"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -491,16 +513,16 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                             d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01"
                           />
                         </svg>
+                        <span className="hidden sm:inline">Compare</span>
                       </Link>
                       <a
                         href={tool.affiliate_link || tool.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-4 py-2 border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none"
+                        className="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
-                        Visit Website
                         <svg
-                          className="w-4 h-4"
+                          className="w-3.5 h-3.5 sm:w-4 sm:h-4"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -511,17 +533,12 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                             strokeWidth={2}
                             d="M7 17L17 7"
                           />
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17 7H8.5M17 7v8.5"
-                          />
                         </svg>
+                        <span className="hidden sm:inline">Visit</span>
                       </a>
                       <button
                         onClick={() => toggleSave(tool.id)}
-                        className={`inline-flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ease-out relative overflow-hidden ${
+                        className={`inline-flex items-center gap-0.5 px-2 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ease-out relative overflow-hidden whitespace-nowrap ${
                           isSaved
                             ? 'bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300 hover:bg-rose-200 dark:hover:bg-rose-500/30'
                             : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
@@ -533,7 +550,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                             <span className="heart-burst absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                           )}
                         </span>
-                        ❤️ {isSaved ? 'Saved' : 'Save'}
+                        ❤️ <span className="hidden sm:inline">{isSaved ? 'Saved' : 'Save'}</span>
                       </button>
                     </div>
                   </div>
