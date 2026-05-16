@@ -182,3 +182,12 @@ pre, code {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
