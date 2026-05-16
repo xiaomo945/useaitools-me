@@ -208,7 +208,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
   const [showBanner, setShowBanner] = useState(true);
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-950 grid-background">
+    <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
       {/* Announcement Banner */}
       {showBanner && (
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-4">
@@ -235,133 +235,84 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Hero Section - Green Glass Card */}
-        <div className="mb-10">
-          <div className="bg-gradient-to-br from-emerald-50/80 via-white to-teal-50/80 dark:from-emerald-950/60 dark:via-gray-900 dark:to-teal-950/60 backdrop-blur-xl border border-white/60 dark:border-emerald-500/10 shadow-xl shadow-emerald-500/5 dark:shadow-2xl dark:shadow-emerald-500/5 rounded-3xl p-8 sm:p-12">
-            {/* Title */}
-            <div className="text-center mb-10">
-              <img src="/logo.png" alt="Use AI Tools" className="h-16 sm:h-20 w-auto mx-auto mb-4 drop-shadow-md" />
-              <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2">
-                <span style={{ fontFamily: 'Playfair Display, serif' }}>Use AI Tools</span>
-                <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent font-extrabold ml-2">
-                  – Your AI Toolbox
-                </span>
-              </h1>
-              <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 mt-3 max-w-2xl mx-auto">
-                Discover, compare, and choose the best AI tools for every task.
-              </p>
-              <p className="text-sm text-gray-400 dark:text-gray-500 mt-2">
-                Curated by AI experts, updated weekly.
-              </p>
-              <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/compare"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-full shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-0.5 transition-all duration-300"
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <img src="/logo.png" alt="Use AI Tools" className="h-12 sm:h-14 w-auto mx-auto mb-3" />
+          <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2">
+            Use AI Tools
+          </h1>
+          <p className="text-2xl sm:text-3xl font-light text-emerald-600 dark:text-emerald-400 mb-4">
+            Your AI Toolbox
+          </p>
+          <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-8">
+            Discover, compare & choose the best AI tools for every task. Curated weekly.
+          </p>
+          
+          {/* Search Box */}
+          <div className="relative max-w-2xl mx-auto mb-8">
+            <div className="relative">
+              <svg
+                className="absolute left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+              <input
+                type="text"
+                placeholder="Search 50+ AI tools..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="w-full px-5 py-4 pl-14 pr-12 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
+              />
+              {search && (
+                <button
+                  onClick={() => setSearch('')}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200"
+                  aria-label="Clear search"
                 >
-                  Compare AI Tools
-                </Link>
-                <Link
-                  href="/blog"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-full shadow-lg shadow-pink-500/25 hover:shadow-xl hover:shadow-pink-500/30 hover:-translate-y-0.5 transition-all duration-300"
-                >
-                  AI Tools Blog
-                </Link>
-              </div>
-            </div>
-
-            {/* Search & Filter Container */}
-            <div className="max-w-4xl mx-auto">
-              {/* Search Box and Saved Link */}
-              <div className="relative mb-6">
-                <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
-                  <div className="relative flex-1 w-full">
-                    <svg
-                      className="absolute left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
-                    <input
-                      type="text"
-                      placeholder="Search 50+ AI tools..."
-                      value={search}
-                      onChange={(e) => setSearch(e.target.value)}
-                      className="w-full px-5 py-4 pl-14 pr-12 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-slate-200 dark:border-gray-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all duration-300 ease-out"
-                    />
-                    {search && (
-                      <button
-                        onClick={() => setSearch('')}
-                        className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1.5 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full transition-all duration-200"
-                        aria-label="Clear search"
-                      >
-                        <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                      </button>
-                    )}
-                  </div>
-                  <Link
-                    href="/saved"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold rounded-full shadow-lg shadow-rose-500/25 hover:shadow-xl hover:shadow-rose-500/30 hover:-translate-y-0.5 transition-all duration-300"
-                  >
-                    ❤️ Saved Tools ({savedIds.length})
-                  </Link>
-                </div>
-              </div>
-
-              {/* Category Buttons */}
-              <div className="flex flex-nowrap justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto sm:overflow-visible pb-3 sm:pb-0 -mx-2 px-2 sm:mx-0 sm:px-0">
-                {categories.map((category) => {
-                  const isActive = selectedCategory === category;
-                  const colors = getCategoryColors(category);
-                  
-                  const buttonStyle = `flex-shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ease-out active:scale-95 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none relative overflow-hidden ${
-                    isActive
-                      ? `bg-gray-900 text-white dark:bg-white dark:text-gray-900`
-                      : `bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700`
-                  }`;
-                  
-                  return (
-                    <button
-                      key={category}
-                      onClick={() => setSelectedCategory(category)}
-                      className={buttonStyle}
-                      style={isActive ? {
-                        boxShadow: `0 0 12px ${colors.shadow}`
-                      } : {}}
-                    >
-                      {category}
-                    </button>
-                  );
-                })}
-              </div>
+                  <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              )}
             </div>
           </div>
-        </div>
 
-        {/* About Section */}
-        <div className="mb-10">
-          <div className="bg-gradient-to-br from-blue-50/80 via-white to-indigo-50/80 dark:from-blue-950/60 dark:via-gray-900 dark:to-indigo-950/60 backdrop-blur-xl border border-white/60 dark:border-blue-500/10 shadow-xl shadow-blue-500/5 dark:shadow-2xl dark:shadow-blue-500/5 rounded-3xl p-8 sm:p-12">
-            <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
-                About Use AI Tools
-              </h2>
-              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                We curate the best AI tools for content creators, developers, and marketers. Every tool is handpicked, tested, and organized into categories so you can find exactly what you need. Updated weekly. Built by an indie maker from an internet café in China.
-              </p>
-            </div>
+          {/* Category Buttons */}
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+            {categories.map((category) => {
+              const isActive = selectedCategory === category;
+              
+              const buttonStyle = `px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ease-out active:scale-95 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none ${
+                isActive
+                  ? category === 'All'
+                    ? 'bg-emerald-600 text-white'
+                    : 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
+                  : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+              }`;
+              
+              return (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={buttonStyle}
+                >
+                  {category}
+                </button>
+              );
+            })}
           </div>
         </div>
 
         {/* Featured This Week */}
-        <div className="mb-10">
+        <div className="mb-16">
           <div className="flex items-center gap-2 mb-6">
             <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
               🔥 Featured This Week
@@ -373,7 +324,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
               return (
                 <div
                   key={tool.id}
-                  className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
+                  className="bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
                   style={{ 
                     willChange: 'transform', 
                     animationDelay: `${index * 50}ms`,
@@ -383,7 +334,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 >
                   <div className="flex items-start justify-between gap-3 mb-4">
                     <div className="flex items-center gap-3">
-                      <div className={`w-12 h-12 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                      <div className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
                         {tool.name.charAt(0)}
                       </div>
                       <div>
@@ -396,12 +347,12 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                       </div>
                     </div>
                   </div>
-                  <p className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                  <p className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
                     {tool.description}
                   </p>
                   <Link
                     href={`/tools/${tool.id}`}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
                   >
                     Learn More →
                   </Link>
@@ -412,7 +363,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
         </div>
 
         {/* Gradient Separator Line */}
-        <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 dark:via-emerald-700/40 to-transparent mb-10 mx-auto max-w-2xl" />
+        <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 dark:via-emerald-700/40 to-transparent mb-16 mx-auto max-w-2xl" />
 
         {/* Tools Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 transition-all duration-300 ease-out">
@@ -423,7 +374,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
             return (
               <div
                 key={tool.id}
-                className={`bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm dark:shadow-xl rounded-2xl overflow-hidden group hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up ${colors.ring}`}
+                className={`bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up`}
                 style={{ 
                   animationDelay: `${index * 50}ms`,
                   willChange: 'transform'
@@ -432,14 +383,14 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 {/* Category Color Bar - 3px Height */}
                 <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
                 
-                <div className="p-7">
+                <div className="p-5">
                   {/* Tool Header */}
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <div className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold group-hover:scale-105 transition-transform duration-300 ease-out`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                      <div className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`} style={{ fontFamily: 'Playfair Display, serif' }}>
                         {tool.name.charAt(0)}
                       </div>
-                      <h3 className="font-semibold text-xl text-slate-900 dark:text-white">
+                      <h3 className="font-semibold text-lg text-slate-900 dark:text-white">
                         {highlightText(tool.name, search)}
                       </h3>
                     </div>
@@ -449,7 +400,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                   </div>
 
                   {/* Description */}
-                  <p className="text-slate-600 dark:text-gray-300 leading-relaxed mb-6">
+                  <p className="text-slate-600 dark:text-gray-300 leading-relaxed mb-5 line-clamp-2">
                     {highlightText(tool.description, search)}
                   </p>
 
@@ -483,7 +434,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                         href={tool.affiliate_link || tool.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`inline-flex items-center gap-2 px-4 py-2 border ${colors.border} dark:${colors.bgDark} dark:border-transparent ${colors.textLight} dark:${colors.text} text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:${colors.bg} hover:text-white hover:border-transparent focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none`}
+                        className="inline-flex items-center gap-2 px-4 py-2 border border-emerald-300 dark:border-emerald-600/30 text-emerald-600 dark:text-emerald-400 text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-emerald-50 dark:hover:bg-emerald-950/20 hover:text-white hover:bg-emerald-600 dark:hover:border-emerald-600 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none"
                       >
                         Visit Website
                         <svg
@@ -524,7 +475,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           })}
         </div>
 
-               {/* Empty State */}
+        {/* Empty State */}
         {filteredTools.length === 0 && (
           <div className="text-center py-20">
             <div className="mx-auto w-20 h-20 mb-6 text-slate-300 dark:text-slate-600">
