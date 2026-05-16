@@ -88,6 +88,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           textLight: 'text-blue-600',
           border: 'border-blue-300',
           ring: 'hover:shadow-blue-500/20',
+          shadow: 'rgba(59, 130, 246, 0.4)',
         };
       case 'Image':
         return {
@@ -97,6 +98,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           textLight: 'text-violet-600',
           border: 'border-violet-300',
           ring: 'hover:shadow-violet-500/20',
+          shadow: 'rgba(139, 92, 246, 0.4)',
         };
       case 'Productivity':
         return {
@@ -106,6 +108,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           textLight: 'text-teal-600',
           border: 'border-teal-300',
           ring: 'hover:shadow-teal-500/20',
+          shadow: 'rgba(20, 184, 166, 0.4)',
         };
       case 'Code':
         return {
@@ -115,6 +118,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           textLight: 'text-orange-600',
           border: 'border-orange-300',
           ring: 'hover:shadow-orange-500/20',
+          shadow: 'rgba(249, 115, 22, 0.4)',
         };
       case 'Audio':
         return {
@@ -124,6 +128,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           textLight: 'text-pink-600',
           border: 'border-pink-300',
           ring: 'hover:shadow-pink-500/20',
+          shadow: 'rgba(236, 72, 153, 0.4)',
         };
       case 'Video':
         return {
@@ -133,6 +138,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           textLight: 'text-indigo-600',
           border: 'border-indigo-300',
           ring: 'hover:shadow-indigo-500/20',
+          shadow: 'rgba(99, 102, 241, 0.4)',
         };
       default:
         return {
@@ -142,6 +148,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           textLight: 'text-slate-600',
           border: 'border-slate-300',
           ring: 'hover:shadow-slate-500/20',
+          shadow: 'rgba(100, 116, 139, 0.4)',
         };
     }
   };
@@ -280,34 +287,25 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
               <div className="flex flex-nowrap sm:flex-wrap justify-center gap-2 sm:gap-3 overflow-x-auto sm:overflow-visible pb-2 sm:pb-0">
                 {categories.map((category) => {
                   const isActive = selectedCategory === category;
-                  const isAll = category === 'All';
+                  const colors = getCategoryColors(category);
                   
-                  const buttonStyle = `px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ease-out active:scale-95 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none ${
+                  const buttonStyle = `px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ease-out active:scale-95 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none relative overflow-hidden ${
                     isActive
-                      ? 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                      : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                      ? `bg-gray-900 text-white dark:bg-white dark:text-gray-900`
+                      : `bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700`
                   }`;
                   
-                  if (isAll) {
-                    return (
-                      <button
-                        key={category}
-                        onClick={() => setSelectedCategory(category)}
-                        className={buttonStyle}
-                      >
-                        {category}
-                      </button>
-                    );
-                  }
-                  
                   return (
-                    <Link
+                    <button
                       key={category}
-                      href={`/category/${category.toLowerCase()}`}
+                      onClick={() => setSelectedCategory(category)}
                       className={buttonStyle}
+                      style={isActive ? {
+                        boxShadow: `0 0 12px ${colors.shadow}`
+                      } : {}}
                     >
                       {category}
-                    </Link>
+                    </button>
                   );
                 })}
               </div>
@@ -384,7 +382,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
         <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 dark:via-emerald-700/40 to-transparent mb-10 mx-auto max-w-2xl" />
 
         {/* Tools Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 transition-all duration-300 ease-out">
           {filteredTools.map((tool, index) => {
             const colors = getCategoryColors(tool.category);
             const pricingColors = getPricingColors(tool.pricing);
