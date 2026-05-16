@@ -18,6 +18,9 @@ type BlogPost = {
 const renderContent = (content: string) => {
   let html = content;
 
+  // Internal links first - format: [[link:/path|text]]
+  html = html.replace(/\[\[link:([^\|]+)\|([^\]]+)\]\]/g, '<a href="$1" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 underline font-medium">$2</a>');
+
   // Headings
   html = html.replace(/^## (.*?)$/gm, '<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">$1</h2>');
   html = html.replace(/^# (.*?)$/gm, '<h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-8">$1</h1>');
@@ -33,7 +36,7 @@ const renderContent = (content: string) => {
   // Bold text
   html = html.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-slate-900 dark:text-white">$1</strong>');
 
-  // Links
+  // External links
   html = html.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 underline">$1</a>');
 
   return html;
