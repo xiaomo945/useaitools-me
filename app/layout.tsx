@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     title: "Use AI Tools – Discover 50+ Best AI Tools in 2026",
     description: "Handpicked directory of 50+ AI tools across Writing, Image, Productivity, Code, Audio, and Video. Find the perfect AI tool for your workflow.",
   },
+  icons: [{ url: '/logo.svg' }],
 };
 
 export default function RootLayout({
