@@ -348,5 +348,16 @@
     "url": "https://quillbot.com",
     "affiliate_link": "",
     "icon_url": ""
+  },
+  {
+    "id": 51,
+    "name": "VEED.io",
+    "description": "AI-powered online video editing platform. Create, edit, and enhance videos with automatic subtitles, background removal, and voiceovers.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://veed.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": []
   }
 ]
