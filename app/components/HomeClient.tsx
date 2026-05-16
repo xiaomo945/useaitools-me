@@ -273,8 +273,8 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
             <div className="max-w-4xl mx-auto">
               {/* Search Box and Saved Link */}
               <div className="relative mb-6">
-                <div className="relative flex items-center gap-4">
-                  <div className="relative flex-1">
+                <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
+                  <div className="relative flex-1 w-full">
                     <svg
                       className="absolute left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
                       fill="none"
@@ -309,7 +309,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                   </div>
                   <Link
                     href="/saved"
-                    className="flex-shrink-0 inline-flex items-center gap-2 px-6 py-4 bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold rounded-full shadow-lg shadow-rose-500/25 hover:shadow-xl hover:shadow-rose-500/30 hover:-translate-y-0.5 transition-all duration-300"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold rounded-full shadow-lg shadow-rose-500/25 hover:shadow-xl hover:shadow-rose-500/30 hover:-translate-y-0.5 transition-all duration-300"
                   >
                     ❤️ Saved Tools ({savedIds.length})
                   </Link>
@@ -317,12 +317,12 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
               </div>
 
               {/* Category Buttons */}
-              <div className="flex flex-nowrap sm:flex-wrap justify-center gap-2 sm:gap-3 overflow-x-auto sm:overflow-visible pb-2 sm:pb-0">
+              <div className="flex flex-nowrap justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto sm:overflow-visible pb-3 sm:pb-0 -mx-2 px-2 sm:mx-0 sm:px-0">
                 {categories.map((category) => {
                   const isActive = selectedCategory === category;
                   const colors = getCategoryColors(category);
                   
-                  const buttonStyle = `px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ease-out active:scale-95 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none relative overflow-hidden ${
+                  const buttonStyle = `flex-shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ease-out active:scale-95 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none relative overflow-hidden ${
                     isActive
                       ? `bg-gray-900 text-white dark:bg-white dark:text-gray-900`
                       : `bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700`
