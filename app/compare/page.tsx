@@ -143,7 +143,7 @@ export default function ComparePage() {
 
         {/* Tool Selectors */}
         <div className="mb-10 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 sm:p-12 shadow-xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             <div>
               <label className="block text-sm font-semibold text-slate-900 dark:text-white mb-2">
                 Tool 1
@@ -183,8 +183,8 @@ export default function ComparePage() {
 
         {/* Comparison Table */}
         {(tool1 || tool2) && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-xl">
-            <table className="w-full">
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-xl overflow-x-auto">
+            <table className="w-full min-w-[600px]">
               <thead className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30">
                 <tr>
                   <th className="px-6 py-4 text-left text-sm font-semibold text-slate-900 dark:text-white w-1/5">

@@ -181,6 +181,7 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
                       src={example.image_url}
                       alt={`Example ${index + 1}`}
                       className="w-full h-auto object-cover"
+                      loading="lazy"
                     />
                   </div>
                   {/* Prompt */}

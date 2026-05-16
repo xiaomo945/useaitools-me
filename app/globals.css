@@ -82,6 +82,14 @@ body {
   background: rgba(71, 85, 105, 0.5);
 }
 
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 116, 139, 0.6);
+/* Code blocks with horizontal scroll */
+pre, code {
+  overflow-x: auto;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
+
+/* Dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
+} */
