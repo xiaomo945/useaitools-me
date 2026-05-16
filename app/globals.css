@@ -160,6 +160,22 @@ body::before {
   background: rgba(16, 185, 129, 0.5);
 }
 
+/* Shimmer Animation for Skeletons */
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Skeleton base styles */
+.skeleton-shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
 /* Code blocks with horizontal scroll */
 pre, code {
   overflow-x: auto;
