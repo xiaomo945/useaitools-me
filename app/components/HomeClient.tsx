@@ -208,7 +208,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           <div className="bg-gradient-to-br from-emerald-50/80 via-white to-teal-50/80 dark:from-emerald-950/60 dark:via-gray-900 dark:to-teal-950/60 backdrop-blur-xl border border-white/60 dark:border-emerald-500/10 shadow-xl shadow-emerald-500/5 dark:shadow-2xl dark:shadow-emerald-500/5 rounded-3xl p-8 sm:p-12">
             {/* Title */}
             <div className="text-center mb-10">
-              <img src="/logo.png" alt="Use AI Tools" className="h-12 w-auto mx-auto mb-4" />
+              <img src="/logo.png" alt="Use AI Tools" className="h-16 sm:h-20 w-auto mx-auto mb-4 drop-shadow-md" />
               <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2">
                 <span style={{ fontFamily: 'Playfair Display, serif' }}>Use AI Tools</span>
                 <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent font-extrabold ml-2">
