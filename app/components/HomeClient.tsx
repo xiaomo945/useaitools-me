@@ -50,19 +50,6 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
   const [selectedForCompare, setSelectedForCompare] = useState<number[]>([]);
   const [heartBurst, setHeartBurst] = useState<{ [key: number]: boolean }>({});
   const heartBurstRefs = useRef<{ [key: number]: HTMLSpanElement | null }>({});
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://useaitools.me"
-      }
-    ]
-  };
   
   // Load saved ids from localStorage on mount
   React.useEffect(() => {
@@ -264,10 +251,6 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
         </div>
       )}
       <div className="py-12 sm:py-16 px-4 sm:px-8 relative z-10">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Hero Section with Glow */}
         <div className="text-center mb-16 relative">
