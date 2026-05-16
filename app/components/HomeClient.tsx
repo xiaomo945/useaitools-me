@@ -256,6 +256,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -269,6 +270,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 placeholder="Search 50+ AI tools..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
+                aria-label="Search AI tools"
                 className="w-full px-5 py-4 pl-14 pr-12 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
               />
               {search && (
@@ -479,7 +481,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
         {filteredTools.length === 0 && (
           <div className="text-center py-20">
             <div className="mx-auto w-20 h-20 mb-6 text-slate-300 dark:text-slate-600">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full" aria-hidden="true">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -534,6 +536,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
               <input
                 type="email"
                 placeholder="Your email"
+                aria-label="Email address for newsletter"
                 className="flex-1 px-5 py-3 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-slate-200 dark:border-gray-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all duration-300"
                 required
               />
