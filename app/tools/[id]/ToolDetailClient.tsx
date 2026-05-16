@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, Home } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, Home, Copy, Check } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 
 type Example = {
@@ -94,6 +95,17 @@ const getCategoryColors = (category: Tool['category']) => {
 export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; relatedTools: Tool[] }) {
   const colors = getCategoryColors(tool.category);
   const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+
+  const copyToClipboard = async (text: string, index: number) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedIndex(index);
+      setTimeout(() => setCopiedIndex(null), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
@@ -176,12 +188,27 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
               {tool.examples.map((example, index) => (
                 <div 
                   key={index} 
-                  className="pb-6 border-b border-gray-100 dark:border-gray-800 last:pb-0 last:border-b-0"
+                  className="pb-6 border-b border-gray-100 dark:border-gray-800 last:pb-0 last:border-b-0 animate-fade-in-up"
+                  style={{ 
+                    animationDelay: `${index * 100}ms`,
+                    opacity: 0,
+                    animationFillMode: 'forwards'
+                  }}
                 >
+                  {/* Example Header with Index */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className={`w-8 h-8 rounded-full ${colors.bg} flex items-center justify-center text-white text-sm font-bold shadow-md`}>
+                      {index + 1}
+                    </div>
+                    <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide">
+                      Example {index + 1}
+                    </span>
+                  </div>
+                  
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Image */}
                     <div 
-                      className="rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ease-out"
+                      className="relative rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ease-out group"
                       style={{ 
                         willChange: 'transform',
                         transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' 
@@ -193,11 +220,27 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
                         className="w-full h-auto object-cover"
                         loading="lazy"
                       />
+                      {/* Shimmer overlay on hover */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/0 via-white/0 to-transparent group-hover:via-white/20 transition-all duration-1000 transform -translate-x-full group-hover:translate-x-full pointer-events-none" />
                     </div>
                     {/* Prompt */}
-                    <div className="bg-gray-50 dark:bg-gray-800/60 rounded-lg p-4">
-                      <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">Prompt</h3>
-                      <p className="text-gray-700 dark:text-gray-300 font-mono text-sm leading-relaxed">
+                    <div className="bg-gray-50 dark:bg-gray-800/60 rounded-lg p-4 flex flex-col">
+                      <div className="flex items-center justify-between mb-3">
+                        <h3 className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide">Prompt</h3>
+                        <button
+                          onClick={() => copyToClipboard(example.prompt, index)}
+                          className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-200/60 dark:bg-gray-700/60 hover:bg-slate-300 dark:hover:bg-gray-600 transition-all duration-200 text-slate-600 dark:text-slate-300 text-xs font-medium"
+                          aria-label="Copy prompt to clipboard"
+                        >
+                          {copiedIndex === index ? (
+                            <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                          ) : (
+                            <Copy className="w-3.5 h-3.5" />
+                          )}
+                          {copiedIndex === index ? 'Copied!' : 'Copy'}
+                        </button>
+                      </div>
+                      <p className="text-gray-700 dark:text-gray-300 font-mono text-sm leading-relaxed flex-1">
                         {example.prompt}
                       </p>
                     </div>
