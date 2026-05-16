@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
           
           <p className="text-slate-500 dark:text-gray-500 text-sm">
-            © 2026 Use AI Tools. Built by an indie maker.
+            © {new Date().getFullYear()} Use AI Tools. Built by an indie maker.
           </p>
         </div>
       </div>
