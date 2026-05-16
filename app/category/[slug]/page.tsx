@@ -39,7 +39,8 @@ const colorMap: Record<Category, { bg: string; bgDark: string; text: string; tex
 // Helper function to get affiliate link from environment variable or fallback to JSON
 function getAffiliateLink(tool: Tool): string {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  const envLink = process.env[envVarName];
+  const shortEnvVarName = tool.name === 'VEED.io' ? 'AFFILIATE_VEED' : '';
+  const envLink = process.env[envVarName] || (shortEnvVarName && process.env[shortEnvVarName]);
   return envLink || tool.affiliate_link;
 }
 
