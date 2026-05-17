@@ -538,5 +538,841 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]
-  }
-]
+  },
+  {
+    "id": 54,
+    "name": "AutoGPT",
+    "description": "自主AI代理，能够自动完成复杂任务而无需人工提示。",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/Significant-Gravitas/AutoGPT",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Research the best cities to start a tech company in 2026, create a comparison table, and draft a business plan outline",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Plan a 3-week vacation to Europe with budget estimates, booking suggestions, and daily itinerary",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "AgentGPT",
+    "description": "Web-based AI agent platform，让用户配置和部署自主AI代理。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://agentgpt.reworkd.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create an agent to research and summarize the latest developments in quantum computing for a tech blog",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Deploy an agent to monitor competitor pricing and send weekly summary reports",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "CrewAI",
+    "description": "AI代理协作框架，让多个AI代理协同工作完成任务。",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://www.crewai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Assemble a crew of AI agents to research, write, and edit a comprehensive e-book on sustainable living",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create a product development team with separate agents for market research, design, and technical specification",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "SurferSEO",
+    "description": "AI驱动的SEO优化平台，帮助内容在搜索引擎中获得更好排名。",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://surferseo.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Optimize this blog post about \"remote work best practices\" for top Google rankings with keyword recommendations",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Analyze top-ranking competitors for \"AI project management tools\" and create a content strategy to outrank them",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Frase",
+    "description": "AI内容优化和研究平台，帮助创建SEO友好的高质量内容。",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://frase.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create a comprehensive content brief for a guide to 'starting an online business in 2026' with all key sections",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Answer these 15 common questions about 'sustainable fashion' to create an FAQ section that ranks well",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "MarketMuse",
+    "description": "AI内容智能平台，通过内容策略和优化提升有机搜索流量。",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://www.marketmuse.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Conduct a content audit of my website and identify gaps that are preventing me from ranking for key terms",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create a content cluster strategy for 'machine learning for beginners' to establish topical authority",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Harvey",
+    "description": "AI法律助手，帮助律师进行法律研究、合同审查和案例分析。",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://harvey.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Review this commercial lease agreement and flag potential issues and areas for negotiation",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Research precedent cases about intellectual property disputes in the software industry",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Robin AI",
+    "description": "AI法律技术平台，自动化合同审查、起草和法律文档管理。",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://robinai.co",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Draft an employment contract for a senior software engineer position with standard clauses and protections",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Compare these two NDA agreements and highlight the key differences and their implications",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Kick",
+    "description": "AI金融助手，帮助分析投资、优化投资组合和财务规划。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.kickresume.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Analyze my investment portfolio and suggest asset allocation adjustments based on my risk tolerance",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create a 5-year financial plan for saving for a house down payment with monthly savings targets",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Khanmigo",
+    "description": "Khan Academy的AI学习助手，提供个性化辅导和教育支持。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.khanacademy.org/khanmigo",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Walk me through solving this calculus problem step by step and make sure I understand each concept",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create a 2-week study plan for my upcoming chemistry exam on organic chemistry reactions",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Duolingo Max",
+    "description": "AI驱动的语言学习平台，提供个性化课程和AI辅导。",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://www.duolingo.com/max",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Practice a conversation in Spanish about ordering food at a restaurant with interactive feedback",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Explain why I made this grammar mistake in French and give me similar examples to practice",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Quizlet AI",
+    "description": "AI增强的学习平台，智能生成抽认卡、测验和学习计划。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://quizlet.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Turn my biology textbook chapter on cell division into interactive flashcards with diagrams",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Generate a practice test for my history exam on World War II with essay and multiple choice questions",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Spline AI",
+    "description": "基于浏览器的3D设计工具，AI辅助创建3D模型和动画。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://spline.design",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create a 3D model of a futuristic electric vehicle with smooth curves and metallic finish",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Design an animated 3D logo for a tech startup that rotates and has a glowing effect",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Meshy",
+    "description": "AI 3D内容创作平台，从文本或图像生成3D模型。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://www.meshy.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Generate a 3D model of a cute fantasy creature with big eyes and fluffy tail, ready for game development",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Turn this 2D concept art of a castle into a fully textured 3D model",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Leonardo AI",
+    "description": "AI图像生成平台，专注于游戏资产、概念艺术和3D纹理。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://leonardo.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create concept art for a medieval fantasy RPG character with detailed armor and weapon design",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Generate seamless texture maps for a sci-fi corridor wall with panel details and neon lights",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Soundraw",
+    "description": "AI音乐生成器，为视频、播客和游戏创建免版税音乐。",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://soundraw.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create an upbeat electronic track for a YouTube tech review video, 2 minutes long",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Generate a calm ambient background track for meditation app with nature sounds",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "name": "AIVA",
+    "description": "AI作曲家，创作古典、电影配乐和电子风格的原创音乐。",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.aiva.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Compose an emotional orchestral piece for a dramatic movie scene, 3 minutes duration",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create a suspenseful thriller theme with building tension and mysterious atmosphere",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Beatoven",
+    "description": "AI音乐创作平台，为内容创作者提供自适应的背景音乐。",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.beatoven.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create a high-energy intro track for a gaming YouTube channel that builds excitement",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Generate background music for a cooking tutorial that's upbeat but not distracting",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Character.AI",
+    "description": "AI角色聊天平台，可以与历史人物、虚构角色和自定义角色对话。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://character.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Have a conversation with Albert Einstein about the implications of AI on science and society",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Role-play as a fantasy adventurer seeking advice from a wise wizard character",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Poe",
+    "description": "Quora的AI聊天平台，集成多个AI模型，提供统一访问体验。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://poe.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Get perspectives from different AI models on the future of renewable energy",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Use multiple AI assistants to help write, edit, and refine this research paper",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Copy.ai",
+    "description": "AI写作和营销工具，帮助创建各种类型的营销文案。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://www.copy.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Write 5 different cold email templates for B2B SaaS sales outreach with personalization",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create compelling LinkedIn carousel content about productivity tips for remote workers",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Lexica",
+    "description": "AI图像搜索引擎和生成平台，寻找和创建完美的图像。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://lexica.art",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Find high-quality images of \"minimalist workspace design\" for inspiration and generate variations",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Search for reference images and generate new concept art for a cyberpunk game character",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Playground AI",
+    "description": "在线AI图像生成和编辑平台，支持多种模型和风格。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://playgroundai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create a product mockup of a smart speaker on a modern desk with clean aesthetic",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Edit this photo to change the background to a beautiful sunset over mountains",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Ideogram",
+    "description": "AI图像生成工具，擅长文字渲染和排版设计。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://ideogram.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create a motivational poster with the text \"DREAM BIG\" in bold, elegant typography with inspirational background",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Design a t-shirt graphic with \"AI 2026\" in futuristic lettering with tech-themed illustration",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Murf AI",
+    "description": "AI语音生成平台，创建专业的语音旁白和配音。",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://murf.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create a professional voiceover for this corporate training video with clear, authoritative tone",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Generate an engaging audiobook narrator voice for children's story with warm, expressive delivery",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Descript",
+    "description": "AI音频和视频编辑平台，像编辑文档一样编辑媒体。",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.descript.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Edit this podcast episode by removing filler words and improving the flow by editing the transcript",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Clone my voice to create a new recording of this script without me having to re-record",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Adobe Premiere Pro AI",
+    "description": "Adobe Premiere Pro中的AI功能，增强视频编辑工作流程。",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://www.adobe.com/products/premiere.html",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use AI to automatically edit this 3-hour footage down to a 2-minute highlight reel with music matching",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Enhance this old footage by upscaling resolution and improving color and lighting automatically",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "name": "HeyGen",
+    "description": "AI视频生成平台，创建具有数字人主播的专业视频。",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.heygen.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create a product demo video with an AI presenter explaining features and benefits",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Generate training videos in 5 different languages using the same avatar and script",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "name": "D-ID",
+    "description": "AI视频生成技术，创建会说话的头像和数字人视频。",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://d-id.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Animate this photo of our CEO to deliver our company's holiday greeting message",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create a customer testimonial video with realistic AI-generated presenters",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Codium AI",
+    "description": "AI代码助手，专注于代码测试、审查和质量保证。",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.codium.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Generate comprehensive unit tests for this Python function to ensure 100% code coverage",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Review this code and identify potential bugs, security issues, and performance bottlenecks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Amazon CodeWhisperer",
+    "description": "AWS的AI代码生成工具，集成到各种IDE中。",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://aws.amazon.com/codewhisperer",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Generate Python code to interact with AWS S3 bucket for file upload and download operations",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create a Lambda function to process images uploaded to S3 and generate thumbnails automatically",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Replit AI",
+    "description": "Replit平台的AI编程助手，协作编码和学习。",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://replit.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Help me build a simple web application from scratch with HTML, CSS, and JavaScript",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Explain how this React hook works and walk me through implementing similar functionality",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Luma AI",
+    "description": "AI 3D捕捉和重建工具，从照片创建3D模型。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://lumalabs.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Turn these photos of my apartment into a 3D model for virtual staging and interior design",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create a 3D product showcase for our e-commerce site from multiple product photos",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Gamma",
+    "description": "AI演示文稿创建工具，自动设计美观的幻灯片。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://gamma.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create a 15-slide pitch deck for our AI startup with professional design and data visualization",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Turn this research paper into an engaging presentation suitable for academic conferences",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Tome",
+    "description": "AI故事讲述和演示平台，创建交互式叙事体验。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://tome.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Tell the story of our company's journey with interactive visuals and embedded media",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create an interactive lesson plan for teaching climate change with engaging multimedia",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Notion AI",
+    "description": "集成在Notion中的AI助手，帮助写作、总结、翻译等。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://notion.so",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Summarize this 30-minute team meeting transcript into key action items and decisions",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Organize and structure these scattered project notes into a clear, actionable plan",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "name": "GrammarlyGO",
+    "description": "Grammarly的AI写作助手，增强写作、沟通和创意。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://www.grammarly.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Rewrite this work email to be more professional while maintaining a friendly tone",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Help me brainstorm and draft social media captions for our product launch campaign",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Bing Chat",
+    "description": "Microsoft的AI聊天助手，集成网络搜索和创意功能。",
+    "category": "Writing",
+    "pricing": "Free",
+    "url": "https://www.bing.com/chat",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Research current events and summarize the latest developments in AI regulation",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Help me plan a trip to Tokyo with current flight prices and hotel recommendations",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Hugging Face",
+    "description": "AI模型平台，提供数千个预训练模型和协作工具。",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://huggingface.co",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Find and deploy a pre-trained sentiment analysis model for customer reviews",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Fine-tune a language model on our company's documentation for internal chatbot",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "name": "LangChain",
+    "description": "AI应用开发框架，构建由语言模型驱动的应用。",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://www.langchain.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Build a RAG system that answers questions about our company's internal documentation",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create an AI agent that can browse the web, research topics, and write comprehensive reports",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Figma AI",
+    "description": "Figma中的AI设计助手，加速UI/UX设计工作流程。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://www.figma.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Generate multiple design variations for this mobile app screen based on current trends",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create a complete design system with consistent components and styling for our startup",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Magical",
+    "description": "AI文本扩展和自动化工具，加速重复性写作任务。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://www.magical.so",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create templates for common customer support responses that I can personalize quickly",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Automate my recruiting outreach by personalizing messages based on candidate profiles",
+        "image_url":
