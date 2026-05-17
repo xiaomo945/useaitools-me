@@ -1375,4 +1375,148 @@
       },
       {
         "prompt": "Automate my recruiting outreach by personalizing messages based on candidate profiles",
-        "image_url":
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Synthesia",
+    "description": "AI视频生成平台，创建具有AI主播的专业视频，无需拍摄或编辑技能。",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://www.synthesia.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create a training video for employee onboarding with a professional AI presenter",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Generate product demonstration videos in 10 different languages for global audience",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "name": "ElevenLabs",
+    "description": "高质量的AI语音生成平台，创建自然逼真的语音克隆和文本转语音。",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://elevenlabs.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Clone my voice to narrate audiobooks and podcasts with natural-sounding delivery",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Generate voiceovers in multiple languages with different accents for e-learning content",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "name": "Lovable",
+    "description": "AI视频编辑工具，快速生成和编辑视频，简单易用的界面。",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://lovable.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create a TikTok-style short videos from longer content with AI-powered editing",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Generate social media videos with automatic captions and trendy effects",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "name": "DeepL Write",
+    "description": "AI写作和翻译助手，提升写作质量和多语言沟通。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://www.deepl.com/write",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Improve the clarity and tone of this business email while preserving the original message",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Translate this document from English to Chinese with natural, fluent translation",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Notion AI",
+    "description": "集成在Notion中的AI助手，提供智能内容创作和知识管理。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://notion.so",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Turn meeting notes into clear, structured documentation",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Generate blog post from bullet points into full article",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Raycast AI",
+    "description": "AI驱动的启动器和生产力工具，提升工作效率。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.raycast.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Automate repetitive tasks on Mac with custom AI workflows",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Get quick answers to questions without leaving your workflow",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Github Copilot X",
+    "description": "先进的AI编程助手，提供更智能的代码建议和聊天功能。",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://github.com/features/copilot",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Chat with AI about my codebase to understand and refactor",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Get explanations of complex code and debug issues",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  }
+]
