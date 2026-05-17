@@ -284,7 +284,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           {/* Background Breathing Glow - Only Desktop */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent rounded-full blur-3xl animate-breathe pointer-events-none hidden sm:block" />
           
-          <img src="/logo.png" alt="Use AI Tools" className="h-12 sm:h-14 w-auto mx-auto mb-3 relative z-10" width="80" height="48" loading="eager" />
+          &lt;img src="/logo.png" alt="Use AI Tools Logo - Discover the best AI tools" className="h-12 sm:h-14 w-auto mx-auto mb-3 relative z-10" width="80" height="48" loading="eager" /&gt;
           <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight mb-2 relative z-10">
             <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
               Use AI Tools

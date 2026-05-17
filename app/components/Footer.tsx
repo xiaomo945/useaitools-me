@@ -54,13 +54,31 @@ export default function Footer() {
           </div>
 
           {/* Legal Links */}
-          <div className="flex justify-center gap-6 mb-6">
+          <div className="flex justify-center gap-6 mb-6 flex-wrap">
             <Link
               href="/affiliate-disclosure"
               className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
             >
               Affiliate Disclosure
             </Link>
+            <Link
+              href="#"
+              className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="#"
+              className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+            >
+              Terms of Service
+            </Link>
+            <a
+              href="mailto:affiliate@useaitools.me"
+              className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+            >
+              Contact
+            </a>
           </div>
           
           <p className="text-slate-500 dark:text-gray-500 text-sm">

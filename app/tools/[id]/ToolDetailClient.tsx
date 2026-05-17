@@ -241,7 +241,7 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
                     >
                       <img
                         src={example.image_url}
-                        alt={`Example ${index + 1}`}
+                        alt={`${tool.name} Example ${index + 1} - AI tool demo`}
                         className="w-full h-auto object-cover"
                         width="600"
                         height="400"
