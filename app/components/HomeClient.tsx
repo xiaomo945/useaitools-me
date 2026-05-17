@@ -35,6 +35,8 @@ type Tool = {
   affiliate_link: string;
   icon_url: string;
   examples?: any[];
+  needs_vpn: boolean;
+  languages: string[];
 };
 
 type Category = string;
@@ -284,7 +286,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           {/* Background Breathing Glow - Only Desktop */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent rounded-full blur-3xl animate-breathe pointer-events-none hidden sm:block" />
           
-          &lt;img src="/logo.png" alt="Use AI Tools Logo - Discover the best AI tools" className="h-12 sm:h-14 w-auto mx-auto mb-3 relative z-10" width="80" height="48" loading="eager" /&gt;
+          <img src="/logo.png" alt="Use AI Tools Logo - Discover the best AI tools" className="h-12 sm:h-14 w-auto mx-auto mb-3 relative z-10" width="80" height="48" loading="eager" />
           <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight mb-2 relative z-10">
             <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
               Use AI Tools
@@ -435,9 +437,20 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                         <h3 className="font-bold text-lg text-slate-900 dark:text-white">
                           {tool.name}
                         </h3>
-                        <span className={`px-2 py-1 rounded-full text-xs font-semibold ${colors.bgDark} ${colors.textLight} dark:${colors.text}`}>
-                          {tool.category}
-                        </span>
+                        <div className="flex items-center gap-1.5 mt-1">
+                          <span className={`px-2 py-1 rounded-full text-xs font-semibold ${colors.bgDark} ${colors.textLight} dark:${colors.text}`}>
+                            {tool.category}
+                          </span>
+                          {tool.needs_vpn ? (
+                            <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                              🪜 VPN
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                              ✅ Direct
+                            </span>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -510,9 +523,22 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                       <div className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`} style={{ fontFamily: 'Playfair Display, serif' }}>
                         {tool.name.charAt(0)}
                       </div>
-                      <h3 className="font-semibold text-lg text-slate-900 dark:text-white">
-                        {highlightText(tool.name, search)}
-                      </h3>
+                      <div>
+                        <h3 className="font-semibold text-lg text-slate-900 dark:text-white">
+                          {highlightText(tool.name, search)}
+                        </h3>
+                        <div className="flex items-center gap-1.5 mt-1">
+                          {tool.needs_vpn ? (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                              🪜 VPN Required
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                              ✅ Direct Access
+                            </span>
+                          )}
+                        </div>
+                      </div>
                     </div>
                     <div className="flex items-center gap-2">
                       <button

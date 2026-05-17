@@ -42,6 +42,8 @@ type Tool = {
   icon_url: string;
   pricing: string;
   examples?: Example[];
+  needs_vpn: boolean;
+  languages: string[];
 };
 
 const categoryFeatures: Record<string, string[]> = {
@@ -158,13 +160,31 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
                 <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-2">
                   {tool.name}
                 </h1>
-                <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-semibold ${colors.bg} text-white`}>
-                  {tool.category}
-                </span>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-semibold ${colors.bg} text-white`}>
+                    {tool.category}
+                  </span>
+                  {tool.needs_vpn ? (
+                    <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                      🪜 VPN Required
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                      ✅ Direct Access
+                    </span>
+                  )}
+                </div>
               </div>
-              <span className="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold">
-                {tool.pricing}
-              </span>
+              <div className="flex flex-col items-end gap-2">
+                <span className="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold">
+                  {tool.pricing}
+                </span>
+                {tool.languages && tool.languages.length > 0 && (
+                  <span className="px-3 py-1.5 rounded-full text-xs bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium">
+                  {tool.languages.join(', ')}
+                </span>
+                )}
+              </div>
             </div>
 
             {/* Description */}

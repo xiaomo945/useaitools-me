@@ -194,13 +194,26 @@ export default function SavedPage() {
                   <div className="p-7">
                     {/* Tool Header */}
                     <div className="flex items-start justify-between gap-4 mb-4">
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-start gap-3">
                         <div className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold group-hover:scale-105 transition-transform duration-300 ease-out`} style={{ fontFamily: 'Playfair Display, serif' }}>
                           {tool.name.charAt(0)}
                         </div>
-                        <h3 className="font-semibold text-xl text-slate-900 dark:text-white">
-                          {tool.name}
-                        </h3>
+                        <div>
+                          <h3 className="font-semibold text-xl text-slate-900 dark:text-white">
+                            {tool.name}
+                          </h3>
+                          <div className="flex items-center gap-1.5 mt-1">
+                            {tool.needs_vpn ? (
+                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                                🪜 VPN
+                              </span>
+                            ) : (
+                              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                                ✅ Direct
+                              </span>
+                            )}
+                          </div>
+                        </div>
                       </div>
                       <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
                         {tool.pricing}

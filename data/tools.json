@@ -17,6 +17,10 @@
         "prompt": "Cyberpunk cityscape with neon lights, rainy streets, cinematic lighting",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -37,6 +41,10 @@
         "prompt": "An astronaut riding a horse on Mars, wearing a space suit, realistic photography",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -57,6 +65,10 @@
         "prompt": "Steampunk mechanical owl with intricate gears, Victorian style, studio photography",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -77,6 +89,10 @@
         "prompt": "Professional business presentation template with clean design and blue accents",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -97,6 +113,10 @@
         "prompt": "Organize and structure these scattered project notes into a clear, actionable plan",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -117,6 +137,10 @@
         "prompt": "Draft a comprehensive blog post about the benefits of remote work for modern companies",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -137,6 +161,10 @@
         "prompt": "Refactor this messy Python script for better readability and performance",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -157,6 +185,10 @@
         "prompt": "Generate a warm, friendly podcast intro with subtle background music",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -177,6 +209,10 @@
         "prompt": "Transform this footage into a cinematic slow-motion sequence with color grading",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -197,6 +233,10 @@
         "prompt": "Compare the features and pricing of top project management software with citations",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -217,6 +257,10 @@
         "prompt": "Convert this Japanese audio file to English text with high accuracy",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -237,6 +281,10 @@
         "prompt": "Create an animated scene of a cozy coffee shop with steam rising from cups",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -257,6 +305,10 @@
         "prompt": "Explain this complex algorithm and suggest optimizations",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -277,6 +329,10 @@
         "prompt": "Extract key insights and create a mind map outline from this research paper",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -297,6 +353,10 @@
         "prompt": "Generate a mellow jazz instrumental piece with piano and saxophone solo",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -317,6 +377,10 @@
         "prompt": "Create a cinematic scene of a futuristic Tokyo street with flying cars and neon lights",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -337,6 +401,10 @@
         "prompt": "Suggest test cases for this user authentication function",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -357,6 +425,10 @@
         "prompt": "Create engaging social media posts for a coffee brand launch campaign",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -377,6 +449,10 @@
         "prompt": "3D text effect \"DREAM\" floating in clouds, golden hour lighting, magical atmosphere",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -397,6 +473,10 @@
         "prompt": "Draft a creative short story about a time traveler who accidentally changes history",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -417,6 +497,10 @@
         "prompt": "Create a detailed travel itinerary for a 7-day trip to Japan with cultural recommendations",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -437,6 +521,10 @@
         "prompt": "Write compelling meta descriptions and headlines for an e-commerce website selling organic skincare products",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -457,6 +545,10 @@
         "prompt": "Create engaging video script ideas for a YouTube channel about personal finance",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -477,6 +569,10 @@
         "prompt": "Expand and elaborate this brief bullet point summary into a comprehensive paragraph",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -497,6 +593,10 @@
         "prompt": "Remove the background from this interview footage and replace it with a professional office background",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -517,6 +617,10 @@
         "prompt": "Take these 15 messy meeting notes and organize them into actionable tasks with priorities and due dates",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -537,6 +641,10 @@
         "prompt": "Categorize and prioritize these 20 random tasks and suggest which ones I should do first today",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -557,6 +665,10 @@
         "prompt": "Plan a 3-week vacation to Europe with budget estimates, booking suggestions, and daily itinerary",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -577,6 +689,10 @@
         "prompt": "Deploy an agent to monitor competitor pricing and send weekly summary reports",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -597,6 +713,10 @@
         "prompt": "Create a product development team with separate agents for market research, design, and technical specification",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -617,6 +737,10 @@
         "prompt": "Analyze top-ranking competitors for \"AI project management tools\" and create a content strategy to outrank them",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -637,6 +761,10 @@
         "prompt": "Answer these 15 common questions about 'sustainable fashion' to create an FAQ section that ranks well",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -657,6 +785,10 @@
         "prompt": "Create a content cluster strategy for 'machine learning for beginners' to establish topical authority",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -677,6 +809,10 @@
         "prompt": "Research precedent cases about intellectual property disputes in the software industry",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -697,6 +833,10 @@
         "prompt": "Compare these two NDA agreements and highlight the key differences and their implications",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -717,6 +857,10 @@
         "prompt": "Create a 5-year financial plan for saving for a house down payment with monthly savings targets",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -737,6 +881,10 @@
         "prompt": "Create a 2-week study plan for my upcoming chemistry exam on organic chemistry reactions",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -757,6 +905,10 @@
         "prompt": "Explain why I made this grammar mistake in French and give me similar examples to practice",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -777,6 +929,10 @@
         "prompt": "Generate a practice test for my history exam on World War II with essay and multiple choice questions",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -797,6 +953,10 @@
         "prompt": "Design an animated 3D logo for a tech startup that rotates and has a glowing effect",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -817,6 +977,10 @@
         "prompt": "Turn this 2D concept art of a castle into a fully textured 3D model",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -837,6 +1001,10 @@
         "prompt": "Generate seamless texture maps for a sci-fi corridor wall with panel details and neon lights",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -857,6 +1025,10 @@
         "prompt": "Generate a calm ambient background track for meditation app with nature sounds",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -877,6 +1049,10 @@
         "prompt": "Create a suspenseful thriller theme with building tension and mysterious atmosphere",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -897,6 +1073,10 @@
         "prompt": "Generate background music for a cooking tutorial that's upbeat but not distracting",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -917,6 +1097,10 @@
         "prompt": "Role-play as a fantasy adventurer seeking advice from a wise wizard character",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -937,6 +1121,10 @@
         "prompt": "Use multiple AI assistants to help write, edit, and refine this research paper",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -957,6 +1145,10 @@
         "prompt": "Create compelling LinkedIn carousel content about productivity tips for remote workers",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -977,6 +1169,10 @@
         "prompt": "Search for reference images and generate new concept art for a cyberpunk game character",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -997,6 +1193,10 @@
         "prompt": "Edit this photo to change the background to a beautiful sunset over mountains",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1017,6 +1217,10 @@
         "prompt": "Design a t-shirt graphic with \"AI 2026\" in futuristic lettering with tech-themed illustration",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1037,6 +1241,10 @@
         "prompt": "Generate an engaging audiobook narrator voice for children's story with warm, expressive delivery",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1057,6 +1265,10 @@
         "prompt": "Clone my voice to create a new recording of this script without me having to re-record",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1077,6 +1289,10 @@
         "prompt": "Enhance this old footage by upscaling resolution and improving color and lighting automatically",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1097,6 +1313,10 @@
         "prompt": "Generate training videos in 5 different languages using the same avatar and script",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1117,6 +1337,10 @@
         "prompt": "Create a customer testimonial video with realistic AI-generated presenters",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1137,6 +1361,10 @@
         "prompt": "Review this code and identify potential bugs, security issues, and performance bottlenecks",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1157,6 +1385,10 @@
         "prompt": "Create a Lambda function to process images uploaded to S3 and generate thumbnails automatically",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1177,6 +1409,10 @@
         "prompt": "Explain how this React hook works and walk me through implementing similar functionality",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1197,6 +1433,10 @@
         "prompt": "Create a 3D product showcase for our e-commerce site from multiple product photos",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1217,6 +1457,10 @@
         "prompt": "Turn this research paper into an engaging presentation suitable for academic conferences",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1237,6 +1481,10 @@
         "prompt": "Create an interactive lesson plan for teaching climate change with engaging multimedia",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1257,6 +1505,10 @@
         "prompt": "Organize and structure these scattered project notes into a clear, actionable plan",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1277,6 +1529,10 @@
         "prompt": "Help me brainstorm and draft social media captions for our product launch campaign",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1297,6 +1553,10 @@
         "prompt": "Help me plan a trip to Tokyo with current flight prices and hotel recommendations",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1317,6 +1577,10 @@
         "prompt": "Fine-tune a language model on our company's documentation for internal chatbot",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1337,6 +1601,10 @@
         "prompt": "Create an AI agent that can browse the web, research topics, and write comprehensive reports",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1357,6 +1625,10 @@
         "prompt": "Create a complete design system with consistent components and styling for our startup",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1377,6 +1649,10 @@
         "prompt": "Automate my recruiting outreach by personalizing messages based on candidate profiles",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1397,6 +1673,10 @@
         "prompt": "Generate product demonstration videos in 10 different languages for global audience",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1417,6 +1697,10 @@
         "prompt": "Generate voiceovers in multiple languages with different accents for e-learning content",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1437,6 +1721,10 @@
         "prompt": "Generate social media videos with automatic captions and trendy effects",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1457,6 +1745,10 @@
         "prompt": "Translate this document from English to Chinese with natural, fluent translation",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1477,6 +1769,10 @@
         "prompt": "Generate blog post from bullet points into full article",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1497,6 +1793,10 @@
         "prompt": "Get quick answers to questions without leaving your workflow",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
     ]
   },
   {
@@ -1515,6 +1815,447 @@
       },
       {
         "prompt": "Get explanations of complex code and debug issues",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ]
+  },
+  {
+    "id": 105,
+    "name": "智谱清言",
+    "description": "智谱AI开发的多模态对话助手，支持文本、图像、代码等多种能力",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://chatglm.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "写一篇关于人工智能发展的文章",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "name": "豆包",
+    "description": "字节跳动开发的AI对话助手，提供文本、图像、语音等多种能力",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://www.doubao.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我写一封商务邮件",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "name": "文心一言",
+    "description": "百度开发的AI大语言模型，支持文本生成、代码、图像等能力",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://yiyan.baidu.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我生成一段产品文案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "name": "通义千问",
+    "description": "阿里云开发的AI大模型，支持文本、代码、图像等多种能力",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://tongyi.aliyun.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我分析一下这个数据",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "name": "讯飞星火",
+    "description": "科大讯飞开发的AI大语言模型，支持文本、语音、图像等多模态",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://xinghuo.xfyun.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我写一个Python脚本",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "name": "通义万相",
+    "description": "阿里云开发的AI图像生成工具，支持文本转图像、图像编辑等",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://wanxiang.aliyun.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "生成一张中国风山水画",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "name": "文心一格",
+    "description": "百度开发的AI艺术与创意图像生成平台",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://yige.baidu.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "创作一幅赛博朋克风格的城市夜景",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "name": "智谱AI图像生成",
+    "description": "智谱AI开发的图像生成工具，支持多种风格的图像创作",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://chatglm.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "生成一张现代简约风格的室内设计图",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "name": "腾讯混元",
+    "description": "腾讯开发的AI大模型，提供文本、图像、代码等多种能力",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://hunyuan.tencent.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我生成一份市场营销方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "name": "抖音AI绘画",
+    "description": "抖音推出的AI绘画工具，简单易用的图像生成应用",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://www.douyin.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "画一张可爱的卡通猫",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "name": "快手AI视频",
+    "description": "快手推出的AI视频生成和编辑工具",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.kuaishou.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "生成一段风景短视频",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "name": "剪映AI",
+    "description": "字节跳动的视频编辑软件，集成了多种AI功能",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.capcut.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "使用AI智能剪辑我的视频",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "name": "喜马拉雅AI配音",
+    "description": "喜马拉雅推出的AI语音合成和配音工具",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.ximalaya.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "为我的文章做一个AI配音",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "name": "讯飞配音",
+    "description": "科大讯飞的专业AI语音合成平台",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://peiyin.xfyun.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "合成一段专业的广告配音",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "name": "阿里编程助手",
+    "description": "阿里云推出的AI编程辅助工具",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://tongyi.aliyun.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我写一个完整的登录系统代码",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "name": "腾讯云开发助手",
+    "description": "腾讯云的AI编程和开发辅助工具",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://cloud.tencent.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我部署一个简单的云服务器应用",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "name": "飞书AI",
+    "description": "字节跳动飞书中集成的AI助手，提升办公效率",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.feishu.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我写一份会议纪要",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "name": "钉钉AI",
+    "description": "阿里巴巴钉钉中集成的AI办公助手",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.dingtalk.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我整理一份项目进度报告",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "name": "企业微信AI",
+    "description": "腾讯企业微信中的AI办公助手",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://work.weixin.qq.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我起草一份客户邮件",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "name": "WPS AI",
+    "description": "金山办公软件中集成的AI助手，支持文档、表格、演示",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.wps.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我写一份商业计划书",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "name": "美图秀秀AI",
+    "description": "美图秀秀的AI图像编辑和增强工具",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://www.meitu.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "用AI美化我的照片",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]

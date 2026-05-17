@@ -15,6 +15,8 @@ type Tool = {
   affiliate_link: string;
   icon_url: string;
   examples?: any[];
+  needs_vpn: boolean;
+  languages: string[];
 };
 
 // 类型断言确保数据符合我们的类型要求
