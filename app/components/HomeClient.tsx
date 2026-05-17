@@ -118,25 +118,54 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
     });
   };
   
-  // Randomly select 3 featured tools - using Fisher-Yates shuffle for better randomness
+  // 智能选择 3 个精选工具 - 优先选择中国 AI 工具
   const [featuredTools] = useState(() => {
-    const shuffled = [...initialTools];
-    for (let i = shuffled.length - 1; i > 0; i--) {
+    // 先筛选出不需要 VPN 的中国 AI 工具
+    const chineseTools = initialTools.filter(tool => !tool.needs_vpn);
+    // 然后是所有工具
+    const allTools = [...initialTools];
+    
+    // 智能选择：如果有中国 AI 工具，优先选择，然后混合其他工具
+    const selected: Tool[] = [];
+    
+    // 从中国 AI 工具中选择最多 2 个
+    const chineseCandidates = [...chineseTools];
+    for (let i = chineseCandidates.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      [chineseCandidates[i], chineseCandidates[j]] = [chineseCandidates[j], chineseCandidates[i]];
     }
-    return shuffled.slice(0, 3);
+    selected.push(...chineseCandidates.slice(0, 2));
+    
+    // 从所有工具中选择剩余的（排除已选择的）
+    const remaining = allTools.filter(t => !selected.some(s => s.id === t.id));
+    for (let i = remaining.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [remaining[i], remaining[j]] = [remaining[j], remaining[i]];
+    }
+    selected.push(...remaining.slice(0, 3 - selected.length));
+    
+    return selected;
   });
 
   const categories: Category[] = ['All', 'Writing', 'Image', 'Productivity', 'Code', 'Audio', 'Video'];
 
+  // 智能排序：将中国 AI 工具（无需 VPN）优先展示
   const filteredTools = useMemo(() => {
-    return initialTools.filter((tool) => {
+    const filtered = initialTools.filter((tool) => {
       const matchesSearch = 
         tool.name.toLowerCase().includes(search.toLowerCase()) || 
         tool.description.toLowerCase().includes(search.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
       return matchesSearch && matchesCategory;
+    });
+    
+    // 智能排序：无需 VPN 的工具优先展示
+    return [...filtered].sort((a, b) => {
+      if (!a.needs_vpn && b.needs_vpn) return -1;
+      if (a.needs_vpn && !b.needs_vpn) return 1;
+      
+      // 都不需要 VPN 或都需要 VPN 的情况下，按原顺序（id）
+      return a.id - b.id;
     });
   }, [search, selectedCategory, initialTools]);
 
