@@ -271,10 +271,10 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           </p>
           
           {/* Search Box */}
-          <div className="relative max-w-2xl mx-auto mb-8">
+          <div className="relative max-w-2xl mx-auto mb-8 px-4 sm:px-0">
             <div className="relative">
               <svg
-                className="absolute left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
+                className="absolute left-4 sm:left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -293,12 +293,12 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 aria-label="Search AI tools"
-                className="w-full px-5 py-4 pl-14 pr-12 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
+                className="w-full px-4 sm:px-5 py-3 sm:py-4 pl-12 sm:pl-14 pr-10 sm:pr-12 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
               />
               {search && (
                 <button
                   onClick={() => setSearch('')}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200"
+                  className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200"
                   aria-label="Clear search"
                 >
                   <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -312,15 +312,15 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           {/* Category Buttons */}
           <div className="relative">
             {/* Left Gradient Fade */}
-            <div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
+            <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-10 bg-gradient-to-r from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
             {/* Right Gradient Fade */}
-            <div className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-10 bg-gradient-to-l from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
             
-            <div className="flex overflow-x-auto scrollbar-hide gap-2 sm:gap-3 sm:justify-center sm:flex-wrap px-4 sm:px-0">
+            <div className="flex overflow-x-auto scrollbar-hide gap-2.5 sm:gap-3 sm:justify-center sm:flex-wrap px-6 sm:px-0 py-1">
               {categories.map((category) => {
                 const isActive = selectedCategory === category;
                 
-                const buttonStyle = `px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.98] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[44px] flex items-center justify-center ${
+                const buttonStyle = `px-4 sm:px-5 py-2.5 sm:py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.98] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[44px] flex items-center justify-center ${
                   isActive
                     ? category === 'All'
                       ? 'bg-emerald-600 text-white'
