@@ -36,14 +36,15 @@ export default function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
               <span className="text-gray-900 dark:text-gray-100 font-medium">{item.label}</span>
             ) : (
               <Link
-              href={item.href}
-              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-            >
-              {item.label}
-            </Link>
-          )}
-        </div>
-      ))}
-    </nav>
+                href={item.href}
+                className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+              >
+                {item.label}
+              </Link>
+            )}
+          </div>
+        ))}
+      </nav>
+    </>
   );
 }
