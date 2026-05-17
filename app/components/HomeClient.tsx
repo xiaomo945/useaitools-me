@@ -312,11 +312,11 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           {/* Category Buttons */}
           <div className="relative">
             {/* Left Gradient Fade */}
-            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10 hidden sm:block" />
+            <div className="absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
             {/* Right Gradient Fade */}
-            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10 hidden sm:block" />
+            <div className="absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
             
-            <div className="flex overflow-x-auto scrollbar-hide gap-2 sm:gap-3 sm:justify-center sm:flex-wrap">
+            <div className="flex overflow-x-auto scrollbar-hide gap-2 sm:gap-3 sm:justify-center sm:flex-wrap px-4 sm:px-0">
               {categories.map((category) => {
                 const isActive = selectedCategory === category;
                 
