@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "home": "首页",
+    "blog": "博客",
+    "categories": {
+      "writing": "写作",
+      "image": "图像",
+      "productivity": "生产力",
+      "code": "代码",
+      "audio": "音频",
+      "video": "视频"
+    }
+  },
+  "hero": {
+    "title": "发现最佳 AI 工具",
+    "subtitle": "精心挑选的 AI 工具目录。找到、比较并选择适合您需求的完美 AI 工具。",
+    "cta": "探索工具"
+  },
+  "footer": {
+    "copyright": "© 2026 Use AI Tools。保留所有权利。",
+    "links": {
+      "home": "首页",
+      "blog": "博客",
+      "affiliate": "联盟披露"
+    }
+  }
+}

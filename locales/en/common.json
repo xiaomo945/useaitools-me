@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "categories": {
+      "writing": "Writing",
+      "image": "Image",
+      "productivity": "Productivity",
+      "code": "Code",
+      "audio": "Audio",
+      "video": "Video"
+    }
+  },
+  "hero": {
+    "title": "Discover the Best AI Tools",
+    "subtitle": "Handpicked directory of AI tools for every task. Find, compare, and choose the perfect AI tool for your needs.",
+    "cta": "Explore Tools"
+  },
+  "footer": {
+    "copyright": "© 2026 Use AI Tools. All rights reserved.",
+    "links": {
+      "home": "Home",
+      "blog": "Blog",
+      "affiliate": "Affiliate Disclosure"
+    }
+  }
+}
