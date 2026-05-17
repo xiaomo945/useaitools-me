@@ -12,50 +12,40 @@
 
 ## 📐 实施规范
 
-### 输入验证与输出编码
-- **输入验证**：所有用户输入在服务端进行验证，不依赖客户端验证
-- **参数化查询**：数据库查询使用参数化查询或 ORM，绝不拼接 SQL
-- **输出编码**：根据输出上下文（HTML、JavaScript、CSS、URL）正确编码
-- **文件上传**：严格验证文件类型和大小，存储在 webroot 之外
-
 ### XSS 防御
-- **内容安全策略 (CSP)**：配置严格的 CSP 头，限制脚本来源
-- **HTTPOnly Cookie**：敏感 Cookie 设置 HTTPOnly 防止 JavaScript 访问
-- **输入过滤**：对特殊字符进行过滤或转义
-- **React 默认防护**：React 自动转义 JSX 中的内容，遵循此原则
+- **React 自动转义**：React 默认转义 JSX 中的所有输出，不额外使用 `dangerouslySetInnerHTML`。
+- **HTTPOnly Cookie**：所有会话 Cookie 设置 `HttpOnly` 和 `Secure` 标志。
 
 ### CSRF 防御
-- **CSRF Token**：所有状态变更请求包含 CSRF token
-- **SameSite Cookie**：Cookie 设置 SameSite=Strict/Lax
-- **Referer 检查**：验证请求来源
+- **SameSite Cookie**：设置 `SameSite=Strict` 或 `SameSite=Lax`。
+- **CSRF Token**：对于需要身份验证的操作，使用 CSRF Token 验证请求来源。
 
 ### 敏感信息管理
-- **环境变量**：所有密钥、API Key、数据库密码通过环境变量管理
-- **不硬编码**：代码库中绝不存在明文密钥
-- **.gitignore**：敏感文件加入 .gitignore
-- **密钥轮换**：定期更换密钥，记录变更日志
+- **环境变量**：所有 API Key、Token、数据库密码通过 `process.env` 读取，绝不硬编码在代码中。
+- **环境变量命名规范**：
+  - `AFFILIATE_{TOOL_NAME}` — 联盟链接（如 `AFFILIATE_RYTR`）
+  - `DATABASE_URL` — 数据库连接字符串
+  - `API_KEY_{SERVICE}` — 第三方 API Key
+- **`.gitignore` 保护**：`.env`、`.env.local`、`.env.production` 文件绝不提交到仓库。
+- **Token 轮换**：定期轮换所有 API Token，至少每季度一次。
 
-### HTTPS 与传输安全
-- **强制 HTTPS**：所有流量通过 HTTPS，HTTP 自动重定向
-- **HSTS**：配置 Strict-Transport-Security 头
-- **安全 Cookie**：敏感 Cookie 设置 Secure 标志
-- **证书管理**：使用 Let's Encrypt，自动续期
+### SQL 注入防御
+- **参数化查询**：使用 Prisma 或 Drizzle ORM 的参数化查询，绝不拼接 SQL 字符串。
+- **输入验证**：所有用户输入在服务端进行白名单验证。
 
 ### 第三方依赖安全
-- **依赖审查**：定期使用 npm audit 检查依赖漏洞
-- **最小依赖**：只安装必要的包，避免过度依赖
-- **版本锁定**：使用 package-lock.json 锁定版本
-- **可信来源**：只从 npm 官方源安装包
+- **`npm audit`**：每次部署前运行 `npm audit`，修复高危漏洞。
+- **版本锁定**：使用 `package-lock.json` 锁定依赖版本。
+- **可信来源**：只从 npm 官方仓库安装依赖，不使用第三方镜像。
 
 ### 外部链接安全
-- **rel 属性**：所有外部链接添加 `rel="noopener noreferrer"`
-- **链接校验**：用户生成的链接在点击前显示目标 URL
-- **nofollow 考虑**：对不可信的用户内容添加 nofollow
+- **`rel="noopener noreferrer"`**：所有 `target="_blank"` 的外部链接必须添加此属性，防止 `window.opener` 攻击。
+- **链接验证**：定期检查所有外部链接是否有效，防止恶意跳转。
 
-### 安全日志与监控
-- **访问日志**：记录所有敏感操作的访问日志
-- **异常监控**：监控异常的登录尝试、API 调用等
-- **告警机制**：设置安全告警阈值，及时响应
+### 安全审计
+- **定期审查**：每季度进行一次安全自查，检查所有环境变量、依赖和外部链接。
+- **渗透测试**：使用 OWASP ZAP 或 Burp Suite 进行自动化渗透测试。
+- **依赖更新**：每月检查并更新过时依赖。
 
 ## 🧙 执行指令
 当 `master-profile.md` 调用本维度时，以上述标准执行任务。
