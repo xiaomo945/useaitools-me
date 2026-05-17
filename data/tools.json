@@ -498,5 +498,45 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]
+  },
+  {
+    "id": 52,
+    "name": "ClickUp AI",
+    "description": "AI-powered project management assistant that enhances ClickUp with task creation, project planning, and workflow automation.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://clickup.com/ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Create a 12-week project plan for launching a new mobile app with tasks, milestones, and team assignments",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Take these 15 messy meeting notes and organize them into actionable tasks with priorities and due dates",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Todoist AI",
+    "description": "AI-enhanced task management that automatically categorizes tasks, suggests priorities, and helps break down complex projects.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://todoist.com/productivity-methods/personal-assistants",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "I need to plan a wedding. Break this down into manageable tasks with priorities and suggested due dates",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Categorize and prioritize these 20 random tasks and suggest which ones I should do first today",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   }
 ]
