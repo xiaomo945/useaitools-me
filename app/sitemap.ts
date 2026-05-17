@@ -39,8 +39,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly',
     priority: 0.8,
   });
+
+  // 4. Affiliate Disclosure 页面
+  sitemap.push({
+    url: 'https://useaitools.me/affiliate-disclosure',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  });
   
-  // 4. 分类页面 - 中等优先级
+  // 5. 分类页面 - 中等优先级
   categories.forEach((category) => {
     sitemap.push({
       url: `https://useaitools.me/category/${categorySlugMap(category)}`,
@@ -50,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
   
-  // 5. 工具详情页 - 使用工具自身的更新日期（如果有的话）
+  // 6. 工具详情页 - 使用工具自身的更新日期（如果有的话）
   toolsData.forEach((tool) => {
     sitemap.push({
       url: `https://useaitools.me/tools/${tool.id}`,
@@ -60,7 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
   
-  // 6. 博客文章页 - 使用文章发布日期
+  // 7. 博客文章页 - 使用文章发布日期
   blogPostsData.forEach((post) => {
     sitemap.push({
       url: `https://useaitools.me/blog/${post.slug}`,
