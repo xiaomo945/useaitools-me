@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
 import { Suspense } from "react";
 import "./globals.css";
 import PageProgress from "./components/PageProgress";
+import BackToTop from "./components/BackToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -91,6 +92,7 @@ export default function RootLayout({
           <PageProgress />
         </Suspense>
         {children}
+        <BackToTop />
       </body>
     </html>
   );

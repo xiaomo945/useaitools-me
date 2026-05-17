@@ -15,6 +15,19 @@ type BlogPost = {
   content: string;
 };
 
+// Calculate estimated reading time
+const calculateReadTime = (content: string): string => {
+  const wordsPerMinute = 200;
+  // Strip HTML tags and markdown
+  const plainText = content
+    .replace(/<[^>]*>/g, '')
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/\[\[link:[^\|]+\|([^\]]+)\]\]/g, '$1');
+  const wordCount = plainText.trim().split(/\s+/).length;
+  const readTime = Math.ceil(wordCount / wordsPerMinute);
+  return `${readTime} min read`;
+};
+
 // Simple function to parse basic markdown-like content
 const renderContent = (content: string) => {
   let html = content;
@@ -53,6 +66,7 @@ export default function ClientBlogDetail({
   const [copied, setCopied] = useState(false);
   const url = `https://useaitools.me/blog/${slug}`;
   const encodedTitle = encodeURIComponent(post.title);
+  const readTime = calculateReadTime(post.content);
 
   const handleCopyLink = async () => {
     try {
@@ -78,9 +92,14 @@ export default function ClientBlogDetail({
 
         {/* Post Header */}
         <div className="mb-8">
-          <span className="text-sm font-medium text-slate-500 dark:text-gray-400 mb-3 block">
-            {post.date}
-          </span>
+          <div className="flex items-center gap-4 mb-3">
+            <span className="text-sm font-medium text-slate-500 dark:text-gray-400">
+              {post.date}
+            </span>
+            <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+              • {readTime}
+            </span>
+          </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
             {post.title}
           </h1>

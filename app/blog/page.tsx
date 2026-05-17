@@ -6,6 +6,19 @@ import { Metadata } from 'next';
 
 type BlogPost = (typeof blogPosts)[0];
 
+// Calculate estimated reading time
+const calculateReadTime = (content: string): string => {
+  const wordsPerMinute = 200;
+  // Strip HTML tags and markdown
+  const plainText = content
+    .replace(/<[^>]*>/g, '')
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/\[\[link:[^\|]+\|([^\]]+)\]\]/g, '$1');
+  const wordCount = plainText.trim().split(/\s+/).length;
+  const readTime = Math.ceil(wordCount / wordsPerMinute);
+  return `${readTime} min read`;
+};
+
 export const metadata: Metadata = {
   title: 'AI Tools Blog – Use AI Tools',
   description: 'In-depth comparisons, reviews, and guides for AI tools.',
@@ -79,32 +92,40 @@ export default function BlogPage() {
 
           {/* Blog Posts List */}
           <div className="space-y-6">
-            {blogPosts.map((post) => (
-              <div
-                key={post.id}
-                className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out"
-              >
-                <div className="flex flex-col gap-3">
-                  <span className="text-sm font-medium text-slate-500 dark:text-gray-400">
-                    {post.date}
-                  </span>
-                  <Link href={`/blog/${post.slug}`}>
-                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
-                      {post.title}
-                    </h2>
-                  </Link>
-                  <p className="text-slate-600 dark:text-gray-300 leading-relaxed">
-                    {post.description}
-                  </p>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300"
-                  >
-                    Read More →
-                  </Link>
+            {blogPosts.map((post) => {
+              const readTime = calculateReadTime(post.content);
+              return (
+                <div
+                  key={post.id}
+                  className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out"
+                >
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center gap-4">
+                      <span className="text-sm font-medium text-slate-500 dark:text-gray-400">
+                        {post.date}
+                      </span>
+                      <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                        • {readTime}
+                      </span>
+                    </div>
+                    <Link href={`/blog/${post.slug}`}>
+                      <h2 className="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
+                        {post.title}
+                      </h2>
+                    </Link>
+                    <p className="text-slate-600 dark:text-gray-300 leading-relaxed">
+                      {post.description}
+                    </p>
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300"
+                    >
+                      Read More →
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
         <Footer />
