@@ -51,6 +51,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
   const [heartBurst, setHeartBurst] = useState<{ [key: number]: boolean }>({});
   const [recentlyViewedIds, setRecentlyViewedIds] = useState<number[]>([]);
   const heartBurstRefs = useRef<{ [key: number]: HTMLSpanElement | null }>({});
+  const categoryButtonsRef = useRef<(HTMLButtonElement | null)[]>([]);
   
   // Load saved ids and recently viewed from localStorage on mount
   React.useEffect(() => {
@@ -64,6 +65,26 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
       setRecentlyViewedIds(JSON.parse(recent));
     }
   }, []);
+  
+  // Keyboard navigation for search box (Esc to clear)
+  const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Escape') {
+      setSearch('');
+    }
+  };
+  
+  // Keyboard navigation for category buttons (arrow keys)
+  const handleCategoryKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      const nextIndex = (index + 1) % categories.length;
+      categoryButtonsRef.current[nextIndex]?.focus();
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      const prevIndex = (index - 1 + categories.length) % categories.length;
+      categoryButtonsRef.current[prevIndex]?.focus();
+    }
+  };
   
   // Save toggle function with heart burst effect
   const toggleSave = (id: number) => {
@@ -298,6 +319,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 placeholder="Search 50+ AI tools..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
+                onKeyDown={handleSearchKeyDown}
                 aria-label="Search AI tools"
                 className="w-full px-4 sm:px-5 py-3 sm:py-4 pl-12 sm:pl-14 pr-10 sm:pr-12 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
               />
@@ -336,7 +358,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
             <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-10 bg-gradient-to-l from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
             
             <div className="flex overflow-x-auto scrollbar-hide gap-2.5 sm:gap-3 sm:justify-center sm:flex-wrap px-6 sm:px-0 py-1">
-              {categories.map((category) => {
+              {categories.map((category, index) => {
                 const isActive = selectedCategory === category;
                 
                 const buttonStyle = `px-4 sm:px-5 py-2.5 sm:py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.98] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[44px] flex items-center justify-center ${
@@ -350,7 +372,13 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 return (
                   <button
                     key={category}
+                    ref={(el) => {
+                      if (el) {
+                        categoryButtonsRef.current[index] = el;
+                      }
+                    }}
                     onClick={() => setSelectedCategory(category)}
+                    onKeyDown={(e) => handleCategoryKeyDown(e, index)}
                     className={buttonStyle}
                     title={tooltipMap[category]}
                   >
@@ -463,9 +491,10 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
             
             return (
-              <div
+              <Link
                 key={tool.id}
-                className="shimmer-card bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out animate-fade-in-up"
+                href={`/tools/${tool.id}`}
+                className="shimmer-card bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block"
                 style={{ 
                   animationDelay: `${index * 50}ms`,
                   willChange: 'transform'
@@ -487,7 +516,11 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                     </div>
                     <div className="flex items-center gap-2">
                       <button
-                        onClick={() => toggleCompare(tool.id)}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          toggleCompare(tool.id);
+                        }}
                         className={`w-6 h-6 rounded border-2 transition-all duration-300 ease-out flex items-center justify-center ${
                           isSelectedForCompare 
                             ? 'bg-emerald-500 border-emerald-500 text-white' 
@@ -522,6 +555,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                     <div className="flex items-center gap-1.5 sm:gap-2">
                       <Link
                         href={`/compare?tool=${tool.id}`}
+                        onClick={(e) => e.stopPropagation()}
                         className="inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
                       >
                         <svg
@@ -543,6 +577,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                         href={tool.affiliate_link || tool.url}
                         target="_blank"
                         rel="noopener noreferrer sponsored"
+                        onClick={(e) => e.stopPropagation()}
                         className="inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
                       >
                         <svg
@@ -561,7 +596,11 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                         <span className="hidden sm:inline">Visit</span>
                       </a>
                       <button
-                        onClick={() => toggleSave(tool.id)}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          toggleSave(tool.id);
+                        }}
                         className={`inline-flex items-center justify-center gap-0.5 px-2 min-h-[44px] min-w-[44px] rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ease-out relative overflow-hidden whitespace-nowrap active:scale-[0.98] ${
                           isSaved
                             ? 'bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300 hover:bg-rose-200 dark:hover:bg-rose-500/30'
@@ -579,7 +618,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

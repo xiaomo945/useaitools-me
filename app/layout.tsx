@@ -62,10 +62,20 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "WebSite",
+              "@type": ["Organization", "WebSite"],
               "name": "Use AI Tools",
               "url": "https://useaitools.me",
               "description": "Handpicked directory of 50+ AI tools across Writing, Image, Productivity, Code, Audio, and Video.",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://useaitools.me/logo.png",
+                "width": 200,
+                "height": 200
+              },
+              "sameAs": [
+                "https://twitter.com/jiongxiaomo",
+                "https://github.com/xiaomo945"
+              ],
               "publisher": {
                 "@type": "Organization",
                 "name": "Use AI Tools",

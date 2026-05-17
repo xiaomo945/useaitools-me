@@ -167,13 +167,20 @@ export default function ClientBlogDetail({
               </svg>
               Reddit
             </a>
-            <button
-              onClick={handleCopyLink}
-              className="flex items-center gap-2 px-4 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-medium rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
-            >
-              <Copy className="w-4 h-4" />
-              {copied ? 'Link copied!' : 'Copy Link'}
-            </button>
+            <div className="relative">
+              <button
+                onClick={handleCopyLink}
+                className="flex items-center gap-2 px-4 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-medium rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+              >
+                <Copy className="w-4 h-4" />
+                Copy Link
+              </button>
+              {copied && (
+                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg animate-pulse">
+                  Link copied!
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
