@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Home, Share2, Copy } from 'lucide-react';
 import Footer from '@/app/components/Footer';
+import Breadcrumbs from '@/app/components/Breadcrumbs';
 
 type BlogPost = {
   id: number;
@@ -66,16 +67,14 @@ export default function ClientBlogDetail({
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16 grid-background">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
-        {/* Back to Home Link */}
-        <div className="mb-8">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300"
-          >
-            <Home className="w-5 h-5" />
-            <span className="font-medium">Back to Home</span>
-          </Link>
-        </div>
+        {/* Breadcrumbs */}
+        <Breadcrumbs 
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Blog', href: '/blog' },
+            { label: post.title, href: `/blog/${slug}`, current: true }
+          ]} 
+        />
 
         {/* Post Header */}
         <div className="mb-8">

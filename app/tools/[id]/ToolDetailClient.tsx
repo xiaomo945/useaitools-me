@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { ArrowRight, Home, Copy, Check } from 'lucide-react';
 import Footer from '@/app/components/Footer';
+import Breadcrumbs from '@/app/components/Breadcrumbs';
 
 type Example = {
   prompt: string;
@@ -110,16 +111,14 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
-        {/* Back to Home Link */}
-        <div className="mb-8">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300"
-          >
-            <Home className="w-5 h-5" />
-            <span className="font-medium">Back to Home</span>
-          </Link>
-        </div>
+        {/* Breadcrumbs */}
+        <Breadcrumbs 
+          items={[
+            { label: 'Home', href: '/' },
+            { label: tool.category, href: `/category/${tool.category.toLowerCase()}` },
+            { label: tool.name, href: `/tools/${tool.id}`, current: true }
+          ]} 
+        />
 
         {/* Tool Header */}
         <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl shadow-xl overflow-hidden mb-8">
