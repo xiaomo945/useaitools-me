@@ -1,10 +1,31 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ArrowRight, Home, Copy, Check } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+
+// Save tool to recently viewed
+const saveToRecentlyViewed = (toolId: number) => {
+  try {
+    const saved = localStorage.getItem('recentlyViewed');
+    let recentlyViewed: number[] = saved ? JSON.parse(saved) : [];
+    
+    // Remove if already exists
+    recentlyViewed = recentlyViewed.filter(id => id !== toolId);
+    
+    // Add to beginning
+    recentlyViewed.unshift(toolId);
+    
+    // Keep only last 3
+    recentlyViewed = recentlyViewed.slice(0, 3);
+    
+    localStorage.setItem('recentlyViewed', JSON.stringify(recentlyViewed));
+  } catch (err) {
+    console.error('Failed to save recently viewed:', err);
+  }
+};
 
 type Example = {
   prompt: string;
@@ -97,6 +118,11 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
   const colors = getCategoryColors(tool.category);
   const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  
+  // Save to recently viewed on mount
+  useEffect(() => {
+    saveToRecentlyViewed(tool.id);
+  }, [tool.id]);
 
   const copyToClipboard = async (text: string, index: number) => {
     try {

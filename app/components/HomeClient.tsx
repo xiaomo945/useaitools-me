@@ -49,13 +49,19 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
   const [savedIds, setSavedIds] = useState<number[]>([]);
   const [selectedForCompare, setSelectedForCompare] = useState<number[]>([]);
   const [heartBurst, setHeartBurst] = useState<{ [key: number]: boolean }>({});
+  const [recentlyViewedIds, setRecentlyViewedIds] = useState<number[]>([]);
   const heartBurstRefs = useRef<{ [key: number]: HTMLSpanElement | null }>({});
   
-  // Load saved ids from localStorage on mount
+  // Load saved ids and recently viewed from localStorage on mount
   React.useEffect(() => {
     const saved = localStorage.getItem('savedTools');
     if (saved) {
       setSavedIds(JSON.parse(saved));
+    }
+    
+    const recent = localStorage.getItem('recentlyViewed');
+    if (recent) {
+      setRecentlyViewedIds(JSON.parse(recent));
     }
   }, []);
   
@@ -307,6 +313,19 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 </button>
               )}
             </div>
+          </div>
+
+          {/* Submit Tool Button */}
+          <div className="text-center mb-8">
+            <Link
+              href="/submit"
+              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 rounded-full hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition-all duration-300"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              Submit a Tool
+            </Link>
           </div>
 
           {/* Category Buttons */}
@@ -635,6 +654,98 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 Subscribe
               </button>
             </form>
+          </div>
+        </div>
+
+        {/* Recently Viewed Section */}
+        {recentlyViewedIds.length > 0 && (
+          <div className="mt-16 mb-10">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-8 text-center">
+              Recently Viewed
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {recentlyViewedIds.map((toolId) => {
+                const tool = initialTools.find(t => t.id === toolId);
+                if (!tool) return null;
+                
+                const colors = getCategoryColors(tool.category);
+                const pricingColors = getPricingColors(tool.pricing);
+                
+                return (
+                  <Link
+                    key={tool.id}
+                    href={`/tools/${tool.id}`}
+                    className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out"
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className={`w-10 h-10 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                        {tool.name.charAt(0)}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-semibold text-lg text-slate-900 dark:text-white truncate">
+                          {tool.name}
+                        </h3>
+                        <div className="flex items-center gap-2 mt-1">
+                          <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${colors.bgDark} ${colors.textLight} dark:${colors.text}`}>
+                            {tool.category}
+                          </span>
+                          <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
+                            {tool.pricing}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-2">
+                      {tool.description}
+                    </p>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* FAQ Section */}
+        <div className="mt-16 mb-10">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-8 text-center">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
+              <details className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl overflow-hidden">
+                <summary className="px-6 py-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-gray-800 transition-colors duration-200 font-semibold text-slate-900 dark:text-white flex items-center justify-between">
+                  <span>What is Use AI Tools?</span>
+                  <svg className="w-5 h-5 text-slate-500 dark:text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 py-4 text-slate-600 dark:text-gray-300 border-t border-slate-100 dark:border-gray-800">
+                  Use AI Tools is a curated directory of the best AI tools available today. We organize tools into categories like Writing, Image, Productivity, Code, Audio, and Video to help you find the perfect tool for your needs.
+                </div>
+              </details>
+              <details className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl overflow-hidden">
+                <summary className="px-6 py-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-gray-800 transition-colors duration-200 font-semibold text-slate-900 dark:text-white flex items-center justify-between">
+                  <span>How do I choose the right AI tool?</span>
+                  <svg className="w-5 h-5 text-slate-500 dark:text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 py-4 text-slate-600 dark:text-gray-300 border-t border-slate-100 dark:border-gray-800">
+                  You can browse by category, use our search function, or read our detailed comparison guides. Each tool includes a description, pricing information, and a link to the official website.
+                </div>
+              </details>
+              <details className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl overflow-hidden">
+                <summary className="px-6 py-4 cursor-pointer hover:bg-slate-50 dark:hover:bg-gray-800 transition-colors duration-200 font-semibold text-slate-900 dark:text-white flex items-center justify-between">
+                  <span>Are the AI tools listed here free?</span>
+                  <svg className="w-5 h-5 text-slate-500 dark:text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 py-4 text-slate-600 dark:text-gray-300 border-t border-slate-100 dark:border-gray-800">
+                  We include both free and paid AI tools. Many tools offer free tiers or trials, while others require a subscription. We clearly label each tool with its pricing model for easy comparison.
+                </div>
+              </details>
+            </div>
           </div>
         </div>
 

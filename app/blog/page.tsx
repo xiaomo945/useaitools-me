@@ -19,6 +19,30 @@ const calculateReadTime = (content: string): string => {
   return `${readTime} min read`;
 };
 
+// Format relative date
+const formatRelativeDate = (dateStr: string): string => {
+  const date = new Date(dateStr);
+  const now = new Date();
+  const diffTime = Math.abs(now.getTime() - date.getTime());
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  
+  if (diffDays === 1) {
+    return 'yesterday';
+  } else if (diffDays < 7) {
+    return `${diffDays} days ago`;
+  } else if (diffDays < 14) {
+    return 'last week';
+  } else if (diffDays < 30) {
+    const weeks = Math.floor(diffDays / 7);
+    return `${weeks} weeks ago`;
+  } else if (diffDays < 60) {
+    return 'last month';
+  } else {
+    const months = Math.floor(diffDays / 30);
+    return `${months} months ago`;
+  }
+};
+
 export const metadata: Metadata = {
   title: 'AI Tools Blog – Use AI Tools',
   description: 'In-depth comparisons, reviews, and guides for AI tools.',
@@ -94,6 +118,7 @@ export default function BlogPage() {
           <div className="space-y-6">
             {blogPosts.map((post) => {
               const readTime = calculateReadTime(post.content);
+              const relativeDate = formatRelativeDate(post.date);
               return (
                 <div
                   key={post.id}
@@ -102,7 +127,7 @@ export default function BlogPage() {
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-4">
                       <span className="text-sm font-medium text-slate-500 dark:text-gray-400">
-                        {post.date}
+                        {relativeDate}
                       </span>
                       <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
                         • {readTime}

@@ -48,11 +48,47 @@ export default function Home() {
     }
   };
 
+  // FAQPage Schema
+  const faqPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': [
+      {
+        '@type': 'Question',
+        'name': 'What is Use AI Tools?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'Use AI Tools is a curated directory of the best AI tools available today. We organize tools into categories like Writing, Image, Productivity, Code, Audio, and Video to help you find the perfect tool for your needs.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'How do I choose the right AI tool?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'You can browse by category, use our search function, or read our detailed comparison guides. Each tool includes a description, pricing information, and a link to the official website.'
+        }
+      },
+      {
+        '@type': 'Question',
+        'name': 'Are the AI tools listed here free?',
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': 'We include both free and paid AI tools. Many tools offer free tiers or trials, while others require a subscription. We clearly label each tool with its pricing model for easy comparison.'
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
       <HomeClient initialTools={enrichedTools} />
       <Footer />
