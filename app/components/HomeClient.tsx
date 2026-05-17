@@ -341,6 +341,21 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
               })}
             </div>
           </div>
+          
+          {/* Search Result Count */}
+          <div className="text-center mb-8">
+            <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
+              {search.trim() || selectedCategory !== 'All' ? (
+                filteredTools.length === 0 ? (
+                  <span className="text-rose-500 dark:text-rose-400">No tools found</span>
+                ) : (
+                  `Showing ${filteredTools.length} tool${filteredTools.length !== 1 ? 's' : ''}`
+                )
+              ) : (
+                `Showing all ${initialTools.length} tools`
+              )}
+            </p>
+          </div>
         </div>
 
         {/* Featured This Week */}
@@ -508,7 +523,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                       <a
                         href={tool.affiliate_link || tool.url}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener noreferrer sponsored"
                         className="inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
                       >
                         <svg

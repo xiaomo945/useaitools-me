@@ -150,7 +150,7 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
             <a
               href={tool.affiliate_link || tool.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer sponsored"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
             >
               Visit Official Website
