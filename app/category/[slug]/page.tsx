@@ -40,8 +40,13 @@ const colorMap: Record<Category, { bg: string; bgDark: string; text: string; tex
 // Helper function to get affiliate link from environment variable or fallback to JSON
 function getAffiliateLink(tool: Tool): string {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  const shortEnvVarName = tool.name === 'VEED.io' ? 'AFFILIATE_VEED' : '';
-  const envLink = process.env[envVarName] || (shortEnvVarName && process.env[shortEnvVarName]);
+  let shortEnvVarName = '';
+  if (tool.name === 'VEED.io') {
+    shortEnvVarName = 'AFFILIATE_VEED';
+  } else if (tool.name === 'Murf AI') {
+    shortEnvVarName = 'AFFILIATE_MURF';
+  }
+  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
   return envLink || tool.affiliate_link;
 }
 
