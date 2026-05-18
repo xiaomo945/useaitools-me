@@ -8,17 +8,17 @@
     "style": "沉稳技术风",
     "images": [
       {
-        "url": "/blog-images/blog-1-header.png",
+        "url": "/blog-images/blog-1-header.webp",
         "alt": "Rytr vs Jasper vs Copy.ai AI writing tools comparison banner showing all three platforms",
         "caption": "Compare the top 3 AI writing tools side by side"
       },
       {
-        "url": "/blog-images/blog-1-mid.png",
+        "url": "/blog-images/blog-1-mid.webp",
         "alt": "AI writing tool dashboard showing content creation workflow and templates",
         "caption": "Each platform offers unique workflow optimizations"
       },
       {
-        "url": "/blog-images/blog-1-cta.png",
+        "url": "/blog-images/blog-1-cta.webp",
         "alt": "Call to action showing starting AI writing tool free trial",
         "caption": "Start your free trial and boost your content today"
       }
