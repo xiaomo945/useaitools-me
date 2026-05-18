@@ -2703,5 +2703,292 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]
+  },
+  {
+    "id": 147,
+    "name": "腾讯混元视频生成",
+    "description": "腾讯推出的AI视频生成工具，支持文生视频和图生视频",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://hunyuan.tencent.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "生成一个科技感的产品介绍视频",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "name": "快手快影AI",
+    "description": "快手快影的AI视频编辑工具，提供智能剪辑和特效",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.kuaishou.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI自动剪辑精彩镜头",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "name": "火山引擎视频AI",
+    "description": "字节跳动火山引擎的视频AI平台，提供视频分析和生成",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.volcengine.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "视频内容安全检测和分类",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "name": "智谱视频生成",
+    "description": "智谱AI推出的视频生成工具，支持多种视频风格",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.chatglm.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "生成一个2D动画风格的短视频",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "name": "百度视频AI",
+    "description": "百度推出的视频AI工具，包含视频分析和生成功能",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://ai.baidu.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "视频内容理解和标签生成",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "name": "阿里云编程助手",
+    "description": "阿里云推出的专业编程AI助手，支持全栈开发",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.aliyun.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "写一个阿里云OSS的文件上传代码",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "name": "火山引擎代码助手",
+    "description": "字节跳动火山引擎的AI编程工具，支持多种语言",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.volcengine.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "优化这段代码的性能",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "name": "快手编程助手",
+    "description": "快手推出的AI编程助手，专注于移动开发",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.kuaishou.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "写一个Android移动应用的基础框架",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "name": "腾讯云开发AI",
+    "description": "腾讯云开发的AI编程工具，提供云端开发能力",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://cloud.tencent.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "使用微信云开发创建一个小程序",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "name": "京东云编程助手",
+    "description": "京东云推出的AI编程工具，支持电商开发",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.jdcloud.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "写一个电商商品列表页面",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "name": "百度文心编程",
+    "description": "百度文心的AI编程助手，支持全栈开发",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://yiyan.baidu.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "写一个简单的聊天机器人",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "name": "美团编程助手",
+    "description": "美团推出的AI编程工具，专注于本地生活场景开发",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.meituan.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "写一个外卖订单管理系统",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "name": "网易视频AI",
+    "description": "网易推出的AI视频编辑和生成工具",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.163.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "为我的短视频添加字幕和特效",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "name": "小米AI编程",
+    "description": "小米推出的AI编程助手，支持IoT设备开发",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.mi.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "写一个小米智能家居控制程序",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   }
 ]
