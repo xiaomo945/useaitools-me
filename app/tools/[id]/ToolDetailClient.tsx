@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { ArrowRight, Home, Copy, Check } from 'lucide-react';
-import Footer from '@/app/components/Footer';
-import Breadcrumbs from '@/app/components/Breadcrumbs';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 // Save tool to recently viewed
 const saveToRecentlyViewed = (toolId: number) => {
@@ -347,7 +346,6 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
           </Link>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

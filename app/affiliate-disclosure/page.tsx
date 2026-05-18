@@ -1,10 +1,4 @@
 import Link from 'next/link';
-import Footer from '@/app/components/Footer';
-
-export const metadata = {
-  title: 'Affiliate Disclosure - Use AI Tools',
-  description: 'FTC compliant affiliate disclosure for useaitools.me',
-};
 
 export default function AffiliateDisclosurePage() {
   return (
@@ -86,7 +80,6 @@ export default function AffiliateDisclosurePage() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

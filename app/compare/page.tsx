@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Link from 'next/link';
 import tools from '@/data/tools.json';
 import { Home } from 'lucide-react';
-import Footer from '@/app/components/Footer';
 
 type Tool = (typeof tools)[0];
 
@@ -313,7 +312,6 @@ export default function ComparePage() {
           </div>
         )}
       </div>
-      <Footer />
     </div>
   );
 }

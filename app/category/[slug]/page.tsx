@@ -2,10 +2,9 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import tools from '@/data/tools.json';
 import { ArrowRight } from 'lucide-react';
-import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
 import CategoryHero from './CategoryHero';
-import Breadcrumbs from '@/app/components/Breadcrumbs';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 type Tool = (typeof tools)[0];
 type Category = Tool['category'];
@@ -216,7 +215,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

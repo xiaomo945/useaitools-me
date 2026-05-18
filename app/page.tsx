@@ -1,6 +1,6 @@
 import tools from '@/data/tools.json';
-import Footer from '@/app/components/Footer';
-import HomeClient from '@/app/components/HomeClient';
+import Footer from './components/Footer';
+import HomeClient from './components/HomeClient';
 
 type Tool = (typeof tools)[0];
 

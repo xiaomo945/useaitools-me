@@ -4,6 +4,8 @@ import { Suspense } from "react";
 import "./globals.css";
 import PageProgress from "./components/PageProgress";
 import BackToTop from "./components/BackToTop";
+import { LanguageProvider } from "./components/LanguageSwitcher";
+import LanguageSwitcherWrapper from "./components/LanguageSwitcherWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -90,19 +92,27 @@ export default function RootLayout({
               },
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://useaitools.me/?search={search_term_string}",
+                "target": "https://useaitools.me/?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             })
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col">
-        <Suspense fallback={null}>
-          <PageProgress />
-        </Suspense>
-        {children}
-        <BackToTop />
+      <body className="min-h-full flex flex-col bg-slate-50 dark:bg-gray-950">
+        <LanguageProvider>
+          <Suspense fallback={null}>
+            <PageProgress />
+          </Suspense>
+          
+          {/* Language Switcher */}
+          <div className="fixed top-4 right-4 z-50">
+            <LanguageSwitcherWrapper />
+          </div>
+          
+          {children}
+          <BackToTop />
+        </LanguageProvider>
       </body>
     </html>
   );

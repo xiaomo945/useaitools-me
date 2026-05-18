@@ -1,4 +1,15 @@
 {
+  "language": {
+    "switch": "切换语言",
+    "current": "当前",
+    "en": "English",
+    "zh-CN": "简体中文"
+  },
+  "metadata": {
+    "title": "Use AI Tools – 发现 50+ 最佳 AI 工具 (2026)",
+    "description": "精心挑选的 AI 工具目录，涵盖写作、图像、生产力、代码、音频和视频。为您的工作流程找到完美的 AI 工具。",
+    "keywords": ["AI 工具", "AI 目录", "AI 写作工具", "AI 图像生成器", "AI 编程助手"]
+  },
   "nav": {
     "home": "首页",
     "blog": "博客",

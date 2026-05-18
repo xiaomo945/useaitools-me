@@ -1,4 +1,4 @@
-import { PageGridSkeleton } from '@/app/components/Skeleton';
+import { PageGridSkeleton } from '../../components/Skeleton';
 
 export default function Loading() {
   return <PageGridSkeleton />;

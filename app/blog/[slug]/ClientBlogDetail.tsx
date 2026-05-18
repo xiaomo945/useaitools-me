@@ -3,8 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Home, Share2, Copy } from 'lucide-react';
-import Footer from '@/app/components/Footer';
-import Breadcrumbs from '@/app/components/Breadcrumbs';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 type BlogPost = {
   id: number;
@@ -184,7 +183,6 @@ export default function ClientBlogDetail({
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

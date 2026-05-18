@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import blogPosts from '@/data/blog-posts.json';
 import { Home } from 'lucide-react';
-import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
 
 type BlogPost = (typeof blogPosts)[0];
@@ -153,7 +152,6 @@ export default function BlogPage() {
             })}
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

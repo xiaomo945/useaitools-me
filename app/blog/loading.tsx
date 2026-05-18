@@ -1,4 +1,4 @@
-import { BlogListSkeleton } from '@/app/components/Skeleton';
+import { BlogListSkeleton } from '../components/Skeleton';
 
 export default function Loading() {
   return <BlogListSkeleton />;
