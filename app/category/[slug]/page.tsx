@@ -37,6 +37,19 @@ const colorMap: Record<Category, { bg: string; bgDark: string; text: string; tex
   Video:      { bg: 'bg-indigo-500', bgDark: 'bg-indigo-500/20', text: 'text-indigo-300', textLight: 'text-indigo-600', border: 'border-indigo-300', ring: 'hover:shadow-indigo-500/20' }
 };
 
+// Helper function to check if a tool has affiliate link (environment variable or JSON field)
+function hasAffiliateLink(tool: Tool): boolean {
+  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
+  let shortEnvVarName = '';
+  if (tool.name === 'VEED.io') {
+    shortEnvVarName = 'AFFILIATE_VEED';
+  } else if (tool.name === 'Murf AI') {
+    shortEnvVarName = 'AFFILIATE_MURF';
+  }
+  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
+  return !!(envLink || tool.affiliate_link);
+}
+
 // Helper function to get affiliate link from environment variable or fallback to JSON
 function getAffiliateLink(tool: Tool): string {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
@@ -152,12 +165,25 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           <div className={`h-px bg-gradient-to-r from-transparent via-${categorySlug.toLowerCase()}-300 dark:via-${categorySlug.toLowerCase()}-500/20 to-transparent mb-10 mx-auto max-w-2xl`} />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
-            {categoryTools.map((tool, index) => (
+            {categoryTools.map((tool, index) => {
+              const hasAffiliate = hasAffiliateLink(tool);
+              const ctaText = hasAffiliate ? '🔗 Try It Free' : 'Visit Website';
+              
+              return (
               <div
                 key={tool.id}
-                className={`bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm dark:shadow-xl rounded-2xl overflow-hidden group hover:-translate-y-1.5 transition-all duration-300 ease-out ${colors.ring}`}
+                className={`bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm dark:shadow-xl rounded-2xl overflow-hidden group hover:-translate-y-1.5 transition-all duration-300 ease-out ${colors.ring} relative`}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
+                {/* Staff Pick Badge for affiliate tools */}
+                {hasAffiliate && (
+                  <div className="absolute top-3 right-3 z-10">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25">
+                      🏷️ Staff Pick
+                    </span>
+                  </div>
+                )}
+                
                 <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
                 <div className="p-7">
                   <div className="flex items-start justify-between gap-4 mb-4">
@@ -194,18 +220,19 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                       {tool.category}
                     </span>
                     <a
-                      href={tool.affiliate_link || tool.url}
+                      href={getAffiliateLink(tool) || tool.url}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
                       className={`inline-flex items-center gap-2 px-4 py-2 border ${colors.border} dark:${colors.bgDark} dark:border-transparent ${colors.textLight} dark:${colors.text} text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:${colors.bg} hover:text-white hover:border-transparent`}
                     >
-                      Visit Website
+                      {ctaText}
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </div>
                 </div>
               </div>
-            ))}
+            );
+            })}
           </div>
 
           <div className="text-center mt-12">

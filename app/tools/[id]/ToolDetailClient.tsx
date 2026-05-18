@@ -46,6 +46,11 @@ type Tool = {
   languages: string[];
 };
 
+// Helper function to check if a tool has affiliate link
+const hasAffiliateLink = (tool: Tool): boolean => {
+  return !!(tool.affiliate_link);
+};
+
 const categoryFeatures: Record<string, string[]> = {
   Writing: [
     'AI-powered content generation for blogs, social media, and marketing copy',
@@ -120,6 +125,8 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
   const colors = getCategoryColors(tool.category);
   const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const hasAffiliate = hasAffiliateLink(tool);
+  const ctaText = hasAffiliate ? '🔗 Try It Free' : 'Visit Official Website';
   
   // Save to recently viewed on mount
   useEffect(() => {
@@ -149,7 +156,16 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
         />
 
         {/* Tool Header */}
-        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl shadow-xl overflow-hidden mb-8">
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl shadow-xl overflow-hidden mb-8 relative">
+          {/* Staff Pick Badge for affiliate tools */}
+          {hasAffiliate && (
+            <div className="absolute top-4 right-4 z-10">
+              <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25">
+                🏷️ Staff Pick
+              </span>
+            </div>
+          )}
+          
           {/* Category Color Bar */}
           <div className={`h-1 ${colors.bg}`} />
           
@@ -199,7 +215,7 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
               rel="noopener noreferrer sponsored"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
             >
-              Visit Official Website
+              {ctaText}
               <ArrowRight className="w-5 h-5" />
             </a>
           </div>

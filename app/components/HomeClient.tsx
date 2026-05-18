@@ -39,6 +39,32 @@ type Tool = {
   languages: string[];
 };
 
+// Helper function to check if a tool has affiliate link (environment variable or JSON field)
+const hasAffiliateLink = (tool: Tool): boolean => {
+  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
+  let shortEnvVarName = '';
+  if (tool.name === 'VEED.io') {
+    shortEnvVarName = 'AFFILIATE_VEED';
+  } else if (tool.name === 'Murf AI') {
+    shortEnvVarName = 'AFFILIATE_MURF';
+  }
+  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
+  return !!(envLink || tool.affiliate_link);
+};
+
+// Helper function to get affiliate link for a tool
+const getAffiliateLink = (tool: Tool): string => {
+  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
+  let shortEnvVarName = '';
+  if (tool.name === 'VEED.io') {
+    shortEnvVarName = 'AFFILIATE_VEED';
+  } else if (tool.name === 'Murf AI') {
+    shortEnvVarName = 'AFFILIATE_MURF';
+  }
+  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
+  return envLink || tool.affiliate_link;
+};
+
 type Category = string;
 
 interface HomeClientProps {
@@ -149,7 +175,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
 
   const categories: Category[] = ['All', 'Writing', 'Image', 'Productivity', 'Code', 'Audio', 'Video'];
 
-  // 智能排序：将中国 AI 工具（无需 VPN）优先展示
+  // 智能排序：优先展示海外 AI 工具（needs_vpn: true），中文工具排在后面
   const filteredTools = useMemo(() => {
     const filtered = initialTools.filter((tool) => {
       const matchesSearch = 
@@ -159,12 +185,12 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
       return matchesSearch && matchesCategory;
     });
     
-    // 智能排序：无需 VPN 的工具优先展示
+    // 智能排序：海外工具优先展示
     return [...filtered].sort((a, b) => {
-      if (!a.needs_vpn && b.needs_vpn) return -1;
-      if (a.needs_vpn && !b.needs_vpn) return 1;
+      if (a.needs_vpn && !b.needs_vpn) return -1;
+      if (!a.needs_vpn && b.needs_vpn) return 1;
       
-      // 都不需要 VPN 或都需要 VPN 的情况下，按原顺序（id）
+      // 都需要 VPN 或都不需要 VPN 的情况下，按原顺序（id）
       return a.id - b.id;
     });
   }, [search, selectedCategory, initialTools]);
@@ -327,6 +353,13 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-8 relative z-10">
             Discover, compare & choose the best AI tools for every task. Curated weekly.
           </p>
+          
+          {/* Trust Signal */}
+          <div className="mb-8 relative z-10">
+            <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">
+              Built in public by an indie maker from an internet café in China. 135+ tools handpicked, not paid for. Here's my story →
+            </p>
+          </div>
           
           {/* Search Box */}
           <div className="relative max-w-2xl mx-auto mb-8 px-4 sm:px-0">
@@ -531,17 +564,28 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
             const pricingColors = getPricingColors(tool.pricing);
             const isSaved = savedIds.includes(tool.id);
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
+            const hasAffiliate = hasAffiliateLink(tool);
+            const ctaText = hasAffiliate ? '🔗 Try It Free' : 'Visit Website';
             
             return (
               <Link
                 key={tool.id}
                 href={`/tools/${tool.id}`}
-                className="shimmer-card bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block"
+                className="shimmer-card bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative"
                 style={{ 
                   animationDelay: `${index * 50}ms`,
                   willChange: 'transform'
                 }}
               >
+                {/* Staff Pick Badge for affiliate tools */}
+                {hasAffiliate && (
+                  <div className="absolute top-3 right-3 z-10">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25">
+                      🏷️ Staff Pick
+                    </span>
+                  </div>
+                )}
+                
                 {/* Category Color Bar - 3px Height */}
                 <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
                 
@@ -629,7 +673,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                         <span className="hidden sm:inline">Compare</span>
                       </Link>
                       <a
-                        href={tool.affiliate_link || tool.url}
+                        href={getAffiliateLink(tool) || tool.url}
                         target="_blank"
                         rel="noopener noreferrer sponsored"
                         onClick={(e) => e.stopPropagation()}
@@ -648,7 +692,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                             d="M7 17L17 7"
                           />
                         </svg>
-                        <span className="hidden sm:inline">Visit</span>
+                        <span className="hidden sm:inline">{ctaText}</span>
                       </a>
                       <button
                         onClick={(e) => {
