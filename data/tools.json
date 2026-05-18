@@ -2474,5 +2474,234 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]
+  },
+  {
+    "id": 136,
+    "name": "文心一格",
+    "description": "百度推出的AI图像生成工具，支持多种艺术风格",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://yige.baidu.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "赛博朋克风格的未来城市",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "中国风山水画",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "name": "通义千问画图",
+    "description": "阿里巴巴通义千问的AI图像生成功能",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://tongyi.aliyun.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "可爱的卡通猫咪",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "name": "智谱AI画图",
+    "description": "智谱AI推出的图像生成工具，支持文生图和图生图",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://www.chatglm.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "像素风格的游戏场景",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "name": "豆包AI绘画",
+    "description": "字节跳动豆包的AI图像生成功能，支持多种风格",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://www.doubao.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "治愈系的风景插画",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "name": "醒图AI",
+    "description": "醒图APP中的AI图像编辑和增强功能",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://www.xingtu.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "把照片变成油画风格",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "name": "剪映图文成片",
+    "description": "剪映的图文转视频功能，AI自动生成动画",
+    "category": "Video",
+    "pricing": "Free",
+    "url": "https://www.capcut.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "把文字故事变成动画视频",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "name": "绘王AI",
+    "description": "专业的AI绘画工具，适合设计师使用",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://www.huion.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "UI设计稿草图",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "name": "创客贴AI",
+    "description": "创客贴的AI设计工具，自动生成海报和配图",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://www.chuangkit.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "生成一张节日海报",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "name": "稿定设计AI",
+    "description": "稿定设计的AI辅助设计工具，快速生成专业设计",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://www.gaoding.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "设计一张电商商品主图",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "name": "即时设计AI",
+    "description": "即时设计的AI设计功能，支持协作和智能生成",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://js.design",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "生成一套UI组件库",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "name": "墨刀AI原型",
+    "description": "墨刀的AI原型设计助手，快速生成产品原型",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://modao.cc",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "设计一个移动APP的首页原型",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   }
 ]
