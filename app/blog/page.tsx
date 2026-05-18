@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 type BlogPost = (typeof blogPosts)[0];
 
 // Calculate estimated reading time
-const calculateReadTime = (content: string): string => {
+const calculateReadTime = (content: string): { minutes: number; display: string } => {
   const wordsPerMinute = 200;
   // Strip HTML tags and markdown
   const plainText = content
@@ -16,7 +16,10 @@ const calculateReadTime = (content: string): string => {
     .replace(/\[\[link:[^\|]+\|([^\]]+)\]\]/g, '$1');
   const wordCount = plainText.trim().split(/\s+/).length;
   const readTime = Math.ceil(wordCount / wordsPerMinute);
-  return `${readTime} min read`;
+  return {
+    minutes: readTime,
+    display: `⏱️ ${readTime} min read`
+  };
 };
 
 // Format relative date
@@ -117,28 +120,28 @@ export default function BlogPage() {
           {/* Blog Posts List */}
           <div className="space-y-6">
             {blogPosts.map((post) => {
-              const readTime = calculateReadTime(post.content);
+              const { display: readTime } = calculateReadTime(post.content);
               const relativeDate = formatRelativeDate(post.date);
               return (
                 <div
                   key={post.id}
-                  className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out"
+                  className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out"
                 >
                   <div className="flex flex-col gap-3">
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3">
                       <span className="text-sm font-medium text-slate-500 dark:text-gray-400">
                         {relativeDate}
                       </span>
                       <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
-                        • {readTime}
+                        {readTime}
                       </span>
                     </div>
                     <Link href={`/blog/${post.slug}`}>
-                      <h2 className="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
+                      <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
                         {post.title}
                       </h2>
                     </Link>
-                    <p className="text-slate-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-slate-600 dark:text-gray-300 leading-relaxed sm:leading-loose text-base">
                       {post.description}
                     </p>
                     <Link

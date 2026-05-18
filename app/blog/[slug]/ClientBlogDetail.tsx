@@ -16,7 +16,7 @@ type BlogPost = {
 };
 
 // Calculate estimated reading time
-const calculateReadTime = (content: string): string => {
+const calculateReadTime = (content: string): { minutes: number; display: string } => {
   const wordsPerMinute = 200;
   // Strip HTML tags and markdown
   const plainText = content
@@ -25,7 +25,10 @@ const calculateReadTime = (content: string): string => {
     .replace(/\[\[link:[^\|]+\|([^\]]+)\]\]/g, '$1');
   const wordCount = plainText.trim().split(/\s+/).length;
   const readTime = Math.ceil(wordCount / wordsPerMinute);
-  return `${readTime} min read`;
+  return {
+    minutes: readTime,
+    display: `⏱️ ${readTime} min read`
+  };
 };
 
 // Format relative date
@@ -57,16 +60,18 @@ const renderContent = (content: string) => {
   let html = content;
 
   // Internal links first - format: [[link:/path|text]]
-  html = html.replace(/\[\[link:([^\|]+)\|([^\]]+)\]\]/g, '<a href="$1" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 underline font-medium">$2</a>');
+  html = html.replace(/\[\[link:([^\|]+)\|([^\]]+)\]\]/g, '<a href="$1" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 underline font-medium transition-colors duration-300">$2</a>');
 
   // Headings
-  html = html.replace(/^## (.*?)$/gm, '<h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">$1</h2>');
+  html = html.replace(/^## (.*?)$/gm, '<h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-10 mb-4 sm:mb-6">$1</h2>');
   html = html.replace(/^# (.*?)$/gm, '<h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-8">$1</h1>');
 
-  // Paragraphs
+  // Paragraphs - optimized for readability
   html = html.replace(/^(?!<h[12])(.*?)$/gm, (match, p1) => {
-    if (p1.trim()) {
-      return `<p class="text-slate-600 dark:text-gray-300 leading-relaxed mb-6">${p1}</p>`;
+    if (p1.trim() && p1.trim() !== '---') {
+      return `<p class="text-slate-600 dark:text-gray-300 leading-relaxed sm:leading-loose mb-5 sm:mb-7 text-base sm:text-lg">${p1}</p>`;
+    } else if (p1.trim() === '---') {
+      return '<hr class="border-t border-slate-200 dark:border-gray-800 my-8 sm:my-10" />';
     }
     return match;
   });
@@ -75,7 +80,7 @@ const renderContent = (content: string) => {
   html = html.replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-slate-900 dark:text-white">$1</strong>');
 
   // External links
-  html = html.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 underline">$1</a>');
+  html = html.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 underline transition-colors duration-300">$1</a>');
 
   return html;
 };
@@ -90,7 +95,7 @@ export default function ClientBlogDetail({
   const [copied, setCopied] = useState(false);
   const url = `https://useaitools.me/blog/${slug}`;
   const encodedTitle = encodeURIComponent(post.title);
-  const readTime = calculateReadTime(post.content);
+  const { display: readTime } = calculateReadTime(post.content);
   const relativeDate = formatRelativeDate(post.date);
 
   const handleCopyLink = async () => {
@@ -117,12 +122,12 @@ export default function ClientBlogDetail({
 
         {/* Post Header */}
         <div className="mb-8">
-          <div className="flex items-center gap-4 mb-3">
+          <div className="flex items-center gap-3 mb-4">
             <span className="text-sm font-medium text-slate-500 dark:text-gray-400">
               {relativeDate}
             </span>
             <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
-              • {readTime}
+              {readTime}
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
@@ -131,7 +136,7 @@ export default function ClientBlogDetail({
         </div>
 
         {/* Post Content */}
-        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 sm:p-12 shadow-xl mb-8">
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl mb-8">
           <article
             className="prose prose-slate dark:prose-invert max-w-none"
             dangerouslySetInnerHTML={{ __html: renderContent(post.content) }}
