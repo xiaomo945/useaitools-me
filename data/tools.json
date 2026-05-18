@@ -2259,5 +2259,220 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]
+  },
+  {
+    "id": 126,
+    "name": "剪映",
+    "description": "抖音官方推出的AI视频编辑工具，支持智能剪辑、字幕生成和特效",
+    "category": "Video",
+    "pricing": "Free",
+    "url": "https://www.capcut.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "一键生成视频字幕",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "智能剪辑和转场效果",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "name": "必剪",
+    "description": "B站推出的AI视频编辑工具，专为UP主设计",
+    "category": "Video",
+    "pricing": "Free",
+    "url": "https://bcut.bilibili.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI自动生成视频封面",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "name": "秒剪",
+    "description": "微信推出的AI视频创作工具，简单易用",
+    "category": "Video",
+    "pricing": "Free",
+    "url": "https://weixin.qq.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "用模板快速制作短视频",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "name": "豆包",
+    "description": "字节跳动推出的AI教育助手，提供学习辅导和知识问答",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.doubao.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我讲解数学题",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "写一篇作文",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "name": "猿辅导AI",
+    "description": "猿辅导推出的AI学习助手，提供个性化教学和作业辅导",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.yuanfudao.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "智能错题本分析",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "name": "讯飞星火编程",
+    "description": "科大讯飞推出的AI编程助手，支持代码生成和调试",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://xinghuo.xfyun.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "用Python写一个爬虫",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "帮我调试这段代码",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "name": "智谱代码助手",
+    "description": "智谱AI推出的专业编程助手，支持多种编程语言",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.chatglm.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "写一个React组件",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "name": "通义万相",
+    "description": "阿里巴巴推出的AI视频生成工具，文字转视频",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://wanxiang.aliyun.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "生成一段产品宣传视频",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "name": "腾讯智学",
+    "description": "腾讯推出的AI教育平台，提供智能题库和个性化学习",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://zhixue.qq.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能批改作业",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "name": "码上飞",
+    "description": "创新工场推出的AI编程平台，支持低代码和智能开发",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.mafeisi.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "快速搭建一个网站",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   }
 ]
