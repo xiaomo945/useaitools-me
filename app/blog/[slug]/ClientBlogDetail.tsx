@@ -63,15 +63,15 @@ const renderContent = (content: string) => {
   html = html.replace(/\[\[link:([^\|]+)\|([^\]]+)\]\]/g, '<a href="$1" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 underline font-medium transition-colors duration-300">$2</a>');
 
   // Headings
-  html = html.replace(/^## (.*?)$/gm, '<h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-10 mb-4 sm:mb-6">$1</h2>');
+  html = html.replace(/^## (.*?)$/gm, '<h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-12 mb-5 sm:mb-7">$1</h2>');
   html = html.replace(/^# (.*?)$/gm, '<h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-8">$1</h1>');
 
-  // Paragraphs - optimized for readability
+  // Paragraphs - optimized for readability (enhanced for mobile)
   html = html.replace(/^(?!<h[12])(.*?)$/gm, (match, p1) => {
     if (p1.trim() && p1.trim() !== '---') {
-      return `<p class="text-slate-600 dark:text-gray-300 leading-relaxed sm:leading-loose mb-5 sm:mb-7 text-base sm:text-lg">${p1}</p>`;
+      return `<p class="text-slate-600 dark:text-gray-300 leading-relaxed sm:leading-loose mb-6 sm:mb-8 text-base sm:text-lg max-w-prose">${p1}</p>`;
     } else if (p1.trim() === '---') {
-      return '<hr class="border-t border-slate-200 dark:border-gray-800 my-8 sm:my-10" />';
+      return '<hr class="border-t border-slate-200 dark:border-gray-800 my-10 sm:my-12" />';
     }
     return match;
   });
