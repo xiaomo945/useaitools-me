@@ -26,7 +26,9 @@ const categoryDescriptions: Record<Category, string> = {
   Energy: 'Power the future with AI tools for smart grid management, renewable energy optimization, predictive maintenance, and carbon footprint analysis.',
   Environment: 'Protect our planet with AI tools for environmental monitoring, pollution detection, wildlife conservation, and climate change analysis.',
   Government: 'Modernize public services with AI tools for smart governance, citizen services, urban management, and policy decision support.',
-  Travel: 'Transform travel experiences with AI tools for itinerary planning, language translation, local recommendations, and smart tourism services.'
+  Travel: 'Transform travel experiences with AI tools for itinerary planning, language translation, local recommendations, and smart tourism services.',
+  Manufacturing: 'Revolutionize manufacturing with AI tools for predictive maintenance, quality control, process optimization, and smart factory solutions.',
+  Retail: 'Transform retail experiences with AI tools for customer analytics, inventory management, personalized recommendations, and smart store solutions.'
 };
 
 const categoryNames: Record<Category, string> = {
@@ -45,7 +47,9 @@ const categoryNames: Record<Category, string> = {
   Energy: 'Energy',
   Environment: 'Environment',
   Government: 'Government',
-  Travel: 'Travel'
+  Travel: 'Travel',
+  Manufacturing: 'Manufacturing',
+  Retail: 'Retail'
 };
 
 const colorMap: Record<Category, { bg: string; bgDark: string; text: string; textLight: string; border: string; ring: string }> = {
@@ -64,7 +68,9 @@ const colorMap: Record<Category, { bg: string; bgDark: string; text: string; tex
   Energy:     { bg: 'bg-yellow-500', bgDark: 'bg-yellow-500/20', text: 'text-yellow-300', textLight: 'text-yellow-700', border: 'border-yellow-300', ring: 'hover:shadow-yellow-500/20' },
   Environment:{ bg: 'bg-emerald-600', bgDark: 'bg-emerald-600/20', text: 'text-emerald-300', textLight: 'text-emerald-700', border: 'border-emerald-300', ring: 'hover:shadow-emerald-500/20' },
   Government: { bg: 'bg-blue-700', bgDark: 'bg-blue-700/20', text: 'text-blue-300', textLight: 'text-blue-700', border: 'border-blue-300', ring: 'hover:shadow-blue-500/20' },
-  Travel:    { bg: 'bg-rose-600', bgDark: 'bg-rose-600/20', text: 'text-rose-300', textLight: 'text-rose-700', border: 'border-rose-300', ring: 'hover:shadow-rose-500/20' }
+  Travel:    { bg: 'bg-rose-600', bgDark: 'bg-rose-600/20', text: 'text-rose-300', textLight: 'text-rose-700', border: 'border-rose-300', ring: 'hover:shadow-rose-500/20' },
+  Manufacturing: { bg: 'bg-slate-600', bgDark: 'bg-slate-600/20', text: 'text-slate-300', textLight: 'text-slate-600', border: 'border-slate-300', ring: 'hover:shadow-slate-500/20' },
+  Retail:   { bg: 'bg-fuchsia-600', bgDark: 'bg-fuchsia-600/20', text: 'text-fuchsia-300', textLight: 'text-fuchsia-700', border: 'border-fuchsia-300', ring: 'hover:shadow-fuchsia-500/20' }
 };
 
 // Helper function to check if a tool has affiliate link (environment variable or JSON field)

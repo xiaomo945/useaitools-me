@@ -6337,5 +6337,417 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]
+  },
+  {
+    "id": 325,
+    "name": "海尔卡奥斯AI",
+    "description": "海尔集团的工业互联网平台COSMOPlat的AI智能制造解决方案",
+    "category": "Manufacturing",
+    "pricing": "Freemium",
+    "url": "https://www.coshemo.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能工厂和数字化转型方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 326,
+    "name": "树根互联AI",
+    "description": "树根互联的工业互联网平台根云的AI智能制造服务",
+    "category": "Manufacturing",
+    "pricing": "Freemium",
+    "url": "https://www.rootcloud.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI设备互联和智能运维解决方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 327,
+    "name": "航天云网AI",
+    "description": "航天云网的工业互联网AI平台INDICS",
+    "category": "Manufacturing",
+    "pricing": "Freemium",
+    "url": "https://www.casicloud.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI工业互联网和智能制造方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 328,
+    "name": "徐工汉云AI",
+    "description": "徐工信息的汉云工业互联网平台AI解决方案",
+    "category": "Manufacturing",
+    "pricing": "Freemium",
+    "url": "https://www.hanyun.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI工程机械智能化运维方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 329,
+    "name": "富士康工业互联网AI",
+    "description": "富士康Fii的工业互联网AI平台和智能工厂解决方案",
+    "category": "Manufacturing",
+    "pricing": "Freemium",
+    "url": "https://www.fii-foxconn.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能工厂和自动化生产方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 330,
+    "name": "用友AI",
+    "description": "用友网络的AI企业管理和智能制造解决方案",
+    "category": "Manufacturing",
+    "pricing": "Freemium",
+    "url": "https://www.yonyou.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI企业资源计划和智能制造",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 331,
+    "name": "金蝶AI",
+    "description": "金蝶软件的AI企业管理云和智能制造系统",
+    "category": "Manufacturing",
+    "pricing": "Freemium",
+    "url": "https://www.kingdee.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI财务管理和智能制造方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 332,
+    "name": "西门子MindSphere AI",
+    "description": "西门子的工业物联网平台MindSphere的AI解决方案",
+    "category": "Manufacturing",
+    "pricing": "Freemium",
+    "url": "https://www.siemens.com/mindsphere",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI工业物联网和数字化工厂",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 333,
+    "name": "华为云工业AI",
+    "description": "华为云的AI工业互联网和智能制造解决方案",
+    "category": "Manufacturing",
+    "pricing": "Freemium",
+    "url": "https://www.huaweicloud.com/solution/industry/manufacturing",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能质检和缺陷检测方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 334,
+    "name": "阿里云工业AI",
+    "description": "阿里云的AI工业大脑和智能制造平台",
+    "category": "Manufacturing",
+    "pricing": "Freemium",
+    "url": "https://www.aliyun.com/solution/manufacturing",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI工业大脑和智能生产优化",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 335,
+    "name": "阿里巴巴零售AI",
+    "description": "阿里巴巴的AI新零售解决方案和智能商业平台",
+    "category": "Retail",
+    "pricing": "Freemium",
+    "url": "https://www.alibaba.com/retail",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI新零售和智慧门店解决方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 336,
+    "name": "京东零售AI",
+    "description": "京东的AI无界零售和智能供应链平台",
+    "category": "Retail",
+    "pricing": "Freemium",
+    "url": "https://www.jd.com/retail",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能供应链和无人零售方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 337,
+    "name": "腾讯智慧零售AI",
+    "description": "腾讯的AI智慧零售和企业微信零售解决方案",
+    "category": "Retail",
+    "pricing": "Freemium",
+    "url": "https://www.tencent.com/retail",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智慧门店和私域流量运营",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 338,
+    "name": "百度零售AI",
+    "description": "百度AI的零售数字化和智能营销解决方案",
+    "category": "Retail",
+    "pricing": "Freemium",
+    "url": "https://ai.baidu.com/retail",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI零售数字化和智能客流分析",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 339,
+    "name": "永辉超市AI",
+    "description": "永辉超市的AI超级物种和智慧零售系统",
+    "category": "Retail",
+    "pricing": "Freemium",
+    "url": "https://www.yh-co.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI超级物种和无人零售体验",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 340,
+    "name": "盒马鲜生AI",
+    "description": "阿里巴巴盒马的AI新零售和即时配送服务",
+    "category": "Retail",
+    "pricing": "Freemium",
+    "url": "https://www.freshhema.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI新零售和即时配送服务体验",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 341,
+    "name": "多点DMALL AI",
+    "description": "多点的AI零售云和数字零售解决方案",
+    "category": "Retail",
+    "pricing": "Freemium",
+    "url": "https://www.dmall.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI零售云和会员数字化方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 342,
+    "name": "脸云科技AI",
+    "description": "脸云的AI刷脸支付和智慧零售解决方案",
+    "category": "Retail",
+    "pricing": "Freemium",
+    "url": "https://www.lianyun.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI刷脸支付和智慧门店方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 343,
+    "name": "云拿科技AI",
+    "description": "云拿科技的AI无人零售和智能便利店解决方案",
+    "category": "Retail",
+    "pricing": "Freemium",
+    "url": "https://www.cloudnap.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI无人便利店和智能购物体验",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 344,
+    "name": "Ping++零售AI",
+    "description": "Ping++的AI智慧门店和零售支付解决方案",
+    "category": "Retail",
+    "pricing": "Freemium",
+    "url": "https://www.pingxx.com/retail",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智慧门店和零售支付优化",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   }
 ]
