@@ -36,7 +36,7 @@ type Tool = {
   id: number;
   name: string;
   description: string;
-  category: 'Writing' | 'Image' | 'Productivity' | 'Code' | 'Audio' | 'Video' | 'Medical' | 'Finance' | 'Law' | 'Agriculture';
+  category: 'Writing' | 'Image' | 'Productivity' | 'Code' | 'Audio' | 'Video' | 'Medical' | 'Finance' | 'Law' | 'Agriculture' | 'Transportation' | 'Logistics';
   url: string;
   affiliate_link: string | null;
   icon_url: string;

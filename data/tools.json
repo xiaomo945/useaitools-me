@@ -5108,5 +5108,416 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]
+  },
+  {
+    "id": 265,
+    "name": "百度Apollo智能驾驶",
+    "description": "百度Apollo的AI自动驾驶平台，提供L4级自动驾驶解决方案",
+    "category": "Transportation",
+    "pricing": "Freemium",
+    "url": "https://apollo.auto",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI自动驾驶解决方案演示",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 266,
+    "name": "小马智行AI",
+    "description": "小马智行的AI自动驾驶出租车服务",
+    "category": "Transportation",
+    "pricing": "Freemium",
+    "url": "https://pony.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI自动驾驶出租车预约体验",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 267,
+    "name": "文远知行AI",
+    "description": "文远知行的AI自动驾驶小巴和出租车服务",
+    "category": "Transportation",
+    "pricing": "Freemium",
+    "url": "https://weride.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI自动驾驶小巴路线规划",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 268,
+    "name": "AutoX自动驾驶",
+    "description": "AutoX的AI全无人驾驶出租车平台",
+    "category": "Transportation",
+    "pricing": "Freemium",
+    "url": "https://www.autox.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI全无人驾驶体验预约",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 269,
+    "name": "元戎启行AI",
+    "description": "元戎启行的AI自动驾驶解决方案",
+    "category": "Transportation",
+    "pricing": "Freemium",
+    "url": "https://www.deeproute.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI自动驾驶技术方案咨询",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 270,
+    "name": "蘑菇车联AI",
+    "description": "蘑菇车联的车路协同AI自动驾驶系统",
+    "category": "Transportation",
+    "pricing": "Freemium",
+    "url": "https://www.mogozx.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI车路协同智慧交通解决方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 271,
+    "name": "图森未来AI",
+    "description": "图森未来的AI自动驾驶卡车服务",
+    "category": "Transportation",
+    "pricing": "Freemium",
+    "url": "https://www.tusimple.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI自动驾驶卡车运输服务",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 272,
+    "name": "滴滴出行AI",
+    "description": "滴滴出行的AI智能调度和出行服务平台",
+    "category": "Transportation",
+    "pricing": "Freemium",
+    "url": "https://www.didiglobal.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能出行路线规划和拼车匹配",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 273,
+    "name": "曹操出行AI",
+    "description": "曹操出行的AI新能源汽车共享出行平台",
+    "category": "Transportation",
+    "pricing": "Freemium",
+    "url": "https://www.caocaokeji.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI新能源汽车预约出行",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 274,
+    "name": "高德地图AI",
+    "description": "高德地图的AI智能导航和出行规划服务",
+    "category": "Transportation",
+    "pricing": "Freemium",
+    "url": "https://www.amap.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能导航和实时路况分析",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 275,
+    "name": "菜鸟网络AI",
+    "description": "阿里巴巴菜鸟的AI智能物流和仓储管理系统",
+    "category": "Logistics",
+    "pricing": "Freemium",
+    "url": "https://www.cainiao.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能仓储和配送路线优化",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 276,
+    "name": "京东物流AI",
+    "description": "京东物流的AI智能仓储和无人配送系统",
+    "category": "Logistics",
+    "pricing": "Freemium",
+    "url": "https://www.jdwl.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能仓储管理和无人配送",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 277,
+    "name": "顺丰科技AI",
+    "description": "顺丰科技的AI智能快递和供应链服务",
+    "category": "Logistics",
+    "pricing": "Freemium",
+    "url": "https://www.sf-express.com/sf-service-ow/chtml/service.html",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能快递追踪和路径优化",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 278,
+    "name": "美团配送AI",
+    "description": "美团的AI即时配送和智能调度系统",
+    "category": "Logistics",
+    "pricing": "Freemium",
+    "url": "https://www.meituan.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI即时配送智能调度和路径规划",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 279,
+    "name": "满帮集团AI",
+    "description": "满帮集团的AI公路货运和车货匹配平台",
+    "category": "Logistics",
+    "pricing": "Freemium",
+    "url": "https://www.manbanggroup.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI车货匹配和货运调度优化",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 280,
+    "name": "G7易流AI",
+    "description": "G7易流的AI物联网物流和车队管理平台",
+    "category": "Logistics",
+    "pricing": "Freemium",
+    "url": "https://www.g7.com.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI车队管理和物流安全监控",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 281,
+    "name": "中通快递AI",
+    "description": "中通快递的AI智能分拣和配送优化系统",
+    "category": "Logistics",
+    "pricing": "Freemium",
+    "url": "https://www.zto.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能分拣和配送路径优化",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 282,
+    "name": "韵达快递AI",
+    "description": "韵达快递的AI智能物流和客户服务的系统",
+    "category": "Logistics",
+    "pricing": "Freemium",
+    "url": "https://www.yunda56.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI快递智能客服和物流追踪",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 283,
+    "name": "极智嘉物流AI",
+    "description": "极智嘉的AI仓储机器人和智能物流解决方案",
+    "category": "Logistics",
+    "pricing": "Freemium",
+    "url": "https://www.geekplus.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI仓储机器人货到人拣选系统",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 284,
+    "name": "快仓智能AI",
+    "description": "快仓的AI仓储机器人和订单履行系统",
+    "category": "Logistics",
+    "pricing": "Freemium",
+    "url": "https://www.flashwarehouse.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI仓储机器人智能拣选方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   }
 ]
