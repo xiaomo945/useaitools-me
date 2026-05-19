@@ -24,7 +24,9 @@ const categoryDescriptions: Record<Category, string> = {
   Transportation: 'Revolutionize transportation with AI tools for autonomous driving, traffic management, route optimization, and smart mobility solutions.',
   Logistics: 'Optimize supply chain and logistics with AI tools for warehouse management, delivery optimization, inventory forecasting, and fleet tracking.',
   Energy: 'Power the future with AI tools for smart grid management, renewable energy optimization, predictive maintenance, and carbon footprint analysis.',
-  Environment: 'Protect our planet with AI tools for environmental monitoring, pollution detection, wildlife conservation, and climate change analysis.'
+  Environment: 'Protect our planet with AI tools for environmental monitoring, pollution detection, wildlife conservation, and climate change analysis.',
+  Government: 'Modernize public services with AI tools for smart governance, citizen services, urban management, and policy decision support.',
+  Travel: 'Transform travel experiences with AI tools for itinerary planning, language translation, local recommendations, and smart tourism services.'
 };
 
 const categoryNames: Record<Category, string> = {
@@ -41,7 +43,9 @@ const categoryNames: Record<Category, string> = {
   Transportation: 'Transportation',
   Logistics: 'Logistics',
   Energy: 'Energy',
-  Environment: 'Environment'
+  Environment: 'Environment',
+  Government: 'Government',
+  Travel: 'Travel'
 };
 
 const colorMap: Record<Category, { bg: string; bgDark: string; text: string; textLight: string; border: string; ring: string }> = {
@@ -58,7 +62,9 @@ const colorMap: Record<Category, { bg: string; bgDark: string; text: string; tex
   Transportation: { bg: 'bg-cyan-600', bgDark: 'bg-cyan-600/20', text: 'text-cyan-300', textLight: 'text-cyan-700', border: 'border-cyan-300', ring: 'hover:shadow-cyan-500/20' },
   Logistics:  { bg: 'bg-purple-600', bgDark: 'bg-purple-600/20', text: 'text-purple-300', textLight: 'text-purple-700', border: 'border-purple-300', ring: 'hover:shadow-purple-500/20' },
   Energy:     { bg: 'bg-yellow-500', bgDark: 'bg-yellow-500/20', text: 'text-yellow-300', textLight: 'text-yellow-700', border: 'border-yellow-300', ring: 'hover:shadow-yellow-500/20' },
-  Environment:{ bg: 'bg-emerald-600', bgDark: 'bg-emerald-600/20', text: 'text-emerald-300', textLight: 'text-emerald-700', border: 'border-emerald-300', ring: 'hover:shadow-emerald-500/20' }
+  Environment:{ bg: 'bg-emerald-600', bgDark: 'bg-emerald-600/20', text: 'text-emerald-300', textLight: 'text-emerald-700', border: 'border-emerald-300', ring: 'hover:shadow-emerald-500/20' },
+  Government: { bg: 'bg-blue-700', bgDark: 'bg-blue-700/20', text: 'text-blue-300', textLight: 'text-blue-700', border: 'border-blue-300', ring: 'hover:shadow-blue-500/20' },
+  Travel:    { bg: 'bg-rose-600', bgDark: 'bg-rose-600/20', text: 'text-rose-300', textLight: 'text-rose-700', border: 'border-rose-300', ring: 'hover:shadow-rose-500/20' }
 };
 
 // Helper function to check if a tool has affiliate link (environment variable or JSON field)

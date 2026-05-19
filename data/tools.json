@@ -5933,5 +5933,409 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]
+  },
+  {
+    "id": 305,
+    "name": "国家政务服务平台AI",
+    "description": "国家政务服务平台的AI智能办事和政策咨询服务",
+    "category": "Government",
+    "pricing": "Freemium",
+    "url": "https://gjzw.www.gov.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI政务事项智能办理和政策咨询",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 306,
+    "name": "浙里办AI",
+    "description": "浙江省政务服务平台浙里办的AI智能办事服务",
+    "category": "Government",
+    "pricing": "Freemium",
+    "url": "https://www.zjzwfw.gov.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI政务服务智能导办和进度查询",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 307,
+    "name": "粤省事AI",
+    "description": "广东省政务服务平台粤省事的AI民生服务",
+    "category": "Government",
+    "pricing": "Freemium",
+    "url": "https://www.gdzwfw.gov.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI粤省事民生服务智能办理",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 308,
+    "name": "随申办AI",
+    "description": "上海市政务服务平台随申办的AI智能办事系统",
+    "category": "Government",
+    "pricing": "Freemium",
+    "url": "https://www.shanghai.gov.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI随申办政务服务智能办理",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 309,
+    "name": "北京通AI",
+    "description": "北京市政务服务平台北京通的AI城市服务",
+    "category": "Government",
+    "pricing": "Freemium",
+    "url": "https://www.beijing.gov.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI北京通公共服务智能办理",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 310,
+    "name": "津心办AI",
+    "description": "天津市政务服务平台津心办的AI智能服务",
+    "category": "Government",
+    "pricing": "Freemium",
+    "url": "https://www.tj.gov.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI津心办政务服务智能办理",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 311,
+    "name": "赣服通AI",
+    "description": "江西省政务服务平台赣服通的AI智能办事服务",
+    "category": "Government",
+    "pricing": "Freemium",
+    "url": "https://www.jiangxi.gov.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI赣服通政务服务智能导办",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 312,
+    "name": "皖事通AI",
+    "description": "安徽省政务服务平台皖事通的AI智能办事系统",
+    "category": "Government",
+    "pricing": "Freemium",
+    "url": "https://www.ahzwfw.gov.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI皖事通政务服务智能办理",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 313,
+    "name": "闽政通AI",
+    "description": "福建省政务服务平台闽政通的AI智能服务",
+    "category": "Government",
+    "pricing": "Freemium",
+    "url": "https://www.fujian.gov.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI闽政通政务服务智能办理",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 314,
+    "name": "数字广东AI",
+    "description": "数字广东的AI政务云和智慧城市解决方案",
+    "category": "Government",
+    "pricing": "Freemium",
+    "url": "https://www.dig Guangdong.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智慧城市和政务数字化方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 315,
+    "name": "携程AI",
+    "description": "携程的AI智能旅行规划和预订服务",
+    "category": "Travel",
+    "pricing": "Freemium",
+    "url": "https://www.ctrip.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能行程规划和酒店预订",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 316,
+    "name": "飞猪AI",
+    "description": "阿里巴巴飞猪旅行的AI智能规划和预订服务",
+    "category": "Travel",
+    "pricing": "Freemium",
+    "url": "https://www.fliggy.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI旅行规划和景点门票预订",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 317,
+    "name": "去哪儿AI",
+    "description": "去哪儿旅行的AI比价搜索和智能规划服务",
+    "category": "Travel",
+    "pricing": "Freemium",
+    "url": "https://www.qunar.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI机票酒店比价和行程规划",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 318,
+    "name": "同程旅行AI",
+    "description": "同程旅行的AI智能旅行规划和预订服务",
+    "category": "Travel",
+    "pricing": "Freemium",
+    "url": "https://www.ly.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI旅行路线规划和一键预订",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 319,
+    "name": "马蜂窝AI",
+    "description": "马蜂窝的AI旅游攻略和自由行规划服务",
+    "category": "Travel",
+    "pricing": "Freemium",
+    "url": "https://www.mafengwo.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI旅游攻略生成和景点推荐",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 320,
+    "name": "穷游AI",
+    "description": "穷游网的AI出境游规划和攻略服务",
+    "category": "Travel",
+    "pricing": "Freemium",
+    "url": "https://www.qyer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI出境游行程规划和当地体验推荐",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 321,
+    "name": "途牛AI",
+    "description": "途牛旅游的AI跟团游和定制游规划服务",
+    "category": "Travel",
+    "pricing": "Freemium",
+    "url": "https://www.tuniu.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI旅游团定制和行程规划",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 322,
+    "name": "百度地图AI",
+    "description": "百度地图的AI智能导航和本地生活服务",
+    "category": "Travel",
+    "pricing": "Freemium",
+    "url": "https://map.baidu.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能导航和周边服务推荐",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 323,
+    "name": "高德地图旅行AI",
+    "description": "高德地图的AI旅行规划和本地探索服务",
+    "category": "Travel",
+    "pricing": "Freemium",
+    "url": "https://www.amap.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能出行规划和本地美食推荐",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 324,
+    "name": "腾讯地图AI",
+    "description": "腾讯地图的AI智能出行和位置服务",
+    "category": "Travel",
+    "pricing": "Freemium",
+    "url": "https://map.qq.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能导航和周边生活服务推荐",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   }
 ]
