@@ -3294,5 +3294,520 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]
+  },
+  {
+    "id": 176,
+    "name": "掌门AI",
+    "description": "掌门教育的AI学习助手，提供一对一在线辅导",
+    "category": "Education",
+    "pricing": "Freemium",
+    "url": "https://www.zhangmen.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我预习明天的数学课内容",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "name": "高途AI",
+    "description": "高途教育的AI学习平台，提供K12在线教育",
+    "category": "Education",
+    "pricing": "Freemium",
+    "url": "https://www.gaotu.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我复习初中物理知识点",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "name": "掌门1对1AI",
+    "description": "掌门一对一的AI智能辅导系统",
+    "category": "Education",
+    "pricing": "Freemium",
+    "url": "https://www.zhangmen.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "分析我的学习情况，制定个性化学习计划",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "name": "火花思维AI",
+    "description": "火花思维的AI数学思维训练工具",
+    "category": "Education",
+    "pricing": "Freemium",
+    "url": "https://www.huohua.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "用游戏化的方式教孩子数学思维",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "name": "叽里呱啦AI",
+    "description": "专注儿童英语启蒙的AI学习工具",
+    "category": "Education",
+    "pricing": "Freemium",
+    "url": "https://www.jiliguala.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "用有趣的动画教孩子学英语",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "name": "VIPKID AI",
+    "description": "VIPKID的AI英语学习助手",
+    "category": "Education",
+    "pricing": "Freemium",
+    "url": "https://www.vipkid.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "和AI外教练习英语口语对话",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "name": "有道精品课AI",
+    "description": "有道精品课的AI学习助手",
+    "category": "Education",
+    "pricing": "Freemium",
+    "url": "https://ke.youdao.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我备考四六级英语考试",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "name": "腾讯会议AI",
+    "description": "腾讯会议的AI助手，支持智能纪要和翻译",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://meeting.tencent.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "自动生成会议纪要和行动项",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "name": "飞书文档AI",
+    "description": "飞书文档的AI写作助手，提升文档创作效率",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.feishu.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "根据大纲自动生成文档内容",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "name": "金山文档AI",
+    "description": "金山文档的AI协作工具，支持智能写作",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.wps.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我将表格数据可视化成图表",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "name": "阿里云盘AI",
+    "description": "阿里云盘的AI助手，智能管理和搜索文件",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.aliyundrive.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我搜索和整理网盘里的文档",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "name": "腾讯微云AI",
+    "description": "腾讯微云的AI文件管理助手",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.weiyun.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "智能分类和整理我的云盘文件",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "name": "印象笔记AI",
+    "description": "印象笔记的AI笔记助手，智能整理和搜索笔记",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.yinxiang.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我整理和总结笔记内容",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "name": "有道云笔记AI",
+    "description": "有道云笔记的AI助手，支持智能笔记管理",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://note.youdao.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "智能识别和分类笔记中的重要信息",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "name": "敬业签AI",
+    "description": "敬业签的AI便签助手，智能提醒和整理",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.jingyeqian.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我管理待办事项和日程提醒",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "name": "滴答清单AI",
+    "description": "滴答清单的AI任务管理助手",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.dida365.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我规划今天的工作任务优先级",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "name": "番茄Todo AI",
+    "description": "番茄Todo的AI时间管理助手",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.tomatotodo.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我制定一个高效的学习计划",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "name": "石墨AI",
+    "description": "石墨文档的AI智能助手，提升协作效率",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://shimo.im",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我把会议记录整理成结构化文档",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "name": "腾讯云AI助手",
+    "description": "腾讯云的AI办公助手，提供多种办公能力",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://cloud.tencent.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我创建一个智能表单",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "name": "阿里云AI办公",
+    "description": "阿里云的AI办公套件，提升企业办公效率",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.aliyun.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我分析企业数据报表",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "name": "网易有道AI写作",
+    "description": "网易有道的AI写作助手，支持多场景写作",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://ai.youdao.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我写一封英文商务邮件",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 197,
+    "name": "腾讯智影",
+    "description": "腾讯智影的AI视频创作平台",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://zenvideo.qq.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "生成一个AI数字人讲解视频",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "name": "百度智能云AI",
+    "description": "百度智能云的AI平台，提供多种AI能力",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://cloud.baidu.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "帮我调用AI接口实现文本生成",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "name": "字节跳动火山引擎AI",
+    "description": "字节跳动火山引擎的AI平台，提供企业级AI能力",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://www.volcengine.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "使用AI进行内容审核和处理",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "name": "华为云AI",
+    "description": "华为云的AI服务平台，提供多种AI能力",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://www.huaweicloud.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "使用华为云AI进行智能问答",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   }
 ]
