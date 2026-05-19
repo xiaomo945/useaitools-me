@@ -5519,5 +5519,419 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]
+  },
+  {
+    "id": 285,
+    "name": "国家电网智能能源AI",
+    "description": "国家电网的AI智能电网管理和能源调度系统",
+    "category": "Energy",
+    "pricing": "Freemium",
+    "url": "https://www.sgcc.com.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能电网调度和负荷预测",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 286,
+    "name": "南方电网AI",
+    "description": "南方电网的AI能源管理和智能运维平台",
+    "category": "Energy",
+    "pricing": "Freemium",
+    "url": "https://www.csg.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI电力设备智能运维和故障预测",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 287,
+    "name": "隆基绿能AI",
+    "description": "隆基绿能的AI光伏产品优化和发电预测系统",
+    "category": "Energy",
+    "pricing": "Freemium",
+    "url": "https://www.longi.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI光伏电站发电量预测和优化",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 288,
+    "name": "宁德时代AI",
+    "description": "宁德时代的AI动力电池管理和储能优化系统",
+    "category": "Energy",
+    "pricing": "Freemium",
+    "url": "https://www.catl.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI电池储能系统管理和优化",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 289,
+    "name": "远景能源AI",
+    "description": "远景能源的AI智能风电和储能解决方案",
+    "category": "Energy",
+    "pricing": "Freemium",
+    "url": "https://www.envision-digital.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI风电场智能运维和发电优化",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 290,
+    "name": "金风科技AI",
+    "description": "金风科技的AI风电智能化和数字化平台",
+    "category": "Energy",
+    "pricing": "Freemium",
+    "url": "https://www.goldwind.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI风机故障诊断和智能运维",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 291,
+    "name": "阿里云能耗宝AI",
+    "description": "阿里云的AI能耗管理和碳减排优化平台",
+    "category": "Energy",
+    "pricing": "Freemium",
+    "url": "https://www.aliyun.com/product/energy",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI企业能耗分析和碳减排方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 292,
+    "name": "腾讯碳引擎AI",
+    "description": "腾讯云的AI碳中和和碳交易管理平台",
+    "category": "Energy",
+    "pricing": "Freemium",
+    "url": "https://www.tencent.com/carbon",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI碳排放核算和碳中和路径规划",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 293,
+    "name": "百度智能能源AI",
+    "description": "百度AI的能源智能化管理和优化解决方案",
+    "category": "Energy",
+    "pricing": "Freemium",
+    "url": "https://ai.baidu.com/energy",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI能源大数据分析和优化决策",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 294,
+    "name": "华为云能源AI",
+    "description": "华为云的AI能源互联网和智能电网解决方案",
+    "category": "Energy",
+    "pricing": "Freemium",
+    "url": "https://www.huaweicloud.com/solution/energy",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能电网调度和负荷预测",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 295,
+    "name": "生态环境部AI监测",
+    "description": "生态环境部的AI环境监测和预警系统",
+    "category": "Environment",
+    "pricing": "Freemium",
+    "url": "https://www.mee.gov.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI空气质量监测和预警发布",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 296,
+    "name": "中国环境监测总站AI",
+    "description": "中国环境监测总站的AI环境数据分析和预警平台",
+    "category": "Environment",
+    "pricing": "Freemium",
+    "url": "https://www.cnemc.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI环境质量数据智能分析",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 297,
+    "name": "百度环保AI",
+    "description": "百度AI的环保监测和污染源追踪系统",
+    "category": "Environment",
+    "pricing": "Freemium",
+    "url": "https://ai.baidu.com/environment",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI污染源智能识别和追踪",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 298,
+    "name": "阿里环保AI",
+    "description": "阿里云的AI环境治理和碳中和解决方案",
+    "category": "Environment",
+    "pricing": "Freemium",
+    "url": "https://www.aliyun.com/solution/environment",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI城市环境治理和资源优化",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 299,
+    "name": "腾讯环保AI",
+    "description": "腾讯云的AI生态保护和自然资源管理平台",
+    "category": "Environment",
+    "pricing": "Freemium",
+    "url": "https://www.tencent.com/environment",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI生态红线监测和自然保护区管理",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 300,
+    "name": "华为环保AI",
+    "description": "华为云的AI环境监测和生态修复解决方案",
+    "category": "Environment",
+    "pricing": "Freemium",
+    "url": "https://www.huaweicloud.com/solution/environment",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI水质监测和生态修复方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 301,
+    "name": "大疆环保AI",
+    "description": "大疆创新的AI无人机环境监测和巡检系统",
+    "category": "Environment",
+    "pricing": "Freemium",
+    "url": "https://www.dji.com/solutions/environmental",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI无人机环保巡查和污染监测",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 302,
+    "name": "商汤环保AI",
+    "description": "商汤科技的AI遥感环境和生态监测系统",
+    "category": "Environment",
+    "pricing": "Freemium",
+    "url": "https://www.sensetime.com/environment",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI卫星遥感环境变化监测",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 303,
+    "name": "格林美环保AI",
+    "description": "格林美的AI城市矿产和资源循环利用系统",
+    "category": "Environment",
+    "pricing": "Freemium",
+    "url": "https://www.greentech.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI废旧物资智能分拣和回收",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 304,
+    "name": "启迪环境AI",
+    "description": "启迪环境的AI固废处理和资源化利用系统",
+    "category": "Environment",
+    "pricing": "Freemium",
+    "url": "https://www.tus-ep.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI固废智能处理和资源化方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   }
 ]
