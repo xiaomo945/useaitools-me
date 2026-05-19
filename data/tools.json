@@ -4670,7 +4670,7 @@
     "id": 243,
     "name": "法大大模型AI",
     "description": "法大大的AI智能合同审查和法律服务",
-    "category": "Productivity",
+    "category": "Law",
     "pricing": "Freemium",
     "url": "https://www.fadada.com",
     "affiliate_link": "",
@@ -4690,7 +4690,7 @@
     "id": 244,
     "name": "幂律智能AI",
     "description": "幂律智能的法律AI助手和合同分析平台",
-    "category": "Productivity",
+    "category": "Law",
     "pricing": "Freemium",
     "url": "https://www.powerlaw.ai",
     "affiliate_link": "",
@@ -4710,7 +4710,7 @@
     "id": 245,
     "name": "秘塔科技AI",
     "description": "秘塔科技的AI法律检索和文书写作工具",
-    "category": "Productivity",
+    "category": "Law",
     "pricing": "Freemium",
     "url": "https://metis.cn",
     "affiliate_link": "",
@@ -4730,7 +4730,7 @@
     "id": 246,
     "name": "通义法务AI",
     "description": "阿里通义的AI企业法务和合规管理平台",
-    "category": "Productivity",
+    "category": "Law",
     "pricing": "Freemium",
     "url": "https://tongyi.aliyun.com/law",
     "affiliate_link": "",
@@ -4823,6 +4823,288 @@
     "examples": [
       {
         "prompt": "AI岗位智能匹配和聊前诊断",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 251,
+    "name": "智谱法务AI",
+    "description": "智谱AI的法律助手，提供智能法律问答和文书撰写",
+    "category": "Law",
+    "pricing": "Freemium",
+    "url": "https://chatglm.cn/law",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI法律咨询和文书起草",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 252,
+    "name": "文心一言法律版",
+    "description": "百度文心一言的法律专用模型，提供专业法律建议",
+    "category": "Law",
+    "pricing": "Freemium",
+    "url": "https://yiyan.baidu.com/law",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI法律问题咨询和案例分析",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 253,
+    "name": "豆包法律助手",
+    "description": "字节跳动豆包的法律AI助手，提供法律咨询和文书服务",
+    "category": "Law",
+    "pricing": "Freemium",
+    "url": "https://www.doubao.com/law",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI合同审核和法律问题解答",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 254,
+    "name": "智能法务系统",
+    "description": "专业企业法律智能系统，提供合同审查和风险预警",
+    "category": "Law",
+    "pricing": "Freemium",
+    "url": "https://www.legal.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI企业法务风险分析和防范",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 255,
+    "name": "智慧农业AI平台",
+    "description": "中化集团的智慧农业AI平台，提供作物识别和病虫害诊断",
+    "category": "Agriculture",
+    "pricing": "Freemium",
+    "url": "https://www.smartagri.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI作物病虫害识别和防治建议",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 256,
+    "name": "农信AI助手",
+    "description": "农信互联的农业AI助手，提供农业技术和市场分析",
+    "category": "Agriculture",
+    "pricing": "Freemium",
+    "url": "https://www.nxin.com/ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI农产品市场价格分析和预测",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 257,
+    "name": "极飞农业AI",
+    "description": "极飞科技的农业无人机AI系统，提供智能植保和巡检",
+    "category": "Agriculture",
+    "pricing": "Freemium",
+    "url": "https://www.xa.com/ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI无人机植保作业和作物监测",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 258,
+    "name": "托普云农AI",
+    "description": "托普云农的农业物联网AI系统，提供环境监测和智能灌溉",
+    "category": "Agriculture",
+    "pricing": "Freemium",
+    "url": "https://www.tpzn.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI农田环境监测和智能灌溉控制",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 259,
+    "name": "大北农智慧农业AI",
+    "description": "大北农集团的智慧养殖和种植AI解决方案",
+    "category": "Agriculture",
+    "pricing": "Freemium",
+    "url": "https://www.dbn.com.cn/ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI智能养殖管理和疾病预警",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 260,
+    "name": "金正大农业AI",
+    "description": "金正大集团的AI测土施肥和作物管理系统",
+    "category": "Agriculture",
+    "pricing": "Freemium",
+    "url": "https://www.kingenta.com/ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI测土配方和智能施肥建议",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 261,
+    "name": "拜耳作物科学AI",
+    "description": "拜耳中国的AI作物解决方案，提供精准农业服务",
+    "category": "Agriculture",
+    "pricing": "Freemium",
+    "url": "https://www.bayer.com.cn/ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI作物健康评估和精准用药方案",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 262,
+    "name": "农科院作物AI助手",
+    "description": "中国农科院的AI作物研究和技术推广平台",
+    "category": "Agriculture",
+    "pricing": "Freemium",
+    "url": "https://www.caas.cn/ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI作物品种识别和栽培技术指导",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 263,
+    "name": "京东农场AI",
+    "description": "京东农场的AI智慧种植系统，提供溯源和品质管理",
+    "category": "Agriculture",
+    "pricing": "Freemium",
+    "url": "https://farm.jd.com/ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI农产品溯源和品质智能监测",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 264,
+    "name": "阿里农业大脑AI",
+    "description": "阿里云的农业大脑AI系统，提供大数据分析和决策支持",
+    "category": "Agriculture",
+    "pricing": "Freemium",
+    "url": "https://www.aliyun.com/solution/agriculture",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI农业大数据分析和智能决策",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]

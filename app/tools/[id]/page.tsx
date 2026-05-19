@@ -9,7 +9,7 @@ type Tool = {
   id: number;
   name: string;
   description: string;
-  category: 'Writing' | 'Image' | 'Productivity' | 'Code' | 'Audio' | 'Video' | 'Medical' | 'Finance';
+  category: 'Writing' | 'Image' | 'Productivity' | 'Code' | 'Audio' | 'Video' | 'Medical' | 'Finance' | 'Law' | 'Agriculture';
   pricing: string;
   url: string;
   affiliate_link: string;
