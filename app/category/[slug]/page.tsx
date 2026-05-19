@@ -16,7 +16,9 @@ const categoryDescriptions: Record<Category, string> = {
   Productivity: 'Boost your workflow with AI-powered productivity tools that automate tasks, manage your schedule, and help you get more done in less time.',
   Code: 'Supercharge your development with AI coding assistants that write, refactor, and debug code for you, making programming faster and more accessible.',
   Audio: 'Create professional audio content with AI tools that generate realistic voices, produce music, and edit sound with incredible precision.',
-  Video: 'Bring your videos to life with AI video tools that generate, edit, and enhance video content, from animated avatars to full-length productions.'
+  Video: 'Bring your videos to life with AI video tools that generate, edit, and enhance video content, from animated avatars to full-length productions.',
+  Medical: 'Transform healthcare with AI medical tools that assist in diagnosis, patient care, drug discovery, and medical imaging analysis.',
+  Finance: 'Optimize financial operations with AI tools for risk assessment, fraud detection, investment analysis, and automated trading.'
 };
 
 const categoryNames: Record<Category, string> = {
@@ -25,7 +27,9 @@ const categoryNames: Record<Category, string> = {
   Productivity: 'Productivity',
   Code: 'Code',
   Audio: 'Audio',
-  Video: 'Video'
+  Video: 'Video',
+  Medical: 'Medical',
+  Finance: 'Finance'
 };
 
 const colorMap: Record<Category, { bg: string; bgDark: string; text: string; textLight: string; border: string; ring: string }> = {
@@ -34,7 +38,9 @@ const colorMap: Record<Category, { bg: string; bgDark: string; text: string; tex
   Productivity: { bg: 'bg-teal-500',  bgDark: 'bg-teal-500/20',  text: 'text-teal-300',  textLight: 'text-teal-600',  border: 'border-teal-300',  ring: 'hover:shadow-teal-500/20' },
   Code:       { bg: 'bg-orange-500', bgDark: 'bg-orange-500/20', text: 'text-orange-300', textLight: 'text-orange-600', border: 'border-orange-300', ring: 'hover:shadow-orange-500/20' },
   Audio:      { bg: 'bg-pink-500',   bgDark: 'bg-pink-500/20',   text: 'text-pink-300',   textLight: 'text-pink-600',   border: 'border-pink-300',   ring: 'hover:shadow-pink-500/20' },
-  Video:      { bg: 'bg-indigo-500', bgDark: 'bg-indigo-500/20', text: 'text-indigo-300', textLight: 'text-indigo-600', border: 'border-indigo-300', ring: 'hover:shadow-indigo-500/20' }
+  Video:      { bg: 'bg-indigo-500', bgDark: 'bg-indigo-500/20', text: 'text-indigo-300', textLight: 'text-indigo-600', border: 'border-indigo-300', ring: 'hover:shadow-indigo-500/20' },
+  Medical:    { bg: 'bg-red-500',    bgDark: 'bg-red-500/20',    text: 'text-red-300',    textLight: 'text-red-600',    border: 'border-red-300',    ring: 'hover:shadow-red-500/20' },
+  Finance:    { bg: 'bg-green-500',   bgDark: 'bg-green-500/20',  text: 'text-green-300',  textLight: 'text-green-600',  border: 'border-green-300',  ring: 'hover:shadow-green-500/20' }
 };
 
 // Helper function to check if a tool has affiliate link (environment variable or JSON field)

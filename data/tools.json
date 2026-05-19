@@ -3833,5 +3833,389 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]
+  },
+  {
+    "id": 202,
+    "name": "平安好医生AI",
+    "description": "平安好医生的AI健康助手，提供智能问诊和健康管理服务",
+    "category": "Medical",
+    "pricing": "Freemium",
+    "url": "https://jk.pingan.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "根据症状描述获取健康建议",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 203,
+    "name": "微医AI",
+    "description": "微医平台的AI智能问诊和预约挂号服务",
+    "category": "Medical",
+    "pricing": "Freemium",
+    "url": "https://www.guahao.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI推荐最适合的科室和医生",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "name": "丁香医生AI",
+    "description": "丁香园的AI健康咨询平台，提供专业医学知识",
+    "category": "Medical",
+    "pricing": "Freemium",
+    "url": "https://www.dxy.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "查询药品相互作用和副作用",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "name": "医联AI",
+    "description": "医联的AI医生助手，提供智能诊疗辅助",
+    "category": "Medical",
+    "pricing": "Freemium",
+    "url": "https://www.medlinker.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "辅助医生进行病例分析和诊断",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 206,
+    "name": "京东健康AI",
+    "description": "京东健康的AI智能问诊和药品配送服务",
+    "category": "Medical",
+    "pricing": "Freemium",
+    "url": "https://health.jd.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "在线咨询医生并购买处方药",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 207,
+    "name": "阿里健康AI",
+    "description": "阿里健康的AI医疗助手和健康管理平台",
+    "category": "Medical",
+    "pricing": "Freemium",
+    "url": "https://www.alihealth.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "智能解读体检报告并提供建议",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 208,
+    "name": "腾讯医疗AI",
+    "description": "腾讯医疗的AI辅助诊断和健康管理系统",
+    "category": "Medical",
+    "pricing": "Freemium",
+    "url": "https://health.qq.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI医学影像分析和辅助诊断",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 209,
+    "name": "百度灵医AI",
+    "description": "百度AI医疗助手，提供智能问诊和健康咨询",
+    "category": "Medical",
+    "pricing": "Freemium",
+    "url": "https://lm.feishu.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "基于症状描述获取AI健康分析",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 210,
+    "name": "商汤科技医疗AI",
+    "description": "商汤科技的AI医学影像分析平台",
+    "category": "Medical",
+    "pricing": "Freemium",
+    "url": "https://www.sensetime.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI辅助CT和MRI影像诊断",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 211,
+    "name": "依图医疗AI",
+    "description": "依图的AI医疗影像和智能诊断系统",
+    "category": "Medical",
+    "pricing": "Freemium",
+    "url": "https://www.yitutech.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI病理分析和癌症早筛",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 212,
+    "name": "阿里云金融AI",
+    "description": "阿里云的金融AI服务，提供智能风控和营销能力",
+    "category": "Finance",
+    "pricing": "Freemium",
+    "url": "https://market.aliyun.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "构建企业智能风控模型",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 213,
+    "name": "腾讯云金融AI",
+    "description": "腾讯云的金融AI解决方案，包括智能投顾和反欺诈",
+    "category": "Finance",
+    "pricing": "Freemium",
+    "url": "https://cloud.tencent.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI实时检测金融交易欺诈",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 214,
+    "name": "同花顺AI",
+    "description": "同花顺的AI智能投顾和股票分析工具",
+    "category": "Finance",
+    "pricing": "Freemium",
+    "url": "https://www.10jqka.com.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI分析股票走势和技术指标",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 215,
+    "name": "东方财富AI",
+    "description": "东方财富的AI金融资讯和投资决策工具",
+    "category": "Finance",
+    "pricing": "Freemium",
+    "url": "https://www.eastmoney.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI解读财报和财务数据",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 216,
+    "name": "蚂蚁财富AI",
+    "description": "蚂蚁集团的AI智能理财和基金推荐服务",
+    "category": "Finance",
+    "pricing": "Freemium",
+    "url": "https://finance.antgroup.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI个性化基金和理财推荐",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 217,
+    "name": "度小满金融AI",
+    "description": "度小满的AI智能信贷和风控系统",
+    "category": "Finance",
+    "pricing": "Freemium",
+    "url": "https://www.duxiaoman.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI评估信用并快速审批贷款",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 218,
+    "name": "京东金融AI",
+    "description": "京东金融的AI智能风控和供应链金融服务",
+    "category": "Finance",
+    "pricing": "Freemium",
+    "url": "https://www.jdfinance.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI供应链金融风险评估",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 219,
+    "name": "平安科技金融AI",
+    "description": "平安科技的AI金融智能解决方案",
+    "category": "Finance",
+    "pricing": "Freemium",
+    "url": "https://tech.pingan.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "AI保险智能理赔和核保",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
+  },
+  {
+    "id": 220,
+    "name": "恒生电子AI",
+    "description": "恒生电子的AI证券交易和资产管理平台",
+    "category": "Finance",
+    "pricing": "Freemium",
+    "url": "https://www.hundsun.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "examples": [
+      {
+        "prompt": "AI量化交易策略回测和优化",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   }
 ]
