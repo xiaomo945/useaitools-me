@@ -30,6 +30,8 @@ function hasAffiliateLink(tool: Tool): boolean {
     shortEnvVarName = 'AFFILIATE_VEED';
   } else if (tool.name === 'Murf AI') {
     shortEnvVarName = 'AFFILIATE_MURF';
+  } else if (tool.name === 'Pictory') {
+    shortEnvVarName = 'AFFILIATE_PICTORY';
   }
   const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
   return !!(envLink || tool.affiliate_link);
@@ -43,6 +45,8 @@ function getAffiliateLink(tool: Tool): string {
     shortEnvVarName = 'AFFILIATE_VEED';
   } else if (tool.name === 'Murf AI') {
     shortEnvVarName = 'AFFILIATE_MURF';
+  } else if (tool.name === 'Pictory') {
+    shortEnvVarName = 'AFFILIATE_PICTORY';
   }
   const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
   return envLink || tool.affiliate_link;
