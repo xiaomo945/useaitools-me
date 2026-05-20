@@ -3809,5 +3809,29 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ]
+  },
+  {
+    "id": 201,
+    "name": "Pictory",
+    "description": "AI video creation tool that transforms long-form content into engaging short videos automatically.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://pictory.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "examples": [
+      {
+        "prompt": "Turn my blog article into a short video with automatic captions",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Create engaging social media videos from my long-form content",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ]
   }
 ]
