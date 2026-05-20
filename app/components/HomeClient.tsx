@@ -74,9 +74,10 @@ type Category = string;
 
 interface HomeClientProps {
   initialTools: Tool[];
+  featuredTools: Tool[];
 }
 
-export default function HomeClient({ initialTools }: HomeClientProps) {
+export default function HomeClient({ initialTools, featuredTools }: HomeClientProps) {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
   const router = useRouter();
@@ -176,34 +177,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
     });
   };
   
-  // 智能选择 3 个精选工具 - 优先选择中国 AI 工具
-  const [featuredTools] = useState(() => {
-    // 先筛选出不需要 VPN 的中国 AI 工具
-    const chineseTools = initialTools.filter(tool => !tool.needs_vpn);
-    // 然后是所有工具
-    const allTools = [...initialTools];
-    
-    // 智能选择：如果有中国 AI 工具，优先选择，然后混合其他工具
-    const selected: Tool[] = [];
-    
-    // 从中国 AI 工具中选择最多 2 个
-    const chineseCandidates = [...chineseTools];
-    for (let i = chineseCandidates.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [chineseCandidates[i], chineseCandidates[j]] = [chineseCandidates[j], chineseCandidates[i]];
-    }
-    selected.push(...chineseCandidates.slice(0, 2));
-    
-    // 从所有工具中选择剩余的（排除已选择的）
-    const remaining = allTools.filter(t => !selected.some(s => s.id === t.id));
-    for (let i = remaining.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [remaining[i], remaining[j]] = [remaining[j], remaining[i]];
-    }
-    selected.push(...remaining.slice(0, 3 - selected.length));
-    
-    return selected;
-  });
+
 
   const categories: Category[] = ['All', 'Writing', 'Image', 'Productivity', 'Code', 'Audio', 'Video'];
 
@@ -621,10 +595,9 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
             const ctaText = hasAffiliate ? '🔗 Try It Free' : 'Visit Website';
             
             return (
-              <Link
+              <div
                 key={tool.id}
-                href={`/tools/${tool.id}`}
-                className={`bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative ${hasAffiliate ? 'affiliate-card' : ''}`}
+                className={`bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative ${hasAffiliate ? 'affiliate-card' : ''}`}
                 style={{ 
                   animationDelay: `${index * 50}ms`,
                   willChange: 'transform'
@@ -653,13 +626,19 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                   {/* Tool Header with Compare Checkbox */}
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <div className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                      <Link
+                        href={`/tools/${tool.id}`}
+                        className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`} 
+                        style={{ fontFamily: 'Playfair Display, serif' }}
+                      >
                         {tool.name.charAt(0)}
-                      </div>
+                      </Link>
                       <div>
-                        <h3 className="font-semibold text-lg text-slate-900 dark:text-white">
-                          {highlightText(tool.name, search)}
-                        </h3>
+                        <Link href={`/tools/${tool.id}`} className="inline-block">
+                          <h3 className="font-semibold text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                            {highlightText(tool.name, search)}
+                          </h3>
+                        </Link>
                         <div className="flex items-center gap-1.5 mt-1">
                           {tool.needs_vpn ? (
                             <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
@@ -677,7 +656,6 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                       <button
                         onClick={(e) => {
                           e.preventDefault();
-                          e.stopPropagation();
                           toggleCompare(tool.id);
                         }}
                         className={`w-6 h-6 rounded border-2 transition-all duration-300 ease-out flex items-center justify-center ${
@@ -700,10 +678,12 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                     </div>
                   </div>
 
-                  {/* Description */}
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-4 mb-4 line-clamp-2">
-                    {highlightText(tool.description, search)}
-                  </p>
+                  {/* Description - linkable to tool page */}
+                  <Link href={`/tools/${tool.id}`} className="block">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-4 mb-4 line-clamp-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                      {highlightText(tool.description, search)}
+                    </p>
+                  </Link>
 
                   {/* Footer */}
                   <div className="flex items-center justify-between gap-3">
@@ -714,7 +694,6 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                     <div className="flex items-center gap-1.5 sm:gap-2">
                       <Link
                         href={`/compare?tool=${tool.id}`}
-                        onClick={(e) => e.stopPropagation()}
                         className="inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
                       >
                         <svg
@@ -736,7 +715,6 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                         href={getAffiliateLink(tool) || tool.url}
                         target="_blank"
                         rel="noopener noreferrer sponsored"
-                        onClick={(e) => e.stopPropagation()}
                         className="inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
                       >
                         <svg
@@ -757,7 +735,6 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                       <button
                         onClick={(e) => {
                           e.preventDefault();
-                          e.stopPropagation();
                           toggleSave(tool.id);
                         }}
                         className={`inline-flex items-center justify-center gap-0.5 px-2 min-h-[44px] min-w-[44px] rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ease-out relative overflow-hidden whitespace-nowrap active:scale-[0.98] ${
@@ -777,7 +754,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
             );
           })}
         </div>

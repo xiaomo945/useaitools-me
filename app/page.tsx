@@ -26,6 +26,27 @@ export default function Home() {
     affiliate_link: getAffiliateLink(tool)
   }));
 
+  // Select featured tools on server to prevent hydration mismatch
+  // Prioritize Chinese tools first, then mix with others
+  const chineseTools = enrichedTools.filter(tool => !tool.needs_vpn);
+  const allTools = [...enrichedTools];
+  
+  // Use deterministic selection based on tool IDs
+  const selected: typeof enrichedTools = [];
+  
+  // Select top 2 Chinese tools first (deterministic)
+  const topChineseTools = chineseTools
+    .sort((a, b) => a.id - b.id)
+    .slice(0, 2);
+  selected.push(...topChineseTools);
+  
+  // Select remaining from other tools
+  const remaining = allTools.filter(t => !selected.some(s => s.id === t.id));
+  const topRemainingTools = remaining
+    .sort((a, b) => a.id - b.id)
+    .slice(0, 3 - selected.length);
+  selected.push(...topRemainingTools);
+
   // WebSite Schema with SearchAction
   const webSiteSchema = {
     '@context': 'https://schema.org',
@@ -97,7 +118,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
-      <HomeClient initialTools={enrichedTools} />
+      <HomeClient initialTools={enrichedTools} featuredTools={selected} />
       <Footer />
     </>
   );
