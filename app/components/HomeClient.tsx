@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useMemo, useRef } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -78,6 +79,8 @@ interface HomeClientProps {
 export default function HomeClient({ initialTools }: HomeClientProps) {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
+  const router = useRouter();
+  const toolsGridRef = useRef<HTMLDivElement>(null);
   // Load saved ids from localStorage on initialization
   const getSavedIds = (): number[] => {
     try {
@@ -105,10 +108,28 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
   const heartBurstRefs = useRef<{ [key: number]: HTMLSpanElement | null }>({});
   const categoryButtonsRef = useRef<(HTMLButtonElement | null)[]>([]);
   
-  // Keyboard navigation for search box (Esc to clear)
+  // Keyboard navigation for search box (Esc to clear, Enter to search page)
   const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Escape') {
       setSearch('');
+    } else if (e.key === 'Enter') {
+      if (search.trim()) {
+        router.push(`/search?q=${encodeURIComponent(search.trim())}`);
+      }
+    }
+  };
+
+  // Auto scroll to tools grid when search is entered
+  useEffect(() => {
+    if (search.trim()) {
+      toolsGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [search]);
+
+  // Navigate to search page
+  const goToSearchPage = () => {
+    if (search.trim()) {
+      router.push(`/search?q=${encodeURIComponent(search.trim())}`);
     }
   };
   
@@ -391,7 +412,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
               </svg>
               <input
                 type="text"
-                placeholder="Search 50+ AI tools..."
+                placeholder="Search 50+ AI tools... Press Enter for full results"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 onKeyDown={handleSearchKeyDown}
@@ -399,19 +420,35 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 autoComplete="off"
                 autoCorrect="off"
                 spellCheck="false"
-                className="w-full px-4 sm:px-5 py-3 sm:py-4 pl-12 sm:pl-14 pr-10 sm:pr-12 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
+                className="w-full px-4 sm:px-5 py-3 sm:py-4 pl-12 sm:pl-14 pr-20 sm:pr-24 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
               />
-              {search && (
+              <div className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-1">
+                {search && (
+                  <button
+                    onClick={() => setSearch('')}
+                    className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200"
+                    aria-label="Clear search"
+                  >
+                    <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                )}
                 <button
-                  onClick={() => setSearch('')}
-                  className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200"
-                  aria-label="Clear search"
+                  onClick={goToSearchPage}
+                  disabled={!search.trim()}
+                  className={`p-2 rounded-full transition-all duration-200 ${
+                    search.trim()
+                      ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:shadow-lg hover:shadow-emerald-500/30'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-400 cursor-not-allowed'
+                  }`}
+                  aria-label="Search"
                 >
-                  <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </button>
-              )}
+              </div>
             </div>
           </div>
 
@@ -469,7 +506,9 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           
           {/* Search Result Count */}
           <div className="text-center mb-8">
-            <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
+            <p className={`text-base sm:text-lg font-semibold text-slate-600 dark:text-slate-300 ${
+              search.trim() || selectedCategory !== 'All' ? 'animate-pulse' : ''
+            }`}>
               {search.trim() || selectedCategory !== 'All' ? (
                 filteredTools.length === 0 ? (
                   <span className="text-rose-500 dark:text-rose-400">No tools found</span>
@@ -572,7 +611,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
         <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 dark:via-emerald-700/40 to-transparent mb-16 mx-auto max-w-2xl" />
 
         {/* Tools Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 transition-all duration-300 ease-out">
+        <div ref={toolsGridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 transition-all duration-300 ease-out">
           {filteredTools.map((tool, index) => {
             const colors = getCategoryColors(tool.category);
             const pricingColors = getPricingColors(tool.pricing);
@@ -765,6 +804,14 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
             <p className="text-slate-500 dark:text-slate-500 text-lg font-medium mb-4">
               So empty, so serene. Try a different search maybe?
             </p>
+            {search.trim() && (
+              <Link
+                href={`/search?q=${encodeURIComponent(search.trim())}`}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300 mb-6"
+              >
+                Try searching in full page →
+              </Link>
+            )}
             <div className="flex flex-wrap justify-center gap-2 mt-4">
               <span className="text-sm text-slate-400 dark:text-slate-500">Try searching:</span>
               {['ChatGPT', 'Midjourney', 'GitHub Copilot', 'DALL-E', 'Notion AI'].map((suggestion) => (
