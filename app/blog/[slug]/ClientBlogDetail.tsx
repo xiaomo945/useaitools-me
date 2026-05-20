@@ -62,8 +62,21 @@ const formatRelativeDate = (dateStr: string): string => {
   }
 };
 
-// Simple function to parse basic markdown-like content
-const renderContent = (content: string) => {
+// Helper function to render a single blog image
+const renderBlogImage = (image: BlogImage, index: number) => {
+  return `<figure class="relative my-8">
+    <img
+      src="${image.url}"
+      alt="${image.alt}"
+      class="w-full h-auto rounded-xl shadow-lg"
+      loading="lazy"
+    />
+    ${image.caption ? `<figcaption class="mt-3 text-center text-sm text-slate-500 dark:text-gray-400 italic">${image.caption}</figcaption>` : ''}
+  </figure>`;
+};
+
+// Simple function to parse basic markdown-like content and insert images at appropriate positions
+const renderContentWithImages = (content: string, images: BlogImage[] = []) => {
   let html = content;
 
   // Internal links first - format: [[link:/path|text]]
@@ -89,6 +102,41 @@ const renderContent = (content: string) => {
   // External links
   html = html.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 underline transition-colors duration-300">$1</a>');
 
+  // Insert images at appropriate positions
+  const paragraphs = html.split(/(?=<p|<h2|<hr)/g);
+  
+  if (paragraphs.length > 0 && images.length > 0) {
+    let contentWithImages = '';
+    
+    // Add header image (images[0]) at the beginning
+    if (images[0]) {
+      contentWithImages += renderBlogImage(images[0], 0);
+    }
+    
+    // Add paragraphs up to halfway point
+    const halfwayPoint = Math.floor(paragraphs.length / 2);
+    for (let i = 0; i < halfwayPoint; i++) {
+      contentWithImages += paragraphs[i];
+    }
+    
+    // Add middle image (images[1]) at halfway point
+    if (images[1]) {
+      contentWithImages += renderBlogImage(images[1], 1);
+    }
+    
+    // Add remaining paragraphs
+    for (let i = halfwayPoint; i < paragraphs.length; i++) {
+      contentWithImages += paragraphs[i];
+    }
+    
+    // Add CTA image (images[2]) at the end
+    if (images[2]) {
+      contentWithImages += renderBlogImage(images[2], 2);
+    }
+    
+    return contentWithImages;
+  }
+  
   return html;
 };
 
@@ -144,28 +192,9 @@ export default function ClientBlogDetail({
 
         {/* Post Content */}
         <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl mb-8">
-          {post.images && post.images.length > 0 && (
-            <div className="mb-8 space-y-6">
-              {post.images.map((image, index) => (
-                <figure key={index} className="relative">
-                  <img
-                    src={image.url}
-                    alt={image.alt}
-                    className="w-full h-auto rounded-xl shadow-lg"
-                    loading="lazy"
-                  />
-                  {image.caption && (
-                    <figcaption className="mt-3 text-center text-sm text-slate-500 dark:text-gray-400 italic">
-                      {image.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              ))}
-            </div>
-          )}
           <article
             className="prose prose-slate dark:prose-invert max-w-none"
-            dangerouslySetInnerHTML={{ __html: renderContent(post.content) }}
+            dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images) }}
           />
         </div>
 
