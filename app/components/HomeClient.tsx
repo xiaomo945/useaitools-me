@@ -392,6 +392,9 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
                 onChange={(e) => setSearch(e.target.value)}
                 onKeyDown={handleSearchKeyDown}
                 aria-label="Search AI tools"
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck="false"
                 className="w-full px-4 sm:px-5 py-3 sm:py-4 pl-12 sm:pl-14 pr-10 sm:pr-12 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
               />
               {search && (
