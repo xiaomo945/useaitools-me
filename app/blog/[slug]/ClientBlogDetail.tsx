@@ -6,6 +6,12 @@ import { Home, Share2, Copy } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 
+type BlogImage = {
+  url: string;
+  alt: string;
+  caption?: string;
+};
+
 type BlogPost = {
   id: number;
   title: string;
@@ -13,6 +19,7 @@ type BlogPost = {
   date: string;
   description: string;
   content: string;
+  images?: BlogImage[];
 };
 
 // Calculate estimated reading time
@@ -137,6 +144,25 @@ export default function ClientBlogDetail({
 
         {/* Post Content */}
         <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl mb-8">
+          {post.images && post.images.length > 0 && (
+            <div className="mb-8 space-y-6">
+              {post.images.map((image, index) => (
+                <figure key={index} className="relative">
+                  <img
+                    src={image.url}
+                    alt={image.alt}
+                    className="w-full h-auto rounded-xl shadow-lg"
+                    loading="lazy"
+                  />
+                  {image.caption && (
+                    <figcaption className="mt-3 text-center text-sm text-slate-500 dark:text-gray-400 italic">
+                      {image.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              ))}
+            </div>
+          )}
           <article
             className="prose prose-slate dark:prose-invert max-w-none"
             dangerouslySetInnerHTML={{ __html: renderContent(post.content) }}
