@@ -160,7 +160,7 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
           {/* Staff Pick Badge for affiliate tools */}
           {hasAffiliate && (
             <div className="absolute top-4 right-4 z-10">
-              <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25">
+              <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25 animate-pulse-glow">
                 🏷️ Staff Pick
               </span>
             </div>
@@ -208,6 +208,13 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
               {tool.description}
             </p>
 
+            {/* Affiliate Disclaimer for trust */}
+            {hasAffiliate && (
+              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-4 text-center">
+                We may earn a small commission if you try this tool. It doesn't affect our recommendation.
+              </p>
+            )}
+            
             {/* CTA Button */}
             <a
               href={tool.affiliate_link || tool.url}
