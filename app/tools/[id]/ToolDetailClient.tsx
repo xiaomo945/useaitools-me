@@ -211,7 +211,7 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
             {/* Affiliate Disclaimer for trust */}
             {hasAffiliate && (
               <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-4 text-center">
-                We may earn a small commission if you try this tool. It doesn't affect our recommendation.
+                We may earn a small commission if you try this tool. It doesn&apos;t affect our recommendation.
               </p>
             )}
             

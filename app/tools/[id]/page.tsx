@@ -95,7 +95,7 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
   // Get related tools - smart recommendation algorithm
   const getRelatedTools = (): Tool[] => {
     // 1. 首先从同分类中筛选，排除当前工具
-    let candidates = typedTools.filter(t => t.id !== tool.id);
+    const candidates = typedTools.filter(t => t.id !== tool.id);
     
     // 2. 计算每个工具与当前工具的匹配分数
     const scoredTools = candidates.map(t => {
