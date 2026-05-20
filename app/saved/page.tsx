@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import tools from '@/data/tools.json';
 import { Home } from 'lucide-react';
@@ -8,16 +8,18 @@ import Footer from '@/app/components/Footer';
 
 type Tool = (typeof tools)[0];
 
-export default function SavedPage() {
-  const [savedIds, setSavedIds] = useState<number[]>([]);
-  
-  // Load saved ids from localStorage on mount
-  useEffect(() => {
+// Load saved ids from localStorage on initialization
+const getSavedIds = (): number[] => {
+  try {
     const saved = localStorage.getItem('savedTools');
-    if (saved) {
-      setSavedIds(JSON.parse(saved));
-    }
-  }, []);
+    return saved ? JSON.parse(saved) : [];
+  } catch {
+    return [];
+  }
+};
+
+export default function SavedPage() {
+  const [savedIds, setSavedIds] = useState<number[]>(getSavedIds());
   
   // Get saved tools
   const savedTools = tools.filter((tool) => savedIds.includes(tool.id));

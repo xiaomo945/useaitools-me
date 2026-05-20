@@ -14,7 +14,7 @@ type Tool = {
   url: string;
   affiliate_link: string;
   icon_url: string;
-  examples?: any[];
+  examples?: { prompt: string; image_url: string }[];
   needs_vpn: boolean;
   languages: string[];
 };

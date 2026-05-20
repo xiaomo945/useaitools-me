@@ -34,7 +34,7 @@ export default function SubmitToolPage() {
               Thanks for your submission!
             </h1>
             <p className="text-base text-gray-600 dark:text-gray-400 mb-8">
-              We'll review your tool soon and let you know if it gets added to our directory.
+              We&apos;ll review your tool soon and let you know if it gets added to our directory.
             </p>
             <Link
               href="/"

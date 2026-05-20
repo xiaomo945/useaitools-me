@@ -13,10 +13,10 @@ export default function NotFound() {
 
         {/* Title & Description */}
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
-          Oops! This page doesn't exist.
+          Oops! This page doesn&apos;t exist.
         </h1>
         <p className="text-gray-600 dark:text-gray-400 text-lg mb-10">
-          The AI tool you're looking for might have been moved.
+          The AI tool you&apos;re looking for might have been moved.
         </p>
 
         {/* Buttons */}

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import Link from 'next/link';
 
 // 高亮搜索关键词的辅助函数
@@ -74,25 +74,32 @@ interface HomeClientProps {
 export default function HomeClient({ initialTools }: HomeClientProps) {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
-  const [savedIds, setSavedIds] = useState<number[]>([]);
+  // Load saved ids from localStorage on initialization
+  const getSavedIds = (): number[] => {
+    try {
+      const saved = localStorage.getItem('savedTools');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  };
+  
+  // Load recently viewed from localStorage on initialization
+  const getRecentlyViewedIds = (): number[] => {
+    try {
+      const recent = localStorage.getItem('recentlyViewed');
+      return recent ? JSON.parse(recent) : [];
+    } catch {
+      return [];
+    }
+  };
+  
+  const [savedIds, setSavedIds] = useState<number[]>(getSavedIds());
   const [selectedForCompare, setSelectedForCompare] = useState<number[]>([]);
   const [heartBurst, setHeartBurst] = useState<{ [key: number]: boolean }>({});
-  const [recentlyViewedIds, setRecentlyViewedIds] = useState<number[]>([]);
+  const [recentlyViewedIds, setRecentlyViewedIds] = useState<number[]>(getRecentlyViewedIds());
   const heartBurstRefs = useRef<{ [key: number]: HTMLSpanElement | null }>({});
   const categoryButtonsRef = useRef<(HTMLButtonElement | null)[]>([]);
-  
-  // Load saved ids and recently viewed from localStorage on mount
-  React.useEffect(() => {
-    const saved = localStorage.getItem('savedTools');
-    if (saved) {
-      setSavedIds(JSON.parse(saved));
-    }
-    
-    const recent = localStorage.getItem('recentlyViewed');
-    if (recent) {
-      setRecentlyViewedIds(JSON.parse(recent));
-    }
-  }, []);
   
   // Keyboard navigation for search box (Esc to clear)
   const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -357,7 +364,7 @@ export default function HomeClient({ initialTools }: HomeClientProps) {
           {/* Trust Signal */}
           <div className="mb-8 relative z-10">
             <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">
-              Built in public by an indie maker from an internet café in China. 135+ tools handpicked, not paid for. Here's my story →
+              Built in public by an indie maker from an internet café in China. 135+ tools handpicked, not paid for. Here&apos;s my story →
             </p>
           </div>
           
