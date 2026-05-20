@@ -56,6 +56,12 @@ export default function Footer() {
           {/* Legal Links */}
           <div className="flex justify-center gap-6 mb-6 flex-wrap">
             <Link
+              href="/about"
+              className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+            >
+              About
+            </Link>
+            <Link
               href="/affiliate-disclosure"
               className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
             >
