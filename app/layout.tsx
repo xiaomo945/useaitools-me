@@ -32,13 +32,13 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Use AI Tools – Discover 50+ Best AI Tools in 2026",
-  description: "Handpicked directory of 50+ AI tools across Writing, Image, Productivity, Code, Audio, and Video. Find the perfect AI tool for your workflow.",
-  keywords: ["AI tools", "AI directory", "AI writing tools", "AI image generators", "AI coding assistants"],
+  title: "Best AI Tools Directory 2026 – Discover & Compare 200+ AI Tools",
+  description: "Find the best AI tools for writing, image generation, video creation, coding, and more. Compare features, pricing, and alternatives side by side. Updated weekly.",
+  keywords: ["AI tools", "AI directory", "AI writing tools", "AI image generators", "AI coding assistants", "AI video tools", "AI audio tools", "AI productivity tools", "best AI tools", "AI tools comparison", "free AI tools", "AI tools 2026"],
   robots: 'index, follow',
   openGraph: {
-    title: "Use AI Tools – Discover 50+ Best AI Tools in 2026",
-    description: "Handpicked directory of 50+ AI tools across Writing, Image, Productivity, Code, Audio, and Video. Find the perfect AI tool for your workflow.",
+    title: "Best AI Tools Directory 2026 – Discover & Compare 200+ AI Tools",
+    description: "Find the best AI tools for writing, image generation, video creation, coding, and more. Compare features, pricing, and alternatives side by side. Updated weekly.",
     siteName: 'Use AI Tools',
     type: 'website',
     url: 'https://useaitools.me',
