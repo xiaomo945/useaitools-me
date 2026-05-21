@@ -105,8 +105,10 @@ interface HomeClientProps {
 export default function HomeClient({ initialTools, featuredTools }: HomeClientProps) {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
+  const [showSuggestions, setShowSuggestions] = useState(false);
   const router = useRouter();
   const toolsGridRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
   // Load saved ids from localStorage on initialization
   const getSavedIds = (): number[] => {
     try {
@@ -158,7 +160,77 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
       router.push(`/search?q=${encodeURIComponent(search.trim())}`);
     }
   };
-  
+
+  // Search suggestions - popular tools and categories
+  const popularSearches = [
+    { type: 'category', label: 'AI Writing Tools', value: 'writing' },
+    { type: 'category', label: 'AI Image Generators', value: 'image' },
+    { type: 'category', label: 'AI Video Tools', value: 'video' },
+    { type: 'category', label: 'AI Audio Tools', value: 'audio' },
+    { type: 'category', label: 'AI Code Tools', value: 'code' },
+    { type: 'category', label: 'AI Productivity Tools', value: 'productivity' },
+  ];
+
+  // Get search suggestions based on input
+  const searchSuggestions = useMemo(() => {
+    if (!search.trim()) {
+      return popularSearches.slice(0, 6);
+    }
+
+    const query = search.toLowerCase();
+    const suggestions: { type: string; label: string; value: string; toolId?: number }[] = [];
+
+    // Add matching tools
+    initialTools.forEach(tool => {
+      if (tool.name.toLowerCase().includes(query)) {
+        suggestions.push({
+          type: 'tool',
+          label: tool.name,
+          value: tool.name,
+          toolId: tool.id,
+        });
+      }
+    });
+
+    // Add matching categories
+    popularSearches.forEach(category => {
+      if (category.label.toLowerCase().includes(query)) {
+        suggestions.push(category);
+      }
+    });
+
+    return suggestions.slice(0, 8);
+  }, [search, initialTools]);
+
+  // Handle suggestion click
+  const handleSuggestionClick = (suggestion: { type: string; label: string; value: string; toolId?: number }) => {
+    if (suggestion.type === 'tool' && suggestion.toolId) {
+      router.push(`/tools/${suggestion.toolId}`);
+    } else if (suggestion.type === 'category') {
+      router.push(`/category/${suggestion.value}`);
+    } else {
+      router.push(`/search?q=${encodeURIComponent(suggestion.label)}`);
+    }
+    setSearch(suggestion.label);
+    setShowSuggestions(false);
+  };
+
+  // Close suggestions when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+      const searchContainer = document.querySelector('.search-container');
+      if (searchContainer && !searchContainer.contains(target)) {
+        setShowSuggestions(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   // Keyboard navigation for category buttons (arrow keys)
   const handleCategoryKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
     if (e.key === 'ArrowRight') {
@@ -401,7 +473,7 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
           </div>
           
           {/* Search Box */}
-          <div className="relative max-w-2xl mx-auto mb-8 px-4 sm:px-0">
+          <div className="search-container relative max-w-2xl mx-auto mb-8 px-4 sm:px-0">
             <div className="relative">
               <svg
                 className="absolute left-4 sm:left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
@@ -418,10 +490,15 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
                 />
               </svg>
               <input
+                ref={searchInputRef}
                 type="text"
                 placeholder="Search best AI tools, AI writing tools, AI image generators, AI video tools..."
                 value={search}
-                onChange={(e) => setSearch(e.target.value)}
+                onChange={(e) => {
+                  setSearch(e.target.value);
+                  setShowSuggestions(true);
+                }}
+                onFocus={() => setShowSuggestions(true)}
                 onKeyDown={handleSearchKeyDown}
                 aria-label="Search AI tools"
                 autoComplete="off"
@@ -457,6 +534,62 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
                 </button>
               </div>
             </div>
+
+            {/* Search Suggestions Dropdown */}
+            {showSuggestions && searchSuggestions.length > 0 && (
+              <div className="absolute z-50 w-full mt-2 bg-white dark:bg-gray-900 rounded-xl border border-slate-200 dark:border-gray-700 shadow-xl overflow-hidden">
+                <div className="p-2">
+                  {!search.trim() && (
+                    <div className="px-3 py-2 text-xs font-semibold text-slate-500 dark:text-gray-400 uppercase tracking-wider">
+                      Popular Searches
+                    </div>
+                  )}
+                  {search.trim() && (
+                    <div className="px-3 py-2 text-xs font-semibold text-slate-500 dark:text-gray-400 uppercase tracking-wider">
+                      Search Results
+                    </div>
+                  )}
+                  {searchSuggestions.map((suggestion, index) => (
+                    <button
+                      key={`${suggestion.type}-${suggestion.value}-${index}`}
+                      onClick={() => handleSuggestionClick(suggestion)}
+                      className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-gray-800 transition-colors text-left group"
+                    >
+                      {suggestion.type === 'tool' ? (
+                        <svg className="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                      ) : (
+                        <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                        </svg>
+                      )}
+                      <span className="text-sm text-slate-700 dark:text-gray-200">{suggestion.label}</span>
+                      <span className={`ml-auto text-xs px-2 py-0.5 rounded-full ${
+                        suggestion.type === 'tool' 
+                          ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-400'
+                          : 'bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-400'
+                      }`}>
+                        {suggestion.type === 'tool' ? 'Tool' : 'Category'}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+                {search.trim() && (
+                  <div className="border-t border-slate-200 dark:border-gray-700 px-3 py-2">
+                    <button
+                      onClick={goToSearchPage}
+                      className="w-full flex items-center justify-center gap-2 text-sm text-slate-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                      Search for "{search}"
+                    </button>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           {/* Submit Tool Button */}
