@@ -143,9 +143,11 @@ const renderContentWithImages = (content: string, images: BlogImage[] = []) => {
 export default function ClientBlogDetail({
   post,
   slug,
+  relatedPosts = [],
 }: {
   post: BlogPost;
   slug: string;
+  relatedPosts?: BlogPost[];
 }) {
   const [copied, setCopied] = useState(false);
   const url = `https://useaitools.me/blog/${slug}`;
@@ -243,6 +245,36 @@ export default function ClientBlogDetail({
             </div>
           </div>
         </div>
+
+        {/* Related Articles */}
+        {relatedPosts.length > 0 && (
+          <div className="mt-12">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Related Articles</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedPosts.map((relatedPost) => (
+                <Link
+                  key={relatedPost.id}
+                  href={`/blog/${relatedPost.slug}`}
+                  className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out"
+                >
+                  {relatedPost.images?.[0] && (
+                    <img
+                      src={relatedPost.images[0].url}
+                      alt={relatedPost.images[0].alt}
+                      className="w-full h-40 object-cover rounded-xl mb-4"
+                    />
+                  )}
+                  <h4 className="font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 mb-2">
+                    {relatedPost.title}
+                  </h4>
+                  <p className="text-sm text-slate-500 dark:text-gray-400 line-clamp-2">
+                    {relatedPost.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
       <Footer />
     </div>

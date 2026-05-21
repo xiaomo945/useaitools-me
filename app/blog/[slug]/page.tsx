@@ -52,6 +52,10 @@ export default async function BlogDetailPage({
     notFound();
   }
 
+  const relatedPosts = blogPosts
+    .filter((p) => p.slug !== slug && p.category === post.category)
+    .slice(0, 3);
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -80,7 +84,7 @@ export default async function BlogDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ClientBlogDetail post={post} slug={slug} />
+      <ClientBlogDetail post={post} slug={slug} relatedPosts={relatedPosts} />
     </>
   );
 }

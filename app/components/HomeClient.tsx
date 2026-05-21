@@ -191,13 +191,21 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
       return matchesSearch && matchesCategory;
     });
     
-    // 智能排序：海外工具优先展示
+    // 智能排序：Staff Pick(联盟) > 海外工具(needs_vpn) > 按名称字母排序
     return [...filtered].sort((a, b) => {
+      const aHasAffiliate = hasAffiliateLink(a);
+      const bHasAffiliate = hasAffiliateLink(b);
+
+      // 1. 联盟链接工具优先 (Staff Pick)
+      if (aHasAffiliate && !bHasAffiliate) return -1;
+      if (!aHasAffiliate && bHasAffiliate) return 1;
+
+      // 2. 海外工具优先
       if (a.needs_vpn && !b.needs_vpn) return -1;
       if (!a.needs_vpn && b.needs_vpn) return 1;
-      
-      // 都需要 VPN 或都不需要 VPN 的情况下，按原顺序（id）
-      return a.id - b.id;
+
+      // 3. 按名称字母排序
+      return a.name.localeCompare(b.name);
     });
   }, [search, selectedCategory, initialTools]);
 

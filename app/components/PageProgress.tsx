@@ -54,7 +54,7 @@ export default function PageProgress() {
   return (
     <div className="fixed top-0 left-0 w-full z-50">
       <div
-        className="h-1 bg-gradient-to-r from-indigo-500 to-purple-500 transition-all duration-300 ease-out"
+        className="h-1 bg-gradient-to-r from-emerald-500 to-emerald-600 dark:from-emerald-400 dark:to-emerald-500 transition-all duration-300 ease-out"
         style={{ width: `${Math.min(progress, 100)}%` }}
       />
     </div>
