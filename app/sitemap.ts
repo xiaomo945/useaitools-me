@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 3600; // 每小时重新生成一次
 
 // 分类名称映射，需要与实际路由匹配
-const categories = ['Image', 'Writing', 'Code', 'Audio', 'Video', 'Productivity'];
+const categories = ['Image', 'Writing', 'Code', 'Video', 'Productivity'];
 const categorySlugMap = (cat: string) => cat.toLowerCase();
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -40,6 +40,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   });
 
+  // 3.1 分类对比页
+  sitemap.push({
+    url: 'https://useaitools.me/compare/writing',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'weekly',
+    priority: 0.85,
+  });
+  sitemap.push({
+    url: 'https://useaitools.me/compare/video',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'weekly',
+    priority: 0.85,
+  });
+  sitemap.push({
+    url: 'https://useaitools.me/compare/audio',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'weekly',
+    priority: 0.85,
+  });
+
   // 4. Affiliate Disclosure 页面
   sitemap.push({
     url: 'https://useaitools.me/affiliate-disclosure',
@@ -47,8 +67,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: 0.6,
   });
+
+  // 5. 其他页面
+  sitemap.push({
+    url: 'https://useaitools.me/about',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'monthly',
+    priority: 0.6,
+  });
+  sitemap.push({
+    url: 'https://useaitools.me/changelog',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  });
+  sitemap.push({
+    url: 'https://useaitools.me/leaderboard',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  });
+  sitemap.push({
+    url: 'https://useaitools.me/saved',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'daily',
+    priority: 0.5,
+  });
+  sitemap.push({
+    url: 'https://useaitools.me/search',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'daily',
+    priority: 0.5,
+  });
+  sitemap.push({
+    url: 'https://useaitools.me/submit',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'monthly',
+    priority: 0.5,
+  });
   
-  // 5. 分类页面 - 中等优先级
+  // 6. 分类页面 - 中等优先级
   categories.forEach((category) => {
     sitemap.push({
       url: `https://useaitools.me/category/${categorySlugMap(category)}`,
@@ -58,7 +116,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
   
-  // 6. 工具详情页 - 使用工具自身的更新日期（如果有的话）
+  // 7. 工具详情页 - 使用工具自身的更新日期（如果有的话）
   toolsData.forEach((tool) => {
     sitemap.push({
       url: `https://useaitools.me/tools/${tool.id}`,
@@ -68,7 +126,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
   
-  // 7. 博客文章页 - 使用文章发布日期
+  // 8. 博客文章页 - 使用文章发布日期
   blogPostsData.forEach((post) => {
     sitemap.push({
       url: `https://useaitools.me/blog/${post.slug}`,
