@@ -390,7 +390,7 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
             Your AI Toolbox
           </p>
           <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-8 relative z-10">
-            Discover, compare & choose the best AI tools for every task. Curated weekly.
+            Discover and compare AI tools in our comprehensive AI tools directory. Find the best AI tools for writing, images, video, and more. Curated weekly.
           </p>
           
           {/* Trust Signal */}
@@ -419,7 +419,7 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
               </svg>
               <input
                 type="text"
-                placeholder="Search 50+ AI tools... Press Enter for full results"
+                placeholder="Search best AI tools, AI writing tools, AI image generators, AI video tools..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 onKeyDown={handleSearchKeyDown}
@@ -536,7 +536,7 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
               Browse by Use Case
             </h2>
             <p className="text-slate-600 dark:text-gray-400">
-              Find the right AI tools for your specific workflow
+              Compare AI tools and find the best AI writing tools, AI image generators, and AI video tools for your workflow
             </p>
           </div>
           
