@@ -22,7 +22,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "最著名的AI图像生成工具，能创建高质量的艺术作品。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "最著名的AI图像生成工具，能创建高质量的艺术作品。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.3,
+    "rating_count": 228
   },
   {
     "id": 2,
@@ -47,7 +49,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "OpenAI开发的强大图像生成工具，通过文字描述生成图片。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "OpenAI开发的强大图像生成工具，通过文字描述生成图片。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.5,
+    "rating_count": 303
   },
   {
     "id": 3,
@@ -72,7 +76,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "开源的AI图像生成工具，可以本地部署，高度可定制。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "开源的AI图像生成工具，可以本地部署，高度可定制。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.8,
+    "rating_count": 288
   },
   {
     "id": 4,
@@ -97,7 +103,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Canva的AI设计工具，快速创建专业的设计作品。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Canva的AI设计工具，快速创建专业的设计作品。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.1,
+    "rating_count": 204
   },
   {
     "id": 5,
@@ -122,7 +130,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "集成在Notion中的AI助手，帮助写作、总结、翻译等。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "集成在Notion中的AI助手，帮助写作、总结、翻译等。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.8,
+    "rating_count": 272
   },
   {
     "id": 6,
@@ -147,7 +157,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "OpenAI的大语言模型，可以对话、写作、编程、分析等。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "OpenAI的大语言模型，可以对话、写作、编程、分析等。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.2,
+    "rating_count": 223
   },
   {
     "id": 7,
@@ -172,7 +184,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI编程助手，实时提供代码建议。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI编程助手，实时提供代码建议。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.9,
+    "rating_count": 127
   },
   {
     "id": 8,
@@ -197,7 +211,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "高质量的AI语音生成工具，能创建逼真的语音。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "高质量的AI语音生成工具，能创建逼真的语音。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.9,
+    "rating_count": 184
   },
   {
     "id": 9,
@@ -222,7 +238,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI视频编辑和生成平台，专业视频制作工具。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI视频编辑和生成平台，专业视频制作工具。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.7,
+    "rating_count": 362
   },
   {
     "id": 10,
@@ -247,7 +265,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI搜索引擎，提供带有引用的准确回答。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI搜索引擎，提供带有引用的准确回答。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.0,
+    "rating_count": 370
   },
   {
     "id": 11,
@@ -272,7 +292,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "OpenAI的语音转文字工具，支持多种语言。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "OpenAI的语音转文字工具，支持多种语言。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.6,
+    "rating_count": 445
   },
   {
     "id": 12,
@@ -297,7 +319,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI视频生成工具，从文本创建动画视频。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI视频生成工具，从文本创建动画视频。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.4,
+    "rating_count": 411
   },
   {
     "id": 13,
@@ -322,7 +346,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "专为AI设计的代码编辑器，内置强大的Copilot功能。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "专为AI设计的代码编辑器，内置强大的Copilot功能。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.2,
+    "rating_count": 58
   },
   {
     "id": 14,
@@ -347,7 +373,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Obsidian笔记软件的AI插件，增强知识管理。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Obsidian笔记软件的AI插件，增强知识管理。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.6,
+    "rating_count": 318
   },
   {
     "id": 15,
@@ -372,7 +400,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI音乐生成工具，能根据文字描述创作歌曲。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI音乐生成工具，能根据文字描述创作歌曲。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.7,
+    "rating_count": 382
   },
   {
     "id": 16,
@@ -397,7 +427,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "OpenAI的最新视频生成模型，能创建高质量视频。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "OpenAI的最新视频生成模型，能创建高质量视频。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.0,
+    "rating_count": 233
   },
   {
     "id": 17,
@@ -422,7 +454,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI代码补全工具，支持多种编程语言和IDE。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI代码补全工具，支持多种编程语言和IDE。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.8,
+    "rating_count": 122
   },
   {
     "id": 18,
@@ -447,7 +481,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "企业级AI写作平台，用于营销和内容创作。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "企业级AI写作平台，用于营销和内容创作。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.8,
+    "rating_count": 482
   },
   {
     "id": 19,
@@ -472,7 +508,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Adobe的创意AI工具，用于生成图像、文字效果等。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Adobe的创意AI工具，用于生成图像、文字效果等。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 5.0,
+    "rating_count": 458
   },
   {
     "id": 20,
@@ -497,7 +535,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Anthropic的先进AI助手，擅长推理、写作、分析和编程任务。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Anthropic的先进AI助手，擅长推理、写作、分析和编程任务。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.9,
+    "rating_count": 203
   },
   {
     "id": 21,
@@ -522,7 +562,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Google的多模态AI助手，能理解文本、图像、音频等。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Google的多模态AI助手，能理解文本、图像、音频等。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.7,
+    "rating_count": 486
   },
   {
     "id": 22,
@@ -547,7 +589,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI写作平台，用于创建SEO优化的文章、博客和营销文案。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI写作平台，用于创建SEO优化的文章、博客和营销文案。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.8,
+    "rating_count": 58
   },
   {
     "id": 23,
@@ -572,7 +616,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI写作助手，帮助快速创建高质量内容。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI写作助手，帮助快速创建高质量内容。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.3,
+    "rating_count": 368
   },
   {
     "id": 24,
@@ -597,7 +643,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI驱动的改写和写作工具，帮助提高词汇量和风格。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI驱动的改写和写作工具，帮助提高词汇量和风格。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.3,
+    "rating_count": 133
   },
   {
     "id": 51,
@@ -621,7 +669,9 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "rating": 5.0,
+    "rating_count": 66
   },
   {
     "id": 52,
@@ -645,7 +695,9 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "rating": 4.7,
+    "rating_count": 482
   },
   {
     "id": 53,
@@ -669,7 +721,9 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "rating": 4.8,
+    "rating_count": 257
   },
   {
     "id": 54,
@@ -694,7 +748,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "自主AI代理，能够自动完成复杂任务而无需人工提示。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "自主AI代理，能够自动完成复杂任务而无需人工提示。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.4,
+    "rating_count": 238
   },
   {
     "id": 55,
@@ -719,7 +775,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Web-based AI agent platform，让用户配置和部署自主AI代理。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Web-based AI agent platform，让用户配置和部署自主AI代理。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.9,
+    "rating_count": 128
   },
   {
     "id": 56,
@@ -744,7 +802,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI代理协作框架，让多个AI代理协同工作完成任务。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI代理协作框架，让多个AI代理协同工作完成任务。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.7,
+    "rating_count": 336
   },
   {
     "id": 57,
@@ -769,7 +829,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI驱动的SEO优化平台，帮助内容在搜索引擎中获得更好排名。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI驱动的SEO优化平台，帮助内容在搜索引擎中获得更好排名。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.4,
+    "rating_count": 429
   },
   {
     "id": 58,
@@ -794,7 +856,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI内容优化和研究平台，帮助创建SEO友好的高质量内容。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI内容优化和研究平台，帮助创建SEO友好的高质量内容。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.9,
+    "rating_count": 490
   },
   {
     "id": 59,
@@ -819,7 +883,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI内容智能平台，通过内容策略和优化提升有机搜索流量。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI内容智能平台，通过内容策略和优化提升有机搜索流量。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.0,
+    "rating_count": 438
   },
   {
     "id": 60,
@@ -844,7 +910,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI法律助手，帮助律师进行法律研究、合同审查和案例分析。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI法律助手，帮助律师进行法律研究、合同审查和案例分析。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.8,
+    "rating_count": 272
   },
   {
     "id": 61,
@@ -869,7 +937,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI法律技术平台，自动化合同审查、起草和法律文档管理。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI法律技术平台，自动化合同审查、起草和法律文档管理。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.5,
+    "rating_count": 123
   },
   {
     "id": 62,
@@ -894,7 +964,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI金融助手，帮助分析投资、优化投资组合和财务规划。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI金融助手，帮助分析投资、优化投资组合和财务规划。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.6,
+    "rating_count": 274
   },
   {
     "id": 63,
@@ -919,7 +991,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Khan Academy的AI学习助手，提供个性化辅导和教育支持。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Khan Academy的AI学习助手，提供个性化辅导和教育支持。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.9,
+    "rating_count": 311
   },
   {
     "id": 64,
@@ -944,7 +1018,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI驱动的语言学习平台，提供个性化课程和AI辅导。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI驱动的语言学习平台，提供个性化课程和AI辅导。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.0,
+    "rating_count": 385
   },
   {
     "id": 65,
@@ -969,7 +1045,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI增强的学习平台，智能生成抽认卡、测验和学习计划。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI增强的学习平台，智能生成抽认卡、测验和学习计划。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.2,
+    "rating_count": 146
   },
   {
     "id": 66,
@@ -994,7 +1072,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "基于浏览器的3D设计工具，AI辅助创建3D模型和动画。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "基于浏览器的3D设计工具，AI辅助创建3D模型和动画。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.6,
+    "rating_count": 127
   },
   {
     "id": 67,
@@ -1019,7 +1099,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI 3D内容创作平台，从文本或图像生成3D模型。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI 3D内容创作平台，从文本或图像生成3D模型。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.0,
+    "rating_count": 78
   },
   {
     "id": 68,
@@ -1044,7 +1126,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI图像生成平台，专注于游戏资产、概念艺术和3D纹理。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI图像生成平台，专注于游戏资产、概念艺术和3D纹理。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.2,
+    "rating_count": 431
   },
   {
     "id": 69,
@@ -1069,7 +1153,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI音乐生成器，为视频、播客和游戏创建免版税音乐。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI音乐生成器，为视频、播客和游戏创建免版税音乐。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.7,
+    "rating_count": 462
   },
   {
     "id": 70,
@@ -1094,7 +1180,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI作曲家，创作古典、电影配乐和电子风格的原创音乐。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI作曲家，创作古典、电影配乐和电子风格的原创音乐。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.5,
+    "rating_count": 426
   },
   {
     "id": 71,
@@ -1119,7 +1207,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI音乐创作平台，为内容创作者提供自适应的背景音乐。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI音乐创作平台，为内容创作者提供自适应的背景音乐。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.5,
+    "rating_count": 269
   },
   {
     "id": 72,
@@ -1144,7 +1234,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI角色聊天平台，可以与历史人物、虚构角色和自定义角色对话。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI角色聊天平台，可以与历史人物、虚构角色和自定义角色对话。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.3,
+    "rating_count": 140
   },
   {
     "id": 73,
@@ -1169,7 +1261,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Quora的AI聊天平台，集成多个AI模型，提供统一访问体验。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Quora的AI聊天平台，集成多个AI模型，提供统一访问体验。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.8,
+    "rating_count": 69
   },
   {
     "id": 74,
@@ -1194,7 +1288,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI写作和营销工具，帮助创建各种类型的营销文案。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI写作和营销工具，帮助创建各种类型的营销文案。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.2,
+    "rating_count": 349
   },
   {
     "id": 75,
@@ -1219,7 +1315,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI图像搜索引擎和生成平台，寻找和创建完美的图像。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI图像搜索引擎和生成平台，寻找和创建完美的图像。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.6,
+    "rating_count": 365
   },
   {
     "id": 76,
@@ -1244,7 +1342,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "在线AI图像生成和编辑平台，支持多种模型和风格。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "在线AI图像生成和编辑平台，支持多种模型和风格。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.5,
+    "rating_count": 233
   },
   {
     "id": 77,
@@ -1269,7 +1369,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI图像生成工具，擅长文字渲染和排版设计。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI图像生成工具，擅长文字渲染和排版设计。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.8,
+    "rating_count": 247
   },
   {
     "id": 78,
@@ -1294,7 +1396,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI语音生成平台，创建专业的语音旁白和配音。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI语音生成平台，创建专业的语音旁白和配音。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.8,
+    "rating_count": 485
   },
   {
     "id": 79,
@@ -1319,7 +1423,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI音频和视频编辑平台，像编辑文档一样编辑媒体。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI音频和视频编辑平台，像编辑文档一样编辑媒体。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.3,
+    "rating_count": 253
   },
   {
     "id": 80,
@@ -1344,7 +1450,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Adobe Premiere Pro中的AI功能，增强视频编辑工作流程。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Adobe Premiere Pro中的AI功能，增强视频编辑工作流程。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.8,
+    "rating_count": 134
   },
   {
     "id": 81,
@@ -1369,7 +1477,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI视频生成平台，创建具有数字人主播的专业视频。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI视频生成平台，创建具有数字人主播的专业视频。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.7,
+    "rating_count": 195
   },
   {
     "id": 82,
@@ -1394,7 +1504,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI视频生成技术，创建会说话的头像和数字人视频。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI视频生成技术，创建会说话的头像和数字人视频。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.6,
+    "rating_count": 191
   },
   {
     "id": 83,
@@ -1419,7 +1531,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI代码助手，专注于代码测试、审查和质量保证。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI代码助手，专注于代码测试、审查和质量保证。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.7,
+    "rating_count": 361
   },
   {
     "id": 84,
@@ -1444,7 +1558,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AWS的AI代码生成工具，集成到各种IDE中。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AWS的AI代码生成工具，集成到各种IDE中。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.5,
+    "rating_count": 348
   },
   {
     "id": 85,
@@ -1469,7 +1585,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Replit平台的AI编程助手，协作编码和学习。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Replit平台的AI编程助手，协作编码和学习。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.9,
+    "rating_count": 411
   },
   {
     "id": 86,
@@ -1494,7 +1612,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI 3D捕捉和重建工具，从照片创建3D模型。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI 3D捕捉和重建工具，从照片创建3D模型。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.4,
+    "rating_count": 344
   },
   {
     "id": 87,
@@ -1519,7 +1639,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI演示文稿创建工具，自动设计美观的幻灯片。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI演示文稿创建工具，自动设计美观的幻灯片。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.4,
+    "rating_count": 119
   },
   {
     "id": 88,
@@ -1544,7 +1666,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI故事讲述和演示平台，创建交互式叙事体验。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI故事讲述和演示平台，创建交互式叙事体验。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.7,
+    "rating_count": 292
   },
   {
     "id": 89,
@@ -1569,7 +1693,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "集成在Notion中的AI助手，帮助写作、总结、翻译等。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "集成在Notion中的AI助手，帮助写作、总结、翻译等。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.7,
+    "rating_count": 446
   },
   {
     "id": 90,
@@ -1594,7 +1720,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Grammarly的AI写作助手，增强写作、沟通和创意。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Grammarly的AI写作助手，增强写作、沟通和创意。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.8,
+    "rating_count": 332
   },
   {
     "id": 91,
@@ -1619,7 +1747,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Microsoft的AI聊天助手，集成网络搜索和创意功能。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Microsoft的AI聊天助手，集成网络搜索和创意功能。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.2,
+    "rating_count": 438
   },
   {
     "id": 92,
@@ -1644,7 +1774,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI模型平台，提供数千个预训练模型和协作工具。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI模型平台，提供数千个预训练模型和协作工具。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.8,
+    "rating_count": 247
   },
   {
     "id": 93,
@@ -1669,7 +1801,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI应用开发框架，构建由语言模型驱动的应用。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI应用开发框架，构建由语言模型驱动的应用。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.5,
+    "rating_count": 92
   },
   {
     "id": 94,
@@ -1694,7 +1828,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Figma中的AI设计助手，加速UI/UX设计工作流程。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "Figma中的AI设计助手，加速UI/UX设计工作流程。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.7,
+    "rating_count": 199
   },
   {
     "id": 95,
@@ -1719,7 +1855,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI文本扩展和自动化工具，加速重复性写作任务。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI文本扩展和自动化工具，加速重复性写作任务。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.9,
+    "rating_count": 78
   },
   {
     "id": 96,
@@ -1744,7 +1882,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI视频生成平台，创建具有AI主播的专业视频，无需拍摄或编辑技能。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI视频生成平台，创建具有AI主播的专业视频，无需拍摄或编辑技能。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.9,
+    "rating_count": 349
   },
   {
     "id": 97,
@@ -1769,7 +1909,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "高质量的AI语音生成平台，创建自然逼真的语音克隆和文本转语音。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "高质量的AI语音生成平台，创建自然逼真的语音克隆和文本转语音。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.7,
+    "rating_count": 368
   },
   {
     "id": 98,
@@ -1794,7 +1936,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI视频编辑工具，快速生成和编辑视频，简单易用的界面。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI视频编辑工具，快速生成和编辑视频，简单易用的界面。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.8,
+    "rating_count": 148
   },
   {
     "id": 99,
@@ -1819,7 +1963,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI写作和翻译助手，提升写作质量和多语言沟通。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI写作和翻译助手，提升写作质量和多语言沟通。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.6,
+    "rating_count": 376
   },
   {
     "id": 100,
@@ -1844,7 +1990,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "集成在Notion中的AI助手，提供智能内容创作和知识管理。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "集成在Notion中的AI助手，提供智能内容创作和知识管理。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.4,
+    "rating_count": 437
   },
   {
     "id": 101,
@@ -1869,7 +2017,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI驱动的启动器和生产力工具，提升工作效率。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "AI驱动的启动器和生产力工具，提升工作效率。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.9,
+    "rating_count": 308
   },
   {
     "id": 102,
@@ -1894,7 +2044,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "先进的AI编程助手，提供更智能的代码建议和聊天功能。 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "先进的AI编程助手，提供更智能的代码建议和聊天功能。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.3,
+    "rating_count": 103
   },
   {
     "id": 105,
@@ -1916,7 +2068,9 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ],
-    "description_en": "智谱AI开发的多模态对话助手，支持文本、图像、代码等多种能力 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "智谱AI开发的多模态对话助手，支持文本、图像、代码等多种能力 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.0,
+    "rating_count": 448
   },
   {
     "id": 107,
@@ -1938,7 +2092,9 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ],
-    "description_en": "百度开发的AI大语言模型，支持文本生成、代码、图像等能力 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "百度开发的AI大语言模型，支持文本生成、代码、图像等能力 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 3.6,
+    "rating_count": 167
   },
   {
     "id": 108,
@@ -1960,7 +2116,9 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
     ],
-    "description_en": "阿里云开发的AI大模型，支持文本、代码、图像等多种能力 This versatile tool offers advanced features for professionals and beginners alike."
+    "description_en": "阿里云开发的AI大模型，支持文本、代码、图像等多种能力 This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 4.8,
+    "rating_count": 308
   },
   {
     "id": 201,
@@ -1984,6 +2142,8 @@
         "prompt": "Create engaging social media videos from my long-form content",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
-    ]
+    ],
+    "rating": 4.5,
+    "rating_count": 296
   }
 ]

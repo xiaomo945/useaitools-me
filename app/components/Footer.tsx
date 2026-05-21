@@ -1,95 +1,109 @@
 import React from 'react';
 import Link from 'next/link';
+import NewsletterSubscribe from './NewsletterSubscribe';
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-100 dark:bg-gray-900 border-t border-slate-200 dark:border-gray-800 py-10 sm:py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="text-center">
-          <div className="mb-3">
-            <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-              <span style={{ fontFamily: 'Playfair Display, serif' }}>Use AI Tools</span>
-            </h2>
-          </div>
-          <p className="text-slate-600 dark:text-gray-400 mb-4">
-            Curated AI tools directory · 50+ tools · 6 categories
-          </p>
-          
-          {/* Social Media Links */}
-          <div className="flex justify-center gap-4 mb-6">
-            <a
-              href="https://twitter.com/jiongxiaomo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-500 hover:text-slate-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-300"
-              aria-label="Twitter/X"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-              </svg>
-            </a>
-            <a
-              href="https://dev.to/xiaomo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-500 hover:text-slate-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-300"
-              aria-label="Dev.to"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6v4.36h.58c.37 0 .65-.08.84-.23.21-.16.31-.45.31-.85v-2.2c0-.4-.1-.69-.31-.85zm0 0V12c0 .13-.01.24-.04.34-.03.1-.07.18-.13.26-.05.07-.12.14-.21.2-.09.06-.19.1-.3.13-.11.02-.23.04-.35.04v1.05h.24c.47 0 .84-.09 1.11-.26.27-.17.46-.44.57-.8.11-.36.16-.79.16-1.29 0-.5-.05-.93-.16-1.28-.11-.36-.3-.63-.57-.8-.27-.17-.64-.26-1.11-.26h-.24v1.05c.12 0 .24.01.35.04.11.03.21.07.3.13.09.06.16.13.21.2.06.07.1.16.13.26.03.1.04.21.04.34zm10.46 4.39v-1.09h-.02c-.07.19-.16.36-.27.51-.11.15-.24.28-.39.38-.15.1-.32.19-.52.25-.19.07-.41.1-.64.1-.24 0-.46-.03-.66-.09-.2-.06-.39-.15-.55-.27-.16-.12-.3-.26-.42-.44-.12-.17-.21-.37-.26-.59-.06-.22-.09-.46-.09-.71v-2.09c0-.25.03-.49.09-.71.06-.22.14-.42.26-.59.12-.17.26-.32.42-.44.16-.12.35-.21.55-.27.2-.06.42-.09.66-.09.23 0 .45.03.64.1.2.07.37.15.52.25.15.1.28.23.39.38.11.15.2.32.27.51h.02v-.85h1.12v4.03h-1.12v-.85zm0-2.34v.61c0 .22-.03.42-.1.59-.06.17-.15.31-.26.43-.11.12-.24.21-.39.27-.15.06-.32.09-.51.09-.19 0-.36-.03-.51-.09-.15-.06-.28-.15-.39-.27-.11-.12-.2-.26-.26-.43-.06-.17-.1-.37-.1-.59v-.61c0-.22.03-.42.1-.59.06-.17.15-.31.26-.43.11-.12.24-.21.39-.27.15-.06.32-.09.51-.09.19 0 .36.03.51.09.15.06.28.15.39.27.11.12.2.26.26.43.06.17.1.37.1.59zm-5.94 2.34v-1.03c.09.07.2.13.32.18.13.05.27.07.44.07.16 0 .3-.02.43-.07.13-.05.24-.11.32-.18.08-.07.14-.15.19-.24.05-.09.08-.19.09-.3.01-.11.02-.22.02-.34v-.46h-.02c-.05.14-.11.27-.19.38-.08.11-.17.2-.28.28-.11.07-.23.14-.36.19-.14.05-.29.08-.46.08-.17 0-.32-.03-.47-.08-.14-.05-.26-.12-.37-.19-.11-.07-.2-.17-.28-.28-.08-.11-.14-.24-.19-.38h-.02v.95h-.67V9.66h.67v.34c.07-.13.16-.25.28-.36.11-.11.23-.21.37-.27.14-.06.3-.09.47-.09.16 0 .32.03.46.09.14.06.26.13.36.2.11.07.2.16.28.27.08.11.14.24.19.36h.02v-.82h1.12v4.03h-.67v-.99c-.07.13-.16.25-.28.36-.11.11-.23.2-.37.27-.14.06-.3.09-.46.09-.17 0-.32-.03-.46-.08-.14-.05-.27-.11-.38-.19-.11-.07-.2-.17-.28-.27-.08-.11-.14-.24-.19-.36h-.02v.99h-.67z"/>
-                <path d="M0 0h24v24H0z" fill="none"/>
-              </svg>
-            </a>
-            <a
-              href="https://github.com/xiaomo945"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-500 hover:text-slate-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-300"
-              aria-label="GitHub"
-            >
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-            </a>
-          </div>
+    <footer className="bg-slate-100 dark:bg-gray-900 border-t border-slate-200 dark:border-gray-800">
+      {/* Newsletter Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+        <NewsletterSubscribe />
+      </div>
+      
+      <div className="py-10 sm:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center">
+            <div className="mb-3">
+              <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                <span style={{ fontFamily: 'Playfair Display, serif' }}>Use AI Tools</span>
+              </h2>
+            </div>
+            <p className="text-slate-600 dark:text-gray-400 mb-4">
+              Curated AI tools directory · 50+ tools · 6 categories
+            </p>
+            
+            {/* Social Media Links */}
+            <div className="flex justify-center gap-4 mb-6">
+              <a
+                href="https://twitter.com/jiongxiaomo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-500 hover:text-slate-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-300"
+                aria-label="Twitter/X"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a
+                href="https://dev.to/xiaomo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-500 hover:text-slate-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-300"
+                aria-label="Dev.to"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M7.42 10.05c-.18-.16-.46-.23-.84-.23H6v4.36h.58c.37 0 .65-.08.84-.23.21-.16.31-.45.31-.85v-2.2c0-.4-.1-.69-.31-.85zm0 0V12c0 .13-.01.24-.04.34-.03.1-.07.18-.13.26-.05.07-.12.14-.21.2-.09.06-.19.1-.3.13-.11.02-.23.04-.35.04v1.05h.24c.47 0 .84-.09 1.11-.26.27-.17.46-.44.57-.8.11-.36.16-.79.16-1.29 0-.5-.05-.93-.16-1.28-.11-.36-.3-.63-.57-.8-.27-.17-.64-.26-1.11-.26h-.24v1.05c.12 0 .24.01.35.04.11.03.21.07.3.13.09.06.16.13.21.2.06.07.1.16.13.26.03.1.04.21.04.34zm10.46 4.39v-1.09h-.02c-.07.19-.16.36-.27.51-.11.15-.24.28-.39.38-.15.1-.32.19-.52.25-.19.07-.41.1-.64.1-.24 0-.46-.03-.66-.09-.2-.06-.39-.15-.55-.27-.16-.12-.3-.26-.42-.44-.12-.17-.21-.37-.26-.59-.06-.22-.09-.46-.09-.71v-2.09c0-.25.03-.49.09-.71.06-.22.14-.42.26-.59.12-.17.26-.32.42-.44.16-.12.35-.21.55-.27.2-.06.42-.09.66-.09.23 0 .45.03.64.1.2.07.37.15.52.25.15.1.28.23.39.38.11.15.2.32.27.51h.02v-.85h1.12v4.03h-1.12v-.85zm0-2.34v.61c0 .22-.03.42-.1.59-.06.17-.15.31-.26.43-.11.12-.24.21-.39.27-.15.06-.32.09-.51.09-.19 0-.36-.03-.51-.09-.15-.06-.28-.15-.39-.27-.11-.12-.2-.26-.26-.43-.06-.17-.1-.37-.1-.59v-.61c0-.22.03-.42.1-.59.06-.17.15-.31.26-.43.11-.12.24-.21.39-.27.15-.06.32-.09.51-.09.19 0 .36.03.51.09.15.06.28.15.39.27.11.12.2.26.26.43.06.17.1.37.1.59zm-5.94 2.34v-1.03c.09.07.2.13.32.18.13.05.27.07.44.07.16 0 .3-.02.43-.07.13-.05.24-.11.32-.18.08-.07.14-.15.19-.24.05-.09.08-.19.09-.3.01-.11.02-.22.02-.34v-.46h-.02c-.05.14-.11.27-.19.38-.08.11-.17.2-.28.28-.11.07-.23.14-.36.19-.14.05-.29.08-.46.08-.17 0-.32-.03-.47-.08-.14-.05-.26-.12-.37-.19-.11-.07-.2-.17-.28-.28-.08-.11-.14-.24-.19-.38h-.02v.95h-.67V9.66h.67v.34c.07-.13.16-.25.28-.36.11-.11.23-.21.37-.27.14-.06.3-.09.47-.09.16 0 .32.03.46.09.14.06.26.13.36.2.11.07.2.16.28.27.08.11.14.24.19.36h.02v-.82h1.12v4.03h-.67v-.99c-.07.13-.16.25-.28.36-.11.11-.23.2-.37.27-.14.06-.3.09-.46.09-.17 0-.32-.03-.46-.08-.14-.05-.27-.11-.38-.19-.11-.07-.2-.17-.28-.27-.08-.11-.14-.24-.19-.36h-.02v.99h-.67z"/>
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+              </a>
+              <a
+                href="https://github.com/xiaomo945"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-500 hover:text-slate-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-300"
+                aria-label="GitHub"
+              >
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
 
-          {/* Legal Links */}
-          <div className="flex justify-center gap-6 mb-6 flex-wrap">
-            <Link
-              href="/about"
-              className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
-            >
-              About
-            </Link>
-            <Link
-              href="/affiliate-disclosure"
-              className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
-            >
-              Affiliate Disclosure
-            </Link>
-            <Link
-              href="#"
-              className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="#"
-              className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
-            >
-              Terms of Service
-            </Link>
-            <a
-              href="mailto:affiliate@useaitools.me"
-              className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
-            >
-              Contact
-            </a>
+            {/* Legal Links */}
+            <div className="flex justify-center gap-6 mb-6 flex-wrap">
+              <Link
+                href="/leaderboard"
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                Leaderboard
+              </Link>
+              <Link
+                href="/about"
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                About
+              </Link>
+              <Link
+                href="/affiliate-disclosure"
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                Affiliate Disclosure
+              </Link>
+              <Link
+                href="#"
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="#"
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                Terms of Service
+              </Link>
+              <a
+                href="mailto:affiliate@useaitools.me"
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                Contact
+              </a>
+            </div>
+            
+            <p className="text-slate-500 dark:text-gray-500 text-sm">
+              © {new Date().getFullYear()} Use AI Tools. Built by an indie maker.
+            </p>
           </div>
-          
-          <p className="text-slate-500 dark:text-gray-500 text-sm">
-            © {new Date().getFullYear()} Use AI Tools. Built by an indie maker.
-          </p>
         </div>
       </div>
     </footer>

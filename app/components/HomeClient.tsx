@@ -3,6 +3,7 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import StarRating from './StarRating';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -38,6 +39,8 @@ type Tool = {
   examples?: { prompt: string; image_url: string }[];
   needs_vpn: boolean;
   languages: string[];
+  rating?: number;
+  rating_count?: number;
 };
 
 // Helper function to check if a tool has affiliate link (environment variable or JSON field)
@@ -504,6 +507,79 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
           </div>
         </div>
 
+        {/* Browse by Use Case */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
+              Browse by Use Case
+            </h2>
+            <p className="text-slate-600 dark:text-gray-400">
+              Find the right AI tools for your specific workflow
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[
+              {
+                title: 'Content Creation',
+                description: 'Writing & Images',
+                icon: '✍️',
+                href: '/category/writing',
+                color: 'bg-blue-500/10 hover:bg-blue-500/20',
+              },
+              {
+                title: 'Software Development',
+                description: 'Code & Dev',
+                icon: '💻',
+                href: '/category/code',
+                color: 'bg-orange-500/10 hover:bg-orange-500/20',
+              },
+              {
+                title: 'Video Production',
+                description: 'Video Editing',
+                icon: '🎬',
+                href: '/category/video',
+                color: 'bg-indigo-500/10 hover:bg-indigo-500/20',
+              },
+              {
+                title: 'Podcast & Audio',
+                description: 'Voice & Sound',
+                icon: '🎙️',
+                href: '/category/audio',
+                color: 'bg-pink-500/10 hover:bg-pink-500/20',
+              },
+              {
+                title: 'Business & Productivity',
+                description: 'Workflows',
+                icon: '📊',
+                href: '/category/productivity',
+                color: 'bg-teal-500/10 hover:bg-teal-500/20',
+              },
+              {
+                title: 'Student & Education',
+                description: 'Learning',
+                icon: '📚',
+                href: '/category/writing',
+                color: 'bg-purple-500/10 hover:bg-purple-500/20',
+              },
+            ].map((useCase) => (
+              <Link
+                key={useCase.title}
+                href={useCase.href}
+                className={`group p-5 rounded-xl ${useCase.color} border border-transparent hover:border-slate-200 dark:hover:border-gray-700 transition-all duration-300 ease-out hover:-translate-y-1`}
+              >
+                <div className="text-3xl mb-3">{useCase.icon}</div>
+                <h3 className="font-semibold text-slate-900 dark:text-white text-sm mb-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                  {useCase.title}
+                </h3>
+                <p className="text-xs text-slate-500 dark:text-gray-400">
+                  {useCase.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {/* Featured This Week */}
         <div className="mb-16">
           <div className="flex items-center gap-2 mb-6">
@@ -692,6 +768,15 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
                       {highlightText(tool.description, search)}
                     </p>
                   </Link>
+
+                  {/* Star Rating */}
+                  <div className="flex items-center gap-2 mb-4">
+                    <StarRating 
+                      rating={tool.rating || 4.0} 
+                      count={tool.rating_count || 0}
+                      size="sm"
+                    />
+                  </div>
 
                   {/* Footer */}
                   <div className="flex items-center justify-between gap-3">
