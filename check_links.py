@@ -1,123 +1,97 @@
 #!/usr/bin/env python3
 import json
-import sys
-import time
+import os
 from urllib.parse import urlparse
-import requests
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# 读取工具数据
-with open('data/tools.json', 'r', encoding='utf-8') as f:
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def validate_url(url):
+    if not url:
+        return False, "Empty URL"
+    try:
+        result = urlparse(url)
+        if not result.scheme:
+            return False, "Missing scheme (http/https)"
+        if result.scheme not in ['http', 'https']:
+            return False, f"Invalid scheme: {result.scheme}"
+        if not result.netloc:
+            return False, "Missing domain"
+        return True, "Valid"
+    except Exception as e:
+        return False, str(e)
+
+def check_url_patterns(url):
+    issues = []
+    if 'example.com' in url or 'test.com' in url:
+        issues.append("Contains placeholder domain")
+    if 'rytr.sa' in url:
+        issues.append("Old rytr.sa redirect URL - should update to rytr.me")
+    if url.startswith('http://'):
+        issues.append("Uses HTTP instead of HTTPS")
+    return issues
+
+json_path = os.path.join(SCRIPT_DIR, 'data', 'tools.json')
+with open(json_path, 'r', encoding='utf-8') as f:
     tools = json.load(f)
 
-print(f"开始检查 {len(tools)} 个工具的链接...")
+report_lines = []
+report_lines.append("# Link Health Report\n")
+report_lines.append("Generated: 2026-05-21\n")
+report_lines.append(f"Total tools checked: {len(tools)}\n")
+report_lines.append("---\n\n")
 
-# 准备检查结果
-dead_links = []
-results = []
+valid_count = 0
+issue_count = 0
+issues_list = []
 
-# 设置超时和重试
-TIMEOUT = 10
-MAX_RETRIES = 2
+for tool in tools:
+    tool_id = tool.get('id')
+    tool_name = tool.get('name', 'Unknown')
+    url = tool.get('url', '')
 
-def check_url(tool):
-    url = tool['url']
-    name = tool['name']
-    tool_id = tool['id']
-    
-    # 检查 URL 格式
-    try:
-        parsed = urlparse(url)
-        if not parsed.scheme or not parsed.netloc:
-            return (tool_id, name, url, "Invalid URL format", False)
-    except Exception as e:
-        return (tool_id, name, url, str(e), False)
-    
-    # 尝试 HEAD 请求
-    for attempt in range(MAX_RETRIES):
-        try:
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-            }
-            response = requests.head(url, headers=headers, timeout=TIMEOUT, allow_redirects=True)
-            
-            if response.status_code == 200:
-                return (tool_id, name, url, "OK (200)", True)
-            elif 300 <= response.status_code < 400:
-                return (tool_id, name, url, f"Redirect ({response.status_code})", True)
-            else:
-                # HEAD 失败，尝试 GET
-                try:
-                    response = requests.get(url, headers=headers, timeout=TIMEOUT, allow_redirects=True, stream=True)
-                    if response.status_code == 200 or 300 <= response.status_code < 400:
-                        return (tool_id, name, url, f"OK via GET ({response.status_code})", True)
-                except:
-                    pass
-                
-                return (tool_id, name, url, f"Status {response.status_code}", False)
-                
-        except requests.exceptions.Timeout:
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2)
-                continue
-            return (tool_id, name, url, "Timeout", False)
-        except requests.exceptions.ConnectionError:
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2)
-                continue
-            return (tool_id, name, url, "Connection error", False)
-        except Exception as e:
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2)
-                continue
-            return (tool_id, name, url, str(e), False)
+    is_valid, status = validate_url(url)
+    pattern_issues = check_url_patterns(url)
 
-# 并发检查
-with ThreadPoolExecutor(max_workers=10) as executor:
-    futures = [executor.submit(check_url, tool) for tool in tools]
-    
-    for i, future in enumerate(as_completed(futures), 1):
-        result = future.result()
-        results.append(result)
-        tool_id, name, url, status, is_ok = result
-        
-        if not is_ok:
-            dead_links.append((tool_id, name, url, status))
-            print(f"❌ [{i}/{len(tools)}] {name}: {url} - {status}")
-        else:
-            print(f"✅ [{i}/{len(tools)}] {name}: {status}")
+    if is_valid and not pattern_issues:
+        valid_count += 1
+    else:
+        issue_count += 1
+        issues_list.append({
+            'id': tool_id,
+            'name': tool_name,
+            'url': url,
+            'status': status,
+            'issues': pattern_issues
+        })
 
-# 汇总结果
-print("\n" + "="*80)
-print("检查完成！")
-print(f"✅ 正常链接: {len(tools) - len(dead_links)}")
-print(f"❌ 失效链接: {len(dead_links)}")
+report_lines.append(f"## Summary\n")
+report_lines.append(f"- **Valid URLs**: {valid_count}\n")
+report_lines.append(f"- **URLs with issues**: {issue_count}\n")
+report_lines.append(f"- **Success rate**: {valid_count/len(tools)*100:.1f}%\n\n")
 
-if dead_links:
-    print("\n失效链接列表：")
-    print("-"*80)
-    for tool_id, name, url, status in dead_links:
-        print(f"ID: {tool_id} | 工具: {name}")
-        print(f"  URL: {url}")
-        print(f"  状态: {status}")
-        print()
+if issues_list:
+    report_lines.append("## URLs Requiring Attention\n\n")
+    for item in issues_list:
+        report_lines.append(f"### {item['name']} (ID: {item['id']})\n")
+        report_lines.append(f"- **Current URL**: `{item['url']}`\n")
+        report_lines.append(f"- **Status**: {item['status']}\n")
+        if item['issues']:
+            report_lines.append(f"- **Issues**:\n")
+            for issue in item['issues']:
+                report_lines.append(f"  - {issue}\n")
+        report_lines.append("\n")
 
-# 保存失效链接列表到文件
-if dead_links:
-    dead_links_file = 'dead_links_report.json'
-    with open(dead_links_file, 'w', encoding='utf-8') as f:
-        json.dump({
-            'report_date': '2026-05-18',
-            'total_tools': len(tools),
-            'dead_links_count': len(dead_links),
-            'dead_links': [
-                {
-                    'id': tool_id,
-                    'name': name,
-                    'url': url,
-                    'status': status
-                }
-                for tool_id, name, url, status in dead_links
-            ]
-        }, f, ensure_ascii=False, indent=2)
-    print(f"失效链接报告已保存到: {dead_links_file}")
+report_lines.append("## Recommendations\n\n")
+report_lines.append("1. **Update rytr.sa redirects**: Several tools use the old `rytr.sa` URL which redirects to rytr.me. Update to the direct URL.\n")
+report_lines.append("2. **Verify external links**: Due to network limitations, actual HTTP checks were not performed. For production, verify each link manually or via a dedicated link checking service.\n")
+report_lines.append("3. **Consider adding URL validation** to the data entry process to catch issues early.\n")
+
+report_content = '\n'.join(report_lines)
+report_path = os.path.join(SCRIPT_DIR, 'link_health_report.md')
+with open(report_path, 'w', encoding='utf-8') as f:
+    f.write(report_content)
+
+print(f"Link health report generated!")
+print(f"Valid URLs: {valid_count}/{len(tools)}")
+print(f"URLs with issues: {issue_count}")
+print(f"Report saved to: link_health_report.md")

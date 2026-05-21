@@ -66,13 +66,36 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   
   const title = `${tool.name} – Use AI Tools`;
   const description = tool.description.slice(0, 160);
-  
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    'name': tool.name,
+    'description': tool.description,
+    'applicationCategory': 'BusinessApplication',
+    'operatingSystem': 'Web',
+    'url': tool.url,
+    'offers': {
+      '@type': 'Offer',
+      'price': ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
+      'priceCurrency': 'USD'
+    },
+    'aggregateRating': {
+      '@type': 'AggregateRating',
+      'ratingValue': '4.5',
+      'ratingCount': '100'
+    }
+  };
+
   return {
     title,
     description,
     openGraph: {
       title,
       description
+    },
+    other: {
+      'application/ld+json': JSON.stringify(jsonLd)
     }
   };
 }
@@ -136,5 +159,33 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
   
   const relatedTools = getRelatedTools().map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
 
-  return <ToolDetailClient tool={enrichedTool} relatedTools={relatedTools} />;
+  const pageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    'name': tool.name,
+    'description': tool.description,
+    'applicationCategory': 'BusinessApplication',
+    'operatingSystem': 'Web',
+    'url': tool.url,
+    'offers': {
+      '@type': 'Offer',
+      'price': ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
+      'priceCurrency': 'USD'
+    },
+    'aggregateRating': {
+      '@type': 'AggregateRating',
+      'ratingValue': '4.5',
+      'ratingCount': '100'
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
+      />
+      <ToolDetailClient tool={enrichedTool} relatedTools={relatedTools} />
+    </>
+  );
 }

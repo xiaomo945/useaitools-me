@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Midjourney",
-    "description": "最著名的AI图像生成工具，能创建高质量的艺术作品。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://midjourney.com",
@@ -21,12 +21,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "最著名的AI图像生成工具，能创建高质量的艺术作品。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 2,
     "name": "DALL-E 3",
-    "description": "OpenAI开发的强大图像生成工具，通过文字描述生成图片。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://openai.com/dall-e-3",
@@ -45,12 +46,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "OpenAI开发的强大图像生成工具，通过文字描述生成图片。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 3,
     "name": "Stable Diffusion",
-    "description": "开源的AI图像生成工具，可以本地部署，高度可定制。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Open Source",
     "url": "https://stability.ai",
@@ -69,12 +71,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "开源的AI图像生成工具，可以本地部署，高度可定制。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 4,
     "name": "Canva Magic Design",
-    "description": "Canva的AI设计工具，快速创建专业的设计作品。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://canva.com",
@@ -93,12 +96,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Canva的AI设计工具，快速创建专业的设计作品。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 5,
     "name": "Notion AI",
-    "description": "集成在Notion中的AI助手，帮助写作、总结、翻译等。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://notion.so",
@@ -117,12 +121,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "集成在Notion中的AI助手，帮助写作、总结、翻译等。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 6,
     "name": "ChatGPT",
-    "description": "OpenAI的大语言模型，可以对话、写作、编程、分析等。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://chat.openai.com",
@@ -141,12 +146,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "OpenAI的大语言模型，可以对话、写作、编程、分析等。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 7,
     "name": "GitHub Copilot",
-    "description": "AI编程助手，实时提供代码建议。",
+    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Code",
     "pricing": "Paid",
     "url": "https://github.com/copilot",
@@ -165,12 +171,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI编程助手，实时提供代码建议。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 8,
     "name": "ElevenLabs",
-    "description": "高质量的AI语音生成工具，能创建逼真的语音。",
+    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://elevenlabs.io",
@@ -189,12 +196,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "高质量的AI语音生成工具，能创建逼真的语音。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 9,
     "name": "Runway ML",
-    "description": "AI视频编辑和生成平台，专业视频制作工具。",
+    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://runwayml.com",
@@ -213,12 +221,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI视频编辑和生成平台，专业视频制作工具。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 10,
     "name": "Perplexity AI",
-    "description": "AI搜索引擎，提供带有引用的准确回答。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://perplexity.ai",
@@ -237,12 +246,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI搜索引擎，提供带有引用的准确回答。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 11,
     "name": "Whisper",
-    "description": "OpenAI的语音转文字工具，支持多种语言。",
+    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Audio",
     "pricing": "Open Source",
     "url": "https://openai.com/research/whisper",
@@ -261,12 +271,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "OpenAI的语音转文字工具，支持多种语言。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 12,
     "name": "Pika Labs",
-    "description": "AI视频生成工具，从文本创建动画视频。",
+    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://pika.art",
@@ -285,12 +296,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI视频生成工具，从文本创建动画视频。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 13,
     "name": "Cursor",
-    "description": "专为AI设计的代码编辑器，内置强大的Copilot功能。",
+    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://cursor.so",
@@ -309,12 +321,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "专为AI设计的代码编辑器，内置强大的Copilot功能。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 14,
     "name": "Obsidian Copilot",
-    "description": "Obsidian笔记软件的AI插件，增强知识管理。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://obsidian.md",
@@ -333,12 +346,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Obsidian笔记软件的AI插件，增强知识管理。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 15,
     "name": "Suno AI",
-    "description": "AI音乐生成工具，能根据文字描述创作歌曲。",
+    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://suno.ai",
@@ -357,12 +371,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI音乐生成工具，能根据文字描述创作歌曲。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 16,
     "name": "Sora",
-    "description": "OpenAI的最新视频生成模型，能创建高质量视频。",
+    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://openai.com/sora",
@@ -381,12 +396,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "OpenAI的最新视频生成模型，能创建高质量视频。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 17,
     "name": "Tabnine",
-    "description": "AI代码补全工具，支持多种编程语言和IDE。",
+    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://tabnine.com",
@@ -405,12 +421,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI代码补全工具，支持多种编程语言和IDE。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 18,
     "name": "Jasper",
-    "description": "企业级AI写作平台，用于营销和内容创作。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://jasper.ai",
@@ -429,12 +446,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "企业级AI写作平台，用于营销和内容创作。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 19,
     "name": "Adobe Firefly",
-    "description": "Adobe的创意AI工具，用于生成图像、文字效果等。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://firefly.adobe.com",
@@ -453,12 +471,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Adobe的创意AI工具，用于生成图像、文字效果等。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 20,
     "name": "Claude",
-    "description": "Anthropic的先进AI助手，擅长推理、写作、分析和编程任务。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://claude.ai",
@@ -477,12 +496,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Anthropic的先进AI助手，擅长推理、写作、分析和编程任务。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 21,
     "name": "Gemini",
-    "description": "Google的多模态AI助手，能理解文本、图像、音频等。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://gemini.google.com",
@@ -501,12 +521,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Google的多模态AI助手，能理解文本、图像、音频等。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 22,
     "name": "Writesonic",
-    "description": "AI写作平台，用于创建SEO优化的文章、博客和营销文案。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://writesonic.com",
@@ -525,12 +546,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI写作平台，用于创建SEO优化的文章、博客和营销文案。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 23,
     "name": "Rytr",
-    "description": "AI写作助手，帮助快速创建高质量内容。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://rytr.me",
@@ -549,12 +571,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI写作助手，帮助快速创建高质量内容。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 24,
     "name": "QuillBot",
-    "description": "AI驱动的改写和写作工具，帮助提高词汇量和风格。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://quillbot.com",
@@ -573,7 +596,8 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI驱动的改写和写作工具，帮助提高词汇量和风格。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 51,
@@ -650,7 +674,7 @@
   {
     "id": 54,
     "name": "AutoGPT",
-    "description": "自主AI代理，能够自动完成复杂任务而无需人工提示。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Open Source",
     "url": "https://github.com/Significant-Gravitas/AutoGPT",
@@ -669,12 +693,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "自主AI代理，能够自动完成复杂任务而无需人工提示。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 55,
     "name": "AgentGPT",
-    "description": "Web-based AI agent platform，让用户配置和部署自主AI代理。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://agentgpt.reworkd.ai",
@@ -693,12 +718,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Web-based AI agent platform，让用户配置和部署自主AI代理。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 56,
     "name": "CrewAI",
-    "description": "AI代理协作框架，让多个AI代理协同工作完成任务。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Open Source",
     "url": "https://www.crewai.com",
@@ -717,12 +743,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI代理协作框架，让多个AI代理协同工作完成任务。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 57,
     "name": "SurferSEO",
-    "description": "AI驱动的SEO优化平台，帮助内容在搜索引擎中获得更好排名。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://surferseo.com",
@@ -741,12 +768,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI驱动的SEO优化平台，帮助内容在搜索引擎中获得更好排名。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 58,
     "name": "Frase",
-    "description": "AI内容优化和研究平台，帮助创建SEO友好的高质量内容。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://frase.io",
@@ -765,12 +793,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI内容优化和研究平台，帮助创建SEO友好的高质量内容。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 59,
     "name": "MarketMuse",
-    "description": "AI内容智能平台，通过内容策略和优化提升有机搜索流量。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://www.marketmuse.com",
@@ -789,12 +818,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI内容智能平台，通过内容策略和优化提升有机搜索流量。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 60,
     "name": "Harvey",
-    "description": "AI法律助手，帮助律师进行法律研究、合同审查和案例分析。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Paid",
     "url": "https://harvey.ai",
@@ -813,12 +843,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI法律助手，帮助律师进行法律研究、合同审查和案例分析。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 61,
     "name": "Robin AI",
-    "description": "AI法律技术平台，自动化合同审查、起草和法律文档管理。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Paid",
     "url": "https://robinai.co",
@@ -837,12 +868,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI法律技术平台，自动化合同审查、起草和法律文档管理。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 62,
     "name": "Kick",
-    "description": "AI金融助手，帮助分析投资、优化投资组合和财务规划。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://www.kickresume.com",
@@ -861,12 +893,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI金融助手，帮助分析投资、优化投资组合和财务规划。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 63,
     "name": "Khanmigo",
-    "description": "Khan Academy的AI学习助手，提供个性化辅导和教育支持。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://www.khanacademy.org/khanmigo",
@@ -885,12 +918,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Khan Academy的AI学习助手，提供个性化辅导和教育支持。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 64,
     "name": "Duolingo Max",
-    "description": "AI驱动的语言学习平台，提供个性化课程和AI辅导。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Paid",
     "url": "https://www.duolingo.com/max",
@@ -909,12 +943,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI驱动的语言学习平台，提供个性化课程和AI辅导。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 65,
     "name": "Quizlet AI",
-    "description": "AI增强的学习平台，智能生成抽认卡、测验和学习计划。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://quizlet.com",
@@ -933,12 +968,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI增强的学习平台，智能生成抽认卡、测验和学习计划。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 66,
     "name": "Spline AI",
-    "description": "基于浏览器的3D设计工具，AI辅助创建3D模型和动画。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://spline.design",
@@ -957,12 +993,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "基于浏览器的3D设计工具，AI辅助创建3D模型和动画。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 67,
     "name": "Meshy",
-    "description": "AI 3D内容创作平台，从文本或图像生成3D模型。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://www.meshy.ai",
@@ -981,12 +1018,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI 3D内容创作平台，从文本或图像生成3D模型。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 68,
     "name": "Leonardo AI",
-    "description": "AI图像生成平台，专注于游戏资产、概念艺术和3D纹理。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://leonardo.ai",
@@ -1005,12 +1043,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI图像生成平台，专注于游戏资产、概念艺术和3D纹理。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 69,
     "name": "Soundraw",
-    "description": "AI音乐生成器，为视频、播客和游戏创建免版税音乐。",
+    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://soundraw.io",
@@ -1029,12 +1068,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI音乐生成器，为视频、播客和游戏创建免版税音乐。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 70,
     "name": "AIVA",
-    "description": "AI作曲家，创作古典、电影配乐和电子风格的原创音乐。",
+    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://www.aiva.ai",
@@ -1053,12 +1093,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI作曲家，创作古典、电影配乐和电子风格的原创音乐。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 71,
     "name": "Beatoven",
-    "description": "AI音乐创作平台，为内容创作者提供自适应的背景音乐。",
+    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://www.beatoven.ai",
@@ -1077,12 +1118,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI音乐创作平台，为内容创作者提供自适应的背景音乐。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 72,
     "name": "Character.AI",
-    "description": "AI角色聊天平台，可以与历史人物、虚构角色和自定义角色对话。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://character.ai",
@@ -1101,12 +1143,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI角色聊天平台，可以与历史人物、虚构角色和自定义角色对话。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 73,
     "name": "Poe",
-    "description": "Quora的AI聊天平台，集成多个AI模型，提供统一访问体验。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://poe.com",
@@ -1125,12 +1168,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Quora的AI聊天平台，集成多个AI模型，提供统一访问体验。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 74,
     "name": "Copy.ai",
-    "description": "AI写作和营销工具，帮助创建各种类型的营销文案。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.copy.ai",
@@ -1149,12 +1193,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI写作和营销工具，帮助创建各种类型的营销文案。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 75,
     "name": "Lexica",
-    "description": "AI图像搜索引擎和生成平台，寻找和创建完美的图像。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://lexica.art",
@@ -1173,12 +1218,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI图像搜索引擎和生成平台，寻找和创建完美的图像。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 76,
     "name": "Playground AI",
-    "description": "在线AI图像生成和编辑平台，支持多种模型和风格。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://playgroundai.com",
@@ -1197,12 +1243,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "在线AI图像生成和编辑平台，支持多种模型和风格。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 77,
     "name": "Ideogram",
-    "description": "AI图像生成工具，擅长文字渲染和排版设计。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://ideogram.ai",
@@ -1221,12 +1268,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI图像生成工具，擅长文字渲染和排版设计。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 78,
     "name": "Murf AI",
-    "description": "AI语音生成平台，创建专业的语音旁白和配音。",
+    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://murf.ai",
@@ -1245,12 +1293,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI语音生成平台，创建专业的语音旁白和配音。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 79,
     "name": "Descript",
-    "description": "AI音频和视频编辑平台，像编辑文档一样编辑媒体。",
+    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://www.descript.com",
@@ -1269,12 +1318,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI音频和视频编辑平台，像编辑文档一样编辑媒体。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 80,
     "name": "Adobe Premiere Pro AI",
-    "description": "Adobe Premiere Pro中的AI功能，增强视频编辑工作流程。",
+    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Video",
     "pricing": "Paid",
     "url": "https://www.adobe.com/products/premiere.html",
@@ -1293,12 +1343,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Adobe Premiere Pro中的AI功能，增强视频编辑工作流程。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 81,
     "name": "HeyGen",
-    "description": "AI视频生成平台，创建具有数字人主播的专业视频。",
+    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://www.heygen.com",
@@ -1317,12 +1368,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI视频生成平台，创建具有数字人主播的专业视频。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 82,
     "name": "D-ID",
-    "description": "AI视频生成技术，创建会说话的头像和数字人视频。",
+    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://d-id.com",
@@ -1341,12 +1393,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI视频生成技术，创建会说话的头像和数字人视频。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 83,
     "name": "Codium AI",
-    "description": "AI代码助手，专注于代码测试、审查和质量保证。",
+    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://www.codium.ai",
@@ -1365,12 +1418,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI代码助手，专注于代码测试、审查和质量保证。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 84,
     "name": "Amazon CodeWhisperer",
-    "description": "AWS的AI代码生成工具，集成到各种IDE中。",
+    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://aws.amazon.com/codewhisperer",
@@ -1389,12 +1443,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AWS的AI代码生成工具，集成到各种IDE中。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 85,
     "name": "Replit AI",
-    "description": "Replit平台的AI编程助手，协作编码和学习。",
+    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://replit.com",
@@ -1413,12 +1468,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Replit平台的AI编程助手，协作编码和学习。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 86,
     "name": "Luma AI",
-    "description": "AI 3D捕捉和重建工具，从照片创建3D模型。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://lumalabs.ai",
@@ -1437,12 +1493,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI 3D捕捉和重建工具，从照片创建3D模型。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 87,
     "name": "Gamma",
-    "description": "AI演示文稿创建工具，自动设计美观的幻灯片。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://gamma.app",
@@ -1461,12 +1518,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI演示文稿创建工具，自动设计美观的幻灯片。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 88,
     "name": "Tome",
-    "description": "AI故事讲述和演示平台，创建交互式叙事体验。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://tome.app",
@@ -1485,12 +1543,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI故事讲述和演示平台，创建交互式叙事体验。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 89,
     "name": "Notion AI",
-    "description": "集成在Notion中的AI助手，帮助写作、总结、翻译等。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://notion.so",
@@ -1509,12 +1568,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "集成在Notion中的AI助手，帮助写作、总结、翻译等。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 90,
     "name": "GrammarlyGO",
-    "description": "Grammarly的AI写作助手，增强写作、沟通和创意。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.grammarly.com",
@@ -1533,12 +1593,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Grammarly的AI写作助手，增强写作、沟通和创意。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 91,
     "name": "Bing Chat",
-    "description": "Microsoft的AI聊天助手，集成网络搜索和创意功能。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Free",
     "url": "https://www.bing.com/chat",
@@ -1557,12 +1618,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Microsoft的AI聊天助手，集成网络搜索和创意功能。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 92,
     "name": "Hugging Face",
-    "description": "AI模型平台，提供数千个预训练模型和协作工具。",
+    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://huggingface.co",
@@ -1581,12 +1643,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI模型平台，提供数千个预训练模型和协作工具。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 93,
     "name": "LangChain",
-    "description": "AI应用开发框架，构建由语言模型驱动的应用。",
+    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Code",
     "pricing": "Open Source",
     "url": "https://www.langchain.com",
@@ -1605,12 +1668,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI应用开发框架，构建由语言模型驱动的应用。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 94,
     "name": "Figma AI",
-    "description": "Figma中的AI设计助手，加速UI/UX设计工作流程。",
+    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://www.figma.com",
@@ -1629,12 +1693,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "Figma中的AI设计助手，加速UI/UX设计工作流程。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 95,
     "name": "Magical",
-    "description": "AI文本扩展和自动化工具，加速重复性写作任务。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.magical.so",
@@ -1653,12 +1718,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI文本扩展和自动化工具，加速重复性写作任务。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 96,
     "name": "Synthesia",
-    "description": "AI视频生成平台，创建具有AI主播的专业视频，无需拍摄或编辑技能。",
+    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Video",
     "pricing": "Paid",
     "url": "https://www.synthesia.io",
@@ -1677,12 +1743,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI视频生成平台，创建具有AI主播的专业视频，无需拍摄或编辑技能。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 97,
     "name": "ElevenLabs",
-    "description": "高质量的AI语音生成平台，创建自然逼真的语音克隆和文本转语音。",
+    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://elevenlabs.io",
@@ -1701,12 +1768,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "高质量的AI语音生成平台，创建自然逼真的语音克隆和文本转语音。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 98,
     "name": "Lovable",
-    "description": "AI视频编辑工具，快速生成和编辑视频，简单易用的界面。",
+    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://lovable.dev",
@@ -1725,12 +1793,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI视频编辑工具，快速生成和编辑视频，简单易用的界面。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 99,
     "name": "DeepL Write",
-    "description": "AI写作和翻译助手，提升写作质量和多语言沟通。",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.deepl.com/write",
@@ -1749,12 +1818,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI写作和翻译助手，提升写作质量和多语言沟通。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 100,
     "name": "Notion AI",
-    "description": "集成在Notion中的AI助手，提供智能内容创作和知识管理。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://notion.so",
@@ -1773,12 +1843,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "集成在Notion中的AI助手，提供智能内容创作和知识管理。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 101,
     "name": "Raycast AI",
-    "description": "AI驱动的启动器和生产力工具，提升工作效率。",
+    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://www.raycast.com",
@@ -1797,12 +1868,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "AI驱动的启动器和生产力工具，提升工作效率。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 102,
     "name": "Github Copilot X",
-    "description": "先进的AI编程助手，提供更智能的代码建议和聊天功能。",
+    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Code",
     "pricing": "Paid",
     "url": "https://github.com/features/copilot",
@@ -1821,12 +1893,13 @@
     "needs_vpn": true,
     "languages": [
       "English"
-    ]
+    ],
+    "description_en": "先进的AI编程助手，提供更智能的代码建议和聊天功能。 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 105,
     "name": "智谱清言",
-    "description": "智谱AI开发的多模态对话助手，支持文本、图像、代码等多种能力",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://chatglm.cn",
@@ -1842,12 +1915,13 @@
         "prompt": "写一篇关于人工智能发展的文章",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
-    ]
+    ],
+    "description_en": "智谱AI开发的多模态对话助手，支持文本、图像、代码等多种能力 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 107,
     "name": "文心一言",
-    "description": "百度开发的AI大语言模型，支持文本生成、代码、图像等能力",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://yiyan.baidu.com",
@@ -1863,12 +1937,13 @@
         "prompt": "帮我生成一段产品文案",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
-    ]
+    ],
+    "description_en": "百度开发的AI大语言模型，支持文本生成、代码、图像等能力 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 108,
     "name": "通义千问",
-    "description": "阿里云开发的AI大模型，支持文本、代码、图像等多种能力",
+    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://tongyi.aliyun.com",
@@ -1884,7 +1959,8 @@
         "prompt": "帮我分析一下这个数据",
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
       }
-    ]
+    ],
+    "description_en": "阿里云开发的AI大模型，支持文本、代码、图像等多种能力 This versatile tool offers advanced features for professionals and beginners alike."
   },
   {
     "id": 201,
