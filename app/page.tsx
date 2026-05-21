@@ -1,34 +1,6 @@
-import dynamic from 'next/dynamic';
 import tools from '@/data/tools.json';
 import Footer from '@/app/components/Footer';
-
-// Lazy load HomeClient to reduce initial bundle size
-const HomeClient = dynamic(() => import('@/app/components/HomeClient'), {
-  loading: () => (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Skeleton loading state */}
-        <div className="text-center mb-12">
-          <div className="w-16 h-16 bg-slate-200 dark:bg-gray-800 rounded-lg mb-4 animate-pulse" />
-          <div className="h-8 bg-slate-200 dark:bg-gray-800 rounded w-64 mx-auto mb-2 animate-pulse" />
-          <div className="h-4 bg-slate-200 dark:bg-gray-800 rounded w-48 mx-auto animate-pulse" />
-        </div>
-        <div className="h-4 bg-slate-200 dark:bg-gray-800 rounded w-full mb-4 animate-pulse" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-            <div key={i} className="bg-white dark:bg-gray-900 rounded-2xl p-6 border border-slate-200 dark:border-gray-800 animate-pulse">
-              <div className="w-12 h-12 bg-slate-200 dark:bg-gray-700 rounded-xl mb-4" />
-              <div className="h-5 bg-slate-200 dark:bg-gray-700 rounded w-3/4 mb-2" />
-              <div className="h-4 bg-slate-200 dark:bg-gray-700 rounded w-full mb-4" />
-              <div className="h-10 bg-slate-200 dark:bg-gray-700 rounded w-full" />
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  ),
-  ssr: false,
-});
+import HomeClient from '@/app/components/HomeClient';
 
 type Tool = (typeof tools)[0];
 
@@ -36,7 +8,9 @@ type Tool = (typeof tools)[0];
 function getAffiliateLink(tool: Tool): string {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
   let shortEnvVarName = '';
-  if (tool.name === 'VEED.io') {
+  if (tool.name === 'Rytr') {
+    shortEnvVarName = 'AFFILIATE_RYTR';
+  } else if (tool.name === 'VEED.io') {
     shortEnvVarName = 'AFFILIATE_VEED';
   } else if (tool.name === 'Murf AI') {
     shortEnvVarName = 'AFFILIATE_MURF';

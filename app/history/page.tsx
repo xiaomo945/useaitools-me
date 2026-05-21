@@ -47,7 +47,7 @@ export default function HistoryPage() {
   const historyTools = historyItems.map((item) => {
     const tool = tools.find((t) => t.id === item.toolId);
     return { ...item, tool };
-  }).filter((item) => item.tool);
+  }).filter((item): item is typeof item & { tool: Tool } => item.tool !== undefined);
 
   // Get category colors
   const getCategoryColors = (category: Tool['category']) => {
