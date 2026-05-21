@@ -47,7 +47,9 @@ type Tool = {
 const hasAffiliateLink = (tool: Tool): boolean => {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
   let shortEnvVarName = '';
-  if (tool.name === 'VEED.io') {
+  if (tool.name === 'Rytr') {
+    shortEnvVarName = 'AFFILIATE_RYTR';
+  } else if (tool.name === 'VEED.io') {
     shortEnvVarName = 'AFFILIATE_VEED';
   } else if (tool.name === 'Murf AI') {
     shortEnvVarName = 'AFFILIATE_MURF';
@@ -62,7 +64,9 @@ const hasAffiliateLink = (tool: Tool): boolean => {
 const getAffiliateLink = (tool: Tool): string => {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
   let shortEnvVarName = '';
-  if (tool.name === 'VEED.io') {
+  if (tool.name === 'Rytr') {
+    shortEnvVarName = 'AFFILIATE_RYTR';
+  } else if (tool.name === 'VEED.io') {
     shortEnvVarName = 'AFFILIATE_VEED';
   } else if (tool.name === 'Murf AI') {
     shortEnvVarName = 'AFFILIATE_MURF';
