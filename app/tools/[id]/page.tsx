@@ -17,6 +17,8 @@ type Tool = {
   examples?: { prompt: string; image_url: string }[];
   needs_vpn: boolean;
   languages: string[];
+  rating?: number;
+  rating_count?: number;
 };
 
 // 类型断言确保数据符合我们的类型要求
@@ -109,18 +111,22 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
         '@type': 'SoftwareApplication',
         'name': tool.name,
         'description': tool.description,
-        'applicationCategory': 'BusinessApplication',
+        'applicationCategory': tool.category,
         'operatingSystem': 'Web',
         'url': tool.url,
         'offers': {
           '@type': 'Offer',
           'price': ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
-          'priceCurrency': 'USD'
+          'priceCurrency': 'USD',
+          'availability': 'https://schema.org/InStock',
+          'name': tool.pricing
         },
         'aggregateRating': {
           '@type': 'AggregateRating',
-          'ratingValue': '4.5',
-          'ratingCount': '100'
+          'ratingValue': tool.rating ? String(tool.rating) : '4.5',
+          'ratingCount': tool.rating_count ? String(tool.rating_count) : '100',
+          'bestRating': '5',
+          'worstRating': '1'
         }
       },
       {
@@ -214,18 +220,22 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
     '@type': 'SoftwareApplication',
     'name': tool.name,
     'description': tool.description,
-    'applicationCategory': 'BusinessApplication',
+    'applicationCategory': tool.category,
     'operatingSystem': 'Web',
     'url': tool.url,
     'offers': {
       '@type': 'Offer',
       'price': ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
-      'priceCurrency': 'USD'
+      'priceCurrency': 'USD',
+      'availability': 'https://schema.org/InStock',
+      'name': tool.pricing
     },
     'aggregateRating': {
       '@type': 'AggregateRating',
-      'ratingValue': '4.5',
-      'ratingCount': '100'
+      'ratingValue': tool.rating ? String(tool.rating) : '4.5',
+      'ratingCount': tool.rating_count ? String(tool.rating_count) : '100',
+      'bestRating': '5',
+      'worstRating': '1'
     }
   };
 
