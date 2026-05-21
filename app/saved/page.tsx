@@ -3,8 +3,9 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import tools from '@/data/tools.json';
-import { Home } from 'lucide-react';
+import { Home, Download, Check } from 'lucide-react';
 import Footer from '@/app/components/Footer';
+import Breadcrumbs from '@/app/components/Breadcrumbs';
 
 type Tool = (typeof tools)[0];
 
@@ -18,11 +19,55 @@ const getSavedIds = (): number[] => {
   }
 };
 
+// Generate CSV content from saved tools
+const generateCSV = (savedTools: Tool[]): string => {
+  const headers = ['Name', 'Description', 'Category', 'Pricing', 'URL', 'Affiliate Link'];
+  const rows = savedTools.map((tool) => [
+    `"${tool.name}"`,
+    `"${tool.description}"`,
+    `"${tool.category}"`,
+    `"${tool.pricing}"`,
+    `"${tool.url}"`,
+    `"${tool.affiliate_link || ''}"`
+  ]);
+  
+  return [headers.join(','), ...rows.map(row => row.join(','))].join('\n');
+};
+
+// Download CSV file
+const downloadCSV = (savedTools: Tool[]) => {
+  const csvContent = generateCSV(savedTools);
+  const blob = new Blob([`\uFEFF${csvContent}`], { type: 'text/csv;charset=utf-8;' });
+  const link = document.createElement('a');
+  const url = URL.createObjectURL(blob);
+  
+  link.setAttribute('href', url);
+  link.setAttribute('download', `saved-tools-${Date.now()}.csv`);
+  link.style.visibility = 'hidden';
+  
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 export default function SavedPage() {
   const [savedIds, setSavedIds] = useState<number[]>(getSavedIds());
+  const [exporting, setExporting] = useState(false);
+  const [exportSuccess, setExportSuccess] = useState(false);
   
   // Get saved tools
   const savedTools = tools.filter((tool) => savedIds.includes(tool.id));
+  
+  // Handle export
+  const handleExport = () => {
+    setExporting(true);
+    setTimeout(() => {
+      downloadCSV(savedTools);
+      setExporting(false);
+      setExportSuccess(true);
+      setTimeout(() => setExportSuccess(false), 2000);
+    }, 300);
+  };
   
   // Helper to get colors
   const getCategoryColors = (category: Tool['category']) => {
@@ -134,16 +179,13 @@ export default function SavedPage() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16 grid-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Back to Home Link */}
-        <div className="mb-8">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300"
-          >
-            <Home className="w-5 h-5" />
-            <span className="font-medium">Back to Home</span>
-          </Link>
-        </div>
+        {/* Breadcrumbs */}
+        <Breadcrumbs 
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Saved Tools', href: '/saved', current: true }
+          ]} 
+        />
 
         {/* Page Header */}
         <div className="mb-10">
@@ -152,9 +194,37 @@ export default function SavedPage() {
               <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
                 ❤️ Saved Tools
               </h1>
-              <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400">
+              <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6">
                 Your favorite AI tools all in one place.
               </p>
+              {savedTools.length > 0 && (
+                <button
+                  onClick={handleExport}
+                  disabled={exporting}
+                  className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ease-out ${
+                    exportSuccess
+                      ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/30'
+                      : 'bg-gradient-to-r from-slate-700 to-slate-800 text-white hover:from-slate-600 hover:to-slate-700 shadow-lg shadow-slate-700/30 hover:shadow-slate-600/40 hover:-translate-y-0.5'
+                  } disabled:opacity-50 disabled:cursor-not-allowed`}
+                >
+                  {exportSuccess ? (
+                    <>
+                      <Check className="w-5 h-5" />
+                      Exported Successfully!
+                    </>
+                  ) : exporting ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      Exporting...
+                    </>
+                  ) : (
+                    <>
+                      <Download className="w-5 h-5" />
+                      Export Favorites ({savedTools.length})
+                    </>
+                  )}
+                </button>
+              )}
             </div>
           </div>
         </div>

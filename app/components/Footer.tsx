@@ -69,6 +69,12 @@ export default function Footer() {
                 Leaderboard
               </Link>
               <Link
+                href="/changelog"
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                Changelog
+              </Link>
+              <Link
                 href="/about"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >

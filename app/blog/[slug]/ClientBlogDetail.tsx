@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Home, Share2, Copy } from 'lucide-react';
+import { Home, Share2, Copy, ChevronRight, List } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 
@@ -20,6 +20,27 @@ type BlogPost = {
   description: string;
   content: string;
   images?: BlogImage[];
+};
+
+interface TocItem {
+  id: string;
+  text: string;
+}
+
+// Extract H2 headings from content for Table of Contents
+const extractHeadings = (content: string): TocItem[] => {
+  const headingRegex = /^## (.*?)$/gm;
+  const headings: TocItem[] = [];
+  let match;
+  
+  while ((match = headingRegex.exec(content)) !== null) {
+    const text = match[1].trim();
+    // Generate a slug-like ID from the heading text
+    const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    headings.push({ id, text });
+  }
+  
+  return headings;
 };
 
 // Calculate estimated reading time
@@ -82,8 +103,11 @@ const renderContentWithImages = (content: string, images: BlogImage[] = []) => {
   // Internal links first - format: [[link:/path|text]]
   html = html.replace(/\[\[link:([^\|]+)\|([^\]]+)\]\]/g, '<a href="$1" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 underline font-medium transition-colors duration-300">$2</a>');
 
-  // Headings
-  html = html.replace(/^## (.*?)$/gm, '<h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-12 mb-5 sm:mb-7">$1</h2>');
+  // Headings - add id for TOC navigation
+  html = html.replace(/^## (.*?)$/gm, (match, headingText) => {
+    const id = headingText.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    return `<h2 id="${id}" class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-12 mb-5 sm:mb-7 scroll-mt-24">${headingText}</h2>`;
+  });
   html = html.replace(/^# (.*?)$/gm, '<h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-8">$1</h1>');
 
   // Paragraphs - optimized for readability (enhanced for mobile)
@@ -150,10 +174,45 @@ export default function ClientBlogDetail({
   relatedPosts?: BlogPost[];
 }) {
   const [copied, setCopied] = useState(false);
+  const [activeHeading, setActiveHeading] = useState('');
+  const [showToc, setShowToc] = useState(false);
   const url = `https://useaitools.me/blog/${slug}`;
   const encodedTitle = encodeURIComponent(post.title);
   const { display: readTime } = calculateReadTime(post.content);
   const relativeDate = formatRelativeDate(post.date);
+  const tocItems = extractHeadings(post.content);
+
+  // Scroll to heading when clicking TOC item
+  const scrollToHeading = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setActiveHeading(id);
+      setShowToc(false);
+    }
+  };
+
+  // Highlight active heading based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const headings = tocItems.map(item => document.getElementById(item.id)).filter(Boolean);
+      let currentHeading = '';
+      
+      headings.forEach((heading) => {
+        if (heading) {
+          const rect = heading.getBoundingClientRect();
+          if (rect.top <= 100) {
+            currentHeading = heading.id;
+          }
+        }
+      });
+      
+      setActiveHeading(currentHeading);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [tocItems]);
 
   const handleCopyLink = async () => {
     try {
@@ -190,14 +249,89 @@ export default function ClientBlogDetail({
           <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
             {post.title}
           </h1>
+          
+          {/* Mobile TOC Button */}
+          {tocItems.length > 0 && (
+            <button
+              onClick={() => setShowToc(!showToc)}
+              className="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-gray-800 hover:bg-slate-200 dark:hover:bg-gray-700 rounded-lg text-slate-700 dark:text-gray-300 font-medium transition-colors duration-300 lg:hidden"
+            >
+              <List className="w-4 h-4" />
+              Table of Contents
+              <ChevronRight className={`w-4 h-4 transition-transform duration-300 ${showToc ? 'rotate-90' : ''}`} />
+            </button>
+          )}
         </div>
 
-        {/* Post Content */}
-        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl mb-8">
-          <article
-            className="prose prose-slate dark:prose-invert max-w-none"
-            dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images) }}
-          />
+        {/* Desktop Layout: TOC Sidebar + Content */}
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Table of Contents (Desktop) */}
+          {tocItems.length > 0 && (
+            <div className="hidden lg:block w-64 flex-shrink-0">
+              <div className="sticky top-6 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg">
+                <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                  <List className="w-4 h-4 text-emerald-500" />
+                  Table of Contents
+                </h3>
+                <nav className="space-y-2">
+                  {tocItems.map((item, index) => (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollToHeading(item.id)}
+                      className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
+                        activeHeading === item.id
+                          ? 'bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-medium'
+                          : 'text-slate-600 dark:text-gray-400 hover:bg-slate-50 dark:hover:bg-gray-800'
+                      }`}
+                    >
+                      <span className="inline-flex items-center gap-2">
+                        <span className="text-xs text-slate-400 dark:text-gray-500">{index + 1}.</span>
+                        <span className="truncate">{item.text}</span>
+                      </span>
+                    </button>
+                  ))}
+                </nav>
+              </div>
+            </div>
+          )}
+
+          {/* Mobile TOC Dropdown */}
+          {tocItems.length > 0 && showToc && (
+            <div className="lg:hidden bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg mb-6">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                <List className="w-4 h-4 text-emerald-500" />
+                Table of Contents
+              </h3>
+              <nav className="space-y-2">
+                {tocItems.map((item, index) => (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToHeading(item.id)}
+                    className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
+                      activeHeading === item.id
+                        ? 'bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-medium'
+                        : 'text-slate-600 dark:text-gray-400 hover:bg-slate-50 dark:hover:bg-gray-800'
+                    }`}
+                  >
+                    <span className="inline-flex items-center gap-2">
+                      <span className="text-xs text-slate-400 dark:text-gray-500">{index + 1}.</span>
+                      <span>{item.text}</span>
+                    </span>
+                  </button>
+                ))}
+              </nav>
+            </div>
+          )}
+
+          {/* Post Content */}
+          <div className="flex-1">
+            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl mb-8">
+              <article
+                className="prose prose-slate dark:prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images) }}
+              />
+            </div>
+          </div>
         </div>
 
         {/* Share Buttons */}

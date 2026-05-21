@@ -6,24 +6,24 @@ import { ArrowRight, Home, Copy, Check } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 
-// Save tool to recently viewed
-const saveToRecentlyViewed = (toolId: number) => {
+// Save tool to browsing history
+const saveToHistory = (toolId: number) => {
   try {
-    const saved = localStorage.getItem('recentlyViewed');
-    let recentlyViewed: number[] = saved ? JSON.parse(saved) : [];
+    const saved = localStorage.getItem('toolHistory');
+    let history: { toolId: number; timestamp: number }[] = saved ? JSON.parse(saved) : [];
     
     // Remove if already exists
-    recentlyViewed = recentlyViewed.filter(id => id !== toolId);
+    history = history.filter(item => item.toolId !== toolId);
     
-    // Add to beginning
-    recentlyViewed.unshift(toolId);
+    // Add to beginning with timestamp
+    history.unshift({ toolId, timestamp: Date.now() });
     
-    // Keep only last 3
-    recentlyViewed = recentlyViewed.slice(0, 3);
+    // Keep only last 50
+    history = history.slice(0, 50);
     
-    localStorage.setItem('recentlyViewed', JSON.stringify(recentlyViewed));
+    localStorage.setItem('toolHistory', JSON.stringify(history));
   } catch (err) {
-    console.error('Failed to save recently viewed:', err);
+    console.error('Failed to save history:', err);
   }
 };
 
@@ -49,6 +49,86 @@ type Tool = {
 // Helper function to check if a tool has affiliate link
 const hasAffiliateLink = (tool: Tool): boolean => {
   return !!(tool.affiliate_link);
+};
+
+// Helper function to get affiliate link with UTM parameters
+const getAffiliateLinkWithUTM = (tool: Tool): string => {
+  if (!tool.affiliate_link) return tool.url;
+  
+  const url = new URL(tool.affiliate_link);
+  url.searchParams.set('utm_source', 'useaitools');
+  url.searchParams.set('utm_medium', 'referral');
+  url.searchParams.set('utm_campaign', 'staff_pick');
+  return url.toString();
+};
+
+// CTA A/B test variants
+const ctaVariants = {
+  A: '🔗 Try It Free',
+  B: '🚀 Get Started Now',
+};
+
+// Get CTA variant based on user
+const getCTAVariant = (): keyof typeof ctaVariants => {
+  return localStorage.getItem('ctaVariant') as keyof typeof ctaVariants || 'A';
+};
+
+// Usage steps for different categories
+const categoryUsageSteps: Record<string, { title: string; steps: string[] }> = {
+  Writing: {
+    title: 'How to Use Writing Tools',
+    steps: [
+      'Choose your content type from the available templates (blog post, social media, email, etc.)',
+      'Provide a clear prompt describing what you want to create, including tone, style, and key points',
+      'Customize the generated content by editing, rewriting sections, or adjusting the tone',
+      'Use built-in SEO features to optimize your content for search engines before publishing'
+    ]
+  },
+  Image: {
+    title: 'How to Use Image Tools',
+    steps: [
+      'Craft a detailed prompt describing your desired image - include style, composition, colors, and subjects',
+      'Select the appropriate model or style preset for your project (photorealistic, anime, watercolor, etc.)',
+      'Generate multiple variations and refine your prompt based on results',
+      'Download in your preferred resolution and format, then post-process if needed'
+    ]
+  },
+  Productivity: {
+    title: 'How to Use Productivity Tools',
+    steps: [
+      'Start by defining your goal - whether it be task management, note-taking, or project planning',
+      'Input your raw data, notes, or tasks into the tool',
+      'Let the AI organize, categorize, and prioritize your information automatically',
+      'Review suggestions and customize the output to match your workflow preferences'
+    ]
+  },
+  Code: {
+    title: 'How to Use Coding Tools',
+    steps: [
+      'Install the extension for your preferred IDE (VS Code, JetBrains, etc.)',
+      'Start typing - the AI will provide real-time code completions and suggestions',
+      'Use natural language comments to describe what you want to implement',
+      'Review and refine AI-generated code, ensuring it meets your standards'
+    ]
+  },
+  Audio: {
+    title: 'How to Use Audio Tools',
+    steps: [
+      'Choose your voice or music style from the available options',
+      'Input your text script or describe the music you want to create',
+      'Adjust parameters like tone, speed, pitch, and background effects',
+      'Preview and export in your preferred audio format (MP3, WAV, etc.)'
+    ]
+  },
+  Video: {
+    title: 'How to Use Video Tools',
+    steps: [
+      'Start with either a text prompt or upload your existing video footage',
+      'Select the video style, duration, and aspect ratio for your project',
+      'Customize by adding text overlays, background music, or visual effects',
+      'Render and download your final video in the desired resolution'
+    ]
+  }
 };
 
 const categoryFeatures: Record<string, string[]> = {
@@ -126,11 +206,12 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
   const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const hasAffiliate = hasAffiliateLink(tool);
-  const ctaText = hasAffiliate ? '🔗 Try It Free' : 'Visit Official Website';
+  const ctaText = hasAffiliate ? ctaVariants[getCTAVariant()] : 'Visit Official Website';
+  const ctaUrl = hasAffiliate ? getAffiliateLinkWithUTM(tool) : tool.url;
   
-  // Save to recently viewed on mount
+  // Save to browsing history on mount
   useEffect(() => {
-    saveToRecentlyViewed(tool.id);
+    saveToHistory(tool.id);
   }, [tool.id]);
 
   const copyToClipboard = async (text: string, index: number) => {
@@ -218,7 +299,7 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
             {/* CTA Button */}
             <div className="flex flex-wrap gap-3">
               <a
-                href={tool.affiliate_link || tool.url}
+                href={ctaUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
@@ -287,7 +368,7 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Image */}
                     <div 
-                      className="relative rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ease-out group"
+                      className="relative rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ease-out group bg-gray-200 dark:bg-gray-700"
                       style={{ 
                         willChange: 'transform',
                         transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' 
@@ -296,10 +377,14 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
                       <img
                         src={example.image_url}
                         alt={`${tool.name} Example ${index + 1} - AI tool demo`}
-                        className="w-full h-auto object-cover"
+                        className="w-full h-auto object-cover opacity-0 animate-fade-in"
                         width="600"
                         height="400"
                         loading="lazy"
+                        onLoad={(e) => {
+                          (e.currentTarget as HTMLImageElement).classList.remove('opacity-0');
+                          (e.currentTarget as HTMLImageElement).classList.add('opacity-100');
+                        }}
                       />
                       {/* Shimmer overlay on hover */}
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/0 via-white/0 to-transparent group-hover:via-white/20 transition-all duration-1000 transform -translate-x-full group-hover:translate-x-full pointer-events-none" />

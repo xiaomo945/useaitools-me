@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import "./globals.css";
 import PageProgress from "./components/PageProgress";
 import BackToTop from "./components/BackToTop";
+import MobileNav from "./components/MobileNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -97,12 +98,15 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col pb-16 md:pb-0">
         <Suspense fallback={null}>
           <PageProgress />
         </Suspense>
         {children}
         <BackToTop />
+        <Suspense fallback={null}>
+          <MobileNav />
+        </Suspense>
       </body>
     </html>
   );

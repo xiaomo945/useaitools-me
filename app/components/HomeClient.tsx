@@ -58,7 +58,7 @@ const hasAffiliateLink = (tool: Tool): boolean => {
   return !!(envLink || tool.affiliate_link);
 };
 
-// Helper function to get affiliate link for a tool
+// Helper function to get affiliate link for a tool with UTM parameters
 const getAffiliateLink = (tool: Tool): string => {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
   let shortEnvVarName = '';
@@ -70,7 +70,29 @@ const getAffiliateLink = (tool: Tool): string => {
     shortEnvVarName = 'AFFILIATE_PICTORY';
   }
   const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return envLink || tool.affiliate_link;
+  const baseLink = envLink || tool.affiliate_link;
+  
+  if (!baseLink) return '';
+  
+  // Add UTM parameters for tracking
+  const url = new URL(baseLink);
+  url.searchParams.set('utm_source', 'useaitools');
+  url.searchParams.set('utm_medium', 'referral');
+  url.searchParams.set('utm_campaign', 'staff_pick');
+  return url.toString();
+};
+
+// CTA A/B test variants
+const ctaVariants = {
+  A: '🔗 Try It Free',
+  B: '🚀 Get Started Now',
+};
+
+// Get CTA variant based on user or default to A
+const getCTAVariant = (): keyof typeof ctaVariants => {
+  // Simple A/B test: 50% chance for each variant
+  const userVariant = localStorage.getItem('ctaVariant') as keyof typeof ctaVariants || 'A';
+  return userVariant;
 };
 
 type Category = string;
@@ -676,7 +698,7 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
             const isSaved = savedIds.includes(tool.id);
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
             const hasAffiliate = hasAffiliateLink(tool);
-            const ctaText = hasAffiliate ? '🔗 Try It Free' : 'Visit Website';
+            const ctaText = hasAffiliate ? ctaVariants[getCTAVariant()] : 'Visit Website';
             
             return (
               <div
