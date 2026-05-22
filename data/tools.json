@@ -266,7 +266,7 @@
       "English"
     ],
     "description_en": "AI搜索引擎，提供带有引用的准确回答。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.0,
+    "rating": 4,
     "rating_count": 370
   },
   {
@@ -428,7 +428,7 @@
       "English"
     ],
     "description_en": "OpenAI的最新视频生成模型，能创建高质量视频。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.0,
+    "rating": 4,
     "rating_count": 233
   },
   {
@@ -509,7 +509,7 @@
       "English"
     ],
     "description_en": "Adobe的创意AI工具，用于生成图像、文字效果等。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 5.0,
+    "rating": 5,
     "rating_count": 458
   },
   {
@@ -596,7 +596,7 @@
   {
     "id": 23,
     "name": "Rytr",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "The most affordable AI writing tool trusted by 10M+ creators worldwide. Write blog posts, emails, social media, and marketing copy in 30+ languages — all starting at just $9/month. 3x faster than Jasper at half the price, with built-in plagiarism checker and SEO optimizer. Perfect for solopreneurs, bloggers, and small businesses who want premium quality without the enterprise budget.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://rytr.me",
@@ -618,7 +618,32 @@
     ],
     "description_en": "AI写作助手，帮助快速创建高质量内容。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.3,
-    "rating_count": 368
+    "rating_count": 368,
+    "use_cases": [
+      {
+        "title": "SEO Blog Posts",
+        "detail": "Generate 2,000-word optimized articles with keyword targeting in under 2 minutes"
+      },
+      {
+        "title": "Email Campaigns",
+        "detail": "Write high-converting cold emails and newsletters with proven AIDA and PAS frameworks"
+      },
+      {
+        "title": "Social Media Content",
+        "detail": "Create 30 days of social posts in one sitting — captions, hooks, and hashtags included"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Unbeatable value — $9/month with 40+ templates and unlimited words on premium plan",
+        "30+ language support makes it ideal for global content teams",
+        "Built-in plagiarism checker and SEO optimizer included at no extra cost"
+      ],
+      "cons": [
+        "Long-form editor lacks the advanced customization of enterprise tools like Jasper",
+        "Template variety is good but not as extensive as Copy.ai's 90+ options"
+      ]
+    }
   },
   {
     "id": 24,
@@ -650,7 +675,7 @@
   {
     "id": 51,
     "name": "VEED.io",
-    "description": "AI-powered online video editing platform. Create, edit, and enhance videos with automatic subtitles, background removal, and voiceovers.",
+    "description": "Browser-based AI video editor used by 50M+ creators, with 100,000+ 5-star reviews. Auto-generate subtitles in 100+ languages, remove backgrounds, add AI voiceovers, and create polished videos — all in your browser with zero downloads. Save 80% editing time compared to traditional tools like Premiere Pro, at a fraction of the cost.",
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://veed.io",
@@ -670,8 +695,33 @@
     "languages": [
       "English"
     ],
-    "rating": 5.0,
-    "rating_count": 66
+    "rating": 5,
+    "rating_count": 66,
+    "use_cases": [
+      {
+        "title": "Social Media Reels",
+        "detail": "Turn raw footage into viral-ready TikTok/Reels with auto-captions, music, and transitions in one click"
+      },
+      {
+        "title": "Course Video Editing",
+        "detail": "Batch-edit 50+ lesson videos with consistent branding, lower thirds, and chapter markers"
+      },
+      {
+        "title": "Multilingual Content",
+        "detail": "Auto-translate and dub your videos into 120+ languages with AI voice cloning"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No software to install — everything runs in the browser with automatic cloud saving",
+        "100+ language auto-subtitles with 95%+ accuracy, unmatched by competitors",
+        "All-in-one: editing, subtitles, screen recording, and AI voiceovers in one platform"
+      ],
+      "cons": [
+        "Browser-based means performance depends on internet speed and browser capabilities",
+        "Advanced color grading and multi-track editing still require professional software"
+      ]
+    }
   },
   {
     "id": 52,
@@ -884,7 +934,7 @@
       "English"
     ],
     "description_en": "AI内容智能平台，通过内容策略和优化提升有机搜索流量。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.0,
+    "rating": 4,
     "rating_count": 438
   },
   {
@@ -1019,7 +1069,7 @@
       "English"
     ],
     "description_en": "AI驱动的语言学习平台，提供个性化课程和AI辅导。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.0,
+    "rating": 4,
     "rating_count": 385
   },
   {
@@ -1100,7 +1150,7 @@
       "English"
     ],
     "description_en": "AI 3D内容创作平台，从文本或图像生成3D模型。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.0,
+    "rating": 4,
     "rating_count": 78
   },
   {
@@ -1376,7 +1426,7 @@
   {
     "id": 78,
     "name": "Murf AI",
-    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Studio-quality AI voice generator with 120+ realistic voices across 20+ languages, used by 30,000+ teams at companies like Google, Meta, and Deloitte. Create professional voiceovers for training videos, podcasts, and e-learning in minutes — not days. 10x cheaper than hiring voice talent, with unlimited revisions and consistent brand tone.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://murf.ai",
@@ -1398,7 +1448,32 @@
     ],
     "description_en": "AI语音生成平台，创建专业的语音旁白和配音。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.8,
-    "rating_count": 485
+    "rating_count": 485,
+    "use_cases": [
+      {
+        "title": "Corporate Training Videos",
+        "detail": "Generate clear, authoritative voiceovers for employee onboarding and compliance training"
+      },
+      {
+        "title": "Podcast Intros & Outros",
+        "detail": "Create professional show intros with customizable tone, pace, and emotion settings"
+      },
+      {
+        "title": "E-Learning Narration",
+        "detail": "Convert textbook content into engaging audio lessons with chapter markers and pacing control"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "120+ voices with granular control over pitch, speed, pause, and emphasis — studio-grade output",
+        "Team collaboration features with shared voice libraries and brand voice profiles",
+        "Seamless integration with video editors, LMS platforms, and presentation tools"
+      ],
+      "cons": [
+        "Free plan limited to 10 minutes of voice generation — not enough for serious projects",
+        "Voice cloning feature available only on Enterprise tier ($99/month)"
+      ]
+    }
   },
   {
     "id": 79,
@@ -1862,7 +1937,7 @@
   {
     "id": 96,
     "name": "Synthesia",
-    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "The world's leading AI video avatar platform, trusted by 60,000+ businesses including 50% of Fortune 100 companies. Create professional training videos, product demos, and presentations with AI avatars speaking in 130+ languages — no camera, studio, or actors needed. Reduce video production costs by 90% while maintaining broadcast-quality output.",
     "category": "Video",
     "pricing": "Paid",
     "url": "https://www.synthesia.io",
@@ -1884,7 +1959,32 @@
     ],
     "description_en": "AI视频生成平台，创建具有AI主播的专业视频，无需拍摄或编辑技能。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.9,
-    "rating_count": 349
+    "rating_count": 349,
+    "use_cases": [
+      {
+        "title": "Employee Onboarding Videos",
+        "detail": "Create standardized training content with AI presenters in 40+ languages for global teams"
+      },
+      {
+        "title": "Product Demo Videos",
+        "detail": "Generate professional product walkthroughs with custom branding, backgrounds, and avatar styling"
+      },
+      {
+        "title": "Personalized Sales Videos",
+        "detail": "Send 1:1 personalized video messages to prospects at scale — each with their name and custom content"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "160+ diverse AI avatars with natural expressions, gestures, and lip-sync accuracy",
+        "130+ language support with culturally appropriate avatar presentation for each market",
+        "Enterprise-grade security: SOC 2 Type II, GDPR compliant, SSO and RBAC built in"
+      ],
+      "cons": [
+        "Starting at $22/month, significantly more expensive than text-to-speech alternatives",
+        "Custom avatar creation requires Enterprise plan ($89/month+) and manual setup"
+      ]
+    }
   },
   {
     "id": 97,
@@ -2069,7 +2169,7 @@
       }
     ],
     "description_en": "智谱AI开发的多模态对话助手，支持文本、图像、代码等多种能力 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.0,
+    "rating": 4,
     "rating_count": 448
   },
   {
@@ -2123,7 +2223,7 @@
   {
     "id": 201,
     "name": "Pictory",
-    "description": "AI video creation tool that transforms long-form content into engaging short videos automatically.",
+    "description": "AI video repurposing tool that transforms long-form content — blog posts, webinars, podcasts — into viral short-form videos for social media in minutes. Used by 500,000+ marketers and content creators to amplify reach across YouTube, TikTok, Instagram, and LinkedIn. 5x faster than manual editing with automatic highlight extraction, captions, and branding.",
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://pictory.ai",
@@ -2144,6 +2244,31 @@
       }
     ],
     "rating": 4.5,
-    "rating_count": 296
+    "rating_count": 296,
+    "use_cases": [
+      {
+        "title": "Blog-to-Video Content",
+        "detail": "Convert a 2,000-word blog post into a 60-second summary video with auto-selected stock footage and captions"
+      },
+      {
+        "title": "Webinar Highlight Clips",
+        "detail": "Auto-extract the best 5-10 moments from a 60-minute webinar and turn them into shareable social clips"
+      },
+      {
+        "title": "YouTube Short Generation",
+        "detail": "Batch-generate 10+ vertical short videos from a single long-form YouTube video with one click"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Unique blog-to-video and webinar-to-clip features — no other tool automates content repurposing this well",
+        "Auto-caption extraction with 95% accuracy in 10+ languages, ideal for multi-platform distribution",
+        "Stock footage library of 6M+ clips built in, no need for separate subscriptions"
+      ],
+      "cons": [
+        "Video output is limited to 1080p maximum — no 4K export option available",
+        "Limited editing capabilities compared to dedicated video editors like VEED.io"
+      ]
+    }
   }
 ]

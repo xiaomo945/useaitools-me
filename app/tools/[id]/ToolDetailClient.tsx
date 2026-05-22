@@ -32,6 +32,16 @@ type Example = {
   image_url: string;
 };
 
+type UseCase = {
+  title: string;
+  detail: string;
+};
+
+type ProsCons = {
+  pros: string[];
+  cons: string[];
+};
+
 type Tool = {
   id: number;
   name: string;
@@ -44,6 +54,8 @@ type Tool = {
   examples?: Example[];
   needs_vpn: boolean;
   languages: string[];
+  use_cases?: UseCase[];
+  pros_cons?: ProsCons;
 };
 
 // Helper function to check if a tool has affiliate link
@@ -319,6 +331,69 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
             </div>
           </div>
         </div>
+
+        {/* Use Cases Section */}
+        {tool.use_cases && tool.use_cases.length > 0 && (
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">🎯 Real-World Use Cases</h2>
+            <div className="space-y-6">
+              {tool.use_cases.map((useCase, index) => (
+                <div key={index} className="p-5 rounded-xl bg-slate-50 dark:bg-gray-800/60 border border-slate-100 dark:border-gray-700/50">
+                  <div className="flex items-start gap-4">
+                    <div className={`flex-shrink-0 w-10 h-10 rounded-lg ${colors.bg} flex items-center justify-center text-white text-sm font-bold shadow-md`}>
+                      {index + 1}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg text-slate-900 dark:text-white mb-2">{useCase.title}</h3>
+                      <p className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed">{useCase.detail}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Pros & Cons Section */}
+        {tool.pros_cons && (
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">⚖️ Honest Review</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Pros */}
+              <div>
+                <h3 className="font-semibold text-lg text-emerald-600 dark:text-emerald-400 mb-4 flex items-center gap-2">
+                  <span className="text-xl">✅</span> Pros
+                </h3>
+                <ul className="space-y-3">
+                  {tool.pros_cons.pros.map((pro, index) => (
+                    <li key={index} className="flex items-start gap-3 text-slate-600 dark:text-gray-300 text-sm leading-relaxed">
+                      <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-500/20 flex items-center justify-center">
+                        <span className="text-emerald-600 dark:text-emerald-400 text-xs">+</span>
+                      </span>
+                      {pro}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {/* Cons */}
+              <div>
+                <h3 className="font-semibold text-lg text-amber-600 dark:text-amber-400 mb-4 flex items-center gap-2">
+                  <span className="text-xl">⚠️</span> Cons
+                </h3>
+                <ul className="space-y-3">
+                  {tool.pros_cons.cons.map((con, index) => (
+                    <li key={index} className="flex items-start gap-3 text-slate-600 dark:text-gray-300 text-sm leading-relaxed">
+                      <span className="flex-shrink-0 mt-0.5 w-5 h-5 rounded-full bg-amber-100 dark:bg-amber-500/20 flex items-center justify-center">
+                        <span className="text-amber-600 dark:text-amber-400 text-xs">−</span>
+                      </span>
+                      {con}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Features Section */}
         <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
