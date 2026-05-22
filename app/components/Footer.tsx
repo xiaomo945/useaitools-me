@@ -89,6 +89,26 @@ export default function Footer() {
               </div>
             </div>
 
+            {/* Brand Matrix */}
+            <div className="mb-6">
+              <div className="flex justify-center gap-4 flex-wrap">
+                <Link
+                  href="/writer"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 dark:bg-gray-800 border border-gray-700 text-xs text-gray-400 dark:text-gray-500 hover:border-emerald-500/40 hover:text-emerald-400 dark:hover:text-emerald-400 transition-all duration-300"
+                >
+                  🖋️ tryaiwriter.com
+                  <span className="text-gray-600 dark:text-gray-600">— AI Writing Tool</span>
+                </Link>
+                <Link
+                  href="/image"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 dark:bg-gray-800 border border-gray-700 text-xs text-gray-400 dark:text-gray-500 hover:border-violet-500/40 hover:text-violet-400 dark:hover:text-violet-400 transition-all duration-300"
+                >
+                  🎨 useaiimage.com
+                  <span className="text-gray-600 dark:text-gray-600">— AI Image Generator</span>
+                </Link>
+              </div>
+            </div>
+
             {/* Legal Links */}
             <div className="flex justify-center gap-6 mb-6 flex-wrap">
               <Link
