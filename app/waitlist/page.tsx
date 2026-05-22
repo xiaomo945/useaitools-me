@@ -95,8 +95,11 @@ export default function WaitlistPage() {
           <p className="text-lg sm:text-xl text-slate-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed mb-4">
             Affordable, fast, and truly understands your context. Our own AI writing tool — built for real people with real budgets.
           </p>
+          <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">
+            We&apos;re just getting started. Be among the first to shape this product.
+          </p>
           <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400">
-            Join 127+ creators on the waitlist
+            Join {process.env.NEXT_PUBLIC_WAITLIST_BASE_COUNT || '120'}+ creators on the waitlist
           </p>
         </div>
 

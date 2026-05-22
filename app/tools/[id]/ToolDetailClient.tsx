@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { ArrowRight, Home, Copy, Check } from 'lucide-react';
+import { ArrowRight, Home, Copy, Check, ChevronDown } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 
@@ -80,7 +80,46 @@ const toolReviews: Record<number, Review[]> = {
     {
       username: 'Chen W.',
       rating: 5,
-      text: "I use VEED to translate my YouTube videos into 5 languages. The AI dubbing quality is shocking good. My international views went up 300% in two months."
+      text: "I use VEED to translate my YouTube videos into 5 languages. The AI dubbing quality is shockingly good. My international views went up 300% in two months."
+    },
+  ],
+};
+
+const toolFAQs: Record<number, { question: string; answer: string }[]> = {
+  23: [
+    {
+      question: "Can I try Rytr for free?",
+      answer: "Yes! Rytr offers a generous free plan that lets you generate up to 10,000 characters per month. It's perfect for testing the quality before committing. [Try Rytr Free]({CTA_URL})."
+    },
+    {
+      question: "Is Rytr beginner-friendly?",
+      answer: "Absolutely. Rytr is designed for users with zero technical background. You just pick a template, enter your prompt, and get results in seconds. No learning curve required."
+    },
+    {
+      question: "What if I don't like it?",
+      answer: "Rytr's free plan has no credit card requirement, so there's zero risk. If you upgrade to paid, they offer a 7-day money-back guarantee. You can cancel anytime."
+    },
+    {
+      question: "How does Rytr compare to Jasper or Copy.ai?",
+      answer: "Rytr costs a fraction of Jasper ($9 vs $49/month) and offers similar quality for most use cases. Copy.ai has more templates, but Rytr's SEO features and multilingual support are superior. [See our comparison]({CTA_URL})."
+    },
+  ],
+  51: [
+    {
+      question: "Can I try VEED.io for free?",
+      answer: "Yes, VEED offers a free plan with basic editing features and watermarked exports. It's enough to test the core features and see if it fits your workflow. [Try VEED Free]({CTA_URL})."
+    },
+    {
+      question: "Is VEED.io beginner-friendly?",
+      answer: "Yes. VEED is entirely browser-based — no software to install. The drag-and-drop interface is intuitive, and the AI features (auto-subtitles, background removal) work with one click."
+    },
+    {
+      question: "What if I don't like it?",
+      answer: "The free plan is no-commitment. For paid plans, VEED offers a 30-day money-back guarantee. If you're not satisfied, they'll refund your payment."
+    },
+    {
+      question: "How does VEED.io compare to Runway or Synthesia?",
+      answer: "VEED is more of a complete video editor, while Runway focuses on AI generation and Synthesia on AI avatars. VEED gives you the most bang for your buck if you need editing, subtitles, and AI features in one place. [See our comparison]({CTA_URL})."
     },
   ],
 };
@@ -262,9 +301,15 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
   const colors = getCategoryColors(tool.category);
   const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const [openFAQIndex, setOpenFAQIndex] = useState<number | null>(null);
   const hasAffiliate = hasAffiliateLink(tool);
   const ctaText = hasAffiliate ? ctaVariants[getCTAVariant()] : 'Visit Official Website';
   const ctaUrl = hasAffiliate ? getAffiliateLinkWithUTM(tool) : tool.url;
+  const faqs = toolFAQs[tool.id];
+  const processedFAQs = faqs?.map(faq => ({
+    ...faq,
+    answer: faq.answer.replace(/\{CTA_URL\}/g, ctaUrl)
+  }));
   
   // Save to browsing history on mount
   useEffect(() => {
@@ -482,6 +527,54 @@ const StarRating = ({ rating }: { rating: number }) => (
                       <StarRating rating={review.rating} />
                     </div>
                     <p className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed">{review.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* FAQ Section */}
+        {processedFAQs && processedFAQs.length > 0 && (
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">❓ Frequently Asked Questions</h2>
+            <div className="space-y-3">
+              {processedFAQs.map((faq, index) => (
+                <div key={index} className="border border-slate-200 dark:border-gray-700/50 rounded-xl overflow-hidden">
+                  <button
+                    onClick={() => setOpenFAQIndex(openFAQIndex === index ? null : index)}
+                    className="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 dark:hover:bg-gray-800/50 transition-colors duration-200"
+                    aria-expanded={openFAQIndex === index}
+                  >
+                    <span className="font-semibold text-slate-900 dark:text-white pr-4">{faq.question}</span>
+                    <ChevronDown
+                      className={`w-5 h-5 text-slate-400 flex-shrink-0 transition-transform duration-300 ${openFAQIndex === index ? 'rotate-180' : ''}`}
+                    />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ease-out ${openFAQIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+                  >
+                    <div className="px-5 pb-5 pt-0">
+                      <p className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed">
+                        {faq.answer.split(/\[([^\]]+)\]\(([^)]+)\)/).map((part, i, arr) => {
+                          if (i % 3 === 1) {
+                            return (
+                              <a
+                                key={i}
+                                href={arr[i + 1]}
+                                target="_blank"
+                                rel="noopener noreferrer sponsored"
+                                className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline"
+                              >
+                                {part}
+                              </a>
+                            );
+                          }
+                          if (i % 3 === 2) return null;
+                          return <span key={i}>{part}</span>;
+                        })}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
