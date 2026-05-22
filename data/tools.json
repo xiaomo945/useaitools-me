@@ -695,6 +695,7 @@
     "languages": [
       "English"
     ],
+    "description_en": "Browser-based AI video editor used by 50M+ creators, with 100,000+ 5-star reviews. Auto-generate subtitles in 100+ languages, remove backgrounds, add AI voiceovers, and create polished videos — all in your browser with zero downloads.",
     "rating": 5,
     "rating_count": 66,
     "use_cases": [
@@ -746,6 +747,7 @@
     "languages": [
       "English"
     ],
+    "description_en": "AI-powered project management assistant trusted by 1M+ teams at companies like Nike, Airbnb, and Shopify. Enhance ClickUp with automatic task creation, project planning, meeting notes summarization, and smart workflow automation — saving teams 20% more time on project management.",
     "rating": 4.7,
     "rating_count": 482
   },
@@ -772,6 +774,7 @@
     "languages": [
       "English"
     ],
+    "description_en": "AI-enhanced task management trusted by 30M+ users and teams at Uber and Amazon. Automatically categorize tasks, suggest priorities, and break down complex projects into actionable steps — helping you stay organized and focused every day.",
     "rating": 4.8,
     "rating_count": 257
   },
@@ -2233,6 +2236,7 @@
     "languages": [
       "English"
     ],
+    "description_en": "AI video repurposing tool used by 500,000+ marketers and content creators. Transform blog posts, webinars, and podcasts into viral short-form videos for YouTube, TikTok, and Instagram — 5x faster than manual editing with automatic highlight extraction, captions, and branding.",
     "examples": [
       {
         "prompt": "Turn my blog article into a short video with automatic captions",
