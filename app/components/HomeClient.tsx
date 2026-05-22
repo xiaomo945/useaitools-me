@@ -863,6 +863,15 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
                   </div>
                 )}
                 
+                {/* Our Pick Badge */}
+                {tool.description.includes('⭐ Our Pick') && !hasAffiliate && (
+                  <div className="absolute top-3 right-3 z-10">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-600 text-white shadow-md shadow-emerald-500/25">
+                      ⭐ Our Pick
+                    </span>
+                  </div>
+                )}
+                
                 {/* Category Color Bar - 3px Height */}
                 <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
                 

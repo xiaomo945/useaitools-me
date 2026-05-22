@@ -6,6 +6,7 @@ import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
 import CategoryHero from './CategoryHero';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import FeaturedProduct from '@/app/components/FeaturedProduct';
 
 type Tool = (typeof tools)[0];
 type Category = Tool['category'];
@@ -144,13 +145,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       }))
     }
   };
-
-  return (
+return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {(category === 'Writing' || category === 'Productivity') && <FeaturedProduct />}
       <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Breadcrumbs */}
@@ -188,6 +189,15 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                   <div className="absolute top-3 right-3 z-10">
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25">
                       🏷️ Staff Pick
+                    </span>
+                  </div>
+                )}
+                
+                {/* Our Pick Badge */}
+                {tool.description.includes('⭐ Our Pick') && !hasAffiliate && (
+                  <div className="absolute top-3 right-3 z-10">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-600 text-white shadow-md shadow-emerald-500/25">
+                      ⭐ Our Pick
                     </span>
                   </div>
                 )}
