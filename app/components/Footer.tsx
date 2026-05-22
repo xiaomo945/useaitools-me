@@ -60,6 +60,31 @@ export default function Footer() {
               </a>
             </div>
 
+            {/* Our AI Tools Section */}
+            <div className="mb-6">
+              <h3 className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wide mb-3">
+                🚀 Our AI Tools
+              </h3>
+              <div className="flex justify-center gap-4 flex-wrap">
+                <Link
+                  href="/writer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-medium hover:bg-emerald-100 dark:hover:bg-emerald-500/20 transition-all duration-300 text-sm"
+                >
+                  <span className="text-base">✍️</span>
+                  Use AI Writer
+                  <span className="text-xs px-1.5 py-0.5 rounded-full bg-emerald-500 text-white font-semibold">Soon</span>
+                </Link>
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-400 dark:text-gray-500 text-sm cursor-not-allowed">
+                  <span className="text-base">🎨</span>
+                  Use AI Image
+                </span>
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-400 dark:text-gray-500 text-sm cursor-not-allowed">
+                  <span className="text-base">🎵</span>
+                  Use AI Audio
+                </span>
+              </div>
+            </div>
+
             {/* Legal Links */}
             <div className="flex justify-center gap-6 mb-6 flex-wrap">
               <Link

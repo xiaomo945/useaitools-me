@@ -160,6 +160,9 @@ export default function WaitlistPage() {
             </div>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">You&apos;re on the list!</h3>
             <p className="text-slate-600 dark:text-gray-300">We&apos;ll notify you when Use AI Writer is ready. Early bird pricing is locked in.</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-3">
+              Also launching at tryaiwriter.com &amp; useaipen.com
+            </p>
           </div>
         )}
 
@@ -207,6 +210,17 @@ export default function WaitlistPage() {
             <Home className="w-5 h-5" />
             Back to Home
           </Link>
+        </div>
+
+        {/* Domain Preview */}
+        <div className="mt-12 text-center">
+          <p className="text-xs text-slate-400 dark:text-slate-500 mb-2">
+            Also coming soon at:
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-mono text-emerald-600 dark:text-emerald-400">
+            <span className="px-3 py-1.5 rounded-md bg-slate-100 dark:bg-gray-800 border border-slate-200 dark:border-gray-700">tryaiwriter.com</span>
+            <span className="px-3 py-1.5 rounded-md bg-slate-100 dark:bg-gray-800 border border-slate-200 dark:border-gray-700">useaipen.com</span>
+          </div>
         </div>
       </div>
       <Footer />
