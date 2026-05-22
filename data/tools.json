@@ -2270,5 +2270,33 @@
         "Limited editing capabilities compared to dedicated video editors like VEED.io"
       ]
     }
+  },
+  {
+    "id": 202,
+    "name": "Use AI Writer",
+    "description": "⭐ Coming Soon: Our own AI writing tool. Affordable, fast, and truly understands context. Join the waitlist.",
+    "category": "Writing",
+    "pricing": "Coming Soon",
+    "url": "/waitlist",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Write a compelling blog post about the future of AI-assisted content creation",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Writer+Coming+Soon"
+      },
+      {
+        "prompt": "Generate a professional email campaign for a SaaS product launch",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Writer+Coming+Soon"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "Chinese"
+    ],
+    "description_en": "Our own AI writing tool — coming soon. Designed to be affordable, fast, and context-aware. This versatile tool offers advanced features for professionals and beginners alike.",
+    "rating": 0,
+    "rating_count": 0
   }
 ]

@@ -163,6 +163,39 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           
           <div className="mb-8" />
 
+          {/* Coming Soon Banner for Writing Category */}
+          {category === 'Writing' && (
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-500 via-teal-500 to-blue-500 p-px mb-10 shadow-xl">
+              <div className="relative overflow-hidden rounded-3xl bg-white dark:bg-gray-900 p-8 sm:p-10">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                  <div>
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 mb-4">
+                      <span className="animate-pulse">🚀</span> Coming Soon
+                    </div>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2">
+                      Our AI Writing Tool is Coming Soon
+                    </h2>
+                    <p className="text-lg text-slate-600 dark:text-gray-300 max-w-xl">
+                      Join the waitlist for early access pricing — affordable, fast, and truly understands your context.
+                    </p>
+                  </div>
+                  <Link
+                    href="/waitlist"
+                    className="flex-shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
+                  >
+                    Join Waitlist
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </div>
+                <div className="mt-6 flex items-center gap-6 text-sm text-slate-500 dark:text-slate-400">
+                  <span className="flex items-center gap-1.5">✨ Limited Spots Available</span>
+                  <span className="flex items-center gap-1.5">💰 Early Bird Pricing</span>
+                  <span className="flex items-center gap-1.5">🌐 English + Chinese</span>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Hero Component */}
           <CategoryHero 
             category={category}
