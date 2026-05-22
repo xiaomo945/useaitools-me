@@ -92,13 +92,6 @@ const ctaVariants = {
   B: '🚀 Get Started Now',
 };
 
-// Get CTA variant based on user or default to A
-const getCTAVariant = (): keyof typeof ctaVariants => {
-  // Simple A/B test: 50% chance for each variant
-  const userVariant = localStorage.getItem('ctaVariant') as keyof typeof ctaVariants || 'A';
-  return userVariant;
-};
-
 type Category = string;
 
 interface HomeClientProps {
@@ -113,32 +106,40 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
   const router = useRouter();
   const toolsGridRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
-  // Load saved ids from localStorage on initialization
-  const getSavedIds = (): number[] => {
-    try {
-      const saved = localStorage.getItem('savedTools');
-      return saved ? JSON.parse(saved) : [];
-    } catch {
-      return [];
-    }
-  };
-  
-  // Load recently viewed from localStorage on initialization
-  const getRecentlyViewedIds = (): number[] => {
-    try {
-      const recent = localStorage.getItem('recentlyViewed');
-      return recent ? JSON.parse(recent) : [];
-    } catch {
-      return [];
-    }
-  };
-  
-  const [savedIds, setSavedIds] = useState<number[]>(getSavedIds());
+  const [savedIds, setSavedIds] = useState<number[]>([]);
   const [selectedForCompare, setSelectedForCompare] = useState<number[]>([]);
   const [heartBurst, setHeartBurst] = useState<{ [key: number]: boolean }>({});
-  const [recentlyViewedIds, setRecentlyViewedIds] = useState<number[]>(getRecentlyViewedIds());
+  const [recentlyViewedIds, setRecentlyViewedIds] = useState<number[]>([]);
+  const [ctaVariant, setCtaVariant] = useState<keyof typeof ctaVariants>('A');
   const heartBurstRefs = useRef<{ [key: number]: HTMLSpanElement | null }>({});
   const categoryButtonsRef = useRef<(HTMLButtonElement | null)[]>([]);
+  
+  // Load localStorage data after mount (SSR-safe)
+  useEffect(() => {
+    // Load saved tools
+    try {
+      const saved = localStorage.getItem('savedTools');
+      if (saved) setSavedIds(JSON.parse(saved));
+    } catch { /* ignore */ }
+    
+    // Load recently viewed
+    try {
+      const recent = localStorage.getItem('recentlyViewed');
+      if (recent) setRecentlyViewedIds(JSON.parse(recent));
+    } catch { /* ignore */ }
+    
+    // Load CTA variant (A/B test)
+    try {
+      const stored = localStorage.getItem('ctaVariant') as keyof typeof ctaVariants;
+      if (stored === 'A' || stored === 'B') {
+        setCtaVariant(stored);
+      } else {
+        const v = Math.random() < 0.5 ? 'A' : 'B';
+        setCtaVariant(v);
+        localStorage.setItem('ctaVariant', v);
+      }
+    } catch { /* ignore */ }
+  }, []);
   
   // Keyboard navigation for search box (Esc to clear, Enter to search page)
   const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -835,7 +836,7 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
             const isSaved = savedIds.includes(tool.id);
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
             const hasAffiliate = hasAffiliateLink(tool);
-            const ctaText = hasAffiliate ? ctaVariants[getCTAVariant()] : 'Visit Website';
+            const ctaText = hasAffiliate ? ctaVariants[ctaVariant] : 'Visit Website';
             
             return (
               <div
