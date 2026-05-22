@@ -74,10 +74,14 @@ export default function Footer() {
                   Use AI Writer
                   <span className="text-xs px-1.5 py-0.5 rounded-full bg-emerald-500 text-white font-semibold">Soon</span>
                 </Link>
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-400 dark:text-gray-500 text-sm cursor-not-allowed">
+                <Link
+                  href="/image"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-violet-50 dark:bg-violet-500/10 border border-violet-200 dark:border-violet-500/20 text-violet-700 dark:text-violet-300 font-medium hover:bg-violet-100 dark:hover:bg-violet-500/20 transition-all duration-300 text-sm"
+                >
                   <span className="text-base">🎨</span>
                   Use AI Image
-                </span>
+                  <span className="text-xs px-1.5 py-0.5 rounded-full bg-violet-500 text-white font-semibold">Soon</span>
+                </Link>
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-400 dark:text-gray-500 text-sm cursor-not-allowed">
                   <span className="text-base">🎵</span>
                   Use AI Audio
