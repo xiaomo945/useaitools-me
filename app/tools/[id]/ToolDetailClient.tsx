@@ -303,25 +303,52 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
 
             {/* Affiliate Disclaimer for trust */}
             {hasAffiliate && (
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-4 text-center">
-                We may earn a small commission if you try this tool. It doesn&apos;t affect our recommendation.
-              </p>
+              <div className="mb-6 text-center">
+                <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-3">
+                  We may earn a small commission if you try this tool. It doesn&apos;t affect our recommendation.
+                </p>
+                {tool.name === 'Rytr' && (
+                  <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                    ✅ Trusted by 10M+ creators worldwide • Free plan available
+                  </p>
+                )}
+                {tool.name === 'VEED.io' && (
+                  <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                    ✅ Free plan available • No credit card required
+                  </p>
+                )}
+                {tool.name === 'Murf AI' && (
+                  <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                    ✅ Trusted by Google, Meta, Deloitte • 10 min free trial
+                  </p>
+                )}
+                {tool.name === 'Pictory' && (
+                  <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                    ✅ 14-day free trial • No credit card required
+                  </p>
+                )}
+                {!['Rytr', 'VEED.io', 'Murf AI', 'Pictory'].includes(tool.name) && hasAffiliate && (
+                  <p className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                    ✅ Free plan available
+                  </p>
+                )}
+              </div>
             )}
             
             {/* CTA Button */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 mb-6">
               <a
                 href={ctaUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300 min-h-[44px] min-w-[44px]"
               >
                 {ctaText}
                 <ArrowRight className="w-5 h-5" />
               </a>
               <Link
                 href={`/compare?tool=${tool.id}`}
-                className="inline-flex items-center gap-2 px-6 py-4 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-6 py-4 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300 min-h-[44px]"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
@@ -527,6 +554,49 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
                 );
               })}
             </div>
+          </div>
+        )}
+
+        {/* Bottom CTA for affiliate tools */}
+        {hasAffiliate && (
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8 text-center">
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
+              Ready to Try {tool.name}?
+            </h2>
+            {tool.name === 'Rytr' && (
+              <p className="text-slate-600 dark:text-gray-300 mb-6">
+                Join 10M+ creators worldwide. Start writing better content today — free plan includes 10,000 characters.
+              </p>
+            )}
+            {tool.name === 'VEED.io' && (
+              <p className="text-slate-600 dark:text-gray-300 mb-6">
+                Edit videos in your browser — no downloads needed. Free plan available, no credit card required.
+              </p>
+            )}
+            {tool.name === 'Murf AI' && (
+              <p className="text-slate-600 dark:text-gray-300 mb-6">
+                Create studio-quality voiceovers in minutes. 120+ realistic voices, 10-minute free trial.
+              </p>
+            )}
+            {tool.name === 'Pictory' && (
+              <p className="text-slate-600 dark:text-gray-300 mb-6">
+                Turn scripts into videos with AI. 14-day free trial, no credit card required.
+              </p>
+            )}
+            {!['Rytr', 'VEED.io', 'Murf AI', 'Pictory'].includes(tool.name) && (
+              <p className="text-slate-600 dark:text-gray-300 mb-6">
+                Start using {tool.name} today. {tool.description.slice(0, 80)}...
+              </p>
+            )}
+            <a
+              href={ctaUrl}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300 min-h-[44px]"
+            >
+              {ctaText}
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </div>
         )}
 
