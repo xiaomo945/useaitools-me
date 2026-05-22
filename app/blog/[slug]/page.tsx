@@ -56,6 +56,16 @@ export default async function BlogDetailPage({
     .filter((p) => p.slug !== slug && p.category === post.category)
     .slice(0, 3);
 
+  const processedPost = {
+    ...post,
+    content: post.content
+      .replace(/\{\{AFFILIATE_RYTR\}\}/g, process.env.AFFILIATE_RYTR || 'https://rytr.me')
+      .replace(/\{\{AFFILIATE_VEED\}\}/g, process.env.AFFILIATE_VEED || 'https://veed.io')
+      .replace(/\{\{AFFILIATE_MURF\}\}/g, process.env.AFFILIATE_MURF || 'https://murf.ai')
+      .replace(/\{\{AFFILIATE_PICTORY\}\}/g, process.env.AFFILIATE_PICTORY || 'https://pictory.ai')
+      .replace(/\{\{AFFILIATE_ELEVENLABS\}\}/g, process.env.AFFILIATE_ELEVENLABS || 'https://elevenlabs.io'),
+  };
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -84,7 +94,7 @@ export default async function BlogDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ClientBlogDetail post={post} slug={slug} relatedPosts={relatedPosts} />
+      <ClientBlogDetail post={processedPost} slug={slug} relatedPosts={relatedPosts} />
     </>
   );
 }
