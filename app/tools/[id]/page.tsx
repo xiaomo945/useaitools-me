@@ -70,8 +70,10 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     };
   }
   
-  const title = `${tool.name} – Use AI Tools`;
-  const description = tool.description.slice(0, 160);
+  const title = tool.name.length > 17
+    ? `${tool.name} | ${tool.category} AI Tool Review & Pricing`
+    : `${tool.name} - Review, Pricing & Features | Use AI Tools`;
+  const description = `${tool.description.slice(0, 130)}... Compare pricing, features & alternatives for this ${tool.category} AI tool.`;
 
   const categoryFaqs: Record<string, { question: string; answer: string }[]> = {
     'Writing': [
