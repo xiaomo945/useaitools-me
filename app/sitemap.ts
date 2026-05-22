@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 3600; // 每小时重新生成一次
 
 // 分类名称映射，需要与实际路由匹配
-const categories = ['Image', 'Writing', 'Code', 'Video', 'Productivity'];
+const categories = ['Image', 'Writing', 'Code', 'Video', 'Productivity', 'Audio'];
 const categorySlugMap = (cat: string) => cat.toLowerCase();
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -103,6 +103,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: 'https://useaitools.me/submit',
     lastModified: new Date(dateStr),
     changeFrequency: 'monthly',
+    priority: 0.5,
+  });
+  sitemap.push({
+    url: 'https://useaitools.me/history',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'weekly',
     priority: 0.5,
   });
   
