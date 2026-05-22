@@ -92,20 +92,33 @@ export default function Footer() {
             {/* Brand Matrix */}
             <div className="mb-6">
               <div className="flex justify-center gap-4 flex-wrap">
-                <Link
-                  href="/writer"
+                <a
+                  href="https://tryaiwriter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 dark:bg-gray-800 border border-gray-700 text-xs text-gray-400 dark:text-gray-500 hover:border-emerald-500/40 hover:text-emerald-400 dark:hover:text-emerald-400 transition-all duration-300"
                 >
                   🖋️ tryaiwriter.com
                   <span className="text-gray-600 dark:text-gray-600">— AI Writing Tool</span>
-                </Link>
-                <Link
-                  href="/image"
+                </a>
+                <a
+                  href="https://useaiimage.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 dark:bg-gray-800 border border-gray-700 text-xs text-gray-400 dark:text-gray-500 hover:border-violet-500/40 hover:text-violet-400 dark:hover:text-violet-400 transition-all duration-300"
                 >
                   🎨 useaiimage.com
                   <span className="text-gray-600 dark:text-gray-600">— AI Image Generator</span>
-                </Link>
+                </a>
+                <a
+                  href="https://useaipen.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 dark:bg-gray-800 border border-gray-700 text-xs text-gray-400 dark:text-gray-500 hover:border-teal-500/40 hover:text-teal-400 dark:hover:text-teal-400 transition-all duration-300"
+                >
+                  🖊️ useaipen.com
+                  <span className="text-gray-600 dark:text-gray-600">— Lightweight AI Writer</span>
+                </a>
               </div>
             </div>
 
