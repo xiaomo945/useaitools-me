@@ -170,6 +170,23 @@ export default function ImagePage() {
           </div>
         </section>
 
+        {/* Cross-link: Use AI Writer */}
+        <section className="py-8">
+          <Link href="/writer" className="block bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300 group">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-lg font-bold text-white mb-1">
+                  🖋️ Need words to match your visuals?
+                </p>
+                <p className="text-gray-400 text-sm">
+                  Check out Use AI Writer — The AI writing tool built for creators who refuse to overpay.
+                </p>
+              </div>
+              <ArrowRight className="w-5 h-5 text-emerald-400 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0 ml-4" />
+            </div>
+          </Link>
+        </section>
+
         {/* Bottom CTA */}
         <section className="py-16 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>

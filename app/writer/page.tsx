@@ -202,6 +202,23 @@ export default function WriterPage() {
           </div>
         </section>
 
+        {/* Cross-link: Use AI Image */}
+        <section className="py-8">
+          <Link href="/image" className="block bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-violet-500/30 hover:shadow-xl hover:shadow-violet-500/5 transition-all duration-300 group">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-lg font-bold text-white mb-1">
+                  🎨 Need visuals for your content?
+                </p>
+                <p className="text-gray-400 text-sm">
+                  Check out Use AI Image — Create stunning visuals in seconds. No design skills needed.
+                </p>
+              </div>
+              <ArrowRight className="w-5 h-5 text-violet-400 group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0 ml-4" />
+            </div>
+          </Link>
+        </section>
+
         {/* Bottom CTA */}
         <section className="py-16 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
