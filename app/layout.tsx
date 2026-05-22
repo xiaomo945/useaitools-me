@@ -6,6 +6,7 @@ import "./globals.css";
 import PageProgress from "./components/PageProgress";
 import BackToTop from "./components/BackToTop";
 import MobileNav from "./components/MobileNav";
+import Header from "./components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,7 +46,10 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://useaitools.me',
   },
-  icons: [{ url: '/logo.png' }],
+  icons: [
+    { url: '/favicon.svg', type: 'image/svg+xml' },
+    { url: '/logo.png' },
+  ],
 };
 
 export default function RootLayout({
