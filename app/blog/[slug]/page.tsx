@@ -68,24 +68,27 @@ export default async function BlogDetailPage({
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: {
+    '@type': 'BlogPosting',
+    'headline': post.title,
+    'description': post.description,
+    'datePublished': post.date,
+    'dateModified': post.date,
+    'author': {
       '@type': 'Organization',
-      name: 'Use AI Tools',
+      'name': 'Use AI Tools',
     },
-    publisher: {
+    'publisher': {
       '@type': 'Organization',
-      name: 'Use AI Tools',
-      logo: {
+      'name': 'Use AI Tools',
+      'logo': {
         '@type': 'ImageObject',
         url: 'https://useaitools.me/logo.png',
       },
     },
-    url: `https://useaitools.me/blog/${slug}`,
+    'url': `https://useaitools.me/blog/${slug}`,
+    'mainEntityOfPage': `https://useaitools.me/blog/${slug}`,
+    'image': post.images?.[0]?.url || '',
+    'keywords': post.category,
   };
 
   return (

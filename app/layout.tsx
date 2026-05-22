@@ -50,6 +50,11 @@ export const metadata: Metadata = {
     { url: '/favicon.svg', type: 'image/svg+xml' },
     { url: '/logo.png' },
   ],
+  alternates: {
+    types: {
+      'application/rss+xml': [{ url: '/feed.xml', title: 'Use AI Tools Blog' }],
+    },
+  },
 };
 
 export default function RootLayout({
