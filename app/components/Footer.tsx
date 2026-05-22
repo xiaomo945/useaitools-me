@@ -82,6 +82,14 @@ export default function Footer() {
                   Use AI Image
                   <span className="text-xs px-1.5 py-0.5 rounded-full bg-violet-500 text-white font-semibold">Soon</span>
                 </Link>
+                <Link
+                  href="/mobile"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-100 dark:hover:bg-gray-700 transition-all duration-300 text-sm"
+                >
+                  <span className="text-base">📱</span>
+                  Mobile App
+                  <span className="text-xs px-1.5 py-0.5 rounded-full bg-slate-400 text-white font-semibold">Soon</span>
+                </Link>
                 <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-400 dark:text-gray-500 text-sm cursor-not-allowed">
                   <span className="text-base">🎵</span>
                   Use AI Audio

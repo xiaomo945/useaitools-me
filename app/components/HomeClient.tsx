@@ -667,6 +667,80 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
           </div>
         </div>
 
+        {/* Our Products */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
+              🚀 Our Products
+            </h2>
+            <p className="text-slate-600 dark:text-gray-400">
+              Affordable AI tools built for real creators with real budgets
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Use AI Writer */}
+            <div className="bg-white dark:bg-gray-900 border-2 border-emerald-200 dark:border-emerald-500/20 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="text-4xl mb-4">🖋️</div>
+              <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">Use AI Writer</h3>
+              <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-2">
+                The AI writing tool built for creators who refuse to overpay. $5/mo vs Jasper $49/mo.
+              </p>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">$5/mo</span>
+                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">Writing</span>
+              </div>
+              <Link
+                href="/writer"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+              >
+                Learn More →
+              </Link>
+            </div>
+
+            {/* Use AI Image */}
+            <div className="bg-white dark:bg-gray-900 border-2 border-violet-200 dark:border-violet-500/20 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-violet-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="text-4xl mb-4">🎨</div>
+              <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">Use AI Image</h3>
+              <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-2">
+                Create stunning visuals in seconds. Text to image, multiple art styles, commercial use allowed.
+              </p>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-violet-100 dark:bg-violet-500/20 text-violet-700 dark:text-violet-300">$7/mo</span>
+                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">Image</span>
+              </div>
+              <Link
+                href="/image"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+              >
+                Learn More →
+              </Link>
+            </div>
+
+            {/* Mobile App */}
+            <div className="bg-white dark:bg-gray-900 border-2 border-slate-200 dark:border-slate-500/20 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+              <div className="absolute top-3 right-3">
+                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">Coming Soon</span>
+              </div>
+              <div className="text-4xl mb-4">📱</div>
+              <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">Mobile App</h3>
+              <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-2">
+                Your favorite AI tools, now in your pocket. Push notifications, offline access, widget support.
+              </p>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">Free</span>
+                <span className="px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">iOS & Android</span>
+              </div>
+              <Link
+                href="/mobile"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-slate-800 dark:bg-slate-700 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 opacity-70"
+              >
+                Join Waitlist →
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* Browse by Use Case */}
         <div className="mb-16">
           <div className="text-center mb-8">
