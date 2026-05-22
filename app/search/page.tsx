@@ -137,6 +137,9 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
       )
     : allTools;
 
+  const suggestions = ['AI writing tools', 'video editing', 'image generation', 'code assistant', 'productivity'];
+  const popularTools = allTools.filter(t => [1, 2, 3, 4, 5].includes(t.id)).slice(0, 3);
+
   // Schema
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -222,21 +225,53 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
                   />
                 </svg>
               </div>
-              <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
-                No results found
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-4">
+                No tools found for &quot;{query}&quot;
               </h2>
               <p className="text-slate-500 dark:text-slate-400 text-lg mb-8 max-w-md mx-auto">
-                We couldn't find any tools matching "{query}". Try a different search term.
+                Try searching: AI writing, video editing, image generation
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-4 mb-10">
                 <Link
                   href="/"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  Browse All Tools
+                  Browse all 80 tools
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
+              
+              {/* Popular tool recommendations */}
+              {popularTools.length > 0 && (
+                <div className="max-w-2xl mx-auto">
+                  <p className="text-sm font-semibold text-slate-600 dark:text-slate-300 mb-4">Popular tools you might like:</p>
+                  <div className="space-y-3">
+                    {popularTools.map((tool) => {
+                      const colors = getCategoryColors(tool.category);
+                      return (
+                        <Link
+                          key={tool.id}
+                          href={`/tools/${tool.id}`}
+                          className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-md transition-all duration-300 group"
+                        >
+                          <div className={`w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm ${colors.bg}`}>
+                            {tool.name.charAt(0)}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors truncate">
+                              {tool.name}
+                            </p>
+                            <p className="text-xs text-slate-500 dark:text-slate-400 truncate">{tool.description.slice(0, 60)}...</p>
+                          </div>
+                          <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium ${colors.bg} ${colors.text}`}>
+                            {tool.category}
+                          </span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
               <div className="mt-12">
                 <p className="text-sm text-slate-400 dark:text-slate-500 mb-4">Try searching for:</p>
                 <div className="flex flex-wrap justify-center gap-3">

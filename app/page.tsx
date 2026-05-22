@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import tools from '@/data/tools.json';
 import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
+import OnboardingGuide from '@/app/components/OnboardingGuide';
 
 export const metadata: Metadata = {
   title: 'Best AI Tools Directory 2026 – Discover & Compare 80+ AI Tools',
@@ -135,6 +136,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
       <HomeClient initialTools={enrichedTools} featuredTools={selected} />
+      <OnboardingGuide />
       <Footer />
     </>
   );
