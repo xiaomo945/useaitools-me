@@ -1,6 +1,20 @@
+import type { Metadata } from "next";
 import tools from '@/data/tools.json';
 import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
+
+export const metadata: Metadata = {
+  title: 'Best AI Tools Directory 2026 – Discover & Compare 80+ AI Tools',
+  description: 'Find and compare the best AI tools for writing, image generation, video creation, coding, and more. Curated directory updated weekly. Start exploring now.',
+  keywords: ['AI tools', 'best AI tools', 'AI tools 2026', 'AI tools comparison', 'AI writing tools', 'AI image generators', 'free AI tools'],
+  openGraph: {
+    title: 'Best AI Tools Directory 2026 – Discover & Compare 80+ AI Tools',
+    description: 'Find and compare the best AI tools for writing, image generation, video creation, coding, and more. Curated directory updated weekly.',
+    type: 'website',
+    url: 'https://useaitools.me',
+    siteName: 'Use AI Tools',
+  },
+};
 
 type Tool = (typeof tools)[0];
 
