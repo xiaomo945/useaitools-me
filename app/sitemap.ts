@@ -88,6 +88,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   });
   sitemap.push({
+    url: 'https://useaitools.me/mobile',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'weekly',
+    priority: 0.7,
+  });
+  sitemap.push({
     url: 'https://useaitools.me/saved',
     lastModified: new Date(dateStr),
     changeFrequency: 'daily',
