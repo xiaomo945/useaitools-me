@@ -1,9 +1,28 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import blogPosts from '@/data/blog-posts.json';
+import blogIndex from '@/data/blog-index.json';
+import fs from 'fs/promises';
+import path from 'path';
 import ClientBlogDetail from './ClientBlogDetail';
 
-type BlogPost = (typeof blogPosts)[0];
+// Get the full blog post by slug
+async function getBlogPostBySlug(slug: string) {
+  // Find the post in index first to get the id
+  const indexEntry = blogIndex.find((p) => p.slug === slug);
+  
+  if (!indexEntry) {
+    return null;
+  }
+  
+  // Read the full post file
+  const filePath = path.join(process.cwd(), 'data', 'blog-posts', `${indexEntry.id}.json`);
+  try {
+    const content = await fs.readFile(filePath, 'utf8');
+    return JSON.parse(content);
+  } catch {
+    return null;
+  }
+}
 
 export async function generateMetadata({
   params,
@@ -11,7 +30,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = await getBlogPostBySlug(slug);
 
   if (!post) {
     return {
@@ -46,13 +65,13 @@ export default async function BlogDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = await getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
 
-  const relatedPosts = blogPosts
+  const relatedPosts = blogIndex
     .filter((p) => p.slug !== slug && p.category === post.category)
     .slice(0, 3);
 

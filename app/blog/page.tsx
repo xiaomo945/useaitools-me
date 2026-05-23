@@ -1,26 +1,8 @@
 import Link from 'next/link';
-import blogPosts from '@/data/blog-posts.json';
+import blogIndex from '@/data/blog-index.json';
 import { Home } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
-
-type BlogPost = (typeof blogPosts)[0];
-
-// Calculate estimated reading time
-const calculateReadTime = (content: string): { minutes: number; display: string } => {
-  const wordsPerMinute = 200;
-  // Strip HTML tags and markdown
-  const plainText = content
-    .replace(/<[^>]*>/g, '')
-    .replace(/\*\*(.*?)\*\*/g, '$1')
-    .replace(/\[\[link:[^\|]+\|([^\]]+)\]\]/g, '$1');
-  const wordCount = plainText.trim().split(/\s+/).length;
-  const readTime = Math.ceil(wordCount / wordsPerMinute);
-  return {
-    minutes: readTime,
-    display: `⏱️ ${readTime} min read`
-  };
-};
 
 // Format relative date
 const formatRelativeDate = (dateStr: string): string => {
@@ -73,8 +55,8 @@ export default function BlogPage() {
     },
     'mainEntity': {
       '@type': 'ItemList',
-      'numberOfItems': blogPosts.length,
-      'itemListElement': blogPosts.map((post, index) => ({
+      'numberOfItems': blogIndex.length,
+      'itemListElement': blogIndex.map((post, index) => ({
         '@type': 'ListItem',
         'position': index + 1,
         'name': post.title,
@@ -119,8 +101,7 @@ export default function BlogPage() {
 
           {/* Blog Posts List */}
           <div className="space-y-6">
-            {blogPosts.map((post) => {
-              const { display: readTime } = calculateReadTime(post.content);
+            {blogIndex.map((post) => {
               const relativeDate = formatRelativeDate(post.date);
               return (
                 <div
@@ -131,9 +112,6 @@ export default function BlogPage() {
                     <div className="flex items-center gap-3">
                       <span className="text-sm font-medium text-slate-500 dark:text-gray-400">
                         {relativeDate}
-                      </span>
-                      <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
-                        {readTime}
                       </span>
                     </div>
                     <Link href={`/blog/${post.slug}`}>

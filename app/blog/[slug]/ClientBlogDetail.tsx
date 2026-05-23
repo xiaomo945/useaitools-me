@@ -23,6 +23,8 @@ type BlogPost = {
   category: string;
 };
 
+type BlogPostSummary = Omit<BlogPost, 'content'>; // No content needed for related posts
+
 interface TocItem {
   id: string;
   text: string;
@@ -172,7 +174,7 @@ export default function ClientBlogDetail({
 }: {
   post: BlogPost;
   slug: string;
-  relatedPosts?: BlogPost[];
+  relatedPosts?: BlogPostSummary[];
 }) {
   const [copied, setCopied] = useState(false);
   const [activeHeading, setActiveHeading] = useState('');

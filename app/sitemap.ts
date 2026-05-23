@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 import toolsData from '@/data/tools.json';
-import blogPostsData from '@/data/blog-posts.json';
+import blogIndex from '@/data/blog-index.json';
 
 // 确保在 Vercel 生产环境中实时生成，并设置缓存时间
 export const dynamic = 'force-dynamic';
@@ -145,7 +145,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
   
   // 8. 博客文章页 - 使用文章发布日期
-  blogPostsData.forEach((post) => {
+  blogIndex.forEach((post) => {
     sitemap.push({
       url: `https://useaitools.me/blog/${post.slug}`,
       lastModified: new Date(post.date),
