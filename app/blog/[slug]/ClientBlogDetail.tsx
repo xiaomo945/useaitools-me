@@ -471,6 +471,7 @@ export default function ClientBlogDetail({
                       src={relatedPost.images[0].url}
                       alt={relatedPost.images[0].alt}
                       className="w-full h-40 object-cover rounded-xl mb-4"
+                      loading="lazy"
                     />
                   )}
                   <h4 className="font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 mb-2">
