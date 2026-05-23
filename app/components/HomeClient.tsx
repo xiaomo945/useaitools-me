@@ -42,6 +42,14 @@ type Tool = {
   languages: string[];
   rating?: number;
   rating_count?: number;
+  review_scores?: {
+    easeOfUse: number;
+    outputQuality: number;
+    features: number;
+    valueForMoney: number;
+    stability: number;
+    support: number;
+  };
 };
 
 // Helper function to check if a tool has affiliate link (environment variable or JSON field)
