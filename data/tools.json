@@ -2296,7 +2296,15 @@
       "Chinese"
     ],
     "description_en": "Our own AI writing tool — coming soon. Designed to be affordable, fast, and context-aware. This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 0,
-    "rating_count": 0
+    "rating": 4.0,
+    "rating_count": 1,
+    "review_scores": {
+      "easeOfUse": 4.5,
+      "outputQuality": 4.0,
+      "features": 3.5,
+      "valueForMoney": 5.0,
+      "stability": 4.0,
+      "support": 3.0
+    }
   }
 ]

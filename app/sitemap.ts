@@ -94,6 +94,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   });
   sitemap.push({
+    url: 'https://useaitools.me/how-we-make-money',
+    lastModified: new Date(dateStr),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  });
+  sitemap.push({
     url: 'https://useaitools.me/saved',
     lastModified: new Date(dateStr),
     changeFrequency: 'daily',

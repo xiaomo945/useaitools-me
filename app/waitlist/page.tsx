@@ -85,6 +85,49 @@ export default function WaitlistPage() {
           ]}
         />
 
+        {/* Coming Soon Products Preview */}
+        <div className="mt-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Use AI Writer */}
+            <div className="bg-white dark:bg-gray-900 border-l-4 border-emerald-500 rounded-2xl p-6 shadow-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-4xl">🖋️</div>
+                <div>
+                  <h3 className="font-bold text-xl text-slate-900 dark:text-white">Use AI Writer</h3>
+                  <span className="px-2 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                    Launching June 15
+                  </span>
+                </div>
+              </div>
+              <p className="text-slate-600 dark:text-gray-300 mb-4">
+                Write 3x faster. 1/10 the price of Jasper. 40+ templates, SEO optimizer, plagiarism checker included.
+              </p>
+              <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
+                $5/mo Early Bird
+              </div>
+            </div>
+
+            {/* Use AI Image */}
+            <div className="bg-white dark:bg-gray-900 border-l-4 border-violet-500 rounded-2xl p-6 shadow-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-4xl">🎨</div>
+                <div>
+                  <h3 className="font-bold text-xl text-slate-900 dark:text-white">Use AI Image</h3>
+                  <span className="px-2 py-1 rounded-full text-xs font-semibold bg-violet-100 dark:bg-violet-500/20 text-violet-700 dark:text-violet-300">
+                    Launching July 1
+                  </span>
+                </div>
+              </div>
+              <p className="text-slate-600 dark:text-gray-300 mb-4">
+                Generate stunning visuals. 20+ art styles, unlimited generations, commercial use allowed.
+              </p>
+              <div className="text-2xl font-bold text-violet-600 dark:text-violet-400">
+                $7/mo Early Bird
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-8 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 mb-6">
             <span className="animate-pulse">🚀</span> Coming Soon

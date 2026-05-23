@@ -151,6 +151,12 @@ export default function Footer() {
                 About
               </Link>
               <Link
+                href="/how-we-make-money"
+                className="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors duration-300 text-sm font-medium"
+              >
+                How We Make Money
+              </Link>
+              <Link
                 href="/affiliate-disclosure"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >

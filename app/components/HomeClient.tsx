@@ -4,6 +4,7 @@ import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import StarRating from './StarRating';
+import ToolReviewScores from './ToolReviewScores';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -741,6 +742,86 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
           </div>
         </div>
 
+        {/* Built by Us */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
+              🛠️ Built by Us
+            </h2>
+            <p className="text-slate-600 dark:text-gray-400">
+              Our in-house AI tools, built with love and transparency
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Use AI Writer - Detailed */}
+            <div className="bg-white dark:bg-gray-900 border-l-4 border-emerald-500 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-2 transition-all duration-300">
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-5xl">🖋️</div>
+                <span className="px-3 py-1 rounded-full text-sm font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                  Built & Recommended by Us
+                </span>
+              </div>
+              <h3 className="font-bold text-2xl text-slate-900 dark:text-white mb-3">Use AI Writer</h3>
+              <p className="text-slate-600 dark:text-gray-300 mb-6 leading-relaxed">
+                Write 3x faster. 1/10 the price of Jasper. Built for creators who want premium quality without the enterprise price tag.
+              </p>
+              <ToolReviewScores 
+                scores={{
+                  easeOfUse: 4.5,
+                  outputQuality: 4.0,
+                  features: 3.5,
+                  valueForMoney: 5.0,
+                  stability: 4.0,
+                  support: 3.0
+                }} 
+                compact 
+              />
+              <div className="mt-6">
+                <Link
+                  href="/writer"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-lg rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/35 hover:-translate-y-1 transition-all duration-300"
+                >
+                  Try It Now →
+                </Link>
+              </div>
+            </div>
+
+            {/* Use AI Image - Detailed */}
+            <div className="bg-white dark:bg-gray-900 border-l-4 border-violet-500 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-violet-500/10 hover:-translate-y-2 transition-all duration-300">
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-5xl">🎨</div>
+                <span className="px-3 py-1 rounded-full text-sm font-semibold bg-violet-100 dark:bg-violet-500/20 text-violet-700 dark:text-violet-300">
+                  Built & Recommended by Us
+                </span>
+              </div>
+              <h3 className="font-bold text-2xl text-slate-900 dark:text-white mb-3">Use AI Image</h3>
+              <p className="text-slate-600 dark:text-gray-300 mb-6 leading-relaxed">
+                Generate stunning visuals. No design skills needed. Multiple art styles, commercial use allowed, at an affordable price.
+              </p>
+              <ToolReviewScores 
+                scores={{
+                  easeOfUse: 4.8,
+                  outputQuality: 4.5,
+                  features: 4.0,
+                  valueForMoney: 5.0,
+                  stability: 4.2,
+                  support: 3.5
+                }} 
+                compact 
+              />
+              <div className="mt-6">
+                <Link
+                  href="/image"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-bold text-lg rounded-xl shadow-lg shadow-violet-500/25 hover:shadow-xl hover:shadow-violet-500/35 hover:-translate-y-1 transition-all duration-300"
+                >
+                  Try It Now →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Browse by Use Case */}
         <div className="mb-16">
           <div className="text-center mb-8">
@@ -1165,6 +1246,27 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
               </button>
             </form>
           </div>
+        </div>
+
+        {/* Transparency Banner */}
+        <div className="mt-10 mb-10">
+          <Link
+            href="/how-we-make-money"
+            className="block bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-teal-950/40 border border-emerald-200 dark:border-emerald-800/50 rounded-2xl p-6 sm:p-8 text-center hover:shadow-xl hover:shadow-emerald-500/10 hover:-translate-y-1 transition-all duration-300"
+          >
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <span className="text-2xl">🫶</span>
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+                We&apos;re transparent about how we make money
+              </h3>
+            </div>
+            <p className="text-emerald-700 dark:text-emerald-300 font-medium flex items-center justify-center gap-2">
+              Learn about our business model
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </p>
+          </Link>
         </div>
 
         {/* Recently Viewed Section */}
