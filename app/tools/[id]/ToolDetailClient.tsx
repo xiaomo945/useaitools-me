@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { ArrowRight, Home, Copy, Check, ChevronDown } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import ToolReviewScores from '@/app/components/ToolReviewScores';
 
 // Save tool to browsing history
 const saveToHistory = (toolId: number) => {
@@ -413,6 +414,19 @@ const StarRating = ({ rating }: { rating: number }) => (
             <p className="text-lg text-slate-600 dark:text-gray-300 leading-relaxed mb-8">
               {tool.description}
             </p>
+            
+            {/* Review Scores */}
+            {tool.review_scores ? (
+              <div className="mb-8">
+                <ToolReviewScores scores={tool.review_scores} />
+              </div>
+            ) : (
+              <div className="mb-8 text-center py-8 bg-slate-50 dark:bg-gray-800/60 rounded-2xl border border-slate-200 dark:border-gray-700/50">
+                <p className="text-slate-500 dark:text-slate-400">
+                  Not yet evaluated
+                </p>
+              </div>
+            )}
 
             {/* Affiliate Disclaimer for trust */}
             {hasAffiliate && (

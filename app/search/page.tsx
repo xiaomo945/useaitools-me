@@ -211,44 +211,87 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
 
           {/* Empty State */}
           {filteredTools.length === 0 && (
-            <div className="text-center py-16 mb-12">
-              <div className="mx-auto w-24 h-24 mb-6 text-slate-300 dark:text-slate-600">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full" aria-hidden="true">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </div>
-              <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
-                No results found
-              </h2>
-              <p className="text-slate-500 dark:text-slate-400 text-lg mb-8 max-w-md mx-auto">
-                We couldn't find any tools matching "{query}". Try a different search term.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
-                >
-                  Browse All Tools
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-              <div className="mt-12">
-                <p className="text-sm text-slate-400 dark:text-slate-500 mb-4">Try searching for:</p>
-                <div className="flex flex-wrap justify-center gap-3">
-                  {['ChatGPT', 'Midjourney', 'GitHub Copilot', 'DALL-E', 'Notion AI'].map((suggestion) => (
-                    <Link
-                      key={suggestion}
-                      href={`/search?q=${encodeURIComponent(suggestion)}`}
-                      className="px-4 py-2 text-sm bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-                    >
-                      {suggestion}
-                    </Link>
-                  ))}
+            <div className="py-16 mb-12">
+              <div className="text-center mb-12">
+                <div className="mx-auto w-24 h-24 mb-6 text-slate-300 dark:text-slate-600">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full" aria-hidden="true">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                </div>
+                <h2 className="text-2xl font-semibold text-slate-900 dark:text-white mb-4">
+                  No results found for "{query}"
+                </h2>
+                <p className="text-slate-500 dark:text-slate-400 text-lg mb-8 max-w-md mx-auto">
+                  Try adjusting your search or explore tools by category below
+                </p>
+                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                  <Link
+                    href="/"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
+                  >
+                    Browse All Tools
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+
+                {/* Category Shortcuts */}
+                <div className="mb-12">
+                  <p className="text-sm font-semibold text-slate-600 dark:text-slate-300 mb-4">Browse by Category</p>
+                  <div className="flex flex-wrap justify-center gap-3">
+                    {['Writing', 'Image', 'Code', 'Audio', 'Video', 'Productivity'].map((category) => (
+                      <Link
+                        key={category}
+                        href={`/category/${category.toLowerCase()}`}
+                        className="px-5 py-3 text-sm font-medium bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 text-slate-700 dark:text-slate-300 rounded-xl hover:bg-slate-50 dark:hover:bg-gray-800 hover:-translate-y-0.5 transition-all duration-300 shadow-sm"
+                      >
+                        {category}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Popular Tools */}
+                <div className="max-w-5xl mx-auto">
+                  <p className="text-sm font-semibold text-slate-600 dark:text-slate-300 mb-6 text-center">Popular Tools You Might Like</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    {allTools.slice(0, 6).map((tool) => {
+                      const colors = getCategoryColors(tool.category);
+                      return (
+                        <Link
+                          key={tool.id}
+                          href={`/tools/${tool.id}`}
+                          className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 block"
+                        >
+                          <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
+                          <div className="p-5">
+                            <h3 className="font-semibold text-lg text-slate-900 dark:text-white mb-2">{tool.name}</h3>
+                            <p className="text-slate-600 dark:text-gray-300 leading-relaxed line-clamp-2 text-sm">{tool.description}</p>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Search Suggestions */}
+                <div className="mt-12">
+                  <p className="text-sm text-slate-400 dark:text-slate-500 mb-4">Popular searches:</p>
+                  <div className="flex flex-wrap justify-center gap-3">
+                    {['ChatGPT', 'Midjourney', 'GitHub Copilot', 'DALL-E', 'Notion AI'].map((suggestion) => (
+                      <Link
+                        key={suggestion}
+                        href={`/search?q=${encodeURIComponent(suggestion)}`}
+                        className="px-4 py-2 text-sm bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                      >
+                        {suggestion}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

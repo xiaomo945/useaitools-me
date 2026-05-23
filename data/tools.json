@@ -24,7 +24,15 @@
     ],
     "description_en": "最著名的AI图像生成工具，能创建高质量的艺术作品。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.3,
-    "rating_count": 228
+    "rating_count": 228,
+    "review_scores": {
+      "easeOfUse": 3.5,
+      "outputQuality": 4.8,
+      "features": 4.5,
+      "valueForMoney": 4.0,
+      "stability": 4.2,
+      "support": 3.8
+    }
   },
   {
     "id": 2,
@@ -51,7 +59,15 @@
     ],
     "description_en": "OpenAI开发的强大图像生成工具，通过文字描述生成图片。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.5,
-    "rating_count": 303
+    "rating_count": 303,
+    "review_scores": {
+      "easeOfUse": 4.3,
+      "outputQuality": 4.2,
+      "features": 3.8,
+      "valueForMoney": 4.0,
+      "stability": 4.0,
+      "support": 3.5
+    }
   },
   {
     "id": 3,
@@ -619,6 +635,14 @@
     "description_en": "AI写作助手，帮助快速创建高质量内容。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.3,
     "rating_count": 368,
+    "review_scores": {
+      "easeOfUse": 4.5,
+      "outputQuality": 4.2,
+      "features": 4.0,
+      "valueForMoney": 5.0,
+      "stability": 4.3,
+      "support": 3.8
+    },
     "use_cases": [
       {
         "title": "SEO Blog Posts",

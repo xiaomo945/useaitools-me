@@ -20,6 +20,7 @@ type BlogPost = {
   description: string;
   content: string;
   images?: BlogImage[];
+  category: string;
 };
 
 interface TocItem {
@@ -330,6 +331,78 @@ export default function ClientBlogDetail({
                 className="prose prose-slate dark:prose-invert max-w-none"
                 dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images) }}
               />
+            </div>
+
+            {/* CTA Area */}
+            <div className="mb-12">
+              {post.category === "Writing" && (
+                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border border-emerald-200 dark:border-emerald-800/50 rounded-3xl p-8 shadow-lg">
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                    <span>✨</span> Ready to Write Faster?
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <a
+                      href="https://rytr.me"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/35 hover:-translate-y-0.5 transition-all duration-300"
+                    >
+                      Try Rytr Free
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </a>
+                    <Link
+                      href="/writer"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-4 border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 font-bold rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-900/30 transition-all duration-300"
+                    >
+                      Our AI Writer (Coming Soon)
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </Link>
+                  </div>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    Save 50% vs. Jasper — same quality, half the price
+                  </p>
+                </div>
+              )}
+              
+              {post.category === "Video" && (
+                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-950/30 border border-indigo-200 dark:border-indigo-800/50 rounded-3xl p-8 shadow-lg">
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                    <span>🎬</span> Need Video Editing?
+                  </h3>
+                  <a
+                    href="https://veed.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold rounded-xl shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/35 hover:-translate-y-0.5 transition-all duration-300"
+                  >
+                    Try VEED Free
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </a>
+                </div>
+              )}
+              
+              {!["Writing", "Video"].includes(post.category) && (
+                <div className="bg-slate-50 dark:bg-gray-900/80 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 shadow-lg">
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                    <span>🔍</span> Discover More AI Tools
+                  </h3>
+                  <Link
+                    href="/"
+                    className="inline-flex items-center gap-2 px-6 py-4 bg-gradient-to-r from-slate-700 to-slate-900 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                  >
+                    Explore All Tools
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
