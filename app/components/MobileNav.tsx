@@ -41,7 +41,7 @@ export default function MobileNav() {
             <Link
               key={item.path}
               href={item.path}
-              className="relative flex flex-col items-center py-2 px-4 flex-1 transition-all duration-300"
+              className="relative flex flex-col items-center py-2 px-1 sm:px-2 flex-1 transition-all duration-300 min-w-0"
               onClick={() => setIsAnimating(true)}
             >
               <div className={`relative transition-all duration-300 ${active ? 'scale-110' : 'scale-100'} active:scale-110`}>
@@ -58,7 +58,7 @@ export default function MobileNav() {
                 )}
               </div>
               <span
-                className={`text-xs mt-1 font-medium transition-all duration-300 ${
+                className={`text-[10px] sm:text-xs mt-1 font-medium transition-all duration-300 whitespace-nowrap overflow-hidden text-ellipsis ${
                   active
                     ? 'text-emerald-600 dark:text-emerald-400'
                     : 'text-slate-500 dark:text-gray-500'

@@ -1019,8 +1019,8 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
                 
                 {/* Staff Pick Badge for affiliate tools */}
                 {hasAffiliate && (
-                  <div className="absolute top-3 right-3 z-10">
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25 animate-pulse-glow">
+                  <div className="absolute top-3 right-3 z-20">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25 animate-pulse-glow whitespace-nowrap">
                       🏷️ Staff Pick
                     </span>
                   </div>
@@ -1046,13 +1046,13 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
                             {highlightText(tool.name, search)}
                           </h3>
                         </Link>
-                        <div className="flex items-center gap-1.5 mt-1">
+                        <div className="flex items-center gap-1.5 mt-1 flex-wrap">
                           {tool.needs_vpn ? (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 whitespace-nowrap">
                               🪜 VPN Required
                             </span>
                           ) : (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 whitespace-nowrap">
                               ✅ Direct Access
                             </span>
                           )}
@@ -1103,7 +1103,7 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
 
                   {/* Footer */}
                   <div className="flex items-center justify-between gap-3">
-                    <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} whitespace-nowrap`}>
+                    <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} whitespace-nowrap overflow-visible min-w-fit`}>
                       {tool.category}
                     </span>
                     
