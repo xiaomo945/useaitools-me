@@ -19,6 +19,7 @@ type BlogPost = {
   date: string;
   description: string;
   content: string;
+  category?: string;
   images?: BlogImage[];
 };
 
@@ -380,32 +381,51 @@ export default function ClientBlogDetail({
           </div>
         </div>
 
-        {/* Related Articles */}
+        {/* Related Articles - Next Read Recommendations */}
         {relatedPosts.length > 0 && (
-          <div className="mt-12">
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Related Articles</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {relatedPosts.map((relatedPost) => (
-                <Link
-                  key={relatedPost.id}
-                  href={`/blog/${relatedPost.slug}`}
-                  className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out"
-                >
-                  {relatedPost.images?.[0] && (
-                    <img
-                      src={relatedPost.images[0].url}
-                      alt={relatedPost.images[0].alt}
-                      className="w-full h-40 object-cover rounded-xl mb-4"
-                    />
-                  )}
-                  <h4 className="font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 mb-2">
-                    {relatedPost.title}
-                  </h4>
-                  <p className="text-sm text-slate-500 dark:text-gray-400 line-clamp-2">
-                    {relatedPost.description}
-                  </p>
-                </Link>
-              ))}
+          <div className="mt-12 bg-gradient-to-br from-slate-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+                <span className="text-white text-lg">📚</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Next Read</h3>
+                <p className="text-sm text-slate-500 dark:text-gray-400">Continue exploring related content</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {relatedPosts.map((relatedPost) => {
+                const postDate = new Date(relatedPost.date);
+                const formattedDate = postDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                return (
+                  <Link
+                    key={relatedPost.id}
+                    href={`/blog/${relatedPost.slug}`}
+                    className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out"
+                  >
+                    {relatedPost.images?.[0] && (
+                      <img
+                        src={relatedPost.images[0].url}
+                        alt={relatedPost.images[0].alt}
+                        className="w-full h-32 object-cover rounded-lg mb-3"
+                        loading="lazy"
+                      />
+                    )}
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-xs font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-500/20 px-2 py-0.5 rounded-full">
+                        {relatedPost.category}
+                      </span>
+                      <span className="text-xs text-slate-400 dark:text-gray-500">{formattedDate}</span>
+                    </div>
+                    <h4 className="font-semibold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2 mb-2 text-sm">
+                      {relatedPost.title}
+                    </h4>
+                    <p className="text-xs text-slate-500 dark:text-gray-400 line-clamp-2">
+                      {relatedPost.description}
+                    </p>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         )}

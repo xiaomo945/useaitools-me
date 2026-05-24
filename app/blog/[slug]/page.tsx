@@ -3,6 +3,77 @@ import { notFound } from 'next/navigation';
 import { blogPosts, type BlogPost } from '@/types';
 import ClientBlogDetail from './ClientBlogDetail';
 
+// Extract tool IDs from blog content for recommendation
+const extractToolIds = (content: string): number[] => {
+  const toolIdRegex = /\[\[link:\/tools\/(\d+)\|/g;
+  const ids: number[] = [];
+  let match;
+  while ((match = toolIdRegex.exec(content)) !== null) {
+    ids.push(parseInt(match[1]));
+  }
+  return [...new Set(ids)];
+};
+
+// Extract blog slugs from content for cross-linking
+const extractBlogSlugs = (content: string): string[] => {
+  const blogLinkRegex = /\[\[link:\/blog\/([^|\]]+)\|/g;
+  const slugs: string[] = [];
+  let match;
+  while ((match = blogLinkRegex.exec(content)) !== null) {
+    slugs.push(match[1]);
+  }
+  return [...new Set(slugs)];
+};
+
+// Enhanced related posts algorithm
+const getRelatedPosts = (currentPost: BlogPost, allPosts: BlogPost[]): BlogPost[] => {
+  const candidates = allPosts.filter(p => p.slug !== currentPost.slug);
+  const currentToolIds = extractToolIds(currentPost.content);
+  const currentLinkedSlugs = extractBlogSlugs(currentPost.content);
+  
+  const scoredPosts = candidates.map(post => {
+    let score = 0;
+    
+    // Same category: +3 points
+    if (post.category === currentPost.category) {
+      score += 3;
+    }
+    
+    // Linked in current post: +2 points (high cross-reference value)
+    if (currentLinkedSlugs.includes(post.slug)) {
+      score += 2;
+    }
+    
+    // Cross-links to current post: +1.5 points
+    const postLinkedSlugs = extractBlogSlugs(post.content);
+    if (postLinkedSlugs.includes(currentPost.slug)) {
+      score += 1.5;
+    }
+    
+    // Common tools referenced: +1 point per shared tool
+    const postToolIds = extractToolIds(post.content);
+    const sharedTools = currentToolIds.filter(id => postToolIds.includes(id));
+    score += sharedTools.length * 1;
+    
+    // Recency bonus: newer posts get slight boost
+    const currentDate = new Date(currentPost.date);
+    const postDate = new Date(post.date);
+    const daysDiff = Math.abs(currentDate.getTime() - postDate.getTime()) / (1000 * 60 * 60 * 24);
+    if (daysDiff < 30) score += 0.5;
+    if (daysDiff < 7) score += 0.5;
+    
+    return { post, score };
+  });
+  
+  // Sort by score descending, then by date descending for same scores
+  scoredPosts.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return new Date(b.post.date).getTime() - new Date(a.post.date).getTime();
+  });
+  
+  return scoredPosts.slice(0, 3).map(sp => sp.post);
+};
+
 export async function generateMetadata({
   params,
 }: {
@@ -50,9 +121,7 @@ export default async function BlogDetailPage({
     notFound();
   }
 
-  const relatedPosts = blogPosts
-    .filter((p) => p.slug !== slug && p.category === post.category)
-    .slice(0, 3);
+  const relatedPosts = getRelatedPosts(post, blogPosts);
 
   const processedPost = {
     ...post,

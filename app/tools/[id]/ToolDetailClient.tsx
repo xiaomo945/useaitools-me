@@ -297,6 +297,7 @@ const getCategoryColors = (category: Tool['category']) => {
   }
 };
 
+// Export function
 export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; relatedTools: Tool[] }) {
   const colors = getCategoryColors(tool.category);
   const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
@@ -311,7 +312,6 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
     answer: faq.answer.replace(/\{CTA_URL\}/g, ctaUrl)
   }));
   
-  // Save to browsing history on mount
   useEffect(() => {
     saveToHistory(tool.id);
   }, [tool.id]);
@@ -340,6 +340,40 @@ const StarRating = ({ rating }: { rating: number }) => (
       ))}
     </div>
   );
+
+// Similar Tool Card with rating display
+const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
+  const relatedColors = getCategoryColors(relatedTool.category);
+  return (
+    <Link
+      href={`/tools/${relatedTool.id}`}
+      className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
+    >
+      <div className="flex items-center gap-3 mb-3">
+        <div className={`w-9 h-9 rounded-lg ${relatedColors.bg}/10 flex items-center justify-center ${relatedColors.textLight} dark:${relatedColors.text} text-sm font-bold`}>
+          {relatedTool.name.charAt(0)}
+        </div>
+        <div className="flex-1 min-w-0">
+          <h4 className="font-semibold text-sm text-slate-900 dark:text-white truncate group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+            {relatedTool.name}
+          </h4>
+          <span className={`text-xs ${relatedColors.textLight} dark:${relatedColors.text}`}>
+            {relatedTool.category}
+          </span>
+        </div>
+      </div>
+      <p className="text-slate-600 dark:text-gray-300 text-xs leading-relaxed mb-3 line-clamp-2">
+        {relatedTool.description.slice(0, 100)}...
+      </p>
+      {relatedTool.rating && (
+        <div className="flex items-center gap-1.5">
+          <StarRating rating={Math.round(relatedTool.rating)} />
+          <span className="text-xs text-slate-500 dark:text-gray-400">{relatedTool.rating}</span>
+        </div>
+      )}
+    </Link>
+  );
+};
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
@@ -679,40 +713,31 @@ const StarRating = ({ rating }: { rating: number }) => (
           </div>
         )}
 
-        {/* Related Tools Section */}
+        {/* Similar Tools Section - Enhanced with Smart Recommendations */}
         {relatedTools.length > 0 && (
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">🔗 Related Tools</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {relatedTools.map((relatedTool, index) => {
-                const relatedColors = getCategoryColors(relatedTool.category);
-                return (
-                  <div
-                    key={relatedTool.id}
-                    className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
-                    style={{ animationDelay: `${index * 50}ms` }}
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className={`w-10 h-10 rounded-lg ${relatedColors.bg}/10 dark:${relatedColors.bgDark} ${relatedColors.textLight} dark:${relatedColors.text} flex items-center justify-center text-lg font-bold`}>
-                        {relatedTool.name.charAt(0)}
-                      </div>
-                      <h3 className="font-semibold text-lg text-slate-900 dark:text-white">
-                        {relatedTool.name}
-                      </h3>
-                    </div>
-                    <p className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-2">
-                      {relatedTool.description}
-                    </p>
-                    <Link
-                      href={`/tools/${relatedTool.id}`}
-                      className={`inline-flex items-center gap-2 text-sm font-semibold ${relatedColors.textLight} dark:${relatedColors.text} hover:${relatedColors.bg} hover:text-white px-4 py-2 rounded-lg transition-all duration-300`}
-                    >
-                      View Tool
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                );
-              })}
+          <div className="bg-gradient-to-br from-slate-50 to-emerald-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/25">
+                <span className="text-white text-lg">✨</span>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Similar Tools</h2>
+                <p className="text-sm text-slate-500 dark:text-gray-400">Based on category, pricing, and user preferences</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {relatedTools.map((relatedTool, index) => (
+                <SimilarToolCard key={relatedTool.id} relatedTool={relatedTool} />
+              ))}
+            </div>
+            <div className="mt-6 pt-6 border-t border-slate-200 dark:border-gray-700">
+              <Link
+                href={`/category/${tool.category.toLowerCase()}`}
+                className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 font-medium transition-colors"
+              >
+                View all {tool.category} tools
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         )}
