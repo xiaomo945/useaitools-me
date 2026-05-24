@@ -8,13 +8,9 @@ import { Home, Search, Bookmark, Clock, BarChart3 } from 'lucide-react';
 export default function MobileNav() {
   const pathname = usePathname();
   const [activeTab, setActiveTab] = useState(pathname);
-  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     setActiveTab(pathname);
-    setIsAnimating(true);
-    const timer = setTimeout(() => setIsAnimating(false), 300);
-    return () => clearTimeout(timer);
   }, [pathname]);
 
   const navItems = [
@@ -22,7 +18,7 @@ export default function MobileNav() {
     { path: '/search', icon: Search, label: 'Search' },
     { path: '/history', icon: Clock, label: 'History' },
     { path: '/saved', icon: Bookmark, label: 'Saved' },
-    { path: '/leaderboard', icon: BarChart3, label: 'Leaderboard' },
+    { path: '/leaderboard', icon: BarChart3, label: 'Top' },
   ];
 
   const isActive = (path: string) => {
@@ -31,8 +27,8 @@ export default function MobileNav() {
   };
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 border-t border-slate-200 dark:border-gray-800 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] z-50 md:hidden">
-      <div className={`flex items-center justify-around py-2 transition-all duration-300 ${isAnimating ? 'scale-[1.02]' : 'scale-100'}`}>
+    <nav className="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-t border-slate-200/80 dark:border-gray-800/80 shadow-[0_-4px_24px_rgba(0,0,0,0.08)] z-50 md:hidden safe-area-inset-bottom">
+      <div className="flex items-stretch justify-around py-1.5 px-1">
         {navItems.map((item) => {
           const Icon = item.icon;
           const active = isActive(item.path);
@@ -41,34 +37,33 @@ export default function MobileNav() {
             <Link
               key={item.path}
               href={item.path}
-              className="relative flex flex-col items-center py-2 px-4 flex-1 transition-all duration-300"
-              onClick={() => setIsAnimating(true)}
+              className={`
+                relative flex flex-col items-center justify-center py-2 px-3 min-w-[64px] min-h-[56px] rounded-xl
+                transition-all duration-200 ease-out touch-manipulation
+                ${active 
+                  ? 'bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400' 
+                  : 'text-slate-500 dark:text-gray-500 active:bg-slate-100 dark:active:bg-gray-800'
+                }
+              `}
+              aria-current={active ? 'page' : undefined}
             >
-              <div className={`relative transition-all duration-300 ${active ? 'scale-110' : 'scale-100'} active:scale-110`}>
+              <div className="relative">
                 <Icon
-                  className={`w-6 h-6 transition-all duration-300 ${
-                    active
-                      ? 'text-emerald-600 dark:text-emerald-400'
-                      : 'text-slate-400 dark:text-gray-500'
+                  className={`w-6 h-6 transition-all duration-200 ${
+                    active ? 'scale-110' : 'scale-100'
                   }`}
+                  strokeWidth={active ? 2.5 : 2}
                 />
-                {/* Active glow effect */}
-                {active && (
-                  <div className="absolute inset-0 bg-emerald-500/20 blur-xl -z-10" />
-                )}
               </div>
               <span
-                className={`text-xs mt-1 font-medium transition-all duration-300 ${
-                  active
-                    ? 'text-emerald-600 dark:text-emerald-400'
-                    : 'text-slate-500 dark:text-gray-500'
+                className={`text-[10px] mt-1 font-semibold tracking-wide transition-all duration-200 ${
+                  active ? 'text-emerald-600 dark:text-emerald-400' : ''
                 }`}
               >
                 {item.label}
               </span>
-              {/* Active indicator dot */}
               {active && (
-                <div className="absolute top-1 w-1 h-1 rounded-full bg-emerald-600 dark:bg-emerald-400 animate-pulse" />
+                <div className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-8 h-0.5 rounded-full bg-emerald-500 dark:bg-emerald-400" />
               )}
             </Link>
           );
