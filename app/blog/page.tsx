@@ -1,10 +1,8 @@
 import Link from 'next/link';
-import blogPosts from '@/data/blog-posts.json';
+import { blogPosts, type BlogPost } from '@/types';
 import { Home } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
-
-type BlogPost = (typeof blogPosts)[0];
 
 // Calculate estimated reading time
 const calculateReadTime = (content: string): { minutes: number; display: string } => {

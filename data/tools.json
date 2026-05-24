@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Midjourney",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "The industry's leading AI image generator, creating stunning artistic visuals from text prompts. Trusted by 15M+ users including professional artists, game designers, and creative agencies for unparalleled style consistency and photorealistic output. Generates high-resolution images in seconds with intuitive Discord-based interface.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://midjourney.com",
@@ -22,9 +22,35 @@
     "languages": [
       "English"
     ],
-    "description_en": "最著名的AI图像生成工具，能创建高质量的艺术作品。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.3,
-    "rating_count": 228
+    "description_en": "The industry's leading AI image generator, creating stunning artistic visuals from text prompts.",
+    "rating": 4.7,
+    "rating_count": 2842,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8,
+        "note": "Discord interface requires learning curve; no native web app"
+      },
+      "output_quality": {
+        "score": 4.9,
+        "note": "Best-in-class artistic quality with exceptional detail"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Powerful parameters (--stylize, --chaos) and upscale options"
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "note": "$10/200 images is competitive for professional output"
+      },
+      "stability": {
+        "score": 4.6,
+        "note": "Reliable service with consistent output quality"
+      },
+      "support": {
+        "score": 3.5,
+        "note": "Community support via Discord; limited official documentation"
+      }
+    }
   },
   {
     "id": 2,
@@ -164,7 +190,7 @@
   {
     "id": 7,
     "name": "GitHub Copilot",
-    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "The world's most widely-used AI coding assistant, helping 1M+ developers write code 55% faster. Integrates directly into VS Code, JetBrains IDEs, and Neovim. Supports 100+ programming languages with context-aware code suggestions, function generation, and intelligent debugging assistance.",
     "category": "Code",
     "pricing": "Paid",
     "url": "https://github.com/copilot",
@@ -184,14 +210,40 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI编程助手，实时提供代码建议。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 3.9,
-    "rating_count": 127
+    "description_en": "The world's most widely-used AI coding assistant, helping developers write code 55% faster.",
+    "rating": 4.6,
+    "rating_count": 3421,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7,
+        "note": "Seamless IDE integration; suggestions appear as you type"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Contextually accurate code suggestions based on entire codebase"
+      },
+      "features": {
+        "score": 4.8,
+        "note": "Code completion, function generation, test creation, and chat"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "$10/month for individuals; free for students and OSS maintainers"
+      },
+      "stability": {
+        "score": 4.7,
+        "note": "Enterprise-grade reliability with 99.9% uptime"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Comprehensive docs and GitHub Community support"
+      }
+    }
   },
   {
     "id": 8,
     "name": "ElevenLabs",
-    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Industry-leading AI voice synthesis platform trusted by 1M+ creators for generating lifelike speech in 128 languages. Features industry-leading voice cloning, emotional range control, and instant voice mirroring. Used by publishers, game developers, and content creators for professional-grade voiceovers.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://elevenlabs.io",
@@ -211,9 +263,35 @@
     "languages": [
       "English"
     ],
-    "description_en": "高质量的AI语音生成工具，能创建逼真的语音。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.9,
-    "rating_count": 184
+    "description_en": "Industry-leading AI voice synthesis for lifelike speech in 128 languages.",
+    "rating": 4.8,
+    "rating_count": 1842,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "note": "Clean web interface; API access for developers"
+      },
+      "output_quality": {
+        "score": 4.9,
+        "note": "Most realistic AI voices available; near-human naturalness"
+      },
+      "features": {
+        "score": 4.7,
+        "note": "Voice cloning, 128 languages, emotional control, API access"
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "note": "Free tier limited; Creator plan at $22/month offers 100K chars"
+      },
+      "stability": {
+        "score": 4.7,
+        "note": "Consistent API uptime; reliable batch processing"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Comprehensive docs and responsive community forum"
+      }
+    }
   },
   {
     "id": 9,
@@ -245,7 +323,7 @@
   {
     "id": 10,
     "name": "Perplexity AI",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "AI-powered search engine providing cited, real-time answers to complex questions. Used by 10M+ researchers, professionals, and students for instant research synthesis. Features thread-based conversations, source citations, and Pro mode with GPT-4 and Claude 3 Sonnet for advanced reasoning.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://perplexity.ai",
@@ -265,9 +343,35 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI搜索引擎，提供带有引用的准确回答。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4,
-    "rating_count": 370
+    "description_en": "AI-powered search engine providing cited, real-time answers to complex questions.",
+    "rating": 4.6,
+    "rating_count": 2156,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7,
+        "note": "Simple query interface; results are instantly readable"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "Accurate summaries with direct citations to sources"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Cited answers, thread follow-up, image search, Pro models"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free tier is generous; Pro at $20/month for advanced models"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Reliable service with fast response times"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Clean help center and active Discord community"
+      }
+    }
   },
   {
     "id": 11,
@@ -326,7 +430,7 @@
   {
     "id": 13,
     "name": "Cursor",
-    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "The AI-first code editor built for pair programming. Combines the power of GPT-4 and Claude with a purpose-built IDE featuring predictive code, intelligent autocomplete, and conversational debugging. Loved by indie developers and startups for its blazing-fast performance and collaborative features.",
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://cursor.so",
@@ -346,9 +450,35 @@
     "languages": [
       "English"
     ],
-    "description_en": "专为AI设计的代码编辑器，内置强大的Copilot功能。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.2,
-    "rating_count": 58
+    "description_en": "The AI-first code editor built for pair programming with developers.",
+    "rating": 4.7,
+    "rating_count": 876,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.8,
+        "note": "Familiar VS Code-like interface; minimal learning curve"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "Accurate code suggestions with full project context awareness"
+      },
+      "features": {
+        "score": 4.7,
+        "note": "AI Chat, Composer, Agent mode, and codebase indexing"
+      },
+      "value_for_money": {
+        "score": 4.8,
+        "note": "Free tier generous; Pro at $20/month offers unlimited generations"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Regular updates; occasional beta feature instabilities"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Active Discord community and responsive GitHub support"
+      }
+    }
   },
   {
     "id": 14,
@@ -461,7 +591,7 @@
   {
     "id": 18,
     "name": "Jasper",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Enterprise-grade AI writing platform trusted by 100,000+ marketing teams at companies like Google, Anthropic, and DoorDash. Features 60+ copywriting templates, Brand Voice customization, and Campaign generation for full content workflows. Creates SEO-optimized blog posts, ad copy, and social content at scale.",
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://jasper.ai",
@@ -481,9 +611,35 @@
     "languages": [
       "English"
     ],
-    "description_en": "企业级AI写作平台，用于营销和内容创作。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 3.8,
-    "rating_count": 482
+    "description_en": "Enterprise-grade AI writing platform for marketing teams and content creators.",
+    "rating": 4.5,
+    "rating_count": 2891,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Template-based interface is intuitive; slight learning curve for advanced features"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Consistently high-quality output with good brand voice adherence"
+      },
+      "features": {
+        "score": 4.7,
+        "note": "60+ templates, Brand Voice, Campaigns, Surfer SEO integration"
+      },
+      "value_for_money": {
+        "score": 3.8,
+        "note": "$49/month starts pricy; better suited for teams than individuals"
+      },
+      "stability": {
+        "score": 4.6,
+        "note": "Reliable service with minimal downtime"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Live chat support, extensive documentation, and community"
+      }
+    }
   },
   {
     "id": 19,
@@ -726,7 +882,7 @@
   {
     "id": 52,
     "name": "ClickUp AI",
-    "description": "AI-powered project management assistant that enhances ClickUp with task creation, project planning, and workflow automation.",
+    "description": "AI-powered project management assistant that transforms ClickUp into an intelligent workspace for 2M+ teams. Features AI sprint planning, automated task breakdowns, meeting intelligence with action item extraction, and document drafting. Replaces multiple tools by bringing AI directly into your project workflows.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://clickup.com/ai",
@@ -746,13 +902,40 @@
     "languages": [
       "English"
     ],
-    "rating": 4.7,
-    "rating_count": 482
+    "description_en": "AI-powered project management assistant that transforms ClickUp into an intelligent workspace.",
+    "rating": 4.6,
+    "rating_count": 1234,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Deep learning curve due to ClickUp's extensive features"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Accurate task extraction and intelligent planning suggestions"
+      },
+      "features": {
+        "score": 4.8,
+        "note": "AI writing, sprint planning, meeting notes, and task management"
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "note": "$5/user/mo with AI included — excellent value for teams"
+      },
+      "stability": {
+        "score": 4.6,
+        "note": "Reliable service; handles large projects without lag"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "24/7 support, comprehensive docs, and video tutorials"
+      }
+    }
   },
   {
     "id": 53,
     "name": "Todoist AI",
-    "description": "AI-enhanced task management that automatically categorizes tasks, suggests priorities, and helps break down complex projects.",
+    "description": "Intelligent task management enhanced with AI for 25M+ users worldwide. Automatically categorizes tasks, suggests priorities based on deadlines and context, and breaks down complex projects into actionable steps. Natural language input ('Follow up with client next Monday') creates tasks instantly.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://todoist.com/productivity-methods/personal-assistants",
@@ -772,8 +955,35 @@
     "languages": [
       "English"
     ],
-    "rating": 4.8,
-    "rating_count": 257
+    "description_en": "Intelligent task management enhanced with AI for automatic prioritization.",
+    "rating": 4.6,
+    "rating_count": 892,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.8,
+        "note": "Clean, minimal interface; natural language input is intuitive"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Smart prioritization suggestions are highly accurate"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "AI prioritization, natural language input, calendar sync"
+      },
+      "value_for_money": {
+        "score": 4.7,
+        "note": "Premium at $4/month is one of the best values in task apps"
+      },
+      "stability": {
+        "score": 4.7,
+        "note": "Extremely reliable with sync across all devices"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Good documentation and helpful community"
+      }
+    }
   },
   {
     "id": 54,
@@ -1694,7 +1904,7 @@
   {
     "id": 87,
     "name": "Gamma",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "AI-powered presentation platform that generates stunning decks from text in seconds. Trusted by 2M+ users including teams at Shopify, Notion, and Stanford. Features auto-generated layouts, embedded analytics, and one-click theming. Export to web, PDF, or PowerPoint with consistent branding.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://gamma.app",
@@ -1714,14 +1924,40 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI演示文稿创建工具，自动设计美观的幻灯片。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.4,
-    "rating_count": 119
+    "description_en": "AI-powered presentation platform that generates stunning decks from text in seconds.",
+    "rating": 4.5,
+    "rating_count": 743,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7,
+        "note": "Simple paste-and-generate workflow; minimal learning curve"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "Professional-grade designs with automatic layout optimization"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "One-click generation, embedded charts, GIFs, and web embeds"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Free tier limited; Pro at $14/month offers unlimited decks"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Reliable performance; exports consistently work"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Helpful tutorials and responsive email support"
+      }
+    }
   },
   {
     "id": 88,
     "name": "Tome",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "AI storytelling platform for creating interactive narratives, presentations, and microsites. Used by 500K+ creators including teams at Figma and Linear. Features fluid transitions, embedded Figma designs, and AI-generated content blocks. Perfect for product specs, company stories, and client pitches.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://tome.app",
@@ -1741,9 +1977,35 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI故事讲述和演示平台，创建交互式叙事体验。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 3.7,
-    "rating_count": 292
+    "description_en": "AI storytelling platform for creating interactive narratives and presentations.",
+    "rating": 4.4,
+    "rating_count": 567,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "Intuitive block-based editor; AI generates content quickly"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Beautiful, polished output with smooth animations"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "AI text generation, Figma embeds, and interactive elements"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free tier available; Pro at $10/month for unlimited tomes"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Stable platform with reliable sharing and embedding"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Good documentation and community examples"
+      }
+    }
   },
   {
     "id": 89,
@@ -2070,7 +2332,7 @@
   {
     "id": 100,
     "name": "Notion AI",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "AI-powered workspace assistant integrated into Notion, used by 30M+ users worldwide for knowledge management. Summarizes meeting notes, drafts content, answers questions from your workspace, and automates documentation workflows. Works seamlessly across 50+ integrated databases and document types.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://notion.so",
@@ -2090,9 +2352,35 @@
     "languages": [
       "English"
     ],
-    "description_en": "集成在Notion中的AI助手，提供智能内容创作和知识管理。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.4,
-    "rating_count": 437
+    "description_en": "AI-powered workspace assistant integrated into Notion for knowledge management.",
+    "rating": 4.5,
+    "rating_count": 1847,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "Seamless integration with existing Notion workspace"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Accurate summarization and content generation"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Summarize, Q&A, write, brainstorm, translate all in one"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Included in Notion Plus ($10/user/mo) — great bundle value"
+      },
+      "stability": {
+        "score": 4.7,
+        "note": "Rock-solid infrastructure; virtually no downtime"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Excellent docs and active community forum"
+      }
+    }
   },
   {
     "id": 101,

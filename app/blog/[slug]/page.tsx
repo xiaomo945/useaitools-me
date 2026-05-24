@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import blogPosts from '@/data/blog-posts.json';
+import { blogPosts, type BlogPost } from '@/types';
 import ClientBlogDetail from './ClientBlogDetail';
-
-type BlogPost = (typeof blogPosts)[0];
 
 export async function generateMetadata({
   params,

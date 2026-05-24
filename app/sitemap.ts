@@ -1,6 +1,5 @@
 import { MetadataRoute } from 'next';
-import toolsData from '@/data/tools.json';
-import blogPostsData from '@/data/blog-posts.json';
+import { tools, blogPosts } from '@/types';
 
 // 确保在 Vercel 生产环境中实时生成，并设置缓存时间
 export const dynamic = 'force-dynamic';
@@ -123,7 +122,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
   
   // 7. 工具详情页 - 使用工具自身的更新日期（如果有的话）
-  toolsData.forEach((tool) => {
+  tools.forEach((tool) => {
     sitemap.push({
       url: `https://useaitools.me/tools/${tool.id}`,
       lastModified: new Date(dateStr),
@@ -133,7 +132,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
   
   // 8. 博客文章页 - 使用文章发布日期
-  blogPostsData.forEach((post) => {
+  blogPosts.forEach((post) => {
     sitemap.push({
       url: `https://useaitools.me/blog/${post.slug}`,
       lastModified: new Date(post.date),
