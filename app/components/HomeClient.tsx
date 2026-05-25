@@ -1050,10 +1050,10 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {[...blogPosts]
               .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-              .slice(0, 3)
+              .slice(0, 5)
               .map((post, index) => {
                 const getCategoryColors = (category: string) => {
                   switch (category) {
