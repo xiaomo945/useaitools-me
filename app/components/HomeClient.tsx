@@ -321,12 +321,26 @@ const ctaVariants = {
 
 type Category = string;
 
+interface BlogPost {
+  id: number;
+  title: string;
+  slug: string;
+  date: string;
+  description: string;
+  category: string;
+  images?: Array<{
+    url: string;
+    alt: string;
+  }>;
+}
+
 interface HomeClientProps {
   initialTools: Tool[];
   featuredTools: Tool[];
+  blogPosts: BlogPost[];
 }
 
-export default function HomeClient({ initialTools, featuredTools }: HomeClientProps) {
+export default function HomeClient({ initialTools, featuredTools, blogPosts }: HomeClientProps) {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -1017,6 +1031,80 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
                 Join Waitlist →
               </Link>
             </div>
+          </div>
+        </div>
+
+        {/* Recent Blog Posts */}
+        <div className="mb-16">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2">
+                📝 Recent Blog Posts
+              </h2>
+              <p className="text-slate-600 dark:text-gray-400">
+                Guides, comparisons, and tips to get the most out of AI tools
+              </p>
+            </div>
+            <Link href="/blog" className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 rounded-full hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition-all duration-300">
+              View All →
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[...blogPosts]
+              .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+              .slice(0, 3)
+              .map((post, index) => {
+                const getCategoryColors = (category: string) => {
+                  switch (category) {
+                    case 'Writing': return { bg: 'bg-blue-500', text: 'text-blue-500' };
+                    case 'Image': return { bg: 'bg-violet-500', text: 'text-violet-500' };
+                    case 'Video': return { bg: 'bg-indigo-500', text: 'text-indigo-500' };
+                    case 'Audio': return { bg: 'bg-pink-500', text: 'text-pink-500' };
+                    case 'Productivity': return { bg: 'bg-teal-500', text: 'text-teal-500' };
+                    default: return { bg: 'bg-slate-500', text: 'text-slate-500' };
+                  }
+                };
+                const colors = getCategoryColors(post.category);
+                return (
+                  <Link
+                    key={post.id}
+                    href={`/blog/${post.slug}`}
+                    className="group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up"
+                    style={{ 
+                      animationDelay: `${index * 50}ms`,
+                      opacity: 0,
+                      animationFillMode: 'forwards'
+                    }}
+                  >
+                    {post.images?.[0] && (
+                      <img
+                        src={post.images[0].url}
+                        alt={post.images[0].alt}
+                        className="w-full h-40 object-cover rounded-xl mb-4"
+                        loading="lazy"
+                      />
+                    )}
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                        {post.category}
+                      </span>
+                      <span className="text-xs text-slate-400 dark:text-gray-500">
+                        {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                      </span>
+                    </div>
+                    <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-sm text-slate-600 dark:text-gray-300 leading-relaxed line-clamp-2 mb-4">
+                      {post.description}
+                    </p>
+                    <div className="flex items-center gap-1 font-semibold text-sm text-emerald-600 dark:text-emerald-400">
+                      Read More →
+                    </div>
+                  </Link>
+                );
+              })}
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 import tools from '@/data/tools.json';
+import { blogPosts } from '@/types';
 import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
 import type { Tool } from '@/types';
@@ -119,7 +120,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
-      <HomeClient initialTools={enrichedTools} featuredTools={selected} />
+      <HomeClient initialTools={enrichedTools} featuredTools={selected} blogPosts={blogPosts} />
       <Footer />
     </>
   );
