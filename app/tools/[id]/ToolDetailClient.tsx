@@ -141,6 +141,8 @@ type Tool = {
   rating?: number;
   rating_count?: number;
   last_updated?: string;
+  skill_level?: string;
+  best_for?: string[];
 };
 
 // Helper function to check if a tool has affiliate link
@@ -280,23 +282,36 @@ const categoryFeatures: Record<string, string[]> = {
 };
 
 const getCategoryColors = (category: Tool['category']) => {
-  switch (category) {
-    case 'Writing':
-      return { bg: 'bg-blue-500', bgDark: 'bg-blue-500/20', text: 'text-blue-300', textLight: 'text-blue-600', border: 'border-blue-300' };
-    case 'Image':
-      return { bg: 'bg-violet-500', bgDark: 'bg-violet-500/20', text: 'text-violet-300', textLight: 'text-violet-600', border: 'border-violet-300' };
-    case 'Productivity':
-      return { bg: 'bg-teal-500', bgDark: 'bg-teal-500/20', text: 'text-teal-300', textLight: 'text-teal-600', border: 'border-teal-300' };
-    case 'Code':
-      return { bg: 'bg-orange-500', bgDark: 'bg-orange-500/20', text: 'text-orange-300', textLight: 'text-orange-600', border: 'border-orange-300' };
-    case 'Audio':
-      return { bg: 'bg-pink-500', bgDark: 'bg-pink-500/20', text: 'text-pink-300', textLight: 'text-pink-600', border: 'border-pink-300' };
-    case 'Video':
-      return { bg: 'bg-indigo-500', bgDark: 'bg-indigo-500/20', text: 'text-indigo-300', textLight: 'text-indigo-600', border: 'border-indigo-300' };
-    default:
-      return { bg: 'bg-slate-500', bgDark: 'bg-slate-500/20', text: 'text-slate-300', textLight: 'text-slate-600', border: 'border-slate-300' };
-  }
-};
+    switch (category) {
+      case 'Writing':
+        return { bg: 'bg-blue-500', bgDark: 'bg-blue-500/20', text: 'text-blue-300', textLight: 'text-blue-600', border: 'border-blue-300' };
+      case 'Image':
+        return { bg: 'bg-violet-500', bgDark: 'bg-violet-500/20', text: 'text-violet-300', textLight: 'text-violet-600', border: 'border-violet-300' };
+      case 'Productivity':
+        return { bg: 'bg-teal-500', bgDark: 'bg-teal-500/20', text: 'text-teal-300', textLight: 'text-teal-600', border: 'border-teal-300' };
+      case 'Code':
+        return { bg: 'bg-orange-500', bgDark: 'bg-orange-500/20', text: 'text-orange-300', textLight: 'text-orange-600', border: 'border-orange-300' };
+      case 'Audio':
+        return { bg: 'bg-pink-500', bgDark: 'bg-pink-500/20', text: 'text-pink-300', textLight: 'text-pink-600', border: 'border-pink-300' };
+      case 'Video':
+        return { bg: 'bg-indigo-500', bgDark: 'bg-indigo-500/20', text: 'text-indigo-300', textLight: 'text-indigo-600', border: 'border-indigo-300' };
+      default:
+        return { bg: 'bg-slate-500', bgDark: 'bg-slate-500/20', text: 'text-slate-300', textLight: 'text-slate-600', border: 'border-slate-300' };
+    }
+  };
+
+  const getSkillLevelColors = (level: string) => {
+    switch (level) {
+      case 'beginner':
+        return { bg: 'bg-emerald-100 dark:bg-emerald-500/20', text: 'text-emerald-700 dark:text-emerald-300', label: '🌱 Beginner' };
+      case 'intermediate':
+        return { bg: 'bg-amber-100 dark:bg-amber-500/20', text: 'text-amber-700 dark:text-amber-300', label: '🔥 Intermediate' };
+      case 'advanced':
+        return { bg: 'bg-rose-100 dark:bg-rose-500/20', text: 'text-rose-700 dark:text-rose-300', label: '⚡ Advanced' };
+      default:
+        return { bg: 'bg-slate-100 dark:bg-slate-800', text: 'text-slate-700 dark:text-slate-300', label: '🌱 Beginner' };
+    }
+  };
 
 // Export function
 export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; relatedTools: Tool[] }) {
@@ -411,17 +426,29 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
                 </h1>
                 <div className="flex flex-wrap items-center gap-2">
                   <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-semibold ${colors.bg} text-white`}>
-                    {tool.category}
-                  </span>
-                  {tool.needs_vpn ? (
-                    <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                      🪜 VPN Required
+                      {tool.category}
                     </span>
-                  ) : (
-                    <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
-                      ✅ Direct Access
-                    </span>
-                  )}
+                    {tool.skill_level && (
+                      <span className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
+                        {getSkillLevelColors(tool.skill_level).label}
+                      </span>
+                    )}
+                    {tool.needs_vpn ? (
+                      <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                        🪜 VPN Required
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                        ✅ Direct Access
+                      </span>
+                    )}
+                    <div className="flex flex-wrap gap-1.5 mt-1">
+                      {tool.best_for?.slice(0, 4).map((tag, i) => (
+                        <span key={i} className="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                 </div>
               </div>
               <div className="flex flex-col items-end gap-2">

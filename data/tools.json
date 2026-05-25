@@ -51,7 +51,13 @@
         "note": "Community support via Discord; limited official documentation"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "High Quality",
+      "Artists",
+      "Creative Projects"
+    ]
   },
   {
     "id": 2,
@@ -105,7 +111,13 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Beginners",
+      "Quick Results",
+      "Social Media"
+    ]
   },
   {
     "id": 3,
@@ -159,7 +171,13 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Professionals",
+      "Control",
+      "Custom Models"
+    ]
   },
   {
     "id": 4,
@@ -213,7 +231,13 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Beginners",
+      "Budget-Friendly",
+      "Social Media"
+    ]
   },
   {
     "id": 5,
@@ -267,7 +291,13 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams",
+      "Productivity",
+      "Knowledge Management"
+    ]
   },
   {
     "id": 6,
@@ -321,7 +351,13 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Beginners",
+      "Quick Results",
+      "Content Creation"
+    ]
   },
   {
     "id": 7,
@@ -375,7 +411,13 @@
         "note": "Comprehensive docs and GitHub Community support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Professionals",
+      "Developers",
+      "Teams"
+    ]
   },
   {
     "id": 8,
@@ -429,7 +471,13 @@
         "note": "Comprehensive docs and responsive community forum"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Professionals",
+      "High Quality",
+      "Content Creation"
+    ]
   },
   {
     "id": 9,
@@ -483,7 +531,13 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Professionals",
+      "High Quality",
+      "Video Editing"
+    ]
   },
   {
     "id": 10,
@@ -537,7 +591,13 @@
         "note": "Clean help center and active Discord community"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 11,
@@ -591,7 +651,13 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 12,
@@ -645,7 +711,13 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Beginners",
+      "Quick Results",
+      "Social Media"
+    ]
   },
   {
     "id": 13,
@@ -699,7 +771,13 @@
         "note": "Active Discord community and responsive GitHub support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Professionals",
+      "Developers",
+      "Control"
+    ]
   },
   {
     "id": 14,
@@ -753,7 +831,13 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 15,
@@ -807,7 +891,13 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 16,
@@ -835,7 +925,13 @@
     "description_en": "OpenAI的最新视频生成模型，能创建高质量视频。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4,
     "rating_count": 233,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 17,
@@ -863,7 +959,13 @@
     "description_en": "AI代码补全工具，支持多种编程语言和IDE。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.8,
     "rating_count": 122,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Developers",
+      "Professionals",
+      "Teams"
+    ]
   },
   {
     "id": 18,
@@ -917,7 +1019,13 @@
         "note": "Live chat support, extensive documentation, and community"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams",
+      "Marketing",
+      "High Quality"
+    ]
   },
   {
     "id": 19,
@@ -945,7 +1053,13 @@
     "description_en": "Adobe的创意AI工具，用于生成图像、文字效果等。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 5,
     "rating_count": 458,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Creative Projects",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 20,
@@ -973,7 +1087,13 @@
     "description_en": "Anthropic的先进AI助手，擅长推理、写作、分析和编程任务。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.9,
     "rating_count": 203,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Professionals",
+      "High Quality",
+      "Long-Form Content"
+    ]
   },
   {
     "id": 21,
@@ -1001,7 +1121,13 @@
     "description_en": "Google的多模态AI助手，能理解文本、图像、音频等。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.7,
     "rating_count": 486,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 22,
@@ -1029,7 +1155,13 @@
     "description_en": "AI写作平台，用于创建SEO优化的文章、博客和营销文案。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.8,
     "rating_count": 58,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 23,
@@ -1082,7 +1214,13 @@
         "Template variety is good but not as extensive as Copy.ai's 90+ options"
       ]
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Beginners",
+      "Budget-Friendly",
+      "Content Creation"
+    ]
   },
   {
     "id": 24,
@@ -1110,7 +1248,13 @@
     "description_en": "AI驱动的改写和写作工具，帮助提高词汇量和风格。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.3,
     "rating_count": 133,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 51,
@@ -1162,7 +1306,13 @@
         "Advanced color grading and multi-track editing still require professional software"
       ]
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Beginners",
+      "Social Media",
+      "Marketing"
+    ]
   },
   {
     "id": 52,
@@ -1216,7 +1366,13 @@
         "note": "24/7 support, comprehensive docs, and video tutorials"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams",
+      "Productivity",
+      "Project Management"
+    ]
   },
   {
     "id": 53,
@@ -1270,7 +1426,13 @@
         "note": "Good documentation and helpful community"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Beginners",
+      "Productivity",
+      "Quick Results"
+    ]
   },
   {
     "id": 54,
@@ -1298,7 +1460,13 @@
     "description_en": "自主AI代理，能够自动完成复杂任务而无需人工提示。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.4,
     "rating_count": 238,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 55,
@@ -1326,7 +1494,13 @@
     "description_en": "Web-based AI agent platform，让用户配置和部署自主AI代理。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.9,
     "rating_count": 128,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 56,
@@ -1354,7 +1528,13 @@
     "description_en": "AI代理协作框架，让多个AI代理协同工作完成任务。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.7,
     "rating_count": 336,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 57,
@@ -1382,7 +1562,13 @@
     "description_en": "AI驱动的SEO优化平台，帮助内容在搜索引擎中获得更好排名。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.4,
     "rating_count": 429,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 58,
@@ -1410,7 +1596,13 @@
     "description_en": "AI内容优化和研究平台，帮助创建SEO友好的高质量内容。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.9,
     "rating_count": 490,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 59,
@@ -1438,7 +1630,13 @@
     "description_en": "AI内容智能平台，通过内容策略和优化提升有机搜索流量。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4,
     "rating_count": 438,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 60,
@@ -1466,7 +1664,13 @@
     "description_en": "AI法律助手，帮助律师进行法律研究、合同审查和案例分析。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.8,
     "rating_count": 272,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 61,
@@ -1494,7 +1698,13 @@
     "description_en": "AI法律技术平台，自动化合同审查、起草和法律文档管理。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.5,
     "rating_count": 123,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 62,
@@ -1522,7 +1732,13 @@
     "description_en": "AI金融助手，帮助分析投资、优化投资组合和财务规划。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.6,
     "rating_count": 274,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 63,
@@ -1550,7 +1766,13 @@
     "description_en": "Khan Academy的AI学习助手，提供个性化辅导和教育支持。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.9,
     "rating_count": 311,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 64,
@@ -1578,7 +1800,13 @@
     "description_en": "AI驱动的语言学习平台，提供个性化课程和AI辅导。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4,
     "rating_count": 385,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 65,
@@ -1606,7 +1834,13 @@
     "description_en": "AI增强的学习平台，智能生成抽认卡、测验和学习计划。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.2,
     "rating_count": 146,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 66,
@@ -1634,7 +1868,13 @@
     "description_en": "基于浏览器的3D设计工具，AI辅助创建3D模型和动画。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.6,
     "rating_count": 127,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Creative Projects",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 67,
@@ -1662,7 +1902,13 @@
     "description_en": "AI 3D内容创作平台，从文本或图像生成3D模型。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4,
     "rating_count": 78,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Creative Projects",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 68,
@@ -1690,7 +1936,13 @@
     "description_en": "AI图像生成平台，专注于游戏资产、概念艺术和3D纹理。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.2,
     "rating_count": 431,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Creative Projects",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 69,
@@ -1718,7 +1970,13 @@
     "description_en": "AI音乐生成器，为视频、播客和游戏创建免版税音乐。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.7,
     "rating_count": 462,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 70,
@@ -1746,7 +2004,13 @@
     "description_en": "AI作曲家，创作古典、电影配乐和电子风格的原创音乐。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.5,
     "rating_count": 426,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 71,
@@ -1774,7 +2038,13 @@
     "description_en": "AI音乐创作平台，为内容创作者提供自适应的背景音乐。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.5,
     "rating_count": 269,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 72,
@@ -1802,7 +2072,13 @@
     "description_en": "AI角色聊天平台，可以与历史人物、虚构角色和自定义角色对话。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.3,
     "rating_count": 140,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 73,
@@ -1830,7 +2106,13 @@
     "description_en": "Quora的AI聊天平台，集成多个AI模型，提供统一访问体验。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.8,
     "rating_count": 69,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 74,
@@ -1858,7 +2140,13 @@
     "description_en": "AI写作和营销工具，帮助创建各种类型的营销文案。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.2,
     "rating_count": 349,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Beginners",
+      "Quick Results",
+      "Social Media"
+    ]
   },
   {
     "id": 75,
@@ -1886,7 +2174,13 @@
     "description_en": "AI图像搜索引擎和生成平台，寻找和创建完美的图像。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.6,
     "rating_count": 365,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Creative Projects",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 76,
@@ -1914,7 +2208,13 @@
     "description_en": "在线AI图像生成和编辑平台，支持多种模型和风格。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.5,
     "rating_count": 233,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Creative Projects",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 77,
@@ -1942,7 +2242,13 @@
     "description_en": "AI图像生成工具，擅长文字渲染和排版设计。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.8,
     "rating_count": 247,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Creative Projects",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 78,
@@ -1995,7 +2301,13 @@
         "Voice cloning feature available only on Enterprise tier ($99/month)"
       ]
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 79,
@@ -2023,7 +2335,13 @@
     "description_en": "AI音频和视频编辑平台，像编辑文档一样编辑媒体。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.3,
     "rating_count": 253,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams",
+      "Podcasts",
+      "Editing"
+    ]
   },
   {
     "id": 80,
@@ -2051,7 +2369,13 @@
     "description_en": "Adobe Premiere Pro中的AI功能，增强视频编辑工作流程。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.8,
     "rating_count": 134,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 81,
@@ -2079,7 +2403,13 @@
     "description_en": "AI视频生成平台，创建具有数字人主播的专业视频。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.7,
     "rating_count": 195,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 82,
@@ -2107,7 +2437,13 @@
     "description_en": "AI视频生成技术，创建会说话的头像和数字人视频。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.6,
     "rating_count": 191,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 83,
@@ -2135,7 +2471,13 @@
     "description_en": "AI代码助手，专注于代码测试、审查和质量保证。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.7,
     "rating_count": 361,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Developers",
+      "Professionals",
+      "Teams"
+    ]
   },
   {
     "id": 84,
@@ -2163,7 +2505,13 @@
     "description_en": "AWS的AI代码生成工具，集成到各种IDE中。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.5,
     "rating_count": 348,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Developers",
+      "Professionals",
+      "Teams"
+    ]
   },
   {
     "id": 85,
@@ -2191,7 +2539,13 @@
     "description_en": "Replit平台的AI编程助手，协作编码和学习。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.9,
     "rating_count": 411,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Developers",
+      "Professionals",
+      "Teams"
+    ]
   },
   {
     "id": 86,
@@ -2219,7 +2573,13 @@
     "description_en": "AI 3D捕捉和重建工具，从照片创建3D模型。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.4,
     "rating_count": 344,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Creative Projects",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 87,
@@ -2273,7 +2633,13 @@
         "note": "Helpful tutorials and responsive email support"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 88,
@@ -2327,7 +2693,13 @@
         "note": "Good documentation and community examples"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 89,
@@ -2355,7 +2727,13 @@
     "description_en": "集成在Notion中的AI助手，帮助写作、总结、翻译等。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.7,
     "rating_count": 446,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams",
+      "Productivity",
+      "Knowledge Management"
+    ]
   },
   {
     "id": 90,
@@ -2383,7 +2761,13 @@
     "description_en": "Grammarly的AI写作助手，增强写作、沟通和创意。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.8,
     "rating_count": 332,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 91,
@@ -2411,7 +2795,13 @@
     "description_en": "Microsoft的AI聊天助手，集成网络搜索和创意功能。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.2,
     "rating_count": 438,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 92,
@@ -2439,7 +2829,13 @@
     "description_en": "AI模型平台，提供数千个预训练模型和协作工具。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.8,
     "rating_count": 247,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Developers",
+      "Professionals",
+      "Teams"
+    ]
   },
   {
     "id": 93,
@@ -2467,7 +2863,13 @@
     "description_en": "AI应用开发框架，构建由语言模型驱动的应用。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.5,
     "rating_count": 92,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Developers",
+      "Professionals",
+      "Teams"
+    ]
   },
   {
     "id": 94,
@@ -2495,7 +2897,13 @@
     "description_en": "Figma中的AI设计助手，加速UI/UX设计工作流程。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.7,
     "rating_count": 199,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Creative Projects",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 95,
@@ -2523,7 +2931,13 @@
     "description_en": "AI文本扩展和自动化工具，加速重复性写作任务。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.9,
     "rating_count": 78,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 96,
@@ -2576,7 +2990,13 @@
         "Custom avatar creation requires Enterprise plan ($89/month+) and manual setup"
       ]
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams",
+      "Marketing",
+      "Training"
+    ]
   },
   {
     "id": 97,
@@ -2604,7 +3024,13 @@
     "description_en": "高质量的AI语音生成平台，创建自然逼真的语音克隆和文本转语音。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.7,
     "rating_count": 368,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Professionals",
+      "High Quality",
+      "Content Creation"
+    ]
   },
   {
     "id": 98,
@@ -2632,7 +3058,13 @@
     "description_en": "AI视频编辑工具，快速生成和编辑视频，简单易用的界面。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.8,
     "rating_count": 148,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Social Media",
+      "Quick Results"
+    ]
   },
   {
     "id": 99,
@@ -2660,7 +3092,13 @@
     "description_en": "AI写作和翻译助手，提升写作质量和多语言沟通。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.6,
     "rating_count": 376,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 100,
@@ -2714,7 +3152,13 @@
         "note": "Excellent docs and active community forum"
       }
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams",
+      "Productivity",
+      "Knowledge Management"
+    ]
   },
   {
     "id": 101,
@@ -2742,7 +3186,13 @@
     "description_en": "AI驱动的启动器和生产力工具，提升工作效率。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.9,
     "rating_count": 308,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Productivity",
+      "Teams",
+      "Beginners"
+    ]
   },
   {
     "id": 102,
@@ -2770,7 +3220,13 @@
     "description_en": "先进的AI编程助手，提供更智能的代码建议和聊天功能。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.3,
     "rating_count": 103,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Developers",
+      "Professionals",
+      "Teams"
+    ]
   },
   {
     "id": 105,
@@ -2795,7 +3251,13 @@
     "description_en": "智谱AI开发的多模态对话助手，支持文本、图像、代码等多种能力 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4,
     "rating_count": 448,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 107,
@@ -2820,7 +3282,13 @@
     "description_en": "百度开发的AI大语言模型，支持文本生成、代码、图像等能力 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 3.6,
     "rating_count": 167,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 108,
@@ -2845,7 +3313,13 @@
     "description_en": "阿里云开发的AI大模型，支持文本、代码、图像等多种能力 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.8,
     "rating_count": 308,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   },
   {
     "id": 201,
@@ -2897,7 +3371,13 @@
         "Limited editing capabilities compared to dedicated video editors like VEED.io"
       ]
     },
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Beginners",
+      "Quick Results",
+      "Content Creation"
+    ]
   },
   {
     "id": 202,
@@ -2926,6 +3406,12 @@
     "description_en": "Our own AI writing tool — coming soon. Designed to be affordable, fast, and context-aware. This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 0,
     "rating_count": 0,
-    "last_updated": "2026-05-25"
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   }
 ]

@@ -41,6 +41,8 @@ type Tool = {
   languages: string[];
   rating?: number;
   rating_count?: number;
+  skill_level?: string;
+  best_for?: string[];
 };
 
 // Helper function to check if a tool has affiliate link (environment variable or JSON field)
@@ -412,6 +414,35 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
         return {
           bg: 'bg-slate-100 dark:bg-slate-800',
           text: 'text-slate-700 dark:text-slate-300',
+        };
+    }
+  };
+
+  const getSkillLevelColors = (level: string) => {
+    switch (level) {
+      case 'beginner':
+        return {
+          bg: 'bg-emerald-100 dark:bg-emerald-500/20',
+          text: 'text-emerald-700 dark:text-emerald-300',
+          label: '🌱 Beginner',
+        };
+      case 'intermediate':
+        return {
+          bg: 'bg-amber-100 dark:bg-amber-500/20',
+          text: 'text-amber-700 dark:text-amber-300',
+          label: '🔥 Intermediate',
+        };
+      case 'advanced':
+        return {
+          bg: 'bg-rose-100 dark:bg-rose-500/20',
+          text: 'text-rose-700 dark:text-rose-300',
+          label: '⚡ Advanced',
+        };
+      default:
+        return {
+          bg: 'bg-slate-100 dark:bg-slate-800',
+          text: 'text-slate-700 dark:text-slate-300',
+          label: '🌱 Beginner',
         };
     }
   };
@@ -1020,6 +1051,25 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
                       count={tool.rating_count || 0}
                       size="sm"
                     />
+                  </div>
+
+                  {/* Skill Level & Best For Tags */}
+                  <div className="mb-4 space-y-2">
+                    {tool.skill_level && (
+                      <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
+                        {getSkillLevelColors(tool.skill_level).label}
+                      </span>
+                    )}
+                    <div className="flex flex-wrap gap-1.5">
+                      {tool.best_for?.slice(0, 3).map((tag, i) => (
+                        <span 
+                          key={i} 
+                          className="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
                   {/* Footer */}
