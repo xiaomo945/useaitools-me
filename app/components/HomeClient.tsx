@@ -680,22 +680,32 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Use AI Writer */}
-            <div className="bg-white dark:bg-gray-900 border-2 border-emerald-200 dark:border-emerald-500/20 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white dark:bg-gray-900 border-2 border-emerald-200 dark:border-emerald-500/20 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-transparent to-teal-500/5 pointer-events-none" />
+              {/* Live Now Badge */}
+              <div className="absolute top-3 right-3 z-10">
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25">
+                  ✨ Live Now
+                </span>
+              </div>
               <div className="text-4xl mb-4">🖋️</div>
               <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">Use AI Writer</h3>
               <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-2">
-                The AI writing tool built for creators who refuse to overpay. $5/mo vs Jasper $49/mo.
+                Write 3x faster with AI — try it free. The AI writing tool built for creators who refuse to overpay. $5/mo vs Jasper $49/mo.
               </p>
               <div className="flex items-center gap-2 mb-4">
                 <span className="px-2 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">$5/mo</span>
                 <span className="px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">Writing</span>
               </div>
-              <Link
-                href="/writer"
+              <a
+                href="https://tryaiwriter.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
               >
-                Learn More →
-              </Link>
+                Try It Free →
+              </a>
             </div>
 
             {/* Use AI Image */}
