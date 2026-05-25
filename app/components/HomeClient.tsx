@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useState, useMemo, useRef, useEffect, memo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import StarRating from './StarRating';
@@ -27,6 +27,231 @@ const highlightText = (text: string, searchTerm: string) => {
   );
 };
 
+// Memoized Tool Card Component
+const ToolCard = memo(function ToolCard({
+  tool,
+  index,
+  search,
+  isSaved,
+  isSelectedForCompare,
+  toggleSave,
+  toggleCompare,
+  hasAffiliate,
+  ctaText,
+  heartBurst,
+  getCategoryColors,
+  getPricingColors,
+  getSkillLevelColors,
+  getAffiliateLink,
+  router
+}: {
+  tool: any;
+  index: number;
+  search: string;
+  isSaved: boolean;
+  isSelectedForCompare: boolean;
+  toggleSave: (id: number) => void;
+  toggleCompare: (id: number) => void;
+  hasAffiliate: boolean;
+  ctaText: string;
+  heartBurst: boolean;
+  getCategoryColors: (cat: string) => any;
+  getPricingColors: (pricing: string) => any;
+  getSkillLevelColors: (level: string) => any;
+  getAffiliateLink: (tool: any) => string;
+  router: any;
+}) {
+  const colors = getCategoryColors(tool.category);
+  const pricingColors = getPricingColors(tool.pricing);
+
+  return (
+    <div
+      key={tool.id}
+      className={`bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative ${hasAffiliate ? 'affiliate-card' : ''}`}
+      style={{
+        animationDelay: `${index * 50}ms`,
+        willChange: 'transform'
+      }}
+    >
+      {/* Shimmer effect for affiliate cards */}
+      {hasAffiliate && (
+        <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
+          <div className="shimmer-sweep" />
+        </div>
+      )}
+      
+      {/* Staff Pick Badge for affiliate tools */}
+      {hasAffiliate && (
+        <div className="absolute top-3 right-3 z-10">
+          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25 animate-pulse-glow">
+            🏷️ Staff Pick
+          </span>
+        </div>
+      )}
+      
+      {/* Category Color Bar - 3px Height */}
+      <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
+      
+      <div className="p-5">
+        {/* Tool Header with Compare Checkbox */}
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <div className="flex items-center gap-3">
+            <Link
+              href={`/tools/${tool.id}`}
+              className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`}
+              style={{ fontFamily: 'Playfair Display, serif' }}
+            >
+              {tool.name.charAt(0)}
+            </Link>
+            <div>
+              <Link href={`/tools/${tool.id}`} className="inline-block">
+                <h3 className="font-semibold text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                  {highlightText(tool.name, search)}
+                </h3>
+              </Link>
+              <div className="flex items-center gap-1.5 mt-1">
+                {tool.needs_vpn ? (
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                    🪜 VPN Required
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                    ✅ Direct Access
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                toggleCompare(tool.id);
+              }}
+              className={`w-6 h-6 rounded border-2 transition-all duration-300 ease-out flex items-center justify-center ${
+                isSelectedForCompare
+                  ? 'bg-emerald-500 border-emerald-500 text-white'
+                  : 'border-slate-300 dark:border-slate-600 hover:border-emerald-400'
+              }`}
+              aria-label={`Select ${tool.name} for comparison`}
+              title="Select for comparison"
+            >
+              {isSelectedForCompare && (
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              )}
+            </button>
+            <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
+              {tool.pricing}
+            </span>
+          </div>
+        </div>
+
+        {/* Description - linkable to tool page */}
+        <Link href={`/tools/${tool.id}`} className="block">
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-4 mb-4 line-clamp-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+            {highlightText(tool.description, search)}
+          </p>
+        </Link>
+
+        {/* Star Rating */}
+        <div className="flex items-center gap-2 mb-4">
+          <StarRating
+            rating={tool.rating || 4.0}
+            count={tool.rating_count || 0}
+            size="sm"
+          />
+        </div>
+
+        {/* Skill Level & Best For Tags */}
+        <div className="mb-4 space-y-2">
+          {tool.skill_level && (
+            <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
+              {getSkillLevelColors(tool.skill_level).label}
+            </span>
+          )}
+          <div className="flex flex-wrap gap-1.5">
+            {tool.best_for?.slice(0, 3).map((tag: string, i: number) => (
+              <span
+                key={i}
+                className="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="flex items-center justify-between gap-3">
+          <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} whitespace-nowrap`}>
+            {tool.category}
+          </span>
+          
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            <button
+              onClick={() => router.push(`/compare?tool=${tool.id}`)}
+              className="inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
+            >
+              <svg
+                className="w-3.5 h-3.5 sm:w-4 sm:h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01"
+                />
+              </svg>
+              <span className="hidden sm:inline">Compare</span>
+            </button>
+            <a
+              href={getAffiliateLink(tool) || tool.url}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
+            >
+              <svg
+                className="w-3.5 h-3.5 sm:w-4 sm:h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M7 17L17 7"
+                />
+              </svg>
+              <span className="hidden sm:inline">{ctaText}</span>
+            </a>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                toggleSave(tool.id);
+              }}
+              className={`inline-flex items-center justify-center gap-0.5 px-2 min-h-[44px] min-w-[44px] rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ease-out relative overflow-hidden whitespace-nowrap active:scale-[0.98] ${
+                isSaved
+                  ? 'bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300 hover:bg-rose-200 dark:hover:bg-rose-500/30'
+                  : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+              }`}
+              aria-label={isSaved ? `Unsave ${tool.name}` : `Save ${tool.name}`}
+            >
+              <span>{heartBurst && <span className="heart-burst absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />}</span>
+              ❤️ <span className="hidden sm:inline">{isSaved ? 'Saved' : 'Save'}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+});
+
 type Tool = {
   id: number;
   name: string;
@@ -41,7 +266,7 @@ type Tool = {
   languages: string[];
   rating?: number;
   rating_count?: number;
-  skill_level?: string;
+  skill_level?: 'beginner' | 'intermediate' | 'advanced';
   best_for?: string[];
 };
 
@@ -180,33 +405,46 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
 
   // Get search suggestions based on input
   const searchSuggestions = useMemo(() => {
-    if (!search.trim()) {
-      return popularSearches.slice(0, 6);
-    }
-
-    const query = search.toLowerCase();
     const suggestions: { type: string; label: string; value: string; toolId?: number }[] = [];
 
-    // Add matching tools
-    initialTools.forEach(tool => {
-      if (tool.name.toLowerCase().includes(query)) {
+    if (!search.trim()) {
+      // Add categories first
+      suggestions.push(...popularSearches);
+      
+      // Add popular tools sorted by rating_count descending
+      const sortedTools = [...initialTools].sort((a, b) => (b.rating_count || 0) - (a.rating_count || 0));
+      const topTools = sortedTools.slice(0, 8);
+      topTools.forEach(tool => {
         suggestions.push({
           type: 'tool',
           label: tool.name,
           value: tool.name,
-          toolId: tool.id,
+          toolId: tool.id
         });
-      }
-    });
+      });
+    } else {
+      const query = search.toLowerCase();
+      // Add matching tools
+      initialTools.forEach(tool => {
+        if (tool.name.toLowerCase().includes(query)) {
+          suggestions.push({
+            type: 'tool',
+            label: tool.name,
+            value: tool.name,
+            toolId: tool.id,
+          });
+        }
+      });
 
-    // Add matching categories
-    popularSearches.forEach(category => {
-      if (category.label.toLowerCase().includes(query)) {
-        suggestions.push(category);
-      }
-    });
+      // Add matching categories
+      popularSearches.forEach(category => {
+        if (category.label.toLowerCase().includes(query)) {
+          suggestions.push(category);
+        }
+      });
+    }
 
-    return suggestions.slice(0, 8);
+    return suggestions.slice(0, 10);
   }, [search, initialTools]);
 
   // Handle suggestion click
@@ -418,7 +656,7 @@ export default function HomeClient({ initialTools, featuredTools }: HomeClientPr
     }
   };
 
-  const getSkillLevelColors = (level: string) => {
+  const getSkillLevelColors = (level: 'beginner' | 'intermediate' | 'advanced') => {
     switch (level) {
       case 'beginner':
         return {

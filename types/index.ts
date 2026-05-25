@@ -87,6 +87,8 @@ export interface Tool {
   rating_breakdown?: RatingBreakdown;
   use_cases?: UseCase[];
   pros_cons?: ProsCons;
+  skill_level?: 'beginner' | 'intermediate' | 'advanced';
+  best_for?: string[];
 }
 
 export const tools: Tool[] = toolsData as Tool[];

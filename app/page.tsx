@@ -1,11 +1,10 @@
 import tools from '@/data/tools.json';
 import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
-
-type Tool = (typeof tools)[0];
+import type { Tool } from '@/types';
 
 // Helper function to get affiliate link from environment variable or fallback to JSON
-function getAffiliateLink(tool: Tool): string {
+function getAffiliateLink(tool: any): string {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
   let shortEnvVarName = '';
   if (tool.name === 'Rytr') {
@@ -26,7 +25,7 @@ export default function Home() {
   const enrichedTools = tools.map(tool => ({
     ...tool,
     affiliate_link: getAffiliateLink(tool)
-  }));
+  })) as Tool[];
 
   // Select featured tools on server to prevent hydration mismatch
   // Prioritize Chinese tools first, then mix with others
@@ -34,7 +33,7 @@ export default function Home() {
   const allTools = [...enrichedTools];
   
   // Use deterministic selection based on tool IDs
-  const selected: typeof enrichedTools = [];
+  const selected: Tool[] = [];
   
   // Select top 2 Chinese tools first (deterministic)
   const topChineseTools = chineseTools
