@@ -140,6 +140,7 @@ type Tool = {
   pros_cons?: ProsCons;
   rating?: number;
   rating_count?: number;
+  last_updated?: string;
 };
 
 // Helper function to check if a tool has affiliate link
@@ -478,6 +479,19 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
                 <span>Already used by {tool.rating_count.toLocaleString()} users</span>
               </div>
             )}
+            {/* Data Update Status - New Trust Signal */}
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30">
+                <span className="text-lg">✅</span>
+                <span className="font-semibold text-emerald-700 dark:text-emerald-300">Verified</span>
+              </div>
+              {tool.last_updated && (
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-gray-700">
+                  <span className="text-lg">📅</span>
+                  <span className="text-slate-600 dark:text-slate-300">Last updated: {tool.last_updated}</span>
+                </div>
+              )}
+            </div>
           </div>
         </div>
 
