@@ -125,6 +125,65 @@ export default function ComparePage() {
           </div>
         </div>
 
+        {/* Popular Comparisons */}
+        <div className="mb-10">
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
+            🔥 Popular Comparisons
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { name: 'Rytr vs Jasper', tools: ['Rytr', 'Jasper'], category: 'Writing', description: 'AI Writing Assistants' },
+              { name: 'Midjourney vs DALL-E 3', tools: ['Midjourney', 'DALL-E 3'], category: 'Image', description: 'AI Image Generators' },
+              { name: 'ChatGPT vs Claude', tools: ['Claude', 'ChatGPT'], category: 'Writing', description: 'AI Chatbots' },
+              { name: 'Veed vs Descript', tools: ['VEED.io', 'Descript'], category: 'Video', description: 'Video Editors' },
+            ].map((comparison) => {
+              const toolIds = comparison.tools.map(name => {
+                const tool = tools.find(t => t.name.toLowerCase() === name.toLowerCase() || t.name.toLowerCase().includes(name.toLowerCase()));
+                return tool?.id;
+              }).filter(Boolean) as number[];
+              
+              const getCategoryColors = (cat: string) => {
+                switch (cat) {
+                  case 'Writing': return 'bg-blue-500';
+                  case 'Image': return 'bg-violet-500';
+                  case 'Video': return 'bg-indigo-500';
+                  default: return 'bg-slate-500';
+                }
+              };
+              
+              return (
+                <button
+                  key={comparison.name}
+                  onClick={() => {
+                    setTool1Id(String(toolIds[0] || ''));
+                    setTool2Id(String(toolIds[1] || ''));
+                    setTool3Id('');
+                  }}
+                  className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 text-left hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out"
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className={`inline-flex px-2.5 py-1 rounded-full text-xs font-semibold ${getCategoryColors(comparison.category)} text-white`}>
+                      {comparison.category}
+                    </span>
+                    <span className="text-xs text-slate-500 dark:text-slate-400">
+                      {comparison.description}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                    {comparison.name}
+                  </h3>
+                  <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                    <span>Compare now</span>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
         <div className="mb-10 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 sm:p-12 shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
