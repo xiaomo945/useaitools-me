@@ -341,10 +341,15 @@ interface BlogPost {
   date: string;
   description: string;
   category: string;
-  images?: Array<{
+  featured: boolean;
+  thumbnail?: {
     url: string;
     alt: string;
-  }>;
+    caption: string;
+    position?: string;
+    prompt?: string;
+    image_url?: string;
+  };
 }
 
 interface HomeClientProps {
@@ -1407,10 +1412,10 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
                       animationFillMode: 'forwards'
                     }}
                   >
-                    {post.images?.[0] && (
+                    {post.thumbnail && (
                       <img
-                        src={post.images[0].url}
-                        alt={post.images[0].alt}
+                        src={post.thumbnail.url}
+                        alt={post.thumbnail.alt}
                         className="w-full h-40 object-cover rounded-xl mb-4"
                         loading="lazy"
                       />

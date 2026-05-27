@@ -1,0 +1,36 @@
+{
+  "id": 181,
+  "title": "How to Create AI-Generated Explainer Videos in 2026",
+  "slug": "how-to-create-ai-generated-explainer-videos-2026",
+  "date": "2026-05-27",
+  "description": "Learn how to create AI-generated explainer videos in 2026! Turn scripts into professional animated explainers without expensive production.",
+  "style": "女性视角风",
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&h=400&fit=crop",
+      "alt": "Creator making AI-generated explainer video with tools",
+      "caption": "Create explainer videos with AI",
+      "position": "header",
+      "prompt": "Creator making AI-generated explainer video with tools, wide cinematic banner format, ultra detailed, 8k, professional photography, cinematic lighting",
+      "image_url": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&h=400&fit=crop"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=400&fit=crop",
+      "alt": "AI explainer video tool showing script and animation preview",
+      "caption": "AI brings your scripts to life",
+      "position": "mid",
+      "prompt": "AI explainer video tool showing script and animation preview, square format for social sharing, ultra detailed, 8k, professional photography, cinematic lighting",
+      "image_url": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=400&fit=crop"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&h=400&fit=crop",
+      "alt": "CTA encouraging creators to make AI explainer videos",
+      "caption": "Start creating explainer videos today",
+      "position": "cta",
+      "prompt": "CTA encouraging creators to make AI explainer videos, centered composition with text-friendly background, ultra detailed, 8k, professional photography, cinematic lighting",
+      "image_url": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&h=400&fit=crop"
+    }
+  ],
+  "content": "# How to Create AI-Generated Explainer Videos in 2026\n\nExplainer videos are incredibly effective but traditionally expensive. AI tools make them accessible to everyone!\n\nCheck out our [[link:/category/Video|Video category]] for more tools.\n\n---\n\n## Step 1: Write Your Script\n\nStart with a clear, concise script. Use [[link:/tools/23|Rytr]] to help draft and refine your explainer script.\n\n**Try Rytr**: {{AFFILIATE_RYTR}}\n\n---\n\n## Step 2: Generate Voiceover\n\nUse [[link:/tools/97|ElevenLabs]] or Murf AI to create a professional voiceover for your script.\n\n### Voiceover Tips\n- **Choose the right voice**: Match tone to your brand\n- **Adjust pacing**: Don't speak too fast\n- **Add emphasis**: Highlight key phrases\n\n**Try ElevenLabs**: {{AFFILIATE_ELEVENLABS}}\n\n---\n\n## Step 3: Create the Video\n\nUse [[link:/tools/51|VEED]] or Synthesia to create visuals that match your voiceover.\n\n### Options for Visuals\n- **[[link:/tools/51|VEED]]**: Edit your own footage with AI tools\n- **Synthesia**: Use AI avatars to present your content\n- **[[link:/tools/201|Pictory]]**: Turn text into animated videos automatically\n\n---\n\n## Step 4: Polish & Export\n\nUse [[link:/tools/79|Descript]] for final audio tweaks and export your finished video.\n\n---\n\n## Our Explainer Video Toolkit\n\n| Step | Tool | Affiliate |\n|------|------|-----------|\n| Script writing | [[link:/tools/23|Rytr]] | Yes |\n| Voiceover | [[link:/tools/97|ElevenLabs]] | Yes |\n| Video creation | [[link:/tools/51|VEED]] | No |\n| Final edit | [[link:/tools/79|Descript]] | No |\n\nReady to create your AI explainer video? Start with these tools today!\n\nFor more insights, check out [[link:/blog/how-to-create-ai-generated-podcasts-from-scripts-2026|How to Create AI-Generated Podcasts]]\n",
+  "category": "Video"
+}

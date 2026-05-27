@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { blogPosts, type BlogPost } from '@/types';
+import { getBlogPostBySlug, getAllBlogPosts, type BlogPost } from '@/types';
 import ClientBlogDetail from './ClientBlogDetail';
 
 // Extract tool IDs from blog content for recommendation
@@ -80,7 +80,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
     return {
@@ -115,13 +115,14 @@ export default async function BlogDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
 
-  const relatedPosts = getRelatedPosts(post, blogPosts);
+  const allPosts = getAllBlogPosts();
+  const relatedPosts = getRelatedPosts(post, allPosts);
 
   const processedPost = {
     ...post,
