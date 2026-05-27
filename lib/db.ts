@@ -1,18 +1,5 @@
-import Database from 'better-sqlite3';
+import fs from 'fs';
 import path from 'path';
-
-// 数据库连接（使用单例模式）
-let db: Database.Database | null = null;
-
-function getDb(): Database.Database {
-  if (!db) {
-    const dbPath = path.join(process.cwd(), 'data', 'useaitools.db');
-    db = new Database(dbPath, { readonly: true });
-    // WAL mode not compatible with readonly - skip it
-    try { db.pragma('journal_mode = DELETE'); } catch {}
-  }
-  return db;
-}
 
 // ============ 类型定义 ============
 
@@ -69,140 +56,147 @@ export interface BlogLink {
   type: string;
 }
 
+// ============ 数据缓存 ============
+
+let blogIndexCache: BlogPostIndex[] | null = null;
+let toolsCache: Tool[] | null = null;
+
+function getBlogIndexPath(): string {
+  return path.join(process.cwd(), 'data', 'blog-index.json');
+}
+
+function getBlogPostsDir(): string {
+  return path.join(process.cwd(), 'data', 'blog-posts');
+}
+
+function getToolsPath(): string {
+  return path.join(process.cwd(), 'data', 'tools.json');
+}
+
+function loadBlogIndex(): BlogPostIndex[] {
+  if (blogIndexCache) return blogIndexCache;
+  try {
+    const data = JSON.parse(fs.readFileSync(getBlogIndexPath(), 'utf8'));
+    blogIndexCache = data;
+    return data;
+  } catch {
+    return [];
+  }
+}
+
+function loadTools(): Tool[] {
+  if (toolsCache) return toolsCache;
+  try {
+    const data = JSON.parse(fs.readFileSync(getToolsPath(), 'utf8'));
+    toolsCache = data;
+    return data;
+  } catch {
+    return [];
+  }
+}
+
 // ============ 博客文章操作 ============
 
 /**
  * 获取博客文章索引（不含完整内容）
  */
 export function getBlogIndex(): BlogPostIndex[] {
-  const database = getDb();
-  const posts = database.prepare(`
-    SELECT id, title, slug, date, category, description, featured
-    FROM blog_posts
-    ORDER BY date DESC, id DESC
-  `).all() as any[];
-
-  return posts.map(post => ({
-    ...post,
-    featured: Boolean(post.featured),
-    thumbnail: null
-  }));
+  return loadBlogIndex();
 }
 
 /**
  * 按slug获取完整文章
  */
 export function getBlogPostBySlug(slug: string): BlogPost | null {
-  const database = getDb();
-  const post = database.prepare(`
-    SELECT * FROM blog_posts WHERE slug = ?
-  `).get(slug) as any;
-
-  if (!post) return null;
-
-  return {
-    ...post,
-    featured: Boolean(post.featured),
-    images: JSON.parse(post.images || '[]')
-  };
+  const index = loadBlogIndex();
+  const meta = index.find(m => m.slug === slug);
+  if (!meta) return null;
+  return getBlogPostById(meta.id);
 }
 
 /**
  * 按id获取文章
  */
 export function getBlogPostById(id: number): BlogPost | null {
-  const database = getDb();
-  const post = database.prepare(`
-    SELECT * FROM blog_posts WHERE id = ?
-  `).get(id) as any;
-
-  if (!post) return null;
-
-  return {
-    ...post,
-    featured: Boolean(post.featured),
-    images: JSON.parse(post.images || '[]')
-  };
+  try {
+    const postPath = path.join(getBlogPostsDir(), `${id}.json`);
+    if (!fs.existsSync(postPath)) return null;
+    const post = JSON.parse(fs.readFileSync(postPath, 'utf8'));
+    return {
+      ...post,
+      featured: Boolean(post.featured),
+      images: post.images || []
+    };
+  } catch {
+    return null;
+  }
 }
 
 /**
  * 按分类获取文章
  */
 export function getBlogPostsByCategory(category: string): BlogPostIndex[] {
-  const database = getDb();
-  const posts = database.prepare(`
-    SELECT id, title, slug, date, category, description, featured
-    FROM blog_posts
-    WHERE category = ?
-    ORDER BY date DESC, id DESC
-  `).all(category) as any[];
-
-  return posts.map(post => ({
-    ...post,
-    featured: Boolean(post.featured),
-    thumbnail: null
-  }));
+  const index = loadBlogIndex();
+  return index.filter(post => post.category === category);
 }
 
 /**
  * 获取置顶文章
  */
 export function getFeaturedBlogPosts(): BlogPostIndex[] {
-  const database = getDb();
-  const posts = database.prepare(`
-    SELECT id, title, slug, date, category, description, featured
-    FROM blog_posts
-    WHERE featured = 1
-    ORDER BY date DESC, id DESC
-    LIMIT 20
-  `).all() as any[];
-
-  return posts.map(post => ({
-    ...post,
-    featured: true,
-    thumbnail: null
-  }));
+  const index = loadBlogIndex();
+  return index.filter(post => post.featured).slice(0, 20);
 }
 
 /**
  * 搜索文章
  */
 export function searchBlogPosts(query: string): BlogPostIndex[] {
-  const database = getDb();
-  const searchQuery = `%${query}%`;
-  const posts = database.prepare(`
-    SELECT id, title, slug, date, category, description, featured
-    FROM blog_posts
-    WHERE title LIKE ? OR description LIKE ? OR content LIKE ?
-    ORDER BY date DESC, id DESC
-  `).all(searchQuery, searchQuery, searchQuery) as any[];
-
-  return posts.map(post => ({
-    ...post,
-    featured: Boolean(post.featured),
-    thumbnail: null
-  }));
+  const index = loadBlogIndex();
+  const searchQuery = query.toLowerCase();
+  return index.filter(post => 
+    post.title.toLowerCase().includes(searchQuery) ||
+    post.description.toLowerCase().includes(searchQuery)
+  );
 }
 
 /**
  * 获取文章的内链
  */
 export function getBlogPostLinks(fromId: number): BlogLink[] {
-  const database = getDb();
-  return database.prepare(`
-    SELECT from_id, to_id, type FROM blog_links WHERE from_id = ?
-  `).all(fromId) as BlogLink[];
+  const post = getBlogPostById(fromId);
+  if (!post) return [];
+  
+  const links: BlogLink[] = [];
+  const content = post.content;
+  
+  // 提取工具链接
+  const toolLinkRegex = /\[\[link:\/tools\/(\d+)\|([^\]]+)\]\]/g;
+  let match;
+  while ((match = toolLinkRegex.exec(content)) !== null) {
+    links.push({ from_id: fromId, to_id: parseInt(match[1]), type: 'tool' });
+  }
+  
+  // 提取博客链接
+  const blogLinkRegex = /\[\[link:\/blog\/([^|]+)\|([^\]]+)\]\]/g;
+  while ((match = blogLinkRegex.exec(content)) !== null) {
+    links.push({ from_id: fromId, to_id: match[1], type: 'blog' });
+  }
+  
+  // 提取分类链接
+  const categoryLinkRegex = /\[\[link:\/category\/([^|]+)\|([^\]]+)\]\]/g;
+  while ((match = categoryLinkRegex.exec(content)) !== null) {
+    links.push({ from_id: fromId, to_id: 0, type: `category:${match[1]}` });
+  }
+  
+  return links;
 }
 
 /**
  * 获取文章总数
  */
 export function getBlogPostCount(): number {
-  const database = getDb();
-  const result = database.prepare(`
-    SELECT COUNT(*) as count FROM blog_posts
-  `).get() as any;
-  return result.count;
+  return loadBlogIndex().length;
 }
 
 // ============ 工具操作 ============
@@ -211,88 +205,44 @@ export function getBlogPostCount(): number {
  * 获取所有工具
  */
 export function getAllTools(): Tool[] {
-  const database = getDb();
-  const tools = database.prepare(`
-    SELECT * FROM tools ORDER BY id ASC
-  `).all() as any[];
-
-  return tools.map(tool => ({
-    ...tool,
-    needs_vpn: Boolean(tool.needs_vpn),
-    examples: JSON.parse(tool.examples || '[]'),
-    languages: JSON.parse(tool.languages || '["English"]'),
-    rating_breakdown: JSON.parse(tool.rating_breakdown || '{}'),
-    best_for: JSON.parse(tool.best_for || '[]')
-  }));
+  return loadTools();
 }
 
 /**
  * 按id获取工具
  */
 export function getToolById(id: number): Tool | null {
-  const database = getDb();
-  const tool = database.prepare(`
-    SELECT * FROM tools WHERE id = ?
-  `).get(id) as any;
-
-  if (!tool) return null;
-
-  return {
-    ...tool,
-    needs_vpn: Boolean(tool.needs_vpn),
-    examples: JSON.parse(tool.examples || '[]'),
-    languages: JSON.parse(tool.languages || '["English"]'),
-    rating_breakdown: JSON.parse(tool.rating_breakdown || '{}'),
-    best_for: JSON.parse(tool.best_for || '[]')
-  };
+  const tools = loadTools();
+  return tools.find(t => t.id === id) || null;
 }
 
 /**
  * 按分类获取工具
  */
 export function getToolsByCategory(category: string): Tool[] {
-  const database = getDb();
-  const tools = database.prepare(`
-    SELECT * FROM tools WHERE category = ? ORDER BY id ASC
-  `).all(category) as any[];
-
-  return tools.map(tool => ({
-    ...tool,
-    needs_vpn: Boolean(tool.needs_vpn),
-    examples: JSON.parse(tool.examples || '[]'),
-    languages: JSON.parse(tool.languages || '["English"]'),
-    rating_breakdown: JSON.parse(tool.rating_breakdown || '{}'),
-    best_for: JSON.parse(tool.best_for || '[]')
-  }));
+  const tools = loadTools();
+  return tools.filter(t => t.category === category);
 }
 
 /**
  * 获取工具总数
  */
 export function getToolCount(): number {
-  const database = getDb();
-  const result = database.prepare(`
-    SELECT COUNT(*) as count FROM tools
-  `).get() as any;
-  return result.count;
+  return loadTools().length;
 }
 
 /**
  * 获取所有分类
  */
 export function getAllCategories(): string[] {
-  const database = getDb();
-  const categories = database.prepare(`
-    SELECT DISTINCT category FROM blog_posts ORDER BY category
-  `).all() as any[];
-  return categories.map(c => c.category);
+  const index = loadBlogIndex();
+  const categories = new Set(index.map(p => p.category));
+  return Array.from(categories).sort();
 }
 
 // ============ 关闭数据库 ============
 
 export function closeDb(): void {
-  if (db) {
-    db.close();
-    db = null;
-  }
+  blogIndexCache = null;
+  toolsCache = null;
 }
