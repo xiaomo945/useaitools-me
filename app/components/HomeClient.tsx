@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import StarRating from './StarRating';
 import { Dice3, X, ArrowRight, RefreshCw } from 'lucide-react';
+import workflowsData from '@/data/workflows.json';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -364,6 +365,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
   const [selectedPricing, setSelectedPricing] = useState<string>('All');
   const [selectedSkillLevels, setSelectedSkillLevels] = useState<string[]>([]);
   const [selectedBestFor, setSelectedBestFor] = useState<string[]>([]);
+  const [selectedWorkflow, setSelectedWorkflow] = useState<string>('All');
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [showRandomTool, setShowRandomTool] = useState(false);
   const [randomTool, setRandomTool] = useState<Tool | null>(null);
@@ -595,7 +597,15 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
       const matchesBestFor = selectedBestFor.length === 0 || 
         (tool.best_for && tool.best_for.some(tag => selectedBestFor.includes(tag)));
       
-      return matchesSearch && matchesCategory && matchesPricing && matchesSkillLevel && matchesBestFor;
+      // Workflow filter
+      const matchesWorkflow = selectedWorkflow === 'All' || (
+        workflowsData.some((workflow: any) => 
+          workflow.id === selectedWorkflow && 
+          workflow.steps.some((step: any) => step.tool_ids.includes(tool.id))
+        )
+      );
+      
+      return matchesSearch && matchesCategory && matchesPricing && matchesSkillLevel && matchesBestFor && matchesWorkflow;
     });
     
     // 智能排序：Staff Pick(联盟) > 海外工具(needs_vpn) > 按名称字母排序
@@ -614,7 +624,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
       // 3. 按名称字母排序
       return a.name.localeCompare(b.name);
     });
-  }, [search, selectedCategory, selectedPricing, selectedSkillLevels, selectedBestFor, initialTools]);
+  }, [search, selectedCategory, selectedPricing, selectedSkillLevels, selectedBestFor, selectedWorkflow, initialTools]);
 
   const getCategoryColors = (category: string) => {
     switch (category) {
@@ -1065,8 +1075,23 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
               </div>
             </div>
 
+            {/* Workflow Filter - Dropdown */}
+            <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide px-2 sm:px-0">
+              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 whitespace-nowrap">🔗 Workflow:</span>
+              <select
+                value={selectedWorkflow}
+                onChange={(e) => setSelectedWorkflow(e.target.value)}
+                className="px-3 py-2 rounded-full text-xs font-semibold bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all duration-300 min-h-[36px] whitespace-nowrap cursor-pointer hover:border-emerald-300 dark:hover:border-emerald-600 max-w-xs sm:max-w-sm truncate"
+              >
+                <option value="All">All Workflows</option>
+                {(workflowsData as any[]).map((workflow) => (
+                  <option key={workflow.id} value={workflow.id}>{workflow.name_en}</option>
+                ))}
+              </select>
+            </div>
+
             {/* Active Filters Display */}
-            {(selectedPricing !== 'All' || selectedSkillLevels.length > 0 || selectedBestFor.length > 0) && (
+            {(selectedPricing !== 'All' || selectedSkillLevels.length > 0 || selectedBestFor.length > 0 || selectedWorkflow !== 'All') && (
               <div className="flex items-center gap-2 flex-wrap px-2 sm:px-0">
                 <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">Active:</span>
                 {selectedPricing !== 'All' && (
@@ -1104,11 +1129,23 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
                     </svg>
                   </button>
                 ))}
+                {selectedWorkflow !== 'All' && (
+                  <button
+                    onClick={() => setSelectedWorkflow('All')}
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-500/30 transition-colors"
+                  >
+                    🔗 {(workflowsData as any[]).find(w => w.id === selectedWorkflow)?.name_en || selectedWorkflow}
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                )}
                 <button
                   onClick={() => {
                     setSelectedPricing('All');
                     setSelectedSkillLevels([]);
                     setSelectedBestFor([]);
+                    setSelectedWorkflow('All');
                   }}
                   className="px-2.5 py-1 rounded-full text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors"
                 >

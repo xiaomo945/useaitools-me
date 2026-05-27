@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { ArrowRight, Home, Copy, Check, ChevronDown, ArrowLeftRight } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import workflowsData from '@/data/workflows.json';
 
 // Save tool to browsing history
 const saveToHistory = (toolId: number) => {
@@ -312,6 +313,46 @@ const getCategoryColors = (category: Tool['category']) => {
         return { bg: 'bg-slate-100 dark:bg-slate-800', text: 'text-slate-700 dark:text-slate-300', label: '🌱 Beginner' };
     }
   };
+
+type Workflow = {
+  id: string;
+  name: string;
+  name_en: string;
+  category: string;
+  who_for: string;
+  who_for_en: string;
+  description: string;
+  description_en: string;
+  estimated_time: string;
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  steps: Array<{
+    step: number;
+    title: string;
+    title_en: string;
+    tool_ids: number[];
+    description: string;
+    description_en: string;
+  }>;
+};
+
+const getRelatedWorkflows = (toolId: number): Workflow[] => {
+  return (workflowsData as any).filter((workflow: Workflow) =>
+    workflow.steps.some((step: any) => step.tool_ids.includes(toolId))
+  );
+};
+
+const getDifficultyColor = (difficulty: string) => {
+  switch (difficulty) {
+    case 'beginner':
+      return { bg: 'bg-emerald-100 dark:bg-emerald-500/20', text: 'text-emerald-700 dark:text-emerald-300' };
+    case 'intermediate':
+      return { bg: 'bg-amber-100 dark:bg-amber-500/20', text: 'text-amber-700 dark:text-amber-300' };
+    case 'advanced':
+      return { bg: 'bg-rose-100 dark:bg-rose-500/20', text: 'text-rose-700 dark:text-rose-300' };
+    default:
+      return { bg: 'bg-slate-100 dark:bg-slate-800', text: 'text-slate-700 dark:text-slate-300' };
+  }
+};
 
 // Export function
 export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; relatedTools: Tool[] }) {
@@ -685,6 +726,67 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
             ))}
           </div>
         </div>
+
+        {/* Related Workflows Section */}
+        {getRelatedWorkflows(tool.id).length > 0 && (
+          <div className="bg-gradient-to-br from-emerald-50/50 to-teal-50/50 dark:from-emerald-900/10 dark:to-teal-900/10 border border-emerald-200/60 dark:border-emerald-800/40 rounded-3xl p-8 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/25">
+                <span className="text-white text-lg">🔗</span>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Related AI Workflows</h2>
+                <p className="text-sm text-slate-500 dark:text-gray-400">Complete workflows that include {tool.name}</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              {getRelatedWorkflows(tool.id).map((workflow, index) => {
+                const stepWithThisTool = workflow.steps.find((step: any) => step.tool_ids.includes(tool.id));
+                return (
+                  <Link
+                    key={workflow.id}
+                    href={`/workflows/${workflow.id}`}
+                    className="group block bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800/80 rounded-2xl p-5 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 ease-out animate-fade-in-up"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    <div className="flex items-start justify-between gap-4 mb-3">
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-lg text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                          {workflow.name_en}
+                        </h3>
+                        <p className="text-sm text-slate-600 dark:text-gray-300 mt-1 line-clamp-2">
+                          {workflow.description_en}
+                        </p>
+                      </div>
+                      <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 mt-1" />
+                    </div>
+                    <div className="flex flex-wrap items-center gap-3 mt-3">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                        ⏱️ {workflow.estimated_time}
+                      </span>
+                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${getDifficultyColor(workflow.difficulty).bg} ${getDifficultyColor(workflow.difficulty).text}`}>
+                        {workflow.difficulty.charAt(0).toUpperCase() + workflow.difficulty.slice(1)}
+                      </span>
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-teal-100 dark:bg-teal-500/20 text-teal-700 dark:text-teal-300">
+                        🎯 {workflow.steps.length} steps
+                      </span>
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300">
+                        👤 {workflow.who_for_en}
+                      </span>
+                    </div>
+                    {stepWithThisTool && (
+                      <div className="mt-3 pt-3 border-t border-slate-100 dark:border-gray-800">
+                        <p className="text-xs text-slate-500 dark:text-slate-400">
+                          Used in Step {stepWithThisTool.step}: <span className="font-medium text-slate-700 dark:text-slate-300">{stepWithThisTool.title_en}</span>
+                        </p>
+                      </div>
+                    )}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Examples Section */}
         {tool.examples && tool.examples.length > 0 && (

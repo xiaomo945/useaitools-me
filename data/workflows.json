@@ -1,0 +1,510 @@
+[
+  {
+    "id": "wf-001",
+    "name": "AI短视频制作全流程",
+    "name_en": "Complete AI Short Video Production",
+    "category": "Video",
+    "who_for": "社交媒体运营、内容创作者",
+    "who_for_en": "Social media managers, content creators",
+    "description": "从脚本撰写到视频生成、配音、字幕，一站式AI短视频制作流程",
+    "description_en": "End-to-end AI short video production from script to subtitles",
+    "estimated_time": "45分钟",
+    "difficulty": "beginner",
+    "steps": [
+      {
+        "step": 1,
+        "title": "撰写视频脚本",
+        "title_en": "Write Video Script",
+        "tool_ids": [23, 18],
+        "description": "使用AI写作工具生成短视频脚本",
+        "description_en": "Use AI writing tools to generate short video scripts"
+      },
+      {
+        "step": 2,
+        "title": "生成视频素材",
+        "title_en": "Generate Video Footage",
+        "tool_ids": [36, 45],
+        "description": "将脚本转换为视频，自动匹配素材",
+        "description_en": "Convert script to video with auto B-roll matching"
+      },
+      {
+        "step": 3,
+        "title": "添加AI配音",
+        "title_en": "Add AI Voiceover",
+        "tool_ids": [40, 41],
+        "description": "使用AI语音生成自然配音",
+        "description_en": "Generate natural voiceover with AI"
+      },
+      {
+        "step": 4,
+        "title": "自动添加字幕",
+        "title_en": "Auto Add Subtitles",
+        "tool_ids": [37],
+        "description": "AI自动识别语音并添加多语言字幕",
+        "description_en": "AI automatically recognizes speech and adds multilingual subtitles"
+      },
+      {
+        "step": 5,
+        "title": "剪辑与发布",
+        "title_en": "Edit and Publish",
+        "tool_ids": [89],
+        "description": "快速剪辑并发布到社交媒体",
+        "description_en": "Quick edit and publish to social media"
+      }
+    ]
+  },
+  {
+    "id": "wf-002",
+    "name": "AI博客文章从构思到发布",
+    "name_en": "AI Blog Post from Concept to Publication",
+    "category": "Writing",
+    "who_for": "内容营销人员、博客作者",
+    "who_for_en": "Content marketers, bloggers",
+    "description": "从主题研究、大纲生成、文章撰写、SEO优化到配图，完整的AI博客创作流程",
+    "description_en": "Complete AI blog creation from research to SEO-optimized publication",
+    "estimated_time": "60分钟",
+    "difficulty": "beginner",
+    "steps": [
+      {
+        "step": 1,
+        "title": "主题研究与关键词",
+        "title_en": "Topic Research & Keywords",
+        "tool_ids": [23, 83],
+        "description": "使用AI研究热门话题和关键词",
+        "description_en": "Research trending topics and keywords with AI"
+      },
+      {
+        "step": 2,
+        "title": "生成文章大纲",
+        "title_en": "Generate Article Outline",
+        "tool_ids": [23, 18],
+        "description": "AI根据关键词生成结构化大纲",
+        "description_en": "AI generates structured outline from keywords"
+      },
+      {
+        "step": 3,
+        "title": "撰写正文",
+        "title_en": "Write Content",
+        "tool_ids": [23, 18, 74],
+        "description": "使用AI写作工具逐段生成内容",
+        "description_en": "Generate content section by section with AI writing tools"
+      },
+      {
+        "step": 4,
+        "title": "生成配图",
+        "title_en": "Generate Featured Images",
+        "tool_ids": [1, 12],
+        "description": "AI生成博客配图和社交媒体封面",
+        "description_en": "AI generates featured images and social covers"
+      },
+      {
+        "step": 5,
+        "title": "SEO优化与发布",
+        "title_en": "SEO Optimization & Publish",
+        "tool_ids": [83],
+        "description": "AI检查SEO要素并给出优化建议",
+        "description_en": "AI checks SEO elements and provides optimization suggestions"
+      }
+    ]
+  },
+  {
+    "id": "wf-003",
+    "name": "AI产品摄影与电商图",
+    "name_en": "AI Product Photography for E-commerce",
+    "category": "Image",
+    "who_for": "电商卖家、产品摄影师",
+    "who_for_en": "E-commerce sellers, product photographers",
+    "description": "无需专业摄影设备，用AI生成高质量产品图、场景图和电商素材",
+    "description_en": "Generate high-quality product photos without professional equipment",
+    "estimated_time": "30分钟",
+    "difficulty": "beginner",
+    "steps": [
+      {
+        "step": 1,
+        "title": "产品抠图",
+        "title_en": "Product Cutout",
+        "tool_ids": [96],
+        "description": "AI自动去除产品背景",
+        "description_en": "AI automatically removes product background"
+      },
+      {
+        "step": 2,
+        "title": "生成场景图",
+        "title_en": "Generate Lifestyle Images",
+        "tool_ids": [1, 12],
+        "description": "AI生成产品使用场景和生活方式图片",
+        "description_en": "AI generates usage scenarios and lifestyle images"
+      },
+      {
+        "step": 3,
+        "title": "优化与增强",
+        "title_en": "Enhance and Optimize",
+        "tool_ids": [95],
+        "description": "AI增强图片质量和色彩",
+        "description_en": "AI enhances image quality and colors"
+      },
+      {
+        "step": 4,
+        "title": "批量生成变体",
+        "title_en": "Batch Generate Variations",
+        "tool_ids": [1, 93],
+        "description": "生成多角度、多背景的产品图",
+        "description_en": "Generate multi-angle, multi-background product images"
+      }
+    ]
+  },
+  {
+    "id": "wf-004",
+    "name": "AI有声书制作",
+    "name_en": "AI Audiobook Production",
+    "category": "Audio",
+    "who_for": "作家、内容创作者、出版商",
+    "who_for_en": "Authors, content creators, publishers",
+    "description": "从文稿到专业级有声书，全流程AI语音制作",
+    "description_en": "Full AI voice production from manuscript to professional audiobook",
+    "estimated_time": "3小时",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "title": "文稿预处理",
+        "title_en": "Manuscript Preparation",
+        "tool_ids": [83],
+        "description": "使用AI整理文稿格式和结构",
+        "description_en": "Use AI to organize manuscript format and structure"
+      },
+      {
+        "step": 2,
+        "title": "选择声音角色",
+        "title_en": "Choose Voice Characters",
+        "tool_ids": [40, 41],
+        "description": "为不同角色选择合适的AI声音",
+        "description_en": "Select appropriate AI voices for different characters"
+      },
+      {
+        "step": 3,
+        "title": "生成语音",
+        "title_en": "Generate Voiceover",
+        "tool_ids": [40, 41],
+        "description": "AI批量生成章节语音",
+        "description_en": "AI batch generates chapter voiceovers"
+      },
+      {
+        "step": 4,
+        "title": "添加背景音乐",
+        "title_en": "Add Background Music",
+        "tool_ids": [98, 99],
+        "description": "AI生成或选择合适的背景音乐",
+        "description_en": "AI generates or selects appropriate background music"
+      },
+      {
+        "step": 5,
+        "title": "混音与导出",
+        "title_en": "Mixing and Export",
+        "tool_ids": [97],
+        "description": "AI自动混音并导出为有声书格式",
+        "description_en": "AI auto-mixes and exports in audiobook format"
+      }
+    ]
+  },
+  {
+    "id": "wf-005",
+    "name": "AI代码开发与自动化审查",
+    "name_en": "AI Code Development & Review",
+    "category": "Code",
+    "who_for": "软件开发人员、技术团队",
+    "who_for_en": "Software developers, engineering teams",
+    "description": "从代码编写、自动补全、测试生成到安全审计的AI辅助开发全流程",
+    "description_en": "AI-assisted development from coding to security audit",
+    "estimated_time": "持续",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "title": "AI代码补全",
+        "title_en": "AI Code Completion",
+        "tool_ids": [43, 102, 105],
+        "description": "使用AI助手进行实时代码补全",
+        "description_en": "Use AI assistants for real-time code completion"
+      },
+      {
+        "step": 2,
+        "title": "自动生成测试",
+        "title_en": "Auto-generate Tests",
+        "tool_ids": [43, 107],
+        "description": "AI根据代码自动生成单元测试",
+        "description_en": "AI auto-generates unit tests from code"
+      },
+      {
+        "step": 3,
+        "title": "代码审查",
+        "title_en": "Code Review",
+        "tool_ids": [106, 43],
+        "description": "AI自动审查代码质量和安全问题",
+        "description_en": "AI automatically reviews code quality and security"
+      },
+      {
+        "step": 4,
+        "title": "生成文档",
+        "title_en": "Generate Documentation",
+        "tool_ids": [43, 108],
+        "description": "AI自动生成API文档和代码注释",
+        "description_en": "AI auto-generates API docs and code comments"
+      }
+    ]
+  },
+  {
+    "id": "wf-006",
+    "name": "AI社交媒体运营",
+    "name_en": "AI Social Media Management",
+    "category": "Productivity",
+    "who_for": "社交媒体经理、品牌营销人员",
+    "who_for_en": "Social media managers, brand marketers",
+    "description": "从内容规划、文案撰写、配图生成到排期发布的完整社交媒体工作流",
+    "description_en": "Complete social media workflow from content planning to scheduling",
+    "estimated_time": "2小时/周",
+    "difficulty": "beginner",
+    "steps": [
+      {
+        "step": 1,
+        "title": "内容日历规划",
+        "title_en": "Content Calendar Planning",
+        "tool_ids": [83],
+        "description": "AI根据趋势规划一周内容",
+        "description_en": "AI plans weekly content based on trends"
+      },
+      {
+        "step": 2,
+        "title": "撰写社交媒体文案",
+        "title_en": "Write Social Media Copy",
+        "tool_ids": [23, 74],
+        "description": "AI生成各平台适配的文案",
+        "description_en": "AI generates platform-optimized copy"
+      },
+      {
+        "step": 3,
+        "title": "生成配图",
+        "title_en": "Generate Visual Content",
+        "tool_ids": [93, 95],
+        "description": "AI生成社交媒体配图和视频缩略图",
+        "description_en": "AI generates social media images and video thumbnails"
+      },
+      {
+        "step": 4,
+        "title": "排期发布",
+        "title_en": "Schedule and Publish",
+        "tool_ids": [110],
+        "description": "AI选择最佳发布时间并自动排期",
+        "description_en": "AI selects optimal posting times and auto-schedules"
+      },
+      {
+        "step": 5,
+        "title": "数据分析",
+        "title_en": "Analytics and Optimization",
+        "tool_ids": [113],
+        "description": "AI分析帖子表现并给出优化建议",
+        "description_en": "AI analyzes post performance and provides optimization suggestions"
+      }
+    ]
+  },
+  {
+    "id": "wf-007",
+    "name": "AI在线课程制作",
+    "name_en": "AI Online Course Creation",
+    "category": "Video",
+    "who_for": "教育工作者、培训师、知识博主",
+    "who_for_en": "Educators, trainers, knowledge creators",
+    "description": "从课程大纲、视频录制、配音、字幕到平台发布的完整课程制作流程",
+    "description_en": "Complete course production from outline to platform publishing",
+    "estimated_time": "8小时",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "title": "课程大纲设计",
+        "title_en": "Course Outline Design",
+        "tool_ids": [83, 23],
+        "description": "AI辅助设计课程结构和章节",
+        "description_en": "AI assists in designing course structure and chapters"
+      },
+      {
+        "step": 2,
+        "title": "生成教学内容",
+        "title_en": "Generate Teaching Content",
+        "tool_ids": [36, 38],
+        "description": "将教学内容转为视频或AI讲师视频",
+        "description_en": "Convert teaching content to video or AI instructor video"
+      },
+      {
+        "step": 3,
+        "title": "屏幕录制与演示",
+        "title_en": "Screen Recording & Demo",
+        "tool_ids": [37],
+        "description": "录制操作演示并自动标注",
+        "description_en": "Record operation demos with auto annotations"
+      },
+      {
+        "step": 4,
+        "title": "添加多语言字幕",
+        "title_en": "Add Multilingual Subtitles",
+        "tool_ids": [37],
+        "description": "AI自动识别并添加多语言字幕",
+        "description_en": "AI auto-recognizes and adds multilingual subtitles"
+      },
+      {
+        "step": 5,
+        "title": "课程测验生成",
+        "title_en": "Generate Course Quizzes",
+        "tool_ids": [23, 18],
+        "description": "AI根据课程内容自动生成测验题",
+        "description_en": "AI auto-generates quiz questions from course content"
+      }
+    ]
+  },
+  {
+    "id": "wf-008",
+    "name": "AI销售邮件自动化",
+    "name_en": "AI Sales Email Automation",
+    "category": "Productivity",
+    "who_for": "销售人员、业务开发经理",
+    "who_for_en": "Sales professionals, business development managers",
+    "description": "从客户研究、个性化邮件撰写、A/B测试到自动跟进的销售邮件工作流",
+    "description_en": "Sales email workflow from research to automated follow-ups",
+    "estimated_time": "1小时/天",
+    "difficulty": "beginner",
+    "steps": [
+      {
+        "step": 1,
+        "title": "客户画像研究",
+        "title_en": "Customer Research",
+        "tool_ids": [83],
+        "description": "AI分析目标客户和行业背景",
+        "description_en": "AI analyzes target customers and industry context"
+      },
+      {
+        "step": 2,
+        "title": "个性化邮件撰写",
+        "title_en": "Write Personalized Emails",
+        "tool_ids": [23, 18],
+        "description": "AI生成针对每个客户的个性化邮件",
+        "description_en": "AI generates personalized emails for each customer"
+      },
+      {
+        "step": 3,
+        "title": "A/B测试",
+        "title_en": "A/B Testing",
+        "tool_ids": [110],
+        "description": "AI自动测试不同主题行和内容",
+        "description_en": "AI auto-tests different subject lines and content"
+      },
+      {
+        "step": 4,
+        "title": "自动跟进",
+        "title_en": "Automated Follow-ups",
+        "tool_ids": [110, 111],
+        "description": "AI根据回复情况自动发送跟进邮件",
+        "description_en": "AI auto-sends follow-up emails based on responses"
+      }
+    ]
+  },
+  {
+    "id": "wf-009",
+    "name": "AI播客制作",
+    "name_en": "AI Podcast Production",
+    "category": "Audio",
+    "who_for": "播客主持人、内容创作者",
+    "who_for_en": "Podcast hosts, content creators",
+    "description": "从选题策划、脚本撰写、录音、剪辑到发布的完整播客制作流程",
+    "description_en": "Complete podcast production from topic selection to publishing",
+    "estimated_time": "4小时/期",
+    "difficulty": "intermediate",
+    "steps": [
+      {
+        "step": 1,
+        "title": "选题策划",
+        "title_en": "Topic Planning",
+        "tool_ids": [83, 23],
+        "description": "AI研究热门话题并生成节目大纲",
+        "description_en": "AI researches trending topics and generates show outline"
+      },
+      {
+        "step": 2,
+        "title": "脚本撰写",
+        "title_en": "Script Writing",
+        "tool_ids": [23, 18],
+        "description": "AI辅助撰写播客脚本和提示词",
+        "description_en": "AI assists in writing podcast scripts and cues"
+      },
+      {
+        "step": 3,
+        "title": "录音与降噪",
+        "title_en": "Recording & Noise Reduction",
+        "tool_ids": [97],
+        "description": "AI自动降噪和音频增强",
+        "description_en": "AI auto noise reduction and audio enhancement"
+      },
+      {
+        "step": 4,
+        "title": "剪辑与配乐",
+        "title_en": "Editing & Music",
+        "tool_ids": [97, 99],
+        "description": "AI剪辑音频并添加背景音乐",
+        "description_en": "AI edits audio and adds background music"
+      },
+      {
+        "step": 5,
+        "title": "转写与发布",
+        "title_en": "Transcription & Publishing",
+        "tool_ids": [97],
+        "description": "AI生成文字稿并发布到各平台",
+        "description_en": "AI generates transcripts and publishes to platforms"
+      }
+    ]
+  },
+  {
+    "id": "wf-010",
+    "name": "AI周报与工作汇报",
+    "name_en": "AI Weekly Report & Status Update",
+    "category": "Productivity",
+    "who_for": "项目经理、团队负责人、自由职业者",
+    "who_for_en": "Project managers, team leads, freelancers",
+    "description": "自动收集工作数据、生成分析报告、撰写专业周报的完整流程",
+    "description_en": "Automated data collection, analysis report generation, and professional weekly report writing",
+    "estimated_time": "15分钟",
+    "difficulty": "beginner",
+    "steps": [
+      {
+        "step": 1,
+        "title": "数据汇总",
+        "title_en": "Data Collection",
+        "tool_ids": [83],
+        "description": "AI从各平台自动收集工作数据",
+        "description_en": "AI auto-collects work data from various platforms"
+      },
+      {
+        "step": 2,
+        "title": "数据分析",
+        "title_en": "Data Analysis",
+        "tool_ids": [113],
+        "description": "AI分析本周完成的工作和进度",
+        "description_en": "AI analyzes completed work and progress"
+      },
+      {
+        "step": 3,
+        "title": "撰写周报",
+        "title_en": "Write Weekly Report",
+        "tool_ids": [23, 18],
+        "description": "AI根据数据自动生成专业周报",
+        "description_en": "AI auto-generates professional weekly report from data"
+      },
+      {
+        "step": 4,
+        "title": "下周计划",
+        "title_en": "Next Week Planning",
+        "tool_ids": [23, 84],
+        "description": "AI辅助制定下周工作计划",
+        "description_en": "AI assists in creating next week's work plan"
+      }
+    ]
+  }
+]
