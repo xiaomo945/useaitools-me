@@ -6,6 +6,7 @@ import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
 import CategoryHero from './CategoryHero';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import CategoryDecisionGuide from '@/app/components/CategoryDecisionGuide';
 
 type Category = Tool['category'];
 
@@ -278,6 +279,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
               </div>
             );
             })}
+          </div>
+
+          {/* Decision Guide Component */}
+          <div className="mt-16">
+            <CategoryDecisionGuide category={category} />
           </div>
 
           <div className="text-center mt-12">
