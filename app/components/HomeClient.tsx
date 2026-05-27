@@ -1604,6 +1604,51 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
         {/* Gradient Separator Line */}
         <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 dark:via-emerald-700/40 to-transparent mb-16 mx-auto max-w-2xl" />
 
+        {/* Latest In-Depth Reviews - High-value comparison articles */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
+              📝 Latest In-Depth Reviews
+            </h2>
+            <p className="text-slate-600 dark:text-gray-400">
+              Detailed comparisons and honest reviews to help you choose the right tool
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[
+              { title: "Rytr vs QuillBot vs Writesonic: Best AI Writing Tool 2026", slug: "rytr-vs-quillbot-vs-writesonic-best-ai-writing-tool-2026", category: "Writing", emoji: "✍️" },
+              { title: "VEED.io vs Descript vs Kapwing: Best AI Video Editor 2026", slug: "veed-io-vs-descript-vs-kapwing-best-ai-video-editor-2026", category: "Video", emoji: "🎬" },
+              { title: "Jasper vs Copy.ai in 2026: Which AI Writer is Best for Your Business?", slug: "jasper-vs-copy-ai-comparison-2026", category: "Writing", emoji: "📝" },
+              { title: "Midjourney vs DALL-E 3 in 2026: The Ultimate AI Image Generator Battle", slug: "midjourney-vs-dalle3-image-comparison-2026", category: "Image", emoji: "🎨" },
+              { title: "Synthesia vs HeyGen in 2026: The Ultimate AI Avatar Video Showdown", slug: "synthesia-vs-heygen-avatar-video-2026", category: "Video", emoji: "🤖" },
+            ].map((post, index) => {
+              const colors = getCategoryColors(post.category);
+              return (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 hover:border-emerald-300 dark:hover:border-emerald-500/30 transition-all duration-300 ease-out"
+                >
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-2xl">{post.emoji}</span>
+                    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold ${colors.bg}/10 ${colors.textLight} dark:${colors.bgDark} dark:${colors.text}`}>
+                      {post.category}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-base text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 leading-snug">
+                    {post.title}
+                  </h3>
+                  <div className="flex items-center text-emerald-600 dark:text-emerald-400 font-semibold text-sm mt-3">
+                    Read Review
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+
         {/* Tools Grid */}
         <div ref={toolsGridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 transition-all duration-300 ease-out">
           {filteredTools.map((tool, index) => {

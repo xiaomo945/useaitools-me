@@ -8,7 +8,8 @@ function getDb(): Database.Database {
   if (!db) {
     const dbPath = path.join(process.cwd(), 'data', 'useaitools.db');
     db = new Database(dbPath, { readonly: true });
-    db.pragma('journal_mode = WAL');
+    // WAL mode not compatible with readonly - skip it
+    try { db.pragma('journal_mode = DELETE'); } catch {}
   }
   return db;
 }
