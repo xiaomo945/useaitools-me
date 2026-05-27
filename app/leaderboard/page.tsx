@@ -54,7 +54,7 @@ export default function LeaderboardPage() {
   });
 
   const newestTools = [...tools]
-    .sort((a, b) => b.id - a.id)
+    .sort((a, b) => Number(b.id) - Number(a.id))
     .slice(0, 10);
 
   const popularTools = [...tools]

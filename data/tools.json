@@ -1170,7 +1170,7 @@
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://rytr.me",
-    "affiliate_link": "",
+    "affiliate_link": "{{AFFILIATE_RYTR}}",
     "icon_url": "",
     "examples": [
       {
@@ -1263,7 +1263,7 @@
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://veed.io",
-    "affiliate_link": "",
+    "affiliate_link": "{{AFFILIATE_VEED}}",
     "icon_url": "",
     "examples": [
       {
@@ -2708,7 +2708,7 @@
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://notion.so",
-    "affiliate_link": "",
+    "affiliate_link": "{{AFFILIATE_NOTION}}",
     "icon_url": "",
     "examples": [
       {
@@ -3005,7 +3005,7 @@
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://elevenlabs.io",
-    "affiliate_link": "",
+    "affiliate_link": "{{AFFILIATE_ELEVENLABS}}",
     "icon_url": "",
     "examples": [
       {
@@ -3107,7 +3107,7 @@
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://notion.so",
-    "affiliate_link": "",
+    "affiliate_link": "{{AFFILIATE_NOTION}}",
     "icon_url": "",
     "examples": [
       {
@@ -3413,5 +3413,14 @@
       "Beginners",
       "Quick Results"
     ]
+  },
+  {
+    "id": "grammarly",
+    "name": "Grammarly",
+    "description": "AI-powered writing assistant used by 30M+ daily active users worldwide. Checks for grammar, spelling, punctuation, and style — with tone suggestions and clarity improvements. Integrates seamlessly with Chrome, Word, Gmail, and 500+ other apps. The gold standard for professional writing.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://grammarly.com",
+    "affiliate_link": "{{AFFILIATE_GRAMMARLY}}"
   }
 ]
