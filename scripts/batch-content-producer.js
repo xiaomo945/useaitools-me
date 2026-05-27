@@ -1,8 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-// 导入配图生成器
+// 导入模块
 const { generateImagePromptsForArticle } = require('./generate-image-prompts');
+const { generateImagesForArticle } = require('./generate-images');
 
 // 内容质量标准模板
 const contentStandards = {
@@ -271,6 +272,15 @@ async function run() {
     // 生成配图提示词
     console.log('   🎨 生成配图提示词...');
     article.images = generateImagePromptsForArticle(article);
+    
+    // 尝试生成实际图片
+    console.log('   🖼️  尝试生成实际图片...');
+    try {
+      article = await generateImagesForArticle(article);
+      console.log(`   ✅ 图片生成成功！`);
+    } catch (error) {
+      console.log(`   ⚠️  图片生成失败，使用默认图片: ${error.message}`);
+    }
     
     newArticles.push(article);
     console.log(`   ✅ 文章 ${articleId} 生成完成`);
