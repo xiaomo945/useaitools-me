@@ -38,7 +38,7 @@ export interface BlogPostMeta {
   thumbnail?: BlogImage;
 }
 
-export const blogIndex: BlogPostMeta[] = blogIndexData as BlogPostMeta[];
+export const blogIndex: BlogPostMeta[] = blogIndexData as unknown as BlogPostMeta[];
 
 // 辅助函数：通过ID获取完整博客文章
 export function getBlogPostById(id: number): BlogPost | null {
@@ -129,4 +129,4 @@ export interface Tool {
   best_for?: string[];
 }
 
-export const tools: Tool[] = toolsData as Tool[];
+export const tools: Tool[] = toolsData as unknown as Tool[];

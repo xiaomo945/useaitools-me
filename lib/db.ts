@@ -52,7 +52,7 @@ export interface Tool {
 
 export interface BlogLink {
   from_id: number;
-  to_id: number;
+  to_id: string | number;
   type: string;
 }
 
