@@ -285,6 +285,13 @@ const hasAffiliateLink = (tool: Tool): boolean => {
     shortEnvVarName = 'AFFILIATE_PICTORY';
   }
   const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
+  const baseLink = envLink || tool.affiliate_link;
+  
+  // Skip if it's a placeholder
+  if (baseLink && (baseLink.includes('{{') || baseLink.includes('AFFILIATE_'))) {
+    return false;
+  }
+  
   return !!(envLink || tool.affiliate_link);
 };
 
@@ -305,6 +312,11 @@ const getAffiliateLink = (tool: Tool): string => {
   const baseLink = envLink || tool.affiliate_link;
   
   if (!baseLink) return '';
+  
+  // Skip if it's a placeholder (starts with {{
+  if (baseLink.includes('{{') || baseLink.includes('AFFILIATE_')) {
+    return '';
+  }
   
   // Add UTM parameters for tracking
   const url = new URL(baseLink);

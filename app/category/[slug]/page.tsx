@@ -84,7 +84,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const categoryName = categoryNames[category];
   const description = categoryDescriptions[category];
-  const title = `${categoryName} AI Tools - Use AI Tools`;
+  const title = `Best ${categoryName} AI Tools in 2026 | Use AI Tools`;
 
   return {
     title,

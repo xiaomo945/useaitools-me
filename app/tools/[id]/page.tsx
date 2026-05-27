@@ -70,7 +70,13 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     };
   }
   
-  const title = `${tool.name} – Use AI Tools`;
+  const baseTitle = `${tool.name}`;
+  const maxTitleLength = 60;
+  const suffix = ' - Review, Pricing & Features | Use AI Tools';
+  const fullSuffix = baseTitle + suffix;
+  const title = fullSuffix.length > maxTitleLength 
+    ? `${tool.name.slice(0, maxTitleLength - suffix.length - 3)}...${suffix}`
+    : fullSuffix;
   const description = tool.description.slice(0, 160);
 
   const categoryFaqs: Record<string, { question: string; answer: string }[]> = {
