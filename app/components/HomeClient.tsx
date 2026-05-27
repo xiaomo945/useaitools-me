@@ -4,6 +4,7 @@ import React, { useState, useMemo, useRef, useEffect, memo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import StarRating from './StarRating';
+import { Dice3, X, ArrowRight, RefreshCw } from 'lucide-react';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -347,6 +348,8 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
   const [selectedSkillLevels, setSelectedSkillLevels] = useState<string[]>([]);
   const [selectedBestFor, setSelectedBestFor] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [showRandomTool, setShowRandomTool] = useState(false);
+  const [randomTool, setRandomTool] = useState<Tool | null>(null);
   const router = useRouter();
   const toolsGridRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -357,6 +360,22 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
   const [ctaVariant, setCtaVariant] = useState<keyof typeof ctaVariants>('A');
   const heartBurstRefs = useRef<{ [key: number]: HTMLSpanElement | null }>({});
   const categoryButtonsRef = useRef<(HTMLButtonElement | null)[]>([]);
+  
+  // 获取随机工具
+  const getRandomTool = () => {
+    const randomIndex = Math.floor(Math.random() * initialTools.length);
+    setRandomTool(initialTools[randomIndex]);
+    setShowRandomTool(true);
+  };
+  
+  // 切换另一个随机工具
+  const tryAnotherTool = () => {
+    let newIndex;
+    do {
+      newIndex = Math.floor(Math.random() * initialTools.length);
+    } while (randomTool && initialTools[newIndex].id === randomTool.id && initialTools.length > 1);
+    setRandomTool(initialTools[newIndex]);
+  };
   
   // Load localStorage data after mount (SSR-safe)
   useEffect(() => {
@@ -1183,6 +1202,101 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
             </div>
           </div>
         </div>
+
+        {/* Random AI Tool Explorer */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
+              🎲 Discover Random AI Tool
+            </h2>
+            <p className="text-slate-600 dark:text-gray-400">
+              Feeling adventurous? Let us surprise you with a random AI tool!
+            </p>
+          </div>
+          
+          <div className="flex justify-center">
+            <button
+              onClick={getRandomTool}
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-2xl shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/35 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300"
+            >
+              <Dice3 className="w-6 h-6" />
+              Roll the Dice
+            </button>
+          </div>
+        </div>
+
+        {/* Random Tool Modal */}
+        {showRandomTool && randomTool && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+            <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden animate-in fade-in zoom-in duration-200">
+              <div className="p-8">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-12 h-12 rounded-xl ${getCategoryColors(randomTool.category).bg}/10 flex items-center justify-center text-2xl font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                      {randomTool.name.charAt(0)}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 dark:text-white">{randomTool.name}</h3>
+                      <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold ${getCategoryColors(randomTool.category).bg} text-white`}>
+                        {randomTool.category}
+                      </span>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setShowRandomTool(false)}
+                    className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                  >
+                    <X className="w-5 h-5 text-slate-500" />
+                  </button>
+                </div>
+                
+                <p className="text-slate-600 dark:text-gray-300 mb-4 leading-relaxed">
+                  {randomTool.description}
+                </p>
+                
+                <div className="flex items-center gap-4 mb-6">
+                  <StarRating rating={randomTool.rating || 4.0} size="sm" />
+                  {randomTool.rating_count && (
+                    <span className="text-sm text-slate-500 dark:text-slate-400">
+                      ({randomTool.rating_count} reviews)
+                    </span>
+                  )}
+                </div>
+                
+                {/* Best For Tags */}
+                {randomTool.best_for && randomTool.best_for.length > 0 && (
+                  <div className="mb-6">
+                    <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-2">Best For:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {randomTool.best_for.map((tag: string, i: number) => (
+                        <span key={i} className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                
+                <div className="flex gap-3">
+                  <button
+                    onClick={tryAnotherTool}
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-purple-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300"
+                  >
+                    <RefreshCw className="w-4 h-4" />
+                    Try Another
+                  </button>
+                  <Link
+                    href={`/tools/${randomTool.id}`}
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5 transition-all duration-300"
+                  >
+                    View Details
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Recent Blog Posts */}
         <div className="mb-16">

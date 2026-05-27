@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { ArrowRight, Home, Copy, Check, ChevronDown } from 'lucide-react';
+import { ArrowRight, Home, Copy, Check, ChevronDown, ArrowLeftRight } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 
@@ -487,24 +487,23 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
                 <ArrowRight className="w-5 h-5" />
               </a>
               <div className="flex flex-col gap-2">
+              <Link
+                href={`/compare?tool=${tool.id}`}
+                className="inline-flex items-center gap-2 px-6 py-4 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
+              >
+                <ArrowLeftRight className="w-5 h-5" />
+                Compare
+              </Link>
+              {relatedTools.length > 0 && (
                 <Link
-                  href={`/compare?tool=${tool.id}`}
-                  className="inline-flex items-center gap-2 px-6 py-4 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
+                  href={`/compare?tool=${tool.id}&tool=${relatedTools[0]?.id || ''}${relatedTools[1] ? `&tool=${relatedTools[1].id}` : ''}`}
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3 text-emerald-600 dark:text-emerald-400 font-semibold rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all duration-300"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
-                  </svg>
-                  Compare
+                  <ArrowLeftRight className="w-4 h-4" />
+                  Compare with Similar Tools
                 </Link>
-                {relatedTools.length > 0 && (
-                  <Link
-                    href={`/compare?tool=${tool.id}&tool=${relatedTools[0]?.id || ''}`}
-                    className="text-xs text-slate-500 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors text-center"
-                  >
-                    Compare with similar tools →
-                  </Link>
-                )}
-              </div>
+              )}
+            </div>
             </div>
 
             {/* Trust Signal */}
