@@ -1,1 +1,7 @@
-{}
+{
+  "rewrites": [
+    { "source": "/blog", "destination": "/blog" },
+    { "source": "/category/Writing", "destination": "/category/Writing" },
+    { "source": "/compare", "destination": "/compare" }
+  ]
+}
