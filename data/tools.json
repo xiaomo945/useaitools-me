@@ -3415,7 +3415,7 @@
     ]
   },
   {
-    "id": "grammarly",
+    "id": 82,
     "name": "Grammarly",
     "description": "AI-powered writing assistant used by 30M+ daily active users worldwide. Checks for grammar, spelling, punctuation, and style — with tone suggestions and clarity improvements. Integrates seamlessly with Chrome, Word, Gmail, and 500+ other apps. The gold standard for professional writing. ⭐ Recommended: Upgrade to Grammarly Pro for advanced tone and clarity suggestions.",
     "category": "Writing",
@@ -3424,7 +3424,7 @@
     "affiliate_link": "{{AFFILIATE_GRAMMARLY}}"
   },
   {
-    "id": null,
+    "id": 83,
     "name": "Writesonic",
     "description": "AI-powered content generation platform that creates SEO-optimized blog posts, marketing copy, and social media content in seconds. Features built-in SEO checker and 100+ templates for various content types.",
     "description_en": "AI-powered content generation platform that creates SEO-optimized blog posts, marketing copy, and social media content in seconds. Features built-in SEO checker and 100+ templates for various content types.",
@@ -3475,7 +3475,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 84,
     "name": "CopyAI",
     "description": "AI copywriting assistant that generates high-converting marketing copy, ad copy, and social media posts. Perfect for marketers who need to scale content production.",
     "description_en": "AI copywriting assistant that generates high-converting marketing copy, ad copy, and social media posts. Perfect for marketers who need to scale content production.",
@@ -3526,7 +3526,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 85,
     "name": "Grammarly",
     "description": "AI-powered writing assistant that checks grammar, spelling, tone, and clarity. Helps you communicate more effectively across all your written content.",
     "description_en": "AI-powered writing assistant that checks grammar, spelling, tone, and clarity. Helps you communicate more effectively across all your written content.",
@@ -3577,7 +3577,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 86,
     "name": "Wordtune",
     "description": "AI rewriting tool that rewrites your sentences for better clarity and style. Helps you express your thoughts more effectively.",
     "description_en": "AI rewriting tool that rewrites your sentences for better clarity and style. Helps you express your thoughts more effectively.",
@@ -3628,7 +3628,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 87,
     "name": "QuillBot",
     "description": "AI paraphrasing and summarization tool that rewrites text while preserving meaning. Great for students and researchers.",
     "description_en": "AI paraphrasing and summarization tool that rewrites text while preserving meaning. Great for students and researchers.",
@@ -3679,7 +3679,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 88,
     "name": "Sudowrite",
     "description": "AI creative writing assistant designed specifically for fiction writers and novelists. Helps with brainstorming, story structure, and character development.",
     "description_en": "AI creative writing assistant designed specifically for fiction writers and novelists. Helps with brainstorming, story structure, and character development.",
@@ -3730,7 +3730,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 89,
     "name": "HyperWrite",
     "description": "AI writing assistant that helps you compose emails, essays, and documents faster. Integrates with Chrome for web-wide assistance.",
     "description_en": "AI writing assistant that helps you compose emails, essays, and documents faster. Integrates with Chrome for web-wide assistance.",
@@ -3781,7 +3781,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 90,
     "name": "ParagraphAI",
     "description": "AI-powered paragraph generator that creates well-structured content from bullet points. Perfect for quick content creation.",
     "description_en": "AI-powered paragraph generator that creates well-structured content from bullet points. Perfect for quick content creation.",
@@ -3832,7 +3832,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 91,
     "name": "TextCortex",
     "description": "AI writing tool with 100+ templates for content creation, including blog posts, product descriptions, and social media posts.",
     "description_en": "AI writing tool with 100+ templates for content creation, including blog posts, product descriptions, and social media posts.",
@@ -3883,7 +3883,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 92,
     "name": "ArticleForge",
     "description": "AI article generator that creates complete, well-researched articles on any topic. Built for content marketers and SEO professionals.",
     "description_en": "AI article generator that creates complete, well-researched articles on any topic. Built for content marketers and SEO professionals.",
@@ -3934,7 +3934,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 93,
     "name": "DALL-E 3",
     "description": "OpenAI's most advanced image generation model that creates highly realistic and creative images from text descriptions. Exceptional at understanding complex prompts.",
     "description_en": "OpenAI's most advanced image generation model that creates highly realistic and creative images from text descriptions. Exceptional at understanding complex prompts.",
@@ -3985,7 +3985,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 94,
     "name": "Stable Diffusion",
     "description": "Open-source AI image generation model that creates high-quality images from text prompts. Fully customizable and runs locally for privacy.",
     "description_en": "Open-source AI image generation model that creates high-quality images from text prompts. Fully customizable and runs locally for privacy.",
@@ -4036,7 +4036,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 95,
     "name": "Canva AI",
     "description": "AI-powered design platform with Magic Edit, Text-to-Image, and background removal. Perfect for non-designers who need professional graphics quickly.",
     "description_en": "AI-powered design platform with Magic Edit, Text-to-Image, and background removal. Perfect for non-designers who need professional graphics quickly.",
@@ -4087,7 +4087,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 96,
     "name": "Leonardo AI",
     "description": "AI image generation platform optimized for game assets, concept art, and character design. Offers fine-tuned control over style and composition.",
     "description_en": "AI image generation platform optimized for game assets, concept art, and character design. Offers fine-tuned control over style and composition.",
@@ -4138,7 +4138,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 97,
     "name": "Playground AI",
     "description": "Free AI art generator that creates beautiful images from text prompts. Features an intuitive interface and multiple style options.",
     "description_en": "Free AI art generator that creates beautiful images from text prompts. Features an intuitive interface and multiple style options.",
@@ -4189,7 +4189,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 98,
     "name": "Adobe Firefly",
     "description": "Adobe's AI image generator integrated into Creative Cloud. Creates commercially-safe images with built-in brand asset integration.",
     "description_en": "Adobe's AI image generator integrated into Creative Cloud. Creates commercially-safe images with built-in brand asset integration.",
@@ -4240,7 +4240,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 99,
     "name": "Runway ML",
     "description": "AI-powered creative suite for image and video editing. Offers Gen-2 text-to-video, motion brush, and advanced editing features for professionals.",
     "description_en": "AI-powered creative suite for image and video editing. Offers Gen-2 text-to-video, motion brush, and advanced editing features for professionals.",
@@ -4291,7 +4291,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 100,
     "name": "Fotor",
     "description": "AI photo editor and enhancer with background removal, object removal, and image upscaling. Perfect for quick photo improvements.",
     "description_en": "AI photo editor and enhancer with background removal, object removal, and image upscaling. Perfect for quick photo improvements.",
@@ -4342,7 +4342,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 101,
     "name": "Clipdrop",
     "description": "AI-powered visual creation toolkit by Stability AI. Includes text-to-image, background removal, and upscaling tools in one platform.",
     "description_en": "AI-powered visual creation toolkit by Stability AI. Includes text-to-image, background removal, and upscaling tools in one platform.",
@@ -4393,7 +4393,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 102,
     "name": "Craiyon",
     "description": "Free AI art generator based on DALL-E Mini. Creates unique images from text descriptions with no registration required.",
     "description_en": "Free AI art generator based on DALL-E Mini. Creates unique images from text descriptions with no registration required.",
@@ -4444,7 +4444,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 103,
     "name": "Pika",
     "description": "AI video generator that creates high-quality videos from text prompts and images. Specializes in cinematic animations and motion effects.",
     "description_en": "AI video generator that creates high-quality videos from text prompts and images. Specializes in cinematic animations and motion effects.",
@@ -4495,7 +4495,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 104,
     "name": "Luma Dream Machine",
     "description": "AI video generator that creates realistic video clips from text and images. Known for high-quality motion and realistic physics.",
     "description_en": "AI video generator that creates realistic video clips from text and images. Known for high-quality motion and realistic physics.",
@@ -4546,7 +4546,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 105,
     "name": "Kaiber",
     "description": "AI video creation platform that transforms images and text into stunning animated videos. Popular for music videos and artistic content.",
     "description_en": "AI video creation platform that transforms images and text into stunning animated videos. Popular for music videos and artistic content.",
@@ -4597,7 +4597,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 106,
     "name": "HeyGen",
     "description": "AI video platform that creates professional videos with AI avatars. Ideal for training, marketing, and multilingual content.",
     "description_en": "AI video platform that creates professional videos with AI avatars. Ideal for training, marketing, and multilingual content.",
@@ -4648,7 +4648,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 107,
     "name": "Elai.io",
     "description": "AI video generator that turns text into professional videos with AI presenters. Supports 75+ languages for global content.",
     "description_en": "AI video generator that turns text into professional videos with AI presenters. Supports 75+ languages for global content.",
@@ -4699,7 +4699,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 108,
     "name": "Fliki",
     "description": "AI video creator that converts text, blog posts, and scripts into videos with AI voices and stock footage. Perfect for faceless channels.",
     "description_en": "AI video creator that converts text, blog posts, and scripts into videos with AI voices and stock footage. Perfect for faceless channels.",
@@ -4750,7 +4750,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 109,
     "name": "Colossyan",
     "description": "AI video creation platform for corporate training and learning content. Features realistic AI presenters and scenario-based learning.",
     "description_en": "AI video creation platform for corporate training and learning content. Features realistic AI presenters and scenario-based learning.",
@@ -4801,7 +4801,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 110,
     "name": "Descript",
     "description": "AI-powered video and podcast editor that edits like a word processor. Features automatic transcription and voice cloning.",
     "description_en": "AI-powered video and podcast editor that edits like a word processor. Features automatic transcription and voice cloning.",
@@ -4852,7 +4852,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 111,
     "name": "Captions AI",
     "description": "AI video editing tool that automatically adds captions, enhances audio, and optimizes videos for social media platforms.",
     "description_en": "AI video editing tool that automatically adds captions, enhances audio, and optimizes videos for social media platforms.",
@@ -4903,7 +4903,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 112,
     "name": "Opus Clip",
     "description": "AI video repurposing tool that automatically extracts viral clips from long-form videos. Perfect for content creators and marketers.",
     "description_en": "AI video repurposing tool that automatically extracts viral clips from long-form videos. Perfect for content creators and marketers.",
@@ -4954,7 +4954,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 113,
     "name": "PlayHT",
     "description": "AI voice generator with ultra-realistic voices in 140+ languages. Perfect for podcasts, audiobooks, and video voiceovers.",
     "description_en": "AI voice generator with ultra-realistic voices in 140+ languages. Perfect for podcasts, audiobooks, and video voiceovers.",
@@ -5005,7 +5005,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 114,
     "name": "Resemble AI",
     "description": "AI voice cloning and generation platform that creates custom voices for games, videos, and interactive applications.",
     "description_en": "AI voice cloning and generation platform that creates custom voices for games, videos, and interactive applications.",
@@ -5056,7 +5056,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 115,
     "name": "Murf AI",
     "description": "Studio-quality AI voiceover generator with 120+ voices in 20+ languages. Perfect for professional video narration.",
     "description_en": "Studio-quality AI voiceover generator with 120+ voices in 20+ languages. Perfect for professional video narration.",
@@ -5107,7 +5107,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 116,
     "name": "VoiceMod",
     "description": "AI voice changer and soundboard that transforms your voice in real-time for gaming, streaming, and content creation.",
     "description_en": "AI voice changer and soundboard that transforms your voice in real-time for gaming, streaming, and content creation.",
@@ -5158,7 +5158,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 117,
     "name": "Suno AI",
     "description": "AI music generator that creates original songs from text descriptions. Supports various genres and styles for content creators.",
     "description_en": "AI music generator that creates original songs from text descriptions. Supports various genres and styles for content creators.",
@@ -5209,7 +5209,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 118,
     "name": "Podcastle",
     "description": "AI-powered podcast recording and editing platform. Features automatic noise removal, transcription, and one-click publishing.",
     "description_en": "AI-powered podcast recording and editing platform. Features automatic noise removal, transcription, and one-click publishing.",
@@ -5260,7 +5260,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 119,
     "name": "Beatoven AI",
     "description": "AI music composer that creates royalty-free background music for videos, podcasts, and presentations.",
     "description_en": "AI music composer that creates royalty-free background music for videos, podcasts, and presentations.",
@@ -5311,7 +5311,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 120,
     "name": "Tabnine",
     "description": "AI code completion tool that supports 30+ programming languages. Learns from your codebase for personalized suggestions.",
     "description_en": "AI code completion tool that supports 30+ programming languages. Learns from your codebase for personalized suggestions.",
@@ -5362,7 +5362,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 121,
     "name": "Amazon CodeWhisperer",
     "description": "AI coding assistant by AWS that generates code suggestions and security scans. Free for individual developers.",
     "description_en": "AI coding assistant by AWS that generates code suggestions and security scans. Free for individual developers.",
@@ -5413,7 +5413,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 122,
     "name": "Replit AI",
     "description": "AI-powered coding environment with ghostwriter, debugging, and deployment. Build, run, and deploy apps from your browser.",
     "description_en": "AI-powered coding environment with ghostwriter, debugging, and deployment. Build, run, and deploy apps from your browser.",
@@ -5464,7 +5464,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 123,
     "name": "Codeium",
     "description": "Free AI code completion and search tool that works with your IDE. Supports 70+ languages and provides intelligent suggestions.",
     "description_en": "Free AI code completion and search tool that works with your IDE. Supports 70+ languages and provides intelligent suggestions.",
@@ -5515,7 +5515,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 124,
     "name": "Windsurf",
     "description": "AI-powered IDE that understands your entire codebase and provides context-aware suggestions. Built for professional developers.",
     "description_en": "AI-powered IDE that understands your entire codebase and provides context-aware suggestions. Built for professional developers.",
@@ -5566,7 +5566,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 125,
     "name": "Devin AI",
     "description": "AI software engineer that can complete complex coding tasks autonomously. From planning to deployment, handles full development workflows.",
     "description_en": "AI software engineer that can complete complex coding tasks autonomously. From planning to deployment, handles full development workflows.",
@@ -5617,7 +5617,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 126,
     "name": "Sourcegraph Cody",
     "description": "AI coding assistant that understands your entire codebase and answers questions about your code. Integrates with VS Code and JetBrains.",
     "description_en": "AI coding assistant that understands your entire codebase and answers questions about your code. Integrates with VS Code and JetBrains.",
@@ -5668,7 +5668,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 127,
     "name": "Notion AI",
     "description": "AI-powered workspace that helps you write, organize, and automate your work. Integrates seamlessly with Notion's databases and pages.",
     "description_en": "AI-powered workspace that helps you write, organize, and automate your work. Integrates seamlessly with Notion's databases and pages.",
@@ -5719,7 +5719,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 128,
     "name": "Mem AI",
     "description": "AI-powered note-taking app that automatically organizes your thoughts, connects ideas, and surfaces relevant information when you need it.",
     "description_en": "AI-powered note-taking app that automatically organizes your thoughts, connects ideas, and surfaces relevant information when you need it.",
@@ -5770,7 +5770,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 129,
     "name": "Motion",
     "description": "AI calendar and task manager that automatically schedules your tasks and meetings. Optimizes your day for maximum productivity.",
     "description_en": "AI calendar and task manager that automatically schedules your tasks and meetings. Optimizes your day for maximum productivity.",
@@ -5821,7 +5821,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 130,
     "name": "Zapier AI",
     "description": "AI-powered automation platform that connects 6000+ apps and automates workflows without coding. Perfect for business automation.",
     "description_en": "AI-powered automation platform that connects 6000+ apps and automates workflows without coding. Perfect for business automation.",
@@ -5872,7 +5872,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 131,
     "name": "Make AI",
     "description": "Visual automation platform that connects apps and automates complex workflows. More flexible than traditional automation tools.",
     "description_en": "Visual automation platform that connects apps and automates complex workflows. More flexible than traditional automation tools.",
@@ -5923,7 +5923,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 132,
     "name": "ClickUp AI",
     "description": "AI-powered project management platform that automates tasks, generates documents, and provides intelligent insights for teams.",
     "description_en": "AI-powered project management platform that automates tasks, generates documents, and provides intelligent insights for teams.",
@@ -5974,7 +5974,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 133,
     "name": "Rewind AI",
     "description": "AI personal assistant that records and indexes everything you see on your computer. Search your digital life with natural language.",
     "description_en": "AI personal assistant that records and indexes everything you see on your computer. Search your digital life with natural language.",
@@ -6025,7 +6025,7 @@
     ]
   },
   {
-    "id": null,
+    "id": 134,
     "name": "Glean",
     "description": "AI-powered workplace search that connects all your company's tools and documents. Find any information instantly across your organization.",
     "description_en": "AI-powered workplace search that connects all your company's tools and documents. Find any information instantly across your organization.",
@@ -6073,6 +6073,3066 @@
       "Enterprise Search",
       "Knowledge Management",
       "Team Productivity"
+    ]
+  },
+  {
+    "id": 203,
+    "name": "Scalenut",
+    "description": "AI SEO and content marketing platform that creates optimized blog posts with keyword research, content briefs, and real-time SEO scoring. Built for content teams.",
+    "description_en": "AI SEO and content marketing platform that creates optimized blog posts with keyword research, content briefs, and real-time SEO scoring. Built for content teams.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://scalenut.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "SEO Writing",
+      "Content Strategy",
+      "Keyword Research"
+    ]
+  },
+  {
+    "id": 204,
+    "name": "INK Editor",
+    "description": "AI content editor with real-time SEO optimization, content planning, and AI writing assistant. Combines SEO strategy with content creation in one platform.",
+    "description_en": "AI content editor with real-time SEO optimization, content planning, and AI writing assistant. Combines SEO strategy with content creation in one platform.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://inkforall.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 445,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "SEO Optimization",
+      "Content Planning",
+      "Editorial"
+    ]
+  },
+  {
+    "id": 205,
+    "name": "ShortlyAI",
+    "description": "AI writing assistant focused on long-form content creation. Helps writers overcome blank page syndrome and maintain consistent tone throughout articles.",
+    "description_en": "AI writing assistant focused on long-form content creation. Helps writers overcome blank page syndrome and maintain consistent tone throughout articles.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://shortlyai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Long-form Content",
+      "Article Writing",
+      "Blog Posts"
+    ]
+  },
+  {
+    "id": 206,
+    "name": "Ryte AI",
+    "description": "AI content generator specialized in e-commerce product descriptions and landing pages. Creates conversion-optimized copy at scale.",
+    "description_en": "AI content generator specialized in e-commerce product descriptions and landing pages. Creates conversion-optimized copy at scale.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://ryte.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 189,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.3,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.199999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.3999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "E-commerce",
+      "Product Descriptions",
+      "Landing Pages"
+    ]
+  },
+  {
+    "id": 207,
+    "name": "NeuronWriter",
+    "description": "AI content optimization platform with NLP analysis, competitor research, and SERP-based content briefs. Perfect for SEO-focused content creators.",
+    "description_en": "AI content optimization platform with NLP analysis, competitor research, and SERP-based content briefs. Perfect for SEO-focused content creators.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://neuronwriter.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 678,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "SERP Analysis",
+      "NLP Optimization",
+      "Content Strategy"
+    ]
+  },
+  {
+    "id": 208,
+    "name": "Jenni AI",
+    "description": "AI research assistant that helps with academic writing, citation management, and literature review. Built for researchers and students.",
+    "description_en": "AI research assistant that helps with academic writing, citation management, and literature review. Built for researchers and students.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://jenni.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Academic Writing",
+      "Citations",
+      "Research"
+    ]
+  },
+  {
+    "id": 209,
+    "name": "Krea AI",
+    "description": "AI image generation and editing platform with real-time generation and AI upscaling. Known for ultra-fast iteration and high-quality outputs.",
+    "description_en": "AI image generation and editing platform with real-time generation and AI upscaling. Known for ultra-fast iteration and high-quality outputs.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://krea.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 1234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Real-time Generation",
+      "AI Upscaling",
+      "Design"
+    ]
+  },
+  {
+    "id": 210,
+    "name": "Flux AI",
+    "description": "Open-source AI image model by Black Forest Labs. Exceptional prompt adherence and photorealistic output quality. Competes with Midjourney.",
+    "description_en": "Open-source AI image model by Black Forest Labs. Exceptional prompt adherence and photorealistic output quality. Competes with Midjourney.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://blackforestlabs.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.7,
+    "rating_count": 2345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.9,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 3.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.8,
+        "max": 5
+      },
+      "features": {
+        "score": 4.8,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Open Source",
+      "Photorealistic",
+      "High Quality"
+    ]
+  },
+  {
+    "id": 211,
+    "name": "Photoroom",
+    "description": "AI photo editor with automatic background removal, product photography, and batch editing. Perfect for e-commerce sellers.",
+    "description_en": "AI photo editor with automatic background removal, product photography, and batch editing. Perfect for e-commerce sellers.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://photoroom.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Product Photography",
+      "Background Removal",
+      "E-commerce"
+    ]
+  },
+  {
+    "id": 212,
+    "name": "Recraft AI",
+    "description": "AI vector and raster image generator designed for graphic designers. Creates scalable vector graphics and consistent brand assets.",
+    "description_en": "AI vector and raster image generator designed for graphic designers. Creates scalable vector graphics and consistent brand assets.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://recraft.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 678,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Vector Graphics",
+      "Brand Assets",
+      "Design"
+    ]
+  },
+  {
+    "id": 213,
+    "name": "Magnific AI",
+    "description": "AI image upscaler that enhances resolution up to 4x while preserving details. Perfect for print-ready images and professional photography.",
+    "description_en": "AI image upscaler that enhances resolution up to 4x while preserving details. Perfect for print-ready images and professional photography.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://magnific.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 456,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.8,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.699999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Image Upscaling",
+      "Print-ready",
+      "Photography"
+    ]
+  },
+  {
+    "id": 214,
+    "name": "Runway Gen-3",
+    "description": "Next-gen AI video model by Runway with cinematic quality, realistic physics, and text-to-video generation. Industry-leading video AI.",
+    "description_en": "Next-gen AI video model by Runway with cinematic quality, realistic physics, and text-to-video generation. Industry-leading video AI.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://runwayml.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.7,
+    "rating_count": 1890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.9,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.8,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Cinematic Video",
+      "Text-to-Video",
+      "Professional"
+    ]
+  },
+  {
+    "id": 215,
+    "name": "Kling AI",
+    "description": "AI video generator by Kuaishou that creates realistic 5-second clips from text prompts. Known for natural motion and physics.",
+    "description_en": "AI video generator by Kuaishou that creates realistic 5-second clips from text prompts. Known for natural motion and physics.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://klingai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 1234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Realistic Motion",
+      "Quick Clips",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 216,
+    "name": "Minimax Video",
+    "description": "AI video generation platform with Hailuo model. Creates high-quality animations and realistic video clips from text descriptions.",
+    "description_en": "AI video generation platform with Hailuo model. Creates high-quality animations and realistic video clips from text descriptions.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://minimax.chat",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Animation",
+      "Creative Content",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 217,
+    "name": "Viggle AI",
+    "description": "AI character animation tool that applies any movement to your character. Perfect for meme creation, animations, and social media.",
+    "description_en": "AI character animation tool that applies any movement to your character. Perfect for meme creation, animations, and social media.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://viggle.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Character Animation",
+      "Memes",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 218,
+    "name": "Hedra",
+    "description": "AI character video platform that creates talking avatars with expressive emotions and natural lip-sync. Ideal for storytelling.",
+    "description_en": "AI character video platform that creates talking avatars with expressive emotions and natural lip-sync. Ideal for storytelling.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://hedra.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Talking Avatars",
+      "Storytelling",
+      "Character Animation"
+    ]
+  },
+  {
+    "id": 219,
+    "name": "InVideo AI",
+    "description": "AI video creator that generates complete videos from text prompts with stock footage, voiceover, and music. Built for content creators.",
+    "description_en": "AI video creator that generates complete videos from text prompts with stock footage, voiceover, and music. Built for content creators.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://invideo.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 1567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Complete Videos",
+      "Stock Footage",
+      "Content Creation"
+    ]
+  },
+  {
+    "id": 220,
+    "name": "Kits AI",
+    "description": "AI voice transformation platform for music creators. Convert vocals between different voice models for remixing and production.",
+    "description_en": "AI voice transformation platform for music creators. Convert vocals between different voice models for remixing and production.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://kits.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 456,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Voice Transformation",
+      "Music Production",
+      "Remixing"
+    ]
+  },
+  {
+    "id": 221,
+    "name": "Udio",
+    "description": "AI music generator that creates full songs with vocals, instruments, and professional production quality. Competes with Suno for music AI.",
+    "description_en": "AI music generator that creates full songs with vocals, instruments, and professional production quality. Competes with Suno for music AI.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://udio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 1890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.8,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.699999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Music Generation",
+      "Full Songs",
+      "Vocals"
+    ]
+  },
+  {
+    "id": 222,
+    "name": "Adobe Podcast",
+    "description": "AI-powered podcast recording and editing tool with Studio Sound enhancement, automatic transcription, and noise removal.",
+    "description_en": "AI-powered podcast recording and editing tool with Studio Sound enhancement, automatic transcription, and noise removal.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://podcast.adobe.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 678,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Podcast Recording",
+      "Audio Enhancement",
+      "Transcription"
+    ]
+  },
+  {
+    "id": 223,
+    "name": "AudioLDM",
+    "description": "Open-source AI audio generation model that creates sound effects, ambient audio, and music from text descriptions.",
+    "description_en": "Open-source AI audio generation model that creates sound effects, ambient audio, and music from text descriptions.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://github.com/haoheliu/AudioLDM",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 3.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.8,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Sound Effects",
+      "Open Source",
+      "Ambient Audio"
+    ]
+  },
+  {
+    "id": 224,
+    "name": "Phind",
+    "description": "AI search engine optimized for developers. Provides code solutions, documentation, and debugging help with source citations.",
+    "description_en": "AI search engine optimized for developers. Provides code solutions, documentation, and debugging help with source citations.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://phind.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 1234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developer Search",
+      "Debugging",
+      "Documentation"
+    ]
+  },
+  {
+    "id": 225,
+    "name": "Bolt.new",
+    "description": "AI-powered full-stack development environment that builds complete web applications from prompts. Deploy directly from the browser.",
+    "description_en": "AI-powered full-stack development environment that builds complete web applications from prompts. Deploy directly from the browser.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://bolt.new",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.8,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.699999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Full-stack Development",
+      "Quick Deployment",
+      "Prototyping"
+    ]
+  },
+  {
+    "id": 226,
+    "name": "v0 by Vercel",
+    "description": "AI UI generator by Vercel that creates React components from text prompts. Integrates with Next.js and Tailwind CSS automatically.",
+    "description_en": "AI UI generator by Vercel that creates React components from text prompts. Integrates with Next.js and Tailwind CSS automatically.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://v0.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.7,
+    "rating_count": 1567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.9,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.8,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "React Components",
+      "UI Generation",
+      "Next.js"
+    ]
+  },
+  {
+    "id": 227,
+    "name": "Continue.dev",
+    "description": "Open-source AI coding assistant that works with any LLM. Provides code completion, chat, and inline editing in VS Code and JetBrains.",
+    "description_en": "Open-source AI coding assistant that works with any LLM. Provides code completion, chat, and inline editing in VS Code and JetBrains.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://continue.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 1234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.8,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.8,
+        "max": 5
+      },
+      "features": {
+        "score": 4.699999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Open Source",
+      "Multi-LLM",
+      "IDE Integration"
+    ]
+  },
+  {
+    "id": 228,
+    "name": "Tldraw",
+    "description": "AI-powered whiteboard and diagramming tool with make-real AI that turns sketches into functional prototypes instantly.",
+    "description_en": "AI-powered whiteboard and diagramming tool with make-real AI that turns sketches into functional prototypes instantly.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://tldraw.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.8,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Whiteboarding",
+      "Prototyping",
+      "Diagramming"
+    ]
+  },
+  {
+    "id": 229,
+    "name": "Arc Search",
+    "description": "AI browser by The Browser Company with built-in search summarization, ad blocking, and automatic tab management.",
+    "description_en": "AI browser by The Browser Company with built-in search summarization, ad blocking, and automatic tab management.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://arc.net",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 2345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.8,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.8,
+        "max": 5
+      },
+      "features": {
+        "score": 4.699999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Web Browsing",
+      "Search",
+      "Tab Management"
+    ]
+  },
+  {
+    "id": 230,
+    "name": "Fireflies AI",
+    "description": "AI meeting assistant that records, transcribes, and summarizes meetings automatically. Integrates with Zoom, Google Meet, and Teams.",
+    "description_en": "AI meeting assistant that records, transcribes, and summarizes meetings automatically. Integrates with Zoom, Google Meet, and Teams.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://fireflies.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 1567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Meeting Notes",
+      "Transcription",
+      "Summarization"
+    ]
+  },
+  {
+    "id": 231,
+    "name": "Otter AI",
+    "description": "AI meeting transcription service with real-time captions, speaker identification, and searchable meeting notes.",
+    "description_en": "AI meeting transcription service with real-time captions, speaker identification, and searchable meeting notes.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://otter.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 2345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Meeting Transcription",
+      "Speaker ID",
+      "Searchable Notes"
+    ]
+  },
+  {
+    "id": 232,
+    "name": "Tldv",
+    "description": "AI meeting recorder for Zoom, Google Meet, and Teams. Automatically captures highlights and generates action items.",
+    "description_en": "AI meeting recorder for Zoom, Google Meet, and Teams. Automatically captures highlights and generates action items.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://tl;dv.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 678,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Meeting Highlights",
+      "Action Items",
+      "Team Sync"
+    ]
+  },
+  {
+    "id": 233,
+    "name": "Tactiq",
+    "description": "AI transcription tool that captures live captions from Google Meet, Zoom, and Teams meetings. Exports to Notion, Google Docs, and more.",
+    "description_en": "AI transcription tool that captures live captions from Google Meet, Zoom, and Teams meetings. Exports to Notion, Google Docs, and more.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://tactiq.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Live Captions",
+      "Export Integration",
+      "Meeting Records"
+    ]
+  },
+  {
+    "id": 234,
+    "name": "Outliner AI",
+    "description": "AI outline and structure generator for articles, essays, and presentations. Organizes complex topics into logical hierarchies.",
+    "description_en": "AI outline and structure generator for articles, essays, and presentations. Organizes complex topics into logical hierarchies.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://outliner.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Outlining",
+      "Structure",
+      "Presentations"
+    ]
+  },
+  {
+    "id": 235,
+    "name": "WordAI",
+    "description": "AI article rewriter and spinner that creates unique versions of existing content while maintaining readability and meaning.",
+    "description_en": "AI article rewriter and spinner that creates unique versions of existing content while maintaining readability and meaning.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://wordai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.3,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.199999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.3999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Spinning",
+      "Rewriting",
+      "SEO"
+    ]
+  },
+  {
+    "id": 236,
+    "name": "LongShot AI",
+    "description": "AI content generator specialized in fact-checked blog posts and long-form articles with automatic research and citations.",
+    "description_en": "AI content generator specialized in fact-checked blog posts and long-form articles with automatic research and citations.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://longshot.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Fact-checked Content",
+      "Research",
+      "Long-form"
+    ]
+  },
+  {
+    "id": 237,
+    "name": "Peppertype AI",
+    "description": "AI copywriting platform with 50+ templates for ad copy, product descriptions, landing pages, and social media content.",
+    "description_en": "AI copywriting platform with 50+ templates for ad copy, product descriptions, landing pages, and social media content.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://peppertype.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 445,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Ad Copy",
+      "Product Descriptions",
+      "Templates"
+    ]
+  },
+  {
+    "id": 238,
+    "name": "Writer.com",
+    "description": "Enterprise AI writing platform with brand voice management, style guides, and compliance checks. Built for teams.",
+    "description_en": "Enterprise AI writing platform with brand voice management, style guides, and compliance checks. Built for teams.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://writer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 678,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Enterprise",
+      "Brand Voice",
+      "Compliance"
+    ]
+  },
+  {
+    "id": 239,
+    "name": "Midjourney V6",
+    "description": "Latest version of Midjourney with improved photorealism, text rendering, and style control. Industry leader in artistic AI images.",
+    "description_en": "Latest version of Midjourney with improved photorealism, text rendering, and style control. Industry leader in artistic AI images.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://midjourney.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.8,
+    "rating_count": 5678,
+    "rating_breakdown": {
+      "quality": {
+        "score": 5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.8999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Artistic Images",
+      "Photorealism",
+      "Creative"
+    ]
+  },
+  {
+    "id": 240,
+    "name": "Stability AI",
+    "description": "Open-source AI company behind Stable Diffusion. Provides APIs for image generation, editing, and 3D model creation.",
+    "description_en": "Open-source AI company behind Stable Diffusion. Provides APIs for image generation, editing, and 3D model creation.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://stability.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 2345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 3.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Open Source",
+      "API",
+      "3D Models"
+    ]
+  },
+  {
+    "id": 241,
+    "name": "Pixlr AI",
+    "description": "AI photo editor with generative fill, background removal, and style transfer. Browser-based with no installation required.",
+    "description_en": "AI photo editor with generative fill, background removal, and style transfer. Browser-based with no installation required.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://pixlr.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Photo Editing",
+      "Generative Fill",
+      "Browser-based"
+    ]
+  },
+  {
+    "id": 242,
+    "name": "Leonardo Phoenix",
+    "description": "Latest Leonardo model with superior prompt understanding, detail quality, and consistency across image series.",
+    "description_en": "Latest Leonardo model with superior prompt understanding, detail quality, and consistency across image series.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://leonardo.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 1567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.8,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.699999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Prompt Understanding",
+      "Consistency",
+      "Game Assets"
+    ]
+  },
+  {
+    "id": 243,
+    "name": "Picsart AI",
+    "description": "AI photo and video editing suite with text-to-image, AI avatar, and magic edit. Popular for social media content creation.",
+    "description_en": "AI photo and video editing suite with text-to-image, AI avatar, and magic edit. Popular for social media content creation.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://picsart.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 3456,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Social Media",
+      "AI Avatar",
+      "Magic Edit"
+    ]
+  },
+  {
+    "id": 244,
+    "name": "Wave.video",
+    "description": "AI-powered video creation and live streaming platform with customizable templates, stock library, and social media optimization.",
+    "description_en": "AI-powered video creation and live streaming platform with customizable templates, stock library, and social media optimization.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://wave.video",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Live Streaming",
+      "Templates",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 245,
+    "name": "Steve AI",
+    "description": "AI video maker that converts text, audio, or blog posts into animated or live-action videos with AI voiceover.",
+    "description_en": "AI video maker that converts text, audio, or blog posts into animated or live-action videos with AI voiceover.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.steve.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.3,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.199999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.3999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Text-to-Video",
+      "Animation",
+      "Voiceover"
+    ]
+  },
+  {
+    "id": 246,
+    "name": "Voice AI",
+    "description": "AI voice transformation tool for real-time voice changing during calls, streaming, and recording. 1000+ voice models.",
+    "description_en": "AI voice transformation tool for real-time voice changing during calls, streaming, and recording. 1000+ voice models.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://voice.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Voice Changing",
+      "Streaming",
+      "Calls"
+    ]
+  },
+  {
+    "id": 247,
+    "name": "Lovo AI",
+    "description": "AI voice generator and text-to-speech platform with emotional voices and professional quality. Built for video creators.",
+    "description_en": "AI voice generator and text-to-speech platform with emotional voices and professional quality. Built for video creators.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://lovo.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 678,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Emotional Voices",
+      "TTS",
+      "Video Creators"
+    ]
+  },
+  {
+    "id": 248,
+    "name": "Speechify",
+    "description": "AI text-to-speech reader that converts articles, PDFs, and emails into natural-sounding audio. Boost reading speed 3x.",
+    "description_en": "AI text-to-speech reader that converts articles, PDFs, and emails into natural-sounding audio. Boost reading speed 3x.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://speechify.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 2345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Reading",
+      "Accessibility",
+      "Productivity"
+    ]
+  },
+  {
+    "id": 249,
+    "name": "Poe AI",
+    "description": "AI chat platform by Quora that lets you access multiple AI models (GPT-4, Claude, Llama) in one interface. Great for comparing AI responses.",
+    "description_en": "AI chat platform by Quora that lets you access multiple AI models (GPT-4, Claude, Llama) in one interface. Great for comparing AI responses.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://poe.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 3456,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Multi-Model Chat",
+      "AI Comparison",
+      "Research"
+    ]
+  },
+  {
+    "id": 250,
+    "name": "Gemini Advanced",
+    "description": "Google's most capable AI model with 1M token context window. Excels at code analysis, long document processing, and multimodal reasoning.",
+    "description_en": "Google's most capable AI model with 1M token context window. Excels at code analysis, long document processing, and multimodal reasoning.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://gemini.google.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 4567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.8,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.699999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Long Context",
+      "Code Analysis",
+      "Google Integration"
+    ]
+  },
+  {
+    "id": 251,
+    "name": "Claude 3.5",
+    "description": "Anthropic's latest AI with superior reasoning, coding, and vision capabilities. Known for thoughtful responses and safety-first design.",
+    "description_en": "Anthropic's latest AI with superior reasoning, coding, and vision capabilities. Known for thoughtful responses and safety-first design.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://claude.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.7,
+    "rating_count": 5678,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.9,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.8,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Reasoning",
+      "Coding",
+      "Safety"
+    ]
+  },
+  {
+    "id": 252,
+    "name": "Perplexity Pages",
+    "description": "AI-powered knowledge pages that compile research, citations, and sources into beautiful, shareable documents.",
+    "description_en": "AI-powered knowledge pages that compile research, citations, and sources into beautiful, shareable documents.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://perplexity.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 2345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Research Pages",
+      "Citations",
+      "Knowledge Sharing"
+    ]
+  },
+  {
+    "id": 253,
+    "name": "Gamma App",
+    "description": "AI presentation generator that creates beautiful slides, documents, and webpages from text prompts. Built for fast content creation.",
+    "description_en": "AI presentation generator that creates beautiful slides, documents, and webpages from text prompts. Built for fast content creation.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://gamma.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 1890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.8,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.699999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Presentations",
+      "Documents",
+      "Quick Creation"
+    ]
+  },
+  {
+    "id": 254,
+    "name": "Tome AI",
+    "description": "AI storytelling platform that creates presentations with rich media, interactive elements, and narrative flow.",
+    "description_en": "AI storytelling platform that creates presentations with rich media, interactive elements, and narrative flow.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://tome.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 1234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Storytelling",
+      "Presentations",
+      "Rich Media"
+    ]
+  },
+  {
+    "id": 255,
+    "name": "Beautiful.ai",
+    "description": "AI slide design platform that automatically formats and aligns your presentations. Professional design without design skills.",
+    "description_en": "AI slide design platform that automatically formats and aligns your presentations. Professional design without design skills.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://beautiful.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Slide Design",
+      "Auto Formatting",
+      "Professional"
+    ]
+  },
+  {
+    "id": 256,
+    "name": "SlidesAI",
+    "description": "AI presentation maker that converts any text into slides with auto-layout, images, and speaker notes.",
+    "description_en": "AI presentation maker that converts any text into slides with auto-layout, images, and speaker notes.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://slidesai.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Text-to-Slides",
+      "Auto Layout",
+      "Speaker Notes"
+    ]
+  },
+  {
+    "id": 257,
+    "name": "Runway Act-One",
+    "description": "AI performance capture tool that transfers actor movements to 3D characters with minimal setup. Built for animation and VFX.",
+    "description_en": "AI performance capture tool that transfers actor movements to 3D characters with minimal setup. Built for animation and VFX.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://runwayml.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 678,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 3.5,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Motion Capture",
+      "Animation",
+      "VFX"
+    ]
+  },
+  {
+    "id": 258,
+    "name": "LTX Studio",
+    "description": "AI filmmaking platform that creates complete video scenes with characters, dialogue, camera angles, and editing.",
+    "description_en": "AI filmmaking platform that creates complete video scenes with characters, dialogue, camera angles, and editing.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://ltx.studio",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Filmmaking",
+      "Scene Generation",
+      "Complete Videos"
+    ]
+  },
+  {
+    "id": 259,
+    "name": "Haiper AI",
+    "description": "AI video generator focused on artistic quality and creative control. Creates short cinematic clips from text and image prompts.",
+    "description_en": "AI video generator focused on artistic quality and creative control. Creates short cinematic clips from text and image prompts.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://haiper.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Artistic Video",
+      "Creative Control",
+      "Cinematic"
+    ]
+  },
+  {
+    "id": 260,
+    "name": "Cohere",
+    "description": "Enterprise AI platform with RAG, classification, and generation APIs. Built for production-grade applications.",
+    "description_en": "Enterprise AI platform with RAG, classification, and generation APIs. Built for production-grade applications.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://cohere.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 3.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Enterprise AI",
+      "RAG",
+      "APIs"
+    ]
+  },
+  {
+    "id": 261,
+    "name": "Mistral AI",
+    "description": "European AI company with open-weight models that compete with GPT-4. Fast, efficient, and privacy-focused.",
+    "description_en": "European AI company with open-weight models that compete with GPT-4. Fast, efficient, and privacy-focused.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://mistral.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 1567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 3.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Open Weights",
+      "Privacy",
+      "Fast Inference"
+    ]
+  },
+  {
+    "id": 262,
+    "name": "Ankr AI",
+    "description": "AI-powered data analytics platform that generates insights, charts, and reports from raw data using natural language queries.",
+    "description_en": "AI-powered data analytics platform that generates insights, charts, and reports from raw data using natural language queries.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://ankr.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Data Analytics",
+      "Reports",
+      "Natural Language Queries"
     ]
   }
 ]
