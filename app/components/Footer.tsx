@@ -118,15 +118,6 @@ export default function Footer() {
                   🎨 useaiimage.com
                   <span className="text-gray-600 dark:text-gray-600">— AI Image Generator</span>
                 </a>
-                <a
-                  href="https://useaipen.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 dark:bg-gray-800 border border-gray-700 text-xs text-gray-400 dark:text-gray-500 hover:border-teal-500/40 hover:text-teal-400 dark:hover:text-teal-400 transition-all duration-300"
-                >
-                  🖊️ useaipen.com
-                  <span className="text-gray-600 dark:text-gray-600">— Lightweight AI Writer</span>
-                </a>
               </div>
             </div>
 
