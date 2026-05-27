@@ -1203,6 +1203,60 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
           </div>
         </div>
 
+        {/* Latest Articles */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
+              📝 Latest Articles
+            </h2>
+            <p className="text-slate-600 dark:text-gray-400">
+              Latest insights, guides, and comparisons about AI tools
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[...blogPosts]
+              .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+              .slice(0, 5)
+              .map((post, i) => (
+                <Link
+                  key={post.id}
+                  href={`/blog/${post.slug}`}
+                  className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 hover:border-emerald-300 dark:hover:border-emerald-500/30 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-2 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                      {post.category}
+                    </span>
+                    <span className="text-xs text-slate-500 dark:text-gray-400">
+                      {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                    </span>
+                  </div>
+                  <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-slate-600 dark:text-gray-300 line-clamp-3 leading-relaxed">
+                    {post.description}
+                  </p>
+                  <div className="mt-4 flex items-center text-emerald-600 dark:text-emerald-400 font-semibold text-sm">
+                    Read Article
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-emerald-600 dark:border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all duration-300"
+            >
+              View All Articles
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+
         {/* Random AI Tool Explorer */}
         <div className="mb-16">
           <div className="text-center mb-8">
