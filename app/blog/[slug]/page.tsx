@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getBlogPostBySlug, getAllBlogPosts, type BlogPost } from '@/types';
+import { getBlogPostBySlug, getBlogIndex, type BlogPost } from '@/lib/db';
 import ClientBlogDetail from './ClientBlogDetail';
 
 // Extract tool IDs from blog content for recommendation
@@ -121,7 +121,8 @@ export default async function BlogDetailPage({
     notFound();
   }
 
-  const allPosts = getAllBlogPosts();
+  const blogIndex = getBlogIndex();
+  const allPosts = blogIndex.map(meta => getBlogPostBySlug(meta.slug)).filter(Boolean) as BlogPost[];
   const relatedPosts = getRelatedPosts(post, allPosts);
 
   const processedPost = {

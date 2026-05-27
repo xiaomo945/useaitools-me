@@ -36,6 +36,11 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# database
+data/useaitools.db
+data/useaitools.db-shm
+data/useaitools.db-wal
+
 # vercel
 .vercel
 

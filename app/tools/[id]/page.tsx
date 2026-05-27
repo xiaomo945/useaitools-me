@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import tools from '@/data/tools.json';
+import { getAllTools, getToolById } from '@/lib/db';
 import Footer from '@/app/components/Footer';
 import ToolDetailClient from './ToolDetailClient';
 
@@ -20,9 +20,6 @@ type Tool = {
   rating?: number;
   rating_count?: number;
 };
-
-// 类型断言确保数据符合我们的类型要求
-const typedTools = tools as Tool[];
 
 // Helper function to check if a tool has affiliate link (environment variable or JSON field)
 function hasAffiliateLink(tool: Tool): boolean {
@@ -61,7 +58,7 @@ function getAffiliateLink(tool: Tool): string {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const toolId = parseInt(id);
-  const tool = typedTools.find(t => t.id === toolId);
+  const tool = getToolById(toolId);
   
   if (!tool) {
     return {
@@ -70,14 +67,16 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     };
   }
   
-  const baseTitle = `${tool.name}`;
+  const typedTool = tool as Tool;
+  
+  const baseTitle = `${typedTool.name}`;
   const maxTitleLength = 60;
   const suffix = ' - Review, Pricing & Features | Use AI Tools';
   const fullSuffix = baseTitle + suffix;
   const title = fullSuffix.length > maxTitleLength 
-    ? `${tool.name.slice(0, maxTitleLength - suffix.length - 3)}...${suffix}`
+    ? `${typedTool.name.slice(0, maxTitleLength - suffix.length - 3)}...${suffix}`
     : fullSuffix;
-  const description = tool.description.slice(0, 160);
+  const description = typedTool.description.slice(0, 160);
 
   const categoryFaqs: Record<string, { question: string; answer: string }[]> = {
     'Writing': [
@@ -112,29 +111,29 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     ],
   };
 
-  const faqs = categoryFaqs[tool.category] || categoryFaqs['Productivity'];
+  const faqs = categoryFaqs[typedTool.category] || categoryFaqs['Productivity'];
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'SoftwareApplication',
-        'name': tool.name,
-        'description': tool.description,
-        'applicationCategory': tool.category,
+        'name': typedTool.name,
+        'description': typedTool.description,
+        'applicationCategory': typedTool.category,
         'operatingSystem': 'Web',
-        'url': tool.url,
+        'url': typedTool.url,
         'offers': {
           '@type': 'Offer',
-          'price': ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
+          'price': ['Free', 'Freemium', 'Open Source'].includes(typedTool.pricing) ? '0' : '9.99',
           'priceCurrency': 'USD',
           'availability': 'https://schema.org/InStock',
-          'name': tool.pricing
+          'name': typedTool.pricing
         },
         'aggregateRating': {
           '@type': 'AggregateRating',
-          'ratingValue': tool.rating ? String(tool.rating) : '4.5',
-          'ratingCount': tool.rating_count ? String(tool.rating_count) : '100',
+          'ratingValue': typedTool.rating ? String(typedTool.rating) : '4.5',
+          'ratingCount': typedTool.rating_count ? String(typedTool.rating_count) : '100',
           'bestRating': '5',
           'worstRating': '1'
         }
@@ -169,38 +168,36 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function ToolDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const toolId = parseInt(id);
-  const tool = typedTools.find(t => t.id === toolId);
+  const tool = getToolById(toolId);
 
   if (!tool) {
     notFound();
   }
 
+  const typedTool = tool as Tool;
+  const allTools = getAllTools().map(t => ({ ...t, affiliate_link: getAffiliateLink(t as Tool) })) as Tool[];
+
   // Enrich tool with affiliate link from environment variable
   const enrichedTool = {
-    ...tool,
-    affiliate_link: getAffiliateLink(tool)
+    ...typedTool,
+    affiliate_link: getAffiliateLink(typedTool)
   };
 
   // Get related tools - smart recommendation algorithm
   const getRelatedTools = (): Tool[] => {
-    // 1. 首先从同分类中筛选，排除当前工具
-    const candidates = typedTools.filter(t => t.id !== tool.id);
+    const candidates = allTools.filter(t => t.id !== toolId);
     
-    // 2. 计算每个工具与当前工具的匹配分数
     const scoredTools = candidates.map(t => {
       let score = 0;
       
-      // 同分类 +3 分（最高优先级）
       if (t.category === tool.category) {
         score += 3;
       }
       
-      // 相同定价模式 +2 分（第二优先级）
       if (t.pricing === tool.pricing) {
         score += 2;
       }
       
-      // 定价模式相似（比如都是免费或都是付费）+1 分
       const isFree = (p: string) => ['Free', 'Freemium', 'Open Source'].includes(p);
       const isPaid = (p: string) => ['Paid', 'Free Trial'].includes(p);
       if ((isFree(t.pricing) && isFree(tool.pricing)) || (isPaid(t.pricing) && isPaid(tool.pricing))) {
@@ -210,40 +207,37 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
       return { tool: t, score };
     });
     
-    // 3. 按分数排序，分数相同则随机打乱
     scoredTools.sort((a, b) => {
       if (b.score !== a.score) {
         return b.score - a.score;
       }
-      // 分数相同时随机排序，增加推荐多样性
       return Math.random() - 0.5;
     });
     
-    // 4. 取前3个工具
     return scoredTools.slice(0, 3).map(st => st.tool);
   };
   
-  const relatedTools = getRelatedTools().map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
+  const relatedTools = getRelatedTools();
 
   const pageJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    'name': tool.name,
-    'description': tool.description,
-    'applicationCategory': tool.category,
+    'name': typedTool.name,
+    'description': typedTool.description,
+    'applicationCategory': typedTool.category,
     'operatingSystem': 'Web',
-    'url': tool.url,
+    'url': typedTool.url,
     'offers': {
       '@type': 'Offer',
-      'price': ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
+      'price': ['Free', 'Freemium', 'Open Source'].includes(typedTool.pricing) ? '0' : '9.99',
       'priceCurrency': 'USD',
       'availability': 'https://schema.org/InStock',
-      'name': tool.pricing
+      'name': typedTool.pricing
     },
     'aggregateRating': {
       '@type': 'AggregateRating',
-      'ratingValue': tool.rating ? String(tool.rating) : '4.5',
-      'ratingCount': tool.rating_count ? String(tool.rating_count) : '100',
+      'ratingValue': typedTool.rating ? String(typedTool.rating) : '4.5',
+      'ratingCount': typedTool.rating_count ? String(typedTool.rating_count) : '100',
       'bestRating': '5',
       'worstRating': '1'
     }

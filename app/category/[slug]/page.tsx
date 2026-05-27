@@ -1,13 +1,12 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import tools from '@/data/tools.json';
+import { getToolsByCategory, getAllTools, type Tool } from '@/lib/db';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
 import CategoryHero from './CategoryHero';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 
-type Tool = (typeof tools)[0];
 type Category = Tool['category'];
 
 const categoryDescriptions: Record<Category, string> = {
@@ -106,9 +105,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   }
 
   // Enrich tools with affiliate links from environment variables
-  const categoryTools = tools
-    .filter(t => t.category === category)
-    .map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
+  const dbTools = getToolsByCategory(category);
+  const categoryTools = dbTools.map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
   const colors = colorMap[category];
   const description = categoryDescriptions[category];
   const categoryName = categoryNames[category];
