@@ -2742,7 +2742,7 @@
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.grammarly.com",
-    "affiliate_link": "{{AFFILIATE_GRAMMARLY}}",
+    "affiliate_link": "",
     "icon_url": "",
     "examples": [
       {
@@ -8572,7 +8572,7 @@
     "category": "Productivity",
     "pricing": "Paid",
     "url": "https://grammarly-business.com",
-    "affiliate_link": "{{AFFILIATE_GRAMMARLY}}",
+    "affiliate_link": "",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
