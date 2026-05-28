@@ -1,140 +1,284 @@
 const fs = require('fs');
 const path = require('path');
 
-// 读取现有工具
-const toolsData = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/tools.json'), 'utf8'));
-const existingNames = new Set(toolsData.map(t => t.name.toLowerCase()));
-const existingIds = new Set(toolsData.map(t => t.id));
+const toolsPath = path.join(__dirname, '..', 'data', 'tools.json');
+const tools = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
 
-let idCounter = Math.max(...existingIds) + 1;
-const getNextId = () => idCounter++;
-
-const generateRatingBreakdown = (baseScore = 4.5) => ({
-  ease_of_use: { score: Math.min(5, Math.max(3, baseScore + (Math.random() - 0.5))), note: "User-friendly interface" },
-  output_quality: { score: Math.min(5, Math.max(3, baseScore + (Math.random() - 0.3))), note: "High-quality output" },
-  features: { score: Math.min(5, Math.max(3, baseScore + (Math.random() - 0.4))), note: "Rich feature set" },
-  value_for_money: { score: Math.min(5, Math.max(3, baseScore + (Math.random() - 0.2))), note: "Good value" },
-  stability: { score: Math.min(5, Math.max(3, baseScore + (Math.random() - 0.3))), note: "Reliable performance" },
-  support: { score: Math.min(5, Math.max(3, baseScore + (Math.random() - 0.5))), note: "Helpful support" }
-});
-
-const createTool = (name, category, pricing, description, descriptionEn, needsVpn = false, skillLevel = "beginner", bestFor = []) => {
-  if (existingNames.has(name.toLowerCase())) return null;
-  
-  const baseScore = 4.0 + Math.random() * 0.8;
-  
-  return {
-    id: getNextId(),
-    name,
-    description,
-    category,
-    pricing,
-    url: `https://${name.toLowerCase().replace(/\s+/g, '-')}.com`,
-    affiliate_link: "",
-    icon_url: "",
-    examples: [],
-    needs_vpn: needsVpn,
-    languages: ["English"],
-    description_en: descriptionEn,
-    rating: Math.round(baseScore * 10) / 10,
-    rating_count: Math.floor(Math.random() * 5000) + 100,
-    rating_breakdown: generateRatingBreakdown(baseScore),
-    last_updated: "2026-05-28",
-    skill_level: skillLevel,
-    best_for: bestFor.length > 0 ? bestFor : ["General Use", "Productivity", "Content Creation"]
-  };
-};
+const currentDate = new Date().toISOString().split('T')[0];
 
 const newTools = [
-  // Productivity Tools
-  ["Notion AI", "Productivity", "Freemium", "AI-powered workspace for notes, docs, and project management. Integrates with your existing Notion workspace.", "AI-powered workspace for notes and docs.", false, "beginner", ["Note-taking", "Project Management", "Team Collaboration"]],
-  ["ClickUp AI", "Productivity", "Freemium", "AI assistant built into ClickUp for task management, writing, and productivity automation.", "AI assistant for task management.", false, "beginner", ["Task Management", "Automation", "Team Work"]],
-  ["Asana AI", "Productivity", "Freemium", "AI features for Asana's project management platform. Automate workflows and get insights.", "AI features for project management.", false, "intermediate", ["Project Tracking", "Workflow Automation", "Teams"]],
-  ["Monday.com AI", "Productivity", "Freemium", "AI-powered work operating system for teams. Automate repetitive tasks and boost efficiency.", "AI-powered work OS for teams.", false, "beginner", ["Work Management", "Automation", "Collaboration"]],
-  ["Trello AI", "Productivity", "Freemium", "AI features for Trello's kanban boards. Smart suggestions and automation for your workflows.", "AI features for kanban boards.", false, "beginner", ["Kanban", "Task Tracking", "Simple"]],
-  ["Zapier AI", "Productivity", "Freemium", "AI-powered automation platform. Connect apps and automate workflows with intelligent suggestions.", "AI-powered automation platform.", false, "intermediate", ["Automation", "Integrations", "Workflow"]],
-  ["Airtable AI", "Productivity", "Freemium", "AI features for Airtable's flexible database platform. Smart data organization and automation.", "AI features for flexible databases.", false, "intermediate", ["Database", "Custom Apps", "Automation"]],
-  ["Slack AI", "Productivity", "Freemium", "AI-powered features for Slack workspace. Summarize messages, search smarter, and automate tasks.", "AI features for Slack workspace.", false, "beginner", ["Communication", "Team Chat", "Automation"]],
-  ["Zoom AI", "Productivity", "Freemium", "AI Companion for Zoom meetings. Smart summaries, action items, and meeting insights.", "AI Companion for video meetings.", false, "beginner", ["Video Conferencing", "Meetings", "Collaboration"]],
-  ["Google Workspace AI", "Productivity", "Paid", "AI features across Google Workspace apps. Smart compose, summaries, and automation.", "AI features across Google apps.", false, "beginner", ["Docs", "Sheets", "Slides"]],
-  
-  // More Writing Tools
-  ["Anyword", "Writing", "Freemium", "AI copywriting platform with predictive performance scores. Create content that converts.", "AI copywriting with predictive scores.", false, "beginner", ["Copywriting", "Marketing", "Conversion"]],
-  ["Copysmith", "Writing", "Paid", "AI copywriting tool for e-commerce and marketing teams. Generate product descriptions at scale.", "AI copywriting for e-commerce.", false, "intermediate", ["E-commerce", "Product Descriptions", "Bulk"]],
-  ["Peppertype.ai", "Writing", "Paid", "AI content workspace for teams. Collaborate on content creation with AI assistance.", "AI content workspace for teams.", false, "intermediate", ["Team Collaboration", "Content Creation", "Workflow"]],
-  ["INK Editor", "Writing", "Freemium", "AI writing assistant with SEO optimization. Write content that ranks on search engines.", "AI writing with SEO optimization.", false, "beginner", ["SEO", "Content Writing", "Ranking"]],
-  ["Writesonic", "Writing", "Freemium", "AI writing assistant with 100+ templates for marketing content. Blog posts, ads, and more.", "AI writing assistant with templates.", false, "beginner", ["Marketing", "Templates", "Speed"]],
-  ["Text Blaze", "Writing", "Freemium", "AI-powered text expansion and snippet management. Save time on repetitive typing tasks.", "AI-powered text expansion.", false, "beginner", ["Text Expansion", "Productivity", "Templates"]],
-  ["Lex", "Writing", "Free", "AI-first word processor designed for writers. Focus mode, outlines, and intelligent suggestions.", "AI-first word processor.", false, "beginner", ["Writing", "Focus", "Distraction-free"]],
-  ["Kafkai", "Writing", "Paid", "AI article writer with niche specialization. Generate content for specific industries.", "AI article writer with niches.", false, "intermediate", ["Articles", "Niche Content", "SEO"]],
-  ["ContentBot", "Writing", "Freemium", "AI content automation platform. Generate blog posts, landing pages, and marketing copy.", "AI content automation platform.", false, "intermediate", ["Automation", "Marketing", "Landing Pages"]],
-  ["BlogBuddy AI", "Writing", "Freemium", "AI assistant specifically for bloggers. Generate ideas, outlines, and full blog posts.", "AI assistant for bloggers.", false, "beginner", ["Blogging", "Ideas", "Outlines"]],
-  
-  // More Image Tools
-  ["Leonardo.ai", "Image", "Freemium", "AI game art generator with style control. Create game assets, characters, and environments.", "AI game art generator.", false, "beginner", ["Game Assets", "Characters", "Style Control"]],
-  ["Shakker AI", "Image", "Freemium", "AI image generator with advanced control. Fine-tune styles, poses, and compositions.", "AI image generator with control.", false, "intermediate", ["Control", "Fine-tuning", "Art"]],
-  ["Recraft", "Image", "Freemium", "AI tool for creating and regenerating vector graphics and illustrations.", "AI tool for vector graphics.", false, "intermediate", ["Vector", "Illustrations", "Graphics"]],
-  ["Ideogram", "Image", "Freemium", "AI image generator specialized in text rendering. Create images with beautiful text.", "AI image generator with text.", true, "beginner", ["Text Rendering", "Typography", "Design"]],
-  ["Playground AI", "Image", "Free", "Free AI image generator with editing capabilities. Create and edit images in the browser.", "Free AI image generator.", false, "beginner", ["Free", "Browser-based", "Editing"]],
-  ["Bing Image Creator", "Image", "Free", "Free AI image generator powered by DALL-E 3. Create images with Microsoft integration.", "Free AI image generator.", false, "beginner", ["Free", "DALL-E", "Microsoft"]],
-  ["Adobe Firefly", "Image", "Freemium", "Adobe's AI image generation tool integrated with Creative Cloud apps.", "Adobe's AI image tool.", false, "intermediate", ["Adobe", "Creative Cloud", "Professional"]],
-  ["Canva AI", "Image", "Freemium", "AI features in Canva design platform. Magic write, image generation, and design suggestions.", "AI features in Canva.", false, "beginner", ["Design", "Templates", "Easy"]],
-  ["Microsoft Designer AI", "Image", "Free", "AI-powered graphic design tool from Microsoft. Create professional designs instantly.", "AI-powered graphic design.", false, "beginner", ["Graphic Design", "Microsoft", "Professional"]],
-  ["Looka", "Image", "Paid", "AI-powered logo and brand kit generator. Create professional brand identities.", "AI logo and brand generator.", false, "beginner", ["Logo Design", "Branding", "Brand Kit"]],
-  
-  // More Video Tools
-  ["Runway ML", "Video", "Freemium", "AI video editing and generation platform. Green screen, motion tracking, and more.", "AI video editing platform.", false, "intermediate", ["Video Editing", "Green Screen", "Motion"]],
-  ["Synthesia", "Video", "Paid", "AI video generation with realistic avatars. Create professional videos without cameras.", "AI video with realistic avatars.", true, "intermediate", ["AI Avatars", "Training Videos", "Professional"]],
-  ["InVideo AI", "Video", "Freemium", "AI-powered video creation platform. Turn text into videos with automatic editing.", "AI-powered video creation.", false, "beginner", ["Text to Video", "Social Media", "Quick"]],
-  ["Fliki", "Video", "Freemium", "AI video generator with text-to-speech. Create videos from scripts with AI voices.", "AI video with AI voices.", false, "beginner", ["AI Voices", "Scripts", "Automation"]],
-  ["Steve AI", "Video", "Freemium", "AI video creation tool for social media. Animated and live-action videos.", "AI video for social media.", false, "beginner", ["Social Media", "Animated", "Live Action"]],
-  ["Pictory", "Video", "Freemium", "AI video tool for turning long content into short, shareable videos.", "AI video for content repurposing.", false, "beginner", ["Repurposing", "Short Videos", "Content"]],
-  ["Lumen5", "Video", "Freemium", "AI video creator that turns blog posts into engaging videos automatically.", "AI video from blog posts.", false, "beginner", ["Blog to Video", "Content Repurpose", "Marketing"]],
-  ["Synthesys", "Video", "Paid", "AI video generator with talking avatars. Professional videos with virtual presenters.", "AI video with talking avatars.", true, "intermediate", ["Avatars", "Presentations", "Professional"]],
-  ["Rephrase AI", "Video", "Paid", "AI video platform for personalized video at scale. Create custom videos for each customer.", "AI for personalized video.", true, "advanced", ["Personalization", "Scale", "Enterprise"]],
-  ["Elai.io", "Video", "Paid", "AI video platform with custom avatars. Create training and explainer videos.", "AI video with custom avatars.", true, "intermediate", ["Training Videos", "Explainer", "Custom"]],
-  
-  // More Audio Tools
-  ["ElevenLabs", "Audio", "Freemium", "AI voice synthesis with ultra-realistic voices. Clone your voice or use premium voices.", "AI voice synthesis.", true, "intermediate", ["Voice Cloning", "Realistic", "TTS"]],
-  ["Murf AI", "Audio", "Freemium", "AI voiceover platform for professional videos. 120+ voices in 20+ languages.", "AI voiceover platform.", false, "beginner", ["Voiceover", "Professional", "Multilingual"]],
-  ["Speechify", "Audio", "Freemium", "AI text-to-speech reader. Listen to articles, documents, and any text.", "AI text-to-speech reader.", false, "beginner", ["TTS", "Reader", "Accessibility"]],
-  ["Play.ht", "Audio", "Freemium", "AI voice generator with expressive voices. Create natural-sounding speech.", "AI voice generator.", true, "intermediate", ["Voice Generation", "Expressive", "Natural"]],
-  ["Voice.ai", "Audio", "Freemium", "AI voice changer with real-time processing. Transform your voice in games and calls.", "AI voice changer.", false, "beginner", ["Voice Changer", "Real-time", "Gaming"]],
-  ["Lovo AI", "Audio", "Freemium", "AI voice generator with 500+ voices. Create professional voiceovers easily.", "AI voice generator with 500+ voices.", true, "beginner", ["Voiceovers", "Variety", "Professional"]],
-  ["Listnr", "Audio", "Freemium", "AI text-to-speech with podcast hosting. Convert text to audio and host podcasts.", "AI TTS with podcast hosting.", false, "intermediate", ["Podcast", "TTS", "Hosting"]],
-  ["Synthesizer V", "Audio", "Free", "Open-source AI voice synthesizer. Create songs and voice content with AI.", "Open-source AI voice synthesizer.", false, "advanced", ["Open Source", "Singing", "Custom"]],
-  ["Coqui", "Audio", "Free", "Open-source AI voice cloning and TTS. Free voice cloning technology.", "Open-source voice cloning.", false, "advanced", ["Open Source", "Voice Cloning", "Free"]],
-  ["Veritone", "Audio", "Paid", "Enterprise AI for audio and video. Voice cloning and content monetization.", "Enterprise AI for audio.", true, "advanced", ["Enterprise", "Monetization", "Voice Cloning"]],
-  
-  // More Code Tools
-  ["Tabnine", "Code", "Freemium", "AI code completion assistant. Autocomplete code across all major languages.", "AI code completion assistant.", false, "beginner", ["Autocomplete", "Multi-language", "Productivity"]],
-  ["Kite", "Code", "Free", "AI-powered code completions for Python and JavaScript. Free and privacy-focused.", "AI code completions for Python/JS.", false, "beginner", ["Python", "JavaScript", "Free"]],
-  ["AskCodi", "Code", "Freemium", "AI coding assistant for various tasks. Code completion, documentation, and testing.", "AI coding assistant.", false, "beginner", ["Documentation", "Testing", "Completion"]],
-  ["Codeium", "Code", "Free", "Free AI-powered code acceleration toolkit. Fast completions and search.", "Free AI code toolkit.", false, "beginner", ["Free", "Fast", "Search"]],
-  ["Blackbox AI", "Code", "Freemium", "AI code assistant for developers. Code generation, explanation, and debugging.", "AI code assistant.", false, "intermediate", ["Code Generation", "Debugging", "Explanation"]],
-  ["Cody", "Code", "Free", "Free AI coding assistant by Sourcegraph. Understand and write code with AI.", "Free AI coding assistant.", false, "intermediate", ["Free", "Codebase", "Sourcegraph"]],
-  ["Debuild", "Code", "Beta", "AI-powered web app builder. Describe what you want and get working code.", "AI web app builder.", false, "intermediate", ["Web Builder", "No Code", "Prototyping"]],
-  ["Durable", "Code", "Free", "AI website builder. Generate complete websites in seconds.", "AI website builder.", false, "beginner", ["Website Builder", "No Code", "Fast"]],
-  ["Framer AI", "Code", "Freemium", "AI-powered website design and prototyping. Create stunning sites with AI.", "AI website design.", false, "beginner", ["Design", "Prototyping", "Modern"]],
-  ["Bootstrap AI", "Code", "Free", "AI-powered Bootstrap code generator. Create responsive UIs with AI assistance.", "AI Bootstrap generator.", false, "beginner", ["Bootstrap", "Responsive", "UI"]]
+  // Productivity tools
+  {
+    id: tools.length + 1,
+    name: "Notion AI",
+    description: "AI-powered workspace that supercharges your Notion experience with intelligent features like writing assistance, summarization, and content generation. Works seamlessly within the Notion interface you already know and love.",
+    category: "Productivity",
+    pricing: "Freemium",
+    url: "https://notion.so",
+    affiliate_link: "",
+    icon_url: "",
+    examples: [
+      { prompt: "Write a project brief for a SaaS product launch", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" },
+      { prompt: "Summarize this 50-page research paper in bullet points", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" }
+    ],
+    ratings: {
+      overall: 4.8,
+      ease_of_use: { score: 4.7, note: "Seamlessly integrated into existing Notion workflow" },
+      output_quality: { score: 4.6, note: "Excellent for writing and content summarization" },
+      features: { score: 4.5, note: "AI writing, summarization, Q&A, and brainstorming" },
+      value_for_money: { score: 4.4, note: "Included in Notion Plus and Business plans" },
+      stability: { score: 4.9, note: "Highly reliable enterprise-grade platform" },
+      support: { score: 4.6, note: "Excellent documentation and customer support" }
+    },
+    last_updated: currentDate,
+    skill_level: "beginner",
+    best_for: ["Teams", "Students", "Creatives"]
+  },
+  {
+    id: tools.length + 2,
+    name: "Superhuman AI",
+    description: "AI-powered email client that learns your preferences and helps you reach inbox zero 3x faster. Features include AI email drafting, intelligent summarization, and smart reply suggestions.",
+    category: "Productivity",
+    pricing: "Paid",
+    url: "https://superhuman.com",
+    affiliate_link: "",
+    icon_url: "",
+    examples: [
+      { prompt: "Draft a polite response declining a meeting request", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" },
+      { prompt: "Summarize this thread of 20+ emails", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" }
+    ],
+    ratings: {
+      overall: 4.7,
+      ease_of_use: { score: 4.5, note: "Clean interface with minimal learning curve" },
+      output_quality: { score: 4.8, note: "Email drafts sound incredibly natural" },
+      features: { score: 4.6, note: "AI writing, summarization, smart replies, and scheduling" },
+      value_for_money: { score: 4.1, note: "Premium pricing for premium experience" },
+      stability: { score: 4.9, note: "Exceptional reliability and performance" },
+      support: { score: 4.7, note: "High-quality support team" }
+    },
+    last_updated: currentDate,
+    skill_level: "beginner",
+    best_for: ["Professionals", "Executives", "Entrepreneurs"]
+  },
+  {
+    id: tools.length + 3,
+    name: "Todoist AI",
+    description: "Smart task manager with AI-powered features that help you prioritize tasks, break down projects, and manage your time more effectively.",
+    category: "Productivity",
+    pricing: "Freemium",
+    url: "https://todoist.com",
+    affiliate_link: "",
+    icon_url: "",
+    examples: [
+      { prompt: "Break this marketing project into actionable tasks", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" },
+      { prompt: "Suggest priorities based on my current workload", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" }
+    ],
+    ratings: {
+      overall: 4.6,
+      ease_of_use: { score: 4.8, note: "Extremely intuitive interface" },
+      output_quality: { score: 4.4, note: "Good task breakdowns and suggestions" },
+      features: { score: 4.5, note: "AI task breakdown, prioritization, and recommendations" },
+      value_for_money: { score: 4.6, note: "Great value for the features offered" },
+      stability: { score: 4.7, note: "Very stable and reliable platform" },
+      support: { score: 4.5, note: "Good documentation and support" }
+    },
+    last_updated: currentDate,
+    skill_level: "beginner",
+    best_for: ["Students", "Professionals", "Teams"]
+  },
+  // Writing tools
+  {
+    id: tools.length + 4,
+    name: "Sudowrite",
+    description: "AI writing assistant designed specifically for fiction authors, helping with plot development, character creation, and manuscript polishing.",
+    category: "Writing",
+    pricing: "Paid",
+    url: "https://sudowrite.com",
+    affiliate_link: "",
+    icon_url: "",
+    examples: [
+      { prompt: "Write a cliffhanger scene for a thriller novel", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" },
+      { prompt: "Develop this side character with a mysterious backstory", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" }
+    ],
+    ratings: {
+      overall: 4.8,
+      ease_of_use: { score: 4.5, note: "Designed specifically for fiction writers" },
+      output_quality: { score: 4.9, note: "Exceptional creative writing quality" },
+      features: { score: 4.7, note: "Plot development, character arcs, and scene generation" },
+      value_for_money: { score: 4.4, note: "Priced for professional authors" },
+      stability: { score: 4.6, note: "Reliable performance" },
+      support: { score: 4.5, note: "Good community and documentation" }
+    },
+    last_updated: currentDate,
+    skill_level: "intermediate",
+    best_for: ["Creatives", "Authors", "Storytellers"]
+  },
+  {
+    id: tools.length + 5,
+    name: "Copy.ai Pro",
+    description: "Enterprise-grade AI copywriting platform with advanced features for marketing teams. Includes brand voice training, workflow automation, and collaborative tools.",
+    category: "Writing",
+    pricing: "Paid",
+    url: "https://copy.ai",
+    affiliate_link: "",
+    icon_url: "",
+    examples: [
+      { prompt: "Write 10 variations of a Facebook ad headline for fitness gear", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" },
+      { prompt: "Create a complete email marketing sequence for product launch", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" }
+    ],
+    ratings: {
+      overall: 4.7,
+      ease_of_use: { score: 4.6, note: "Easy to use for beginners and pros alike" },
+      output_quality: { score: 4.7, note: "High-quality marketing copy generation" },
+      features: { score: 4.8, note: "Brand voice training, workflows, and collaboration tools" },
+      value_for_money: { score: 4.5, note: "Good value for marketing teams" },
+      stability: { score: 4.8, note: "Enterprise-grade reliability" },
+      support: { score: 4.6, note: "Excellent customer support" }
+    },
+    last_updated: currentDate,
+    skill_level: "beginner",
+    best_for: ["Marketing Teams", "Agencies", "Startups"]
+  },
+  // Image tools
+  {
+    id: tools.length + 6,
+    name: "Stability AI SDXL Turbo",
+    description: "Blazing-fast image generation model from Stability AI that creates stunning visuals in under a second with exceptional quality and detail.",
+    category: "Image",
+    pricing: "Freemium",
+    url: "https://stability.ai",
+    affiliate_link: "",
+    icon_url: "",
+    examples: [
+      { prompt: "Cyberpunk cityscape at night with neon lights and rain-soaked streets", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" },
+      { prompt: "Photorealistic portrait in natural golden hour lighting", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" }
+    ],
+    ratings: {
+      overall: 4.9,
+      ease_of_use: { score: 4.4, note: "Some technical knowledge helpful but not required" },
+      output_quality: { score: 4.9, note: "Photorealistic quality with exceptional detail" },
+      features: { score: 4.8, note: "Text-to-image, image-to-image, and inpainting" },
+      value_for_money: { score: 4.7, note: "Excellent value for the quality" },
+      stability: { score: 4.6, note: "Generally reliable with occasional updates" },
+      support: { score: 4.4, note: "Active community and documentation" }
+    },
+    last_updated: currentDate,
+    skill_level: "intermediate",
+    best_for: ["Creatives", "Designers", "Artists"]
+  },
+  // Video tools
+  {
+    id: tools.length + 7,
+    name: "Pika Labs 2.0",
+    description: "Advanced AI video generation platform that creates stunning videos from text prompts, images, or other videos with unprecedented control and quality.",
+    category: "Video",
+    pricing: "Freemium",
+    url: "https://pika.art",
+    affiliate_link: "",
+    icon_url: "",
+    examples: [
+      { prompt: "Dragon flying over a fantasy castle at sunset, cinematic 4K", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" },
+      { prompt: "Animate this static image into a smooth looping video", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" }
+    ],
+    ratings: {
+      overall: 4.8,
+      ease_of_use: { score: 4.5, note: "Intuitive Discord-based interface" },
+      output_quality: { score: 4.9, note: "State-of-the-art video generation quality" },
+      features: { score: 4.7, note: "Text-to-video, image-to-video, and video editing" },
+      value_for_money: { score: 4.6, note: "Great value compared to alternatives" },
+      stability: { score: 4.5, note: "Rapidly improving with consistent updates" },
+      support: { score: 4.4, note: "Active Discord community" }
+    },
+    last_updated: currentDate,
+    skill_level: "intermediate",
+    best_for: ["Creatives", "Filmmakers", "Animators"]
+  },
+  // Audio tools
+  {
+    id: tools.length + 8,
+    name: "Suno AI Chirp",
+    description: "Revolutionary AI music generation platform that creates complete songs with vocals, instrumentation, and lyrics from simple text prompts.",
+    category: "Audio",
+    pricing: "Freemium",
+    url: "https://suno.ai",
+    affiliate_link: "",
+    icon_url: "",
+    examples: [
+      { prompt: "Upbeat pop song about summer vacation, 80's style", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" },
+      { prompt: "Epic orchestral film score with dramatic buildups", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" }
+    ],
+    ratings: {
+      overall: 4.9,
+      ease_of_use: { score: 4.6, note: "Simple text prompt interface" },
+      output_quality: { score: 4.9, note: "Professional-quality music with vocals" },
+      features: { score: 4.8, note: "Full song generation with lyrics and multiple genres" },
+      value_for_money: { score: 4.7, note: "Exceptional value for the quality" },
+      stability: { score: 4.5, note: "Generally reliable with peak traffic considerations" },
+      support: { score: 4.4, note: "Good documentation and community" }
+    },
+    last_updated: currentDate,
+    skill_level: "beginner",
+    best_for: ["Creatives", "Musicians", "Content Creators"]
+  },
+  // Code tools
+  {
+    id: tools.length + 9,
+    name: "Sourcegraph Cody",
+    description: "AI coding assistant that understands your entire codebase and provides intelligent code completion, refactoring suggestions, and natural language code search.",
+    category: "Code",
+    pricing: "Freemium",
+    url: "https://sourcegraph.com",
+    affiliate_link: "",
+    icon_url: "",
+    examples: [
+      { prompt: "Refactor this legacy code to use modern React patterns", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" },
+      { prompt: "Find all files related to user authentication", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" }
+    ],
+    ratings: {
+      overall: 4.7,
+      ease_of_use: { score: 4.4, note: "IDE integration requires some setup" },
+      output_quality: { score: 4.8, note: "Excellent code understanding across entire repo" },
+      features: { score: 4.7, note: "Codebase understanding, refactoring, and search" },
+      value_for_money: { score: 4.6, note: "Great value for development teams" },
+      stability: { score: 4.7, note: "Enterprise-grade stability" },
+      support: { score: 4.5, note: "Good documentation and enterprise support" }
+    },
+    last_updated: currentDate,
+    skill_level: "intermediate",
+    best_for: ["Developers", "Teams", "Enterprises"]
+  },
+  {
+    id: tools.length + 10,
+    name: "Cursor AI",
+    description: "AI-first code editor built from the ground up for AI pair programming. Features intelligent autocompletion, chat-based coding, and smart refactoring tools.",
+    category: "Code",
+    pricing: "Freemium",
+    url: "https://cursor.so",
+    affiliate_link: "",
+    icon_url: "",
+    examples: [
+      { prompt: "Build a complete REST API with authentication and database", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" },
+      { prompt: "Fix the bugs in this code and add proper error handling", image_url: "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo" }
+    ],
+    ratings: {
+      overall: 4.8,
+      ease_of_use: { score: 4.6, note: "Familiar VS Code-like interface" },
+      output_quality: { score: 4.8, note: "High-quality code generation and understanding" },
+      features: { score: 4.7, note: "AI chat, tab completion, and smart refactoring" },
+      value_for_money: { score: 4.6, note: "Excellent value for the features" },
+      stability: { score: 4.6, note: "Rapidly improving with regular updates" },
+      support: { score: 4.5, note: "Good community and documentation" }
+    },
+    last_updated: currentDate,
+    skill_level: "intermediate",
+    best_for: ["Developers", "Students", "Teams"]
+  }
 ];
 
-const addedTools = [];
-newTools.forEach(toolData => {
-  const tool = createTool(...toolData);
-  if (tool) {
-    toolsData.push(tool);
-    addedTools.push(tool.name);
-  }
-});
+const allTools = [...tools, ...newTools];
 
-fs.writeFileSync(
-  path.join(__dirname, '../data/tools.json'),
-  JSON.stringify(toolsData, null, 2),
-  'utf8'
-);
+fs.writeFileSync(toolsPath, JSON.stringify(allTools, null, 2));
 
-console.log(`✅ 成功添加 ${addedTools.length} 个新工具！`);
-console.log(`📊 总工具数: ${toolsData.length}`);
-console.log(`🎯 工具列表:`);
-addedTools.forEach((name, i) => console.log(`  ${i + 1}. ${name}`));
+console.log(`✅ Added ${newTools.length} new tools`);
+console.log(`📊 Total tools now: ${allTools.length}`);
+console.log(`📝 New tools added: ${newTools.map(t => t.name).join(', ')}`);

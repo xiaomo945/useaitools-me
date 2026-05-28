@@ -114,7 +114,7 @@ const renderContentWithImages = (content: string, images: BlogImage[] = []) => {
   // Paragraphs - optimized for readability (enhanced for mobile and desktop)
   html = html.replace(/^(?!<h[12])(.*?)$/gm, (match, p1) => {
     if (p1.trim() && p1.trim() !== '---') {
-      return `<p class="text-slate-600 dark:text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg max-w-prose">${p1}</p>`;
+      return `<p class="text-slate-600 dark:text-gray-300 leading-relaxed mb-6 text-base lg:text-lg max-w-prose">${p1}</p>`;
     } else if (p1.trim() === '---') {
       return '<hr class="border-t border-slate-200 dark:border-gray-800 my-10 sm:my-12" />';
     }
@@ -265,10 +265,10 @@ export default function ClientBlogDetail({
         </div>
 
         {/* Desktop Layout: TOC Sidebar + Content */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-10">
           {/* Post Content - First on mobile, side by side on desktop */}
-          <div className="flex-1 order-2 lg:order-1">
-            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl mb-8">
+          <div className="order-2 lg:order-1">
+            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl mb-8 max-w-3xl mx-auto">
               <article
                 className="prose prose-slate dark:prose-invert max-w-none"
                 dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images) }}
@@ -278,22 +278,23 @@ export default function ClientBlogDetail({
 
           {/* Table of Contents (Desktop) */}
           {tocItems.length > 0 && (
-            <div className="hidden lg:block w-72 flex-shrink-0 order-1 lg:order-2">
+            <div className="hidden lg:block order-1 lg:order-2">
               <div className="sticky top-6 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg">
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
                   <List className="w-4 h-4 text-emerald-500" />
                   Table of Contents
                 </h3>
-                <nav className="space-y-2 overflow-hidden">
+                <nav className="space-y-2 overflow-x-hidden">
                   {tocItems.map((item, index) => (
                     <button
                       key={item.id}
                       onClick={() => scrollToHeading(item.id)}
-                      className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 word-break break-word overflow-wrap break-word pr-2 ${
+                      className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 pr-2 ${
                         activeHeading === item.id
                           ? 'bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-medium'
                           : 'text-slate-600 dark:text-gray-400 hover:bg-slate-50 dark:hover:bg-gray-800'
                       }`}
+                      style={{ wordBreak: 'break-word', overflowWrap: 'break-word', maxWidth: '100%' }}
                     >
                       <span className="inline-flex items-start gap-2 w-full">
                         <span className="text-xs text-slate-400 dark:text-gray-500 flex-shrink-0 mt-0.5">{index + 1}.</span>
