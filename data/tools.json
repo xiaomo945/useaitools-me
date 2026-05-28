@@ -17642,5 +17642,1535 @@
       "Responsive",
       "UI"
     ]
+  },
+  {
+    "id": 482,
+    "name": "Trello AI Pro",
+    "description": "Advanced AI features for Trello boards. Smart task prioritization and workflow automation.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://trello-ai-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered Trello enhancements",
+    "rating": 4.4,
+    "rating_count": 1521,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1186640989325625,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.588718670635228,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.2011655457292045,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.281738835657433,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.144726444150671,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.5325588267693835,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Project management",
+      "Team collaboration",
+      "Task automation"
+    ]
+  },
+  {
+    "id": 483,
+    "name": "Jira AI Assist",
+    "description": "AI features for Jira to streamline issue tracking and sprint management.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://jira-ai-assist.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered Jira assistance",
+    "rating": 4.1,
+    "rating_count": 1095,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.466701899496223,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.277702058916062,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.068306713848314,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.272609156629515,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.113027021760581,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.859727223923342,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agile teams",
+      "Issue tracking",
+      "Sprint planning"
+    ]
+  },
+  {
+    "id": 484,
+    "name": "Notion Plus AI",
+    "description": "Enhanced AI features for Notion workspace with advanced templates and automation.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://notion-plus-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced Notion AI capabilities",
+    "rating": 4.6,
+    "rating_count": 120,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.836677154707942,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.840542690723357,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.90975685048997,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.637868532318808,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.225872383705073,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Knowledge management",
+      "Note-taking",
+      "Team collaboration"
+    ]
+  },
+  {
+    "id": 485,
+    "name": "Microsoft 365 Copilot",
+    "description": "Microsoft's AI assistant integrated across Word, Excel, PowerPoint, Outlook, and Teams.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://microsoft-365-copilot.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Microsoft's AI productivity suite",
+    "rating": 4.1,
+    "rating_count": 3624,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.531133439285012,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.091705613526224,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.9481587572789945,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.336570051638086,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.357133411530796,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.224891808530972,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Office suite",
+      "Business productivity",
+      "Team collaboration"
+    ]
+  },
+  {
+    "id": 486,
+    "name": "Google Workspace Labs",
+    "description": "Experimental AI features for Google Workspace. Early access to cutting-edge capabilities.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://google-workspace-labs.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Google's AI productivity experiments",
+    "rating": 4.8,
+    "rating_count": 3560,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.509309503813068,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.87642226303368,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.989234443681856,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.8004799627458565,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Google Workspace",
+      "Innovation",
+      "Early adopters"
+    ]
+  },
+  {
+    "id": 487,
+    "name": "Dropbox AI",
+    "description": "AI features for Dropbox including smart search, content summarization, and organization.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://dropbox-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered Dropbox features",
+    "rating": 4,
+    "rating_count": 2299,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.870788434792457,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.641723877393612,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.509670831898528,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.637513497123104,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.195575188608591,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.7354116673973055,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "File management",
+      "Content organization",
+      "Smart search"
+    ]
+  },
+  {
+    "id": 488,
+    "name": "Evernote AI",
+    "description": "AI assistant for Evernote with smart suggestions and content organization.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://evernote-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered note-taking",
+    "rating": 4.6,
+    "rating_count": 4582,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.538579730104086,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.642075612327342,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.777822928828567,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.740856912462119,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Note-taking",
+      "Knowledge management",
+      "Information organization"
+    ]
+  },
+  {
+    "id": 489,
+    "name": "Writesonic Pro",
+    "description": "Advanced AI writing features for professional content creators and marketers.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://writesonic-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional AI writing tool",
+    "rating": 4.7,
+    "rating_count": 1233,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.92918782408306,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.769969989171272,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.895249813537686,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content marketing",
+      "SEO writing",
+      "Professional content"
+    ]
+  },
+  {
+    "id": 490,
+    "name": "Copy.ai Enterprise",
+    "description": "Enterprise-grade AI writing platform with team collaboration and brand voice control.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://copy.ai-enterprise.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Enterprise AI writing solution",
+    "rating": 4.7,
+    "rating_count": 838,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.804603696247651,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.572686648504421,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.5512091337872596,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Marketing teams",
+      "Brand consistency",
+      "Content at scale"
+    ]
+  },
+  {
+    "id": 491,
+    "name": "Frase AI",
+    "description": "AI writing tool focused on SEO content creation and optimization.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://frase-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SEO-focused AI writing tool",
+    "rating": 4.7,
+    "rating_count": 3147,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.975496778349817,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.7890030630119345,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.925889178183427,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.587495327968122,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "SEO content",
+      "Research",
+      "Optimization"
+    ]
+  },
+  {
+    "id": 492,
+    "name": "Surfer AI",
+    "description": "AI writing with built-in SEO optimization and content analysis.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://surfer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SEO-optimized AI writing",
+    "rating": 4.4,
+    "rating_count": 2871,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.361783734332857,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.750223828343182,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.933266686250124,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.804081664001722,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.366975956679003,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.834083539562401,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "SEO writing",
+      "Content analysis",
+      "Ranking optimization"
+    ]
+  },
+  {
+    "id": 493,
+    "name": "Ulysses AI",
+    "description": "AI-powered writing assistant for the Ulysses writing app.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://ulysses-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI for Ulysses app",
+    "rating": 4.1,
+    "rating_count": 4295,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.785237194071574,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.383777885302485,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.594096113768538,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.060816883111746,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.02808374825309,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.9813004060507273,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Writing",
+      "Focus mode",
+      "Professional content"
+    ]
+  },
+  {
+    "id": 494,
+    "name": "GrammarlyGO Business",
+    "description": "Grammarly's AI writing assistant for business teams with enhanced features.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://grammarlygo-business.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Business-focused GrammarlyGO",
+    "rating": 4.6,
+    "rating_count": 308,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.217063947970591,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.760414449199569,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.82644527064589,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Business writing",
+      "Teams",
+      "Professional communication"
+    ]
+  },
+  {
+    "id": 495,
+    "name": "Jasper Teams",
+    "description": "Jasper's enterprise AI writing platform for collaborative content creation.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://jasper-teams.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Enterprise AI writing platform",
+    "rating": 4.7,
+    "rating_count": 712,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.517092913215013,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.933973624968895,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.292125550380812,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Marketing teams",
+      "Collaboration",
+      "Brand voice"
+    ]
+  },
+  {
+    "id": 496,
+    "name": "Midjourney Pro",
+    "description": "Midjourney's professional tier with advanced features and faster generation.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://midjourney-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pro-level Midjourney access",
+    "rating": 4.5,
+    "rating_count": 3222,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.836852069379848,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.909123855305513,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.859822092649548,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.874547999641256,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.260831629235741,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Professional artists",
+      "High quality",
+      "Advanced features"
+    ]
+  },
+  {
+    "id": 497,
+    "name": "Stable Diffusion XL",
+    "description": "Advanced version of Stable Diffusion with improved quality and detail.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://stable-diffusion-xl.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced Stable Diffusion model",
+    "rating": 4.3,
+    "rating_count": 1609,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.322323793990796,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.865103626816005,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.429566039120904,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.333234552459375,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.555815017148857,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.6920688850026995,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Image generation",
+      "High quality",
+      "Open source"
+    ]
+  },
+  {
+    "id": 498,
+    "name": "DALL-E 3 Extended",
+    "description": "Enhanced version of DALL-E 3 with extended capabilities and higher quality.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://dall-e-3-extended.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced DALL-E 3 capabilities",
+    "rating": 4.7,
+    "rating_count": 2879,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.413835322114163,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.484108186106142,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.720430931860873,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.478899948579851,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.653896996722346,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Image generation",
+      "High quality",
+      "Professional use"
+    ]
+  },
+  {
+    "id": 499,
+    "name": "Adobe Firefly Studio",
+    "description": "Adobe's advanced AI image and design tools for Creative Cloud users.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://adobe-firefly-studio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Adobe's professional AI tools",
+    "rating": 4.2,
+    "rating_count": 2966,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.291551192752438,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.56178515494022,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.386903732006561,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.342797886172779,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.600838109993191,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.396708560904691,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Professional design",
+      "Creative Cloud",
+      "Enterprise"
+    ]
+  },
+  {
+    "id": 500,
+    "name": "Figma AI Assistant",
+    "description": "AI features integrated into Figma for design assistance and suggestions.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://figma-ai-assistant.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered Figma features",
+    "rating": 4.1,
+    "rating_count": 3922,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.174622578956736,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.603503378239121,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.253583154380371,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.015050747173184,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.472666727446915,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.938954825094073,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "UI/UX design",
+      "Design systems",
+      "Collaboration"
+    ]
+  },
+  {
+    "id": 501,
+    "name": "Sketch AI",
+    "description": "AI assistant for Sketch app with design suggestions and automation.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://sketch-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered Sketch features",
+    "rating": 4.5,
+    "rating_count": 1902,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.433195832760752,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.412374751209098,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.436667594640551,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.777575364407683,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.39648665646791,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.092148517887226,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Mac design",
+      "UI/UX",
+      "Professional design"
+    ]
+  },
+  {
+    "id": 502,
+    "name": "Final Cut Pro AI",
+    "description": "AI features for Final Cut Pro users with intelligent editing assistance.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://final-cut-pro-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI for Final Cut Pro",
+    "rating": 4.3,
+    "rating_count": 3337,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.797139316685653,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.715499585151936,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.070413493733998,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.499404360021365,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.6306030095179675,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.635739231211508,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Mac video editing",
+      "Professional",
+      "High production"
+    ]
+  },
+  {
+    "id": 503,
+    "name": "DaVinci Resolve AI",
+    "description": "AI-powered features for DaVinci Resolve video editing platform.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://davinci-resolve-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI features for DaVinci Resolve",
+    "rating": 4.3,
+    "rating_count": 2971,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.316877841076692,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.196933659705524,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.419919554930832,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.221861675576382,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.034567683555201,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.304742925310903,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Professional editing",
+      "Color grading",
+      "High end"
+    ]
+  },
+  {
+    "id": 504,
+    "name": "Descript Pro",
+    "description": "Professional tier of Descript with enhanced AI features for video and audio editing.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://descript-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional Descript features",
+    "rating": 4.6,
+    "rating_count": 2692,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.162081775772174,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.9538328609313655,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.453231999468188,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.670519917166702,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.452966904129934,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Podcasting",
+      "Video editing",
+      "Transcription"
+    ]
+  },
+  {
+    "id": 505,
+    "name": "CapCut AI Studio",
+    "description": "Professional AI features for CapCut video editing platform.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://capcut-ai-studio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered CapCut features",
+    "rating": 4.4,
+    "rating_count": 615,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.528363449087561,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.163009161960546,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.912407644797163,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.563683505793235,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.283116702589784,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.389261348120467,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video editing",
+      "Social media",
+      "Content creation"
+    ]
+  },
+  {
+    "id": 506,
+    "name": "Adobe Audition AI",
+    "description": "AI-powered audio enhancement and restoration in Adobe Audition.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://adobe-audition-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI for Adobe Audition",
+    "rating": 4.8,
+    "rating_count": 3487,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.496990659729805,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.5704614032201905,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.433804094479681,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Professional audio",
+      "Post-production",
+      "Restoration"
+    ]
+  },
+  {
+    "id": 507,
+    "name": "Logic Pro AI",
+    "description": "AI features for Logic Pro music production software.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://logic-pro-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI for Logic Pro",
+    "rating": 4.8,
+    "rating_count": 2774,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.947751224527798,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.9484744835096075,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Music production",
+      "Professional",
+      "Mac users"
+    ]
+  },
+  {
+    "id": 508,
+    "name": "Pro Tools AI",
+    "description": "AI-powered features for Pro Tools professional audio production software.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://pro-tools-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI features for Pro Tools",
+    "rating": 4.2,
+    "rating_count": 4608,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.173711865301151,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.59516176324254,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.14914813341559,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.202464474914486,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.36313683307429,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.7858412507955728,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Professional audio",
+      "Studio production",
+      "Enterprise"
+    ]
+  },
+  {
+    "id": 509,
+    "name": "Tabnine Enterprise",
+    "description": "Enterprise-grade AI code assistant with team collaboration features.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://tabnine-enterprise.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Enterprise Tabnine edition",
+    "rating": 4,
+    "rating_count": 4171,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.063860474997243,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.350734799900365,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.393717992312881,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.716531047236742,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.4760758459571495,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.9585789996366763,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Development teams",
+      "Enterprise security",
+      "Collaboration"
+    ]
+  },
+  {
+    "id": 510,
+    "name": "Todoist Premium AI",
+    "description": "Premium AI features for Todoist with advanced task management capabilities.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://todoist-premium-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Premium Todoist AI features",
+    "rating": 4.7,
+    "rating_count": 2833,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.4717106546859,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.754592938460941,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.512674467477397,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.484757717047119,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Task management",
+      "Productivity",
+      "Advanced features"
+    ]
+  },
+  {
+    "id": 511,
+    "name": "InVideo AI Studio",
+    "description": "Advanced AI video creation platform for professional content creators.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://invideo-ai-studio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced InVideo AI features",
+    "rating": 4.8,
+    "rating_count": 2937,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.496936113798855,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.770510128704387,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.876376189419708,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.769496621431269,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.762321164634531,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Professional video",
+      "Content creation",
+      "Marketing"
+    ]
   }
 ]
