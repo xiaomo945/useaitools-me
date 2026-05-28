@@ -14,6 +14,42 @@ const extractToolIds = (content: string): number[] => {
   return [...new Set(ids)];
 };
 
+// Extract FAQs from article content
+const extractFAQs = (content: string): Array<{question: string, answer: string}> => {
+  const faqs: Array<{question: string, answer: string}> = [];
+  
+  // Look for H2 headers that seem like questions
+  const h2Regex = /##\s+(.+?\?)/g;
+  const h3Regex = /###\s+(.+?\?)/g;
+  
+  let match;
+  const questions: string[] = [];
+  
+  while ((match = h2Regex.exec(content)) !== null) {
+    questions.push(match[1].trim());
+  }
+  while ((match = h3Regex.exec(content)) !== null) {
+    questions.push(match[1].trim());
+  }
+  
+  // For each question, extract the following paragraph as the answer
+  questions.slice(0, 5).forEach((question, index) => {
+    const questionIndex = content.indexOf(question);
+    if (questionIndex !== -1) {
+      const afterQuestion = content.slice(questionIndex);
+      const paragraphMatch = afterQuestion.match(/\n\n([^\n#]+)/);
+      if (paragraphMatch) {
+        const answer = paragraphMatch[1].trim().slice(0, 500);
+        if (answer.length > 20) {
+          faqs.push({ question, answer });
+        }
+      }
+    }
+  });
+  
+  return faqs;
+};
+
 // Extract blog slugs from content for cross-linking
 const extractBlogSlugs = (content: string): string[] => {
   const blogLinkRegex = /\[\[link:\/blog\/([^|\]]+)\|/g;
@@ -135,7 +171,9 @@ export default async function BlogDetailPage({
       .replace(/\{\{AFFILIATE_ELEVENLABS\}\}/g, process.env.AFFILIATE_ELEVENLABS || 'https://elevenlabs.io'),
   };
 
-  const jsonLd = {
+  const faqs = extractFAQs(post.content);
+
+  const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
@@ -157,12 +195,31 @@ export default async function BlogDetailPage({
     url: `https://useaitools.me/blog/${slug}`,
   };
 
+  const faqJsonLd = faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  } : null;
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
       <ClientBlogDetail post={processedPost} slug={slug} relatedPosts={relatedPosts} />
     </>
   );

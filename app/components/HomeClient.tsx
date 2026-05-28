@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import StarRating from './StarRating';
 import { Dice3, X, ArrowRight, RefreshCw } from 'lucide-react';
 import workflowsData from '@/data/workflows.json';
+import AISearchRecommend from './AISearchRecommend';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -821,67 +822,70 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
             </p>
           </div>
           
-          {/* Search Box */}
+          {/* Search Box with AI Recommend */}
           <div className="search-container relative max-w-2xl mx-auto mb-8 px-4 sm:px-0">
-            <div className="relative">
-              <svg
-                className="absolute left-4 sm:left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            <div className="relative flex gap-2">
+              <div className="relative flex-1">
+                <svg
+                  className="absolute left-4 sm:left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+                <input
+                  ref={searchInputRef}
+                  type="text"
+                  placeholder="Search best AI tools, AI writing tools, AI image generators, AI video tools..."
+                  value={search}
+                  onChange={(e) => {
+                    setSearch(e.target.value);
+                    setShowSuggestions(true);
+                  }}
+                  onFocus={() => setShowSuggestions(true)}
+                  onKeyDown={handleSearchKeyDown}
+                  aria-label="Search AI tools"
+                  autoComplete="off"
+                  autoCorrect="off"
+                  spellCheck="false"
+                  className="w-full px-4 sm:px-5 py-3 sm:py-4 pl-12 sm:pl-14 pr-20 sm:pr-24 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
                 />
-              </svg>
-              <input
-                ref={searchInputRef}
-                type="text"
-                placeholder="Search best AI tools, AI writing tools, AI image generators, AI video tools..."
-                value={search}
-                onChange={(e) => {
-                  setSearch(e.target.value);
-                  setShowSuggestions(true);
-                }}
-                onFocus={() => setShowSuggestions(true)}
-                onKeyDown={handleSearchKeyDown}
-                aria-label="Search AI tools"
-                autoComplete="off"
-                autoCorrect="off"
-                spellCheck="false"
-                className="w-full px-4 sm:px-5 py-3 sm:py-4 pl-12 sm:pl-14 pr-20 sm:pr-24 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
-              />
-              <div className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-1">
-                {search && (
+                <div className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-1">
+                  {search && (
+                    <button
+                      onClick={() => setSearch('')}
+                      className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200"
+                      aria-label="Clear search"
+                    >
+                      <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  )}
                   <button
-                    onClick={() => setSearch('')}
-                    className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200"
-                    aria-label="Clear search"
+                    onClick={goToSearchPage}
+                    disabled={!search.trim()}
+                    className={`p-2 rounded-full transition-all duration-200 ${
+                      search.trim()
+                        ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:shadow-lg hover:shadow-emerald-500/30'
+                        : 'bg-slate-100 dark:bg-slate-800 text-slate-400 cursor-not-allowed'
+                    }`}
+                    aria-label="Search"
                   >
-                    <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                   </button>
-                )}
-                <button
-                  onClick={goToSearchPage}
-                  disabled={!search.trim()}
-                  className={`p-2 rounded-full transition-all duration-200 ${
-                    search.trim()
-                      ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:shadow-lg hover:shadow-emerald-500/30'
-                      : 'bg-slate-100 dark:bg-slate-800 text-slate-400 cursor-not-allowed'
-                  }`}
-                  aria-label="Search"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </button>
+                </div>
               </div>
+              <AISearchRecommend />
             </div>
 
             {/* Search Suggestions Dropdown */}
