@@ -392,8 +392,8 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
 };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+    <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-10 sm:py-16">
+      <div className="max-w-4xl mx-auto px-3 sm:px-6">
         {/* Breadcrumbs */}
         <Breadcrumbs 
           items={[
@@ -407,8 +407,8 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
         <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl shadow-xl overflow-hidden mb-8 relative">
           {/* Staff Pick Badge for affiliate tools */}
           {hasAffiliate && (
-            <div className="absolute top-4 right-4 z-10">
-              <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25 animate-pulse-glow">
+            <div className="absolute top-3 right-3 z-10">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25 animate-pulse-glow">
                 🏷️ Staff Pick
               </span>
             </div>
@@ -417,32 +417,32 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
           {/* Category Color Bar */}
           <div className={`h-1 ${colors.bg}`} />
           
-          <div className="p-8 sm:p-12">
+          <div className="p-6 sm:p-12">
             {/* Tool Name & Pricing */}
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
               <div>
-                <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-2">
+                <h1 className="text-2.5xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-2">
                   {tool.name}
                 </h1>
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className={`inline-block px-4 py-1.5 rounded-full text-sm font-semibold ${colors.bg} text-white`}>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <span className={`inline-block px-3 py-1.5 rounded-full text-sm font-semibold ${colors.bg} text-white`}>
                       {tool.category}
                     </span>
                     {tool.skill_level && (
-                      <span className={`inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
+                      <span className={`inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
                         {getSkillLevelColors(tool.skill_level).label}
                       </span>
                     )}
                     {tool.needs_vpn ? (
-                      <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                         🪜 VPN Required
                       </span>
                     ) : (
-                      <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
                         ✅ Direct Access
                       </span>
                     )}
-                    <div className="flex flex-wrap gap-1.5 mt-1">
+                    <div className="flex flex-wrap gap-1 mt-1">
                       {tool.best_for?.slice(0, 4).map((tag, i) => (
                         <span key={i} className="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
                           {tag}
@@ -452,11 +452,11 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
                 </div>
               </div>
               <div className="flex flex-col items-end gap-2">
-                <span className="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold">
+                <span className="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-sm">
                   {tool.pricing}
                 </span>
                 {tool.languages && tool.languages.length > 0 && (
-                  <span className="px-3 py-1.5 rounded-full text-xs bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium">
+                  <span className="px-2.5 py-1.5 rounded-full text-xs bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium">
                   {tool.languages.join(', ')}
                 </span>
                 )}
@@ -464,13 +464,13 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
             </div>
 
             {/* Description */}
-            <p className="text-lg text-slate-600 dark:text-gray-300 leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-slate-600 dark:text-gray-300 leading-relaxed mb-6 sm:mb-8">
               {tool.description}
             </p>
 
             {/* Affiliate Disclaimer for trust */}
             {hasAffiliate && (
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-4 text-center">
+              <p className="text-xs text-slate-500 dark:text-slate-400 mb-4 text-center">
                 We may earn a small commission if you try this tool. It doesn&apos;t affect our recommendation.
               </p>
             )}
@@ -481,16 +481,16 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
                 href={ctaUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
               >
                 {ctaText}
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <Link
                 href={`/compare?tool=${tool.id}`}
-                className="inline-flex items-center gap-2 px-6 py-4 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
                 </svg>
                 Compare

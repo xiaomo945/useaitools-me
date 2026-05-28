@@ -226,8 +226,8 @@ export default function ClientBlogDetail({
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16 grid-background">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-10 sm:py-16 grid-background">
+      <div className="max-w-6xl mx-auto px-3 sm:px-6">
         {/* Breadcrumbs */}
         <Breadcrumbs 
           items={[
@@ -240,14 +240,14 @@ export default function ClientBlogDetail({
         {/* Post Header */}
         <div className="mb-8 max-w-4xl">
           <div className="flex items-center gap-3 mb-4">
-            <span className="text-sm font-medium text-slate-500 dark:text-gray-400">
+            <span className="text-xs sm:text-sm font-medium text-slate-500 dark:text-gray-400">
               {relativeDate}
             </span>
-            <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
+            <span className="text-xs sm:text-sm font-medium text-emerald-600 dark:text-emerald-400">
               {readTime}
             </span>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
+          <h1 className="text-2.5xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
             {post.title}
           </h1>
           
@@ -255,7 +255,7 @@ export default function ClientBlogDetail({
           {tocItems.length > 0 && (
             <button
               onClick={() => setShowToc(!showToc)}
-              className="flex items-center gap-2 px-4 py-2 bg-slate-100 dark:bg-gray-800 hover:bg-slate-200 dark:hover:bg-gray-700 rounded-lg text-slate-700 dark:text-gray-300 font-medium transition-colors duration-300 lg:hidden"
+              className="flex items-center gap-2 px-3 py-2 bg-slate-100 dark:bg-gray-800 hover:bg-slate-200 dark:hover:bg-gray-700 rounded-lg text-slate-700 dark:text-gray-300 font-medium transition-colors duration-300 lg:hidden"
             >
               <List className="w-4 h-4" />
               Table of Contents
@@ -268,7 +268,7 @@ export default function ClientBlogDetail({
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-10">
           {/* Post Content - First on mobile, side by side on desktop */}
           <div className="order-2 lg:order-1">
-            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl mb-8 max-w-3xl mx-auto">
+            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-5 sm:p-8 lg:p-10 shadow-xl mb-8 max-w-3xl mx-auto">
               <article
                 className="prose prose-slate dark:prose-invert max-w-none"
                 dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images) }}
