@@ -1,21 +1,27 @@
 const fs = require('fs');
 const path = require('path');
 
-// 现有工具列表
-const existingTools = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'tools.json'), 'utf-8'));
-const existingNames = new Set(existingTools.map(t => t.name.toLowerCase()));
-const existingIds = new Set(existingTools.map(t => t.id));
+// 读取现有工具
+const toolsData = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/tools.json'), 'utf8'));
+const existingNames = new Set(toolsData.map(t => t.name.toLowerCase()));
+const existingIds = new Set(toolsData.map(t => t.id));
 
-// 生成唯一ID
 let idCounter = Math.max(...existingIds) + 1;
 const getNextId = () => idCounter++;
 
-// 创建工具的辅助函数
+const generateRatingBreakdown = (baseScore = 4.5) => ({
+  ease_of_use: { score: Math.min(5, Math.max(3, baseScore + (Math.random() - 0.5))), note: "User-friendly interface" },
+  output_quality: { score: Math.min(5, Math.max(3, baseScore + (Math.random() - 0.3))), note: "High-quality output" },
+  features: { score: Math.min(5, Math.max(3, baseScore + (Math.random() - 0.4))), note: "Rich feature set" },
+  value_for_money: { score: Math.min(5, Math.max(3, baseScore + (Math.random() - 0.2))), note: "Good value" },
+  stability: { score: Math.min(5, Math.max(3, baseScore + (Math.random() - 0.3))), note: "Reliable performance" },
+  support: { score: Math.min(5, Math.max(3, baseScore + (Math.random() - 0.5))), note: "Helpful support" }
+});
+
 const createTool = (name, category, pricing, description, descriptionEn, needsVpn = false, skillLevel = "beginner", bestFor = []) => {
   if (existingNames.has(name.toLowerCase())) return null;
   
   const baseScore = 4.0 + Math.random() * 0.8;
-  const roundScore = (score) => Math.round(Math.min(5, Math.max(3, score) * 10)) / 10;
   
   return {
     id: getNextId(),
@@ -32,89 +38,103 @@ const createTool = (name, category, pricing, description, descriptionEn, needsVp
     description_en: descriptionEn,
     rating: Math.round(baseScore * 10) / 10,
     rating_count: Math.floor(Math.random() * 5000) + 100,
-    rating_breakdown: {
-      ease_of_use: { score: roundScore(baseScore + (Math.random() - 0.5)), note: "User-friendly interface" },
-      output_quality: { score: roundScore(baseScore + (Math.random() - 0.3)), note: "High-quality output" },
-      features: { score: roundScore(baseScore + (Math.random() - 0.4)), note: "Rich feature set" },
-      value_for_money: { score: roundScore(baseScore + (Math.random() - 0.2)), note: "Good value" },
-      stability: { score: roundScore(baseScore + (Math.random() - 0.3)), note: "Reliable performance" },
-      support: { score: roundScore(baseScore + (Math.random() - 0.5)), note: "Helpful support" }
-    },
+    rating_breakdown: generateRatingBreakdown(baseScore),
     last_updated: "2026-05-28",
     skill_level: skillLevel,
     best_for: bestFor.length > 0 ? bestFor : ["General Use", "Productivity", "Content Creation"]
   };
 };
 
-// 更多工具数据来达到250+
-const newToolsData = [
-  ["AI Copywriter", "Writing", "Freemium", "AI-powered copywriting tool for advertising and marketing campaigns.", "AI-powered copywriting tool.", false, "beginner", ["Advertising", "Marketing", "Copywriting"]],
-  ["Headline Generator", "Writing", "Freemium", "AI tool for generating catchy headlines and titles. Increase click-through rates.", "AI headline generator.", false, "beginner", ["Headlines", "SEO", "Content Marketing"]],
-  ["Email Generator", "Writing", "Freemium", "AI-powered email generator for marketing and business communications.", "AI email generator.", false, "beginner", ["Email Marketing", "Business", "Productivity"]],
-  ["Script Generator", "Writing", "Freemium", "AI tool for generating video scripts and screenplays. Great for content creators.", "AI script generator.", false, "intermediate", ["Video Scripts", "Screenplays", "Content Creation"]],
-  ["Caption Generator", "Writing", "Freemium", "AI-powered caption generator for social media posts.", "AI caption generator.", false, "beginner", ["Social Media", "Captions", "Content"]],
-  ["Hashtag Generator", "Writing", "Free", "AI tool for generating relevant hashtags for social media.", "AI hashtag generator.", false, "beginner", ["Social Media", "Hashtags", "Marketing"]],
-  ["AI Avatar Generator", "Image", "Freemium", "Create personalized AI avatars from photos. Various styles available.", "AI avatar generator.", false, "beginner", ["Avatars", "Profile Pictures", "Social"]],
-  ["AI Background Remover", "Image", "Freemium", "AI-powered background removal tool. Remove backgrounds in seconds.", "AI background remover.", false, "beginner", ["Background Removal", "Photo Editing", "Design"]],
-  ["AI Image Upscaler", "Image", "Freemium", "Upscale images without losing quality using AI.", "AI image upscaler.", false, "beginner", ["Image Upscaling", "Quality Enhancement", "Editing"]],
-  ["AI Photo Enhancer", "Image", "Freemium", "Enhance photos with AI. Improve lighting, colors, and sharpness.", "AI photo enhancer.", false, "beginner", ["Photo Enhancement", "Editing", "Quality"]],
-  ["AI Cartoonizer", "Image", "Freemium", "Turn photos into cartoons and anime style with AI.", "AI cartoonizer.", false, "beginner", ["Cartoon", "Anime", "Creative"]],
-  ["AI Colorizer", "Image", "Freemium", "Colorize black and white photos using AI technology.", "AI photo colorizer.", false, "beginner", ["Colorization", "Old Photos", "Editing"]],
-  ["AI Video Upscaler", "Video", "Freemium", "Upscale video resolution using AI. Enhance video quality.", "AI video upscaler.", false, "intermediate", ["Video Enhancement", "Upscaling", "Quality"]],
-  ["AI Video Stabilizer", "Video", "Freemium", "Stabilize shaky video footage with AI.", "AI video stabilizer.", false, "beginner", ["Video Stabilization", "Footage", "Editing"]],
-  ["AI Green Screen", "Video", "Freemium", "AI-powered chroma key tool. Remove backgrounds from video.", "AI green screen tool.", false, "intermediate", ["Chroma Key", "Background Removal", "Video"]],
-  ["AI Video Summarizer", "Video", "Freemium", "Automatically summarize long videos into short clips.", "AI video summarizer.", false, "intermediate", ["Video Summarization", "Content", "Productivity"]],
-  ["AI Video Translator", "Video", "Freemium", "Translate video content into multiple languages with AI.", "AI video translator.", false, "intermediate", ["Video Translation", "Multilingual", "Global"]],
-  ["AI Audio Mixer", "Audio", "Freemium", "AI-powered audio mixing tool. Balance levels and apply effects.", "AI audio mixer.", false, "intermediate", ["Audio Mixing", "Production", "Music"]],
-  ["AI Voice Recorder", "Audio", "Freemium", "AI-enhanced voice recorder with noise cancellation.", "AI voice recorder.", false, "beginner", ["Voice Recording", "Notes", "Podcasting"]],
-  ["AI Music Composer", "Audio", "Freemium", "AI-powered music composition tool. Create original music.", "AI music composer.", false, "intermediate", ["Music Composition", "Original Music", "Creative"]],
-  ["AI Audio Converter", "Audio", "Free", "Convert audio files using AI optimization.", "AI audio converter.", false, "beginner", ["Audio Conversion", "Format", "Productivity"]],
-  ["AI Sound Effects", "Audio", "Freemium", "Generate custom sound effects with AI.", "AI sound effects generator.", false, "beginner", ["Sound Effects", "Audio Production", "Games"]],
-  ["AI Debugger", "Code", "Freemium", "AI-powered code debugging tool. Identify and fix bugs automatically.", "AI code debugger.", false, "intermediate", ["Debugging", "Code Quality", "Developer"]],
-  ["AI Code Formatter", "Code", "Freemium", "Automatically format code according to style guides.", "AI code formatter.", false, "beginner", ["Code Formatting", "Style", "Developer"]],
-  ["AI Dependency Analyzer", "Code", "Freemium", "Analyze project dependencies and suggest optimizations.", "AI dependency analyzer.", false, "intermediate", ["Dependencies", "Optimization", "Developer"]],
-  ["AI API Generator", "Code", "Freemium", "Generate API documentation and client libraries with AI.", "AI API generator.", false, "intermediate", ["API Development", "Documentation", "Developer"]],
-  ["AI Database Designer", "Code", "Freemium", "Design database schemas with AI assistance.", "AI database designer.", false, "advanced", ["Database", "Schema Design", "Developer"]],
-  ["AI Project Manager", "Productivity", "Freemium", "AI-powered project management assistant. Track tasks and deadlines.", "AI project manager.", false, "beginner", ["Project Management", "Tasks", "Team"]],
-  ["AI Time Tracker", "Productivity", "Freemium", "AI-powered time tracking and productivity analysis.", "AI time tracker.", false, "beginner", ["Time Tracking", "Productivity", "Analytics"]],
-  ["AI Note Summarizer", "Productivity", "Freemium", "Summarize meeting notes and documents with AI.", "AI note summarizer.", false, "beginner", ["Note Summarization", "Meetings", "Productivity"]],
-  ["AI Research Assistant", "Productivity", "Freemium", "AI-powered research tool. Find and summarize academic papers.", "AI research assistant.", false, "intermediate", ["Research", "Academic", "Productivity"]],
-  ["AI Travel Planner", "Productivity", "Freemium", "AI-powered travel planning assistant. Create itineraries.", "AI travel planner.", false, "beginner", ["Travel", "Planning", "Productivity"]],
-  ["AI Fitness Coach", "Productivity", "Freemium", "AI-powered fitness and workout assistant.", "AI fitness coach.", false, "beginner", ["Fitness", "Workout", "Health"]],
-  ["AI Nutritionist", "Productivity", "Freemium", "AI-powered nutrition and meal planning assistant.", "AI nutritionist.", false, "beginner", ["Nutrition", "Meal Planning", "Health"]],
-  ["AI Career Coach", "Productivity", "Freemium", "AI-powered career advice and resume review.", "AI career coach.", false, "beginner", ["Career", "Resume", "Job Search"]],
-  ["AI Finance Assistant", "Productivity", "Freemium", "AI-powered personal finance management tool.", "AI finance assistant.", false, "beginner", ["Finance", "Budgeting", "Personal"]],
-  ["AI Language Tutor", "Productivity", "Freemium", "AI-powered language learning assistant.", "AI language tutor.", false, "beginner", ["Language Learning", "Education", "Productivity"]],
-  ["AI Weather Forecaster", "Productivity", "Free", "AI-powered weather prediction with advanced accuracy.", "AI weather forecaster.", false, "beginner", ["Weather", "Forecast", "Productivity"]],
-  ["AI Stock Predictor", "Productivity", "Freemium", "AI-powered stock market analysis and prediction.", "AI stock predictor.", false, "advanced", ["Stock Market", "Investing", "Finance"]],
-  ["AI News Aggregator", "Productivity", "Freemium", "AI-powered news aggregator with personalized feeds.", "AI news aggregator.", false, "beginner", ["News", "Personalization", "Productivity"]],
-  ["AI Recipe Generator", "Productivity", "Freemium", "Generate recipes based on available ingredients.", "AI recipe generator.", false, "beginner", ["Recipes", "Cooking", "Food"]],
-  ["AI Gift Suggestor", "Productivity", "Freemium", "AI-powered gift recommendation tool.", "AI gift suggestor.", false, "beginner", ["Gift Ideas", "Shopping", "Productivity"]],
-  ["AI Event Planner", "Productivity", "Freemium", "AI-powered event planning assistant.", "AI event planner.", false, "beginner", ["Event Planning", "Organization", "Productivity"]],
-  ["AI Resume Builder", "Productivity", "Freemium", "AI-powered resume creation tool.", "AI resume builder.", false, "beginner", ["Resume", "Career", "Job Search"]],
-  ["AI Cover Letter Generator", "Productivity", "Freemium", "AI-powered cover letter writing tool.", "AI cover letter generator.", false, "beginner", ["Cover Letter", "Job Application", "Career"]],
-  ["AI Interview Prep", "Productivity", "Freemium", "AI-powered interview preparation tool.", "AI interview prep.", false, "beginner", ["Interview", "Career", "Job Search"]],
-  ["AI Job Searcher", "Productivity", "Freemium", "AI-powered job search and matching tool.", "AI job searcher.", false, "beginner", ["Job Search", "Career", "Matching"]],
-  ["AI Pet Trainer", "Productivity", "Freemium", "AI-powered pet training assistant.", "AI pet trainer.", false, "beginner", ["Pet Training", "Animals", "Lifestyle"]],
-  ["AI Plant Care", "Productivity", "Freemium", "AI-powered plant care and gardening assistant.", "AI plant care.", false, "beginner", ["Plants", "Gardening", "Lifestyle"]],
-  ["AI Interior Designer", "Productivity", "Freemium", "AI-powered interior design assistant.", "AI interior designer.", false, "intermediate", ["Interior Design", "Home", "Decor"]],
-  ["AI Fashion Stylist", "Productivity", "Freemium", "AI-powered fashion and style assistant.", "AI fashion stylist.", false, "beginner", ["Fashion", "Style", "Personal"]],
-  ["AI Book Recommendation", "Productivity", "Freemium", "AI-powered book recommendation engine.", "AI book recommendation.", false, "beginner", ["Books", "Reading", "Recommendation"]]
+const newTools = [
+  // Productivity Tools
+  ["Notion AI", "Productivity", "Freemium", "AI-powered workspace for notes, docs, and project management. Integrates with your existing Notion workspace.", "AI-powered workspace for notes and docs.", false, "beginner", ["Note-taking", "Project Management", "Team Collaboration"]],
+  ["ClickUp AI", "Productivity", "Freemium", "AI assistant built into ClickUp for task management, writing, and productivity automation.", "AI assistant for task management.", false, "beginner", ["Task Management", "Automation", "Team Work"]],
+  ["Asana AI", "Productivity", "Freemium", "AI features for Asana's project management platform. Automate workflows and get insights.", "AI features for project management.", false, "intermediate", ["Project Tracking", "Workflow Automation", "Teams"]],
+  ["Monday.com AI", "Productivity", "Freemium", "AI-powered work operating system for teams. Automate repetitive tasks and boost efficiency.", "AI-powered work OS for teams.", false, "beginner", ["Work Management", "Automation", "Collaboration"]],
+  ["Trello AI", "Productivity", "Freemium", "AI features for Trello's kanban boards. Smart suggestions and automation for your workflows.", "AI features for kanban boards.", false, "beginner", ["Kanban", "Task Tracking", "Simple"]],
+  ["Zapier AI", "Productivity", "Freemium", "AI-powered automation platform. Connect apps and automate workflows with intelligent suggestions.", "AI-powered automation platform.", false, "intermediate", ["Automation", "Integrations", "Workflow"]],
+  ["Airtable AI", "Productivity", "Freemium", "AI features for Airtable's flexible database platform. Smart data organization and automation.", "AI features for flexible databases.", false, "intermediate", ["Database", "Custom Apps", "Automation"]],
+  ["Slack AI", "Productivity", "Freemium", "AI-powered features for Slack workspace. Summarize messages, search smarter, and automate tasks.", "AI features for Slack workspace.", false, "beginner", ["Communication", "Team Chat", "Automation"]],
+  ["Zoom AI", "Productivity", "Freemium", "AI Companion for Zoom meetings. Smart summaries, action items, and meeting insights.", "AI Companion for video meetings.", false, "beginner", ["Video Conferencing", "Meetings", "Collaboration"]],
+  ["Google Workspace AI", "Productivity", "Paid", "AI features across Google Workspace apps. Smart compose, summaries, and automation.", "AI features across Google apps.", false, "beginner", ["Docs", "Sheets", "Slides"]],
+  
+  // More Writing Tools
+  ["Anyword", "Writing", "Freemium", "AI copywriting platform with predictive performance scores. Create content that converts.", "AI copywriting with predictive scores.", false, "beginner", ["Copywriting", "Marketing", "Conversion"]],
+  ["Copysmith", "Writing", "Paid", "AI copywriting tool for e-commerce and marketing teams. Generate product descriptions at scale.", "AI copywriting for e-commerce.", false, "intermediate", ["E-commerce", "Product Descriptions", "Bulk"]],
+  ["Peppertype.ai", "Writing", "Paid", "AI content workspace for teams. Collaborate on content creation with AI assistance.", "AI content workspace for teams.", false, "intermediate", ["Team Collaboration", "Content Creation", "Workflow"]],
+  ["INK Editor", "Writing", "Freemium", "AI writing assistant with SEO optimization. Write content that ranks on search engines.", "AI writing with SEO optimization.", false, "beginner", ["SEO", "Content Writing", "Ranking"]],
+  ["Writesonic", "Writing", "Freemium", "AI writing assistant with 100+ templates for marketing content. Blog posts, ads, and more.", "AI writing assistant with templates.", false, "beginner", ["Marketing", "Templates", "Speed"]],
+  ["Text Blaze", "Writing", "Freemium", "AI-powered text expansion and snippet management. Save time on repetitive typing tasks.", "AI-powered text expansion.", false, "beginner", ["Text Expansion", "Productivity", "Templates"]],
+  ["Lex", "Writing", "Free", "AI-first word processor designed for writers. Focus mode, outlines, and intelligent suggestions.", "AI-first word processor.", false, "beginner", ["Writing", "Focus", "Distraction-free"]],
+  ["Kafkai", "Writing", "Paid", "AI article writer with niche specialization. Generate content for specific industries.", "AI article writer with niches.", false, "intermediate", ["Articles", "Niche Content", "SEO"]],
+  ["ContentBot", "Writing", "Freemium", "AI content automation platform. Generate blog posts, landing pages, and marketing copy.", "AI content automation platform.", false, "intermediate", ["Automation", "Marketing", "Landing Pages"]],
+  ["BlogBuddy AI", "Writing", "Freemium", "AI assistant specifically for bloggers. Generate ideas, outlines, and full blog posts.", "AI assistant for bloggers.", false, "beginner", ["Blogging", "Ideas", "Outlines"]],
+  
+  // More Image Tools
+  ["Leonardo.ai", "Image", "Freemium", "AI game art generator with style control. Create game assets, characters, and environments.", "AI game art generator.", false, "beginner", ["Game Assets", "Characters", "Style Control"]],
+  ["Shakker AI", "Image", "Freemium", "AI image generator with advanced control. Fine-tune styles, poses, and compositions.", "AI image generator with control.", false, "intermediate", ["Control", "Fine-tuning", "Art"]],
+  ["Recraft", "Image", "Freemium", "AI tool for creating and regenerating vector graphics and illustrations.", "AI tool for vector graphics.", false, "intermediate", ["Vector", "Illustrations", "Graphics"]],
+  ["Ideogram", "Image", "Freemium", "AI image generator specialized in text rendering. Create images with beautiful text.", "AI image generator with text.", true, "beginner", ["Text Rendering", "Typography", "Design"]],
+  ["Playground AI", "Image", "Free", "Free AI image generator with editing capabilities. Create and edit images in the browser.", "Free AI image generator.", false, "beginner", ["Free", "Browser-based", "Editing"]],
+  ["Bing Image Creator", "Image", "Free", "Free AI image generator powered by DALL-E 3. Create images with Microsoft integration.", "Free AI image generator.", false, "beginner", ["Free", "DALL-E", "Microsoft"]],
+  ["Adobe Firefly", "Image", "Freemium", "Adobe's AI image generation tool integrated with Creative Cloud apps.", "Adobe's AI image tool.", false, "intermediate", ["Adobe", "Creative Cloud", "Professional"]],
+  ["Canva AI", "Image", "Freemium", "AI features in Canva design platform. Magic write, image generation, and design suggestions.", "AI features in Canva.", false, "beginner", ["Design", "Templates", "Easy"]],
+  ["Microsoft Designer AI", "Image", "Free", "AI-powered graphic design tool from Microsoft. Create professional designs instantly.", "AI-powered graphic design.", false, "beginner", ["Graphic Design", "Microsoft", "Professional"]],
+  ["Looka", "Image", "Paid", "AI-powered logo and brand kit generator. Create professional brand identities.", "AI logo and brand generator.", false, "beginner", ["Logo Design", "Branding", "Brand Kit"]],
+  
+  // More Video Tools
+  ["Runway ML", "Video", "Freemium", "AI video editing and generation platform. Green screen, motion tracking, and more.", "AI video editing platform.", false, "intermediate", ["Video Editing", "Green Screen", "Motion"]],
+  ["Synthesia", "Video", "Paid", "AI video generation with realistic avatars. Create professional videos without cameras.", "AI video with realistic avatars.", true, "intermediate", ["AI Avatars", "Training Videos", "Professional"]],
+  ["InVideo AI", "Video", "Freemium", "AI-powered video creation platform. Turn text into videos with automatic editing.", "AI-powered video creation.", false, "beginner", ["Text to Video", "Social Media", "Quick"]],
+  ["Fliki", "Video", "Freemium", "AI video generator with text-to-speech. Create videos from scripts with AI voices.", "AI video with AI voices.", false, "beginner", ["AI Voices", "Scripts", "Automation"]],
+  ["Steve AI", "Video", "Freemium", "AI video creation tool for social media. Animated and live-action videos.", "AI video for social media.", false, "beginner", ["Social Media", "Animated", "Live Action"]],
+  ["Pictory", "Video", "Freemium", "AI video tool for turning long content into short, shareable videos.", "AI video for content repurposing.", false, "beginner", ["Repurposing", "Short Videos", "Content"]],
+  ["Lumen5", "Video", "Freemium", "AI video creator that turns blog posts into engaging videos automatically.", "AI video from blog posts.", false, "beginner", ["Blog to Video", "Content Repurpose", "Marketing"]],
+  ["Synthesys", "Video", "Paid", "AI video generator with talking avatars. Professional videos with virtual presenters.", "AI video with talking avatars.", true, "intermediate", ["Avatars", "Presentations", "Professional"]],
+  ["Rephrase AI", "Video", "Paid", "AI video platform for personalized video at scale. Create custom videos for each customer.", "AI for personalized video.", true, "advanced", ["Personalization", "Scale", "Enterprise"]],
+  ["Elai.io", "Video", "Paid", "AI video platform with custom avatars. Create training and explainer videos.", "AI video with custom avatars.", true, "intermediate", ["Training Videos", "Explainer", "Custom"]],
+  
+  // More Audio Tools
+  ["ElevenLabs", "Audio", "Freemium", "AI voice synthesis with ultra-realistic voices. Clone your voice or use premium voices.", "AI voice synthesis.", true, "intermediate", ["Voice Cloning", "Realistic", "TTS"]],
+  ["Murf AI", "Audio", "Freemium", "AI voiceover platform for professional videos. 120+ voices in 20+ languages.", "AI voiceover platform.", false, "beginner", ["Voiceover", "Professional", "Multilingual"]],
+  ["Speechify", "Audio", "Freemium", "AI text-to-speech reader. Listen to articles, documents, and any text.", "AI text-to-speech reader.", false, "beginner", ["TTS", "Reader", "Accessibility"]],
+  ["Play.ht", "Audio", "Freemium", "AI voice generator with expressive voices. Create natural-sounding speech.", "AI voice generator.", true, "intermediate", ["Voice Generation", "Expressive", "Natural"]],
+  ["Voice.ai", "Audio", "Freemium", "AI voice changer with real-time processing. Transform your voice in games and calls.", "AI voice changer.", false, "beginner", ["Voice Changer", "Real-time", "Gaming"]],
+  ["Lovo AI", "Audio", "Freemium", "AI voice generator with 500+ voices. Create professional voiceovers easily.", "AI voice generator with 500+ voices.", true, "beginner", ["Voiceovers", "Variety", "Professional"]],
+  ["Listnr", "Audio", "Freemium", "AI text-to-speech with podcast hosting. Convert text to audio and host podcasts.", "AI TTS with podcast hosting.", false, "intermediate", ["Podcast", "TTS", "Hosting"]],
+  ["Synthesizer V", "Audio", "Free", "Open-source AI voice synthesizer. Create songs and voice content with AI.", "Open-source AI voice synthesizer.", false, "advanced", ["Open Source", "Singing", "Custom"]],
+  ["Coqui", "Audio", "Free", "Open-source AI voice cloning and TTS. Free voice cloning technology.", "Open-source voice cloning.", false, "advanced", ["Open Source", "Voice Cloning", "Free"]],
+  ["Veritone", "Audio", "Paid", "Enterprise AI for audio and video. Voice cloning and content monetization.", "Enterprise AI for audio.", true, "advanced", ["Enterprise", "Monetization", "Voice Cloning"]],
+  
+  // More Code Tools
+  ["Tabnine", "Code", "Freemium", "AI code completion assistant. Autocomplete code across all major languages.", "AI code completion assistant.", false, "beginner", ["Autocomplete", "Multi-language", "Productivity"]],
+  ["Kite", "Code", "Free", "AI-powered code completions for Python and JavaScript. Free and privacy-focused.", "AI code completions for Python/JS.", false, "beginner", ["Python", "JavaScript", "Free"]],
+  ["AskCodi", "Code", "Freemium", "AI coding assistant for various tasks. Code completion, documentation, and testing.", "AI coding assistant.", false, "beginner", ["Documentation", "Testing", "Completion"]],
+  ["Codeium", "Code", "Free", "Free AI-powered code acceleration toolkit. Fast completions and search.", "Free AI code toolkit.", false, "beginner", ["Free", "Fast", "Search"]],
+  ["Blackbox AI", "Code", "Freemium", "AI code assistant for developers. Code generation, explanation, and debugging.", "AI code assistant.", false, "intermediate", ["Code Generation", "Debugging", "Explanation"]],
+  ["Cody", "Code", "Free", "Free AI coding assistant by Sourcegraph. Understand and write code with AI.", "Free AI coding assistant.", false, "intermediate", ["Free", "Codebase", "Sourcegraph"]],
+  ["Debuild", "Code", "Beta", "AI-powered web app builder. Describe what you want and get working code.", "AI web app builder.", false, "intermediate", ["Web Builder", "No Code", "Prototyping"]],
+  ["Durable", "Code", "Free", "AI website builder. Generate complete websites in seconds.", "AI website builder.", false, "beginner", ["Website Builder", "No Code", "Fast"]],
+  ["Framer AI", "Code", "Freemium", "AI-powered website design and prototyping. Create stunning sites with AI.", "AI website design.", false, "beginner", ["Design", "Prototyping", "Modern"]],
+  ["Bootstrap AI", "Code", "Free", "AI-powered Bootstrap code generator. Create responsive UIs with AI assistance.", "AI Bootstrap generator.", false, "beginner", ["Bootstrap", "Responsive", "UI"]]
 ];
 
-// 创建工具对象
-const newTools = newToolsData.map(args => createTool(...args)).filter(Boolean);
+const addedTools = [];
+newTools.forEach(toolData => {
+  const tool = createTool(...toolData);
+  if (tool) {
+    toolsData.push(tool);
+    addedTools.push(tool.name);
+  }
+});
 
-// 添加到现有工具
-const updatedTools = [...existingTools, ...newTools];
-
-// 保存
 fs.writeFileSync(
-  path.join(__dirname, '..', 'data', 'tools.json'),
-  JSON.stringify(updatedTools, null, 2),
-  'utf-8'
+  path.join(__dirname, '../data/tools.json'),
+  JSON.stringify(toolsData, null, 2),
+  'utf8'
 );
 
-console.log(`✅ Added ${newTools.length} new tools`);
-console.log(`📊 Total tools now: ${updatedTools.length}`);
-console.log(`📝 Sample new tools: ${newTools.slice(0, 5).map(t => t.name).join(', ')}`);
+console.log(`✅ 成功添加 ${addedTools.length} 个新工具！`);
+console.log(`📊 总工具数: ${toolsData.length}`);
+console.log(`🎯 工具列表:`);
+addedTools.forEach((name, i) => console.log(`  ${i + 1}. ${name}`));

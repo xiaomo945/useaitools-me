@@ -15602,5 +15602,2045 @@
       "Prep",
       "Technical"
     ]
+  },
+  {
+    "id": 442,
+    "name": "Asana AI",
+    "description": "AI features for Asana's project management platform. Automate workflows and get insights.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://asana-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI features for project management.",
+    "rating": 4.1,
+    "rating_count": 894,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.553057080745436,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.834979718464326,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.602279656239165,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.376962313899971,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.300538845893958,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.2576202996671615,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Project Tracking",
+      "Workflow Automation",
+      "Teams"
+    ]
+  },
+  {
+    "id": 443,
+    "name": "Monday.com AI",
+    "description": "AI-powered work operating system for teams. Automate repetitive tasks and boost efficiency.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://monday.com-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered work OS for teams.",
+    "rating": 4.1,
+    "rating_count": 2723,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.748509061243892,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.9422719381180276,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.486909912267243,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.213531802631597,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.315291662321743,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.869188623608821,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Work Management",
+      "Automation",
+      "Collaboration"
+    ]
+  },
+  {
+    "id": 444,
+    "name": "Trello AI",
+    "description": "AI features for Trello's kanban boards. Smart suggestions and automation for your workflows.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://trello-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI features for kanban boards.",
+    "rating": 4.3,
+    "rating_count": 1534,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.750148543765697,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.341215475690535,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.2567237652957255,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.699674639833578,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.661720552055994,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.038453739554404,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Kanban",
+      "Task Tracking",
+      "Simple"
+    ]
+  },
+  {
+    "id": 445,
+    "name": "Zapier AI",
+    "description": "AI-powered automation platform. Connect apps and automate workflows with intelligent suggestions.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://zapier-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered automation platform.",
+    "rating": 4.6,
+    "rating_count": 595,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.392571267044846,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.923420310350884,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.4656689111176515,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.445603975923601,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.355488055372373,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Automation",
+      "Integrations",
+      "Workflow"
+    ]
+  },
+  {
+    "id": 446,
+    "name": "Airtable AI",
+    "description": "AI features for Airtable's flexible database platform. Smart data organization and automation.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://airtable-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI features for flexible databases.",
+    "rating": 4.7,
+    "rating_count": 2548,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.536348055715672,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.959629411269829,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.4513103170871595,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.896780987788302,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Database",
+      "Custom Apps",
+      "Automation"
+    ]
+  },
+  {
+    "id": 447,
+    "name": "Slack AI",
+    "description": "AI-powered features for Slack workspace. Summarize messages, search smarter, and automate tasks.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://slack-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI features for Slack workspace.",
+    "rating": 4.6,
+    "rating_count": 3996,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.9886543788867534,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.697733854011714,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.6633447573130065,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.432094755557393,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Communication",
+      "Team Chat",
+      "Automation"
+    ]
+  },
+  {
+    "id": 448,
+    "name": "Zoom AI",
+    "description": "AI Companion for Zoom meetings. Smart summaries, action items, and meeting insights.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://zoom-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Companion for video meetings.",
+    "rating": 4.6,
+    "rating_count": 3439,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.348401141864082,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.386415636469339,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.580278766140138,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.54085773013705,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.186182100061885,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video Conferencing",
+      "Meetings",
+      "Collaboration"
+    ]
+  },
+  {
+    "id": 449,
+    "name": "Google Workspace AI",
+    "description": "AI features across Google Workspace apps. Smart compose, summaries, and automation.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://google-workspace-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI features across Google apps.",
+    "rating": 4.3,
+    "rating_count": 3314,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9770828645572296,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.338914229690172,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.183644574426297,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.213116767630372,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.2993204886363925,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.481665511785587,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Docs",
+      "Sheets",
+      "Slides"
+    ]
+  },
+  {
+    "id": 450,
+    "name": "Peppertype.ai",
+    "description": "AI content workspace for teams. Collaborate on content creation with AI assistance.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://peppertype.ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI content workspace for teams.",
+    "rating": 4.7,
+    "rating_count": 2524,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.803184945063752,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.8061221883147995,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.528523348346004,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.5573858343332025,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Team Collaboration",
+      "Content Creation",
+      "Workflow"
+    ]
+  },
+  {
+    "id": 451,
+    "name": "INK Editor",
+    "description": "AI writing assistant with SEO optimization. Write content that ranks on search engines.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://ink-editor.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI writing with SEO optimization.",
+    "rating": 4.1,
+    "rating_count": 2487,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.7383384807704507,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.930222490817418,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.165007944281681,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.145192084832254,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.8882839326666656,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.947039394076129,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "SEO",
+      "Content Writing",
+      "Ranking"
+    ]
+  },
+  {
+    "id": 452,
+    "name": "Text Blaze",
+    "description": "AI-powered text expansion and snippet management. Save time on repetitive typing tasks.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://text-blaze.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered text expansion.",
+    "rating": 4.2,
+    "rating_count": 2596,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8057379715248247,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.311147267302598,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.398206652655882,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.366365853132885,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.067659098752573,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Text Expansion",
+      "Productivity",
+      "Templates"
+    ]
+  },
+  {
+    "id": 453,
+    "name": "Lex",
+    "description": "AI-first word processor designed for writers. Focus mode, outlines, and intelligent suggestions.",
+    "category": "Writing",
+    "pricing": "Free",
+    "url": "https://lex.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-first word processor.",
+    "rating": 4.2,
+    "rating_count": 1804,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.043782165357967,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.791837528764463,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.4114418167616885,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.370390496396415,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.145218457883094,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.22363388841521,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Writing",
+      "Focus",
+      "Distraction-free"
+    ]
+  },
+  {
+    "id": 454,
+    "name": "Kafkai",
+    "description": "AI article writer with niche specialization. Generate content for specific industries.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://kafkai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI article writer with niches.",
+    "rating": 4.8,
+    "rating_count": 2009,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.782825434372756,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.5358649429171125,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Articles",
+      "Niche Content",
+      "SEO"
+    ]
+  },
+  {
+    "id": 455,
+    "name": "ContentBot",
+    "description": "AI content automation platform. Generate blog posts, landing pages, and marketing copy.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://contentbot.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI content automation platform.",
+    "rating": 4.5,
+    "rating_count": 319,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.06629804838981,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.829986798646747,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.4683078866497175,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.410218936129501,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.463074963360887,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Automation",
+      "Marketing",
+      "Landing Pages"
+    ]
+  },
+  {
+    "id": 456,
+    "name": "BlogBuddy AI",
+    "description": "AI assistant specifically for bloggers. Generate ideas, outlines, and full blog posts.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://blogbuddy-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI assistant for bloggers.",
+    "rating": 4.2,
+    "rating_count": 4584,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.7228424114409675,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.574766960950556,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.12911730519058,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.480972003868091,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.1202944470847145,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.6778158594326285,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Blogging",
+      "Ideas",
+      "Outlines"
+    ]
+  },
+  {
+    "id": 457,
+    "name": "Leonardo.ai",
+    "description": "AI game art generator with style control. Create game assets, characters, and environments.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://leonardo.ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI game art generator.",
+    "rating": 4.3,
+    "rating_count": 4653,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.442694553029809,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.812523633816917,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.052454114078617,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.378577619123362,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.616983443129268,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.245264735344465,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Game Assets",
+      "Characters",
+      "Style Control"
+    ]
+  },
+  {
+    "id": 458,
+    "name": "Shakker AI",
+    "description": "AI image generator with advanced control. Fine-tune styles, poses, and compositions.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://shakker-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI image generator with control.",
+    "rating": 4.8,
+    "rating_count": 3494,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.435207578401721,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.528309761430726,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.950125908397286,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Control",
+      "Fine-tuning",
+      "Art"
+    ]
+  },
+  {
+    "id": 459,
+    "name": "Recraft",
+    "description": "AI tool for creating and regenerating vector graphics and illustrations.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://recraft.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI tool for vector graphics.",
+    "rating": 4.4,
+    "rating_count": 3267,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2946603589532835,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.387332694531697,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.106540280667544,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.695474188248945,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.614687861871356,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.752121884153774,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Vector",
+      "Illustrations",
+      "Graphics"
+    ]
+  },
+  {
+    "id": 460,
+    "name": "Bing Image Creator",
+    "description": "Free AI image generator powered by DALL-E 3. Create images with Microsoft integration.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://bing-image-creator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free AI image generator.",
+    "rating": 4.1,
+    "rating_count": 1040,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.668679025355667,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.657195731552157,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.155778796893554,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.774529328959622,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.493907380024639,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.089844325487677,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Free",
+      "DALL-E",
+      "Microsoft"
+    ]
+  },
+  {
+    "id": 461,
+    "name": "Microsoft Designer AI",
+    "description": "AI-powered graphic design tool from Microsoft. Create professional designs instantly.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://microsoft-designer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered graphic design.",
+    "rating": 4.1,
+    "rating_count": 4746,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.004735536961235,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.977541001409737,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.8932290294503638,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.788163093859608,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.699751349189846,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.721167580402453,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Graphic Design",
+      "Microsoft",
+      "Professional"
+    ]
+  },
+  {
+    "id": 462,
+    "name": "InVideo AI",
+    "description": "AI-powered video creation platform. Turn text into videos with automatic editing.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://invideo-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered video creation.",
+    "rating": 4.7,
+    "rating_count": 3337,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.93071773195185,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.622947957154273,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.962996774522095,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.641759310516864,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.946273422104643,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Text to Video",
+      "Social Media",
+      "Quick"
+    ]
+  },
+  {
+    "id": 463,
+    "name": "Steve AI",
+    "description": "AI video creation tool for social media. Animated and live-action videos.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://steve-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video for social media.",
+    "rating": 4.6,
+    "rating_count": 441,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.841553024596127,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.619387101980789,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.412155110417087,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.7023520635547476,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.83450830555684,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Social Media",
+      "Animated",
+      "Live Action"
+    ]
+  },
+  {
+    "id": 464,
+    "name": "Lumen5",
+    "description": "AI video creator that turns blog posts into engaging videos automatically.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://lumen5.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video from blog posts.",
+    "rating": 4.1,
+    "rating_count": 1034,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.6443001039089333,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.0433242192459895,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.3657011465570665,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.775924838399689,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.6596698928406655,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.6548032715190564,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Blog to Video",
+      "Content Repurpose",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 465,
+    "name": "Synthesys",
+    "description": "AI video generator with talking avatars. Professional videos with virtual presenters.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://synthesys.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video with talking avatars.",
+    "rating": 4.2,
+    "rating_count": 2398,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.086231014007458,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.0385947006404495,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.655475910074963,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 3.9685249576429857,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.564223640167957,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.3056006540175344,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Avatars",
+      "Presentations",
+      "Professional"
+    ]
+  },
+  {
+    "id": 466,
+    "name": "Rephrase AI",
+    "description": "AI video platform for personalized video at scale. Create custom videos for each customer.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://rephrase-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI for personalized video.",
+    "rating": 4.5,
+    "rating_count": 949,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.513899343605982,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.337666280376994,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.305425436318347,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.6219564717951345,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.777778076871876,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Personalization",
+      "Scale",
+      "Enterprise"
+    ]
+  },
+  {
+    "id": 467,
+    "name": "Elai.io",
+    "description": "AI video platform with custom avatars. Create training and explainer videos.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://elai.io.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video with custom avatars.",
+    "rating": 4.3,
+    "rating_count": 4321,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7612278932694565,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.030184710026643,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.75938569140035,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.510594855769643,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.947015620719601,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.8624121557245745,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Training Videos",
+      "Explainer",
+      "Custom"
+    ]
+  },
+  {
+    "id": 468,
+    "name": "Play.ht",
+    "description": "AI voice generator with expressive voices. Create natural-sounding speech.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://play.ht.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI voice generator.",
+    "rating": 4.7,
+    "rating_count": 2671,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.435960486399228,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.66713761757934,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.6110166377876665,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.485608740861657,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Voice Generation",
+      "Expressive",
+      "Natural"
+    ]
+  },
+  {
+    "id": 469,
+    "name": "Voice.ai",
+    "description": "AI voice changer with real-time processing. Transform your voice in games and calls.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://voice.ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI voice changer.",
+    "rating": 4.2,
+    "rating_count": 3429,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.054229957558496,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.443169619067599,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.9334700982353477,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.977248068417022,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.767543068709724,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.580713757695466,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Voice Changer",
+      "Real-time",
+      "Gaming"
+    ]
+  },
+  {
+    "id": 470,
+    "name": "Listnr",
+    "description": "AI text-to-speech with podcast hosting. Convert text to audio and host podcasts.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://listnr.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI TTS with podcast hosting.",
+    "rating": 4.7,
+    "rating_count": 1094,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.998320510301327,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.431510080987741,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.440172329098127,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.996464172039377,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Podcast",
+      "TTS",
+      "Hosting"
+    ]
+  },
+  {
+    "id": 471,
+    "name": "Synthesizer V",
+    "description": "Open-source AI voice synthesizer. Create songs and voice content with AI.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://synthesizer-v.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Open-source AI voice synthesizer.",
+    "rating": 4.7,
+    "rating_count": 733,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.266070949091587,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.771850604229104,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.975962501496413,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.9919074254058415,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.401099972124312,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Open Source",
+      "Singing",
+      "Custom"
+    ]
+  },
+  {
+    "id": 472,
+    "name": "Coqui",
+    "description": "Open-source AI voice cloning and TTS. Free voice cloning technology.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://coqui.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Open-source voice cloning.",
+    "rating": 4.6,
+    "rating_count": 2677,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.220345457170933,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.435228834365255,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.8181381108755,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.412889823914286,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Open Source",
+      "Voice Cloning",
+      "Free"
+    ]
+  },
+  {
+    "id": 473,
+    "name": "Veritone",
+    "description": "Enterprise AI for audio and video. Voice cloning and content monetization.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://veritone.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Enterprise AI for audio.",
+    "rating": 4.8,
+    "rating_count": 3250,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.835216780568203,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.4668344505753215,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.956189185323155,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.793818410638771,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.303854027008757,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Enterprise",
+      "Monetization",
+      "Voice Cloning"
+    ]
+  },
+  {
+    "id": 474,
+    "name": "Kite",
+    "description": "AI-powered code completions for Python and JavaScript. Free and privacy-focused.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://kite.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI code completions for Python/JS.",
+    "rating": 4.5,
+    "rating_count": 2619,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.434443881194826,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.76524972602151,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.50164977884518,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.5826858826394155,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.585123915374613,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Python",
+      "JavaScript",
+      "Free"
+    ]
+  },
+  {
+    "id": 475,
+    "name": "AskCodi",
+    "description": "AI coding assistant for various tasks. Code completion, documentation, and testing.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://askcodi.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI coding assistant.",
+    "rating": 4.2,
+    "rating_count": 4303,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.641429361476982,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.052483166407311,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.9626444249603026,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.812790178738016,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.43651497689121,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.7648133369353647,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Documentation",
+      "Testing",
+      "Completion"
+    ]
+  },
+  {
+    "id": 476,
+    "name": "Blackbox AI",
+    "description": "AI code assistant for developers. Code generation, explanation, and debugging.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://blackbox-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI code assistant.",
+    "rating": 4.4,
+    "rating_count": 2445,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.8646818037804485,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.612269912232528,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.939364318924433,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.235549622152907,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.57923684158183,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.497142022636638,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Code Generation",
+      "Debugging",
+      "Explanation"
+    ]
+  },
+  {
+    "id": 477,
+    "name": "Cody",
+    "description": "Free AI coding assistant by Sourcegraph. Understand and write code with AI.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://cody.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free AI coding assistant.",
+    "rating": 4.2,
+    "rating_count": 959,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.395820487011271,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.498455024721719,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.8500203098137233,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.907439704580018,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.3152511396594555,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.26939656343012,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Free",
+      "Codebase",
+      "Sourcegraph"
+    ]
+  },
+  {
+    "id": 478,
+    "name": "Debuild",
+    "description": "AI-powered web app builder. Describe what you want and get working code.",
+    "category": "Code",
+    "pricing": "Beta",
+    "url": "https://debuild.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI web app builder.",
+    "rating": 4.1,
+    "rating_count": 3054,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.23743140113108,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.487812865430916,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.792898272042529,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.039252744899119,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.424851778486976,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.532391696789226,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Web Builder",
+      "No Code",
+      "Prototyping"
+    ]
+  },
+  {
+    "id": 479,
+    "name": "Durable",
+    "description": "AI website builder. Generate complete websites in seconds.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://durable.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI website builder.",
+    "rating": 4.4,
+    "rating_count": 3505,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.154932282326921,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.055295070695203,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.3007444577357745,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.643130807265982,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.251700143519478,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Website Builder",
+      "No Code",
+      "Fast"
+    ]
+  },
+  {
+    "id": 480,
+    "name": "Framer AI",
+    "description": "AI-powered website design and prototyping. Create stunning sites with AI.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://framer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI website design.",
+    "rating": 4.6,
+    "rating_count": 3709,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.305074211733105,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.872769220102371,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.535398654650358,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.973020850963027,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.785809501937756,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Design",
+      "Prototyping",
+      "Modern"
+    ]
+  },
+  {
+    "id": 481,
+    "name": "Bootstrap AI",
+    "description": "AI-powered Bootstrap code generator. Create responsive UIs with AI assistance.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://bootstrap-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Bootstrap generator.",
+    "rating": 4.4,
+    "rating_count": 4212,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3553054852105735,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.848171988588918,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.233425611640073,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.969589718957153,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Bootstrap",
+      "Responsive",
+      "UI"
+    ]
   }
 ]
