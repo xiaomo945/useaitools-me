@@ -11,17 +11,17 @@
   "featured": true,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&h=400&fit=crop&article=30&hash=bwo8ia9mv2j",
       "alt": "Content automation workflow with AI",
       "position": "header"
     },
     {
-      "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&h=400&fit=crop&article=30&hash=wezqt8f8cu",
       "alt": "AI writing assistant interface",
       "position": "mid"
     },
     {
-      "url": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&h=400&fit=crop&article=30&hash=0ucd99ys7v5n",
       "alt": "Content calendar planning",
       "position": "cta"
     }

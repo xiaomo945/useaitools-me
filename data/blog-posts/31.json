@@ -11,17 +11,17 @@
   "featured": true,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&h=400&fit=crop&article=31&hash=cyp2vzrmcaf",
       "alt": "AI generated art comparison showcase",
       "position": "header"
     },
     {
-      "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1487014679447-ebefba5ddcab?w=800&h=400&fit=crop&article=31&hash=f4yfjt9upg",
       "alt": "Digital art gallery with various AI styles",
       "position": "mid"
     },
     {
-      "url": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=400&fit=crop&article=31&hash=bsx2yllrtuc",
       "alt": "Creative artist using AI image generator",
       "position": "cta"
     }

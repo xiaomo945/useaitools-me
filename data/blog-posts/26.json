@@ -11,17 +11,17 @@
   "featured": false,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&article=26&hash=cup9ca1b1ij",
       "alt": "AI vs human content creation",
       "position": "header"
     },
     {
-      "url": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&h=400&fit=crop&article=26&hash=869nceekm8e",
       "alt": "Content creation workflow",
       "position": "mid"
     },
     {
-      "url": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&article=26&hash=rsr7y9f7b0h",
       "alt": "Creative writing process",
       "position": "cta"
     }

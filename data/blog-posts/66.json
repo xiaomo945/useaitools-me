@@ -11,7 +11,7 @@
   "featured": true,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1432821673831-997b35a897ca?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&article=66&hash=847wlbi3ka7",
       "alt": "Cost vs quality analysis for AI writing",
       "caption": "Is AI writing worth it in 2026?",
       "position": "header",
@@ -19,7 +19,7 @@
       "image_url": "https://images.unsplash.com/photo-1432821673831-997b35a897ca?w=800&h=400&fit=crop"
     },
     {
-      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=400&fit=crop&article=66&hash=yyx9tlogl3b",
       "alt": "Human vs AI writing comparison chart",
       "caption": "Compare the costs and quality!",
       "position": "mid",
@@ -27,7 +27,7 @@
       "image_url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop"
     },
     {
-      "url": "https://images.unsplash.com/photo-1488590833335-b45651081394?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop&article=66&hash=4l70jovwguq",
       "alt": "Decide if AI writing is right for you",
       "caption": "Make an informed decision!",
       "position": "cta",

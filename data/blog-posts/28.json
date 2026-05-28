@@ -11,17 +11,17 @@
   "featured": false,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=400&fit=crop&article=28&hash=03h6r7dzqwyn",
       "alt": "AI coding tools workspace",
       "position": "header"
     },
     {
-      "url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=400&fit=crop&article=28&hash=xox0eh1r5m",
       "alt": "Code editor with AI assistance",
       "position": "mid"
     },
     {
-      "url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&article=28&hash=8h7dt2c4spm",
       "alt": "Programming workflow",
       "position": "cta"
     }

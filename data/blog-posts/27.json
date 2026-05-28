@@ -11,17 +11,17 @@
   "featured": true,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1487014679447-ebefba5ddcab?w=800&h=400&fit=crop&article=27&hash=9pircsof7b",
       "alt": "Podcast recording setup with AI tools",
       "position": "header"
     },
     {
-      "url": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=400&fit=crop&article=27&hash=5kku2l3tvdm",
       "alt": "Audio waveform editing",
       "position": "mid"
     },
     {
-      "url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&h=400&fit=crop",
+      "url": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=400&fit=crop&article=27&hash=riyjq3a9nb",
       "alt": "Professional podcast studio",
       "position": "cta"
     }
