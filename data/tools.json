@@ -2742,7 +2742,7 @@
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.grammarly.com",
-    "affiliate_link": "",
+    "affiliate_link": "{{AFFILIATE_GRAMMARLY}}",
     "icon_url": "",
     "examples": [
       {
@@ -8572,7 +8572,7 @@
     "category": "Productivity",
     "pricing": "Paid",
     "url": "https://grammarly-business.com",
-    "affiliate_link": "",
+    "affiliate_link": "{{AFFILIATE_GRAMMARLY}}",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -18262,7 +18262,7 @@
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://grammarlygo-business.com",
-    "affiliate_link": "",
+    "affiliate_link": "{{AFFILIATE_GRAMMARLY}}",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -28336,6 +28336,1638 @@
       "NPS",
       "Customer satisfaction",
       "Analytics"
+    ]
+  },
+  {
+    "id": 607,
+    "name": "AI Blog Generator",
+    "description": "AI-powered blog post generator with SEO optimization. Generate high-quality content in minutes.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://ai-blog-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI blog post generator",
+    "rating": 4.2,
+    "rating_count": 1693,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.644155667435085,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.218819032064247,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.247326625338639,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.686486892026751,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.360675663019875,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.632263863056691,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Blogging",
+      "SEO",
+      "Content Creation"
+    ]
+  },
+  {
+    "id": 608,
+    "name": "Content Rewriter Pro",
+    "description": "Advanced AI content rewriter that maintains original meaning while improving readability.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://content-rewriter-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI content rewriter",
+    "rating": 4.1,
+    "rating_count": 947,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.643429558984383,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.14224781263797,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.430727324718001,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.468666531938914,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.9060925568828733,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.005825636702625,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Rewriting",
+      "SEO",
+      "Plagiarism Prevention"
+    ]
+  },
+  {
+    "id": 609,
+    "name": "Email Copy AI",
+    "description": "AI email copywriter for marketing campaigns and sales outreach.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://email-copy-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI email copywriter",
+    "rating": 4.5,
+    "rating_count": 3065,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1892379547181875,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.869262753973087,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.89689287805803,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.9624533668192266,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.903698368237317,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Email Marketing",
+      "Sales Outreach",
+      "Copywriting"
+    ]
+  },
+  {
+    "id": 610,
+    "name": "Story Writer AI",
+    "description": "AI-powered story and fiction writer with character development tools.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://story-writer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI story writer",
+    "rating": 4.4,
+    "rating_count": 3476,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5370124283272135,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.620327883423329,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.139130436832995,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.905708952030595,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.434929758373443,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.277433466871633,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Fiction Writing",
+      "Storytelling",
+      "Creative Writing"
+    ]
+  },
+  {
+    "id": 611,
+    "name": "Technical Writer AI",
+    "description": "AI assistant for technical documentation and API documentation writing.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://technical-writer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI technical writer",
+    "rating": 4.6,
+    "rating_count": 2624,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.643544078725099,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.735606111634154,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.901587887200792,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.628367561031835,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.489441229241224,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.239696807668729,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Technical Writing",
+      "Documentation",
+      "API Docs"
+    ]
+  },
+  {
+    "id": 612,
+    "name": "AI Video Editor",
+    "description": "AI-powered video editing with auto-editing and scene detection.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://ai-video-editor.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video editor",
+    "rating": 4.4,
+    "rating_count": 1383,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.199369733013686,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.196380335115412,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.965034415130223,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.217311648602519,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.790592301144597,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.11333770533538,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Video Editing",
+      "Content Creation",
+      "YouTube"
+    ]
+  },
+  {
+    "id": 613,
+    "name": "Video Transcriber AI",
+    "description": "AI video transcription with accurate captions and subtitles.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://video-transcriber-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video transcriber",
+    "rating": 4,
+    "rating_count": 1224,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.454402584958232,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.723261766712358,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.580882336381091,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.0333086447763735,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.177482344664254,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.9705904394964913,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Transcription",
+      "Accessibility",
+      "Subtitles"
+    ]
+  },
+  {
+    "id": 614,
+    "name": "TikTok Video Maker",
+    "description": "AI-powered TikTok video creator with trending templates.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://tiktok-video-maker.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI TikTok video maker",
+    "rating": 4.2,
+    "rating_count": 3862,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.139000529637672,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.425327868953801,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.536835805344895,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.361579615329903,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.61829469165315,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.524731052512945,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "TikTok",
+      "Social Media",
+      "Short Form Video"
+    ]
+  },
+  {
+    "id": 615,
+    "name": "YouTube Thumbnail AI",
+    "description": "AI thumbnail generator for YouTube videos with high click-through rate design.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://youtube-thumbnail-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI YouTube thumbnail maker",
+    "rating": 4.6,
+    "rating_count": 3801,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6124681031285215,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.608057250921955,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.492511812440026,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.7278311526601415,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.952552819105885,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "YouTube",
+      "Thumbnails",
+      "CTR Optimization"
+    ]
+  },
+  {
+    "id": 616,
+    "name": "Product Photo AI",
+    "description": "AI product photo enhancer and background remover for e-commerce.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://product-photo-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI product photo editor",
+    "rating": 4.2,
+    "rating_count": 1214,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.455560305368375,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.672940966019844,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.982026945999361,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.306403896297895,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.112618096928076,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.823281217831337,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "E-commerce",
+      "Product Photography",
+      "Background Removal"
+    ]
+  },
+  {
+    "id": 617,
+    "name": "Logo Creator AI",
+    "description": "AI logo designer with brand identity package generation.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://logo-creator-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI logo creator",
+    "rating": 4.5,
+    "rating_count": 3765,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.150428357035641,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.970427352907966,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.710539976905301,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.3425839850254695,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.604966712436781,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.979798630566069,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Logo Design",
+      "Branding",
+      "Startups"
+    ]
+  },
+  {
+    "id": 618,
+    "name": "AI Art Generator Pro",
+    "description": "Advanced AI art generator with multiple style presets and high-res output.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://ai-art-generator-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced AI art generator",
+    "rating": 4.7,
+    "rating_count": 1052,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.543752796781917,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.479362109297978,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.8680672299634455,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.380902668438139,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Digital Art",
+      "Illustration",
+      "Concept Art"
+    ]
+  },
+  {
+    "id": 619,
+    "name": "Voiceover Artist AI",
+    "description": "AI voice generator with realistic voices for videos and podcasts.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://voiceover-artist-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI voiceover generator",
+    "rating": 4.6,
+    "rating_count": 4143,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.957285917351958,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.535639317159415,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.9886805650621255,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.426945829161781,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.549899862776968,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Voiceovers",
+      "Podcasts",
+      "Video Narration"
+    ]
+  },
+  {
+    "id": 620,
+    "name": "Podcast Editor AI",
+    "description": "AI-powered podcast editing with noise reduction and auto-leveling.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://podcast-editor-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI podcast editor",
+    "rating": 4.3,
+    "rating_count": 2401,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.825430120580419,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.644715131616645,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.034333475997111,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.371818529686129,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.621593992118118,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.89888459773695,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Podcasting",
+      "Audio Editing",
+      "Noise Reduction"
+    ]
+  },
+  {
+    "id": 621,
+    "name": "Music Composer AI",
+    "description": "AI music composition tool for creating original soundtracks and background music.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://music-composer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI music composer",
+    "rating": 4.5,
+    "rating_count": 1832,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.491952773717711,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.57101665229897,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.377411505262683,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.752702283673969,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.865625669097891,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Music Production",
+      "Soundtracks",
+      "Background Music"
+    ]
+  },
+  {
+    "id": 622,
+    "name": "Code Assistant Pro",
+    "description": "Advanced AI coding assistant with smart suggestions and error detection.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://code-assistant-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced AI code assistant",
+    "rating": 4.2,
+    "rating_count": 2750,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.620334938067896,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.615120577108068,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.254596149653322,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.367380432611589,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.9020278351410003,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.020603590693071,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Coding",
+      "Development",
+      "Error Detection"
+    ]
+  },
+  {
+    "id": 623,
+    "name": "Database Query AI",
+    "description": "AI-powered database query builder and optimizer.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://database-query-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI database query tool",
+    "rating": 4,
+    "rating_count": 205,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.126095624475495,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.428018318580454,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.2772391419568505,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 3.8186165820916735,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.272303100246191,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.564760764219562,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Database",
+      "SQL",
+      "Query Optimization"
+    ]
+  },
+  {
+    "id": 624,
+    "name": "API Documentation AI",
+    "description": "AI API documentation generator from code comments.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://api-documentation-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI API documentation generator",
+    "rating": 4.7,
+    "rating_count": 2285,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.59915874011574,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.6751625150927,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.657304501923506,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "API Documentation",
+      "Developer Tools",
+      "Code Comments"
+    ]
+  },
+  {
+    "id": 625,
+    "name": "Bug Detector AI",
+    "description": "AI-powered bug detection and code quality analysis.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://bug-detector-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI bug detector",
+    "rating": 4.2,
+    "rating_count": 3595,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9706921245698314,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.893005873628544,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.8344186781561795,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.910525601682236,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.483031051513636,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.610188564179639,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Debugging",
+      "Code Quality",
+      "Testing"
+    ]
+  },
+  {
+    "id": 626,
+    "name": "Meeting Assistant AI",
+    "description": "AI meeting assistant with transcription, notes, and action item extraction.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://meeting-assistant-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI meeting assistant",
+    "rating": 4.6,
+    "rating_count": 213,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.585556194593506,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.773119763739402,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.827555109844028,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.914777561314247,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Meetings",
+      "Productivity",
+      "Notes"
+    ]
+  },
+  {
+    "id": 627,
+    "name": "Task Manager AI",
+    "description": "AI-powered task management with priority sorting and scheduling.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://task-manager-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI task manager",
+    "rating": 4.4,
+    "rating_count": 2239,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.508372274495348,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.3577151213974545,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.4942134417494355,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.93769974137285,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.809763694551098,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.003156687739001,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Task Management",
+      "Productivity",
+      "Scheduling"
+    ]
+  },
+  {
+    "id": 628,
+    "name": "Calendar Optimizer AI",
+    "description": "AI calendar optimization with smart scheduling and time blocking.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://calendar-optimizer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI calendar optimizer",
+    "rating": 4.5,
+    "rating_count": 816,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.930874829656604,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.417934199576142,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.1292479273041085,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.213918823394776,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.416922353621699,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Calendar",
+      "Time Management",
+      "Scheduling"
+    ]
+  },
+  {
+    "id": 629,
+    "name": "Email Inbox AI",
+    "description": "AI email inbox organizer with smart filtering and priority sorting.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://email-inbox-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI email organizer",
+    "rating": 4,
+    "rating_count": 2727,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.338563056240943,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.734960957123871,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.6977773741742843,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.365834273767217,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.284098260268771,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.494096540538849,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Email",
+      "Inbox Zero",
+      "Productivity"
+    ]
+  },
+  {
+    "id": 630,
+    "name": "Resume Builder AI",
+    "description": "AI resume builder with ATS optimization and professional templates.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://resume-builder-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI resume builder",
+    "rating": 4.6,
+    "rating_count": 2565,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.361893938300907,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.408646100715856,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.827532414253471,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.491836233202511,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.37824896581297,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Resume",
+      "Job Search",
+      "Career"
+    ]
+  },
+  {
+    "id": 631,
+    "name": "Language Tutor AI",
+    "description": "AI-powered language learning with personalized lessons and practice.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://language-tutor-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI language tutor",
+    "rating": 4.7,
+    "rating_count": 1160,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.205556314825764,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.777071936315497,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.24023949199721,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Language Learning",
+      "Education",
+      "Tutoring"
+    ]
+  },
+  {
+    "id": 632,
+    "name": "Math Solver AI",
+    "description": "AI math problem solver with step-by-step explanations.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://math-solver-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI math solver",
+    "rating": 4.4,
+    "rating_count": 907,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.347544874181787,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.706159809504208,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.659310283317,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.8765628930709095,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.40037342212061,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Math",
+      "Education",
+      "Problem Solving"
+    ]
+  },
+  {
+    "id": 633,
+    "name": "Research Assistant AI",
+    "description": "AI research assistant with source finding and literature review.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://research-assistant-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI research assistant",
+    "rating": 4.1,
+    "rating_count": 2261,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.531280698128228,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.693959893433543,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.451737706019818,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.878424058851785,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.574379046875609,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.129205983324301,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Research",
+      "Academic",
+      "Literature Review"
+    ]
+  },
+  {
+    "id": 634,
+    "name": "Mind Map AI",
+    "description": "AI mind map generator for brainstorming and organizing ideas.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://mind-map-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI mind map generator",
+    "rating": 4,
+    "rating_count": 2379,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8907716334595404,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.006464653455184,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.438787556357353,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.816954497030563,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.7497925741865514,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.506491810044445,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Brainstorming",
+      "Ideation",
+      "Organization"
+    ]
+  },
+  {
+    "id": 635,
+    "name": "AI Note Taker",
+    "description": "AI note-taking with smart organization and search capabilities.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://ai-note-taker.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI note taker",
+    "rating": 4.4,
+    "rating_count": 3109,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.273968584383381,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.720147942751274,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.551638465502207,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.561157530943422,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.580691101349245,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.353829628832258,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Note Taking",
+      "Organization",
+      "Search"
+    ]
+  },
+  {
+    "id": 636,
+    "name": "SEO Optimizer AI",
+    "description": "AI SEO optimizer with keyword research and content analysis.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://seo-optimizer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI SEO optimizer",
+    "rating": 4.2,
+    "rating_count": 2700,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.90518790169902,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.436945840454778,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.726413343442072,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.58884704676907,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.700669047779186,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.329845024793765,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "SEO",
+      "Keyword Research",
+      "Content Optimization"
+    ]
+  },
+  {
+    "id": 637,
+    "name": "Grammar Checker Pro",
+    "description": "Advanced AI grammar checker with style suggestions.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://grammar-checker-pro.com",
+    "affiliate_link": "{{AFFILIATE_GRAMMARLY}}",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced AI grammar checker",
+    "rating": 4,
+    "rating_count": 2480,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8388779741884282,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.183976405804902,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.673137865045433,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.4526295625630015,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.558629577739701,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.532029790944009,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Grammar Check",
+      "Writing",
+      "Style Improvement"
+    ]
+  },
+  {
+    "id": 638,
+    "name": "Essay Writer AI",
+    "description": "AI essay writer with citation support and academic standards.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://essay-writer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI essay writer",
+    "rating": 4.4,
+    "rating_count": 2808,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.760355549133809,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.440651724280384,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.825809723332055,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.54981383681825,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.113969386105113,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Essay Writing",
+      "Academic",
+      "Citations"
     ]
   }
 ]
