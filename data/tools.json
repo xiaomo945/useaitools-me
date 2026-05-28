@@ -2742,7 +2742,7 @@
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.grammarly.com",
-    "affiliate_link": "{{AFFILIATE_GRAMMARLY}}",
+    "affiliate_link": "",
     "icon_url": "",
     "examples": [
       {
@@ -8572,7 +8572,7 @@
     "category": "Productivity",
     "pricing": "Paid",
     "url": "https://grammarly-business.com",
-    "affiliate_link": "{{AFFILIATE_GRAMMARLY}}",
+    "affiliate_link": "",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -18262,7 +18262,7 @@
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://grammarlygo-business.com",
-    "affiliate_link": "{{AFFILIATE_GRAMMARLY}}",
+    "affiliate_link": "",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -29875,7 +29875,7 @@
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://grammar-checker-pro.com",
-    "affiliate_link": "{{AFFILIATE_GRAMMARLY}}",
+    "affiliate_link": "",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -29968,6 +29968,3448 @@
       "Essay Writing",
       "Academic",
       "Citations"
+    ]
+  },
+  {
+    "id": 639,
+    "name": "GroupGrowth AI",
+    "description": "AI-powered Facebook group management tool that automates content moderation, member onboarding, and engagement optimization. Features include smart content suggestions, sentiment analysis, and automated welcome sequences.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://example.com/groupgrowth",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered Facebook group management platform with automated moderation and engagement tools.",
+    "rating": 4.3,
+    "rating_count": 1240,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "note": "Intuitive dashboard with one-click automation setup"
+      },
+      "output_quality": {
+        "score": 4.2,
+        "note": "Smart moderation with 90%+ accuracy in identifying spam"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Complete toolkit for group growth and management"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Free tier for small groups; Pro at $29/month"
+      },
+      "stability": {
+        "score": 4.1,
+        "note": "Reliable API connection to Facebook"
+      },
+      "support": {
+        "score": 4,
+        "note": "Responsive chat support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Community Managers",
+      "Facebook Groups",
+      "Content Moderation"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of GroupGrowth AI for Productivity tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 640,
+    "name": "GroupAnalytics Pro",
+    "description": "Advanced Facebook group analytics tool with AI-powered insights on member behavior, engagement patterns, and content performance recommendations. Predictive analytics to forecast group growth.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://example.com/groupanalytics",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced analytics and insights for Facebook group performance optimization.",
+    "rating": 4.5,
+    "rating_count": 875,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Comprehensive dashboard with visual data representation"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "Accurate predictive analytics and actionable insights"
+      },
+      "features": {
+        "score": 4.7,
+        "note": "Deep analytics including member segmentation"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Premium pricing with enterprise-grade features"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Stable data sync with Facebook"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Priority support for enterprise customers"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Marketers",
+      "Community Leaders",
+      "Data Analysis"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of GroupAnalytics Pro for Productivity tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 641,
+    "name": "PinAI Creator",
+    "description": "AI-powered Pinterest ad creation platform that generates high-converting pin designs, optimized descriptions, and smart targeting suggestions based on Pinterest's visual algorithm.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://example.com/pinaicreator",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI tool for creating optimized Pinterest ad content and targeting strategies.",
+    "rating": 4.4,
+    "rating_count": 1120,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "Drag-and-drop pin builder with templates"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "High-quality designs optimized for Pinterest"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "A/B testing and performance analytics"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free tier for 10 pins/month; Pro at $19/month"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Reliable performance and fast generation"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Good documentation and tutorials"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Pinterest Marketers",
+      "E-commerce",
+      "Visual Content"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of PinAI Creator for Video tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 642,
+    "name": "PinOptimizer AI",
+    "description": "Pinterest ad optimization tool that uses AI to analyze pin performance, suggest improvements, and automate bid management for maximum ROI on Pinterest advertising campaigns.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://example.com/pinoptimizer",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-driven Pinterest ad optimization and bid management platform.",
+    "rating": 4.2,
+    "rating_count": 650,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1,
+        "note": "Automated optimization with minimal setup"
+      },
+      "output_quality": {
+        "score": 4.3,
+        "note": "Improves CTR by average 30%"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Automated bidding and budget optimization"
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "note": "Starts at $49/month with performance-based pricing"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Consistent optimization performance"
+      },
+      "support": {
+        "score": 4.1,
+        "note": "Account management available"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Ad Managers",
+      "Performance Marketing",
+      "Pinterest"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of PinOptimizer AI for Video tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 643,
+    "name": "BookCover AI",
+    "description": "Professional AI book cover designer specialized in creating stunning, genre-specific book covers for self-published authors. Features include typography optimization, genre templates, and marketplace-ready exports.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://example.com/bookcoverai",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered book cover design tool for self-published authors.",
+    "rating": 4.6,
+    "rating_count": 2840,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7,
+        "note": "Genre-specific templates with one-click generation"
+      },
+      "output_quality": {
+        "score": 4.8,
+        "note": "Professional quality covers ready for marketplaces"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Typography, color palette, and layout tools"
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "note": "Free previews; $39 per high-res cover"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Fast generation with consistent quality"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Author community and design tips"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Self-Published Authors",
+      "Book Design",
+      "Genre Fiction"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of BookCover AI for Image tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 644,
+    "name": "CoverGenius Pro",
+    "description": "Advanced AI book cover generator with brand consistency tools, series template management, and 3D mockup generation. Perfect for authors with multiple books in a series.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://example.com/covergenius",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional book cover design with series branding and 3D mockups.",
+    "rating": 4.5,
+    "rating_count": 1560,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Series management with brand consistency"
+      },
+      "output_quality": {
+        "score": 4.7,
+        "note": "High-quality covers with 3D mockups"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Advanced typography and color tools"
+      },
+      "value_for_money": {
+        "score": 4.5,
+        "note": "$29/month subscription for unlimited covers"
+      },
+      "stability": {
+        "score": 4.6,
+        "note": "Enterprise-grade reliability"
+      },
+      "support": {
+        "score": 4.5,
+        "note": "Dedicated design consultants"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Professional Authors",
+      "Book Series",
+      "Publishing"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of CoverGenius Pro for Image tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 645,
+    "name": "MeditationVoice AI",
+    "description": "AI-powered meditation guide creator that generates calming voiceovers, ambient soundscapes, and personalized meditation scripts based on user needs and preferences.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://example.com/meditationvoice",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI tool for creating personalized meditation guides and audio content.",
+    "rating": 4.7,
+    "rating_count": 3420,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.8,
+        "note": "Simple script generation with voice selection"
+      },
+      "output_quality": {
+        "score": 4.7,
+        "note": "Natural-sounding voices with calming delivery"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Ambient sound mixing and length control"
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "note": "Free for 5 guides/month; $15/month Pro"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Consistent audio quality"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Wellness community and tips"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Wellness Creators",
+      "Meditation Apps",
+      "Podcast Production"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of MeditationVoice AI for Audio tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 646,
+    "name": "ZenSoundscapes AI",
+    "description": "Advanced AI tool for creating immersive meditation soundscapes with binaural beats, nature sounds, and guided vocal meditations. Perfect for meditation app developers.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://example.com/zensoundscapes",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional meditation audio production with binaural beats and soundscapes.",
+    "rating": 4.5,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Layered sound design interface"
+      },
+      "output_quality": {
+        "score": 4.7,
+        "note": "Studio-quality audio with professional mixing"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Binaural beats, frequency tuning, and sound library"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "$39/month for commercial use"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Professional-grade audio processing"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Audio engineering support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "App Developers",
+      "Wellness Apps",
+      "Audio Production"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of ZenSoundscapes AI for Audio tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 647,
+    "name": "ChainCode AI",
+    "description": "AI-powered smart contract development assistant that audits code, suggests optimizations, and generates secure Solidity code for Ethereum and EVM-compatible blockchains.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://example.com/chaincode",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI assistant for secure smart contract development and auditing.",
+    "rating": 4.6,
+    "rating_count": 2100,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Solidity-specific AI with code explanations"
+      },
+      "output_quality": {
+        "score": 4.7,
+        "note": "Security-focused code generation and audit"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Vulnerability scanning and gas optimization"
+      },
+      "value_for_money": {
+        "score": 4.5,
+        "note": "Free for basic use; Pro at $49/month"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Regular security updates"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Blockchain development community"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Blockchain Developers",
+      "Smart Contracts",
+      "Security"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of ChainCode AI for Code tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 648,
+    "name": "Web3 Builder AI",
+    "description": "Complete AI toolkit for Web3 development including dApp scaffolding, wallet integration, NFT minting logic, and DeFi protocol templates. Accelerates blockchain development.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://example.com/web3builder",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Comprehensive Web3 development toolkit with AI assistance.",
+    "rating": 4.4,
+    "rating_count": 1280,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Template-based dApp generation"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Production-ready code with best practices"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Multi-chain support and integration tools"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "$79/month for full access"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Regular updates for new chains"
+      },
+      "support": {
+        "score": 4.5,
+        "note": "Dedicated Web3 support team"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Web3 Developers",
+      "dApp Creation",
+      "NFT Projects"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of Web3 Builder AI for Code tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 649,
+    "name": "SEOContent AI",
+    "description": "AI-powered SEO content writer that creates search-optimized articles with keyword research, competitor analysis, and readability optimization for better rankings.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://example.com/seocontent",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI SEO content writer with keyword research and optimization.",
+    "rating": 4.5,
+    "rating_count": 3890,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "Simple keyword input with article generation"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Well-researched content with SEO structure"
+      },
+      "features": {
+        "score": 4.7,
+        "note": "Keyword research and competitor analysis"
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "note": "Free for 5 articles; $29/month"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Consistent SEO performance"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "SEO learning resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Marketers",
+      "Bloggers",
+      "SEO Specialists"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of SEOContent AI for Writing tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 650,
+    "name": "RankMaster AI",
+    "description": "Advanced SEO content platform with AI-driven content strategy, semantic analysis, internal linking suggestions, and performance tracking for sustained search rankings.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://example.com/rankmaster",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced SEO strategy and content optimization platform.",
+    "rating": 4.6,
+    "rating_count": 2450,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Strategic dashboard with SEO insights"
+      },
+      "output_quality": {
+        "score": 4.7,
+        "note": "Data-driven content that ranks"
+      },
+      "features": {
+        "score": 4.8,
+        "note": "Complete SEO toolkit including analytics"
+      },
+      "value_for_money": {
+        "score": 4.5,
+        "note": "$49/month with team features"
+      },
+      "stability": {
+        "score": 4.6,
+        "note": "Enterprise-grade platform"
+      },
+      "support": {
+        "score": 4.6,
+        "note": "SEO strategy consulting"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "SEO Agencies",
+      "Enterprise Content",
+      "Content Strategy"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of RankMaster AI for Writing tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 651,
+    "name": "WebinarAI Creator",
+    "description": "AI-powered webinar creation platform that generates presentation slides, speaking scripts, Q&A prep, and promotional content. Automates the entire webinar production workflow.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://example.com/webinarai",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Complete AI toolkit for webinar creation and promotion.",
+    "rating": 4.4,
+    "rating_count": 1680,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "note": "Template-based webinar creation"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Professional presentations and scripts"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Promo content and Q&A preparation"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free for 1 webinar; $39/month"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable generation performance"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Webinar best practices library"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Marketing Teams",
+      "Sales Teams",
+      "Online Events"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of WebinarAI Creator for Productivity tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 652,
+    "name": "WebinarEngage AI",
+    "description": "AI-powered webinar engagement platform that provides real-time audience insights, smart Q&A management, poll suggestions, and follow-up content generation for better conversion.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://example.com/webinarengage",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI webinar engagement and conversion optimization platform.",
+    "rating": 4.3,
+    "rating_count": 920,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Real-time dashboard during webinars"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Engagement-driven content suggestions"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Analytics and follow-up automation"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "$59/month with integrations"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Stable real-time performance"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Webinar strategy support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "B2B Marketing",
+      "Lead Generation",
+      "Webinar Producers"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of WebinarEngage AI for Productivity tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 653,
+    "name": "TeamFlow Free",
+    "description": "Free AI-powered team collaboration tool with task management, meeting notes, document collaboration, and lightweight project tracking for small teams of 5 or fewer.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://example.com/teamflow",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free AI collaboration tool for small team productivity.",
+    "rating": 4.5,
+    "rating_count": 4200,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7,
+        "note": "Simple interface with AI assistance"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Useful AI features for team coordination"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Core features completely free"
+      },
+      "value_for_money": {
+        "score": 4.8,
+        "note": "100% free for small teams"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Community support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Small Teams",
+      "Startups",
+      "Free Tools"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of TeamFlow Free for Productivity tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 654,
+    "name": "StartupSuite AI",
+    "description": "Free AI toolkit for startup teams including pitch deck generator, business plan writer, market research assistant, and financial projection tools to accelerate early-stage growth.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://example.com/startupsuite",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free AI toolkit for startup teams and founders.",
+    "rating": 4.6,
+    "rating_count": 2890,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "Founder-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Professional-grade outputs"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Complete startup toolkit"
+      },
+      "value_for_money": {
+        "score": 4.7,
+        "note": "Core features free; Premium at $29/month"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Startup-focused reliability"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Founder community and resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Founders",
+      "Startups",
+      "Business Planning"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of StartupSuite AI for Productivity tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 655,
+    "name": "SocialInsight AI",
+    "description": "AI-powered social media analytics platform that provides deep insights, competitor analysis, audience segmentation, and content performance predictions across all major platforms.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://example.com/socialinsight",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI social media analytics with insights and predictions.",
+    "rating": 4.4,
+    "rating_count": 2180,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "note": "Unified dashboard for all platforms"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Actionable insights and recommendations"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Competitor tracking and audience insights"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free basic; Pro at $39/month"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Consistent data syncing"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Analytics learning center"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Social Media Managers",
+      "Marketing Teams",
+      "Analytics"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of SocialInsight AI for Productivity tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 656,
+    "name": "SocialPredict AI",
+    "description": "Advanced social media analytics with AI-driven predictions, trend forecasting, and automated reporting. Helps teams anticipate viral content and optimize posting strategies.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://example.com/socialpredict",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced social analytics with AI predictions and trend forecasting.",
+    "rating": 4.5,
+    "rating_count": 1240,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Predictive dashboard with visualizations"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "High-accuracy predictions and forecasts"
+      },
+      "features": {
+        "score": 4.7,
+        "note": "Trend analysis and automated reports"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "$69/month for enterprise features"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Enterprise-grade analytics"
+      },
+      "support": {
+        "score": 4.5,
+        "note": "Dedicated account management"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Enterprise Marketing",
+      "Social Media Agencies",
+      "Predictive Analytics"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of SocialPredict AI for Productivity tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 657,
+    "name": "VideoScript AI",
+    "description": "AI-powered video script writer specialized in creating engaging video content scripts for YouTube, TikTok, and social media. Includes scene descriptions, hooks, and calls-to-action.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://example.com/videoscript",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video script writer for social media and YouTube content.",
+    "rating": 4.5,
+    "rating_count": 3120,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "Template-based script generation"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Engaging scripts with proven structures"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Platform-specific optimizations"
+      },
+      "value_for_money": {
+        "score": 4.5,
+        "note": "Free for 5 scripts; $19/month"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Reliable generation performance"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Script writing resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creators",
+      "YouTubers",
+      "Social Media"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of VideoScript AI for Video tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 658,
+    "name": "ThumbnailMaster AI",
+    "description": "AI YouTube thumbnail generator that creates click-optimized thumbnails with attention-grabbing text, high-contrast designs, and A/B testing suggestions for maximum CTR.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://example.com/thumbnailmaster",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI thumbnail generator optimized for YouTube click-through rate.",
+    "rating": 4.6,
+    "rating_count": 4280,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7,
+        "note": "One-click thumbnail generation"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "High-CTR designs with best practices"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "A/B testing and performance tracking"
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "note": "Free for 10 thumbnails; $15/month"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Fast generation with consistent quality"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "YouTube growth resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "YouTubers",
+      "Video Creators",
+      "CTR Optimization"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of ThumbnailMaster AI for Image tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 659,
+    "name": "CodeReview AI",
+    "description": "AI-powered code review tool that analyzes pull requests, suggests improvements, identifies bugs, and enforces coding standards. Integrates with GitHub, GitLab, and Bitbucket.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://example.com/codereview",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI code review tool for automated quality assurance.",
+    "rating": 4.4,
+    "rating_count": 2560,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Seamless Git integration"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "High-quality code suggestions"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Multi-language support and custom rules"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free for public repos; $29/month private"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Enterprise-grade reliability"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Developer community"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Development Teams",
+      "Code Quality",
+      "DevOps"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of CodeReview AI for Code tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 660,
+    "name": "PodcastGuest AI",
+    "description": "AI-powered podcast guest booking platform that finds relevant guests, generates outreach emails, and manages interview scheduling for podcast hosts.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://example.com/podcastguest",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI podcast guest discovery and outreach platform.",
+    "rating": 4.3,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Automated guest matching"
+      },
+      "output_quality": {
+        "score": 4.2,
+        "note": "Good guest recommendations"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Outreach templates and scheduling"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Free for 5 outreachs; $25/month"
+      },
+      "stability": {
+        "score": 4.2,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.1,
+        "note": "Podcast host community"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Podcast Hosts",
+      "Content Creators",
+      "Interview Shows"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of PodcastGuest AI for Audio tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 661,
+    "name": "EmailCopy AI",
+    "description": "AI-powered email copywriting tool that creates high-converting email campaigns, newsletters, and sequences. Includes A/B testing suggestions and performance analytics.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://example.com/emailcopy",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI email copywriter for high-converting campaigns.",
+    "rating": 4.5,
+    "rating_count": 3420,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "Template-based email generation"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Persuasive copy with proven frameworks"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "A/B testing and email analytics"
+      },
+      "value_for_money": {
+        "score": 4.5,
+        "note": "Free for 10 emails; $24/month"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Consistent quality"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Email marketing resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Email Marketers",
+      "Newsletters",
+      "Copywriting"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of EmailCopy AI for Writing tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 662,
+    "name": "ContentCalendar AI",
+    "description": "AI-powered content calendar planner that suggests topics, optimizes posting times, and generates content ideas based on audience insights and trends.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://example.com/contentcalendar",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI content calendar with topic suggestions and scheduling.",
+    "rating": 4.4,
+    "rating_count": 2180,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "note": "Visual calendar with drag-and-drop"
+      },
+      "output_quality": {
+        "score": 4.3,
+        "note": "Relevant topic suggestions"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Multi-platform scheduling"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free basic; $19/month Pro"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Reliable scheduling"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Content strategy resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Managers",
+      "Social Media",
+      "Marketing"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of ContentCalendar AI for Productivity tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 663,
+    "name": "VoiceClone Pro",
+    "description": "AI voice cloning tool that creates realistic voice replicas from short audio samples. Perfect for content creators, voiceover artists, and businesses needing consistent voice branding.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://example.com/voiceclone",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI voice cloning tool for realistic voice replication.",
+    "rating": 4.5,
+    "rating_count": 1890,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Simple recording and cloning process"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "Highly realistic voice replication"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Multi-language and emotion control"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "$49/month for commercial use"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Consistent voice quality"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Voice production support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Voiceover Artists",
+      "Content Creators",
+      "Branding"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of VoiceClone Pro for Audio tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 664,
+    "name": "AIContract Reviewer",
+    "description": "AI-powered legal contract reviewer that analyzes agreements, highlights risks, suggests improvements, and summarizes key terms. Great for small businesses without legal teams.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://example.com/aicontract",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI contract review tool for legal document analysis.",
+    "rating": 4.3,
+    "rating_count": 1560,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Upload and review in minutes"
+      },
+      "output_quality": {
+        "score": 4.3,
+        "note": "Useful risk identification"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Clause library and template suggestions"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free for 3 reviews; $39/month"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable analysis"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Legal resource library"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Small Businesses",
+      "Contract Review",
+      "Legal Tech"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of AIContract Reviewer for Writing tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 665,
+    "name": "MobileDev AI",
+    "description": "AI-powered mobile development assistant that generates Swift/Kotlin code, suggests UI/UX improvements, and helps with App Store optimization for iOS and Android apps.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://example.com/mobiledev",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI assistant for iOS and Android mobile app development.",
+    "rating": 4.4,
+    "rating_count": 1920,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Platform-specific code generation"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Production-ready mobile code"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "iOS and Android support, ASO tips"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free basic; $34/month Pro"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Regular platform updates"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Mobile dev community"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Mobile Developers",
+      "iOS",
+      "Android"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of MobileDev AI for Code tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 666,
+    "name": "CaptionGenius AI",
+    "description": "AI social media caption writer that creates engaging captions, hashtags, and call-to-actions for Instagram, LinkedIn, Twitter, and Facebook. Includes platform-specific optimization.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://example.com/captiongenius",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI caption writer for all social media platforms.",
+    "rating": 4.6,
+    "rating_count": 5240,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7,
+        "note": "One-click caption generation"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "Engaging captions with high engagement"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Multi-platform and tone options"
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "note": "Free for 20 captions; $12/month"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Fast and consistent"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Social media tips"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Social Media Managers",
+      "Influencers",
+      "Branding"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of CaptionGenius AI for Writing tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 667,
+    "name": "AdCopyMaster AI",
+    "description": "AI ad copy generator that creates high-converting ad copy for Facebook, Google, TikTok, and LinkedIn ads. Includes A/B testing variants and performance predictions.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://example.com/adcopymaster",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI ad copy generator for all major advertising platforms.",
+    "rating": 4.5,
+    "rating_count": 3680,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "Platform-specific ad templates"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Proven high-converting ad copy"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "A/B variants and performance predictions"
+      },
+      "value_for_money": {
+        "score": 4.5,
+        "note": "Free for 10 ads; $29/month"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Consistent quality"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Ad strategy resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Digital Marketers",
+      "Ad Agencies",
+      "Performance Marketing"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of AdCopyMaster AI for Writing tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 668,
+    "name": "CourseCreator AI",
+    "description": "AI-powered online course creation platform that structures curriculum, generates lesson content, creates quizzes, and produces course materials for online learning platforms.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://example.com/coursecreator",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI course creator for online learning content development.",
+    "rating": 4.4,
+    "rating_count": 1420,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Structured course building workflow"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Comprehensive course materials"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Curriculum, quizzes, and assessments"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "$49/month for unlimited courses"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Reliable content generation"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Course creation resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Course Creators",
+      "Online Learning",
+      "Education"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of CourseCreator AI for Productivity tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 669,
+    "name": "ProductPhoto AI",
+    "description": "AI product photography tool that enhances e-commerce product images, removes backgrounds, adds shadows, and creates lifestyle photos from product shots. Perfect for online stores.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://example.com/productphoto",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI product photo enhancement for e-commerce.",
+    "rating": 4.7,
+    "rating_count": 4890,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.8,
+        "note": "Simple upload and enhance process"
+      },
+      "output_quality": {
+        "score": 4.7,
+        "note": "Professional quality product photos"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Background removal and lifestyle generation"
+      },
+      "value_for_money": {
+        "score": 4.7,
+        "note": "Free for 5 photos; $19/month"
+      },
+      "stability": {
+        "score": 4.6,
+        "note": "Fast and consistent quality"
+      },
+      "support": {
+        "score": 4.5,
+        "note": "E-commerce resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "E-commerce",
+      "Product Photography",
+      "Online Stores"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of ProductPhoto AI for Image tasks",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 670,
+    "name": "GroupGrowth AI",
+    "description": "AI-powered Facebook group management tool that automates content moderation, member onboarding, and engagement optimization.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://example.com/groupgrowth",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered Facebook group management platform.",
+    "rating": 4.3,
+    "rating_count": 1240,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "note": "Intuitive dashboard with one-click automation setup"
+      },
+      "output_quality": {
+        "score": 4.2,
+        "note": "Smart moderation with 90%+ accuracy"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Complete toolkit for group growth"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Free tier for small groups"
+      },
+      "stability": {
+        "score": 4.1,
+        "note": "Reliable API connection"
+      },
+      "support": {
+        "score": 4,
+        "note": "Responsive chat support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Community Managers",
+      "Facebook Groups"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of GroupGrowth AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 671,
+    "name": "PinAI Creator",
+    "description": "AI-powered Pinterest ad creation platform that generates high-converting pin designs and optimized descriptions.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://example.com/pinaicreator",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI tool for creating optimized Pinterest ad content.",
+    "rating": 4.4,
+    "rating_count": 1120,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "Drag-and-drop pin builder"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "High-quality designs"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "A/B testing and analytics"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free tier available"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Good documentation"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Pinterest Marketers",
+      "E-commerce"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of PinAI Creator",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 672,
+    "name": "BookCover AI",
+    "description": "Professional AI book cover designer specialized in creating stunning, genre-specific book covers for self-published authors.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://example.com/bookcoverai",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered book cover design tool.",
+    "rating": 4.6,
+    "rating_count": 2840,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7,
+        "note": "Genre-specific templates"
+      },
+      "output_quality": {
+        "score": 4.8,
+        "note": "Professional quality covers"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Typography and layout tools"
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "note": "Free previews available"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Fast generation"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Author community"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Self-Published Authors",
+      "Book Design"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of BookCover AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 673,
+    "name": "MeditationVoice AI",
+    "description": "AI-powered meditation guide creator that generates calming voiceovers and personalized meditation scripts.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://example.com/meditationvoice",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI tool for creating meditation guides.",
+    "rating": 4.7,
+    "rating_count": 3420,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.8,
+        "note": "Simple script generation"
+      },
+      "output_quality": {
+        "score": 4.7,
+        "note": "Natural-sounding voices"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Ambient sound mixing"
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "note": "Free guides available"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Consistent quality"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Wellness community"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Wellness Creators",
+      "Meditation Apps"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of MeditationVoice AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 674,
+    "name": "ChainCode AI",
+    "description": "AI-powered smart contract development assistant that audits code and generates secure Solidity code.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://example.com/chaincode",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI assistant for smart contract development.",
+    "rating": 4.6,
+    "rating_count": 2100,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Solidity-specific AI"
+      },
+      "output_quality": {
+        "score": 4.7,
+        "note": "Security-focused code"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Vulnerability scanning"
+      },
+      "value_for_money": {
+        "score": 4.5,
+        "note": "Free for basic use"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Regular updates"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Blockchain community"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Blockchain Developers",
+      "Smart Contracts"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of ChainCode AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 675,
+    "name": "SEOContent AI",
+    "description": "AI-powered SEO content writer that creates search-optimized articles with keyword research.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://example.com/seocontent",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI SEO content writer with optimization.",
+    "rating": 4.5,
+    "rating_count": 3890,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "Simple keyword input"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Well-researched content"
+      },
+      "features": {
+        "score": 4.7,
+        "note": "Keyword research included"
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "note": "Free articles available"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Consistent performance"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "SEO resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Marketers",
+      "Bloggers"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of SEOContent AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 676,
+    "name": "WebinarAI Creator",
+    "description": "AI-powered webinar creation platform that generates presentations, scripts, and promotional content.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://example.com/webinarai",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI toolkit for webinar creation.",
+    "rating": 4.4,
+    "rating_count": 1680,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "note": "Template-based creation"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Professional presentations"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Promo content included"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free webinar available"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable generation"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Webinar resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Marketing Teams",
+      "Sales Teams"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of WebinarAI Creator",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 677,
+    "name": "TeamFlow Free",
+    "description": "Free AI-powered team collaboration tool with task management and meeting notes for small teams.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://example.com/teamflow",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free AI collaboration tool for small teams.",
+    "rating": 4.5,
+    "rating_count": 4200,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7,
+        "note": "Simple interface"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Useful AI features"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Core features free"
+      },
+      "value_for_money": {
+        "score": 4.8,
+        "note": "100% free"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Community support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Small Teams",
+      "Startups"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of TeamFlow Free",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 678,
+    "name": "SocialInsight AI",
+    "description": "AI-powered social media analytics platform that provides insights and competitor analysis.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://example.com/socialinsight",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI social media analytics platform.",
+    "rating": 4.4,
+    "rating_count": 2180,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "note": "Unified dashboard"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Actionable insights"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Competitor tracking"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free basic available"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Consistent syncing"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Analytics resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Social Media Managers",
+      "Analytics"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of SocialInsight AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 679,
+    "name": "VideoEditor Pro AI",
+    "description": "AI video editor with automatic editing, captions, and effects for social media content.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://example.com/videoeditor",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video editor for social media content.",
+    "rating": 4.5,
+    "rating_count": 2950,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "One-click editing"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Professional results"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Automatic captions"
+      },
+      "value_for_money": {
+        "score": 4.5,
+        "note": "Free tier available"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Fast rendering"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Video tutorials"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creators",
+      "Social Media"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of VideoEditor Pro AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 680,
+    "name": "GrammarChecker Pro",
+    "description": "Advanced AI grammar checker with style suggestions and tone adjustment for professional writing.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://example.com/grammarchecker",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI grammar checker and writing assistant.",
+    "rating": 4.7,
+    "rating_count": 5680,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.8,
+        "note": "Seamless integration"
+      },
+      "output_quality": {
+        "score": 4.7,
+        "note": "Accurate corrections"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Style and tone suggestions"
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "note": "Free basic version"
+      },
+      "stability": {
+        "score": 4.6,
+        "note": "Enterprise-grade"
+      },
+      "support": {
+        "score": 4.5,
+        "note": "Excellent support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Writers",
+      "Professionals"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of GrammarChecker Pro",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 681,
+    "name": "AvatarVideo AI",
+    "description": "AI avatar video creator that generates realistic talking avatars for presentations and marketing.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://example.com/avatarvideo",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI avatar video creation platform.",
+    "rating": 4.4,
+    "rating_count": 1450,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Avatar customization"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Realistic avatars"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Multiple avatar options"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Consistent quality"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Video production help"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Marketing",
+      "Presentations"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of AvatarVideo AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 682,
+    "name": "CourseBuilder AI",
+    "description": "AI-powered online course creation platform that structures curriculum and generates lesson content.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://example.com/coursebuilder",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI course creation platform for educators.",
+    "rating": 4.3,
+    "rating_count": 980,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Structured workflow"
+      },
+      "output_quality": {
+        "score": 4.3,
+        "note": "Comprehensive materials"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Curriculum and quizzes"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Unlimited courses"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Course resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Course Creators",
+      "Education"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of CourseBuilder AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 683,
+    "name": "RemoteTeam AI",
+    "description": "AI tools for remote teams including time zone management, virtual collaboration, and productivity tracking.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://example.com/remoteteam",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI tools for remote team productivity.",
+    "rating": 4.4,
+    "rating_count": 2350,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "note": "Remote-first design"
+      },
+      "output_quality": {
+        "score": 4.3,
+        "note": "Useful team features"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Time zone and collaboration"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free for small teams"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Remote work resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Remote Teams",
+      "Distributed Workforce"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of RemoteTeam AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 684,
+    "name": "FeedbackAnalyze AI",
+    "description": "AI customer feedback analysis tool that analyzes reviews, surveys, and support tickets for actionable insights.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://example.com/feedbackanalyze",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI customer feedback analysis platform.",
+    "rating": 4.3,
+    "rating_count": 1240,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Simple feedback upload"
+      },
+      "output_quality": {
+        "score": 4.3,
+        "note": "Actionable insights"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Sentiment and theme analysis"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Free for small volume"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Consistent analysis"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "CX resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Customer Experience",
+      "Product Teams"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of FeedbackAnalyze AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 685,
+    "name": "LinkedInAd AI",
+    "description": "AI-powered LinkedIn ad creation and optimization tool for B2B marketing campaigns.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://example.com/linkedinad",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI LinkedIn ad creation and optimization tool.",
+    "rating": 4.2,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "B2B-focused interface"
+      },
+      "output_quality": {
+        "score": 4.2,
+        "note": "Professional ad content"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Audience targeting suggestions"
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "note": "Free trial available"
+      },
+      "stability": {
+        "score": 4.2,
+        "note": "Good performance"
+      },
+      "support": {
+        "score": 4.1,
+        "note": "B2B marketing resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "B2B Marketing",
+      "LinkedIn Ads"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of LinkedInAd AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 686,
+    "name": "LogoDesign AI",
+    "description": "AI logo generator that creates professional brand logos with style customization and brand guidelines.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://example.com/logodesign",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI logo design and brand identity tool.",
+    "rating": 4.5,
+    "rating_count": 3680,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "Simple logo creation"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Professional logos"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Brand guidelines included"
+      },
+      "value_for_money": {
+        "score": 4.5,
+        "note": "Affordable packages"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Fast generation"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Brand resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Startups",
+      "Branding"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of LogoDesign AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 687,
+    "name": "VoiceClone AI",
+    "description": "AI voice cloning tool that creates realistic voice replicas from audio samples for content creators.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://example.com/voiceclone",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI voice cloning tool for realistic voice replication.",
+    "rating": 4.4,
+    "rating_count": 1890,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Simple cloning process"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "Highly realistic voices"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Multi-language support"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Commercial licensing"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Consistent quality"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Voice production support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Voiceover Artists",
+      "Content Creators"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of VoiceClone AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 688,
+    "name": "MobileDev Assistant",
+    "description": "AI-powered mobile development assistant for iOS and Android app creation and optimization.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://example.com/mobiledev",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI assistant for mobile app development.",
+    "rating": 4.3,
+    "rating_count": 1920,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Platform-specific code"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Production-ready code"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "iOS and Android support"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Free basic available"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Regular updates"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Mobile dev community"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Mobile Developers",
+      "iOS",
+      "Android"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of MobileDev Assistant",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 689,
+    "name": "NewsletterWriter AI",
+    "description": "AI newsletter writer that creates engaging email newsletters with personalization and A/B testing.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://example.com/newsletterwriter",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI newsletter writing and optimization tool.",
+    "rating": 4.4,
+    "rating_count": 2870,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "note": "Newsletter templates"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Engaging content"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Personalization and A/B testing"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Free for small lists"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Reliable generation"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Email marketing resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Email Marketers",
+      "Newsletter Publishers"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of NewsletterWriter AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 690,
+    "name": "SynthesiaPro AI",
+    "description": "Advanced AI avatar video platform with realistic presenters and professional video production.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://example.com/synthesiapro",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced AI avatar video production platform.",
+    "rating": 4.5,
+    "rating_count": 1650,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Professional workflow"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "Studio-quality videos"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Multiple avatars and voices"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Enterprise pricing"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Enterprise-grade"
+      },
+      "support": {
+        "score": 4.5,
+        "note": "Dedicated support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Enterprise",
+      "Professional Video"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of SynthesiaPro AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 691,
+    "name": "HeyGen Video AI",
+    "description": "AI video generation platform with customizable avatars and multi-language support for global content.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://example.com/heygen",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video platform with multi-language avatars.",
+    "rating": 4.4,
+    "rating_count": 1540,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "note": "Intuitive interface"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Great avatar quality"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Multi-language support"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Good pricing tiers"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Reliable platform"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Good documentation"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Global Content",
+      "Marketing"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of HeyGen Video AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 692,
+    "name": "ElaiStudio AI",
+    "description": "AI-powered video studio for creating marketing videos, tutorials, and presentations with avatars.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://example.com/elaistudio",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video studio with avatar presentation tools.",
+    "rating": 4.3,
+    "rating_count": 1280,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Studio-like interface"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Professional output"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Templates and customization"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Competitive pricing"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Good performance"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Helpful resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Marketing Teams",
+      "Content Studios"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of ElaiStudio AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 693,
+    "name": "TrainingCourse AI",
+    "description": "AI-powered training course creator for employee onboarding, skills development, and corporate training.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://example.com/trainingcourse",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI training course creation platform for businesses.",
+    "rating": 4.2,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Training-focused workflow"
+      },
+      "output_quality": {
+        "score": 4.2,
+        "note": "Professional training materials"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Onboarding and skills modules"
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "note": "Business pricing"
+      },
+      "stability": {
+        "score": 4.2,
+        "note": "Enterprise-ready"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Training resources"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "HR Teams",
+      "Corporate Training"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of TrainingCourse AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 694,
+    "name": "GroupAnalytics Pro",
+    "description": "Advanced Facebook group analytics with AI insights and engagement optimization recommendations.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://example.com/groupanalytics",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced Facebook group analytics platform.",
+    "rating": 4.5,
+    "rating_count": 920,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Analytics dashboard"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "Actionable insights"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Deep analytics"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Worth the investment"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Reliable data"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Good support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Community Managers",
+      "Marketing"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of GroupAnalytics Pro",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 695,
+    "name": "PinOptimizer AI",
+    "description": "AI Pinterest ad optimizer with automated bidding and performance tracking for maximum ROI.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://example.com/pinoptimizer",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Pinterest ad optimization and bidding tool.",
+    "rating": 4.3,
+    "rating_count": 750,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Automated optimization"
+      },
+      "output_quality": {
+        "score": 4.3,
+        "note": "Improved CTR"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Bid automation"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Performance-based"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Consistent"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Account management"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Pinterest Ads",
+      "Performance Marketing"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of PinOptimizer AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 696,
+    "name": "CoverGenius AI",
+    "description": "Professional AI book cover design with series branding and 3D mockup generation for authors.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://example.com/covergenius",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional AI book cover design with branding.",
+    "rating": 4.5,
+    "rating_count": 1540,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Series management"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "High-quality covers"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "3D mockups included"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Unlimited covers"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Enterprise-grade"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Design consultants"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Professional Authors",
+      "Book Series"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of CoverGenius AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 697,
+    "name": "ZenSoundscapes AI",
+    "description": "Advanced meditation audio production with binaural beats and immersive soundscape generation.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://example.com/zensoundscapes",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional meditation audio production tool.",
+    "rating": 4.5,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Layered sound design"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "Studio-quality audio"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Binaural beats and frequencies"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Commercial licensing"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Professional-grade"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Audio engineering support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Wellness Apps",
+      "Audio Production"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of ZenSoundscapes AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 698,
+    "name": "Web3Builder AI",
+    "description": "Complete AI toolkit for Web3 development including dApp scaffolding and DeFi protocol templates.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://example.com/web3builder",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Complete Web3 AI development toolkit.",
+    "rating": 4.4,
+    "rating_count": 1240,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Template-based dApp creation"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Production-ready code"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Multi-chain support"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Comprehensive toolkit"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Regular updates"
+      },
+      "support": {
+        "score": 4.4,
+        "note": "Web3 support team"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Web3 Developers",
+      "dApp Creation"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of Web3Builder AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 699,
+    "name": "RankMaster AI",
+    "description": "Advanced SEO content platform with AI-driven strategy and performance tracking for search rankings.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://example.com/rankmaster",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced SEO strategy and content platform.",
+    "rating": 4.6,
+    "rating_count": 2450,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Strategic dashboard"
+      },
+      "output_quality": {
+        "score": 4.7,
+        "note": "Data-driven content"
+      },
+      "features": {
+        "score": 4.8,
+        "note": "Complete SEO toolkit"
+      },
+      "value_for_money": {
+        "score": 4.5,
+        "note": "Team features included"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Enterprise-grade"
+      },
+      "support": {
+        "score": 4.5,
+        "note": "SEO consulting"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "SEO Agencies",
+      "Enterprise Content"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of RankMaster AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
+    ]
+  },
+  {
+    "id": 700,
+    "name": "SocialPredict AI",
+    "description": "Advanced social media analytics with AI predictions and trend forecasting for marketing teams.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://example.com/socialpredict",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced social analytics with AI predictions.",
+    "rating": 4.5,
+    "rating_count": 1240,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Predictive dashboard"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "High-accuracy predictions"
+      },
+      "features": {
+        "score": 4.7,
+        "note": "Trend analysis and reports"
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "note": "Enterprise features"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Enterprise-grade"
+      },
+      "support": {
+        "score": 4.5,
+        "note": "Account management"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Enterprise Marketing",
+      "Agencies"
+    ],
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example usage of SocialPredict AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+      }
     ]
   }
 ]
