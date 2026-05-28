@@ -90,7 +90,7 @@ const renderBlogImage = (image: BlogImage, index: number) => {
     <img
       src="${image.url}"
       alt="${image.alt}"
-      class="w-full h-auto rounded-xl shadow-lg"
+      class="w-full max-w-full h-auto rounded-xl shadow-lg"
       loading="lazy"
     />
     ${image.caption ? `<figcaption class="mt-3 text-center text-sm text-slate-500 dark:text-gray-400 italic">${image.caption}</figcaption>` : ''}
@@ -111,10 +111,10 @@ const renderContentWithImages = (content: string, images: BlogImage[] = []) => {
   });
   html = html.replace(/^# (.*?)$/gm, '<h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-8">$1</h1>');
 
-  // Paragraphs - optimized for readability (enhanced for mobile)
+  // Paragraphs - optimized for readability (enhanced for mobile and desktop)
   html = html.replace(/^(?!<h[12])(.*?)$/gm, (match, p1) => {
     if (p1.trim() && p1.trim() !== '---') {
-      return `<p class="text-slate-600 dark:text-gray-300 leading-relaxed sm:leading-loose mb-6 sm:mb-8 text-base sm:text-lg max-w-prose">${p1}</p>`;
+      return `<p class="text-slate-600 dark:text-gray-300 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base lg:text-lg max-w-prose">${p1}</p>`;
     } else if (p1.trim() === '---') {
       return '<hr class="border-t border-slate-200 dark:border-gray-800 my-10 sm:my-12" />';
     }
@@ -227,7 +227,7 @@ export default function ClientBlogDetail({
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16 grid-background">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Breadcrumbs */}
         <Breadcrumbs 
           items={[
@@ -238,7 +238,7 @@ export default function ClientBlogDetail({
         />
 
         {/* Post Header */}
-        <div className="mb-8">
+        <div className="mb-8 max-w-4xl">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-sm font-medium text-slate-500 dark:text-gray-400">
               {relativeDate}
@@ -247,7 +247,7 @@ export default function ClientBlogDetail({
               {readTime}
             </span>
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
             {post.title}
           </h1>
           
@@ -265,29 +265,39 @@ export default function ClientBlogDetail({
         </div>
 
         {/* Desktop Layout: TOC Sidebar + Content */}
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
+          {/* Post Content - First on mobile, side by side on desktop */}
+          <div className="flex-1 order-2 lg:order-1">
+            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl mb-8">
+              <article
+                className="prose prose-slate dark:prose-invert max-w-none"
+                dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images) }}
+              />
+            </div>
+          </div>
+
           {/* Table of Contents (Desktop) */}
           {tocItems.length > 0 && (
-            <div className="hidden lg:block w-64 flex-shrink-0">
+            <div className="hidden lg:block w-72 flex-shrink-0 order-1 lg:order-2">
               <div className="sticky top-6 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg">
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
                   <List className="w-4 h-4 text-emerald-500" />
                   Table of Contents
                 </h3>
-                <nav className="space-y-2">
+                <nav className="space-y-2 overflow-hidden">
                   {tocItems.map((item, index) => (
                     <button
                       key={item.id}
                       onClick={() => scrollToHeading(item.id)}
-                      className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
+                      className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 word-break break-word overflow-wrap break-word pr-2 ${
                         activeHeading === item.id
                           ? 'bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-medium'
                           : 'text-slate-600 dark:text-gray-400 hover:bg-slate-50 dark:hover:bg-gray-800'
                       }`}
                     >
-                      <span className="inline-flex items-center gap-2">
-                        <span className="text-xs text-slate-400 dark:text-gray-500">{index + 1}.</span>
-                        <span className="truncate">{item.text}</span>
+                      <span className="inline-flex items-start gap-2 w-full">
+                        <span className="text-xs text-slate-400 dark:text-gray-500 flex-shrink-0 mt-0.5">{index + 1}.</span>
+                        <span className="flex-1 break-words hyphens-auto">{item.text}</span>
                       </span>
                     </button>
                   ))}
@@ -298,7 +308,7 @@ export default function ClientBlogDetail({
 
           {/* Mobile TOC Dropdown */}
           {tocItems.length > 0 && showToc && (
-            <div className="lg:hidden bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg mb-6">
+            <div className="lg:hidden bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg mb-6 order-1 lg:order-none">
               <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
                 <List className="w-4 h-4 text-emerald-500" />
                 Table of Contents
@@ -308,7 +318,7 @@ export default function ClientBlogDetail({
                   <button
                     key={item.id}
                     onClick={() => scrollToHeading(item.id)}
-                    className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
+                    className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 word-break break-word ${
                       activeHeading === item.id
                         ? 'bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-medium'
                         : 'text-slate-600 dark:text-gray-400 hover:bg-slate-50 dark:hover:bg-gray-800'
@@ -323,16 +333,6 @@ export default function ClientBlogDetail({
               </nav>
             </div>
           )}
-
-          {/* Post Content */}
-          <div className="flex-1">
-            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl mb-8">
-              <article
-                className="prose prose-slate dark:prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images) }}
-              />
-            </div>
-          </div>
         </div>
 
         {/* Share Buttons */}
