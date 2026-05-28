@@ -236,7 +236,7 @@ export default function ComparePage() {
                 >
                   <option value="">Select a tool...</option>
                   {tools.filter(t => !otherIds.includes(String(t.id))).map(tool => (
-                    <option key={tool.id} value={String(tool.id)}>{tool.name}</option>
+                    <option key={tool.id} value={tool.id ?? ''}>{tool.name}</option>
                   ))}
                 </select>
               </div>

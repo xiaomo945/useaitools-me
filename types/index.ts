@@ -1,7 +1,5 @@
-import blogIndexData from '@/data/blog-index.json';
+import blogPostsData from '@/data/blog-posts.json';
 import toolsData from '@/data/tools.json';
-import fs from 'fs';
-import path from 'path';
 
 export interface BlogImage {
   url: string;
@@ -27,43 +25,7 @@ export interface BlogPost {
   content: string;
 }
 
-export interface BlogPostMeta {
-  id: number;
-  title: string;
-  slug: string;
-  date: string;
-  category: string;
-  description: string;
-  featured: boolean;
-  thumbnail?: BlogImage;
-}
-
-export const blogIndex: BlogPostMeta[] = blogIndexData as unknown as BlogPostMeta[];
-
-// 辅助函数：通过ID获取完整博客文章
-export function getBlogPostById(id: number): BlogPost | null {
-  try {
-    const postPath = path.join(process.cwd(), 'data', 'blog-posts', `${id}.json`);
-    const postContent = fs.readFileSync(postPath, 'utf8');
-    return JSON.parse(postContent) as BlogPost;
-  } catch {
-    return null;
-  }
-}
-
-// 辅助函数：通过slug获取完整博客文章
-export function getBlogPostBySlug(slug: string): BlogPost | null {
-  const meta = blogIndex.find(m => m.slug === slug);
-  if (meta) {
-    return getBlogPostById(meta.id);
-  }
-  return null;
-}
-
-// 获取所有完整博客文章
-export function getAllBlogPosts(): BlogPost[] {
-  return blogIndex.map(meta => getBlogPostById(meta.id)).filter(Boolean) as BlogPost[];
-}
+export const blogPosts: BlogPost[] = blogPostsData as BlogPost[];
 
 export interface ToolExample {
   prompt: string;
@@ -129,4 +91,4 @@ export interface Tool {
   best_for?: string[];
 }
 
-export const tools: Tool[] = toolsData as unknown as Tool[];
+export const tools: Tool[] = toolsData as Tool[];

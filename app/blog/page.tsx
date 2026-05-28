@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getBlogIndex, getBlogPostBySlug, type BlogPost } from '@/lib/db';
+import { blogPosts, type BlogPost } from '@/types';
 import { Home } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
@@ -50,12 +50,6 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const blogIndexData = getBlogIndex();
-  const allBlogPosts = blogIndexData.map(meta => {
-    const post = getBlogPostBySlug(meta.slug);
-    return post;
-  }).filter(Boolean) as BlogPost[];
-  
   // Blog CollectionPage Schema
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -77,8 +71,8 @@ export default function BlogPage() {
     },
     'mainEntity': {
       '@type': 'ItemList',
-      'numberOfItems': blogIndexData.length,
-      'itemListElement': blogIndexData.map((post, index) => ({
+      'numberOfItems': blogPosts.length,
+      'itemListElement': blogPosts.map((post, index) => ({
         '@type': 'ListItem',
         'position': index + 1,
         'name': post.title,
@@ -123,7 +117,7 @@ export default function BlogPage() {
 
           {/* Blog Posts List */}
           <div className="space-y-6">
-            {allBlogPosts.map((post) => {
+            {blogPosts.map((post) => {
               const { display: readTime } = calculateReadTime(post.content);
               const relativeDate = formatRelativeDate(post.date);
               return (

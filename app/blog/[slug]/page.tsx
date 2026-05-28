@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getBlogPostBySlug, getBlogIndex, type BlogPost } from '@/lib/db';
+import { blogPosts, type BlogPost } from '@/types';
 import ClientBlogDetail from './ClientBlogDetail';
 
 // Extract tool IDs from blog content for recommendation
@@ -12,42 +12,6 @@ const extractToolIds = (content: string): number[] => {
     ids.push(parseInt(match[1]));
   }
   return [...new Set(ids)];
-};
-
-// Extract FAQs from article content
-const extractFAQs = (content: string): Array<{question: string, answer: string}> => {
-  const faqs: Array<{question: string, answer: string}> = [];
-  
-  // Look for H2 headers that seem like questions
-  const h2Regex = /##\s+(.+?\?)/g;
-  const h3Regex = /###\s+(.+?\?)/g;
-  
-  let match;
-  const questions: string[] = [];
-  
-  while ((match = h2Regex.exec(content)) !== null) {
-    questions.push(match[1].trim());
-  }
-  while ((match = h3Regex.exec(content)) !== null) {
-    questions.push(match[1].trim());
-  }
-  
-  // For each question, extract the following paragraph as the answer
-  questions.slice(0, 5).forEach((question, index) => {
-    const questionIndex = content.indexOf(question);
-    if (questionIndex !== -1) {
-      const afterQuestion = content.slice(questionIndex);
-      const paragraphMatch = afterQuestion.match(/\n\n([^\n#]+)/);
-      if (paragraphMatch) {
-        const answer = paragraphMatch[1].trim().slice(0, 500);
-        if (answer.length > 20) {
-          faqs.push({ question, answer });
-        }
-      }
-    }
-  });
-  
-  return faqs;
 };
 
 // Extract blog slugs from content for cross-linking
@@ -116,7 +80,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
+  const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     return {
@@ -151,15 +115,13 @@ export default async function BlogDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getBlogPostBySlug(slug);
+  const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
   }
 
-  const blogIndex = getBlogIndex();
-  const allPosts = blogIndex.map(meta => getBlogPostBySlug(meta.slug)).filter(Boolean) as BlogPost[];
-  const relatedPosts = getRelatedPosts(post, allPosts);
+  const relatedPosts = getRelatedPosts(post, blogPosts);
 
   const processedPost = {
     ...post,
@@ -171,9 +133,7 @@ export default async function BlogDetailPage({
       .replace(/\{\{AFFILIATE_ELEVENLABS\}\}/g, process.env.AFFILIATE_ELEVENLABS || 'https://elevenlabs.io'),
   };
 
-  const faqs = extractFAQs(post.content);
-
-  const articleJsonLd = {
+  const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: post.title,
@@ -195,31 +155,12 @@ export default async function BlogDetailPage({
     url: `https://useaitools.me/blog/${slug}`,
   };
 
-  const faqJsonLd = faqs.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map(faq => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  } : null;
-
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {faqJsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-        />
-      )}
       <ClientBlogDetail post={processedPost} slug={slug} relatedPosts={relatedPosts} />
     </>
   );

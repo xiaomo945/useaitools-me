@@ -269,12 +269,12 @@ export default function ClientBlogDetail({
           {/* Table of Contents (Desktop) */}
           {tocItems.length > 0 && (
             <div className="hidden lg:block w-64 flex-shrink-0">
-              <div className="sticky top-6 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg max-w-xs overflow-hidden">
+              <div className="sticky top-6 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg">
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                  <List className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-                  <span className="truncate">Table of Contents</span>
+                  <List className="w-4 h-4 text-emerald-500" />
+                  Table of Contents
                 </h3>
-                <nav className="space-y-2 max-h-[calc(100vh-200px)] overflow-y-auto">
+                <nav className="space-y-2">
                   {tocItems.map((item, index) => (
                     <button
                       key={item.id}
@@ -286,8 +286,8 @@ export default function ClientBlogDetail({
                       }`}
                     >
                       <span className="inline-flex items-center gap-2">
-                        <span className="text-xs text-slate-400 dark:text-gray-500 flex-shrink-0">{index + 1}.</span>
-                        <span className="break-words min-w-0 leading-snug">{item.text}</span>
+                        <span className="text-xs text-slate-400 dark:text-gray-500">{index + 1}.</span>
+                        <span className="truncate">{item.text}</span>
                       </span>
                     </button>
                   ))}
@@ -298,12 +298,12 @@ export default function ClientBlogDetail({
 
           {/* Mobile TOC Dropdown */}
           {tocItems.length > 0 && showToc && (
-            <div className="lg:hidden bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg mb-6 overflow-hidden">
+            <div className="lg:hidden bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg mb-6">
               <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
-                <List className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                <List className="w-4 h-4 text-emerald-500" />
                 Table of Contents
               </h3>
-              <nav className="space-y-2 max-h-96 overflow-y-auto">
+              <nav className="space-y-2">
                 {tocItems.map((item, index) => (
                   <button
                     key={item.id}
@@ -315,8 +315,8 @@ export default function ClientBlogDetail({
                     }`}
                   >
                     <span className="inline-flex items-center gap-2">
-                      <span className="text-xs text-slate-400 dark:text-gray-500 flex-shrink-0">{index + 1}.</span>
-                      <span className="break-words min-w-0 leading-snug">{item.text}</span>
+                      <span className="text-xs text-slate-400 dark:text-gray-500">{index + 1}.</span>
+                      <span>{item.text}</span>
                     </span>
                   </button>
                 ))}

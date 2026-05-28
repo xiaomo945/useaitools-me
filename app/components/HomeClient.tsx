@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import StarRating from './StarRating';
 import { Dice3, X, ArrowRight, RefreshCw } from 'lucide-react';
-import workflowsData from '@/data/workflows.json';
-import AISearchRecommend from './AISearchRecommend';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -343,15 +341,10 @@ interface BlogPost {
   date: string;
   description: string;
   category: string;
-  featured: boolean;
-  thumbnail?: {
+  images?: Array<{
     url: string;
     alt: string;
-    caption: string;
-    position?: string;
-    prompt?: string;
-    image_url?: string;
-  };
+  }>;
 }
 
 interface HomeClientProps {
@@ -366,7 +359,6 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
   const [selectedPricing, setSelectedPricing] = useState<string>('All');
   const [selectedSkillLevels, setSelectedSkillLevels] = useState<string[]>([]);
   const [selectedBestFor, setSelectedBestFor] = useState<string[]>([]);
-  const [selectedWorkflow, setSelectedWorkflow] = useState<string>('All');
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [showRandomTool, setShowRandomTool] = useState(false);
   const [randomTool, setRandomTool] = useState<Tool | null>(null);
@@ -598,15 +590,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
       const matchesBestFor = selectedBestFor.length === 0 || 
         (tool.best_for && tool.best_for.some(tag => selectedBestFor.includes(tag)));
       
-      // Workflow filter
-      const matchesWorkflow = selectedWorkflow === 'All' || (
-        workflowsData.some((workflow: any) => 
-          workflow.id === selectedWorkflow && 
-          workflow.steps.some((step: any) => step.tool_ids.includes(tool.id))
-        )
-      );
-      
-      return matchesSearch && matchesCategory && matchesPricing && matchesSkillLevel && matchesBestFor && matchesWorkflow;
+      return matchesSearch && matchesCategory && matchesPricing && matchesSkillLevel && matchesBestFor;
     });
     
     // 智能排序：Staff Pick(联盟) > 海外工具(needs_vpn) > 按名称字母排序
@@ -625,7 +609,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
       // 3. 按名称字母排序
       return a.name.localeCompare(b.name);
     });
-  }, [search, selectedCategory, selectedPricing, selectedSkillLevels, selectedBestFor, selectedWorkflow, initialTools]);
+  }, [search, selectedCategory, selectedPricing, selectedSkillLevels, selectedBestFor, initialTools]);
 
   const getCategoryColors = (category: string) => {
     switch (category) {
@@ -822,70 +806,67 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
             </p>
           </div>
           
-          {/* Search Box with AI Recommend */}
+          {/* Search Box */}
           <div className="search-container relative max-w-2xl mx-auto mb-8 px-4 sm:px-0">
-            <div className="relative flex gap-2">
-              <div className="relative flex-1">
-                <svg
-                  className="absolute left-4 sm:left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-                <input
-                  ref={searchInputRef}
-                  type="text"
-                  placeholder="Search best AI tools, AI writing tools, AI image generators, AI video tools..."
-                  value={search}
-                  onChange={(e) => {
-                    setSearch(e.target.value);
-                    setShowSuggestions(true);
-                  }}
-                  onFocus={() => setShowSuggestions(true)}
-                  onKeyDown={handleSearchKeyDown}
-                  aria-label="Search AI tools"
-                  autoComplete="off"
-                  autoCorrect="off"
-                  spellCheck="false"
-                  className="w-full px-4 sm:px-5 py-3 sm:py-4 pl-12 sm:pl-14 pr-20 sm:pr-24 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
+            <div className="relative">
+              <svg
+                className="absolute left-4 sm:left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
-                <div className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-1">
-                  {search && (
-                    <button
-                      onClick={() => setSearch('')}
-                      className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200"
-                      aria-label="Clear search"
-                    >
-                      <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    </button>
-                  )}
+              </svg>
+              <input
+                ref={searchInputRef}
+                type="text"
+                placeholder="Search best AI tools, AI writing tools, AI image generators, AI video tools..."
+                value={search}
+                onChange={(e) => {
+                  setSearch(e.target.value);
+                  setShowSuggestions(true);
+                }}
+                onFocus={() => setShowSuggestions(true)}
+                onKeyDown={handleSearchKeyDown}
+                aria-label="Search AI tools"
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck="false"
+                className="w-full px-4 sm:px-5 py-3 sm:py-4 pl-12 sm:pl-14 pr-20 sm:pr-24 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
+              />
+              <div className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-1">
+                {search && (
                   <button
-                    onClick={goToSearchPage}
-                    disabled={!search.trim()}
-                    className={`p-2 rounded-full transition-all duration-200 ${
-                      search.trim()
-                        ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:shadow-lg hover:shadow-emerald-500/30'
-                        : 'bg-slate-100 dark:bg-slate-800 text-slate-400 cursor-not-allowed'
-                    }`}
-                    aria-label="Search"
+                    onClick={() => setSearch('')}
+                    className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200"
+                    aria-label="Clear search"
                   >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
-                </div>
+                )}
+                <button
+                  onClick={goToSearchPage}
+                  disabled={!search.trim()}
+                  className={`p-2 rounded-full transition-all duration-200 ${
+                    search.trim()
+                      ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:shadow-lg hover:shadow-emerald-500/30'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-400 cursor-not-allowed'
+                  }`}
+                  aria-label="Search"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </button>
               </div>
-              <AISearchRecommend />
             </div>
 
             {/* Search Suggestions Dropdown */}
@@ -1079,23 +1060,8 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
               </div>
             </div>
 
-            {/* Workflow Filter - Dropdown */}
-            <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide px-2 sm:px-0">
-              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 whitespace-nowrap">🔗 Workflow:</span>
-              <select
-                value={selectedWorkflow}
-                onChange={(e) => setSelectedWorkflow(e.target.value)}
-                className="px-3 py-2 rounded-full text-xs font-semibold bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all duration-300 min-h-[36px] whitespace-nowrap cursor-pointer hover:border-emerald-300 dark:hover:border-emerald-600 max-w-xs sm:max-w-sm truncate"
-              >
-                <option value="All">All Workflows</option>
-                {(workflowsData as any[]).map((workflow) => (
-                  <option key={workflow.id} value={workflow.id}>{workflow.name_en}</option>
-                ))}
-              </select>
-            </div>
-
             {/* Active Filters Display */}
-            {(selectedPricing !== 'All' || selectedSkillLevels.length > 0 || selectedBestFor.length > 0 || selectedWorkflow !== 'All') && (
+            {(selectedPricing !== 'All' || selectedSkillLevels.length > 0 || selectedBestFor.length > 0) && (
               <div className="flex items-center gap-2 flex-wrap px-2 sm:px-0">
                 <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">Active:</span>
                 {selectedPricing !== 'All' && (
@@ -1133,23 +1099,11 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
                     </svg>
                   </button>
                 ))}
-                {selectedWorkflow !== 'All' && (
-                  <button
-                    onClick={() => setSelectedWorkflow('All')}
-                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-500/30 transition-colors"
-                  >
-                    🔗 {(workflowsData as any[]).find(w => w.id === selectedWorkflow)?.name_en || selectedWorkflow}
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                )}
                 <button
                   onClick={() => {
                     setSelectedPricing('All');
                     setSelectedSkillLevels([]);
                     setSelectedBestFor([]);
-                    setSelectedWorkflow('All');
                   }}
                   className="px-2.5 py-1 rounded-full text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors"
                 >
@@ -1453,10 +1407,10 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
                       animationFillMode: 'forwards'
                     }}
                   >
-                    {post.thumbnail && (
+                    {post.images?.[0] && (
                       <img
-                        src={post.thumbnail.url}
-                        alt={post.thumbnail.alt}
+                        src={post.images[0].url}
+                        alt={post.images[0].alt}
                         className="w-full h-40 object-cover rounded-xl mb-4"
                         loading="lazy"
                       />
@@ -1644,51 +1598,6 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
 
         {/* Gradient Separator Line */}
         <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 dark:via-emerald-700/40 to-transparent mb-16 mx-auto max-w-2xl" />
-
-        {/* Latest In-Depth Reviews - High-value comparison articles */}
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
-              📝 Latest In-Depth Reviews
-            </h2>
-            <p className="text-slate-600 dark:text-gray-400">
-              Detailed comparisons and honest reviews to help you choose the right tool
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {[
-              { title: "Rytr vs QuillBot vs Writesonic: Best AI Writing Tool 2026", slug: "rytr-vs-quillbot-vs-writesonic-best-ai-writing-tool-2026", category: "Writing", emoji: "✍️" },
-              { title: "VEED.io vs Descript vs Kapwing: Best AI Video Editor 2026", slug: "veed-io-vs-descript-vs-kapwing-best-ai-video-editor-2026", category: "Video", emoji: "🎬" },
-              { title: "Jasper vs Copy.ai in 2026: Which AI Writer is Best for Your Business?", slug: "jasper-vs-copy-ai-comparison-2026", category: "Writing", emoji: "📝" },
-              { title: "Midjourney vs DALL-E 3 in 2026: The Ultimate AI Image Generator Battle", slug: "midjourney-vs-dalle3-image-comparison-2026", category: "Image", emoji: "🎨" },
-              { title: "Synthesia vs HeyGen in 2026: The Ultimate AI Avatar Video Showdown", slug: "synthesia-vs-heygen-avatar-video-2026", category: "Video", emoji: "🤖" },
-            ].map((post, index) => {
-              const colors = getCategoryColors(post.category);
-              return (
-                <Link
-                  key={post.slug}
-                  href={`/blog/${post.slug}`}
-                  className="group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 hover:border-emerald-300 dark:hover:border-emerald-500/30 transition-all duration-300 ease-out"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-2xl">{post.emoji}</span>
-                    <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold ${colors.bg}/10 ${colors.textLight} dark:${colors.bgDark} dark:${colors.text}`}>
-                      {post.category}
-                    </span>
-                  </div>
-                  <h3 className="font-bold text-base text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 leading-snug">
-                    {post.title}
-                  </h3>
-                  <div className="flex items-center text-emerald-600 dark:text-emerald-400 font-semibold text-sm mt-3">
-                    Read Review
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
 
         {/* Tools Grid */}
         <div ref={toolsGridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 transition-all duration-300 ease-out">

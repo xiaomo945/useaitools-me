@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getAllTools, getBlogIndex } from '@/lib/db';
+import { tools, blogPosts } from '@/types';
 
 // 确保在 Vercel 生产环境中实时生成，并设置缓存时间
 export const dynamic = 'force-dynamic';
@@ -10,9 +10,6 @@ const categories = ['Image', 'Writing', 'Code', 'Video', 'Productivity', 'Audio'
 const categorySlugMap = (cat: string) => cat.toLowerCase();
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const tools = getAllTools();
-  const blogIndex = getBlogIndex();
-  
   const today = new Date();
   const dateStr = today.toISOString().split('T')[0];
   
@@ -135,7 +132,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
   
   // 8. 博客文章页 - 使用文章发布日期
-  blogIndex.forEach((post) => {
+  blogPosts.forEach((post) => {
     sitemap.push({
       url: `https://useaitools.me/blog/${post.slug}`,
       lastModified: new Date(post.date),

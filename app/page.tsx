@@ -1,4 +1,5 @@
-import { getAllTools, getBlogIndex } from '@/lib/db';
+import tools from '@/data/tools.json';
+import { blogPosts } from '@/types';
 import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
 import type { Tool } from '@/types';
@@ -21,11 +22,8 @@ function getAffiliateLink(tool: any): string {
 }
 
 export default function Home() {
-  const dbTools = getAllTools();
-  const blogPosts = getBlogIndex();
-
   // Enrich tools with affiliate links from environment variables
-  const enrichedTools = dbTools.map(tool => ({
+  const enrichedTools = tools.map(tool => ({
     ...tool,
     affiliate_link: getAffiliateLink(tool)
   })) as Tool[];
