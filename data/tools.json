@@ -12453,5 +12453,1076 @@
       "Reading",
       "Recommendation"
     ]
+  },
+  {
+    "id": null,
+    "name": "Jasper Chat",
+    "description": "Jasper的AI聊天界面，提供更自然的对话式写作体验。",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://jasper-chat.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Jasper's AI chat interface for conversational writing.",
+    "rating": 4.4,
+    "rating_count": 624,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.843536398500288,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.680424531628101,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.673101337640783,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.752882567064565,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.26563552168589,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.9478593216564346,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Chat",
+      "Writing",
+      "Marketing"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Copy.ai Chat",
+    "description": "Copy.ai的对话式AI助手，帮助快速生成营销文案。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://copy-ai-chat.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Copy.ai's conversational AI for marketing copy.",
+    "rating": 4.6,
+    "rating_count": 870,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.593664641040597,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.433299364283599,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.390866316204297,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.788351559786706,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.302747436727148,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Chat",
+      "Marketing",
+      "Copywriting"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Frase.io",
+    "description": "AI内容研究和写作平台，自动生成SEO优化的文章。",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://frase-io.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI content research and writing platform.",
+    "rating": 4.8,
+    "rating_count": 2307,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.797098572164467,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.963623474062405,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.946887381577855,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "intermediate",
+    "best_for": [
+      "SEO",
+      "Content Research",
+      "Articles"
+    ]
+  },
+  {
+    "id": null,
+    "name": "WriterZen",
+    "description": "AI写作助手，专注SEO内容创作和关键词研究。",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://writerzen.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI writing assistant focused on SEO content.",
+    "rating": 4.7,
+    "rating_count": 3615,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.737975519935205,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.787331858195724,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.738383067073098,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "intermediate",
+    "best_for": [
+      "SEO",
+      "Keywords",
+      "Content"
+    ]
+  },
+  {
+    "id": null,
+    "name": "INK Editor",
+    "description": "AI内容优化工具，实时SEO建议和剽窃检查。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://ink-editor.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI content optimization with real-time SEO.",
+    "rating": 4.4,
+    "rating_count": 3628,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.304005971059708,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.981291443188846,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.607507888361213,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.224279553128967,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.742576055687293,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.088446513110983,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "SEO",
+      "Plagiarism Check",
+      "Optimization"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Compose AI",
+    "description": "Chrome扩展AI写作助手，自动补全和改写。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://compose-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Chrome AI writing extension.",
+    "rating": 4.6,
+    "rating_count": 2146,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.5631614836928955,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.848176945436468,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.434657247090547,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Writing",
+      "Chrome Extension",
+      "Automation"
+    ]
+  },
+  {
+    "id": null,
+    "name": "HyperWrite AI",
+    "description": "AI写作助手，提供建议和自动补全功能。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://hyperwrite-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI writing assistant with suggestions.",
+    "rating": 4.8,
+    "rating_count": 4689,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.8656639048197405,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.420272705864772,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Writing",
+      "Suggestions",
+      "Chrome Extension"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Wordtune",
+    "description": "AI改写工具，改善句子表达和可读性。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://wordtune.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI rewriting tool for better sentences.",
+    "rating": 4,
+    "rating_count": 3165,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.239149231229249,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.617332621062628,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.26977309805386,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.501603651782098,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.14714253859633,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.395677954032313,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Rewriting",
+      "Readability",
+      "Chrome Extension"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Lex",
+    "description": "为写作而生的AI编辑器，支持实时协作。",
+    "category": "Writing",
+    "pricing": "Free",
+    "url": "https://lex.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI editor designed for writing.",
+    "rating": 4.5,
+    "rating_count": 4108,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.88239972227962,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.9147230858418975,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.350085280572527,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.409147413820042,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.648184082277196,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Writing",
+      "Collaboration",
+      "Editor"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Ginger Software",
+    "description": "AI语法检查和翻译工具。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://ginger-software.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI grammar checker and translator.",
+    "rating": 4.6,
+    "rating_count": 1509,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2771058672365765,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.494998530925121,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.2673413284375386,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.958066085939208,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.578121439898202,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.906454060425574,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Grammar",
+      "Translation",
+      "Writing"
+    ]
+  },
+  {
+    "id": null,
+    "name": "CF Spark",
+    "description": "Creative Fabrica的AI艺术生成器。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://cf-spark.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI art generator from Creative Fabrica.",
+    "rating": 4.5,
+    "rating_count": 2128,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.076624434517332,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.728143808295542,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.296136838230781,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.875321504129841,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.799463269489913,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Art",
+      "Creative",
+      "Design"
+    ]
+  },
+  {
+    "id": null,
+    "name": "矢车菊AI",
+    "description": "中文AI图像生成器，支持多种艺术风格。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://---ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Chinese AI image generator.",
+    "rating": 4.2,
+    "rating_count": 4270,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.635462088722832,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.19532799196853,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.769247177238789,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.593367386787675,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.11637423177668,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.033944824049632,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Chinese",
+      "Art",
+      "Creative"
+    ]
+  },
+  {
+    "id": null,
+    "name": "万兴智剪",
+    "description": "万兴科技出品的AI视频和图像编辑工具。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://----.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video and image editing tool.",
+    "rating": 4.5,
+    "rating_count": 3702,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.843607587353415,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.860406049406018,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.844759459521182,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.853896242364154,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.272206004868476,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.184537447208848,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video",
+      "Image",
+      "Editing"
+    ]
+  },
+  {
+    "id": null,
+    "name": "稿定AI",
+    "description": "在线AI图像生成和设计平台。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://--ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Online AI image generation platform.",
+    "rating": 4.1,
+    "rating_count": 3204,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.146741921471569,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.923456805285903,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.158456965079367,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.656282326373027,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.258343669488141,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.449130419742725,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Design",
+      "Online",
+      "Image"
+    ]
+  },
+  {
+    "id": null,
+    "name": "创客贴AI",
+    "description": "AI驱动的设计模板和图像生成。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://---ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered design templates.",
+    "rating": 4.5,
+    "rating_count": 3510,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.267379386066178,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.515544063172503,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.3040018988868605,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.966414925793031,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.344763507045617,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.406916795369038,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Templates",
+      "Design",
+      "Social Media"
+    ]
+  },
+  {
+    "id": null,
+    "name": "腾讯智影",
+    "description": "腾讯出品的AI视频创作平台。",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://----.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Tencent's AI video creation platform.",
+    "rating": 4.1,
+    "rating_count": 772,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.7396378268266757,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.69511929256761,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.044638182336184,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.61885778722887,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.8074446853600907,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.273940818575937,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video",
+      "Chinese",
+      "AI"
+    ]
+  },
+  {
+    "id": null,
+    "name": "剪映AI",
+    "description": "字节跳动剪映的AI功能。",
+    "category": "Video",
+    "pricing": "Free",
+    "url": "https://--ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI features from ByteDance's CapCut.",
+    "rating": 4.6,
+    "rating_count": 3571,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.734099110669343,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.64237387932785,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.4395407817411,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.722074807407178,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.3605031042818885,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video",
+      "Editing",
+      "Chinese"
+    ]
+  },
+  {
+    "id": null,
+    "name": "万兴播爆",
+    "description": "AI数字人视频生成工具。",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://----.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI avatar video generation tool.",
+    "rating": 4.1,
+    "rating_count": 2503,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.600419858577663,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.107494855284811,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.675748652064901,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.476529547752434,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.983131247841069,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.578839905763158,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Avatar",
+      "Video",
+      "AI"
+    ]
+  },
+  {
+    "id": null,
+    "name": "腾讯云智绘",
+    "description": "腾讯云的AI图像和视频生成服务。",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://-----.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Tencent Cloud AI image and video service.",
+    "rating": 4.4,
+    "rating_count": 5040,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1342187914549955,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.2101095960514945,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.157846855791079,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.193893311693399,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.363955876253545,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Cloud",
+      "Image",
+      "Video"
+    ]
+  },
+  {
+    "id": null,
+    "name": "标小智",
+    "description": "中文AI Logo设计工具。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://---.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Chinese AI logo design tool.",
+    "rating": 4.6,
+    "rating_count": 1156,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.350334366533621,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.544288002927828,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.4692345801841595,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.753774771222437,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Logo",
+      "Branding",
+      "Chinese"
+    ]
+  },
+  {
+    "id": null,
+    "name": "秘塔写作猫",
+    "description": "中文AI写作助手和语法检查工具。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://-----.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Chinese AI writing assistant.",
+    "rating": 4,
+    "rating_count": 2754,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.656354477321079,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.951473367435386,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.136670824085514,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 3.959416220097327,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.102554759372569,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.943286655131288,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Writing",
+      "Chinese",
+      "Grammar"
+    ]
   }
 ]
