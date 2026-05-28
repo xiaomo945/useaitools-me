@@ -11,19 +11,31 @@
   "featured": false,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=400&fit=crop",
-      "alt": "AI vs human content creation",
-      "position": "header"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=26-header-1779932253155-453",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=26-header-1779932253155-453",
+      "alt": "AI vs Traditional Content Creation: Which is More Effective?",
+      "caption": "Writing AI tools",
+      "position": "header",
+      "prompt": "AI vs Traditional Content Creation Which is More Effective, AI vs Traditional Content Creation: Which is More Effective? AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 26",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&h=400&fit=crop",
-      "alt": "Content creation workflow",
-      "position": "mid"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=26-mid-1779932253155-348",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=26-mid-1779932253155-348",
+      "alt": "AI vs Traditional Content Creation: Which is More Effective?",
+      "caption": "Writing AI tools",
+      "position": "mid",
+      "prompt": "AI vs Traditional Content Creation Which is More Effective, AI vs Traditional Content Creation: Which is More Effective? AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 26",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=400&fit=crop",
-      "alt": "Creative writing process",
-      "position": "cta"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=26-cta-1779932253155-284",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=26-cta-1779932253155-284",
+      "alt": "AI vs Traditional Content Creation: Which is More Effective?",
+      "caption": "Writing AI tools",
+      "position": "cta",
+      "prompt": "AI vs Traditional Content Creation Which is More Effective, AI vs Traditional Content Creation: Which is More Effective? AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 26",
+      "generated": true
     }
   ]
 }

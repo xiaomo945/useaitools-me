@@ -11,19 +11,31 @@
   "featured": true,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=400&fit=crop",
-      "alt": "AI image generator interface showing creative possibilities",
-      "position": "header"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=37-header-1779932253216-93",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=37-header-1779932253216-93",
+      "alt": "Best Free AI Image Generators for Commercial Use",
+      "caption": "Image AI tools",
+      "position": "header",
+      "prompt": "Best Free AI Image Generators for Commercial Use, Best Free AI Image Generators for Commercial Use AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 37",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=400&fit=crop",
-      "alt": "Beautiful AI-generated artwork gallery",
-      "position": "mid"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=37-mid-1779932253216-956",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=37-mid-1779932253216-956",
+      "alt": "Best Free AI Image Generators for Commercial Use",
+      "caption": "Image AI tools",
+      "position": "mid",
+      "prompt": "Best Free AI Image Generators for Commercial Use, Best Free AI Image Generators for Commercial Use AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 37",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=400&fit=crop",
-      "alt": "Creative workspace with AI-generated designs",
-      "position": "cta"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=37-cta-1779932253216-256",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=37-cta-1779932253216-256",
+      "alt": "Best Free AI Image Generators for Commercial Use",
+      "caption": "Image AI tools",
+      "position": "cta",
+      "prompt": "Best Free AI Image Generators for Commercial Use, Best Free AI Image Generators for Commercial Use AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 37",
+      "generated": true
     }
   ]
 }

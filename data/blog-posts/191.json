@@ -7,28 +7,31 @@
   "style": "故事驱动风",
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=400&fit=crop",
-      "alt": "Podcaster creating AI intro music and voiceover",
-      "caption": "Create professional podcast intros with AI",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=191-header-1779932253178-431",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=191-header-1779932253178-431",
+      "alt": "How to Create AI-Generated Podcast Intros in 2026",
+      "caption": "Audio AI tools",
       "position": "header",
-      "prompt": "Podcaster creating AI intro music and voiceover, wide cinematic banner format, ultra detailed, 8k, professional photography, cinematic lighting",
-      "image_url": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=400&fit=crop"
+      "prompt": "How to Create AI Generated Podcast Intros in 2026, How to Create AI-Generated Podcast Intros in 2026 AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 191",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=400&fit=crop",
-      "alt": "AI podcast intro tool showing voice and music options",
-      "caption": "AI generates intros in seconds",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=191-mid-1779932253178-367",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=191-mid-1779932253178-367",
+      "alt": "How to Create AI-Generated Podcast Intros in 2026",
+      "caption": "Audio AI tools",
       "position": "mid",
-      "prompt": "AI podcast intro tool showing voice and music options, square format for social sharing, ultra detailed, 8k, professional photography, cinematic lighting",
-      "image_url": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=400&fit=crop"
+      "prompt": "How to Create AI Generated Podcast Intros in 2026, How to Create AI-Generated Podcast Intros in 2026 AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 191",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=400&fit=crop",
-      "alt": "CTA encouraging podcasters to create AI intros",
-      "caption": "Start making your podcast intro today",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=191-cta-1779932253178-371",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=191-cta-1779932253178-371",
+      "alt": "How to Create AI-Generated Podcast Intros in 2026",
+      "caption": "Audio AI tools",
       "position": "cta",
-      "prompt": "CTA encouraging podcasters to create AI intros, centered composition with text-friendly background, ultra detailed, 8k, professional photography, cinematic lighting",
-      "image_url": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=400&fit=crop"
+      "prompt": "How to Create AI Generated Podcast Intros in 2026, How to Create AI-Generated Podcast Intros in 2026 AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 191",
+      "generated": true
     }
   ],
   "content": "# How to Create AI-Generated Podcast Intros in 2026\n\nGreat podcast intros make a professional first impression. AI makes creating them easy and affordable!\n\nCheck out our [[link:/category/Audio|Audio category]] for more tools.\n\n---\n\n## Step 1: Write Your Intro Script\n\nUse [[link:/tools/23|Rytr]] to help write your podcast intro script.\n\n**Try Rytr**: {{AFFILIATE_RYTR}}\n\n---\n\n## Step 2: Generate Voiceover\n\nUse [[link:/tools/97|ElevenLabs]] or Murf AI to create a professional voiceover.\n\n### Voiceover Tips\n- **Choose a consistent voice**: Keep it the same for every episode\n- **Match your brand**: Voice should match your show's personality\n- **Keep it short**: Intros should be 10-30 seconds\n\n**Try ElevenLabs**: {{AFFILIATE_ELEVENLABS}}\n\n---\n\n## Step 3: Create Intro Music\n\nUse [[link:/tools/200|Suno]] to generate intro music that fits your podcast.\n\n### Music Tips\n- **Keep it short**: 5-15 seconds is perfect\n- **Brand fit**: Music should match your show\n- **Fade out**: End smoothly\n\n**Try Suno**: https://suno.ai\n\n---\n\n## Step 4: Mix & Edit\n\nUse [[link:/tools/79|Descript]] to combine everything together.\n\n---\n\n## Our Podcast Intro Toolkit\n\n| Step | Tool | Affiliate |\n|------|------|-----------|\n| Script writing | [[link:/tools/23|Rytr]] | Yes |\n| Voiceover | [[link:/tools/97|ElevenLabs]] | Yes |\n| Music | [[link:/tools/200|Suno]] | No |\n| Mixing | [[link:/tools/79|Descript]] | No |\n\nReady to create your podcast intro? Try these tools today!\n\nFor more insights, check out [[link:/blog/how-to-create-ai-generated-podcast-intros-2026|How to Create AI-Generated Podcast Intros]]\n",

@@ -11,19 +11,31 @@
   "featured": true,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop",
-      "alt": "SEO optimization dashboard with AI analytics and ranking metrics",
-      "position": "header"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=38-header-1779932253230-618",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=38-header-1779932253230-618",
+      "alt": "AI Tools for SEO: How to Rank Higher in 2026",
+      "caption": "Writing AI tools",
+      "position": "header",
+      "prompt": "AI Tools for SEO How to Rank Higher in 2026, AI Tools for SEO: How to Rank Higher in 2026 AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 38",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
-      "alt": "AI analyzing search engine results and content optimization",
-      "position": "mid"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=38-mid-1779932253230-683",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=38-mid-1779932253230-683",
+      "alt": "AI Tools for SEO: How to Rank Higher in 2026",
+      "caption": "Writing AI tools",
+      "position": "mid",
+      "prompt": "AI Tools for SEO How to Rank Higher in 2026, AI Tools for SEO: How to Rank Higher in 2026 AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 38",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=400&fit=crop",
-      "alt": "Professional SEO workspace with ranking charts and analytics",
-      "position": "cta"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=38-cta-1779932253230-428",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=38-cta-1779932253230-428",
+      "alt": "AI Tools for SEO: How to Rank Higher in 2026",
+      "caption": "Writing AI tools",
+      "position": "cta",
+      "prompt": "AI Tools for SEO How to Rank Higher in 2026, AI Tools for SEO: How to Rank Higher in 2026 AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 38",
+      "generated": true
     }
   ]
 }

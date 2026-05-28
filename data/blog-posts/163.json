@@ -7,28 +7,31 @@
   "style": "活泼可爱风",
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop",
-      "alt": "HR professional using AI recruitment tools",
-      "caption": "Transform HR with AI tools",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=163-header-1779932253194-832",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=163-header-1779932253194-832",
+      "alt": "AI Tools for HR and Recruitment in 2026",
+      "caption": "Productivity AI tools",
       "position": "header",
-      "prompt": "HR professional using AI recruitment tools, wide cinematic banner format, ultra detailed, 8k, professional photography, cinematic lighting",
-      "image_url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop"
+      "prompt": "AI Tools for HR and Recruitment in 2026, AI Tools for HR and Recruitment in 2026 AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 163",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
-      "alt": "AI recruitment dashboard showing candidate analytics",
-      "caption": "AI helps find the best candidates",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=163-mid-1779932253194-649",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=163-mid-1779932253194-649",
+      "alt": "AI Tools for HR and Recruitment in 2026",
+      "caption": "Productivity AI tools",
       "position": "mid",
-      "prompt": "AI recruitment dashboard showing candidate analytics, square format for social sharing, ultra detailed, 8k, professional photography, cinematic lighting",
-      "image_url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop"
+      "prompt": "AI Tools for HR and Recruitment in 2026, AI Tools for HR and Recruitment in 2026 AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 163",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop",
-      "alt": "CTA encouraging HR professionals to use AI tools",
-      "caption": "Start transforming your HR process today",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=163-cta-1779932253194-646",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=163-cta-1779932253194-646",
+      "alt": "AI Tools for HR and Recruitment in 2026",
+      "caption": "Productivity AI tools",
       "position": "cta",
-      "prompt": "CTA encouraging HR professionals to use AI tools, centered composition with text-friendly background, ultra detailed, 8k, professional photography, cinematic lighting",
-      "image_url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop"
+      "prompt": "AI Tools for HR and Recruitment in 2026, AI Tools for HR and Recruitment in 2026 AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 163",
+      "generated": true
     }
   ],
   "content": "# AI Tools for HR and Recruitment in 2026\n\nFinding and hiring the right talent is crucial but time-consuming. AI tools help HR teams work smarter!\n\nCheck out our [[link:/category/Productivity|Productivity category]] for more AI tools.\n\n---\n\n## AI for Resume Screening\n\nAI can quickly scan resumes and identify top candidates based on your criteria, saving hours of manual review.\n\n### Benefits of AI Resume Screening\n- **Faster screening**: Review 100s of resumes in minutes\n- **Consistent criteria**: Reduce unconscious bias\n- **Better matching**: Find candidates who truly fit\n\n---\n\n## [[link:/tools/23|Rytr]]: Job Descriptions That Attract\n\n[[link:/tools/23|Rytr]] helps HR teams write compelling, inclusive job descriptions.\n\n### Rytr for HR\n- **Inclusive language**: Avoid biased wording\n- **Compelling copy**: Attract top talent\n- **SEO optimized**: Get more qualified applicants\n\n**Try Rytr Free**: {{AFFILIATE_RYTR}}\n\n---\n\n## AI for Candidate Communication\n\nUse AI to draft personalized outreach emails and keep candidates engaged throughout the hiring process.\n\n---\n\n## Our HR AI Toolkit\n\n| Task | AI Solution |\n|------|-------------|\n| Resume screening | Dedicated AI recruitment platforms |\n| Job descriptions | [[link:/tools/23|Rytr]] |\n| Candidate communication | ChatGPT or Rytr |\n| Interview scheduling | AI scheduling tools |\n\nReady to transform your HR process? Start using AI tools today!\n\nFor more insights, check out [[link:/blog/how-to-automate-customer-service-with-ai-tools-2026|How to Automate Customer Service with AI]]\n",

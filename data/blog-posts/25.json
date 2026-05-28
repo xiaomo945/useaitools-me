@@ -11,19 +11,31 @@
   "featured": false,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=400&fit=crop",
-      "alt": "Social media content creation with AI",
-      "position": "header"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=25-header-1779932253125-965",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=25-header-1779932253125-965",
+      "alt": "How to Use AI for Social Media Content Creation",
+      "caption": "Writing AI tools",
+      "position": "header",
+      "prompt": "How to Use AI for Social Media Content Creation, How to Use AI for Social Media Content Creation AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 25",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&h=400&fit=crop",
-      "alt": "Content planning workflow",
-      "position": "mid"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=25-mid-1779932253125-29",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=25-mid-1779932253125-29",
+      "alt": "How to Use AI for Social Media Content Creation",
+      "caption": "Writing AI tools",
+      "position": "mid",
+      "prompt": "How to Use AI for Social Media Content Creation, How to Use AI for Social Media Content Creation AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 25",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=800&h=400&fit=crop",
-      "alt": "AI powered content creation",
-      "position": "cta"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=25-cta-1779932253125-909",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=25-cta-1779932253125-909",
+      "alt": "How to Use AI for Social Media Content Creation",
+      "caption": "Writing AI tools",
+      "position": "cta",
+      "prompt": "How to Use AI for Social Media Content Creation, How to Use AI for Social Media Content Creation AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 25",
+      "generated": true
     }
   ]
 }

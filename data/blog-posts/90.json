@@ -8,28 +8,31 @@
   "category": "Video",
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=400&fit=crop",
-      "alt": "Marketing video being created in editing software",
-      "caption": "Create professional marketing videos fast with AI",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=90-header-1779932253205-38",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=90-header-1779932253205-38",
+      "alt": "How to Create a Marketing Video with AI Tools in 30 Minutes",
+      "caption": "Video AI tools",
       "position": "header",
-      "prompt": "Professional marketing video editing software showing a timeline and preview",
-      "image_url": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=400&fit=crop"
+      "prompt": "How to Create a Marketing Video with AI Tools in 30 Minutes, How to Create a Marketing Video with AI Tools in 30 Minutes AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 90",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&h=400&fit=crop",
-      "alt": "Timer showing 30 minutes countdown",
-      "caption": "From idea to finished video in just 30 minutes!",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=90-mid-1779932253205-841",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=90-mid-1779932253205-841",
+      "alt": "How to Create a Marketing Video with AI Tools in 30 Minutes",
+      "caption": "Video AI tools",
       "position": "mid",
-      "prompt": "Timer counting down from 30 minutes, creating urgency",
-      "image_url": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&h=400&fit=crop"
+      "prompt": "How to Create a Marketing Video with AI Tools in 30 Minutes, How to Create a Marketing Video with AI Tools in 30 Minutes AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 90",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&h=400&fit=crop",
-      "alt": "Marketing team reviewing finished video",
-      "caption": "Impress your team with how fast you can create great videos!",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=90-cta-1779932253205-925",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=90-cta-1779932253205-925",
+      "alt": "How to Create a Marketing Video with AI Tools in 30 Minutes",
+      "caption": "Video AI tools",
       "position": "cta",
-      "prompt": "Marketing team reviewing a finished video, looking impressed",
-      "image_url": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&h=400&fit=crop"
+      "prompt": "How to Create a Marketing Video with AI Tools in 30 Minutes, How to Create a Marketing Video with AI Tools in 30 Minutes AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 90",
+      "generated": true
     }
   ],
   "content": "# How to Create a Marketing Video with AI Tools in 30 Minutes\n\nMarketing videos used to take days or weeks — now with AI, you can create professional videos in just 30 minutes.\n\nLet's walk through the process step by step, and check out our [[link:/category/Video|Video category]] for more tools!\n\n---\n\n## Step 1: Script & Voiceover (10 minutes)\n\nFirst, create your script and generate a voiceover.\n\n### Tools to Use\n- [[link:/tools/23|Rytr]] — write your script quickly\n- [[link:/tools/97|ElevenLabs]] — generate a realistic voiceover\n\n### Action Steps\n1. Write or generate your marketing script (5 minutes)\n2. Generate a voiceover (5 minutes)\n\n---\n\n## Step 2: Create Visuals (10 minutes)\n\nNext, create or gather the visuals for your video.\n\n### Tools to Use\n- [[link:/tools/1|Midjourney]] — create key visuals and thumbnails\n- Stock footage sites — quick B-roll if needed\n\n### Action Steps\n1. Generate 3-5 key images with Midjourney (5 minutes)\n2. Gather or generate any additional B-roll (5 minutes)\n\n---\n\n## Step 3: Edit & Finalize (10 minutes)\n\nNow, put it all together in a video editor.\n\n### Tools to Use\n- [[link:/tools/51|VEED]] — browser-based editing with auto-captions\n\n### Action Steps\n1. Import voiceover and visuals (2 minutes)\n2. Arrange clips and sync with audio (4 minutes)\n3. Add auto-captions, music, and branding (4 minutes)\n\n---\n## Your 30-Minute Marketing Video Timeline\n\n| Step | Time | Tools Used |\n|------|------|------------|\n| Script & Voiceover | 10 min | Rytr, ElevenLabs |\n| Visuals | 10 min | Midjourney |\n| Edit & Finalize | 10 min | VEED |\n\n**Total: 30 minutes!**\n\nReady to start creating marketing videos at scale? Try this workflow and see how much time you save!\n\n---\n\nFor more insights, check out our guide: [[link:/blog/best-ai-video-tools-2026-pictory-veed|Best AI Video Tools 2026]]\n\n**Final CTA**: Start with VEED for the editing step — it's the fastest way to put it all together! {{AFFILIATE_VEED}}\n"

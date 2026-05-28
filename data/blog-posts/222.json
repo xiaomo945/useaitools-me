@@ -7,28 +7,31 @@
   "style": "故事驱动风",
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1472220625249-5a3e8523a433?w=800&h=400&fit=crop",
-      "alt": "Content creator filming product review with AI tools",
-      "caption": "Create product review videos with AI",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=222-header-1779932253219-926",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=222-header-1779932253219-926",
+      "alt": "How to Create AI-Generated Product Review Videos in 2026",
+      "caption": "Video AI tools",
       "position": "header",
-      "prompt": "Content creator filming product review with AI tools, wide cinematic banner format, ultra detailed, 8k, professional photography, cinematic lighting",
-      "image_url": "https://images.unsplash.com/photo-1472220625249-5a3e8523a433?w=800&h=400&fit=crop"
+      "prompt": "How to Create AI Generated Product Review Videos in 2026, How to Create AI-Generated Product Review Videos in 2026 AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 222",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=400&fit=crop",
-      "alt": "AI product review video creator showing workflow",
-      "caption": "AI makes review videos fast and easy",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=222-mid-1779932253219-683",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=222-mid-1779932253219-683",
+      "alt": "How to Create AI-Generated Product Review Videos in 2026",
+      "caption": "Video AI tools",
       "position": "mid",
-      "prompt": "AI product review video creator showing workflow, square format for social sharing, ultra detailed, 8k, professional photography, cinematic lighting",
-      "image_url": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=400&fit=crop"
+      "prompt": "How to Create AI Generated Product Review Videos in 2026, How to Create AI-Generated Product Review Videos in 2026 AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 222",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1472220625249-5a3e8523a433?w=800&h=400&fit=crop",
-      "alt": "CTA encouraging users to create AI product review videos",
-      "caption": "Start creating product review videos today",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=222-cta-1779932253219-752",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=222-cta-1779932253219-752",
+      "alt": "How to Create AI-Generated Product Review Videos in 2026",
+      "caption": "Video AI tools",
       "position": "cta",
-      "prompt": "CTA encouraging users to create AI product review videos, centered composition with text-friendly background, ultra detailed, 8k, professional photography, cinematic lighting",
-      "image_url": "https://images.unsplash.com/photo-1472220625249-5a3e8523a433?w=800&h=400&fit=crop"
+      "prompt": "How to Create AI Generated Product Review Videos in 2026, How to Create AI-Generated Product Review Videos in 2026 AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 222",
+      "generated": true
     }
   ],
   "content": "# How to Create AI-Generated Product Review Videos in 2026\n\nProduct review videos are incredibly effective, but they traditionally require lots of equipment and time. AI makes it accessible to everyone!\n\nCheck out our [[link:/category/Video|Video category]] for more AI tools.\n\n---\n\n## Step 1: Write Your Review Script\n\nUse [[link:/tools/23|Rytr]] to create engaging product review scripts.\n\n### Rytr for Reviews\n- **Review templates**: Proven review structures\n- **Honest tone**: Sound authentic and trustworthy\n- **Key points**: Highlight what matters most\n\n**Try Rytr Free**: {{AFFILIATE_RYTR}}\n\n---\n\n## Step 2: Generate Voiceover\n\nUse [[link:/tools/97|ElevenLabs]] for professional-sounding narration.\n\n### ElevenLabs for Reviews\n- **Natural voice**: Sound like a real reviewer\n- **Tone control**: Enthusiastic but honest\n- **Multiple takes**: Find the perfect delivery\n\n**Try ElevenLabs**: {{AFFILIATE_ELEVENLABS}}\n\n---\n\n## Step 3: Create Visuals\n\nUse [[link:/tools/1|Midjourney]] for product shots and graphics, or use your own footage.\n\n### Visual Options\n- **Product photos**: Generate with Midjourney\n- **Text overlays**: Show key information\n- **B-roll**: Add context and interest\n\n**Try Midjourney**: https://midjourney.com\n\n---\n\n## Step 4: Edit Everything Together\n\nUse [[link:/tools/51|VEED]] to edit and finalize your review video.\n\n**Try VEED**: https://veed.io\n\n---\n\n## Our Product Review Toolkit\n\n| Element | Tool | Affiliate |\n|---------|------|-----------|\n| Script | [[link:/tools/23|Rytr]] | Yes |\n| Voiceover | [[link:/tools/97|ElevenLabs]] | Yes |\n| Visuals | [[link:/tools/1|Midjourney]] | No |\n| Editing | [[link:/tools/51|VEED]] | No |\n\nReady to create great product reviews? Try these tools today!\n\nFor more insights, check out [[link:/blog/how-to-create-ai-generated-meditation-videos-in-2026|How to Create AI-Generated Meditation Videos]]\n",

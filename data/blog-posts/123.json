@@ -7,28 +7,31 @@
   "style": "故事驱动风",
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=400&fit=crop",
-      "alt": "Real estate agent using AI marketing tools, modern office",
-      "caption": "AI transforms real estate marketing",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=123-header-1779932253206-63",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=123-header-1779932253206-63",
+      "alt": "AI Tools for Real Estate Marketing in 2026",
+      "caption": "Productivity AI tools",
       "position": "header",
-      "prompt": "Real estate agent using AI marketing tools, modern office, wide cinematic banner format, ultra detailed, 8k, professional photography, cinematic lighting",
-      "image_url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=400&fit=crop"
+      "prompt": "AI Tools for Real Estate Marketing in 2026, AI Tools for Real Estate Marketing in 2026 AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 123",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=400&fit=crop",
-      "alt": "AI-generated property listing with virtual tour",
-      "caption": "Create stunning property listings with AI",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=123-mid-1779932253206-414",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=123-mid-1779932253206-414",
+      "alt": "AI Tools for Real Estate Marketing in 2026",
+      "caption": "Productivity AI tools",
       "position": "mid",
-      "prompt": "AI-generated property listing with virtual tour, square format for social sharing, ultra detailed, 8k, professional photography, cinematic lighting",
-      "image_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=400&fit=crop"
+      "prompt": "AI Tools for Real Estate Marketing in 2026, AI Tools for Real Estate Marketing in 2026 AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 123",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=400&fit=crop",
-      "alt": "CTA encouraging real estate professionals to use AI tools",
-      "caption": "Start growing your real estate business today",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=123-cta-1779932253206-121",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=123-cta-1779932253206-121",
+      "alt": "AI Tools for Real Estate Marketing in 2026",
+      "caption": "Productivity AI tools",
       "position": "cta",
-      "prompt": "CTA encouraging real estate professionals to use AI tools, centered composition with text-friendly background, ultra detailed, 8k, professional photography, cinematic lighting",
-      "image_url": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=400&fit=crop"
+      "prompt": "AI Tools for Real Estate Marketing in 2026, AI Tools for Real Estate Marketing in 2026 AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 123",
+      "generated": true
     }
   ],
   "content": "# AI Tools for Real Estate Marketing in 2026\n\nReal estate marketing is being transformed by AI. Create stunning listings, virtual tours, and grow your business faster than ever!\n\nCheck out our [[link:/category/Productivity|Productivity category]] for more business tools.\n\n---\n\n## [[link:/tools/23|Rytr]]: Write Compelling Property Listings\n\n[[link:/tools/23|Rytr]] can write engaging, persuasive property listings in seconds.\n\nJust give it the property details, and it will create a listing that makes buyers want to see more.\n\n### Rytr for Real Estate\n- **Listing templates**: Specifically designed for real estate\n- **Emotional language**: Highlights the lifestyle each property offers\n- **Multiple versions**: Create A/B test variations quickly\n\n**Try Rytr Free**: {{AFFILIATE_RYTR}}\n\n---\n\n## [[link:/tools/4|Canva Magic Design]]: Stunning Visuals in Minutes\n\n[[link:/tools/4|Canva Magic Design]] helps you create professional flyers, social media posts, and brochures for your listings.\n\n### Canva for Real Estate\n- **Real estate templates**: Ready-to-use templates for every platform\n- **Magic Edit**: Enhance property photos with AI\n- **Brand consistency**: Keep all your marketing materials on-brand\n\n---\n\n## AI Image Tools: Show Properties at Their Best\n\nUse [[link:/tools/1|Midjourney]] or [[link:/tools/2|DALL-E 3]] to:\n- **Visualize renovations**: Show what a property could look like after updates\n- **Create lifestyle images**: Help buyers imagine living there\n- **Enhance existing photos**: Make dull property photos pop\n\n---\n\n## Our Real Estate AI Toolkit\n\n| Task | Tool |\n|------|------|\n| Writing listings | [[link:/tools/23|Rytr]] |\n| Creating marketing materials | [[link:/tools/4|Canva]] |\n| Enhancing property photos | [[link:/tools/1|Midjourney]] or [[link:/tools/2|DALL-E 3]] |\n| Social media posts | [[link:/tools/23|Rytr]] + [[link:/tools/4|Canva]] |\n\nReady to take your real estate marketing to the next level? Try these AI tools today!\n\nFor more insights, check out our guide: [[link:/blog/top-10-ai-tools-for-small-business|Top 10 AI Tools for Small Business]]\n",

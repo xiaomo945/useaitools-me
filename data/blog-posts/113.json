@@ -10,19 +10,31 @@
   "featured": true,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=400&fit=crop",
-      "alt": "Weekly AI tools picks banner",
-      "position": "header"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=113-header-1779932253107-725",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=113-header-1779932253107-725",
+      "alt": "Weekly Picks Vol. 003: 5 AI Tools You Need to Try This Week",
+      "caption": "Productivity AI tools",
+      "position": "header",
+      "prompt": "Weekly Picks Vol 003 5 AI Tools You Need to Try This Week, Weekly Picks Vol. 003: 5 AI Tools You Need to Try This Week AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 113",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop",
-      "alt": "Discovering new AI tools",
-      "position": "mid"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=113-mid-1779932253107-899",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=113-mid-1779932253107-899",
+      "alt": "Weekly Picks Vol. 003: 5 AI Tools You Need to Try This Week",
+      "caption": "Productivity AI tools",
+      "position": "mid",
+      "prompt": "Weekly Picks Vol 003 5 AI Tools You Need to Try This Week, Weekly Picks Vol. 003: 5 AI Tools You Need to Try This Week AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 113",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=400&fit=crop",
-      "alt": "Exploring AI technology",
-      "position": "cta"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=113-cta-1779932253107-464",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=113-cta-1779932253107-464",
+      "alt": "Weekly Picks Vol. 003: 5 AI Tools You Need to Try This Week",
+      "caption": "Productivity AI tools",
+      "position": "cta",
+      "prompt": "Weekly Picks Vol 003 5 AI Tools You Need to Try This Week, Weekly Picks Vol. 003: 5 AI Tools You Need to Try This Week AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 113",
+      "generated": true
     }
   ],
   "content": "<p>Welcome to Weekly Picks Vol. 003! Every week, we handpick 5 standout AI tools across different categories that we think are worth your attention. Let's dive into this week's selections!</p>\n\n<h2>1. Notion AI - Your Intelligent Workspace</h2>\n<p>Notion AI takes the already-powerful Notion platform to the next level. Summarize notes, generate content, and get AI-powered insights directly in your workspace. It's like having a research assistant that lives in your notes app.</p>\n<p><strong>Why it stands out this week:</strong> Perfect for students, professionals, and teams looking to organize information and work smarter.</p>\n<p><a href=\"/tools/notion\" class=\"text-emerald-600 hover:underline\">Try Notion AI →</a></p>\n\n<h2>2. Murf AI - Professional Voiceovers Made Easy</h2>\n<p>Murf AI creates incredibly realistic voiceovers for videos, podcasts, audiobooks, and more. With over 120+ voices in 20+ languages, you'll find the perfect voice for any project.</p>\n<p><strong>Why it stands out this week:</strong> Voice technology keeps improving, and Murf is one of the best. Great for content creators who want professional audio without hiring voice actors.</p>\n<p><a href=\"/tools/murf-ai\" class=\"text-emerald-600 hover:underline\">Try Murf AI →</a></p>\n\n<h2>3. Runway ML - Advanced AI Video Tools</h2>\n<p>Runway ML offers cutting-edge AI tools for video creators. Remove objects, change backgrounds, and even generate videos from text with their impressive suite of tools.</p>\n<p><strong>Why it stands out this week:</strong> Their Gen-2 model is pushing the boundaries of what's possible with AI video. Perfect for experimental creators and professionals.</p>\n<p><a href=\"/tools/runway-ml\" class=\"text-emerald-600 hover:underline\">Explore Runway ML →</a></p>\n\n<h2>4. Jasper - Enterprise-Grade AI Writing</h2>\n<p>Jasper is a powerful AI writing platform designed for teams and businesses. It offers brand voice consistency, collaboration features, and integration with other tools.</p>\n<p><strong>Why it stands out this week:</strong> While it's more expensive than some alternatives, the quality and enterprise features make it worth considering for marketing teams.</p>\n<p><a href=\"/tools/jasper\" class=\"text-emerald-600 hover:underline\">Try Jasper →</a></p>\n\n<h2>5. Canva AI - Design for Everyone</h2>\n<p>Canva's AI tools make professional design accessible to everyone. Generate designs from text, remove backgrounds, and create stunning visuals in minutes.</p>\n<p><strong>Why it stands out this week:</strong> Canva keeps getting better with new AI features. If you haven't checked it out recently, now is a great time.</p>\n<p><a href=\"/tools/canva\" class=\"text-emerald-600 hover:underline\">Try Canva →</a></p>\n\n<h2>Wrap Up</h2>\n<p>That's it for Weekly Picks Vol. 003! Let us know which tool you try this week—we'd love to hear about your experience. Remember, new tools are added to our directory all the time, so be sure to check back regularly!</p>\n\n<p>Want more AI tools? <a href=\"/tools\" class=\"text-emerald-600 hover:underline\">Explore our complete directory →</a></p>"

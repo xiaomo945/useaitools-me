@@ -11,19 +11,31 @@
   "featured": true,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1507925921958-8a62f7d0000d?w=800&h=400&fit=crop",
-      "alt": "AI voice generator vs human voice actor comparison concept",
-      "position": "header"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=36-header-1779932253214-925",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=36-header-1779932253214-925",
+      "alt": "AI Voice Generators vs Human Voice Actors: Which is Better?",
+      "caption": "Audio AI tools",
+      "position": "header",
+      "prompt": "AI Voice Generators vs Human Voice Actors Which is Better, AI Voice Generators vs Human Voice Actors: Which is Better? AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 36",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=400&fit=crop",
-      "alt": "Professional voice actor in recording studio",
-      "position": "mid"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=36-mid-1779932253214-226",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=36-mid-1779932253214-226",
+      "alt": "AI Voice Generators vs Human Voice Actors: Which is Better?",
+      "caption": "Audio AI tools",
+      "position": "mid",
+      "prompt": "AI Voice Generators vs Human Voice Actors Which is Better, AI Voice Generators vs Human Voice Actors: Which is Better? AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 36",
+      "generated": true
     },
     {
-      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
-      "alt": "AI voice technology interface with waveforms",
-      "position": "cta"
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=36-cta-1779932253214-793",
+      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=36-cta-1779932253214-793",
+      "alt": "AI Voice Generators vs Human Voice Actors: Which is Better?",
+      "caption": "Audio AI tools",
+      "position": "cta",
+      "prompt": "AI Voice Generators vs Human Voice Actors Which is Better, AI Voice Generators vs Human Voice Actors: Which is Better? AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 36",
+      "generated": true
     }
   ]
 }
