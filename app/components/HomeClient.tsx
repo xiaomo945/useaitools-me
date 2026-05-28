@@ -92,37 +92,37 @@ const ToolCard = memo(function ToolCard({
       {/* Category Color Bar - 3px Height */}
       <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
       
-      <div className="p-5">
+      <div className="p-4 sm:p-5">
         {/* Tool Header with Compare Checkbox */}
-        <div className="flex items-start justify-between gap-4 mb-4">
-          <div className="flex items-center gap-3">
+        <div className="flex items-start justify-between gap-3 mb-3">
+          <div className="flex items-center gap-2.5">
             <Link
               href={`/tools/${tool.id}`}
-              className={`w-10 h-10 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-base sm:text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`}
+              className={`w-9 h-9 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-sm sm:text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`}
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               {tool.name.charAt(0)}
             </Link>
-            <div>
+            <div className="min-w-0">
               <Link href={`/tools/${tool.id}`} className="inline-block">
-                <h3 className="font-semibold text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <h3 className="font-semibold text-base sm:text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate">
                   {highlightText(tool.name, search)}
                 </h3>
               </Link>
-              <div className="flex items-center gap-1.5 mt-1">
+              <div className="flex items-center gap-1 mt-0.5">
                 {tool.needs_vpn ? (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                    🪜 VPN Required
+                  <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                    🪜 VPN
                   </span>
                 ) : (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
-                    ✅ Direct Access
+                  <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                    ✅ Direct
                   </span>
                 )}
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5">
             <button
               onClick={(e) => {
                 e.preventDefault();
@@ -137,12 +137,12 @@ const ToolCard = memo(function ToolCard({
               title="Select for comparison"
             >
               {isSelectedForCompare && (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               )}
             </button>
-            <span className={`px-2 py-0.5 sm:px-3 sm:py-1.5 rounded-full text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
+            <span className={`px-1.5 sm:px-3 sm:py-1.5 py-0.5 rounded-full text-[10px] sm:text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
               {tool.pricing}
             </span>
           </div>
@@ -150,13 +150,13 @@ const ToolCard = memo(function ToolCard({
 
         {/* Description - linkable to tool page */}
         <Link href={`/tools/${tool.id}`} className="block">
-          <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-4 mb-4 line-clamp-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-3 mb-3 line-clamp-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors text-sm sm:text-base">
             {highlightText(tool.description, search)}
           </p>
         </Link>
 
         {/* Star Rating */}
-        <div className="flex items-center gap-2 mb-4">
+        <div className="flex items-center gap-2 mb-3">
           <StarRating
             rating={tool.rating || 4.0}
             count={tool.rating_count || 0}
@@ -165,17 +165,17 @@ const ToolCard = memo(function ToolCard({
         </div>
 
         {/* Skill Level & Best For Tags */}
-        <div className="mb-4 space-y-2">
+        <div className="mb-3 space-y-1.5">
           {tool.skill_level && (
-            <span className={`inline-flex items-center gap-1 px-2 py-0.5 sm:px-2 sm:py-1 rounded-full text-xs font-semibold ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
+            <span className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
               {getSkillLevelColors(tool.skill_level).label}
             </span>
           )}
-          <div className="flex flex-wrap gap-1 sm:gap-1.5">
+          <div className="flex flex-wrap gap-0.5 sm:gap-1.5">
             {tool.best_for?.slice(0, 3).map((tag: string, i: number) => (
               <span
                 key={i}
-                className="inline-flex items-center px-2 py-0.5 sm:px-2 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
+                className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] sm:text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
               >
                 {tag}
               </span>
@@ -189,10 +189,10 @@ const ToolCard = memo(function ToolCard({
             {tool.category}
           </span>
           
-          <div className="flex items-center gap-1.5 sm:gap-2">
+          <div className="flex items-center gap-1 sm:gap-2">
             <button
               onClick={() => router.push(`/compare?tool=${tool.id}`)}
-              className="inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[36px] min-w-[36px] sm:min-h-[44px] sm:min-w-[44px] border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
             >
               <svg
                 className="w-3.5 h-3.5 sm:w-4 sm:h-4"
@@ -213,7 +213,7 @@ const ToolCard = memo(function ToolCard({
               href={getAffiliateLink(tool) || tool.url}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[36px] min-w-[36px] sm:min-h-[44px] sm:min-w-[44px] border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
             >
               <svg
                 className="w-3.5 h-3.5 sm:w-4 sm:h-4"
@@ -235,7 +235,7 @@ const ToolCard = memo(function ToolCard({
                 e.preventDefault();
                 toggleSave(tool.id);
               }}
-              className={`inline-flex items-center justify-center gap-0.5 px-2 min-h-[44px] min-w-[44px] rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ease-out relative overflow-hidden whitespace-nowrap active:scale-[0.98] ${
+              className={`inline-flex items-center justify-center gap-0.5 px-1.5 min-h-[36px] min-w-[36px] sm:min-h-[44px] sm:min-w-[44px] rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ease-out relative overflow-hidden whitespace-nowrap active:scale-[0.98] ${
                 isSaved
                   ? 'bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300 hover:bg-rose-200 dark:hover:bg-rose-500/30'
                   : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
@@ -791,35 +791,35 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           </div>
         </div>
       )}
-      <div className="py-12 sm:py-16 px-4 sm:px-8 relative z-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="py-10 sm:py-16 px-3 sm:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6">
         {/* Hero Section with Glow */}
-        <div className="text-center mb-16 relative">
+        <div className="text-center mb-12 sm:mb-16 relative">
           {/* Background Breathing Glow - Only Desktop */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent rounded-full blur-3xl animate-breathe pointer-events-none hidden sm:block" />
           
-          <img src="/logo.png" alt="Use AI Tools Logo - Discover the best AI tools" className="h-10 sm:h-12 lg:h-14 w-auto mx-auto mb-3 relative z-10" width="80" height="48" loading="eager" />
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight mb-2 relative z-10">
+          <img src="/logo.png" alt="Use AI Tools Logo - Discover the best AI tools" className="h-9 sm:h-12 lg:h-14 w-auto mx-auto mb-2.5 sm:mb-3 relative z-10" width="72" height="43" loading="eager" />
+          <h1 className="text-2.5xl sm:text-3xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight mb-1.5 sm:mb-2 relative z-10">
             <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
               Use AI Tools
             </span>
           </h1>
-          <p className="text-xl sm:text-2xl lg:text-3xl font-light text-emerald-600 dark:text-emerald-400 mb-4 relative z-10">
+          <p className="text-lg sm:text-xl lg:text-3xl font-light text-emerald-600 dark:text-emerald-400 mb-3 sm:mb-4 relative z-10">
             Your AI Toolbox
           </p>
-          <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-8 relative z-10">
+          <p className="text-slate-500 dark:text-slate-400 text-sm sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 relative z-10 leading-relaxed">
             Discover and compare AI tools in our comprehensive AI tools directory. Find the best AI tools for writing, images, video, and more. Curated weekly.
           </p>
           
           {/* Trust Signal */}
-          <div className="mb-8 relative z-10">
-            <p className="text-sm text-slate-500 dark:text-slate-400 font-medium">
-              Built in public by an indie maker from an internet café in China. 135+ tools handpicked, not paid for. Here&apos;s my story →
+          <div className="mb-6 sm:mb-8 relative z-10">
+            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
+              Built in public by an indie maker from an internet café in China. 690+ tools handpicked, not paid for.
             </p>
           </div>
           
           {/* Search Box */}
-          <div className="search-container relative max-w-2xl mx-auto mb-8 px-4 sm:px-0">
+          <div className="search-container relative max-w-2xl mx-auto mb-6 sm:mb-8 px-2 sm:px-0">
             <div className="relative">
               <svg
                 className="absolute left-4 sm:left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
@@ -852,14 +852,14 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 spellCheck="false"
                 className="w-full px-4 sm:px-5 py-2.5 sm:py-3 pl-10 sm:pl-14 pr-16 sm:pr-24 h-10 sm:h-11 text-sm sm:text-base rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
               />
-              <div className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-1">
+              <div className="absolute right-1.5 sm:right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-0.5 sm:gap-1">
                 {search && (
                   <button
                     onClick={() => setSearch('')}
-                    className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px]"
+                    className="p-1.5 sm:p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200 min-h-[36px] min-w-[36px] sm:min-h-[44px] sm:min-w-[44px] flex items-center justify-center"
                     aria-label="Clear search"
                   >
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
@@ -867,14 +867,14 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 <button
                   onClick={goToSearchPage}
                   disabled={!search.trim()}
-                  className={`p-1.5 sm:p-2 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center ${
+                  className={`p-1.5 sm:p-2 rounded-full transition-all duration-200 min-h-[36px] min-w-[36px] sm:min-h-[44px] sm:min-w-[44px] flex items-center justify-center ${
                     search.trim()
                       ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:shadow-lg hover:shadow-emerald-500/30'
                       : 'bg-slate-100 dark:bg-slate-800 text-slate-400 cursor-not-allowed'
                   }`}
                   aria-label="Search"
                 >
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </button>
@@ -962,7 +962,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               {categories.map((category, index) => {
                 const isActive = selectedCategory === category;
                 
-                const buttonStyle = `px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.98] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[44px] flex items-center justify-center ${
+                const buttonStyle = `px-2.5 sm:px-4 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.98] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[36px] sm:min-h-[44px] flex items-center justify-center ${
                   isActive
                     ? category === 'All'
                       ? 'bg-emerald-600 text-white'
@@ -1043,7 +1043,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 href="https://tryaiwriter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 h-11 sm:h-12 text-sm sm:text-base bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px]"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 h-10 sm:h-11 text-sm sm:text-base bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[36px] sm:min-h-[44px]"
               >
                 Try It Free →
               </a>
@@ -1062,7 +1062,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               </div>
               <Link
                 href="/image"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 h-11 sm:h-12 text-sm sm:text-base bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px]"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 h-10 sm:h-11 text-sm sm:text-base bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[36px] sm:min-h-[44px]"
               >
                 Learn More →
               </Link>
@@ -1084,7 +1084,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               </div>
               <Link
                 href="/mobile"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 h-11 sm:h-12 text-sm sm:text-base bg-slate-800 dark:bg-slate-700 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 opacity-70 min-h-[44px]"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 h-10 sm:h-11 text-sm sm:text-base bg-slate-800 dark:bg-slate-700 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 opacity-70 min-h-[36px] sm:min-h-[44px]"
               >
                 Join Waitlist →
               </Link>
