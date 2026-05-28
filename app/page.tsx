@@ -28,26 +28,20 @@ export default function Home() {
     affiliate_link: getAffiliateLink(tool)
   })) as Tool[];
 
+  // Sort tools by rating + rating_count for featured selection
+  const sortedTools = [...enrichedTools].sort((a, b) => {
+    const scoreA = (a.rating || 4.0) * 100 + (a.rating_count || 0);
+    const scoreB = (b.rating || 4.0) * 100 + (b.rating_count || 0);
+    return scoreB - scoreA;
+  });
+
+  // Only pass first 20 tools to client for initial load
+  const initialTools = sortedTools.slice(0, 20);
+
   // Select featured tools on server to prevent hydration mismatch
-  // Prioritize Chinese tools first, then mix with others
-  const chineseTools = enrichedTools.filter(tool => !tool.needs_vpn);
-  const allTools = [...enrichedTools];
-  
-  // Use deterministic selection based on tool IDs
-  const selected: Tool[] = [];
-  
-  // Select top 2 Chinese tools first (deterministic)
-  const topChineseTools = chineseTools
-    .sort((a, b) => a.id - b.id)
-    .slice(0, 2);
-  selected.push(...topChineseTools);
-  
-  // Select remaining from other tools
-  const remaining = allTools.filter(t => !selected.some(s => s.id === t.id));
-  const topRemainingTools = remaining
-    .sort((a, b) => a.id - b.id)
-    .slice(0, 3 - selected.length);
-  selected.push(...topRemainingTools);
+  const selected: Tool[] = initialTools
+    .filter(t => t.rating && t.rating >= 4.5)
+    .slice(0, 3);
 
   // WebSite Schema with SearchAction
   const webSiteSchema = {
@@ -120,7 +114,12 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
-      <HomeClient initialTools={enrichedTools} featuredTools={selected} blogPosts={blogPosts} />
+      <HomeClient 
+        initialTools={initialTools} 
+        featuredTools={selected} 
+        blogPosts={blogPosts}
+        totalCount={enrichedTools.length}
+      />
       <Footer />
     </>
   );

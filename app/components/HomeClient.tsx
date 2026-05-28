@@ -338,14 +338,20 @@ interface HomeClientProps {
   initialTools: Tool[];
   featuredTools: Tool[];
   blogPosts: BlogPost[];
+  totalCount: number;
 }
 
-export default function HomeClient({ initialTools, featuredTools, blogPosts }: HomeClientProps) {
+export default function HomeClient({ initialTools, featuredTools, blogPosts, totalCount }: HomeClientProps) {
+  const [displayedTools, setDisplayedTools] = useState<Tool[]>(initialTools);
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
   const [showSuggestions, setShowSuggestions] = useState(false);
   const router = useRouter();
   const toolsGridRef = useRef<HTMLDivElement>(null);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const [savedIds, setSavedIds] = useState<number[]>([]);
   const [selectedForCompare, setSelectedForCompare] = useState<number[]>([]);
@@ -381,6 +387,49 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
       }
     } catch { /* ignore */ }
   }, []);
+
+  const loadMoreTools = async () => {
+    if (isLoadingMore || !hasMore) return;
+    setIsLoadingMore(true);
+    try {
+      const nextPage = page + 1;
+      const response = await fetch(`/api/tools?page=${nextPage}&limit=20`);
+      const data = await response.json();
+      setDisplayedTools(prev => [...prev, ...data.tools]);
+      setPage(nextPage);
+      setHasMore(data.hasMore);
+    } catch (error) {
+      console.error('Failed to load more tools:', error);
+    } finally {
+      setIsLoadingMore(false);
+    }
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !isLoadingMore && hasMore) {
+        loadMoreTools();
+      }
+    }, { threshold: 0.1, rootMargin: '200px' });
+
+    const currentRef = loadMoreRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [isLoadingMore, hasMore, page]);
+
+  useEffect(() => {
+    if (displayedTools.length > 0) {
+      const newIds = displayedTools.map(t => t.id);
+      localStorage.setItem('allDisplayedToolIds', JSON.stringify(newIds));
+    }
+  }, [displayedTools]);
   
   // Keyboard navigation for search box (Esc to clear, Enter to search page)
   const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -426,7 +475,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
       suggestions.push(...popularSearches);
       
       // Add popular tools sorted by rating_count descending
-      const sortedTools = [...initialTools].sort((a, b) => (b.rating_count || 0) - (a.rating_count || 0));
+      const sortedTools = [...displayedTools].sort((a, b) => (b.rating_count || 0) - (a.rating_count || 0));
       const topTools = sortedTools.slice(0, 8);
       topTools.forEach(tool => {
         suggestions.push({
@@ -439,7 +488,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
     } else {
       const query = search.toLowerCase();
       // Add matching tools
-      initialTools.forEach(tool => {
+      displayedTools.forEach(tool => {
         if (tool.name.toLowerCase().includes(query)) {
           suggestions.push({
             type: 'tool',
@@ -459,7 +508,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
     }
 
     return suggestions.slice(0, 10);
-  }, [search, initialTools]);
+  }, [search, displayedTools]);
 
   // Handle suggestion click
   const handleSuggestionClick = (suggestion: { type: string; label: string; value: string; toolId?: number }) => {
@@ -537,12 +586,21 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
 
   const categories: Category[] = ['All', 'Writing', 'Image', 'Productivity', 'Code', 'Audio', 'Video'];
 
+  // Debounced search with 300ms delay
+  const [debouncedSearch, setDebouncedSearch] = useState('');
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(search);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [search]);
+
   // 智能排序：优先展示海外 AI 工具（needs_vpn: true），中文工具排在后面
   const filteredTools = useMemo(() => {
-    const filtered = initialTools.filter((tool) => {
+    const filtered = displayedTools.filter((tool) => {
       const matchesSearch = 
-        tool.name.toLowerCase().includes(search.toLowerCase()) || 
-        tool.description.toLowerCase().includes(search.toLowerCase());
+        tool.name.toLowerCase().includes(debouncedSearch.toLowerCase()) || 
+        tool.description.toLowerCase().includes(debouncedSearch.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
@@ -563,7 +621,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
       // 3. 按名称字母排序
       return a.name.localeCompare(b.name);
     });
-  }, [search, selectedCategory, initialTools]);
+  }, [debouncedSearch, selectedCategory, displayedTools]);
 
   const getCategoryColors = (category: string) => {
     switch (category) {
@@ -944,7 +1002,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
                   `Showing ${filteredTools.length} tool${filteredTools.length !== 1 ? 's' : ''}`
                 )
               ) : (
-                `Showing all ${initialTools.length} tools`
+                `Showing all ${displayedTools.length} of ${totalCount} tools`
               )}
             </p>
           </div>
@@ -1472,6 +1530,28 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
           })}
         </div>
 
+        {/* Load More Sentinel */}
+        {!isLoadingMore && hasMore && (
+          <div ref={loadMoreRef} className="h-20 flex items-center justify-center" aria-label="Loading more tools">
+            <div className="flex items-center gap-3 text-slate-500 dark:text-gray-400">
+              <svg className="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              <span className="text-sm font-medium">Loading more tools...</span>
+            </div>
+          </div>
+        )}
+        {isLoadingMore && (
+          <div className="h-20 flex items-center justify-center">
+            <div className="flex items-center gap-3 text-slate-500 dark:text-gray-400">
+              <svg className="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              <span className="text-sm font-medium">Loading more tools...</span>
+            </div>
+          </div>
+        )}
+
         {/* Empty State */}
         {filteredTools.length === 0 && (
           <div className="text-center py-20">
@@ -1561,7 +1641,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {recentlyViewedIds.map((toolId) => {
-                const tool = initialTools.find(t => t.id === toolId);
+                const tool = displayedTools.find(t => t.id === toolId);
                 if (!tool) return null;
                 
                 const colors = getCategoryColors(tool.category);
@@ -1663,7 +1743,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
                 </span>
                 <div className="flex items-center gap-2">
                   {selectedForCompare.map((toolId) => {
-                    const tool = initialTools.find(t => t.id === toolId);
+                    const tool = displayedTools.find(t => t.id === toolId);
                     if (!tool) return null;
                     const colors = getCategoryColors(tool.category);
                     return (
