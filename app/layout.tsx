@@ -6,6 +6,7 @@ import "./globals.css";
 import PageProgress from "./components/PageProgress";
 import BackToTop from "./components/BackToTop";
 import MobileNav from "./components/MobileNav";
+import ThemeToggle from "./components/ThemeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -108,6 +109,9 @@ export default function RootLayout({
         <BackToTop />
         <Suspense fallback={null}>
           <MobileNav />
+        </Suspense>
+        <Suspense fallback={null}>
+          <ThemeToggle />
         </Suspense>
       </body>
     </html>
