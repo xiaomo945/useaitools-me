@@ -11,31 +11,19 @@
   "featured": true,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=27-header-1779932253213-764",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=27-header-1779932253213-764",
-      "alt": "Best Free AI Audio Tools for Podcasters",
-      "caption": "Audio AI tools",
-      "position": "header",
-      "prompt": "Best Free AI Audio Tools for Podcasters, Best Free AI Audio Tools for Podcasters AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 27",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=400&fit=crop",
+      "alt": "Podcast recording setup with AI tools",
+      "position": "header"
     },
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=27-mid-1779932253213-198",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=27-mid-1779932253213-198",
-      "alt": "Best Free AI Audio Tools for Podcasters",
-      "caption": "Audio AI tools",
-      "position": "mid",
-      "prompt": "Best Free AI Audio Tools for Podcasters, Best Free AI Audio Tools for Podcasters AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 27",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&h=400&fit=crop",
+      "alt": "Audio waveform editing",
+      "position": "mid"
     },
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=27-cta-1779932253213-642",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=27-cta-1779932253213-642",
-      "alt": "Best Free AI Audio Tools for Podcasters",
-      "caption": "Audio AI tools",
-      "position": "cta",
-      "prompt": "Best Free AI Audio Tools for Podcasters, Best Free AI Audio Tools for Podcasters AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 27",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&h=400&fit=crop",
+      "alt": "Professional podcast studio",
+      "position": "cta"
     }
   ]
 }

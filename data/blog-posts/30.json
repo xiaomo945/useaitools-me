@@ -11,31 +11,19 @@
   "featured": true,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=30-header-1779932253222-398",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=30-header-1779932253222-398",
-      "alt": "How to Automate Content Creation with AI Tools",
-      "caption": "Writing AI tools",
-      "position": "header",
-      "prompt": "How to Automate Content Creation with AI Tools, How to Automate Content Creation with AI Tools AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 30",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&h=400&fit=crop",
+      "alt": "Content automation workflow with AI",
+      "position": "header"
     },
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=30-mid-1779932253222-659",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=30-mid-1779932253222-659",
-      "alt": "How to Automate Content Creation with AI Tools",
-      "caption": "Writing AI tools",
-      "position": "mid",
-      "prompt": "How to Automate Content Creation with AI Tools, How to Automate Content Creation with AI Tools AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 30",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=400&fit=crop",
+      "alt": "AI writing assistant interface",
+      "position": "mid"
     },
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=30-cta-1779932253222-531",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=30-cta-1779932253222-531",
-      "alt": "How to Automate Content Creation with AI Tools",
-      "caption": "Writing AI tools",
-      "position": "cta",
-      "prompt": "How to Automate Content Creation with AI Tools, How to Automate Content Creation with AI Tools AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 30",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=400&fit=crop",
+      "alt": "Content calendar planning",
+      "position": "cta"
     }
   ]
 }

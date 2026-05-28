@@ -11,31 +11,19 @@
   "featured": false,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=28-header-1779932253221-257",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=28-header-1779932253221-257",
-      "alt": "AI Coding Tools: How to Choose the Right One for Your Project",
-      "caption": "Code AI tools",
-      "position": "header",
-      "prompt": "AI Coding Tools How to Choose the Right One for Your Project, AI Coding Tools: How to Choose the Right One for Your Project AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 28",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop",
+      "alt": "AI coding tools workspace",
+      "position": "header"
     },
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=28-mid-1779932253221-703",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=28-mid-1779932253221-703",
-      "alt": "AI Coding Tools: How to Choose the Right One for Your Project",
-      "caption": "Code AI tools",
-      "position": "mid",
-      "prompt": "AI Coding Tools How to Choose the Right One for Your Project, AI Coding Tools: How to Choose the Right One for Your Project AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 28",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=400&fit=crop",
+      "alt": "Code editor with AI assistance",
+      "position": "mid"
     },
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=28-cta-1779932253221-224",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=28-cta-1779932253221-224",
-      "alt": "AI Coding Tools: How to Choose the Right One for Your Project",
-      "caption": "Code AI tools",
-      "position": "cta",
-      "prompt": "AI Coding Tools How to Choose the Right One for Your Project, AI Coding Tools: How to Choose the Right One for Your Project AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 28",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
+      "alt": "Programming workflow",
+      "position": "cta"
     }
   ]
 }

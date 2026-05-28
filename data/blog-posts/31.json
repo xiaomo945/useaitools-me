@@ -11,31 +11,19 @@
   "featured": true,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=31-header-1779932253218-222",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=31-header-1779932253218-222",
-      "alt": "AI Image Generators: Which One Actually Creates the Best Art?",
-      "caption": "Image AI tools",
-      "position": "header",
-      "prompt": "AI Image Generators Which One Actually Creates the Best Art, AI Image Generators: Which One Actually Creates the Best Art? AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 31",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=400&fit=crop",
+      "alt": "AI generated art comparison showcase",
+      "position": "header"
     },
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=31-mid-1779932253218-756",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=31-mid-1779932253218-756",
-      "alt": "AI Image Generators: Which One Actually Creates the Best Art?",
-      "caption": "Image AI tools",
-      "position": "mid",
-      "prompt": "AI Image Generators Which One Actually Creates the Best Art, AI Image Generators: Which One Actually Creates the Best Art? AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 31",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&h=400&fit=crop",
+      "alt": "Digital art gallery with various AI styles",
+      "position": "mid"
     },
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=31-cta-1779932253218-793",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=31-cta-1779932253218-793",
-      "alt": "AI Image Generators: Which One Actually Creates the Best Art?",
-      "caption": "Image AI tools",
-      "position": "cta",
-      "prompt": "AI Image Generators Which One Actually Creates the Best Art, AI Image Generators: Which One Actually Creates the Best Art? AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 31",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=800&h=400&fit=crop",
+      "alt": "Creative artist using AI image generator",
+      "position": "cta"
     }
   ]
 }

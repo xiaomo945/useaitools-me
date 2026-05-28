@@ -11,31 +11,19 @@
   "featured": true,
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=29-header-1779932253190-284",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=29-header-1779932253190-284",
-      "alt": "Best AI Tools for Small Business Owners in 2026",
-      "caption": "Writing AI tools",
-      "position": "header",
-      "prompt": "Best AI Tools for Small Business Owners in 2026, Best AI Tools for Small Business Owners in 2026 AI tool, clean tech illustration, emerald green accents, professional blog header image, 1200x630, unique article ID 29",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=400&fit=crop",
+      "alt": "Small business owner working with AI tools",
+      "position": "header"
     },
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=29-mid-1779932253190-908",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=29-mid-1779932253190-908",
-      "alt": "Best AI Tools for Small Business Owners in 2026",
-      "caption": "Writing AI tools",
-      "position": "mid",
-      "prompt": "Best AI Tools for Small Business Owners in 2026, Best AI Tools for Small Business Owners in 2026 AI tool, clean tech illustration, emerald green accents, professional blog mid image, 1200x630, unique article ID 29",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=400&fit=crop",
+      "alt": "Business growth dashboard",
+      "position": "mid"
     },
     {
-      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=29-cta-1779932253190-949",
-      "image_url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop&sig=29-cta-1779932253190-949",
-      "alt": "Best AI Tools for Small Business Owners in 2026",
-      "caption": "Writing AI tools",
-      "position": "cta",
-      "prompt": "Best AI Tools for Small Business Owners in 2026, Best AI Tools for Small Business Owners in 2026 AI tool, clean tech illustration, emerald green accents, professional blog cta image, 1200x630, unique article ID 29",
-      "generated": true
+      "url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=400&fit=crop",
+      "alt": "Small business success celebration",
+      "position": "cta"
     }
   ]
 }
