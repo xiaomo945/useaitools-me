@@ -10766,5 +10766,1637 @@
       "Multi-app",
       "Scheduling"
     ]
+  },
+  {
+    "id": 295,
+    "name": "CopyMonkey",
+    "description": "AI content generator that creates high-converting product descriptions, ad copy, and blog posts with A/B testing insights. Perfect for Amazon sellers and e-commerce brands.",
+    "description_en": "AI content generator that creates high-converting product descriptions, ad copy, and blog posts with A/B testing insights. Perfect for Amazon sellers and e-commerce brands.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://copymonkey.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Amazon Sellers",
+      "Product Descriptions",
+      "A/B Testing"
+    ]
+  },
+  {
+    "id": 296,
+    "name": "Nichesss",
+    "description": "AI writing tool specialized for niche markets and affiliate marketers. Generates product reviews, comparison articles, and SEO content for micro-niches.",
+    "description_en": "AI writing tool specialized for niche markets and affiliate marketers. Generates product reviews, comparison articles, and SEO content for micro-niches.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://nichesss.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 189,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.3,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.199999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.3999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Affiliate Marketing",
+      "Niche Content",
+      "Product Reviews"
+    ]
+  },
+  {
+    "id": 297,
+    "name": "ClosersCopy",
+    "description": "AI copywriting platform with proven sales frameworks and templates. Creates high-converting sales pages, emails, and marketing copy using psychological triggers.",
+    "description_en": "AI copywriting platform with proven sales frameworks and templates. Creates high-converting sales pages, emails, and marketing copy using psychological triggers.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://closerscopy.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 456,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Sales Copy",
+      "Marketing",
+      "Psychological Triggers"
+    ]
+  },
+  {
+    "id": 298,
+    "name": "Smartwriter",
+    "description": "AI outreach tool that writes personalized cold emails, LinkedIn messages, and sales copy. Uses prospect data to customize every message.",
+    "description_en": "AI outreach tool that writes personalized cold emails, LinkedIn messages, and sales copy. Uses prospect data to customize every message.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://smartwriter.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Cold Outreach",
+      "LinkedIn",
+      "Personalization"
+    ]
+  },
+  {
+    "id": 299,
+    "name": "Kopywriting Kourse AI",
+    "description": "AI writing assistant with proven copywriting frameworks and templates. Teaches you copywriting while generating high-converting content.",
+    "description_en": "AI writing assistant with proven copywriting frameworks and templates. Teaches you copywriting while generating high-converting content.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://kopywritingkourse.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4,
+    "rating_count": 234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.2,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.1,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.3,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Copywriting Learning",
+      "Templates",
+      "Frameworks"
+    ]
+  },
+  {
+    "id": 300,
+    "name": "Outwrite",
+    "description": "AI writing assistant that improves clarity, grammar, and tone for professional writing. Perfect for business emails, reports, and academic papers.",
+    "description_en": "AI writing assistant that improves clarity, grammar, and tone for professional writing. Perfect for business emails, reports, and academic papers.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://outwrite.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.3,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.199999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.3999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Professional Writing",
+      "Grammar",
+      "Clarity"
+    ]
+  },
+  {
+    "id": 301,
+    "name": "ProWritingAid",
+    "description": "AI writing coach that provides in-depth feedback on style, grammar, and readability. Integrates with all major writing platforms.",
+    "description_en": "AI writing coach that provides in-depth feedback on style, grammar, and readability. Integrates with all major writing platforms.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://prowritingaid.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Writing Coach",
+      "Style Improvement",
+      "Readability"
+    ]
+  },
+  {
+    "id": 302,
+    "name": "Hotpot AI",
+    "description": "AI design platform with tools for image generation, background removal, photo restoration, and design templates. Perfect for marketers and small businesses.",
+    "description_en": "AI design platform with tools for image generation, background removal, photo restoration, and design templates. Perfect for marketers and small businesses.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://hotpot.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Design Templates",
+      "Background Removal",
+      "Photo Restoration"
+    ]
+  },
+  {
+    "id": 303,
+    "name": "Stockimg AI",
+    "description": "AI image generator that creates high-quality stock photos, book covers, posters, and social media graphics. No design skills required.",
+    "description_en": "AI image generator that creates high-quality stock photos, book covers, posters, and social media graphics. No design skills required.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://stockimg.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 456,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.3,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.199999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.3999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Stock Photos",
+      "Book Covers",
+      "Social Graphics"
+    ]
+  },
+  {
+    "id": 304,
+    "name": "Designer Microsoft",
+    "description": "Microsoft's AI design tool that creates stunning visuals, social media posts, and presentations from text prompts. Integrates with Office 365.",
+    "description_en": "Microsoft's AI design tool that creates stunning visuals, social media posts, and presentations from text prompts. Integrates with Office 365.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://designer.microsoft.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 1234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Microsoft Integration",
+      "Presentations",
+      "Social Posts"
+    ]
+  },
+  {
+    "id": 305,
+    "name": "Bing Image Creator",
+    "description": "Microsoft's AI image generator powered by DALL-E. Creates high-quality images from text prompts directly in Bing chat.",
+    "description_en": "Microsoft's AI image generator powered by DALL-E. Creates high-quality images from text prompts directly in Bing chat.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://bing.com/create",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 2345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.8,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Free Access",
+      "Bing Integration",
+      "DALL-E Powered"
+    ]
+  },
+  {
+    "id": 306,
+    "name": "Imagine Art",
+    "description": "AI art generator with multiple styles and customization options. Create unique artwork for personal or commercial use with simple prompts.",
+    "description_en": "AI art generator with multiple styles and customization options. Create unique artwork for personal or commercial use with simple prompts.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://imagine.art",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4,
+    "rating_count": 345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.2,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.1,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.3,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Multiple Styles",
+      "Customization",
+      "Commercial Use"
+    ]
+  },
+  {
+    "id": 307,
+    "name": "CF Spark",
+    "description": "AI art platform with multiple creative tools including image generation, pattern maker, and writing assistant. Made for crafters and creators.",
+    "description_en": "AI art platform with multiple creative tools including image generation, pattern maker, and writing assistant. Made for crafters and creators.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://creativefabrica.com/spark",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 456,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.3,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.199999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.3999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Crafters",
+      "Patterns",
+      "Creative Tools"
+    ]
+  },
+  {
+    "id": 308,
+    "name": "Zmo AI",
+    "description": "AI fashion image generator that creates models wearing your clothes. Perfect for e-commerce brands and fashion designers.",
+    "description_en": "AI fashion image generator that creates models wearing your clothes. Perfect for e-commerce brands and fashion designers.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://zmo.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Fashion",
+      "E-commerce",
+      "Virtual Models"
+    ]
+  },
+  {
+    "id": 309,
+    "name": "Synthesia Studio",
+    "description": "AI video platform with realistic avatars, text-to-video, and multi-language support. Create professional videos in minutes without filming.",
+    "description_en": "AI video platform with realistic avatars, text-to-video, and multi-language support. Create professional videos in minutes without filming.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://synthesia.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 1890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Professional Videos",
+      "Avatars",
+      "Multi-language"
+    ]
+  },
+  {
+    "id": 310,
+    "name": "D-ID Studio",
+    "description": "AI video creation platform that animates photos, creates talking avatars, and generates videos from text. Perfect for training and marketing.",
+    "description_en": "AI video creation platform that animates photos, creates talking avatars, and generates videos from text. Perfect for training and marketing.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://d-id.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 1234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Talking Avatars",
+      "Photo Animation",
+      "Training Videos"
+    ]
+  },
+  {
+    "id": 311,
+    "name": "Colossyan Creator",
+    "description": "AI video platform with AI presenters, screen recording, and multi-language support. Create corporate training videos and product demos.",
+    "description_en": "AI video platform with AI presenters, screen recording, and multi-language support. Create corporate training videos and product demos.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://colossyan.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 456,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Corporate Training",
+      "Product Demos",
+      "AI Presenters"
+    ]
+  },
+  {
+    "id": 312,
+    "name": "InVideo Studio",
+    "description": "AI video editor with templates, stock media, and text-to-video features. Create marketing videos, social content, and ads in minutes.",
+    "description_en": "AI video editor with templates, stock media, and text-to-video features. Create marketing videos, social content, and ads in minutes.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://invideo.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Templates",
+      "Stock Media",
+      "Marketing Videos"
+    ]
+  },
+  {
+    "id": 313,
+    "name": "FlexClip AI",
+    "description": "Easy-to-use AI video maker with templates, AI voiceover, and auto-subtitles. Create social videos, explainers, and presentations quickly.",
+    "description_en": "Easy-to-use AI video maker with templates, AI voiceover, and auto-subtitles. Create social videos, explainers, and presentations quickly.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://flexclip.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.3,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.199999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.3999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Easy to Use",
+      "Templates",
+      "AI Voiceover"
+    ]
+  },
+  {
+    "id": 314,
+    "name": "Promo AI",
+    "description": "AI video ad creator that generates high-converting ads from product images and URLs. Perfect for e-commerce and social media advertising.",
+    "description_en": "AI video ad creator that generates high-converting ads from product images and URLs. Perfect for e-commerce and social media advertising.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://promo.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video Ads",
+      "E-commerce",
+      "Social Advertising"
+    ]
+  },
+  {
+    "id": 315,
+    "name": "Speechmatics",
+    "description": "AI speech recognition and transcription platform with 50+ languages. Highly accurate transcription for meetings, calls, and content.",
+    "description_en": "AI speech recognition and transcription platform with 50+ languages. Highly accurate transcription for meetings, calls, and content.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://speechmatics.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Transcription",
+      "50+ Languages",
+      "High Accuracy"
+    ]
+  },
+  {
+    "id": 316,
+    "name": "Otter.ai Business",
+    "description": "AI meeting assistant that records, transcribes, and summarizes meetings with speaker identification. Integrates with Zoom, Teams, and Google Meet.",
+    "description_en": "AI meeting assistant that records, transcribes, and summarizes meetings with speaker identification. Integrates with Zoom, Teams, and Google Meet.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://otter.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 2345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Meeting Assistant",
+      "Speaker ID",
+      "Zoom Integration"
+    ]
+  },
+  {
+    "id": 317,
+    "name": "Fireflies.ai",
+    "description": "AI meeting notetaker that joins your calls, records, transcribes, and generates searchable notes with action items. Perfect for teams.",
+    "description_en": "AI meeting notetaker that joins your calls, records, transcribes, and generates searchable notes with action items. Perfect for teams.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://fireflies.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 1567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.6000000000000005,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.5,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.7,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Meeting Notes",
+      "Action Items",
+      "Team Collaboration"
+    ]
+  },
+  {
+    "id": 318,
+    "name": "Descript Storyboard",
+    "description": "AI video and audio editor that works like a doc. Edit transcripts, remove filler words, and create polished content with AI tools.",
+    "description_en": "AI video and audio editor that works like a doc. Edit transcripts, remove filler words, and create polished content with AI tools.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://descript.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 1890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Podcast Editing",
+      "Transcript Editing",
+      "AI Tools"
+    ]
+  },
+  {
+    "id": 319,
+    "name": "Adobe Audition AI",
+    "description": "Professional audio editing software with AI features for noise reduction, audio restoration, and sound design. Industry standard for audio production.",
+    "description_en": "Professional audio editing software with AI features for noise reduction, audio restoration, and sound design. Industry standard for audio production.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://adobe.com/products/audition",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 3456,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.8,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 3.5,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.699999999999999,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8999999999999995,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Professional Audio",
+      "Sound Design",
+      "Audio Restoration"
+    ]
+  },
+  {
+    "id": 320,
+    "name": "iZotope RX",
+    "description": "AI-powered audio restoration and repair tool. Removes noise, clicks, hum, and other imperfections from audio recordings professionally.",
+    "description_en": "AI-powered audio restoration and repair tool. Removes noise, clicks, hum, and other imperfections from audio recordings professionally.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://izotope.com/en/products/rx.html",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 1234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 3.5,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Audio Restoration",
+      "Noise Removal",
+      "Professional"
+    ]
+  },
+  {
+    "id": 321,
+    "name": "Boomy",
+    "description": "AI music generator that lets you create original songs in seconds. Customize genres, instruments, and vocals for unique tracks.",
+    "description_en": "AI music generator that lets you create original songs in seconds. Customize genres, instruments, and vocals for unique tracks.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://boomy.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 890,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Music Creation",
+      "Custom Tracks",
+      "Beginner Friendly"
+    ]
+  },
+  {
+    "id": 322,
+    "name": "Sourcery",
+    "description": "AI coding assistant that automatically refactors and improves your code. Catches bugs, improves readability, and follows best practices.",
+    "description_en": "AI coding assistant that automatically refactors and improves your code. Catches bugs, improves readability, and follows best practices.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://sourcery.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 456,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Code Refactoring",
+      "Best Practices",
+      "Bug Detection"
+    ]
+  },
+  {
+    "id": 323,
+    "name": "Mutable AI",
+    "description": "AI pair programmer that helps you write, test, and refactor code faster. Features autocomplete, code generation, and test creation.",
+    "description_en": "AI pair programmer that helps you write, test, and refactor code faster. Features autocomplete, code generation, and test creation.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://mutable.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 345,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.4,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.5,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Pair Programming",
+      "Test Creation",
+      "Code Generation"
+    ]
+  },
+  {
+    "id": 324,
+    "name": "Motion AI",
+    "description": "AI productivity app that automatically schedules your tasks, meetings, and focus time. Optimizes your calendar for maximum productivity.",
+    "description_en": "AI productivity app that automatically schedules your tasks, meetings, and focus time. Optimizes your calendar for maximum productivity.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://usemotion.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 1234,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Calendar Optimization",
+      "Task Scheduling",
+      "Focus Time"
+    ]
+  },
+  {
+    "id": 325,
+    "name": "Glean AI",
+    "description": "AI enterprise search that finds information across all your company's tools. Connects emails, docs, chat, and more for unified search.",
+    "description_en": "AI enterprise search that finds information across all your company's tools. Connects emails, docs, chat, and more for unified search.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://glean.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 567,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.7,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4,
+        "max": 5
+      },
+      "value": {
+        "score": 3.5,
+        "max": 5
+      },
+      "features": {
+        "score": 4.6,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.8,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Enterprise Search",
+      "Unified Search",
+      "Knowledge Management"
+    ]
+  },
+  {
+    "id": 326,
+    "name": "Elephas AI",
+    "description": "AI writing assistant for Mac, iPhone, and iPad that works across all your apps. Write better emails, docs, and messages anywhere.",
+    "description_en": "AI writing assistant for Mac, iPhone, and iPad that works across all your apps. Write better emails, docs, and messages anywhere.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://elephas.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 456,
+    "rating_breakdown": {
+      "quality": {
+        "score": 4.5,
+        "max": 5
+      },
+      "ease_of_use": {
+        "score": 4.5,
+        "max": 5
+      },
+      "value": {
+        "score": 4.2,
+        "max": 5
+      },
+      "features": {
+        "score": 4.3999999999999995,
+        "max": 5
+      },
+      "support": {
+        "score": 4,
+        "max": 5
+      },
+      "reliability": {
+        "score": 4.6,
+        "max": 5
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Apple Ecosystem",
+      "Cross-app",
+      "Writing Assistant"
+    ]
   }
 ]
