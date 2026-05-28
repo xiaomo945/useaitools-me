@@ -56,7 +56,7 @@ export default function SavedPage() {
   const [exportSuccess, setExportSuccess] = useState(false);
   
   // Get saved tools
-  const savedTools = tools.filter((tool) => savedIds.includes(Number(tool.id)));
+  const savedTools = tools.filter((tool) => savedIds.includes(tool.id));
   
   // Handle export
   const handleExport = () => {
@@ -313,7 +313,7 @@ export default function SavedPage() {
                           Visit Website
                         </a>
                         <button
-                          onClick={() => toggleSave(Number(tool.id))}
+                          onClick={() => toggleSave(tool.id)}
                           className={`inline-flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300 ease-out ${
                             isSaved
                               ? 'bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300 hover:bg-rose-200 dark:hover:bg-rose-500/30'

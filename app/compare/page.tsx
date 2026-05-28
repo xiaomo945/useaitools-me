@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import tools from '@/data/tools.json';
-import { Home, Share2, Check, Copy, Sparkles } from 'lucide-react';
+import { Home, Share2, Check, Copy } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import StarRating from '@/app/components/StarRating';
 
@@ -45,6 +45,7 @@ const getPricingColors = (pricing: string) => {
   }
 };
 
+// 模拟用户评价数据
 const getMockReview = (toolName: string) => {
   const reviews = [
     `Excellent tool! ${toolName} has completely transformed my workflow. Highly recommend!`,
@@ -54,42 +55,6 @@ const getMockReview = (toolName: string) => {
     `Game changer! ${toolName} saves me hours every week.`,
   ];
   return reviews[Math.floor(Math.random() * reviews.length)];
-};
-
-const getBestForTags = (tool: Tool) => {
-  return tool.best_for || ['Beginners', 'Professionals'];
-};
-
-const generateAIRecommendation = (selectedTools: Tool[]) => {
-  if (selectedTools.length === 0) return null;
-  
-  if (selectedTools.length === 1) {
-    return `${selectedTools[0].name} is a great choice for ${getBestForTags(selectedTools[0]).join(', ')}.`;
-  }
-  
-  const recommendations: string[] = [];
-  
-  const cheapestTool = selectedTools.reduce((a, b) => 
-    (a.pricing === 'Free' || a.pricing === 'Freemium') ? a : 
-    (b.pricing === 'Free' || b.pricing === 'Freemium') ? b : a
-  );
-  
-  recommendations.push(`For budget-conscious users, ${cheapestTool.name} offers the best value.`);
-  
-  const highestRatedTool = selectedTools.reduce((a, b) => 
-    (a.rating || 0) > (b.rating || 0) ? a : b
-  );
-  
-  if (highestRatedTool.rating && highestRatedTool.rating >= 4.5) {
-    recommendations.push(`${highestRatedTool.name} has the highest user ratings (${highestRatedTool.rating}/5).`);
-  }
-  
-  const beginnerFriendly = selectedTools.filter(t => t.skill_level === 'beginner');
-  if (beginnerFriendly.length > 0) {
-    recommendations.push(`${beginnerFriendly.map(t => t.name).join(' and ')} ${beginnerFriendly.length > 1 ? 'are' : 'is'} perfect for beginners.`);
-  }
-  
-  return recommendations.slice(0, 2).join(' ');
 };
 
 export default function ComparePage() {
@@ -160,64 +125,6 @@ export default function ComparePage() {
           </div>
         </div>
 
-        <div className="mb-10">
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
-            🔥 Popular Comparisons
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { name: 'Rytr vs Jasper', tools: ['Rytr', 'Jasper'], category: 'Writing', description: 'AI Writing Assistants' },
-              { name: 'Midjourney vs DALL-E 3', tools: ['Midjourney', 'DALL-E 3'], category: 'Image', description: 'AI Image Generators' },
-              { name: 'ChatGPT vs Claude', tools: ['Claude', 'ChatGPT'], category: 'Writing', description: 'AI Chatbots' },
-              { name: 'Veed vs Descript', tools: ['VEED.io', 'Descript'], category: 'Video', description: 'Video Editors' },
-            ].map((comparison) => {
-              const toolIds = comparison.tools.map(name => {
-                const tool = tools.find(t => t.name.toLowerCase() === name.toLowerCase() || t.name.toLowerCase().includes(name.toLowerCase()));
-                return tool?.id;
-              }).filter(Boolean) as number[];
-              
-              const getCategoryColorsFn = (cat: string) => {
-                switch (cat) {
-                  case 'Writing': return 'bg-blue-500';
-                  case 'Image': return 'bg-violet-500';
-                  case 'Video': return 'bg-indigo-500';
-                  default: return 'bg-slate-500';
-                }
-              };
-              
-              return (
-                <button
-                  key={comparison.name}
-                  onClick={() => {
-                    setTool1Id(String(toolIds[0] || ''));
-                    setTool2Id(String(toolIds[1] || ''));
-                    setTool3Id('');
-                  }}
-                  className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 text-left hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out"
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className={`inline-flex px-2.5 py-1 rounded-full text-xs font-semibold ${getCategoryColorsFn(comparison.category)} text-white`}>
-                      {comparison.category}
-                    </span>
-                    <span className="text-xs text-slate-500 dark:text-slate-400">
-                      {comparison.description}
-                    </span>
-                  </div>
-                  <h3 className="font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                    {comparison.name}
-                  </h3>
-                  <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                    <span>Compare now</span>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
         <div className="mb-10 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 sm:p-12 shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -236,7 +143,7 @@ export default function ComparePage() {
                 >
                   <option value="">Select a tool...</option>
                   {tools.filter(t => !otherIds.includes(String(t.id))).map(tool => (
-                    <option key={tool.id} value={tool.id ?? ''}>{tool.name}</option>
+                    <option key={tool.id} value={tool.id}>{tool.name}</option>
                   ))}
                 </select>
               </div>
@@ -245,158 +152,139 @@ export default function ComparePage() {
         </div>
 
         {selectedTools.length > 0 && (
-          <>
-            <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 border border-emerald-200 dark:border-emerald-800 rounded-3xl p-8 mb-8">
-              <div className="flex items-center gap-3 mb-4">
-                <Sparkles className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white">AI Recommendation</h3>
-              </div>
-              <p className="text-slate-700 dark:text-gray-300 text-lg">
-                {generateAIRecommendation(selectedTools)}
-              </p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-xl overflow-x-auto">
-              <table className="w-full min-w-[800px]">
-                <thead className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30">
-                  <tr>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-slate-900 dark:text-white w-1/5">
-                      Feature
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-xl overflow-x-auto">
+            <table className="w-full min-w-[800px]">
+              <thead className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30">
+                <tr>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-slate-900 dark:text-white w-1/5">
+                    Feature
+                  </th>
+                  {selectedTools.map((tool, idx) => (
+                    <th key={idx} className="px-6 py-4 text-center text-sm font-semibold text-slate-900 dark:text-white">
+                      <div className="flex flex-col items-center gap-2">
+                        <div className={`w-10 h-10 rounded-xl ${getCategoryColors(tool.category).bg}/10 flex items-center justify-center text-xl font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                          {tool.name.charAt(0)}
+                        </div>
+                        <span>{tool.name}</span>
+                      </div>
                     </th>
-                    {selectedTools.map((tool, idx) => (
-                      <th key={idx} className="px-6 py-4 text-center text-sm font-semibold text-slate-900 dark:text-white">
-                        <div className="flex flex-col items-center gap-2">
-                          <div className={`w-10 h-10 rounded-xl ${getCategoryColors(tool.category).bg}/10 flex items-center justify-center text-xl font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
-                            {tool.name.charAt(0)}
-                          </div>
-                          <span>{tool.name}</span>
-                          <div className="flex flex-wrap justify-center gap-1 mt-2">
-                            {getBestForTags(tool).slice(0, 3).map((tag, i) => (
-                              <span key={i} className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-200 dark:divide-gray-800">
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Category</td>
-                    {selectedTools.map((tool, idx) => (
-                      <td key={idx} className="px-6 py-4 text-center">
-                        <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold ${getCategoryColors(tool.category).bg} text-white`}>
-                          {tool.category}
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200 dark:divide-gray-800">
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Category</td>
+                  {selectedTools.map((tool, idx) => (
+                    <td key={idx} className="px-6 py-4 text-center">
+                      <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold ${getCategoryColors(tool.category).bg} text-white`}>
+                        {tool.category}
+                      </span>
+                    </td>
+                  ))}
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Rating</td>
+                  {selectedTools.map((tool, idx) => (
+                    <td key={idx} className="px-6 py-4 text-center">
+                      <div className="flex items-center justify-center gap-2">
+                        <StarRating rating={tool.rating || 4.0} size="sm" />
+                        <span className="text-sm text-slate-600 dark:text-gray-400">
+                          ({tool.rating_count || 0} reviews)
                         </span>
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Rating</td>
-                    {selectedTools.map((tool, idx) => (
-                      <td key={idx} className="px-6 py-4 text-center">
-                        <div className="flex items-center justify-center gap-2">
-                          <StarRating rating={tool.rating || 4.0} size="sm" />
-                          <span className="text-sm text-slate-600 dark:text-gray-400">
-                            ({tool.rating_count || 0} reviews)
-                          </span>
-                        </div>
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Description</td>
-                    {selectedTools.map((tool, idx) => (
-                      <td key={idx} className="px-6 py-4 text-sm text-slate-600 dark:text-gray-400">
-                        {tool.description}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Pricing</td>
-                    {selectedTools.map((tool, idx) => (
-                      <td key={idx} className="px-6 py-4 text-center">
-                        <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold ${getPricingColors(tool.pricing).bg} ${getPricingColors(tool.pricing).text}`}>
-                          {tool.pricing}
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Description</td>
+                  {selectedTools.map((tool, idx) => (
+                    <td key={idx} className="px-6 py-4 text-sm text-slate-600 dark:text-gray-400">
+                      {tool.description}
+                    </td>
+                  ))}
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Pricing</td>
+                  {selectedTools.map((tool, idx) => (
+                    <td key={idx} className="px-6 py-4 text-center">
+                      <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold ${getPricingColors(tool.pricing).bg} ${getPricingColors(tool.pricing).text}`}>
+                        {tool.pricing}
+                      </span>
+                    </td>
+                  ))}
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">VPN Required</td>
+                  {selectedTools.map((tool, idx) => (
+                    <td key={idx} className="px-6 py-4 text-center">
+                      {tool.needs_vpn ? (
+                        <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-orange-100 dark:bg-orange-500/20 text-orange-700 dark:text-orange-300">
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          </svg>
+                          Yes
                         </span>
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">VPN Required</td>
-                    {selectedTools.map((tool, idx) => (
-                      <td key={idx} className="px-6 py-4 text-center">
-                        {tool.needs_vpn ? (
-                          <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-orange-100 dark:bg-orange-500/20 text-orange-700 dark:text-orange-300">
-                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                            Yes
-                          </span>
-                        ) : (
-                          <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
-                            <Check className="w-3 h-3" />
-                            No
-                          </span>
-                        )}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">User Review</td>
-                    {selectedTools.map((tool, idx) => (
-                      <td key={idx} className="px-6 py-4 text-sm text-slate-600 dark:text-gray-400">
-                        "{getMockReview(tool.name)}"
-                      </td>
-                    ))}
-                  </tr>
-                </tbody>
-              </table>
-
-              <div className="bg-slate-50 dark:bg-gray-900/50 border-t border-slate-200 dark:border-gray-800 p-8">
-                <div className="grid grid-cols-1 gap-6">
-                  <div className="flex flex-wrap justify-center gap-4">
-                    {selectedTools.map((tool, idx) => (
-                      <a
-                        key={idx}
-                        href={tool.affiliate_link || tool.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
-                      >
-                        Visit {tool.name}
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 7H8.5M17 7v8.5" />
-                        </svg>
-                      </a>
-                    ))}
-                  </div>
-
-                  <div className="flex justify-center mt-4">
-                    <button
-                      onClick={handleShare}
-                      className="inline-flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
-                    >
-                      {copied ? (
-                        <>
-                          <Check className="w-5 h-5" />
-                          Link copied!
-                        </>
                       ) : (
-                        <>
-                          <Share2 className="w-5 h-5" />
-                          Share Comparison
-                        </>
+                        <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                          <Check className="w-3 h-3" />
+                          No
+                        </span>
                       )}
-                    </button>
-                  </div>
+                    </td>
+                  ))}
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">User Review</td>
+                  {selectedTools.map((tool, idx) => (
+                    <td key={idx} className="px-6 py-4 text-sm text-slate-600 dark:text-gray-400">
+                      "{getMockReview(tool.name)}"
+                    </td>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+
+            <div className="bg-slate-50 dark:bg-gray-900/50 border-t border-slate-200 dark:border-gray-800 p-8">
+              <div className="grid grid-cols-1 gap-6">
+                <div className="flex flex-wrap justify-center gap-4">
+                  {selectedTools.map((tool, idx) => (
+                    <a
+                      key={idx}
+                      href={tool.affiliate_link || tool.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
+                    >
+                      Visit {tool.name}
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 7H8.5M17 7v8.5" />
+                      </svg>
+                    </a>
+                  ))}
+                </div>
+
+                <div className="flex justify-center mt-4">
+                  <button
+                    onClick={handleShare}
+                    className="inline-flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
+                  >
+                    {copied ? (
+                      <>
+                        <Check className="w-5 h-5" />
+                        Link copied!
+                      </>
+                    ) : (
+                      <>
+                        <Share2 className="w-5 h-5" />
+                        Share Comparison
+                      </>
+                    )}
+                  </button>
                 </div>
               </div>
             </div>
-          </>
+          </div>
         )}
       </div>
       <Footer />

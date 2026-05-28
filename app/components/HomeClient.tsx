@@ -4,7 +4,6 @@ import React, { useState, useMemo, useRef, useEffect, memo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import StarRating from './StarRating';
-import { Dice3, X, ArrowRight, RefreshCw } from 'lucide-react';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -285,13 +284,6 @@ const hasAffiliateLink = (tool: Tool): boolean => {
     shortEnvVarName = 'AFFILIATE_PICTORY';
   }
   const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  const baseLink = envLink || tool.affiliate_link;
-  
-  // Skip if it's a placeholder
-  if (baseLink && (baseLink.includes('{{') || baseLink.includes('AFFILIATE_'))) {
-    return false;
-  }
-  
   return !!(envLink || tool.affiliate_link);
 };
 
@@ -312,11 +304,6 @@ const getAffiliateLink = (tool: Tool): string => {
   const baseLink = envLink || tool.affiliate_link;
   
   if (!baseLink) return '';
-  
-  // Skip if it's a placeholder (starts with {{
-  if (baseLink.includes('{{') || baseLink.includes('AFFILIATE_')) {
-    return '';
-  }
   
   // Add UTM parameters for tracking
   const url = new URL(baseLink);
@@ -356,12 +343,7 @@ interface HomeClientProps {
 export default function HomeClient({ initialTools, featuredTools, blogPosts }: HomeClientProps) {
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
-  const [selectedPricing, setSelectedPricing] = useState<string>('All');
-  const [selectedSkillLevels, setSelectedSkillLevels] = useState<string[]>([]);
-  const [selectedBestFor, setSelectedBestFor] = useState<string[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const [showRandomTool, setShowRandomTool] = useState(false);
-  const [randomTool, setRandomTool] = useState<Tool | null>(null);
   const router = useRouter();
   const toolsGridRef = useRef<HTMLDivElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -372,22 +354,6 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
   const [ctaVariant, setCtaVariant] = useState<keyof typeof ctaVariants>('A');
   const heartBurstRefs = useRef<{ [key: number]: HTMLSpanElement | null }>({});
   const categoryButtonsRef = useRef<(HTMLButtonElement | null)[]>([]);
-  
-  // 获取随机工具
-  const getRandomTool = () => {
-    const randomIndex = Math.floor(Math.random() * initialTools.length);
-    setRandomTool(initialTools[randomIndex]);
-    setShowRandomTool(true);
-  };
-  
-  // 切换另一个随机工具
-  const tryAnotherTool = () => {
-    let newIndex;
-    do {
-      newIndex = Math.floor(Math.random() * initialTools.length);
-    } while (randomTool && initialTools[newIndex].id === randomTool.id && initialTools.length > 1);
-    setRandomTool(initialTools[newIndex]);
-  };
   
   // Load localStorage data after mount (SSR-safe)
   useEffect(() => {
@@ -578,19 +544,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
         tool.name.toLowerCase().includes(search.toLowerCase()) || 
         tool.description.toLowerCase().includes(search.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
-      
-      // Pricing filter
-      const matchesPricing = selectedPricing === 'All' || tool.pricing === selectedPricing;
-      
-      // Skill Level filter (multi-select)
-      const matchesSkillLevel = selectedSkillLevels.length === 0 || 
-        (tool.skill_level && selectedSkillLevels.includes(tool.skill_level));
-      
-      // Best For filter (multi-select)
-      const matchesBestFor = selectedBestFor.length === 0 || 
-        (tool.best_for && tool.best_for.some(tag => selectedBestFor.includes(tag)));
-      
-      return matchesSearch && matchesCategory && matchesPricing && matchesSkillLevel && matchesBestFor;
+      return matchesSearch && matchesCategory;
     });
     
     // 智能排序：Staff Pick(联盟) > 海外工具(needs_vpn) > 按名称字母排序
@@ -609,7 +563,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
       // 3. 按名称字母排序
       return a.name.localeCompare(b.name);
     });
-  }, [search, selectedCategory, selectedPricing, selectedSkillLevels, selectedBestFor, initialTools]);
+  }, [search, selectedCategory, initialTools]);
 
   const getCategoryColors = (category: string) => {
     switch (category) {
@@ -977,148 +931,13 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
               })}
             </div>
           </div>
-
-          {/* Advanced Filters */}
-          <div className="mt-4 space-y-3">
-            {/* Pricing Filter - Dropdown */}
-            <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide px-2 sm:px-0">
-              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 whitespace-nowrap">Pricing:</span>
-              <select
-                value={selectedPricing}
-                onChange={(e) => setSelectedPricing(e.target.value)}
-                className="px-3 py-2 rounded-full text-xs font-semibold bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all duration-300 min-h-[36px] whitespace-nowrap cursor-pointer hover:border-emerald-300 dark:hover:border-emerald-600"
-              >
-                <option value="All">All</option>
-                <option value="Free">Free</option>
-                <option value="Freemium">Freemium</option>
-                <option value="Free Trial">Free Trial</option>
-                <option value="Paid">Paid</option>
-                <option value="Open Source">Open Source</option>
-              </select>
-            </div>
-
-            {/* Skill Level Filter - Button Group */}
-            <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide px-2 sm:px-0">
-              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 whitespace-nowrap">Skill:</span>
-              <div className="flex gap-1.5">
-                {['beginner', 'intermediate', 'advanced'].map((level) => {
-                  const isActive = selectedSkillLevels.includes(level);
-                  const labels: Record<string, string> = {
-                    beginner: '🌱 Beginner',
-                    intermediate: '🔥 Intermediate',
-                    advanced: '⚡ Advanced'
-                  };
-                  return (
-                    <button
-                      key={level}
-                      onClick={() => {
-                        setSelectedSkillLevels(prev => 
-                          prev.includes(level) 
-                            ? prev.filter(l => l !== level)
-                            : [...prev, level]
-                        );
-                      }}
-                      className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 ease-out min-h-[36px] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none ${
-                        isActive
-                          ? 'bg-emerald-600 text-white shadow-md shadow-emerald-500/25'
-                          : 'bg-gray-100 dark:bg-gray-800 text-slate-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                      }`}
-                    >
-                      {labels[level]}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Best For Filter - Quick Select */}
-            <div className="flex items-center gap-3 overflow-x-auto scrollbar-hide px-2 sm:px-0">
-              <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 whitespace-nowrap">Best For:</span>
-              <div className="flex gap-1.5">
-                {['Students', 'Marketers', 'Developers', 'Content Creators', 'Small Business'].map((tag) => {
-                  const isActive = selectedBestFor.includes(tag);
-                  return (
-                    <button
-                      key={tag}
-                      onClick={() => {
-                        setSelectedBestFor(prev => 
-                          prev.includes(tag) 
-                            ? prev.filter(t => t !== tag)
-                            : [...prev, tag]
-                        );
-                      }}
-                      className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 ease-out min-h-[36px] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none ${
-                        isActive
-                          ? 'bg-emerald-600 text-white shadow-md shadow-emerald-500/25'
-                          : 'bg-gray-100 dark:bg-gray-800 text-slate-700 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                      }`}
-                    >
-                      {tag}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Active Filters Display */}
-            {(selectedPricing !== 'All' || selectedSkillLevels.length > 0 || selectedBestFor.length > 0) && (
-              <div className="flex items-center gap-2 flex-wrap px-2 sm:px-0">
-                <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">Active:</span>
-                {selectedPricing !== 'All' && (
-                  <button
-                    onClick={() => setSelectedPricing('All')}
-                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-200 dark:hover:bg-emerald-500/30 transition-colors"
-                  >
-                    {selectedPricing}
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                )}
-                {selectedSkillLevels.map(level => (
-                  <button
-                    key={level}
-                    onClick={() => setSelectedSkillLevels(prev => prev.filter(l => l !== level))}
-                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-500/30 transition-colors"
-                  >
-                    {level}
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                ))}
-                {selectedBestFor.map(tag => (
-                  <button
-                    key={tag}
-                    onClick={() => setSelectedBestFor(prev => prev.filter(t => t !== tag))}
-                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-500/30 transition-colors"
-                  >
-                    {tag}
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                ))}
-                <button
-                  onClick={() => {
-                    setSelectedPricing('All');
-                    setSelectedSkillLevels([]);
-                    setSelectedBestFor([]);
-                  }}
-                  className="px-2.5 py-1 rounded-full text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-rose-500 dark:hover:text-rose-400 transition-colors"
-                >
-                  Clear All
-                </button>
-              </div>
-            )}
-          </div>
           
           {/* Search Result Count */}
           <div className="text-center mb-8">
             <p className={`text-base sm:text-lg font-semibold text-slate-600 dark:text-slate-300 ${
-              search.trim() || selectedCategory !== 'All' || selectedPricing !== 'All' || selectedSkillLevels.length > 0 || selectedBestFor.length > 0 ? 'animate-pulse' : ''
+              search.trim() || selectedCategory !== 'All' ? 'animate-pulse' : ''
             }`}>
-              {search.trim() || selectedCategory !== 'All' || selectedPricing !== 'All' || selectedSkillLevels.length > 0 || selectedBestFor.length > 0 ? (
+              {search.trim() || selectedCategory !== 'All' ? (
                 filteredTools.length === 0 ? (
                   <span className="text-rose-500 dark:text-rose-400">No tools found</span>
                 ) : (
@@ -1214,155 +1033,6 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
             </div>
           </div>
         </div>
-
-        {/* Latest Articles */}
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
-              📝 Latest Articles
-            </h2>
-            <p className="text-slate-600 dark:text-gray-400">
-              Latest insights, guides, and comparisons about AI tools
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[...blogPosts]
-              .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-              .slice(0, 5)
-              .map((post, i) => (
-                <Link
-                  key={post.id}
-                  href={`/blog/${post.slug}`}
-                  className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 hover:border-emerald-300 dark:hover:border-emerald-500/30 transition-all duration-300"
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="px-2 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
-                      {post.category}
-                    </span>
-                    <span className="text-xs text-slate-500 dark:text-gray-400">
-                      {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-                    </span>
-                  </div>
-                  <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-sm text-slate-600 dark:text-gray-300 line-clamp-3 leading-relaxed">
-                    {post.description}
-                  </p>
-                  <div className="mt-4 flex items-center text-emerald-600 dark:text-emerald-400 font-semibold text-sm">
-                    Read Article
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </Link>
-              ))}
-          </div>
-          
-          <div className="text-center mt-8">
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-emerald-600 dark:border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all duration-300"
-            >
-              View All Articles
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-
-        {/* Random AI Tool Explorer */}
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
-              🎲 Discover Random AI Tool
-            </h2>
-            <p className="text-slate-600 dark:text-gray-400">
-              Feeling adventurous? Let us surprise you with a random AI tool!
-            </p>
-          </div>
-          
-          <div className="flex justify-center">
-            <button
-              onClick={getRandomTool}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-2xl shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/35 hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300"
-            >
-              <Dice3 className="w-6 h-6" />
-              Roll the Dice
-            </button>
-          </div>
-        </div>
-
-        {/* Random Tool Modal */}
-        {showRandomTool && randomTool && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-            <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden animate-in fade-in zoom-in duration-200">
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-3">
-                    <div className={`w-12 h-12 rounded-xl ${getCategoryColors(randomTool.category).bg}/10 flex items-center justify-center text-2xl font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
-                      {randomTool.name.charAt(0)}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-slate-900 dark:text-white">{randomTool.name}</h3>
-                      <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold ${getCategoryColors(randomTool.category).bg} text-white`}>
-                        {randomTool.category}
-                      </span>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => setShowRandomTool(false)}
-                    className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                  >
-                    <X className="w-5 h-5 text-slate-500" />
-                  </button>
-                </div>
-                
-                <p className="text-slate-600 dark:text-gray-300 mb-4 leading-relaxed">
-                  {randomTool.description}
-                </p>
-                
-                <div className="flex items-center gap-4 mb-6">
-                  <StarRating rating={randomTool.rating || 4.0} size="sm" />
-                  {randomTool.rating_count && (
-                    <span className="text-sm text-slate-500 dark:text-slate-400">
-                      ({randomTool.rating_count} reviews)
-                    </span>
-                  )}
-                </div>
-                
-                {/* Best For Tags */}
-                {randomTool.best_for && randomTool.best_for.length > 0 && (
-                  <div className="mb-6">
-                    <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-2">Best For:</p>
-                    <div className="flex flex-wrap gap-2">
-                      {randomTool.best_for.map((tag: string, i: number) => (
-                        <span key={i} className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                
-                <div className="flex gap-3">
-                  <button
-                    onClick={tryAnotherTool}
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-purple-400 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300"
-                  >
-                    <RefreshCw className="w-4 h-4" />
-                    Try Another
-                  </button>
-                  <Link
-                    href={`/tools/${randomTool.id}`}
-                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5 transition-all duration-300"
-                  >
-                    View Details
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
 
         {/* Recent Blog Posts */}
         <div className="mb-16">
@@ -1804,126 +1474,42 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts }: H
 
         {/* Empty State */}
         {filteredTools.length === 0 && (
-          <div className="text-center py-16">
-            {/* Empty illustration */}
-            <div className="mx-auto w-24 h-24 mb-6 bg-slate-100 dark:bg-gray-800 rounded-full flex items-center justify-center">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-12 h-12 text-slate-400 dark:text-slate-500" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <div className="text-center py-20">
+            <div className="mx-auto w-20 h-20 mb-6 text-slate-300 dark:text-slate-600">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full" aria-hidden="true">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13.5 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M15 9l-6 6"
+                />
               </svg>
             </div>
-            
-            {/* Friendly message */}
-            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
-              No tools match your filters
-            </h3>
-            <p className="text-slate-500 dark:text-slate-400 mb-6 max-w-md mx-auto">
-              Try adjusting one or more criteria to see more results.
+            <p className="text-slate-500 dark:text-slate-500 text-lg font-medium mb-4">
+              So empty, so serene. Try a different search maybe?
             </p>
-            
-            {/* Active filters display */}
-            {(selectedPricing !== 'All' || selectedSkillLevels.length > 0 || selectedBestFor.length > 0) && (
-              <div className="flex flex-wrap justify-center gap-2 mb-8">
-                <span className="text-sm text-slate-500 dark:text-slate-400">Current filters:</span>
-                {selectedPricing !== 'All' && (
-                  <button
-                    onClick={() => setSelectedPricing('All')}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-200 dark:hover:bg-emerald-500/30 transition-colors"
-                  >
-                    {selectedPricing}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                )}
-                {selectedSkillLevels.map(level => (
-                  <button
-                    key={level}
-                    onClick={() => setSelectedSkillLevels(prev => prev.filter(l => l !== level))}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 hover:bg-amber-200 dark:hover:bg-amber-500/30 transition-colors"
-                  >
-                    {level}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                ))}
-                {selectedBestFor.map(tag => (
-                  <button
-                    key={tag}
-                    onClick={() => setSelectedBestFor(prev => prev.filter(t => t !== tag))}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-500/30 transition-colors"
-                  >
-                    {tag}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                ))}
-                <button
-                  onClick={() => {
-                    setSelectedPricing('All');
-                    setSelectedSkillLevels([]);
-                    setSelectedBestFor([]);
-                  }}
-                  className="px-3 py-1.5 rounded-full text-sm font-medium text-rose-500 hover:text-rose-600 dark:text-rose-400 dark:hover:text-rose-300 transition-colors"
-                >
-                  Clear All
-                </button>
-              </div>
+            {search.trim() && (
+              <Link
+                href={`/search?q=${encodeURIComponent(search.trim())}`}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300 mb-6"
+              >
+                Try searching in full page →
+              </Link>
             )}
-            
-            {/* Popular tools recommendation */}
-            <div className="mt-8">
-              <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">
-                Popular tools you might like:
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
-                {initialTools
-                  .filter(t => hasAffiliateLink(t))
-                  .slice(0, 3)
-                  .map((tool) => {
-                    const colors = getCategoryColors(tool.category);
-                    const pricingColors = getPricingColors(tool.pricing);
-                    return (
-                      <Link
-                        key={tool.id}
-                        href={`/tools/${tool.id}`}
-                        className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 text-left hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-                      >
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className={`w-10 h-10 rounded-lg ${colors.bg}/10 flex items-center justify-center text-lg font-bold ${colors.textLight} dark:${colors.text}`} style={{ fontFamily: 'Playfair Display, serif' }}>
-                            {tool.name.charAt(0)}
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <h4 className="font-semibold text-slate-900 dark:text-white truncate group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                              {tool.name}
-                            </h4>
-                            <span className={`inline-flex px-2 py-0.5 rounded-full text-xs font-medium ${pricingColors.bg} ${pricingColors.text}`}>
-                              {tool.pricing}
-                            </span>
-                          </div>
-                        </div>
-                        <p className="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">
-                          {tool.description}
-                        </p>
-                      </Link>
-                    );
-                  })}
-              </div>
-            </div>
-            
-            {/* Quick search suggestions */}
-            <div className="flex flex-wrap justify-center gap-2 mt-8">
-              <span className="text-sm text-slate-400 dark:text-slate-500">Or try:</span>
-              {['ChatGPT', 'Midjourney', 'GitHub Copilot'].map((suggestion) => (
+            <div className="flex flex-wrap justify-center gap-2 mt-4">
+              <span className="text-sm text-slate-400 dark:text-slate-500">Try searching:</span>
+              {['ChatGPT', 'Midjourney', 'GitHub Copilot', 'DALL-E', 'Notion AI'].map((suggestion) => (
                 <button
                   key={suggestion}
                   onClick={() => {
                     setSearch(suggestion);
                     setSelectedCategory('All');
-                    setSelectedPricing('All');
-                    setSelectedSkillLevels([]);
-                    setSelectedBestFor([]);
                   }}
                   className="px-3 py-1.5 text-sm bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
                 >
