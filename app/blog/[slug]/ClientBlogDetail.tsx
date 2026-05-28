@@ -298,7 +298,7 @@ export default function ClientBlogDetail({
                     >
                       <span className="inline-flex items-start gap-2 w-full">
                         <span className="text-xs text-slate-400 dark:text-gray-500 flex-shrink-0 mt-0.5">{index + 1}.</span>
-                        <span className="flex-1 break-words hyphens-auto">{item.text}</span>
+                        <span className="flex-1 break-words hyphens-auto whitespace-normal">{item.text}</span>
                       </span>
                     </button>
                   ))}
@@ -314,20 +314,21 @@ export default function ClientBlogDetail({
                 <List className="w-4 h-4 text-emerald-500" />
                 Table of Contents
               </h3>
-              <nav className="space-y-2">
+              <nav className="space-y-2 overflow-x-hidden">
                 {tocItems.map((item, index) => (
                   <button
                     key={item.id}
                     onClick={() => scrollToHeading(item.id)}
-                    className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 word-break break-word ${
+                    className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                       activeHeading === item.id
                         ? 'bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 font-medium'
                         : 'text-slate-600 dark:text-gray-400 hover:bg-slate-50 dark:hover:bg-gray-800'
                     }`}
+                    style={{ wordBreak: 'break-word', overflowWrap: 'break-word', maxWidth: '100%' }}
                   >
-                    <span className="inline-flex items-center gap-2">
-                      <span className="text-xs text-slate-400 dark:text-gray-500">{index + 1}.</span>
-                      <span>{item.text}</span>
+                    <span className="inline-flex items-start gap-2 w-full">
+                      <span className="text-xs text-slate-400 dark:text-gray-500 flex-shrink-0 mt-0.5">{index + 1}.</span>
+                      <span className="flex-1 break-words hyphens-auto whitespace-normal">{item.text}</span>
                     </span>
                   </button>
                 ))}

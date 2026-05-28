@@ -33411,5 +33411,1365 @@
         "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
       }
     ]
+  },
+  {
+    "id": 701,
+    "name": "DeepWrite AI",
+    "description": "AI-powered writing assistant with deep contextual understanding for long-form content and creative writing.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-701",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use DeepWrite AI to create content",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of DeepWrite AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered writing assistant with deep contextual understanding for long-form content and creative writing.",
+    "rating": 4.1,
+    "rating_count": 544,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 702,
+    "name": "PixelForge Pro",
+    "description": "Advanced AI image editor with pixel-perfect manipulation, style transfer, and background removal.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://example.com/ai-tool-702",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use PixelForge Pro to generate visuals",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of PixelForge Pro for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced AI image editor with pixel-perfect manipulation, style transfer, and background removal.",
+    "rating": 4.3,
+    "rating_count": 87,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 703,
+    "name": "TaskFlow AI",
+    "description": "Intelligent workflow automation platform that learns your habits and optimizes daily tasks.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-703",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use TaskFlow AI to boost productivity",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of TaskFlow AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Intelligent workflow automation platform that learns your habits and optimizes daily tasks.",
+    "rating": 4.2,
+    "rating_count": 171,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 704,
+    "name": "CodeGenius X",
+    "description": "AI coding assistant with multi-language support, refactoring suggestions, and bug detection.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-704",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use CodeGenius X to write code",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of CodeGenius X for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI coding assistant with multi-language support, refactoring suggestions, and bug detection.",
+    "rating": 3.6,
+    "rating_count": 102,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 705,
+    "name": "SoundCraft AI",
+    "description": "Professional AI audio editor for podcasters and musicians with noise reduction and mastering.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-705",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use SoundCraft AI to produce audio",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of SoundCraft AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional AI audio editor for podcasters and musicians with noise reduction and mastering.",
+    "rating": 4.7,
+    "rating_count": 230,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 706,
+    "name": "VideoFlow Studio",
+    "description": "AI video production suite with automatic editing, captioning, and social media optimization.",
+    "category": "Video",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-706",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use VideoFlow Studio to edit videos",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of VideoFlow Studio for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video production suite with automatic editing, captioning, and social media optimization.",
+    "rating": 4.5,
+    "rating_count": 241,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 707,
+    "name": "MindWrite AI",
+    "description": "AI writing tool for mental health professionals to generate therapeutic content and documentation.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://example.com/ai-tool-707",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use MindWrite AI to create content",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of MindWrite AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI writing tool for mental health professionals to generate therapeutic content and documentation.",
+    "rating": 4.8,
+    "rating_count": 468,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 708,
+    "name": "ArtVerse Creator",
+    "description": "AI art generator specializing in 3D models, NFT assets, and virtual world content creation.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-708",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use ArtVerse Creator to generate visuals",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of ArtVerse Creator for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI art generator specializing in 3D models, NFT assets, and virtual world content creation.",
+    "rating": 4,
+    "rating_count": 451,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 709,
+    "name": "FocusPilot AI",
+    "description": "AI-powered focus and productivity coach with distraction management and deep work sessions.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-709",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use FocusPilot AI to boost productivity",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of FocusPilot AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered focus and productivity coach with distraction management and deep work sessions.",
+    "rating": 4.3,
+    "rating_count": 189,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 710,
+    "name": "DevFlow AI",
+    "description": "AI development workflow manager that automates pull requests, code reviews, and deployments.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-710",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use DevFlow AI to write code",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of DevFlow AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI development workflow manager that automates pull requests, code reviews, and deployments.",
+    "rating": 4.5,
+    "rating_count": 416,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 711,
+    "name": "VoiceMaster Pro",
+    "description": "AI voice acting and narration tool with celebrity voice clones and emotional expression.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-711",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use VoiceMaster Pro to produce audio",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of VoiceMaster Pro for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI voice acting and narration tool with celebrity voice clones and emotional expression.",
+    "rating": 4.9,
+    "rating_count": 490,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 712,
+    "name": "CineAI Creator",
+    "description": "AI cinematic video generator with storyboard creation, scene composition, and camera movements.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://example.com/ai-tool-712",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use CineAI Creator to edit videos",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of CineAI Creator for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI cinematic video generator with storyboard creation, scene composition, and camera movements.",
+    "rating": 4,
+    "rating_count": 517,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 713,
+    "name": "CopyFlow AI",
+    "description": "AI copywriting platform specializing in e-commerce product descriptions and sales pages.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://example.com/ai-tool-713",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use CopyFlow AI to create content",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of CopyFlow AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI copywriting platform specializing in e-commerce product descriptions and sales pages.",
+    "rating": 3.6,
+    "rating_count": 122,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 714,
+    "name": "DesignForge AI",
+    "description": "AI design system generator that creates consistent brand assets and UI components.",
+    "category": "Image",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-714",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use DesignForge AI to generate visuals",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of DesignForge AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI design system generator that creates consistent brand assets and UI components.",
+    "rating": 3.8,
+    "rating_count": 387,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 715,
+    "name": "MeetAI Assistant",
+    "description": "AI meeting assistant that transcribes, summarizes, and extracts action items from meetings.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://example.com/ai-tool-715",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use MeetAI Assistant to boost productivity",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of MeetAI Assistant for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI meeting assistant that transcribes, summarizes, and extracts action items from meetings.",
+    "rating": 4,
+    "rating_count": 358,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 716,
+    "name": "APIForge AI",
+    "description": "AI API development tool that generates documentation, test cases, and SDKs from specifications.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://example.com/ai-tool-716",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use APIForge AI to write code",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of APIForge AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI API development tool that generates documentation, test cases, and SDKs from specifications.",
+    "rating": 3.5,
+    "rating_count": 417,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 717,
+    "name": "PodcastAI Pro",
+    "description": "AI podcast production suite with auto-editing, guest matching, and distribution optimization.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-717",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use PodcastAI Pro to produce audio",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of PodcastAI Pro for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI podcast production suite with auto-editing, guest matching, and distribution optimization.",
+    "rating": 4.2,
+    "rating_count": 418,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 718,
+    "name": "ReelForge AI",
+    "description": "AI short-form video creator for TikTok, Reels, and Shorts with trend detection and optimization.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://example.com/ai-tool-718",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use ReelForge AI to edit videos",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of ReelForge AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI short-form video creator for TikTok, Reels, and Shorts with trend detection and optimization.",
+    "rating": 4.6,
+    "rating_count": 456,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 719,
+    "name": "ResearchWrite AI",
+    "description": "AI research and writing tool for academics with citation generation and literature reviews.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-719",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use ResearchWrite AI to create content",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of ResearchWrite AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI research and writing tool for academics with citation generation and literature reviews.",
+    "rating": 4.5,
+    "rating_count": 500,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 720,
+    "name": "GameArt AI",
+    "description": "AI game art generator creating sprites, textures, and concept art for game developers.",
+    "category": "Image",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-720",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use GameArt AI to generate visuals",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of GameArt AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI game art generator creating sprites, textures, and concept art for game developers.",
+    "rating": 3.6,
+    "rating_count": 287,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 721,
+    "name": "CalendarAI Pro",
+    "description": "AI calendar manager that optimizes scheduling, prioritizes meetings, and prevents burnout.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-721",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use CalendarAI Pro to boost productivity",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of CalendarAI Pro for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI calendar manager that optimizes scheduling, prioritizes meetings, and prevents burnout.",
+    "rating": 4.1,
+    "rating_count": 216,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 722,
+    "name": "SecurityAI Coder",
+    "description": "AI security assistant that scans code for vulnerabilities and suggests fixes.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-722",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use SecurityAI Coder to write code",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of SecurityAI Coder for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI security assistant that scans code for vulnerabilities and suggests fixes.",
+    "rating": 5,
+    "rating_count": 535,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 723,
+    "name": "MusicForge AI",
+    "description": "AI music composition tool with genre-specific styles, royalty-free tracks, and stems export.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-723",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use MusicForge AI to produce audio",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of MusicForge AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI music composition tool with genre-specific styles, royalty-free tracks, and stems export.",
+    "rating": 4.5,
+    "rating_count": 282,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 724,
+    "name": "DocumentaryAI",
+    "description": "AI documentary creator that transforms research into compelling video narratives with b-roll.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-724",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use DocumentaryAI to edit videos",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of DocumentaryAI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI documentary creator that transforms research into compelling video narratives with b-roll.",
+    "rating": 5,
+    "rating_count": 138,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 725,
+    "name": "EmailFlow AI",
+    "description": "AI email management and response generator with personalized tone matching and follow-ups.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://example.com/ai-tool-725",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use EmailFlow AI to create content",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of EmailFlow AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI email management and response generator with personalized tone matching and follow-ups.",
+    "rating": 4.2,
+    "rating_count": 166,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 726,
+    "name": "FashionAI Design",
+    "description": "AI fashion design tool that creates clothing concepts, patterns, and virtual try-ons.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://example.com/ai-tool-726",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use FashionAI Design to generate visuals",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of FashionAI Design for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI fashion design tool that creates clothing concepts, patterns, and virtual try-ons.",
+    "rating": 3.5,
+    "rating_count": 278,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 727,
+    "name": "HealthTrack AI",
+    "description": "AI health and wellness tracker with personalized recommendations and habit formation.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-727",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use HealthTrack AI to boost productivity",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of HealthTrack AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI health and wellness tracker with personalized recommendations and habit formation.",
+    "rating": 3.5,
+    "rating_count": 264,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 728,
+    "name": "DataForge AI",
+    "description": "AI data science assistant for cleaning, analyzing, and visualizing data with code generation.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-728",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use DataForge AI to write code",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of DataForge AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI data science assistant for cleaning, analyzing, and visualizing data with code generation.",
+    "rating": 4.1,
+    "rating_count": 50,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 729,
+    "name": "VoiceOver AI",
+    "description": "AI voiceover studio with multilingual support, natural delivery, and pronunciation control.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-729",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use VoiceOver AI to produce audio",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of VoiceOver AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI voiceover studio with multilingual support, natural delivery, and pronunciation control.",
+    "rating": 4.2,
+    "rating_count": 300,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 730,
+    "name": "AdVideo AI",
+    "description": "AI advertising video creator optimized for conversions and A/B testing different versions.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://example.com/ai-tool-730",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use AdVideo AI to edit videos",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of AdVideo AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI advertising video creator optimized for conversions and A/B testing different versions.",
+    "rating": 3.6,
+    "rating_count": 314,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 731,
+    "name": "ResumeAI Pro",
+    "description": "AI resume and cover letter builder with job-specific optimization and ATS compatibility.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-731",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use ResumeAI Pro to create content",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of ResumeAI Pro for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI resume and cover letter builder with job-specific optimization and ATS compatibility.",
+    "rating": 4,
+    "rating_count": 383,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 732,
+    "name": "UIForge AI",
+    "description": "AI UI/UX design tool that generates wireframes, prototypes, and design systems from prompts.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://example.com/ai-tool-732",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use UIForge AI to generate visuals",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of UIForge AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI UI/UX design tool that generates wireframes, prototypes, and design systems from prompts.",
+    "rating": 4.5,
+    "rating_count": 209,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 733,
+    "name": "LearningAI Coach",
+    "description": "AI personalized learning coach that adapts to your pace and creates custom curricula.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://example.com/ai-tool-733",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use LearningAI Coach to boost productivity",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of LearningAI Coach for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI personalized learning coach that adapts to your pace and creates custom curricula.",
+    "rating": 3.8,
+    "rating_count": 472,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 734,
+    "name": "TestAI Pro",
+    "description": "AI testing assistant that generates test cases, runs automated tests, and identifies flaky tests.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-734",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use TestAI Pro to write code",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of TestAI Pro for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI testing assistant that generates test cases, runs automated tests, and identifies flaky tests.",
+    "rating": 3.7,
+    "rating_count": 313,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 735,
+    "name": "AudioBook AI",
+    "description": "AI audiobook narrator that converts any text into engaging audio with character voices.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-735",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use AudioBook AI to produce audio",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of AudioBook AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI audiobook narrator that converts any text into engaging audio with character voices.",
+    "rating": 4.7,
+    "rating_count": 218,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 736,
+    "name": "FilmForge AI",
+    "description": "AI film production suite with script breakdown, shot list creation, and storyboard visualization.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-736",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use FilmForge AI to edit videos",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of FilmForge AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI film production suite with script breakdown, shot list creation, and storyboard visualization.",
+    "rating": 4.6,
+    "rating_count": 287,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 737,
+    "name": "ContentAI Writer",
+    "description": "AI content creation platform for blogs, social media, and marketing materials with SEO.",
+    "category": "Writing",
+    "pricing": "Open Source",
+    "url": "https://example.com/ai-tool-737",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use ContentAI Writer to create content",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of ContentAI Writer for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI content creation platform for blogs, social media, and marketing materials with SEO.",
+    "rating": 4.9,
+    "rating_count": 192,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 738,
+    "name": "ArchitectureAI",
+    "description": "AI architectural design tool that creates building concepts, floor plans, and 3D renderings.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-738",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use ArchitectureAI to generate visuals",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of ArchitectureAI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI architectural design tool that creates building concepts, floor plans, and 3D renderings.",
+    "rating": 4.8,
+    "rating_count": 220,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 739,
+    "name": "FinanceAI Pro",
+    "description": "AI financial assistant that manages budgets, investments, and provides personalized advice.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-739",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use FinanceAI Pro to boost productivity",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of FinanceAI Pro for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI financial assistant that manages budgets, investments, and provides personalized advice.",
+    "rating": 4.1,
+    "rating_count": 259,
+    "last_updated": "2026-05-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
+  },
+  {
+    "id": 740,
+    "name": "CloudForge AI",
+    "description": "AI cloud infrastructure manager that optimizes costs, performance, and security automatically.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://example.com/ai-tool-740",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Use CloudForge AI to write code",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      },
+      {
+        "prompt": "Advanced usage of CloudForge AI for professional results",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI cloud infrastructure manager that optimizes costs, performance, and security automatically.",
+    "rating": 4.5,
+    "rating_count": 289,
+    "last_updated": "2026-05-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creation",
+      "Beginners",
+      "Quick Results"
+    ]
   }
 ]

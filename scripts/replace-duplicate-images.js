@@ -1,85 +1,139 @@
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
-// Load scan results
-const { duplicates } = require('./scan-duplicate-images.js');
+console.log('🔄 启动重复图片替换程序...');
+
+// 读取扫描结果
+const scanResult = require('./scan-duplicate-images.js');
 
 const blogPostsDir = path.join(__dirname, '..', 'data', 'blog-posts');
 
-// Generate random hash
-function generateRandomHash(length = 8) {
-  return Math.random().toString(36).substring(2, 2 + length);
+// 生成唯一的图片URL（使用我们的API）
+function generateUniqueImageUrl(articleId, position, category, title) {
+  const hash = crypto.randomBytes(4).toString('hex');
+  
+  const prompt = `clean tech illustration, emerald green accents, ${category} AI tools, minimalist design, ${title}`;
+  const encodedPrompt = encodeURIComponent(prompt);
+  
+  return `https://image.pollinations.ai/prompt/${encodedPrompt}?width=1200&height=630&nologo=true&seed=${Date.now()}-${hash}`;
 }
 
-// Generate a new unique image URL based on article ID
-function generateNewUniqueImageUrl(articleId, baseUrl) {
-  // List of unique stock photos to use
-  const baseImages = [
-    'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1487014679447-ebefba5ddcab?w=800&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&h=400&fit=crop'
-  ];
+// 处理重复图片
+async function processDuplicates() {
+  const { duplicates } = scanResult;
   
-  // Pick a random base image that's different from original
-  let randomBase = baseImages.filter(u => u !== baseUrl)[Math.floor(Math.random() * (baseImages.length - 1))];
+  if (!duplicates || duplicates.length === 0) {
+    console.log('✅ 没有发现重复图片，无需替换！');
+    return;
+  }
   
-  // Generate a unique variation
-  const hash = generateRandomHash(12);
-  return `${randomBase}&article=${articleId}&hash=${hash}`;
-}
-
-console.log(`🔧 开始替换 ${duplicates.length} 个重复图片...\n`);
-
-let totalReplaced = 0;
-
-// Process each duplicate image
-duplicates.forEach(dupe => {
-  const originalUrl = dupe.url;
-  const postIds = dupe.postIds;
+  console.log(`📊 开始处理 ${duplicates.length} 组重复图片...`);
   
-  console.log(`📸 处理图片: ${originalUrl}`);
-  console.log(`   引用次数: ${postIds.length} (保留第一个，替换其余 ${postIds.length - 1} 个`);
+  // 统计替换次数
+  let replaceCount = 0;
   
-  // Keep first post, replace rest
-  for (let i = 1; i < postIds.length; i++) {
-    const postId = postIds[i];
-    const filePath = path.join(blogPostsDir, `${postId}.json`);
+  duplicates.forEach((dupe) => {
+    const originalUrl = dupe.url;
+    const postIds = dupe.postIds;
     
-    if (!fs.existsSync(filePath)) continue;
+    console.log(`\n🔄 处理图片: ${originalUrl}`);
+    console.log(`   📝 引用次数: ${postIds.length}，将替换 ${postIds.length - 1} 个副本`);
     
-    try {
-      const content = fs.readFileSync(filePath, 'utf8');
-      const post = JSON.parse(content);
+    // 保留第一篇文章的图片，替换其余的
+    postIds.slice(1).forEach((postId) => {
+      const filePath = path.join(blogPostsDir, `${postId}.json`);
       
-      if (post.images && Array.isArray(post.images)) {
-        let replaced = false;
-        
-        post.images = post.images.map(img => {
-          if (img.url === originalUrl) {
-            const newUrl = generateNewUniqueImageUrl(postId, originalUrl);
-            replaced = true;
-            console.log(`   ✓ 替换文章 ${postId}: ${originalUrl} -> ${newUrl}`);
-            return { ...img, url: newUrl };
+      try {
+        if (fs.existsSync(filePath)) {
+          const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+          
+          if (content.images && Array.isArray(content.images)) {
+            content.images = content.images.map((image, idx) => {
+              if (image.url === originalUrl) {
+                const positions = ['header', 'mid', 'cta'];
+                const position = positions[idx] || 'mid';
+                
+                // 生成新的唯一图片URL
+                const newUrl = generateUniqueImageUrl(
+                  content.id, 
+                  position, 
+                  content.category || 'Productivity',
+                  content.title
+                );
+                
+                console.log(`   🆕 替换文章 ${postId} 的图片: ${originalUrl.substring(0, 40)}... -> ${newUrl.substring(0, 40)}...`);
+                
+                replaceCount++;
+                
+                return {
+                  ...image,
+                  url: newUrl,
+                  image_url: newUrl,
+                  prompt: `Unique image for article ${content.id} ${position}`,
+                  generated: true
+                };
+              }
+              return image;
+            });
+            
+            fs.writeFileSync(filePath, JSON.stringify(content, null, 2), 'utf8');
+            console.log(`   ✅ 文章 ${postId} 更新成功！`);
           }
-          return img;
-        });
-        
-        if (replaced) {
-          fs.writeFileSync(filePath, JSON.stringify(post, null, 2), 'utf8');
-          totalReplaced++;
         }
+      } catch (err) {
+        console.error(`❌ 处理文章 ${postId} 时出错:`, err.message);
+      }
+    });
+  });
+  
+  console.log(`\n🎉 替换完成！共替换了 ${replaceCount} 个重复图片！`);
+  
+  // 再次扫描验证
+  console.log('\n🔍 再次扫描验证重复图片...');
+  
+  // 重新扫描
+  const imageMap = new Map();
+  const allFiles = fs.readdirSync(blogPostsDir)
+    .filter(file => file.endsWith('.json') && /^\d+\.json$/.test(file));
+  
+  allFiles.forEach(file => {
+    const filePath = path.join(blogPostsDir, file);
+    try {
+      const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+      if (content.images && Array.isArray(content.images)) {
+        content.images.forEach(image => {
+          if (image.url) {
+            if (!imageMap.has(image.url)) {
+              imageMap.set(image.url, []);
+            }
+            imageMap.get(image.url).push(content.id);
+          }
+        });
       }
     } catch (err) {
-      console.warn(`⚠️  处理文章 ${postId} 失败: ${err.message}`);
+      // 忽略错误
     }
+  });
+  
+  const remainingDuplicates = [];
+  imageMap.forEach((postIds, url) => {
+    if (postIds.length > 1) {
+      remainingDuplicates.push({ url, postIds });
+    }
+  });
+  
+  if (remainingDuplicates.length === 0) {
+    console.log('✅ 验证完成：没有发现重复图片！');
+  } else {
+    console.warn(`⚠️ 验证发现 ${remainingDuplicates.length} 张重复图片！`);
   }
-});
+}
 
-console.log(`\n✅ 替换完成！共替换了 ${totalReplaced} 张图片`);
+// 执行
+processDuplicates().catch(err => {
+  console.error('❌ 执行出错:', err);
+  process.exit(1);
+});

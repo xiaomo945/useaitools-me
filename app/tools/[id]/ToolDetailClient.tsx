@@ -714,7 +714,8 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
                       <img
                         src={example.image_url}
                         alt={`${tool.name} Example ${index + 1} - AI tool demo`}
-                        className="w-full h-auto object-cover opacity-0 animate-fade-in"
+                        className="w-full h-auto object-cover opacity-0 animate-fade-in max-w-full aspect-video"
+                        style={{ aspectRatio: '16/9' }}
                         width="600"
                         height="400"
                         loading="lazy"
