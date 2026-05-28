@@ -75,7 +75,7 @@ export default function RootLayout({
                 "height": 200
               },
               "sameAs": [
-                "https://twitter.com/jiongxiaomo",
+                "https://x.com/jiongxiaomo",
                 "https://github.com/xiaomo945"
               ],
               "publisher": {
