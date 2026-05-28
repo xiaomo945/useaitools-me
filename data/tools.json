@@ -26807,5 +26807,1535 @@
       "Newsletters",
       "Subscribers"
     ]
+  },
+  {
+    "id": 577,
+    "name": "Twitter Growth AI",
+    "description": "AI-powered Twitter growth tool. Auto-tweet, engagement, and follower management.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://twitter-growth-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Twitter growth automation",
+    "rating": 4.6,
+    "rating_count": 2197,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.227944747742103,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.422161064337663,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.697154267430307,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.607250487127756,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.543001367527512,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Twitter growth",
+      "Social media",
+      "Engagement"
+    ]
+  },
+  {
+    "id": 578,
+    "name": "Tweet Optimizer Pro",
+    "description": "Optimize your tweets for maximum engagement and reach using AI.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://tweet-optimizer-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI tweet optimization",
+    "rating": 4.4,
+    "rating_count": 2117,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.411128045861104,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.2311221351334405,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.519706190768397,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.311933572281061,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.688802400751791,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.037699593443435,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Twitter marketing",
+      "Content optimization",
+      "Analytics"
+    ]
+  },
+  {
+    "id": 579,
+    "name": "LinkedIn Video Maker",
+    "description": "Create professional LinkedIn ad videos with AI templates and automation.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://linkedin-video-maker.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI LinkedIn video ads",
+    "rating": 4.7,
+    "rating_count": 3013,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.633658715292417,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.828204495545447,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.747908450618722,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "LinkedIn marketing",
+      "Video ads",
+      "B2B"
+    ]
+  },
+  {
+    "id": 580,
+    "name": "LinkedIn Campaign AI",
+    "description": "AI-driven LinkedIn ad campaign management and video creation.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://linkedin-campaign-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI LinkedIn campaign manager",
+    "rating": 4.3,
+    "rating_count": 3038,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.293962295511645,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.7356751936995956,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.58515750599094,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.5357089751814454,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.221867356456464,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.626175799670472,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "LinkedIn ads",
+      "Campaign optimization",
+      "B2B marketing"
+    ]
+  },
+  {
+    "id": 581,
+    "name": "LogoGenius AI",
+    "description": "AI logo generator with brand identity kits and customization options.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://logogenius-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI logo design",
+    "rating": 4,
+    "rating_count": 3628,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.560317410513172,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.881521327198995,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.985821195197516,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.476392090313849,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.846305939463309,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.2034007749735265,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Logo design",
+      "Branding",
+      "Startups"
+    ]
+  },
+  {
+    "id": 582,
+    "name": "BrandMark Studio",
+    "description": "Professional AI-powered branding and logo design platform.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://brandmark-studio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional branding AI",
+    "rating": 4.3,
+    "rating_count": 3222,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2040304873373335,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.098336939311213,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.9237300066337726,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.0674259019159615,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.347307074940008,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.012237786746205,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Branding",
+      "Logo design",
+      "Business identity"
+    ]
+  },
+  {
+    "id": 583,
+    "name": "VoiceClone Pro",
+    "description": "High-quality AI voice cloning with natural-sounding results.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://voiceclone-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI voice cloning",
+    "rating": 4.1,
+    "rating_count": 3486,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4106661871909045,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.489483816107798,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.23564628240748,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.037403229702703,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.007975788850255,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.9048553479651433,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Voice cloning",
+      "Audio production",
+      "Content creation"
+    ]
+  },
+  {
+    "id": 584,
+    "name": "CloneVoice AI",
+    "description": "Enterprise-grade AI voice cloning and text-to-speech platform.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://clonevoice-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Enterprise voice cloning",
+    "rating": 4.7,
+    "rating_count": 246,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.674611042605945,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.498466098341812,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.6862103678245575,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.186575677117647,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Voice cloning",
+      "Enterprise",
+      "Professional audio"
+    ]
+  },
+  {
+    "id": 585,
+    "name": "MobileDev Copilot",
+    "description": "AI assistant for mobile app development (iOS & Android).",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://mobiledev-copilot.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI mobile dev assistant",
+    "rating": 4.1,
+    "rating_count": 1223,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.803725844091025,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.808214149379473,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.49440375838248,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 3.886586052684012,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.025628070394651,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.161578233831936,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Mobile development",
+      "iOS",
+      "Android"
+    ]
+  },
+  {
+    "id": 586,
+    "name": "Flutter AI Assistant",
+    "description": "AI-powered Flutter development with code generation and debugging.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://flutter-ai-assistant.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI for Flutter",
+    "rating": 4.6,
+    "rating_count": 976,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.388871541571874,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.340402160252783,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.676231719143102,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.307336928348698,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.990947188865977,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Flutter",
+      "Mobile dev",
+      "Cross-platform"
+    ]
+  },
+  {
+    "id": 587,
+    "name": "React Native AI",
+    "description": "Advanced AI assistance for React Native development.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://react-native-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI for React Native",
+    "rating": 4.3,
+    "rating_count": 1772,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.100395528908805,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.286243970885812,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.556110855390722,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.6486006162900875,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.10568097930586,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.807730445363083,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "React Native",
+      "Mobile development",
+      "Cross-platform"
+    ]
+  },
+  {
+    "id": 588,
+    "name": "Newsletter Writer AI",
+    "description": "AI email newsletter writer with engaging content generation.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://newsletter-writer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI newsletter writer",
+    "rating": 4.1,
+    "rating_count": 1148,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.560677207109655,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.402644792551381,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.227751153708793,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.220735305931166,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.8276159288395264,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.200141196547689,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Email newsletters",
+      "Content writing",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 589,
+    "name": "Email Campaign Pro",
+    "description": "Professional AI email marketing content generator.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://email-campaign-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional email AI",
+    "rating": 4.1,
+    "rating_count": 2767,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.961385412098296,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.024489388856744,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.459411733269658,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.075610844793616,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.9925779066358653,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.395009915870798,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Email marketing",
+      "Campaigns",
+      "Content generation"
+    ]
+  },
+  {
+    "id": 590,
+    "name": "Synthesia AI",
+    "description": "AI avatar video creation for presentations and training.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://synthesia-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Synthesia AI avatar",
+    "rating": 4.6,
+    "rating_count": 306,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.360625783184515,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.774486423663763,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "AI avatars",
+      "Video production",
+      "Training"
+    ]
+  },
+  {
+    "id": 591,
+    "name": "HeyGen Studio",
+    "description": "AI avatar video maker with realistic avatars and voices.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://heygen-studio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "HeyGen AI video",
+    "rating": 4.4,
+    "rating_count": 2957,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.991265916027935,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.56159919296938,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.297425634268467,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.247046741456864,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.241100277349426,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "AI avatars",
+      "Video creation",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 592,
+    "name": "Elai.io Creator",
+    "description": "AI video generation with human-like avatars and voiceovers.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://elai.io-creator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Elai.io AI videos",
+    "rating": 4.4,
+    "rating_count": 1235,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.274728473253562,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.940475270272599,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.3977776208526995,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.604472194447477,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.906931342950529,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.887110384206469,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "AI avatars",
+      "Video content",
+      "Training"
+    ]
+  },
+  {
+    "id": 593,
+    "name": "Training Course AI",
+    "description": "AI-powered training course creation platform with video and content.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://training-course-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI course creation",
+    "rating": 4.5,
+    "rating_count": 798,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.434639373357147,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.5940368439713675,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.8591154876099765,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.380445186661253,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.594279744654175,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Online courses",
+      "Training",
+      "Education"
+    ]
+  },
+  {
+    "id": 594,
+    "name": "CourseGenius AI",
+    "description": "Create complete online courses with AI assistance and templates.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://coursegenius-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI course generator",
+    "rating": 4.7,
+    "rating_count": 1670,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.561239116931873,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.965453628146456,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Course creation",
+      "Education",
+      "Training"
+    ]
+  },
+  {
+    "id": 595,
+    "name": "Remote Worker AI",
+    "description": "Free AI tools bundle for remote workers and distributed teams.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://remote-worker-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free remote work tools",
+    "rating": 4.3,
+    "rating_count": 244,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.738031459686831,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.548614752479317,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.289304841926356,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.640014505641783,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.836408591333239,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.67247959530184,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Remote work",
+      "Productivity",
+      "Free tools"
+    ]
+  },
+  {
+    "id": 596,
+    "name": "RemoteTeam Hub",
+    "description": "AI-powered remote team collaboration and management tools.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://remoteteam-hub.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Remote team AI",
+    "rating": 4.6,
+    "rating_count": 333,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.654731009436418,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.338450133349682,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.832624491958863,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.446758054997766,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Remote teams",
+      "Collaboration",
+      "Management"
+    ]
+  },
+  {
+    "id": 597,
+    "name": "Feedback Analyzer AI",
+    "description": "AI customer feedback analysis with sentiment analysis and insights.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://feedback-analyzer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI feedback analysis",
+    "rating": 4.2,
+    "rating_count": 3030,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.377865679988114,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.909025458924576,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.725710304591889,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.370528391647701,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.659886524827879,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.417982344954662,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Customer feedback",
+      "Sentiment analysis",
+      "Insights"
+    ]
+  },
+  {
+    "id": 598,
+    "name": "Customer Insight AI",
+    "description": "Advanced AI for customer feedback analysis and actionable insights.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://customer-insight-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced customer insights",
+    "rating": 4.6,
+    "rating_count": 2794,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.376971519370204,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.49163766838914,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.7022063933902,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.9559748528561505,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.8893637789066275,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Customer insights",
+      "Feedback analysis",
+      "Business intelligence"
+    ]
+  },
+  {
+    "id": 599,
+    "name": "X (Twitter) Thread AI",
+    "description": "AI-powered Twitter thread creator and engagement booster.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://x-(twitter)-thread-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI thread generator",
+    "rating": 4.1,
+    "rating_count": 4165,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.46482434821808,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.326567690642946,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.896695171698755,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.654168247544779,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.541544562582077,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.19370828490509,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Twitter threads",
+      "Content creation",
+      "Engagement"
+    ]
+  },
+  {
+    "id": 600,
+    "name": "Mobile UI AI",
+    "description": "AI-assisted mobile UI design and code generation.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://mobile-ui-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI mobile UI",
+    "rating": 4.4,
+    "rating_count": 664,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.405351131144576,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.392166601373374,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.719667392763537,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.6793157406114965,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.754710375692974,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Mobile UI",
+      "Design",
+      "Code generation"
+    ]
+  },
+  {
+    "id": 601,
+    "name": "Voiceover Clone AI",
+    "description": "AI voice cloning for professional voiceovers and narration.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://voiceover-clone-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Voice clone for voiceovers",
+    "rating": 4.1,
+    "rating_count": 1735,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9170396241869465,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.220708361650004,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.309299731064679,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.295504193909902,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.8518803404094135,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.718589561927432,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Voiceovers",
+      "Audio production",
+      "Narration"
+    ]
+  },
+  {
+    "id": 602,
+    "name": "Logo Variation AI",
+    "description": "Generate multiple logo variations and brand assets with AI.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://logo-variation-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI logo variations",
+    "rating": 4.6,
+    "rating_count": 1899,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.795621120609865,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.655103296819652,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.904881919073973,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.554359894534501,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.517826650548696,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Logo design",
+      "Branding",
+      "Variations"
+    ]
+  },
+  {
+    "id": 603,
+    "name": "iOS Dev Copilot",
+    "description": "Specialized AI assistant for iOS and Swift development.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://ios-dev-copilot.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI for iOS dev",
+    "rating": 4.2,
+    "rating_count": 3881,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.396308064137792,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.760137812453834,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.219065047133084,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.104449862014449,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.215928999350793,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.129366770501884,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "iOS development",
+      "Swift",
+      "Xcode"
+    ]
+  },
+  {
+    "id": 604,
+    "name": "Android Dev AI",
+    "description": "AI assistant for Android development with Kotlin support.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://android-dev-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI for Android dev",
+    "rating": 4.1,
+    "rating_count": 3619,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8438939207147578,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.398425533260785,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.102185616156037,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 3.980486610686112,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.0958543253064486,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.8050184180602753,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Android development",
+      "Kotlin",
+      "Mobile apps"
+    ]
+  },
+  {
+    "id": 605,
+    "name": "Customer Review AI",
+    "description": "AI-powered customer review analysis and response generation.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://customer-review-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI review management",
+    "rating": 4.3,
+    "rating_count": 2034,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.172413286975865,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.780933299970315,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.198830792001461,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.92159268221026,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.965312258210245,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.108407682115763,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Reviews",
+      "Customer feedback",
+      "Responses"
+    ]
+  },
+  {
+    "id": 606,
+    "name": "NPS Analysis AI",
+    "description": "Advanced NPS and customer satisfaction analysis with AI.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://nps-analysis-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI NPS analysis",
+    "rating": 4.3,
+    "rating_count": 3096,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.087715837445164,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.227958123340002,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.947545754779709,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.890118002991487,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.8437050343633565,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.939333220444431,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "NPS",
+      "Customer satisfaction",
+      "Analytics"
+    ]
   }
 ]
