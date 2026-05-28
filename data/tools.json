@@ -25175,5 +25175,1637 @@
       "Filmmakers",
       "Advertisers"
     ]
+  },
+  {
+    "id": 545,
+    "name": "TikTok AI Creator",
+    "description": "AI-powered TikTok content creation tool. Generate captions, hashtags, and optimize posting times.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://tiktok-ai-creator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered TikTok content creation.",
+    "rating": 4.5,
+    "rating_count": 2154,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.863325576762627,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.680149523634592,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.697358736048661,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.7774958179023,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "TikTok",
+      "Social Media",
+      "Content Creation"
+    ]
+  },
+  {
+    "id": 546,
+    "name": "TikTok Analytics AI",
+    "description": "Advanced TikTok analytics with AI insights. Understand your audience and optimize performance.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://tiktok-analytics-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced TikTok analytics with AI.",
+    "rating": 4.2,
+    "rating_count": 2666,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.741981438576777,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.92369441970878,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.232823181639898,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.274730591369718,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.080213938301131,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.581530452880329,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "TikTok Analytics",
+      "Audience Insights",
+      "Optimization"
+    ]
+  },
+  {
+    "id": 547,
+    "name": "TikTok Ad Generator",
+    "description": "AI-powered TikTok ad creator. Generate high-converting ad creatives automatically.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://tiktok-ad-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered TikTok ad creator.",
+    "rating": 4.6,
+    "rating_count": 4027,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.8554748458419015,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.303414383798888,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.327484070625519,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "TikTok Ads",
+      "Advertising",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 548,
+    "name": "Facebook Video AI",
+    "description": "AI video creator optimized for Facebook ads. Generate videos that convert on Facebook.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://facebook-video-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video creator for Facebook ads.",
+    "rating": 4.3,
+    "rating_count": 514,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.426161414901007,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.29639502666154,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.697866815915144,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.40638010908784,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.16786867254914,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.012828289053302,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Facebook Ads",
+      "Video Marketing",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 549,
+    "name": "FB Ad Optimizer",
+    "description": "AI-powered Facebook ad optimization. Test multiple variations and find what works best.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://fb-ad-optimizer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Facebook ad optimizer.",
+    "rating": 4.1,
+    "rating_count": 2947,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.437935143240996,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.3904006925072006,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.58877209535017,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 3.941275911764213,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.7884089266230365,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.380804143669433,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Facebook Ads",
+      "A/B Testing",
+      "Optimization"
+    ]
+  },
+  {
+    "id": 550,
+    "name": "T-Shirt Design AI",
+    "description": "AI-powered t-shirt design generator. Create unique designs for print-on-demand.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://t-shirt-design-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI t-shirt design generator.",
+    "rating": 4.1,
+    "rating_count": 2882,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.781843114171111,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.8619949816507835,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.073191876914215,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.129026594056873,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.262450437316707,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.786662808013795,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "T-Shirt Design",
+      "Print-on-Demand",
+      "Fashion"
+    ]
+  },
+  {
+    "id": 551,
+    "name": "Merch Design AI",
+    "description": "Professional AI design tool for merchandise. T-shirts, hoodies, and more.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://merch-design-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional AI design tool.",
+    "rating": 4.6,
+    "rating_count": 1489,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.604492960192265,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.412418547693702,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.458747604297822,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.801952304849371,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.5651967112273235,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.194090502080081,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Merchandise",
+      "Design",
+      "E-commerce"
+    ]
+  },
+  {
+    "id": 552,
+    "name": "Podcast Mixer AI",
+    "description": "AI-powered podcast mixing and mastering. Professional sound without audio engineering skills.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://podcast-mixer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI podcast mixing and mastering.",
+    "rating": 4.3,
+    "rating_count": 811,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.152192670095314,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.105151595529913,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.899756621624089,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.45094983437765,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.1104682205270535,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.114510498503211,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Podcasting",
+      "Audio Mixing",
+      "Mastering"
+    ]
+  },
+  {
+    "id": 553,
+    "name": "Audio Master AI",
+    "description": "Professional AI audio mastering for podcasts. Studio-quality sound automatically.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://audio-master-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional AI audio mastering.",
+    "rating": 4.5,
+    "rating_count": 2319,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.563573527861586,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.34677785531253,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.214096078681006,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.391418117348916,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.110790433285813,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Audio Mastering",
+      "Podcasting",
+      "Studio Quality"
+    ]
+  },
+  {
+    "id": 554,
+    "name": "Cloud Security AI",
+    "description": "AI-powered cloud security tool. Scan code for cloud vulnerabilities and security issues.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://cloud-security-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI cloud security scanner.",
+    "rating": 4.7,
+    "rating_count": 3920,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.790551197082385,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.834652463280941,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.683710971405642,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Cloud Security",
+      "DevSecOps",
+      "Security"
+    ]
+  },
+  {
+    "id": 555,
+    "name": "SecOps AI",
+    "description": "Advanced AI security operations platform. Detect and respond to threats automatically.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://secops-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced AI SecOps platform.",
+    "rating": 4.6,
+    "rating_count": 3387,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3911660266832975,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.8058587116559,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.651895831600187,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.4074531246600035,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.215656640130427,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "SecOps",
+      "Threat Detection",
+      "Enterprise"
+    ]
+  },
+  {
+    "id": 556,
+    "name": "Cloud Audit AI",
+    "description": "AI-powered cloud infrastructure audit. Ensure compliance and security best practices.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://cloud-audit-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI cloud infrastructure audit.",
+    "rating": 4.5,
+    "rating_count": 2310,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.389000747707515,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.674088423435782,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.968367024204932,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.074955054984115,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Cloud Audit",
+      "Compliance",
+      "Security"
+    ]
+  },
+  {
+    "id": 557,
+    "name": "Blog Post AI",
+    "description": "AI blog post writer with SEO optimization. Generate high-quality blog content quickly.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://blog-post-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI blog post writer with SEO.",
+    "rating": 4,
+    "rating_count": 1507,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.5137558550531716,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.190953602905739,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.765193262807,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.300317011996446,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.638006744090772,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.363930994304845,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Blog Writing",
+      "SEO",
+      "Content Creation"
+    ]
+  },
+  {
+    "id": 558,
+    "name": "SEO Content AI",
+    "description": "Advanced AI SEO content platform. Research, write, and optimize blog content.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://seo-content-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced AI SEO content platform.",
+    "rating": 4.7,
+    "rating_count": 3836,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.318125747026528,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.719563651463257,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.773299594282818,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.419655014902675,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "SEO Content",
+      "Research",
+      "Optimization"
+    ]
+  },
+  {
+    "id": 559,
+    "name": "Content Outline AI",
+    "description": "AI-powered content outline generator. Structure your blog posts for maximum readability.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://content-outline-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI content outline generator.",
+    "rating": 4.3,
+    "rating_count": 1135,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.775422849180046,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.699797340420167,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.537828938600014,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.220367328167805,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.776962452024186,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.9980810321137574,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Outlines",
+      "Blogging",
+      "Writing"
+    ]
+  },
+  {
+    "id": 560,
+    "name": "Explainer Video AI",
+    "description": "AI explainer video creator. Turn concepts into engaging animated videos.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://explainer-video-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI explainer video creator.",
+    "rating": 4,
+    "rating_count": 1978,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.746201098049635,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.005071022229101,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.7407317681892893,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.826519996433738,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.606999759040506,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.9667976516331347,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Explainer Videos",
+      "Animation",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 561,
+    "name": "Video Script AI",
+    "description": "AI video script writer. Generate professional scripts for your videos.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://video-script-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video script writer.",
+    "rating": 4.6,
+    "rating_count": 1389,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.459562645339435,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.834500299974569,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.6700848330002165,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video Scripts",
+      "Writing",
+      "Content"
+    ]
+  },
+  {
+    "id": 562,
+    "name": "Video Storyboard AI",
+    "description": "AI storyboard creator for videos. Visualize your video before production.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://video-storyboard-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI storyboard creator.",
+    "rating": 4.3,
+    "rating_count": 420,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.023177250700058,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.924200160640906,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.479016015698498,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.579882613930905,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.485571944434684,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.609378142296377,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Storyboarding",
+      "Video Production",
+      "Planning"
+    ]
+  },
+  {
+    "id": 563,
+    "name": "Free Content AI",
+    "description": "Completely free AI tools for content creators. No credit card required.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://free-content-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free AI tools for content creators.",
+    "rating": 4.4,
+    "rating_count": 2601,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.190186127148934,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.930738236840062,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.871243795259274,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.871703464545302,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.20524712069449,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.838889834276142,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Free Tools",
+      "Content Creation",
+      "Beginners"
+    ]
+  },
+  {
+    "id": 564,
+    "name": "Creator Hub AI",
+    "description": "All-in-one AI platform for content creators. Free plan available.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://creator-hub-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "All-in-one AI creator platform.",
+    "rating": 4.5,
+    "rating_count": 3498,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5802980013551124,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.669574304688911,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.092840341118627,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.535331348492246,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.1297636155414414,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Creators",
+      "All-in-one",
+      "Freemium"
+    ]
+  },
+  {
+    "id": 565,
+    "name": "Social Scheduler AI",
+    "description": "AI-powered social media scheduling. Optimize posting times across platforms.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://social-scheduler-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI social media scheduler.",
+    "rating": 4.6,
+    "rating_count": 1389,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.189318459101333,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.4831766636722366,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.2164009321294955,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.866118869981468,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Social Media",
+      "Scheduling",
+      "Automation"
+    ]
+  },
+  {
+    "id": 566,
+    "name": "AutoPost AI",
+    "description": "Advanced AI social media automation. Create, schedule, and analyze posts.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://autopost-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Advanced AI social media automation.",
+    "rating": 4.6,
+    "rating_count": 559,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.798267230770507,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.698020667282856,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Social Automation",
+      "Analytics",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 567,
+    "name": "Social Calendar AI",
+    "description": "AI-powered social media calendar planner. Plan content weeks in advance.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://social-calendar-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI social media calendar planner.",
+    "rating": 4.2,
+    "rating_count": 236,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.434530157223696,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.372823679069523,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.262298910484156,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.3377907179817825,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.926153146040001,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.217390897556927,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Planning",
+      "Calendar",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 568,
+    "name": "TikTok Hashtag AI",
+    "description": "AI-powered TikTok hashtag generator. Find the best hashtags for maximum reach.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://tiktok-hashtag-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI TikTok hashtag generator.",
+    "rating": 4.2,
+    "rating_count": 2498,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.715477253089691,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.231551378574175,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.027150086469004,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.303623146671769,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.61872188594014,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.548769253204097,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "TikTok",
+      "Hashtags",
+      "Discovery"
+    ]
+  },
+  {
+    "id": 569,
+    "name": "Facebook Caption AI",
+    "description": "AI caption writer for Facebook posts. Engaging captions that get likes and shares.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://facebook-caption-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Facebook caption writer.",
+    "rating": 4.2,
+    "rating_count": 1406,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.343492583666381,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.8444884375171435,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.166430926774849,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.891976445451793,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.336047107375928,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.5180750066967015,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Facebook",
+      "Captions",
+      "Engagement"
+    ]
+  },
+  {
+    "id": 570,
+    "name": "Instagram Carousel AI",
+    "description": "AI-powered Instagram carousel creator. Beautiful carousels in minutes.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://instagram-carousel-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Instagram carousel creator.",
+    "rating": 4.4,
+    "rating_count": 1698,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.544664281205437,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.284502752233016,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.11188950975457,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.549579088317453,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.9300784936215285,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.2891412413531205,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Instagram",
+      "Carousels",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 571,
+    "name": "YouTube Script AI",
+    "description": "AI YouTube script writer. Engaging scripts for your YouTube channel.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://youtube-script-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI YouTube script writer.",
+    "rating": 4.3,
+    "rating_count": 1865,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.922534853421601,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.459970455045474,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.926021390840707,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.743697817280947,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.0615114564343,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.233092068251747,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "YouTube",
+      "Scripts",
+      "Content"
+    ]
+  },
+  {
+    "id": 572,
+    "name": "LinkedIn Post AI",
+    "description": "AI LinkedIn post generator. Professional posts that build your personal brand.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://linkedin-post-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI LinkedIn post generator.",
+    "rating": 4.2,
+    "rating_count": 3232,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.918112452918893,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.24581611908585,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.528605398734541,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.414811342011221,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.659109456214302,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.338753235941784,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "LinkedIn",
+      "Personal Brand",
+      "Professional"
+    ]
+  },
+  {
+    "id": 573,
+    "name": "Twitter Thread AI",
+    "description": "AI Twitter thread writer. Compelling threads that go viral.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://twitter-thread-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Twitter thread writer.",
+    "rating": 4.6,
+    "rating_count": 314,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.395848891329913,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.325348329791689,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.660644005749452,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.435171775221451,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.8516382255553,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.356712395804381,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Twitter",
+      "Threads",
+      "Viral"
+    ]
+  },
+  {
+    "id": 574,
+    "name": "Pinterest Pin AI",
+    "description": "AI Pinterest pin designer. Eye-catching pins that drive traffic.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://pinterest-pin-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Pinterest pin designer.",
+    "rating": 4.4,
+    "rating_count": 3330,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.872771790911448,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.820303431762475,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.964420352532701,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.966677210627463,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.213807671180626,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.462219825496955,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Pinterest",
+      "Pins",
+      "Traffic"
+    ]
+  },
+  {
+    "id": 575,
+    "name": "Reddit Post AI",
+    "description": "AI Reddit post assistant. Craft posts that get upvotes and engagement.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://reddit-post-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Reddit post assistant.",
+    "rating": 4,
+    "rating_count": 2941,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.143885940279986,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.087073745248207,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.074036361518118,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.691449266482815,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.497537316377283,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.8615231275993627,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Reddit",
+      "Engagement",
+      "Community"
+    ]
+  },
+  {
+    "id": 576,
+    "name": "Email Newsletter AI",
+    "description": "AI newsletter writer. Engaging emails your subscribers will love.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://email-newsletter-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI newsletter writer.",
+    "rating": 4.6,
+    "rating_count": 3300,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.921470933495255,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.291574281866592,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.74341604950623,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.739252913808716,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.428956060893347,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.977955731675712,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Email",
+      "Newsletters",
+      "Subscribers"
+    ]
   }
 ]
