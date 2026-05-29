@@ -1,9 +1,8 @@
 import { MetadataRoute } from 'next';
 import { tools, blogPosts } from '@/types';
 
-// 确保在 Vercel 生产环境中实时生成，并设置缓存时间
+// 动态生成 sitemap，不使用静态缓存
 export const dynamic = 'force-dynamic';
-export const revalidate = 3600; // 每小时重新生成一次
 
 // 分类名称映射，需要与实际路由匹配
 const categories = ['Image', 'Writing', 'Code', 'Video', 'Productivity', 'Audio'];
