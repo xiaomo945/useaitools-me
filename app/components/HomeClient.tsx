@@ -1262,7 +1262,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 >
                   <div className="flex items-start justify-between gap-3 mb-4">
                     <div className="flex items-center gap-3">
-                      <div className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                      <div className={`w-9 h-9 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-lg sm:text-xl font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
                         {tool.name.charAt(0)}
                       </div>
                       <div>
@@ -1371,7 +1371,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                     <div className="flex items-center gap-3">
                       <Link
                         href={`/tools/${tool.id}`}
-                        className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`} 
+                        className={`w-9 h-9 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-lg sm:text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`} 
                         style={{ fontFamily: 'Playfair Display, serif' }}
                       >
                         {tool.name.charAt(0)}
@@ -1555,7 +1555,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         {/* Empty State */}
         {filteredTools.length === 0 && (
           <div className="text-center py-20">
-            <div className="mx-auto w-20 h-20 mb-6 text-slate-300 dark:text-slate-600">
+            <div className="mx-auto w-12 h-12 sm:w-20 sm:h-20 mb-6 text-slate-300 dark:text-slate-600">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full" aria-hidden="true">
                 <path
                   strokeLinecap="round"

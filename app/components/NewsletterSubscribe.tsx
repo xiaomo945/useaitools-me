@@ -48,8 +48,8 @@ export default function NewsletterSubscribe() {
     <div className="bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 rounded-3xl p-8 sm:p-12 shadow-xl shadow-emerald-500/25">
       <div className="max-w-md mx-auto text-center">
         <div className="flex justify-center mb-6">
-          <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
-            <Mail className="w-8 h-8 text-white" />
+          <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
+            <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
           </div>
         </div>
         

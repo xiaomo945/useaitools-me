@@ -293,8 +293,8 @@ export default function AISearchRecommend() {
             {/* No Results */}
             {results.length === 0 && query && !isSearching && (
               <div className="text-center py-8">
-                <div className="w-16 h-16 rounded-full bg-slate-100 dark:bg-gray-800 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">🔍</span>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-slate-100 dark:bg-gray-800 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl sm:text-3xl">🔍</span>
                 </div>
                 <p className="text-slate-600 dark:text-gray-300 mb-2">No matching tools found</p>
                 <p className="text-sm text-slate-500 dark:text-gray-400">Try describing your needs more specifically</p>
