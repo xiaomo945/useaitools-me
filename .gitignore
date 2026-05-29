@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# GSC credentials
+credentials.json
+
+
 # temp
 /.tmp
 
