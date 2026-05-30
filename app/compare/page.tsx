@@ -152,97 +152,187 @@ export default function ComparePage() {
         </div>
 
         {selectedTools.length > 0 && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-xl overflow-x-auto">
-            <table className="w-full min-w-[800px]">
-              <thead className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30">
-                <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-slate-900 dark:text-white w-1/5">
-                    Feature
-                  </th>
-                  {selectedTools.map((tool, idx) => (
-                    <th key={idx} className="px-6 py-4 text-center text-sm font-semibold text-slate-900 dark:text-white">
-                      <div className="flex flex-col items-center gap-2">
-                        <div className={`w-10 h-10 rounded-xl ${getCategoryColors(tool.category).bg}/10 flex items-center justify-center text-xl font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
-                          {tool.name.charAt(0)}
-                        </div>
-                        <span>{tool.name}</span>
+          <>
+            {/* AI Recommendation Section */}
+            <div className="mb-8 bg-white dark:bg-gray-900 border border-emerald-200 dark:border-emerald-800 rounded-3xl p-6 sm:p-8 shadow-xl shadow-emerald-500/10">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center">
+                  <span className="text-white text-xl">🤖</span>
+                </div>
+                <div>
+                  <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">AI Recommendation</h2>
+                  <p className="text-sm text-slate-500 dark:text-gray-400">Based on multi-dimensional ratings and user feedback</p>
+                </div>
+              </div>
+              <div className="space-y-4">
+                {selectedTools.length >= 1 && (
+                  <div className="border-l-4 border-emerald-500 pl-4 py-1 bg-emerald-50 dark:bg-emerald-900/20 rounded-r-xl">
+                    <h3 className="font-semibold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+                      {selectedTools.length === 1 ? 'Great choice' : (() => {
+                        const best = [...selectedTools].sort((a, b) => (b.rating || 0) - (a.rating || 0))[0];
+                        return `Recommended: ${best?.name}`;
+                      })()}
+                    </h3>
+                    <p className="text-sm text-slate-700 dark:text-gray-300 leading-relaxed">
+                      {selectedTools.length === 1 ? (
+                        `${selectedTools[0].name} is an excellent choice! `
+                      ) : (() => {
+                        const [first, second, third] = selectedTools;
+                        let rec = '';
+                        if (first && second) {
+                          const firstScore = first.rating_breakdown;
+                          const secondScore = second.rating_breakdown;
+                          if (firstScore && secondScore) {
+                            if (firstScore.ease_of_use.score > secondScore.ease_of_use.score) {
+                              rec += `For beginners, ${first.name} is more user-friendly with its intuitive interface. `;
+                            }
+                            if (secondScore.output_quality.score > firstScore.output_quality.score) {
+                              rec += `For professionals, ${second.name} offers superior output quality. `;
+                            }
+                            if (firstScore.value_for_money.score > secondScore.value_for_money.score) {
+                              rec += `For budget-conscious users, ${first.name} provides better value. `;
+                            }
+                            if (secondScore.features.score > firstScore.features.score) {
+                              rec += `Power users will appreciate ${second.name}'s advanced features. `;
+                            }
+                          }
+                        }
+                        if (!rec) {
+                          const best = [...selectedTools].sort((a, b) => (b.rating || 0) - (a.rating || 0))[0];
+                          rec = `${best?.name} stands out with the highest overall rating of ${best?.rating?.toFixed(1)}. Its strength lies in reliable performance and quality. `;
+                        }
+                        return rec;
+                      })()}
+                    </p>
+                    {selectedTools.length > 1 && (
+                      <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
+                        {[
+                          { label: 'Ease of Use', key: 'ease_of_use' as const },
+                          { label: 'Output Quality', key: 'output_quality' as const },
+                          { label: 'Features', key: 'features' as const },
+                          { label: 'Value', key: 'value_for_money' as const },
+                          { label: 'Stability', key: 'stability' as const },
+                          { label: 'Support', key: 'support' as const }
+                        ].map((metric) => (
+                          <div key={metric.key} className="bg-white dark:bg-gray-800 p-2 rounded-lg border border-slate-100 dark:border-gray-700">
+                            <div className="font-medium text-slate-600 dark:text-gray-300 mb-1">{metric.label}</div>
+                            <div className="flex items-center justify-around">
+                              {selectedTools.map((t, i) => {
+                                const score = t.rating_breakdown?.[metric.key]?.score || 0;
+                                const isBest = selectedTools.reduce((best, curr) => {
+                                  const bScore = best.rating_breakdown?.[metric.key]?.score || 0;
+                                  const cScore = curr.rating_breakdown?.[metric.key]?.score || 0;
+                                  return cScore > bScore ? curr : best;
+                                }, t).id === t.id;
+                                return (
+                                  <div key={i} className={`text-center ${isBest ? 'font-bold text-emerald-600 dark:text-emerald-400' : 'text-slate-500 dark:text-gray-400'}`}>
+                                    <div>{t.name.charAt(0)}</div>
+                                    <div>{score.toFixed(1)}★</div>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ))}
                       </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Comparison Table */}
+            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-xl overflow-x-auto">
+              <table className="w-full min-w-[800px]">
+                <thead className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/30 dark:to-teal-900/30">
+                  <tr>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-slate-900 dark:text-white w-1/5">
+                      Feature
                     </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-200 dark:divide-gray-800">
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Category</td>
-                  {selectedTools.map((tool, idx) => (
-                    <td key={idx} className="px-6 py-4 text-center">
-                      <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold ${getCategoryColors(tool.category).bg} text-white`}>
-                        {tool.category}
-                      </span>
-                    </td>
-                  ))}
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Rating</td>
-                  {selectedTools.map((tool, idx) => (
-                    <td key={idx} className="px-6 py-4 text-center">
-                      <div className="flex items-center justify-center gap-2">
-                        <StarRating rating={tool.rating || 4.0} size="sm" />
-                        <span className="text-sm text-slate-600 dark:text-gray-400">
-                          ({tool.rating_count || 0} reviews)
+                    {selectedTools.map((tool, idx) => (
+                      <th key={idx} className="px-6 py-4 text-center text-sm font-semibold text-slate-900 dark:text-white">
+                        <div className="flex flex-col items-center gap-2">
+                          <div className={`w-10 h-10 rounded-xl ${getCategoryColors(tool.category).bg}/10 flex items-center justify-center text-xl font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                            {tool.name.charAt(0)}
+                          </div>
+                          <span>{tool.name}</span>
+                        </div>
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-200 dark:divide-gray-800">
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Category</td>
+                    {selectedTools.map((tool, idx) => (
+                      <td key={idx} className="px-6 py-4 text-center">
+                        <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold ${getCategoryColors(tool.category).bg} text-white`}>
+                          {tool.category}
                         </span>
-                      </div>
-                    </td>
-                  ))}
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Description</td>
-                  {selectedTools.map((tool, idx) => (
-                    <td key={idx} className="px-6 py-4 text-sm text-slate-600 dark:text-gray-400">
-                      {tool.description}
-                    </td>
-                  ))}
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Pricing</td>
-                  {selectedTools.map((tool, idx) => (
-                    <td key={idx} className="px-6 py-4 text-center">
-                      <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold ${getPricingColors(tool.pricing).bg} ${getPricingColors(tool.pricing).text}`}>
-                        {tool.pricing}
-                      </span>
-                    </td>
-                  ))}
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">VPN Required</td>
-                  {selectedTools.map((tool, idx) => (
-                    <td key={idx} className="px-6 py-4 text-center">
-                      {tool.needs_vpn ? (
-                        <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-orange-100 dark:bg-orange-500/20 text-orange-700 dark:text-orange-300">
-                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                          </svg>
-                          Yes
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Overall Rating</td>
+                    {selectedTools.map((tool, idx) => (
+                      <td key={idx} className="px-6 py-4 text-center">
+                        <div className="flex items-center justify-center gap-2">
+                          <StarRating rating={tool.rating || 4.0} size="sm" />
+                          <span className="text-sm text-slate-600 dark:text-gray-400">
+                            {tool.rating?.toFixed(1) || '4.0'} ({tool.rating_count || 0} reviews)
+                          </span>
+                        </div>
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Description</td>
+                    {selectedTools.map((tool, idx) => (
+                      <td key={idx} className="px-6 py-4 text-sm text-slate-600 dark:text-gray-400">
+                        {tool.description}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">Pricing</td>
+                    {selectedTools.map((tool, idx) => (
+                      <td key={idx} className="px-6 py-4 text-center">
+                        <span className={`inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold ${getPricingColors(tool.pricing).bg} ${getPricingColors(tool.pricing).text}`}>
+                          {tool.pricing}
                         </span>
-                      ) : (
-                        <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
-                          <Check className="w-3 h-3" />
-                          No
-                        </span>
-                      )}
-                    </td>
-                  ))}
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">User Review</td>
-                  {selectedTools.map((tool, idx) => (
-                    <td key={idx} className="px-6 py-4 text-sm text-slate-600 dark:text-gray-400">
-                      "{getMockReview(tool.name)}"
-                    </td>
-                  ))}
-                </tr>
-              </tbody>
-            </table>
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">VPN Required</td>
+                    {selectedTools.map((tool, idx) => (
+                      <td key={idx} className="px-6 py-4 text-center">
+                        {tool.needs_vpn ? (
+                          <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-orange-100 dark:bg-orange-500/20 text-orange-700 dark:text-orange-300">
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                            Yes
+                          </span>
+                        ) : (
+                          <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                            <Check className="w-3 h-3" />
+                            No
+                          </span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">User Review</td>
+                    {selectedTools.map((tool, idx) => (
+                      <td key={idx} className="px-6 py-4 text-sm text-slate-600 dark:text-gray-400">
+                        "{getMockReview(tool.name)}"
+                      </td>
+                    ))}
+                  </tr>
+                </tbody>
+              </table>
 
             <div className="bg-slate-50 dark:bg-gray-900/50 border-t border-slate-200 dark:border-gray-800 p-8">
               <div className="grid grid-cols-1 gap-6">
