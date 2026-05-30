@@ -36301,5 +36301,1535 @@
       "Content",
       "Team"
     ]
+  },
+  {
+    "id": 771,
+    "name": "YouTube Shorts AI Optimizer",
+    "description": "专为YouTube Shorts设计的AI优化工具，自动生成标题、标签、缩略图和描述",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://youtube-shorts-ai-optimizer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI optimizer for YouTube Shorts, auto-generates titles, tags, thumbnails, descriptions",
+    "rating": 4.7,
+    "rating_count": 4490,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.516034425013541,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.886217981819332,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.535414913421896,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.836285810745089,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.639917781302351,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "YouTube Shorts",
+      "Content Optimization",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 772,
+    "name": "LinkedIn Live AI Producer",
+    "description": "AI工具帮助制作专业LinkedIn Live直播，自动字幕、场景切换和互动功能",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://linkedin-live-ai-producer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered LinkedIn Live producer, auto-captions, scene transitions, engagement",
+    "rating": 4.7,
+    "rating_count": 4741,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.243217998123448,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.509683490431507,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.474276427407272,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "LinkedIn Live",
+      "Video Production",
+      "Professional Networking"
+    ]
+  },
+  {
+    "id": 773,
+    "name": "Sticker AI Creator",
+    "description": "AI贴纸设计工具，支持自定义贴纸、动画贴纸和贴纸包制作",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://sticker-ai-creator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI sticker design tool, custom stickers, animated stickers, sticker packs",
+    "rating": 4.7,
+    "rating_count": 3376,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.232198615117954,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.765585102134228,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.720226304245993,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.557682241314683,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Sticker Design",
+      "Messaging Apps",
+      "Creative"
+    ]
+  },
+  {
+    "id": 774,
+    "name": "AI Sound Effect Generator",
+    "description": "AI音效生成工具，快速创建各种专业音效，支持自定义参数",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://ai-sound-effect-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI sound effect generator, create pro sounds, customizable parameters",
+    "rating": 4.6,
+    "rating_count": 4629,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.204681197786872,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.617191703074152,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.797712149758011,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.466351891787519,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.979459176740092,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Sound Effects",
+      "Audio Production",
+      "Creative"
+    ]
+  },
+  {
+    "id": 775,
+    "name": "Microservices AI Architect",
+    "description": "AI辅助微服务架构设计，自动生成架构图、服务拆分建议和代码模板",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://microservices-ai-architect.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI assistant for microservices architecture, diagrams, service split suggestions",
+    "rating": 4.1,
+    "rating_count": 922,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.540431862620765,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.316620660233741,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.365540040063361,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.804047217017601,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.03555504506824,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.227898807694408,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Microservices",
+      "Architecture",
+      "Backend Dev"
+    ]
+  },
+  {
+    "id": 776,
+    "name": "Product Review AI Writer",
+    "description": "专业产品评论AI写作工具，生成详细、有说服力的评论内容",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://product-review-ai-writer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional product review AI writer, detailed, persuasive reviews",
+    "rating": 4.6,
+    "rating_count": 4873,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.207788794997893,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.909094512798329,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.313702324192601,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.421111705075519,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.503130572353455,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Product Reviews",
+      "E-commerce",
+      "Content Writing"
+    ]
+  },
+  {
+    "id": 777,
+    "name": "CapCut AI Enhancer",
+    "description": "AI增强CapCut视频编辑，高级效果、自动剪辑和智能调色",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://capcut-ai-enhancer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-enhanced CapCut editing, advanced effects, auto-cuts, smart grading",
+    "rating": 4.7,
+    "rating_count": 774,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.49971417097684,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.878785719330008,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.801377931012979,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.94913250752747,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "CapCut",
+      "Video Editing",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 778,
+    "name": "Product Launch Video AI",
+    "description": "AI产品发布视频制作工具，模板、动画和专业旁白",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://product-launch-video-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI product launch video maker, templates, animations, pro voiceovers",
+    "rating": 4.5,
+    "rating_count": 1351,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.51746676137151,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.54928046247597,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.712575168132976,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.260419872809587,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.74069039862936,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Product Launch",
+      "Marketing Videos",
+      "Startup"
+    ]
+  },
+  {
+    "id": 779,
+    "name": "Digital Nomad AI Kit",
+    "description": "专为数字游民打造的免费AI工具套件，时区管理、预算规划和远程协作",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://digital-nomad-ai-kit.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free AI toolkit for digital nomads, timezone management, budgeting, remote work",
+    "rating": 4.4,
+    "rating_count": 2398,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.567230416626847,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.249579719979146,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.9556793169892055,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.370055651198468,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.505672945431019,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Digital Nomads",
+      "Remote Work",
+      "Travel"
+    ]
+  },
+  {
+    "id": 780,
+    "name": "Workflow Automation AI",
+    "description": "AI工作流自动化工具，自动连接和自动化你的日常任务",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://workflow-automation-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI workflow automation, auto-connect and automate daily tasks",
+    "rating": 4.7,
+    "rating_count": 168,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.542194722403,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.817917439930041,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.779657092712002,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.3935880286024265,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Workflow Automation",
+      "Productivity",
+      "Time Saving"
+    ]
+  },
+  {
+    "id": 781,
+    "name": "YouTube Shorts Analytics AI",
+    "description": "YouTube Shorts数据分析AI，优化策略和增长建议",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://youtube-shorts-analytics-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "YouTube Shorts analytics AI, optimization strategies, growth tips",
+    "rating": 4.9,
+    "rating_count": 4950,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.809886155730226,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.757224760987873,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "YouTube Analytics",
+      "Content Growth",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 782,
+    "name": "Live Caption AI Pro",
+    "description": "专业直播字幕AI，支持多语言、实时翻译和样式自定义",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://live-caption-ai-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional live caption AI, multi-language, real-time translation, styling",
+    "rating": 4.1,
+    "rating_count": 2750,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.585199400583034,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.651844876495147,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.680259767412635,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.791370306392962,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.637657690362741,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.4509132713329675,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Live Captions",
+      "Accessibility",
+      "Multilingual"
+    ]
+  },
+  {
+    "id": 783,
+    "name": "Sticker Pack Marketplace AI",
+    "description": "AI贴纸包市场助手，帮助设计和销售原创贴纸",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://sticker-pack-marketplace-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI sticker pack marketplace assistant, design and sell stickers",
+    "rating": 4.2,
+    "rating_count": 2009,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.087994015547439,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.245844742665041,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.912647859678053,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.728288242249196,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.78192806952716,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.010267884893191,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Sticker Marketplace",
+      "Monetization",
+      "Creativity"
+    ]
+  },
+  {
+    "id": 784,
+    "name": "Game Sound AI Studio",
+    "description": "AI游戏音效制作工作室，环境音、角色音效和背景音乐",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://game-sound-ai-studio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI game sound studio, ambience, character sounds, bgm",
+    "rating": 4.5,
+    "rating_count": 793,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.629898187194222,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.32367934999991,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.792827134722748,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.68103096561478,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.153511415600204,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Game Audio",
+      "Sound Design",
+      "Game Dev"
+    ]
+  },
+  {
+    "id": 785,
+    "name": "Microservices Code Generator",
+    "description": "AI微服务代码生成器，支持多种语言和框架",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://microservices-code-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI microservices code generator, multi-language, frameworks",
+    "rating": 4.5,
+    "rating_count": 4118,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.524142111961885,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.856854319506774,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.431608890460451,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.363314728386378,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.6929382492826885,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.169582817866191,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Code Generation",
+      "Microservices",
+      "Developer Tools"
+    ]
+  },
+  {
+    "id": 786,
+    "name": "Review Comparison AI",
+    "description": "AI产品评论对比工具，分析并对比多个产品的优缺点",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://review-comparison-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI product review comparison tool, analyze pros and cons",
+    "rating": 4.9,
+    "rating_count": 2417,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.447477704754521,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.5646668983023755,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Review Comparison",
+      "Buying Guides",
+      "Content"
+    ]
+  },
+  {
+    "id": 787,
+    "name": "Descript AI Voiceover",
+    "description": "Descript AI语音生成，自然流畅的专业声音",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://descript-ai-voiceover.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Descript AI voiceover, natural, professional voices",
+    "rating": 4.8,
+    "rating_count": 143,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.684821344912989,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.742626411032341,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.7925329356118915,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.59411190667693,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Descript",
+      "Voice Generation",
+      "Podcasts"
+    ]
+  },
+  {
+    "id": 788,
+    "name": "Launch Video AI Scriptwriter",
+    "description": "产品发布视频AI脚本作家，专业结构和有说服力的文案",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://launch-video-ai-scriptwriter.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI scriptwriter for launch videos, pro structure, persuasive copy",
+    "rating": 4.3,
+    "rating_count": 3744,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7743958118369925,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.896808753028644,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.475059908098074,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.23579246861542,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.0419849237698635,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.175766365928964,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Video Scripts",
+      "Product Launch",
+      "Copywriting"
+    ]
+  },
+  {
+    "id": 789,
+    "name": "Nomad Travel Planner AI",
+    "description": "数字游民旅行规划AI，预算优化、行程安排和目的地推荐",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://nomad-travel-planner-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Digital nomad travel planner AI, budget optimization, itineraries",
+    "rating": 4.2,
+    "rating_count": 3206,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.047732156847371,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.000469793021579,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.330380089638611,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.164919656021915,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.9987303671289713,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.451408659120539,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Travel Planning",
+      "Nomad Life",
+      "Budgeting"
+    ]
+  },
+  {
+    "id": 790,
+    "name": "No-Code Workflow AI",
+    "description": "无代码工作流AI，拖拽式自动化，无需编程",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://no-code-workflow-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "No-code workflow AI, drag-and-drop automation, no programming",
+    "rating": 4.7,
+    "rating_count": 1114,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.429263983585641,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.491418623934369,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.9851576884018645,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "No-Code",
+      "Automation",
+      "Productivity"
+    ]
+  },
+  {
+    "id": 791,
+    "name": "Shorts Thumbnail AI",
+    "description": "YouTube Shorts缩略图AI生成器，高点击率设计",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://shorts-thumbnail-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "YouTube Shorts thumbnail AI generator, high CTR designs",
+    "rating": 4.5,
+    "rating_count": 3938,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.116039994773395,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.144233000432086,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.625704823458643,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.271672173171034,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.123009309136207,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Thumbnail Design",
+      "YouTube",
+      "Click Optimization"
+    ]
+  },
+  {
+    "id": 792,
+    "name": "Live Stream AI Manager",
+    "description": "直播流AI管理器，监控、互动和内容分析",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://live-stream-ai-manager.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Live stream AI manager, monitoring, engagement, analytics",
+    "rating": 4.1,
+    "rating_count": 4442,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8902077128053145,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.436553570710399,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.438314329429701,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.688614154542423,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.493991891185269,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.7697934253914127,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Live Streaming",
+      "Content Management",
+      "Engagement"
+    ]
+  },
+  {
+    "id": 793,
+    "name": "Sticker Animation AI",
+    "description": "AI贴纸动画工具，让静态贴纸动起来",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://sticker-animation-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI sticker animation tool, animate static stickers",
+    "rating": 4.7,
+    "rating_count": 372,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.419541340668416,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.559036375784533,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.3034110285662805,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.523894290519116,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.866839570260162,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.294534291921277,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Animation",
+      "Stickers",
+      "Creative Tools"
+    ]
+  },
+  {
+    "id": 794,
+    "name": "Foley AI Sound Designer",
+    "description": "AI拟音设计师，自动生成电影级拟音音效",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://foley-ai-sound-designer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI foley sound designer, auto-generate cinematic foley",
+    "rating": 4.3,
+    "rating_count": 2671,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.954097266407337,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.069427886828044,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.163789285939572,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.874569784695652,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.240015322593886,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.8565539938903446,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Foley",
+      "Sound Design",
+      "Film Audio"
+    ]
+  },
+  {
+    "id": 795,
+    "name": "API Gateway AI Config",
+    "description": "AI配置微服务API网关，安全、负载均衡和缓存",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://api-gateway-ai-config.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI configures microservices API gateway, security, load balancing, caching",
+    "rating": 4.2,
+    "rating_count": 3980,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9269149468767464,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.644260774354863,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.8922034425544627,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.825976691574675,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.506230498725102,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.8785706417037056,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "API Gateway",
+      "Microservices",
+      "DevOps"
+    ]
+  },
+  {
+    "id": 796,
+    "name": "Affiliate Review AI",
+    "description": "AI联盟营销评论写作，优化SEO和转化",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://affiliate-review-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI affiliate review writer, SEO-optimized, high-conversion",
+    "rating": 4.2,
+    "rating_count": 3914,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.511431693279981,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.763219859571963,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.339349036182468,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.795486841338889,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.047235639710821,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.144480177037702,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Affiliate Marketing",
+      "Reviews",
+      "SEO"
+    ]
+  },
+  {
+    "id": 797,
+    "name": "Video Editing Assistant AI",
+    "description": "AI视频编辑助手，自动剪辑、转场和调色建议",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://video-editing-assistant-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video editing assistant, auto-cuts, transitions, color grading tips",
+    "rating": 4.4,
+    "rating_count": 4196,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.0361086314210874,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.7302067784845345,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.98658129348273,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.784025165007022,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.597284566001958,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.955400041517688,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video Editing",
+      "AI Assistant",
+      "Content Creation"
+    ]
+  },
+  {
+    "id": 798,
+    "name": "Nomad Budget Tracker AI",
+    "description": "数字游民预算追踪AI，多货币、自动分类",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://nomad-budget-tracker-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Digital nomad budget tracker AI, multi-currency, auto-categories",
+    "rating": 4.6,
+    "rating_count": 4608,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.323611948609972,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.681810482405194,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.572419113914956,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.674908424894154,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.934330422531308,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.575515758721459,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Budgeting",
+      "Nomad Life",
+      "Finance"
+    ]
+  },
+  {
+    "id": 799,
+    "name": "Business Process AI Automator",
+    "description": "业务流程AI自动化器，优化办公流程",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://business-process-ai-automator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Business process AI automator, optimize office workflows",
+    "rating": 4.8,
+    "rating_count": 856,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.80802532482894,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.425623853191004,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Business Process",
+      "Automation",
+      "Enterprise"
+    ]
+  },
+  {
+    "id": 800,
+    "name": "Shorts SEO AI Optimizer",
+    "description": "YouTube Shorts SEO AI优化器，标签、标题和描述优化",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://shorts-seo-ai-optimizer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "YouTube Shorts SEO optimizer AI, tags, title, description",
+    "rating": 4.5,
+    "rating_count": 5057,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.756494517740001,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.36269728249721,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.562731746592809,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.522212642870276,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.260567480884391,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.447338442603477,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "YouTube SEO",
+      "Shorts",
+      "Growth"
+    ]
   }
 ]
