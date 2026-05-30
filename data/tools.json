@@ -37831,5 +37831,1484 @@
       "Shorts",
       "Growth"
     ]
+  },
+  {
+    "id": 801,
+    "name": "Instagram Reels AI Optimizer",
+    "description": "专为Instagram Reels设计的AI优化工具，自动生成热门标签、标题和发布时间建议",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://instagram-reels-ai-optimizer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI optimizer for Instagram Reels, auto-generates trending hashtags, titles, optimal posting times",
+    "rating": 4.7,
+    "rating_count": 917,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.788133221216372,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.402840125593742,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.828861649114797,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.591302344035015,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.852969539026042,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.936804822149936,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Instagram Reels",
+      "Social Media",
+      "Content Optimization"
+    ]
+  },
+  {
+    "id": 802,
+    "name": "Twitter Spaces AI Producer",
+    "description": "AI驱动的Twitter Spaces制作工具，自动生成章节、要点和回放视频",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://twitter-spaces-ai-producer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered Twitter Spaces producer, auto-generates chapters, key points, replay videos",
+    "rating": 4.6,
+    "rating_count": 625,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.24773013529418,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.346377840053133,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.9725413020613,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.748610099531733,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.982517908072898,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Twitter Spaces",
+      "Audio Content",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 803,
+    "name": "Meme AI Creator",
+    "description": "AI meme生成器，支持自定义文字、热门模板和批量生成",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://meme-ai-creator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI meme creator, custom text, trending templates, batch generation",
+    "rating": 4.4,
+    "rating_count": 3984,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.675589670165746,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.597198084208245,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.335325868235745,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.757362315557132,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.679684572923487,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.725711741518547,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Meme Creation",
+      "Social Media",
+      "Viral Content"
+    ]
+  },
+  {
+    "id": 804,
+    "name": "Lo-Fi AI Music Generator",
+    "description": "AI Lo-Fi音乐生成器，快速创建轻松背景音乐，支持自定义参数",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://lo-fi-ai-music-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Lo-Fi music generator, create chill background music, customizable parameters",
+    "rating": 4.8,
+    "rating_count": 2576,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.997526339754687,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.944243369277742,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.788310506775462,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Lo-Fi Music",
+      "Background Music",
+      "Content Creation"
+    ]
+  },
+  {
+    "id": 805,
+    "name": "Serverless AI Architect",
+    "description": "AI辅助无服务器架构设计，自动生成Lambda函数、API网关配置和架构图",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://serverless-ai-architect.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI assistant for serverless architecture, auto-generates Lambda functions, API gateway configs",
+    "rating": 4.6,
+    "rating_count": 1173,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.131458914445462,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.466183952234794,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.778938207294303,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.766849880431866,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.767741090900334,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.861745077268371,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Serverless",
+      "AWS Lambda",
+      "Cloud Architecture"
+    ]
+  },
+  {
+    "id": 806,
+    "name": "Sales Copy AI Writer",
+    "description": "专业AI销售文案写作工具，生成高转化率的销售页面和广告文案",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://sales-copy-ai-writer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional AI sales copy writer, high-conversion sales pages and ad copy",
+    "rating": 4.1,
+    "rating_count": 2085,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.069641283003812,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.9692776391004143,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.270429017785597,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 3.9308482938584475,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.356666799568483,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.573037366883735,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Sales Copy",
+      "Marketing",
+      "Conversion Optimization"
+    ]
+  },
+  {
+    "id": 807,
+    "name": "Synthesia AI Avatar",
+    "description": "AI虚拟人视频生成器，支持多语言、专业形象和自定义场景",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://synthesia-ai-avatar.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI avatar video generator, multi-language, professional avatars, custom scenes",
+    "rating": 4.7,
+    "rating_count": 1265,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.832208915862144,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.570330765071424,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.630965446149208,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.817937646765573,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Synthesia",
+      "AI Avatar",
+      "Video Production"
+    ]
+  },
+  {
+    "id": 808,
+    "name": "HeyGen AI Video Studio",
+    "description": "HeyGen AI视频工作室，AI虚拟人、数字人和专业视频模板",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://heygen-ai-video-studio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "HeyGen AI video studio, AI avatars, digital humans, professional templates",
+    "rating": 4.4,
+    "rating_count": 1349,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.350661178954582,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.255329371521496,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.5552151966302645,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.704229421281247,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.987703147974816,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.714302500443779,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "HeyGen",
+      "AI Video",
+      "Avatar Technology"
+    ]
+  },
+  {
+    "id": 809,
+    "name": "Restaurant Promo AI",
+    "description": "AI餐厅宣传视频制作工具，美食展示、菜单动画和氛围渲染",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://restaurant-promo-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI restaurant promo video maker, food showcase, menu animations, ambiance",
+    "rating": 4.1,
+    "rating_count": 2927,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.252676160689803,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.9241092132618554,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.101587875990067,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.7667649073138065,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.162008726233443,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.312143850290233,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Restaurant Marketing",
+      "Food Videos",
+      "Promo Content"
+    ]
+  },
+  {
+    "id": 810,
+    "name": "Entrepreneur AI Assistant",
+    "description": "专为创业者打造的免费AI助手，商业计划、邮件模板和时间管理",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://entrepreneur-ai-assistant.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free AI assistant for entrepreneurs, business plans, email templates, time management",
+    "rating": 4.3,
+    "rating_count": 2651,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.0275707187622185,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.557046150534541,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.570932138516761,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.488202888544571,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.891324728663114,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.760722331855355,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Entrepreneurs",
+      "Startup Tools",
+      "Free AI"
+    ]
+  },
+  {
+    "id": 811,
+    "name": "CRM Automation AI",
+    "description": "AI驱动的CRM自动化工具，自动跟进客户、提醒和数据分析",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://crm-automation-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered CRM automation, auto-follow-ups, reminders, analytics",
+    "rating": 4.1,
+    "rating_count": 988,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.537308863879263,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.638249432578479,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.003724561460399,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.552226441490423,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.182382683312577,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.058013835919063,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "CRM",
+      "Sales Automation",
+      "Customer Management"
+    ]
+  },
+  {
+    "id": 812,
+    "name": "Reels Trend Analyzer AI",
+    "description": "Instagram Reels趋势分析AI，追踪热门内容、预测趋势",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://reels-trend-analyzer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Instagram Reels trend analyzer AI, track trending content, predict trends",
+    "rating": 4.1,
+    "rating_count": 3741,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.069232936694242,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.5579600590047225,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.64170362110888,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.798123510852227,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.516369165447497,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.8209477150870574,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Trend Analysis",
+      "Instagram",
+      "Content Strategy"
+    ]
+  },
+  {
+    "id": 813,
+    "name": "Spaces Transcript AI",
+    "description": "Twitter Spaces转录AI，实时转录、摘要生成和多语言翻译",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://spaces-transcript-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Twitter Spaces transcription AI, real-time transcription, summaries, multilingual",
+    "rating": 4.5,
+    "rating_count": 4849,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.943759021457346,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.65297961690852,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.526343546851749,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.79936241890664,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.89738070316158,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.465640935305779,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Transcription",
+      "Twitter Spaces",
+      "Accessibility"
+    ]
+  },
+  {
+    "id": 814,
+    "name": "Meme Template AI",
+    "description": "AI meme模板库，热门模板推荐、个性化定制",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://meme-template-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI meme template library, trending templates, personalization",
+    "rating": 4.8,
+    "rating_count": 3625,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.985306896362795,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.516772621493043,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.8955828995689625,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.78644264430776,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.863552081988559,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Meme Templates",
+      "Viral Content",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 815,
+    "name": "Beats AI Studio",
+    "description": "AI节拍制作工作室，自动生成Lo-Fi节拍、鼓点和背景音",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://beats-ai-studio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI beats studio, auto-generate Lo-Fi beats, drums, background sounds",
+    "rating": 4.7,
+    "rating_count": 4777,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.377612668799565,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.8810614896989435,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.610699775696845,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Beat Making",
+      "Lo-Fi",
+      "Music Production"
+    ]
+  },
+  {
+    "id": 816,
+    "name": "Serverless Code Generator",
+    "description": "AI无服务器代码生成器，支持AWS、Azure和GCP",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://serverless-code-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI serverless code generator, supports AWS, Azure, GCP",
+    "rating": 4.6,
+    "rating_count": 1716,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.767797665659168,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.31809733221337,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.438733293586038,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.8111483998013576,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Serverless Code",
+      "Cloud Functions",
+      "DevOps"
+    ]
+  },
+  {
+    "id": 817,
+    "name": "Restaurant Menu Video AI",
+    "description": "AI餐厅菜单视频生成器，菜品展示、动画效果和背景音乐",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://restaurant-menu-video-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI restaurant menu video generator, dishes showcase, animations, bgm",
+    "rating": 4.3,
+    "rating_count": 4110,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9736189873023875,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.19931194649044,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.898140806274554,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.999098760261658,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.425096664508759,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.35286434007573,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Restaurant Videos",
+      "Menu Display",
+      "Food Marketing"
+    ]
+  },
+  {
+    "id": 818,
+    "name": "Startup Metrics AI",
+    "description": "创业者指标追踪AI，跟踪关键业务指标和增长数据",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://startup-metrics-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Startup metrics tracker AI, track key business metrics and growth data",
+    "rating": 4.5,
+    "rating_count": 3621,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.0724564232950495,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.431740510056079,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.580047348352191,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.952910065956764,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.935690446229167,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.2682366154748115,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Startup Analytics",
+      "Metrics",
+      "Business Intelligence"
+    ]
+  },
+  {
+    "id": 819,
+    "name": "Lead Scoring AI",
+    "description": "AI线索评分系统，自动评估潜在客户优先级",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://lead-scoring-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI lead scoring system, auto-evaluate lead priority",
+    "rating": 4.4,
+    "rating_count": 3928,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6584820294402896,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.5804899154762415,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.2868816877258675,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.234044540880675,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.8336870497782165,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.883753723915219,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Lead Scoring",
+      "Sales",
+      "CRM"
+    ]
+  },
+  {
+    "id": 820,
+    "name": "Instagram Analytics AI",
+    "description": "Instagram数据分析AI，深度洞察、增长建议和内容优化",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://instagram-analytics-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Instagram analytics AI, deep insights, growth tips, content optimization",
+    "rating": 4.3,
+    "rating_count": 2429,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.323690237515317,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.542227551572636,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.120990856246082,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.926897768424841,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.805692554964355,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Instagram Analytics",
+      "Social Media",
+      "Growth"
+    ]
+  },
+  {
+    "id": 821,
+    "name": "Audio Waveform AI",
+    "description": "AI音频波形可视化工具，为音频添加动态波形动画",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://audio-waveform-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI audio waveform visualizer, add dynamic waveform animations to audio",
+    "rating": 4.4,
+    "rating_count": 1568,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8529808043140994,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.3684709302308224,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.9381468258751084,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.7474192496810845,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.808888880929027,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.7011638868448244,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Audio Visualization",
+      "Video Effects",
+      "Content Creation"
+    ]
+  },
+  {
+    "id": 822,
+    "name": "Viral Meme Predictor AI",
+    "description": "AI病毒 meme预测器，分析meme病毒式传播潜力",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://viral-meme-predictor-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI viral meme predictor, analyze viral potential of memes",
+    "rating": 4.7,
+    "rating_count": 2595,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.849379156729805,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.62093367684407,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.634867049607747,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Viral Analysis",
+      "Meme Marketing",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 823,
+    "name": "Music Looper AI",
+    "description": "AI音乐循环生成器，创建无缝循环的Lo-Fi片段",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://music-looper-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI music looper, create seamless looping Lo-Fi segments",
+    "rating": 4.2,
+    "rating_count": 280,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.462494485019756,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.005421588289507,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.10069115012491,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.427398028884009,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.606694051747694,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.7608253636677933,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Music Loops",
+      "Lo-Fi",
+      "Audio Production"
+    ]
+  },
+  {
+    "id": 824,
+    "name": "Lambda Function AI",
+    "description": "AWS Lambda函数AI助手，代码生成、调试和优化建议",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://lambda-function-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AWS Lambda function AI assistant, code generation, debugging, optimization",
+    "rating": 4.3,
+    "rating_count": 663,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.976654097094827,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.934309099497989,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.838901676363976,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.989920103672239,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.56808500617033,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.6240392860101105,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "AWS Lambda",
+      "Serverless",
+      "Cloud Dev"
+    ]
+  },
+  {
+    "id": 825,
+    "name": "Email Sequence AI",
+    "description": "AI邮件序列生成器，自动创建销售漏斗邮件序列",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://email-sequence-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI email sequence generator, auto-create sales funnel email sequences",
+    "rating": 4.8,
+    "rating_count": 2384,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.8635755221712005,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.452386623548403,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.668661006869573,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.933989461167133,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Email Marketing",
+      "Sales Automation",
+      "Sequences"
+    ]
+  },
+  {
+    "id": 826,
+    "name": "Food Photography AI",
+    "description": "AI美食摄影助手，优化菜品拍摄角度、光线和呈现",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://food-photography-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI food photography assistant, optimize angles, lighting, presentation",
+    "rating": 4.5,
+    "rating_count": 4212,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.510261926297578,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.624703752642676,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.858252983832881,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.478204108863871,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Food Photography",
+      "Restaurant Marketing",
+      "Visual Content"
+    ]
+  },
+  {
+    "id": 827,
+    "name": "Pitch Deck AI",
+    "description": "AI路演演示文稿生成器，专业模板和叙事建议",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://pitch-deck-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI pitch deck generator, professional templates, storytelling advice",
+    "rating": 4.9,
+    "rating_count": 4325,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.70119298533472,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.837302100344659,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Pitch Deck",
+      "Startup",
+      "Investor Relations"
+    ]
+  },
+  {
+    "id": 828,
+    "name": "Pipeline Automation AI",
+    "description": "AI销售管道自动化，自动分配线索、更新状态和生成报告",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://pipeline-automation-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI sales pipeline automation, auto-assign leads, update status, generate reports",
+    "rating": 4.6,
+    "rating_count": 1007,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.316638328966489,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.781879955045431,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.418793032353767,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.763473098582531,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.418564123614007,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.767164973672486,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Sales Pipeline",
+      "Automation",
+      "CRM"
+    ]
+  },
+  {
+    "id": 829,
+    "name": "Social Media Calendar AI",
+    "description": "AI社交媒体日历工具，内容规划、调度和跨平台发布",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://social-media-calendar-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI social media calendar tool, content planning, scheduling, cross-platform posting",
+    "rating": 4.5,
+    "rating_count": 1457,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.31234621444901,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.404215014638834,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.388963637475326,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.710149769561811,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.657148659097163,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.063217466644794,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Social Media",
+      "Content Calendar",
+      "Scheduling"
+    ]
   }
 ]
