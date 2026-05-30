@@ -755,20 +755,40 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
           </div>
         )}
 
-        {/* Similar Tools Section - Enhanced with Smart Recommendations */}
+        {/* Best Alternatives Section */}
         {relatedTools.length > 0 && (
-          <div className="bg-gradient-to-br from-slate-50 to-emerald-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-gradient-to-br from-emerald-50 to-teal-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-emerald-200 dark:border-emerald-800 rounded-3xl p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/25">
+                <span className="text-white text-lg">🔄</span>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Best Alternatives</h2>
+                <p className="text-sm text-slate-500 dark:text-gray-400">Top picks in the same category and skill level</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {relatedTools.slice(0, 3).map((relatedTool, index) => (
+                <SimilarToolCard key={relatedTool.id} relatedTool={relatedTool} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Similar Tools Section - Enhanced with Smart Recommendations */}
+        {relatedTools.length > 3 && (
+          <div className="bg-gradient-to-br from-slate-50 to-emerald-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-500 to-gray-600 flex items-center justify-center shadow-lg shadow-slate-500/25">
                 <span className="text-white text-lg">✨</span>
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Similar Tools</h2>
-                <p className="text-sm text-slate-500 dark:text-gray-400">Based on category, pricing, and user preferences</p>
+                <p className="text-sm text-slate-500 dark:text-gray-400">More options in the same category</p>
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {relatedTools.map((relatedTool, index) => (
+              {relatedTools.slice(3).map((relatedTool, index) => (
                 <SimilarToolCard key={relatedTool.id} relatedTool={relatedTool} />
               ))}
             </div>

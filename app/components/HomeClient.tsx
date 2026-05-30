@@ -1092,6 +1092,94 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           </div>
         </div>
 
+        {/* AI Workflows */}
+        <div className="mb-16">
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2">
+                📋 AI Workflows
+              </h2>
+              <p className="text-slate-600 dark:text-gray-400">
+                Step-by-step guides to achieve specific goals with AI tools
+              </p>
+            </div>
+            <Link href="/workflows" className="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 rounded-full hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition-all duration-300">
+              View All →
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* AI短视频制作 */}
+            <Link href="/workflows/wf-001" className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300">
+                  Video
+                </span>
+                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                  Beginner
+                </span>
+              </div>
+              <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                AI短视频制作
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 line-clamp-2">
+                从脚本撰写到视频生成、配音、字幕，一站式AI短视频制作流程
+              </p>
+              <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-gray-400">
+                <span>⏱️ 45分钟</span>
+              </div>
+            </Link>
+
+            {/* AI博客文章 */}
+            <Link href="/workflows/wf-002" className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300">
+                  Writing
+                </span>
+                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                  Beginner
+                </span>
+              </div>
+              <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                AI博客文章创作
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 line-clamp-2">
+                从主题研究、大纲生成、文章撰写、SEO优化到配图，完整的AI博客创作流程
+              </p>
+              <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-gray-400">
+                <span>⏱️ 60分钟</span>
+              </div>
+            </Link>
+
+            {/* AI产品摄影 */}
+            <Link href="/workflows/wf-003" className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-violet-100 dark:bg-violet-500/20 text-violet-700 dark:text-violet-300">
+                  Image
+                </span>
+                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                  Beginner
+                </span>
+              </div>
+              <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                AI产品摄影与电商图
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 line-clamp-2">
+                无需专业摄影设备，用AI生成高质量产品图、场景图和电商素材
+              </p>
+              <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-gray-400">
+                <span>⏱️ 30分钟</span>
+              </div>
+            </Link>
+          </div>
+
+          <div className="mt-6 text-center sm:hidden">
+            <Link href="/workflows" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300">
+              View All Workflows
+            </Link>
+          </div>
+        </div>
+
         {/* Recent Blog Posts */}
         <div className="mb-16">
           <div className="flex items-center justify-between mb-8">

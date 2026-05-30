@@ -334,47 +334,48 @@ export default function ComparePage() {
                 </tbody>
               </table>
 
-            <div className="bg-slate-50 dark:bg-gray-900/50 border-t border-slate-200 dark:border-gray-800 p-8">
-              <div className="grid grid-cols-1 gap-6">
-                <div className="flex flex-wrap justify-center gap-4">
-                  {selectedTools.map((tool, idx) => (
-                    <a
-                      key={idx}
-                      href={tool.affiliate_link || tool.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
-                    >
-                      Visit {tool.name}
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 7H8.5M17 7v8.5" />
-                      </svg>
-                    </a>
-                  ))}
-                </div>
+              <div className="bg-slate-50 dark:bg-gray-900/50 border-t border-slate-200 dark:border-gray-800 p-8">
+                <div className="grid grid-cols-1 gap-6">
+                  <div className="flex flex-wrap justify-center gap-4">
+                    {selectedTools.map((tool, idx) => (
+                      <a
+                        key={idx}
+                        href={tool.affiliate_link || tool.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
+                      >
+                        Visit {tool.name}
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 7H8.5M17 7v8.5" />
+                        </svg>
+                      </a>
+                    ))}
+                  </div>
 
-                <div className="flex justify-center mt-4">
-                  <button
-                    onClick={handleShare}
-                    className="inline-flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
-                  >
-                    {copied ? (
-                      <>
-                        <Check className="w-5 h-5" />
-                        Link copied!
-                      </>
-                    ) : (
-                      <>
-                        <Share2 className="w-5 h-5" />
-                        Share Comparison
-                      </>
-                    )}
-                  </button>
+                  <div className="flex justify-center mt-4">
+                    <button
+                      onClick={handleShare}
+                      className="inline-flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
+                    >
+                      {copied ? (
+                        <>
+                          <Check className="w-5 h-5" />
+                          Link copied!
+                        </>
+                      ) : (
+                        <>
+                          <Share2 className="w-5 h-5" />
+                          Share Comparison
+                        </>
+                      )}
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </>
         )}
       </div>
       <Footer />
