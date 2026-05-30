@@ -39310,5 +39310,1484 @@
       "Content Calendar",
       "Scheduling"
     ]
+  },
+  {
+    "id": 830,
+    "name": "Facebook Stories AI Optimizer",
+    "description": "专为Facebook Stories设计的AI优化工具，自动生成创意、标签和最佳发布时间建议",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://facebook-stories-ai-optimizer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI optimizer for Facebook Stories, auto-generates ideas, hashtags, optimal posting times",
+    "rating": 4.9,
+    "rating_count": 3113,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.7541580240354335,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.977808609402174,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Facebook Stories",
+      "Social Media",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 831,
+    "name": "Webinar AI Producer",
+    "description": "AI驱动的网络研讨会制作工具，自动生成脚本、幻灯片和回放编辑",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://webinar-ai-producer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered webinar producer, auto-generates scripts, slides, replay editing",
+    "rating": 4.2,
+    "rating_count": 2860,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.467804869553144,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.340328227504515,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.736119793051086,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.5529116108550935,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.061392210265123,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.674548692703317,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Webinars",
+      "Video Production",
+      "Online Events"
+    ]
+  },
+  {
+    "id": 832,
+    "name": "Tattoo AI Designer",
+    "description": "AI纹身设计工具，自定义风格、图案和尺寸预览",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://tattoo-ai-designer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI tattoo designer, custom styles, patterns, and size previews",
+    "rating": 4.8,
+    "rating_count": 4694,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.501646213902556,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.787401435023224,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.827320880402302,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.851074421149294,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Tattoo Design",
+      "Artistic Tools",
+      "Body Art"
+    ]
+  },
+  {
+    "id": 833,
+    "name": "Sleep Sound AI Generator",
+    "description": "AI睡眠音效生成器，白噪音、自然声和冥想音乐",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://sleep-sound-ai-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI sleep sound generator, white noise, nature sounds, meditation music",
+    "rating": 4.6,
+    "rating_count": 1554,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.8965712072989955,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.557793339205862,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.293223463519798,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.7196552440855175,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.94106313169734,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Sleep Sounds",
+      "Relaxation",
+      "Wellness"
+    ]
+  },
+  {
+    "id": 834,
+    "name": "Kubernetes AI Assistant",
+    "description": "AI Kubernetes辅助工具，自动部署、配置优化和故障排查",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://kubernetes-ai-assistant.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Kubernetes assistant, auto-deployment, config optimization, troubleshooting",
+    "rating": 4.7,
+    "rating_count": 4686,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.288109531709004,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.864209874385162,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.550089884324844,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.589435922834005,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.839499619310942,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Kubernetes",
+      "DevOps",
+      "Container Orchestration"
+    ]
+  },
+  {
+    "id": 835,
+    "name": "Landing Page AI Copywriter",
+    "description": "AI落地页文案写作工具，高转化率模板和A/B测试建议",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://landing-page-ai-copywriter.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI landing page copywriter, high-conversion templates, A/B testing advice",
+    "rating": 4.4,
+    "rating_count": 3501,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.378947243645376,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.899587630208893,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.646400117993607,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.92399186563063,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.177965578074088,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.27234651396461,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Landing Pages",
+      "Conversion Optimization",
+      "Copywriting"
+    ]
+  },
+  {
+    "id": 836,
+    "name": "Runway AI Studio",
+    "description": "Runway AI视频工作室，专业视频生成和编辑工具",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://runway-ai-studio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Runway AI video studio, professional video generation and editing",
+    "rating": 4.7,
+    "rating_count": 3736,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.70606186468462,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.587966081438545,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Runway AI",
+      "Video Generation",
+      "Creative Tools"
+    ]
+  },
+  {
+    "id": 837,
+    "name": "Pika AI Video Generator",
+    "description": "Pika AI视频生成器，文本转视频和图像转视频",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://pika-ai-video-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pika AI video generator, text-to-video and image-to-video",
+    "rating": 4.3,
+    "rating_count": 4797,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.32345443719125,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.378114930840723,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.372028420953471,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.5950415399894,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.35939841878107,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.132254569619559,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Pika AI",
+      "Video Generation",
+      "AI Art"
+    ]
+  },
+  {
+    "id": 838,
+    "name": "Kaiber AI Video Creator",
+    "description": "Kaiber AI视频创建工具，音乐视频和动画生成",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://kaiber-ai-video-creator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Kaiber AI video creator, music videos and animation generation",
+    "rating": 4.4,
+    "rating_count": 4337,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.937337378571741,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.593844676454412,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.021177243988658,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.433053309510648,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.710971211115509,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.291092373294696,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Kaiber AI",
+      "Music Videos",
+      "Animation"
+    ]
+  },
+  {
+    "id": 839,
+    "name": "Real Estate Video AI",
+    "description": "AI房地产视频制作工具，虚拟看房和房产展示",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://real-estate-video-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI real estate video maker, virtual tours and property showcases",
+    "rating": 4.5,
+    "rating_count": 982,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.416684628215266,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.961767481904098,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.60246282053878,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.365351581493211,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.6850014476599355,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.1139889254774165,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Real Estate",
+      "Property Videos",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 840,
+    "name": "Blogger AI Assistant",
+    "description": "专为博客作者打造的免费AI助手，标题建议、SEO优化和内容规划",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://blogger-ai-assistant.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free AI assistant for bloggers, title suggestions, SEO optimization, content planning",
+    "rating": 4.4,
+    "rating_count": 2270,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.855960768315766,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.955538791914657,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.9167556878435565,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.384598842379079,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.808366351664541,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.2521231526857335,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Bloggers",
+      "Content Creation",
+      "Free Tools"
+    ]
+  },
+  {
+    "id": 841,
+    "name": "Customer Journey AI",
+    "description": "AI客户旅程自动化工具，映射旅程和个性化体验",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://customer-journey-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI customer journey automation, map journeys and personalize experiences",
+    "rating": 4.5,
+    "rating_count": 1150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4043608234184575,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.602238341469625,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.585949608582262,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.161379503327698,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Customer Journey",
+      "Marketing Automation",
+      "Personalization"
+    ]
+  },
+  {
+    "id": 842,
+    "name": "Stories Trend Analyzer AI",
+    "description": "Facebook Stories趋势分析AI，追踪热门故事和增长策略",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://stories-trend-analyzer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Facebook Stories trend analyzer AI, track trending stories and growth strategies",
+    "rating": 4.9,
+    "rating_count": 4735,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.524053637046932,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.820354920484593,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.798153325647407,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.898651796723392,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.84090248494449,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Trend Analysis",
+      "Facebook",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 843,
+    "name": "Webinar Transcript AI",
+    "description": "网络研讨会转录AI，实时转录、摘要和多语言翻译",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://webinar-transcript-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Webinar transcription AI, real-time transcription, summaries, multilingual",
+    "rating": 4.5,
+    "rating_count": 3424,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.687633476864794,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.746276948975196,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.53498182364683,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.285372303317448,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.244671605612348,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Transcription",
+      "Webinars",
+      "Accessibility"
+    ]
+  },
+  {
+    "id": 844,
+    "name": "Tattoo Sketch AI",
+    "description": "AI纹身草图生成器，多种风格和身体部位预览",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://tattoo-sketch-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI tattoo sketch generator, multiple styles and body part previews",
+    "rating": 4.5,
+    "rating_count": 4279,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.87166272513699,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.412275285011895,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.5334511958087145,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.717670419794118,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.365178617697819,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Tattoo Sketch",
+      "Design Tools",
+      "Body Art"
+    ]
+  },
+  {
+    "id": 845,
+    "name": "Ambient Sound AI",
+    "description": "AI环境音效库，自定义混音和场景音效",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://ambient-sound-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI ambient sound library, custom mixes and scene sounds",
+    "rating": 4.2,
+    "rating_count": 1526,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9148447013004533,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.282291996442752,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.015167403728997,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.694736066363567,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.15157408633856,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.119037353646071,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Ambient Sounds",
+      "Sleep",
+      "Focus"
+    ]
+  },
+  {
+    "id": 846,
+    "name": "K8s Config Generator",
+    "description": "Kubernetes配置生成器，自动生成YAML配置和最佳实践建议",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://k8s-config-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Kubernetes config generator, auto-generate YAML configs and best practices",
+    "rating": 4.5,
+    "rating_count": 4694,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.813623902787228,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.229237516516306,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.382194639791296,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.869314672040111,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Kubernetes Config",
+      "DevOps Tools",
+      "Infrastructure"
+    ]
+  },
+  {
+    "id": 847,
+    "name": "Hero Section AI",
+    "description": "AI落地页Hero区域文案生成器，标题、副标题和CTA",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://hero-section-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI landing page hero section copy, headlines, subheadlines, CTAs",
+    "rating": 4.4,
+    "rating_count": 1828,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.111652756799977,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.2638200679974805,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.344311401911215,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.376698963207503,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.681532562375175,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Landing Page Hero",
+      "Copywriting",
+      "Conversion"
+    ]
+  },
+  {
+    "id": 848,
+    "name": "Property Tour AI",
+    "description": "AI房产虚拟漫游生成器，3D看房和语音导览",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://property-tour-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI property virtual tour generator, 3D walkthroughs and voice guides",
+    "rating": 4.7,
+    "rating_count": 244,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.808502312385572,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.872203730582185,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.480816159587741,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.646600968343453,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.737283367411534,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Virtual Tours",
+      "Real Estate",
+      "Property Marketing"
+    ]
+  },
+  {
+    "id": 849,
+    "name": "Journey Mapping AI",
+    "description": "AI客户旅程地图工具，可视化触点和优化机会",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://journey-mapping-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI customer journey mapping tool, visualize touchpoints and opportunities",
+    "rating": 4.7,
+    "rating_count": 909,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.9357563443641315,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.883232093107166,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.946879448736507,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.935091082667231,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.743517984925358,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Journey Mapping",
+      "Customer Experience",
+      "Analytics"
+    ]
+  },
+  {
+    "id": 850,
+    "name": "Facebook Engagement AI",
+    "description": "Facebook互动AI，自动回复和内容建议",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://facebook-engagement-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Facebook engagement AI, auto-replies and content suggestions",
+    "rating": 4.4,
+    "rating_count": 3971,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.547850160400968,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.6453141851497755,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.73845656013808,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.824550307985702,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.942186686467429,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.9081270107607122,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Facebook Engagement",
+      "Social Media Tools",
+      "Community Management"
+    ]
+  },
+  {
+    "id": 851,
+    "name": "Webinar Slide AI",
+    "description": "网络研讨会幻灯片AI生成器，专业模板和要点整理",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://webinar-slide-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Webinar slide AI generator, professional templates and key points",
+    "rating": 4.5,
+    "rating_count": 228,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.273158959584011,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.435306518819925,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.975770247360473,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.918135708274449,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.983693502577984,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Webinar Slides",
+      "Presentation Tools",
+      "Online Events"
+    ]
+  },
+  {
+    "id": 852,
+    "name": "Ink AI Tattoo Creator",
+    "description": "AI纹身设计创作工具，定制设计和风格混合",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://ink-ai-tattoo-creator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI tattoo design creator, custom designs and style blending",
+    "rating": 4.2,
+    "rating_count": 1713,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9687912537855294,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.694394520050995,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.074874359813999,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.257052453209394,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.586401501960978,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.659258489587879,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Tattoo Creation",
+      "Design Tools",
+      "Artistic"
+    ]
+  },
+  {
+    "id": 853,
+    "name": "Sleep Meditation AI",
+    "description": "AI睡眠冥想引导器，个性化冥想和呼吸练习",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://sleep-meditation-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI sleep meditation guide, personalized meditations and breathing exercises",
+    "rating": 4.7,
+    "rating_count": 1103,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.584960534823085,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.6510637722491905,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Sleep Meditation",
+      "Wellness",
+      "Mindfulness"
+    ]
+  },
+  {
+    "id": 854,
+    "name": "Helm Chart AI",
+    "description": "AI Helm图表助手，Kubernetes部署模板生成",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://helm-chart-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Helm chart assistant, Kubernetes deployment template generation",
+    "rating": 4.2,
+    "rating_count": 2421,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.774528433657091,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.828132305275093,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.015118437084036,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.684932221763778,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.209069668733856,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.618723523535369,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Helm Charts",
+      "Kubernetes",
+      "DevOps"
+    ]
+  },
+  {
+    "id": 855,
+    "name": "CTA Generator AI",
+    "description": "AI CTA生成器，高转化率的行动召唤文案",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://cta-generator-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI CTA generator, high-conversion call-to-action copy",
+    "rating": 4.4,
+    "rating_count": 2316,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.025999451759964,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.8884350458156245,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.257367452310669,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.371218949851458,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.62815674451171,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.733719163998504,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "CTA Copy",
+      "Conversion",
+      "Landing Pages"
+    ]
+  },
+  {
+    "id": 856,
+    "name": "Property Listings AI",
+    "description": "AI房产列表视频生成器，自动创建房源视频",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://property-listings-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI property listing video generator, auto-create property videos",
+    "rating": 4.9,
+    "rating_count": 429,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.393566723662545,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.7198630779907695,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Property Listings",
+      "Real Estate Videos",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 857,
+    "name": "SEO Blog AI",
+    "description": "SEO博客AI，关键词研究和优化建议",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://seo-blog-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SEO blog AI, keyword research and optimization suggestions",
+    "rating": 4.7,
+    "rating_count": 1082,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.476414508361216,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.735359859158062,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.829091086249748,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.507084373412885,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Blog SEO",
+      "Search Optimization",
+      "Content Marketing"
+    ]
+  },
+  {
+    "id": 858,
+    "name": "Personalization AI Engine",
+    "description": "AI个性化引擎，客户行为分析和个性化推荐",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://personalization-ai-engine.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI personalization engine, customer behavior analysis and personalized recommendations",
+    "rating": 4.6,
+    "rating_count": 4833,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.653727890464937,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.663642727730609,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.548512288501312,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.46928825457073,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.7560819145554,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Personalization",
+      "Customer Experience",
+      "Analytics"
+    ]
   }
 ]
