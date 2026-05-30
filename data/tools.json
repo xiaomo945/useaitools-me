@@ -34771,5 +34771,1535 @@
       "Beginners",
       "Quick Results"
     ]
+  },
+  {
+    "id": 741,
+    "name": "TikTok Shop Assistant",
+    "description": "专为TikTok Shop卖家设计的AI助手，自动生成产品描述、回复评论、分析数据，提升电商效率",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://tiktok-shop-assistant.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI assistant for TikTok Shop sellers, auto-generate product descriptions, reply to reviews, analyze data",
+    "rating": 4.5,
+    "rating_count": 3060,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.178160082949887,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.371406370200228,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.302633560781745,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.631175994818507,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.7035933464088595,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.54768044004639,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "TikTok Shop",
+      "E-commerce",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 742,
+    "name": "Reels AI Creator",
+    "description": "一键生成适合Facebook Reels的AI工具，模板丰富，自动剪辑，字幕生成",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://reels-ai-creator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "One-click AI tool for Facebook Reels creation, rich templates, auto-editing, caption generation",
+    "rating": 4.3,
+    "rating_count": 5000,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.957275059258177,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.98812696316026,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.610365953511278,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.664392937893533,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.004305489855686,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.3078618550701755,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Facebook Reels",
+      "Social Media",
+      "Video Creation"
+    ]
+  },
+  {
+    "id": 743,
+    "name": "Greeting Card AI",
+    "description": "AI贺卡生成器，自定义祝福语、风格、人物，制作精美贺卡",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://greeting-card-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI greeting card generator, customize messages, styles, characters, make beautiful cards",
+    "rating": 4.4,
+    "rating_count": 940,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.603228361585288,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.61439429634534,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.697591973486977,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.3290045897663125,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.821596257816396,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.382011435463658,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Greeting Cards",
+      "Design",
+      "Occasions"
+    ]
+  },
+  {
+    "id": 744,
+    "name": "Ringtone Maker AI",
+    "description": "AI铃声创建工具，从任意音频或文本生成个性化铃声",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://ringtone-maker-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI ringtone maker, create personalized ringtones from any audio or text",
+    "rating": 4.7,
+    "rating_count": 2337,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.58239122080918,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.423296773573771,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.687483090537136,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.283528635744953,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Ringtone Creation",
+      "Audio Customization",
+      "Personalization"
+    ]
+  },
+  {
+    "id": 745,
+    "name": "Embedded AI CodeGen",
+    "description": "专为嵌入式系统设计的AI代码生成工具，支持Arduino、Raspberry Pi等",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://embedded-ai-codegen.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI code generator for embedded systems, supports Arduino, Raspberry Pi, etc.",
+    "rating": 4.2,
+    "rating_count": 514,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.7368953190747054,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.33747196128948,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.544448435744458,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.776412707221444,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.0144828235485175,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.6727901727738566,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Embedded Systems",
+      "IoT",
+      "Hardware"
+    ]
+  },
+  {
+    "id": 746,
+    "name": "Grant Writer Pro",
+    "description": "专业的AI拨款申请书写作工具，专业模板，专业语料库",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://grant-writer-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Professional AI grant writing tool, professional templates, professional corpus",
+    "rating": 4.6,
+    "rating_count": 4157,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.772790613157637,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.48651582134452,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.707257001735033,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.1086330917816465,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Grant Writing",
+      "Nonprofits",
+      "Funding"
+    ]
+  },
+  {
+    "id": 747,
+    "name": "Play.ht Voice",
+    "description": "高质量AI语音生成工具，自然流畅",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://play.ht-voice.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "High-quality AI voice generation tool, natural and fluent",
+    "rating": 4.6,
+    "rating_count": 233,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.191699523711491,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.799251966585401,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.63294488840993,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.352563996052575,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Voice Generation",
+      "Audio Production",
+      "Content Creation"
+    ]
+  },
+  {
+    "id": 748,
+    "name": "Cooking Video AI",
+    "description": "AI烹饪视频生成器，步骤动画，语音旁白，食谱分享",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://cooking-video-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI cooking video generator, step animation, voiceover, recipe sharing",
+    "rating": 4.8,
+    "rating_count": 4374,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.910171258191445,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.857537026385517,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.834375353029978,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.618234727559723,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.288158203441258,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Cooking Videos",
+      "Food Content",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 749,
+    "name": "Musician AI Free",
+    "description": "为音乐人准备的免费AI工具集，和弦生成，歌词创作",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://musician-ai-free.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free AI toolset for musicians, chord generation, lyric writing",
+    "rating": 4.6,
+    "rating_count": 4463,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.9076581514046165,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.9435360744546735,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.422649931876695,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.93951903731082,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Musicians",
+      "Music Creation",
+      "Free Tools"
+    ]
+  },
+  {
+    "id": 750,
+    "name": "Content Planner AI",
+    "description": "AI内容规划工具，日历视图，关键词分析，发布调度",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://content-planner-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI content planning tool, calendar view, keyword analysis, scheduling",
+    "rating": 4.9,
+    "rating_count": 4251,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.564956627086704,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.806794646617575,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Planning",
+      "Marketing",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 751,
+    "name": "Shopify AI Assistant",
+    "description": "Shopify店铺AI助手，产品优化，订单管理，客户支持",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://shopify-ai-assistant.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI assistant for Shopify stores, product optimization, order management, customer support",
+    "rating": 4.7,
+    "rating_count": 4269,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.383911925494676,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.703862398002765,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.853823797738187,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Shopify",
+      "E-commerce",
+      "Store Management"
+    ]
+  },
+  {
+    "id": 752,
+    "name": "Instagram Reels AI",
+    "description": "AI Instagram Reels生成器，热门模板，字幕生成，一键发布",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://instagram-reels-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Instagram Reels generator, popular templates, caption generation, one-click publish",
+    "rating": 4.7,
+    "rating_count": 425,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1884251346521,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.673619777968347,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.929963894083789,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Instagram Reels",
+      "Social Media",
+      "Video"
+    ]
+  },
+  {
+    "id": 753,
+    "name": "Birthday Card AI",
+    "description": "生日贺卡AI生成器，个性化照片，祝福语，风格多样",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://birthday-card-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI birthday card generator, personalized photos, greetings, various styles",
+    "rating": 4.6,
+    "rating_count": 3900,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.547108944773546,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.604495263982545,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.472634533004205,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.891221551842772,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Birthday Cards",
+      "Design",
+      "Occasions"
+    ]
+  },
+  {
+    "id": 754,
+    "name": "Alarm Tone AI",
+    "description": "AI闹铃生成器，自然声音，渐强唤醒，自定义唤醒词",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://alarm-tone-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI alarm tone generator, natural sounds, gradual wake-up, custom wake words",
+    "rating": 4.6,
+    "rating_count": 2624,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.827859043745054,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.497776897855801,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.717389079636165,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.460894251990342,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Alarm Tones",
+      "Audio",
+      "Wake Up"
+    ]
+  },
+  {
+    "id": 755,
+    "name": "Arduino AI Coder",
+    "description": "专为Arduino设计的AI编码助手，代码生成，调试，优化",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://arduino-ai-coder.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI coding assistant for Arduino, code generation, debugging, optimization",
+    "rating": 4.2,
+    "rating_count": 2487,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9748183824232597,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.917667507401842,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.229949608678476,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.973657029187095,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.194905952194666,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.8195905500161604,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Arduino",
+      "Embedded",
+      "Coding"
+    ]
+  },
+  {
+    "id": 756,
+    "name": "Funding Proposal AI",
+    "description": "AI基金建议书写作工具，专业建议，数据支持，格式规范",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://funding-proposal-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI funding proposal writing tool, professional advice, data support, format specification",
+    "rating": 4.8,
+    "rating_count": 1185,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.585169756039924,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.761825297140336,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.969005741739235,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.821731445861527,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.512709841754051,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Funding Proposals",
+      "Nonprofits",
+      "Grants"
+    ]
+  },
+  {
+    "id": 757,
+    "name": "ElevenLabs Pro",
+    "description": "ElevenLabs专业版，更多语音，高级功能，API访问",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://elevenlabs-pro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ElevenLabs Pro, more voices, advanced features, API access",
+    "rating": 4.1,
+    "rating_count": 1167,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.527017305702176,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.762254546837015,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.9476843754568867,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.575017164746142,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.772418351709492,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.61859290651493,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "ElevenLabs",
+      "Voice Generation",
+      "Professional"
+    ]
+  },
+  {
+    "id": 758,
+    "name": "Recipe Video AI",
+    "description": "AI食谱视频生成器，从食谱到视频，一键完成",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://recipe-video-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI recipe video generator, from recipe to video, one-click done",
+    "rating": 4.6,
+    "rating_count": 4072,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.676913739897152,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.507697311642411,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.36475782272312,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.470178929241877,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Recipe Videos",
+      "Cooking",
+      "Content"
+    ]
+  },
+  {
+    "id": 759,
+    "name": "Guitar Chord AI",
+    "description": "AI吉他和弦生成器，和弦进行，伴奏生成",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://guitar-chord-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI guitar chord generator, chord progressions, backing track generation",
+    "rating": 4.4,
+    "rating_count": 4653,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9795146390772933,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.8045204538970925,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.297337694842669,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.8672459676928,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Guitar",
+      "Music",
+      "Chords"
+    ]
+  },
+  {
+    "id": 760,
+    "name": "Social Content Planner",
+    "description": "社交媒体内容规划AI，平台整合，内容创意，发布日历",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://social-content-planner.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI social media content planner, platform integration, content ideas, publishing calendar",
+    "rating": 4.8,
+    "rating_count": 2825,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.437656368103861,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.883538323119878,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.660711224827368,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Social Media",
+      "Content Planning",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 761,
+    "name": "TikTok Shop Analyzer",
+    "description": "TikTok Shop数据分析AI，竞品分析，销售预测",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://tiktok-shop-analyzer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "TikTok Shop data analyzer, competitor analysis, sales forecasting",
+    "rating": 4.1,
+    "rating_count": 3740,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.175357739920841,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.202768216478657,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.280814453875715,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 3.932722272510731,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.263093433394748,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.498186679207327,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "TikTok Shop",
+      "Data Analysis",
+      "E-commerce"
+    ]
+  },
+  {
+    "id": 762,
+    "name": "Facebook Reels Editor",
+    "description": "AI Facebook Reels编辑器，自动剪辑，特效添加",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://facebook-reels-editor.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Facebook Reels editor, auto-editing, effect addition",
+    "rating": 4.2,
+    "rating_count": 4884,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.499376212325108,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.891988820296672,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.497179817298214,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.634252590637883,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.183501508633102,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.018717260197746,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Facebook Reels",
+      "Video Editing",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 763,
+    "name": "Holiday Card AI",
+    "description": "节日贺卡AI生成器，节日模板，自定义祝福",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://holiday-card-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI holiday card generator, holiday templates, custom greetings",
+    "rating": 4.3,
+    "rating_count": 2698,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.111184948223226,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.982159160842313,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.726400220536899,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.189248563854024,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.962316413788097,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.766959960198689,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Holiday Cards",
+      "Design",
+      "Festive"
+    ]
+  },
+  {
+    "id": 764,
+    "name": "Notification Sound AI",
+    "description": "AI通知音生成器，自定义，高识别性，趣味",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://notification-sound-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI notification sound generator, customizable, recognizable, fun",
+    "rating": 4.3,
+    "rating_count": 414,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.188484151616306,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.627137078021338,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.363968619595103,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.255199425404716,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.822081441096481,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.399313803676574,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Notification Sounds",
+      "Audio",
+      "Personalization"
+    ]
+  },
+  {
+    "id": 765,
+    "name": "Raspberry Pi AI",
+    "description": "Raspberry Pi AI编程助手，项目模板，代码优化",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://raspberry-pi-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI programming assistant for Raspberry Pi, project templates, code optimization",
+    "rating": 4.3,
+    "rating_count": 1347,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.704909242342725,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.389119594237045,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.132207034318325,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.964893175379654,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.183094331360845,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.011464755387539,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Raspberry Pi",
+      "IoT",
+      "Coding"
+    ]
+  },
+  {
+    "id": 766,
+    "name": "Scholarship Writer AI",
+    "description": "AI奖学金申请写作工具，个人陈述，推荐信",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://scholarship-writer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI scholarship application writing tool, personal statements, recommendation letters",
+    "rating": 4.8,
+    "rating_count": 1231,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.810462328910693,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.610086685492494,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.957115955439783,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Scholarships",
+      "Writing",
+      "Students"
+    ]
+  },
+  {
+    "id": 767,
+    "name": "Murf AI Studio",
+    "description": "Murf AI专业音频工作室，更多声音，高级编辑",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://murf-ai-studio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Murf AI Studio, more voices, advanced editing",
+    "rating": 4.8,
+    "rating_count": 4363,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.65200772133111,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.718447461937746,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.911134820435506,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Murf AI",
+      "Audio Production",
+      "Voiceovers"
+    ]
+  },
+  {
+    "id": 768,
+    "name": "Cooking Tutorial AI",
+    "description": "AI烹饪教程生成器，步骤清晰，演示动画",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://cooking-tutorial-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI cooking tutorial generator, clear steps, demo animations",
+    "rating": 4.5,
+    "rating_count": 4720,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.522312506260416,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.9871088485825465,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.198797236305459,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.472994473495734,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.316728573279741,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Cooking Tutorials",
+      "Video",
+      "Food"
+    ]
+  },
+  {
+    "id": 769,
+    "name": "Drum Pattern AI",
+    "description": "AI鼓点模式生成器，节奏生成，风格选择",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://drum-pattern-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI drum pattern generator, rhythm generation, style selection",
+    "rating": 4.6,
+    "rating_count": 3013,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.406294233827464,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.83467028805452,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.806909689662416,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.479614373544802,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.613716377977035,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Drums",
+      "Music",
+      "Rhythm"
+    ]
+  },
+  {
+    "id": 770,
+    "name": "Editorial Calendar AI",
+    "description": "AI编辑日历，内容规划，团队协作，发布跟踪",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://editorial-calendar-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI editorial calendar, content planning, team collaboration, publishing tracking",
+    "rating": 4.6,
+    "rating_count": 831,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.968306981828631,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.90482323343391,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.587995193459552,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.243672564965179,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-05-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Editorial Calendar",
+      "Content",
+      "Team"
+    ]
   }
 ]
