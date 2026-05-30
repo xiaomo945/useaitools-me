@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
-import { tools, blogPosts } from '@/types';
+import fs from 'fs';
+import path from 'path';
 
 // 动态生成 sitemap，不使用静态缓存
 export const dynamic = 'force-dynamic';
@@ -7,6 +8,49 @@ export const dynamic = 'force-dynamic';
 // 分类名称映射，需要与实际路由匹配
 const categories = ['Image', 'Writing', 'Code', 'Video', 'Productivity', 'Audio'];
 const categorySlugMap = (cat: string) => cat.toLowerCase();
+
+// 直接加载工具数据
+function loadTools() {
+  const toolsPath = path.join(process.cwd(), 'data', 'tools.json');
+  if (fs.existsSync(toolsPath)) {
+    const data = fs.readFileSync(toolsPath, 'utf8');
+    return JSON.parse(data);
+  }
+  return [];
+}
+
+// 直接加载博客文章数据
+function loadBlogPosts() {
+  const blogPostsDir = path.join(process.cwd(), 'data', 'blog-posts');
+  
+  if (!fs.existsSync(blogPostsDir)) {
+    return [];
+  }
+
+  const files = fs.readdirSync(blogPostsDir)
+    .filter(file => file.endsWith('.json') && !file.includes('-') && !file.includes('NaN'));
+
+  const posts = [];
+  
+  for (const file of files) {
+    try {
+      const filePath = path.join(blogPostsDir, file);
+      const content = fs.readFileSync(filePath, 'utf8');
+      const post = JSON.parse(content);
+      posts.push(post);
+    } catch (error) {
+      console.error(`⚠️ 无法加载博客文件: ${file}`, error);
+    }
+  }
+
+  // 按日期降序排序
+  posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  
+  return posts;
+}
+
+const tools = loadTools();
+const blogPosts = loadBlogPosts();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const today = new Date();
@@ -121,7 +165,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
   
   // 7. 工具详情页 - 使用工具自身的更新日期（如果有的话）
-  tools.forEach((tool) => {
+  tools.forEach((tool: any) => {
     sitemap.push({
       url: `https://useaitools.me/tools/${tool.id}`,
       lastModified: new Date(dateStr),
@@ -131,7 +175,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
   
   // 8. 博客文章页 - 使用文章发布日期
-  blogPosts.forEach((post) => {
+  blogPosts.forEach((post: any) => {
     sitemap.push({
       url: `https://useaitools.me/blog/${post.slug}`,
       lastModified: new Date(post.date),
