@@ -7,7 +7,101 @@ import { Home, Share2, Check, Copy } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import StarRating from '@/app/components/StarRating';
 
+type RatingDimension = {
+  score: number;
+  note: string;
+};
+
+type RatingBreakdown = {
+  ease_of_use?: RatingDimension;
+  output_quality?: RatingDimension;
+  features?: RatingDimension;
+  value_for_money?: RatingDimension;
+  stability?: RatingDimension;
+  support?: RatingDimension;
+};
+
+const DIMENSION_LABELS: Record<string, string> = {
+  ease_of_use: 'Ease of Use',
+  output_quality: 'Output Quality',
+  features: 'Features',
+  value_for_money: 'Value for Money',
+  stability: 'Stability',
+  support: 'Support',
+};
+
+const DIMENSIONS = Object.keys(DIMENSION_LABELS);
+
 type Tool = (typeof tools)[0];
+
+interface AIRecommendation {
+  toolRecommendations: {
+    toolName: string;
+    strongestDimension: string;
+    strongestScore: number;
+    summary: string;
+  }[];
+  overallWinner: string;
+  overallWinnerAvg: number;
+}
+
+const generateAIRecommendation = (selectedTools: Tool[]): AIRecommendation | null => {
+  if (selectedTools.length === 0) return null;
+
+  const toolRecommendations = selectedTools.map(tool => {
+    const breakdown = (tool as Record<string, unknown>).rating_breakdown as RatingBreakdown | undefined;
+    let strongestDimension = '';
+    let strongestScore = 0;
+    let totalScore = 0;
+    let dimensionCount = 0;
+
+    DIMENSIONS.forEach(dim => {
+      const dimData = breakdown?.[dim as keyof RatingBreakdown];
+      const score = dimData?.score ?? 0;
+      if (score > 0) {
+        totalScore += score;
+        dimensionCount++;
+        if (score > strongestScore) {
+          strongestScore = score;
+          strongestDimension = dim;
+        }
+      }
+    });
+
+    const avgScore = dimensionCount > 0 ? totalScore / dimensionCount : 0;
+    const dimLabel = DIMENSION_LABELS[strongestDimension] || strongestDimension;
+
+    const summary = strongestScore > 0
+      ? `${tool.name} excels in ${dimLabel} (${strongestScore}/5), making it the go-to choice for users who prioritize ${dimLabel.toLowerCase()}.`
+      : `${tool.name} has limited rating data available for comparison.`;
+
+    return {
+      toolName: tool.name,
+      strongestDimension,
+      strongestScore,
+      summary,
+      avgScore,
+    };
+  });
+
+  const validRecs = toolRecommendations.filter(r => r.strongestScore > 0);
+  if (validRecs.length === 0) return null;
+
+  const overallWinner = toolRecommendations.reduce((best, current) =>
+    current.avgScore > best.avgScore ? current : best
+  , toolRecommendations[0]);
+
+  return {
+    toolRecommendations: toolRecommendations.map(r => ({
+      toolName: r.toolName,
+      strongestDimension: r.strongestDimension,
+      strongestScore: r.strongestScore,
+      summary: r.summary,
+    })),
+    overallWinner: overallWinner.toolName,
+    overallWinnerAvg: Math.round(overallWinner.avgScore * 10) / 10,
+  };
+};
 
 const getCategoryColors = (category: Tool['category']) => {
   switch (category) {
@@ -153,6 +247,35 @@ export default function ComparePage() {
 
         {selectedTools.length > 0 && (
           <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-xl overflow-x-auto">
+            {(() => {
+              const recommendation = generateAIRecommendation(selectedTools);
+              if (!recommendation) return null;
+              return (
+                <div className="border-l-4 border-emerald-600 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-2xl p-6 m-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="text-2xl">🤖</span>
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white">AI Recommendation</h3>
+                  </div>
+                  <div className="space-y-3">
+                    {recommendation.toolRecommendations.map((rec, idx) => (
+                      <p key={idx} className="text-sm text-slate-700 dark:text-gray-300 leading-relaxed">
+                        <span className="font-semibold text-emerald-600 dark:text-emerald-400">{rec.toolName}</span>
+                        {' — '}
+                        {rec.summary}
+                      </p>
+                    ))}
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-emerald-200/60 dark:border-emerald-800/40">
+                    <p className="text-sm font-semibold text-slate-900 dark:text-white">
+                      🏆 Overall Winner: <span className="text-emerald-600 dark:text-emerald-400">{recommendation.overallWinner}</span>
+                      <span className="ml-2 text-xs font-normal text-slate-500 dark:text-gray-400">
+                        (avg {recommendation.overallWinnerAvg}/5)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              );
+            })()}
             <table className="w-full min-w-[800px]">
               <thead className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30">
                 <tr>

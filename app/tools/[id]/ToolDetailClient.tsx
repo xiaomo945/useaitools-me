@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { ArrowRight, Home, Copy, Check, ChevronDown } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import toolsData from '@/data/tools.json';
 
 // Save tool to browsing history
 const saveToHistory = (toolId: number) => {
@@ -143,6 +144,7 @@ type Tool = {
   last_updated?: string;
   skill_level?: string;
   best_for?: string[];
+  description_en?: string;
 };
 
 // Helper function to check if a tool has affiliate link
@@ -327,6 +329,21 @@ export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; r
     ...faq,
     answer: faq.answer.replace(/\{CTA_URL\}/g, ctaUrl)
   }));
+
+  const allTools = toolsData as Tool[];
+  const relatedToolIds = new Set(relatedTools.map(t => t.id));
+  const getBestAlternatives = (): Tool[] => {
+    const excludeIds = new Set([tool.id, ...relatedToolIds]);
+    const sameCategory = allTools.filter(t => t.category === tool.category && !excludeIds.has(t.id));
+    const sameCategoryAndSkill = tool.skill_level
+      ? sameCategory.filter(t => t.skill_level === tool.skill_level)
+      : [];
+    const pool = sameCategoryAndSkill.length > 0 ? sameCategoryAndSkill : sameCategory;
+    return [...pool]
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+      .slice(0, 3);
+  };
+  const bestAlternatives = getBestAlternatives();
   
   useEffect(() => {
     saveToHistory(tool.id);
@@ -385,6 +402,40 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
         <div className="flex items-center gap-1.5">
           <StarRating rating={Math.round(relatedTool.rating)} />
           <span className="text-xs text-slate-500 dark:text-gray-400">{relatedTool.rating}</span>
+        </div>
+      )}
+    </Link>
+  );
+};
+
+const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
+  const altColors = getCategoryColors(altTool.category);
+  const desc = (altTool.description_en || altTool.description).slice(0, 80);
+  return (
+    <Link
+      href={`/tools/${altTool.id}`}
+      className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 border-l-4 border-l-amber-500 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
+    >
+      <div className="flex items-center gap-3 mb-3">
+        <div className={`w-9 h-9 rounded-lg ${altColors.bg}/10 flex items-center justify-center ${altColors.textLight} dark:${altColors.text} text-sm font-bold`}>
+          {altTool.name.charAt(0)}
+        </div>
+        <div className="flex-1 min-w-0">
+          <h4 className="font-semibold text-sm text-slate-900 dark:text-white truncate group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+            {altTool.name}
+          </h4>
+          <span className={`text-xs ${altColors.textLight} dark:${altColors.text}`}>
+            {altTool.category}
+          </span>
+        </div>
+      </div>
+      <p className="text-slate-600 dark:text-gray-300 text-xs leading-relaxed mb-3">
+        {desc}{(altTool.description_en || altTool.description).length > 80 ? '...' : ''}
+      </p>
+      {altTool.rating && (
+        <div className="flex items-center gap-1.5">
+          <StarRating rating={Math.round(altTool.rating)} />
+          <span className="text-xs text-slate-500 dark:text-gray-400">{altTool.rating}</span>
         </div>
       )}
     </Link>
@@ -750,6 +801,25 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
                     </div>
                   </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {bestAlternatives.length > 0 && (
+          <div className="bg-gradient-to-br from-amber-50/50 to-orange-50/30 dark:from-gray-900 dark:to-amber-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-lg shadow-amber-500/25">
+                <span className="text-white text-lg">🔄</span>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Best Alternatives</h2>
+                <p className="text-sm text-slate-500 dark:text-gray-400">Same category, same skill level — different approach</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {bestAlternatives.map((altTool) => (
+                <AlternativeToolCard key={altTool.id} altTool={altTool} />
               ))}
             </div>
           </div>

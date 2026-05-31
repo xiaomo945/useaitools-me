@@ -1221,6 +1221,13 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 href: '/category/writing',
                 color: 'bg-purple-500/10 hover:bg-purple-500/20',
               },
+              {
+                title: 'AI Workflows',
+                description: 'Step-by-step guides',
+                icon: '🔄',
+                href: '/workflows',
+                color: 'bg-emerald-500/10 hover:bg-emerald-500/20',
+              },
             ].map((useCase) => (
               <Link
                 key={useCase.title}
