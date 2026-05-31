@@ -104,6 +104,28 @@ export default function Home() {
     ]
   };
 
+  // CollectionPage Schema
+  const collectionPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    'name': 'AI Tools Directory — Use AI Tools',
+    'description': 'Curated collection of the best AI tools across Writing, Image, Productivity, Code, Audio, and Video categories.',
+    'url': 'https://useaitools.me',
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Use AI Tools',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': 'https://useaitools.me/logo.png',
+      },
+    },
+    'about': {
+      '@type': 'Thing',
+      'name': 'Artificial Intelligence Tools',
+    },
+    'numberOfItems': enrichedTools.length,
+  };
+
   return (
     <>
       <script
@@ -113,6 +135,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }}
       />
       <HomeClient 
         initialTools={initialTools} 

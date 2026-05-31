@@ -116,7 +116,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
         '@type': 'SoftwareApplication',
         'name': tool.name,
         'description': tool.description,
-        'applicationCategory': tool.category,
+        'applicationCategory': `https://schema.org/${tool.category}Application`,
         'operatingSystem': 'Web',
         'url': tool.url,
         'offers': {
@@ -124,7 +124,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
           'price': ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
           'priceCurrency': 'USD',
           'availability': 'https://schema.org/InStock',
-          'name': tool.pricing
+          'priceSpecification': {
+            '@type': 'PriceSpecification',
+            'price': ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
+            'priceCurrency': 'USD',
+            'description': tool.pricing,
+          },
         },
         'aggregateRating': {
           '@type': 'AggregateRating',
@@ -132,7 +137,20 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
           'ratingCount': tool.rating_count ? String(tool.rating_count) : '100',
           'bestRating': '5',
           'worstRating': '1'
-        }
+        },
+        'author': {
+          '@type': 'Organization',
+          'name': 'Use AI Tools',
+          'url': 'https://useaitools.me',
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'Use AI Tools',
+          'logo': {
+            '@type': 'ImageObject',
+            'url': 'https://useaitools.me/logo.png',
+          },
+        },
       },
       {
         '@type': 'FAQPage',

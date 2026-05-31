@@ -60,6 +60,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -106,7 +109,9 @@ export default function RootLayout({
         </Suspense>
         {children}
         <Analytics />
-        <BackToTop />
+        <Suspense fallback={null}>
+          <BackToTop />
+        </Suspense>
         <Suspense fallback={null}>
           <MobileNav />
         </Suspense>

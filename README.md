@@ -64,3 +64,14 @@ bash scripts/run-gsc-submit.sh --days 7
 # Dry run (preview without submitting)
 python3 scripts/auto-submit-gsc.py --days 1 --dry-run
 ```
+
+## Performance
+
+Optimizations applied to meet Core Web Vitals targets (LCP ≤ 2.5s, FID ≤ 100ms, CLS ≤ 0.1):
+
+- **Font loading**: All Google Fonts loaded via `next/font` with `display: "swap"` to prevent FOIT and reduce CLS
+- **Preconnect**: `<link rel="preconnect">` added for `fonts.googleapis.com`, `fonts.gstatic.com`, and `cdn.jsdelivr.net`
+- **Lazy components**: `BackToTop` and `MobileNav` wrapped in `React.Suspense` for progressive hydration
+- **Image optimization**: Logo uses `loading="eager"` (above fold), all other images use `loading="lazy"`
+- **Touch targets**: All interactive elements meet WCAG 2.5.5 minimum 44×44px touch target size
+- **Code splitting**: Non-critical components wrapped in `React.Suspense` for progressive hydration
