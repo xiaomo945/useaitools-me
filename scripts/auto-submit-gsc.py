@@ -71,27 +71,47 @@ def get_recent_articles(days=1):
     return recent_articles
 
 
+def get_credentials():
+    """从 credentials.json 或环境变量获取凭证"""
+    if Path(CREDENTIALS_FILE).exists():
+        return Credentials.from_service_account_file(
+            CREDENTIALS_FILE,
+            scopes=["https://www.googleapis.com/auth/indexing"]
+        )
+    
+    gsc_email = os.environ.get("GSC_CLIENT_EMAIL", "")
+    gsc_key = os.environ.get("GSC_PRIVATE_KEY", "")
+    
+    if gsc_email and gsc_key:
+        gsc_key = gsc_key.replace("\\n", "\n")
+        info = {
+            "type": "service_account",
+            "client_email": gsc_email,
+            "private_key": gsc_key,
+            "token_uri": "https://oauth2.googleapis.com/token",
+        }
+        return Credentials.from_service_account_info(
+            info,
+            scopes=["https://www.googleapis.com/auth/indexing"]
+        )
+    
+    return None
+
+
 def submit_url_to_gsc(url):
     """提交单个URL到Google Search Console"""
     if not HAS_GOOGLE_API:
         print(f"⚠️ 跳过 {url} (Google API 库未安装)")
         return False
     
-    if not Path(CREDENTIALS_FILE).exists():
-        print(f"⚠️ 跳过 {url} (credentials.json 不存在)")
+    credentials = get_credentials()
+    if not credentials:
+        print(f"⚠️ 跳过 {url} (凭证缺失：需要 credentials.json 或设置 GSC_CLIENT_EMAIL + GSC_PRIVATE_KEY 环境变量)")
         return False
     
     try:
-        # 认证
-        credentials = Credentials.from_service_account_file(
-            CREDENTIALS_FILE,
-            scopes=["https://www.googleapis.com/auth/indexing"]
-        )
-        
-        # 创建API服务
         service = build("indexing", "v3", credentials=credentials)
         
-        # 提交URL
         body = {
             "url": url,
             "type": "URL_UPDATED"
