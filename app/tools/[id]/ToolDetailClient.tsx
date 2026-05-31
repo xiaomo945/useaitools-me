@@ -316,7 +316,17 @@ const getCategoryColors = (category: Tool['category']) => {
   };
 
 // Export function
-export default function ToolDetailClient({ tool, relatedTools }: { tool: Tool; relatedTools: Tool[] }) {
+type BlogPost = {
+  id: number;
+  title: string;
+  slug: string;
+  date: string;
+  description: string;
+  category?: string;
+  images?: { url: string; alt: string }[];
+};
+
+export default function ToolDetailClient({ tool, relatedTools, relatedArticles = [] }: { tool: Tool; relatedTools: Tool[]; relatedArticles?: BlogPost[] }) {
   const colors = getCategoryColors(tool.category);
   const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
@@ -850,6 +860,55 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
                 View all {tool.category} tools
                 <ArrowRight className="w-4 h-4" />
               </Link>
+            </div>
+          </div>
+        )}
+
+        {/* Related Articles */}
+        {relatedArticles.length > 0 && (
+          <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
+                <span className="text-white text-lg">📚</span>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Related Articles</h2>
+                <p className="text-sm text-slate-500 dark:text-gray-400">Guides and comparisons about {tool.category.toLowerCase()} tools</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {relatedArticles.map((article) => {
+                const postDate = new Date(article.date);
+                const formattedDate = postDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                return (
+                  <Link
+                    key={article.id}
+                    href={`/blog/${article.slug}`}
+                    className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out"
+                  >
+                    {article.images?.[0] && (
+                      <img
+                        src={article.images[0].url}
+                        alt={article.images[0].alt}
+                        className="w-full h-32 object-cover rounded-lg mb-3"
+                        loading="lazy"
+                      />
+                    )}
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-xs font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-500/20 px-2 py-0.5 rounded-full">
+                        {article.category}
+                      </span>
+                      <span className="text-xs text-slate-400 dark:text-gray-500">{formattedDate}</span>
+                    </div>
+                    <h4 className="font-semibold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2 mb-2 text-sm">
+                      {article.title}
+                    </h4>
+                    <p className="text-xs text-slate-500 dark:text-gray-400 line-clamp-2">
+                      {article.description}
+                    </p>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         )}

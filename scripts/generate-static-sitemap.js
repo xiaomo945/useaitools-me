@@ -2,6 +2,15 @@
 const fs = require('fs');
 const path = require('path');
 
+function generateSlugFromName(name) {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
 // Load tools from data/tools.json
 function loadTools() {
   const toolsPath = path.join(__dirname, '..', 'data', 'tools.json');
@@ -72,7 +81,7 @@ function generateSitemap() {
 `;
   });
 
-  // Tool pages
+  // Tool pages (by ID)
   tools.forEach(tool => {
     xml += `  <url>
     <loc>https://useaitools.me/tools/${tool.id}</loc>
@@ -81,6 +90,20 @@ function generateSitemap() {
     <priority>0.8</priority>
   </url>
 `;
+  });
+
+  // Tool pages (by slug)
+  tools.forEach(tool => {
+    const slug = generateSlugFromName(tool.name);
+    if (slug) {
+      xml += `  <url>
+    <loc>https://useaitools.me/tool/${slug}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+`;
+    }
   });
 
   // Blog post pages

@@ -1,7 +1,29 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { blogPosts, type BlogPost } from '@/types';
+import toolsData from '@/data/tools.json';
 import ClientBlogDetail from './ClientBlogDetail';
+
+type Tool = {
+  id: number;
+  name: string;
+  description: string;
+  category: string;
+  pricing: string;
+  url: string;
+  affiliate_link: string;
+};
+
+const typedTools = toolsData as Tool[];
+
+function generateSlugFromName(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+}
 
 // Extract tool IDs from blog content for recommendation
 const extractToolIds = (content: string): number[] => {
@@ -123,6 +145,33 @@ export default async function BlogDetailPage({
 
   const relatedPosts = getRelatedPosts(post, blogPosts);
 
+  const getRelatedToolsForBlog = (blogPost: BlogPost): { id: number; name: string; slug: string; description: string; pricing: string; category: string }[] => {
+    const blogCategory = blogPost.category?.toLowerCase() || '';
+    const categoryMap: Record<string, string> = {
+      'writing': 'Writing',
+      'image': 'Image',
+      'video': 'Video',
+      'audio': 'Audio',
+      'code': 'Code',
+      'productivity': 'Productivity',
+    };
+    const matchedCategory = categoryMap[blogCategory] || '';
+    const candidates = matchedCategory
+      ? typedTools.filter(t => t.category === matchedCategory)
+      : typedTools;
+    const shuffled = [...candidates].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 5).map(t => ({
+      id: t.id,
+      name: t.name,
+      slug: generateSlugFromName(t.name),
+      description: t.description,
+      pricing: t.pricing,
+      category: t.category,
+    }));
+  };
+
+  const relatedTools = getRelatedToolsForBlog(post);
+
   const processedPost = {
     ...post,
     content: post.content
@@ -161,7 +210,7 @@ export default async function BlogDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ClientBlogDetail post={processedPost} slug={slug} relatedPosts={relatedPosts} />
+      <ClientBlogDetail post={processedPost} slug={slug} relatedPosts={relatedPosts} relatedTools={relatedTools} />
     </>
   );
 }

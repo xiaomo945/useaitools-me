@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import tools from '@/data/tools.json';
+import { blogPosts } from '@/types';
 import Footer from '@/app/components/Footer';
 import ToolDetailClient from './ToolDetailClient';
 
@@ -219,6 +220,15 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
   
   const relatedTools = getRelatedTools().map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
 
+  const relatedArticles = blogPosts
+    .filter(post => {
+      const postCategory = post.category?.toLowerCase() || '';
+      const toolCategory = tool.category.toLowerCase();
+      return postCategory === toolCategory || postCategory.includes(toolCategory);
+    })
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 5);
+
   const pageJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -249,7 +259,7 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
       />
-      <ToolDetailClient tool={enrichedTool} relatedTools={relatedTools} />
+      <ToolDetailClient tool={enrichedTool} relatedTools={relatedTools} relatedArticles={relatedArticles} />
     </>
   );
 }

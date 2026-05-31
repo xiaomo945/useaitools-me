@@ -165,14 +165,25 @@ const renderContentWithImages = (content: string, images: BlogImage[] = []) => {
   return html;
 };
 
+type RelatedTool = {
+  id: number;
+  name: string;
+  slug: string;
+  description: string;
+  pricing: string;
+  category: string;
+};
+
 export default function ClientBlogDetail({
   post,
   slug,
   relatedPosts = [],
+  relatedTools = [],
 }: {
   post: BlogPost;
   slug: string;
   relatedPosts?: BlogPost[];
+  relatedTools?: RelatedTool[];
 }) {
   const [copied, setCopied] = useState(false);
   const [activeHeading, setActiveHeading] = useState('');
@@ -382,6 +393,62 @@ export default function ClientBlogDetail({
             </div>
           </div>
         </div>
+
+        {/* Related Tools Recommendation */}
+        {relatedTools.length > 0 && (
+          <div className="mt-12 bg-gradient-to-br from-emerald-50/50 to-teal-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/25">
+                <span className="text-white text-lg">🛠️</span>
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Related Tools</h3>
+                <p className="text-sm text-slate-500 dark:text-gray-400">AI tools mentioned or related to this article</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {relatedTools.map((tool) => {
+                const getCategoryColor = (cat: string) => {
+                  switch (cat) {
+                    case 'Writing': return 'bg-blue-500';
+                    case 'Image': return 'bg-violet-500';
+                    case 'Video': return 'bg-indigo-500';
+                    case 'Audio': return 'bg-pink-500';
+                    case 'Code': return 'bg-orange-500';
+                    case 'Productivity': return 'bg-teal-500';
+                    default: return 'bg-slate-500';
+                  }
+                };
+                return (
+                  <Link
+                    key={tool.id}
+                    href={`/tool/${tool.slug}`}
+                    className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out"
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className={`w-9 h-9 rounded-lg ${getCategoryColor(tool.category)}/10 flex items-center justify-center text-sm font-bold`}>
+                        {tool.name.charAt(0)}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-semibold text-sm text-slate-900 dark:text-white truncate group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                          {tool.name}
+                        </h4>
+                        <div className="flex items-center gap-1.5 mt-0.5">
+                          <span className="text-xs text-slate-500 dark:text-gray-400">{tool.category}</span>
+                          <span className="text-xs text-slate-400 dark:text-gray-500">·</span>
+                          <span className="text-xs text-slate-500 dark:text-gray-400">{tool.pricing}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-xs text-slate-500 dark:text-gray-400 line-clamp-2">
+                      {tool.description.slice(0, 100)}...
+                    </p>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Related Articles - Next Read Recommendations */}
         {relatedPosts.length > 0 && (

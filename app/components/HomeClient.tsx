@@ -348,6 +348,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
+  const [selectedPricing, setSelectedPricing] = useState<string>('All');
   const [showSuggestions, setShowSuggestions] = useState(false);
   const router = useRouter();
   const toolsGridRef = useRef<HTMLDivElement>(null);
@@ -585,6 +586,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
 
 
   const categories: Category[] = ['All', 'Writing', 'Image', 'Productivity', 'Code', 'Audio', 'Video'];
+  const pricingOptions: string[] = ['All', 'Free', 'Freemium', 'Free Trial', 'Paid', 'Open Source'];
 
   // Debounced search with 300ms delay
   const [debouncedSearch, setDebouncedSearch] = useState('');
@@ -602,7 +604,8 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         tool.name.toLowerCase().includes(debouncedSearch.toLowerCase()) || 
         tool.description.toLowerCase().includes(debouncedSearch.toLowerCase());
       const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
-      return matchesSearch && matchesCategory;
+      const matchesPricing = selectedPricing === 'All' || tool.pricing === selectedPricing;
+      return matchesSearch && matchesCategory && matchesPricing;
     });
     
     // 智能排序：Staff Pick(联盟) > 海外工具(needs_vpn) > 按名称字母排序
@@ -621,7 +624,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       // 3. 按名称字母排序
       return a.name.localeCompare(b.name);
     });
-  }, [debouncedSearch, selectedCategory, displayedTools]);
+  }, [debouncedSearch, selectedCategory, selectedPricing, displayedTools]);
 
   const getCategoryColors = (category: string) => {
     switch (category) {
@@ -990,12 +993,35 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             </div>
           </div>
           
+          {/* Pricing Filter Dropdown */}
+          <div className="flex justify-center mt-4 mb-2">
+            <div className="relative">
+              <select
+                value={selectedPricing}
+                onChange={(e) => setSelectedPricing(e.target.value)}
+                aria-label="Filter by pricing type"
+                className="appearance-none pl-4 pr-10 py-2 rounded-full text-sm font-semibold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 border border-transparent focus:border-emerald-300"
+              >
+                {pricingOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option === 'All' ? '💰 All Pricing' : option}
+                  </option>
+                ))}
+              </select>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          
           {/* Search Result Count */}
           <div className="text-center mb-8">
             <p className={`text-base sm:text-lg font-semibold text-slate-600 dark:text-slate-300 ${
-              search.trim() || selectedCategory !== 'All' ? 'animate-pulse' : ''
+              search.trim() || selectedCategory !== 'All' || selectedPricing !== 'All' ? 'animate-pulse' : ''
             }`}>
-              {search.trim() || selectedCategory !== 'All' ? (
+              {search.trim() || selectedCategory !== 'All' || selectedPricing !== 'All' ? (
                 filteredTools.length === 0 ? (
                   <span className="text-rose-500 dark:text-rose-400">No tools found</span>
                 ) : (
