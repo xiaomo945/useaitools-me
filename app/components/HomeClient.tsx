@@ -92,20 +92,20 @@ const ToolCard = memo(function ToolCard({
       {/* Category Color Bar - 3px Height */}
       <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
       
-      <div className="p-4 sm:p-5">
+      <div className="p-3 sm:p-5">
         {/* Tool Header with Compare Checkbox */}
-        <div className="flex items-start justify-between gap-3 mb-3">
-          <div className="flex items-center gap-2.5">
+        <div className="flex items-start justify-between gap-2 sm:gap-3 mb-2 sm:mb-3">
+          <div className="flex items-center gap-2 sm:gap-2.5">
             <Link
               href={`/tools/${tool.id}`}
-              className={`w-9 h-9 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-sm sm:text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`}
+              className={`w-8 h-8 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xs sm:text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`}
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               {tool.name.charAt(0)}
             </Link>
             <div className="min-w-0">
               <Link href={`/tools/${tool.id}`} className="inline-block">
-                <h3 className="font-semibold text-base sm:text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate">
+                <h3 className="font-semibold text-sm sm:text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate">
                   {highlightText(tool.name, search)}
                 </h3>
               </Link>
@@ -142,7 +142,7 @@ const ToolCard = memo(function ToolCard({
                 </svg>
               )}
             </button>
-            <span className={`px-1.5 sm:px-3 sm:py-1.5 py-0.5 rounded-full text-[10px] sm:text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
+            <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
               {tool.pricing}
             </span>
           </div>
@@ -150,7 +150,7 @@ const ToolCard = memo(function ToolCard({
 
         {/* Description - linkable to tool page */}
         <Link href={`/tools/${tool.id}`} className="block">
-          <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-3 mb-3 line-clamp-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors text-sm sm:text-base">
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-2 sm:mt-3 mb-2 sm:mb-3 line-clamp-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors text-xs sm:text-base">
             {highlightText(tool.description, search)}
           </p>
         </Link>
@@ -185,7 +185,7 @@ const ToolCard = memo(function ToolCard({
 
         {/* Footer */}
         <div className="flex items-center justify-between gap-3">
-          <span className={`px-2 py-0.5 sm:px-3 sm:py-1.5 rounded-full text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} whitespace-nowrap`}>
+          <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} whitespace-nowrap`}>
             {tool.category}
           </span>
           
@@ -778,7 +778,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-950 relative overflow-hidden">
+    <div className="min-h-screen bg-slate-50 dark:bg-gray-950 relative overflow-x-hidden">
       {/* Announcement Banner */}
       {showBanner && (
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-4 z-10 relative">
@@ -799,38 +799,38 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           </div>
         </div>
       )}
-      <div className="py-10 sm:py-16 px-3 sm:px-8 relative z-10">
+      <div className="py-6 sm:py-16 px-3 sm:px-8 relative z-10">
       <div className="max-w-7xl mx-auto px-3 sm:px-6">
         {/* Hero Section with Glow */}
-        <div className="text-center mb-12 sm:mb-16 relative">
+        <div className="text-center mb-8 sm:mb-16 relative">
           {/* Background Breathing Glow - Only Desktop */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent rounded-full blur-3xl animate-breathe pointer-events-none hidden sm:block" />
           
-          <img src="/logo.png" alt="Use AI Tools Logo - Discover the best AI tools" className="h-9 sm:h-12 lg:h-14 w-auto mx-auto mb-2.5 sm:mb-3 relative z-10" width="72" height="43" loading="eager" />
-          <h1 className="text-2.5xl sm:text-3xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight mb-1.5 sm:mb-2 relative z-10">
+          <img src="/logo.png" alt="Use AI Tools Logo - Discover the best AI tools" className="h-8 sm:h-12 lg:h-14 w-auto mx-auto mb-2 sm:mb-3 relative z-10" width="72" height="43" loading="eager" />
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight mb-1 sm:mb-2 relative z-10">
             <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
               Use AI Tools
             </span>
           </h1>
-          <p className="text-lg sm:text-xl lg:text-3xl font-light text-emerald-600 dark:text-emerald-400 mb-3 sm:mb-4 relative z-10">
+          <p className="text-sm sm:text-xl lg:text-3xl font-light text-emerald-600 dark:text-emerald-400 mb-2 sm:mb-4 relative z-10">
             Your AI Toolbox
           </p>
-          <p className="text-slate-500 dark:text-slate-400 text-sm sm:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 relative z-10 leading-relaxed">
+          <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-lg max-w-2xl mx-auto mb-4 sm:mb-8 relative z-10 leading-relaxed">
             Discover and compare AI tools in our comprehensive AI tools directory. Find the best AI tools for writing, images, video, and more. Curated weekly.
           </p>
           
           {/* Trust Signal */}
-          <div className="mb-6 sm:mb-8 relative z-10">
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
+          <div className="mb-4 sm:mb-8 relative z-10">
+            <p className="text-[10px] sm:text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
               Built in public by an indie maker from an internet café in China. 690+ tools handpicked, not paid for.
             </p>
           </div>
           
           {/* Search Box */}
-          <div className="search-container relative max-w-2xl mx-auto mb-6 sm:mb-8 px-2 sm:px-0">
+          <div className="search-container relative max-w-2xl mx-auto mb-4 sm:mb-8 px-3 sm:px-0">
             <div className="relative">
               <svg
-                className="absolute left-4 sm:left-5 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400"
+                className="absolute left-3 sm:left-5 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-slate-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -846,7 +846,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               <input
                 ref={searchInputRef}
                 type="text"
-                placeholder="Search best AI tools, AI writing tools, AI image generators, AI video tools..."
+                placeholder="Search AI tools..."
                 value={search}
                 onChange={(e) => {
                   setSearch(e.target.value);
@@ -858,7 +858,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 autoComplete="off"
                 autoCorrect="off"
                 spellCheck="false"
-                className="w-full px-4 sm:px-5 py-2.5 sm:py-3 pl-10 sm:pl-14 pr-16 sm:pr-24 h-10 sm:h-11 text-sm sm:text-base rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
+                className="w-full px-3 sm:px-5 py-2 sm:py-3 pl-9 sm:pl-14 pr-16 sm:pr-24 h-9 sm:h-11 text-sm sm:text-base rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
               />
               <div className="absolute right-1.5 sm:right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-0.5 sm:gap-1">
                 {search && (
@@ -947,10 +947,10 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           </div>
 
           {/* Submit Tool Button */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-6 sm:mb-8">
             <Link
               href="/submit"
-              className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 rounded-full hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 rounded-full hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition-all duration-300 min-h-[44px]"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -966,16 +966,16 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             {/* Right Gradient Fade */}
             <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-10 bg-gradient-to-l from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
             
-            <div className="flex overflow-x-auto scrollbar-hide gap-1 sm:gap-2.5 sm:justify-center sm:flex-wrap px-4 sm:px-0 py-1">
+            <div className="flex overflow-x-auto scrollbar-hide gap-1 sm:gap-2.5 sm:justify-center sm:flex-wrap px-2 sm:px-0 py-1">
               {categories.map((category, index) => {
                 const isActive = selectedCategory === category;
                 
-                const buttonStyle = `px-2.5 sm:px-4 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.98] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[44px] flex items-center justify-center ${
+                const buttonStyle = `px-2 py-1 sm:px-4 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.98] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[44px] flex items-center justify-center ${
                   isActive
                     ? category === 'All'
                       ? 'bg-emerald-600 text-white'
-                      : 'bg-gray-900 text-white dark:bg-white dark:text-gray-900'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                      : 'bg-emerald-600 text-white dark:bg-emerald-600 dark:text-white'
+                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 active:bg-gray-200 dark:active:bg-gray-700'
                 }`;
                 
                 return (
@@ -1005,7 +1005,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 value={selectedPricing}
                 onChange={(e) => setSelectedPricing(e.target.value)}
                 aria-label="Filter by pricing type"
-                className="appearance-none pl-4 pr-10 py-2 rounded-full text-sm font-semibold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 border border-transparent focus:border-emerald-300"
+                className="appearance-none pl-3 sm:pl-4 pr-10 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 active:bg-gray-200 dark:active:bg-gray-700 transition-all duration-300 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 border border-transparent focus:border-emerald-300 min-h-[44px]"
               >
                 {pricingOptions.map((option) => (
                   <option key={option} value={option}>
@@ -1023,7 +1023,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           
           {/* Search Result Count */}
           <div className="text-center mb-8">
-            <p className={`text-base sm:text-lg font-semibold text-slate-600 dark:text-slate-300 ${
+            <p className={`text-sm sm:text-lg font-semibold text-slate-600 dark:text-slate-300 ${
               search.trim() || selectedCategory !== 'All' || selectedPricing !== 'All' ? 'animate-pulse' : ''
             }`}>
               {search.trim() || selectedCategory !== 'All' || selectedPricing !== 'All' ? (
@@ -1040,9 +1040,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         </div>
 
         {/* Our Products */}
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
+        <div className="mb-8 sm:mb-16">
+          <div className="text-center mb-4 sm:mb-8">
+            <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2 sm:mb-3">
               🚀 Our Products
             </h2>
             <p className="text-slate-600 dark:text-gray-400">
@@ -1050,9 +1050,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {/* Use AI Writer */}
-            <div className="bg-white dark:bg-gray-900 border-2 border-emerald-200 dark:border-emerald-500/20 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+            <div className="bg-white dark:bg-gray-900 border-2 border-emerald-200 dark:border-emerald-500/20 rounded-2xl p-4 sm:p-6 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-transparent to-teal-500/5 pointer-events-none" />
               {/* Live Now Badge */}
@@ -1062,7 +1062,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 </span>
               </div>
               <div className="text-4xl mb-4">🖋️</div>
-              <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">Use AI Writer</h3>
+              <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white mb-2">Use AI Writer</h3>
               <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-2">
                 Write 3x faster with AI — try it free. The AI writing tool built for creators who refuse to overpay. $5/mo vs Jasper $49/mo.
               </p>
@@ -1074,16 +1074,16 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 href="https://tryaiwriter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 h-10 sm:h-11 text-sm sm:text-base bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px]"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 sm:py-3 h-9 sm:h-11 text-sm sm:text-base bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px] whitespace-nowrap"
               >
                 Try It Free →
               </a>
             </div>
 
             {/* Use AI Image */}
-            <div className="bg-white dark:bg-gray-900 border-2 border-violet-200 dark:border-violet-500/20 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:shadow-violet-500/5 hover:-translate-y-1 transition-all duration-300">
+            <div className="bg-white dark:bg-gray-900 border-2 border-violet-200 dark:border-violet-500/20 rounded-2xl p-4 sm:p-6 shadow-sm hover:shadow-xl hover:shadow-violet-500/5 hover:-translate-y-1 transition-all duration-300">
               <div className="text-4xl mb-4">🎨</div>
-              <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">Use AI Image</h3>
+              <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white mb-2">Use AI Image</h3>
               <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-2">
                 Create stunning visuals in seconds. Text to image, multiple art styles, commercial use allowed.
               </p>
@@ -1093,19 +1093,19 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               </div>
               <Link
                 href="/image"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 h-10 sm:h-11 text-sm sm:text-base bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px]"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 sm:py-3 h-9 sm:h-11 text-sm sm:text-base bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px] whitespace-nowrap"
               >
                 Learn More →
               </Link>
             </div>
 
             {/* Mobile App */}
-            <div className="bg-white dark:bg-gray-900 border-2 border-slate-200 dark:border-slate-500/20 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+            <div className="bg-white dark:bg-gray-900 border-2 border-slate-200 dark:border-slate-500/20 rounded-2xl p-4 sm:p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
               <div className="absolute top-3 right-3">
                 <span className="px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">Coming Soon</span>
               </div>
               <div className="text-4xl mb-4">📱</div>
-              <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">Mobile App</h3>
+              <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white mb-2">Mobile App</h3>
               <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-2">
                 Your favorite AI tools, now in your pocket. Push notifications, offline access, widget support.
               </p>
@@ -1115,7 +1115,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               </div>
               <Link
                 href="/mobile"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-3 h-10 sm:h-11 text-sm sm:text-base bg-slate-800 dark:bg-slate-700 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 opacity-70 min-h-[44px]"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 sm:py-3 h-9 sm:h-11 text-sm sm:text-base bg-slate-800 dark:bg-slate-700 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 opacity-70 min-h-[44px] whitespace-nowrap"
               >
                 Join Waitlist →
               </Link>
@@ -1124,10 +1124,10 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         </div>
 
         {/* Recent Blog Posts */}
-        <div className="mb-16">
-          <div className="flex items-center justify-between mb-8">
+        <div className="mb-8 sm:mb-16">
+          <div className="flex items-center justify-between mb-4 sm:mb-8">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2">
+              <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-1 sm:mb-2">
                 📝 Recent Blog Posts
               </h2>
               <p className="text-slate-600 dark:text-gray-400">
@@ -1198,9 +1198,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         </div>
 
         {/* Browse by Use Case */}
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
+        <div className="mb-8 sm:mb-16">
+          <div className="text-center mb-4 sm:mb-8">
+            <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2 sm:mb-3">
               Browse by Use Case
             </h2>
             <p className="text-slate-600 dark:text-gray-400">
@@ -1278,9 +1278,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         </div>
 
         {/* Featured This Week */}
-        <div className="mb-16">
-          <div className="flex items-center gap-2 mb-6">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+        <div className="mb-8 sm:mb-16">
+          <div className="flex items-center gap-2 mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
               🔥 Featured This Week
             </h2>
           </div>
@@ -1366,7 +1366,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 dark:via-emerald-700/40 to-transparent mb-16 mx-auto max-w-2xl" />
 
         {/* Tools Grid */}
-        <div ref={toolsGridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7 transition-all duration-300 ease-out">
+        <div ref={toolsGridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-7 transition-all duration-300 ease-out">
           {filteredTools.map((tool, index) => {
             const colors = getCategoryColors(tool.category);
             const pricingColors = getPricingColors(tool.pricing);
@@ -1402,20 +1402,20 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 {/* Category Color Bar - 3px Height */}
                 <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
                 
-                <div className="p-5">
+                <div className="p-3 sm:p-5">
                   {/* Tool Header with Compare Checkbox */}
-                  <div className="flex items-start justify-between gap-4 mb-4">
-                    <div className="flex items-center gap-3">
+                  <div className="flex items-start justify-between gap-2 sm:gap-4 mb-2 sm:mb-4">
+                    <div className="flex items-center gap-2 sm:gap-3">
                       <Link
                         href={`/tools/${tool.id}`}
-                        className={`w-9 h-9 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-lg sm:text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`} 
+                        className={`w-8 h-8 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xs sm:text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`} 
                         style={{ fontFamily: 'Playfair Display, serif' }}
                       >
                         {tool.name.charAt(0)}
                       </Link>
                       <div>
                         <Link href={`/tools/${tool.id}`} className="inline-block">
-                          <h3 className="font-semibold text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                          <h3 className="font-semibold text-sm sm:text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                             {highlightText(tool.name, search)}
                           </h3>
                         </Link>
@@ -1452,7 +1452,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                           </svg>
                         )}
                       </button>
-                      <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
+                      <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
                         {tool.pricing}
                       </span>
                     </div>
@@ -1460,7 +1460,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
 
                   {/* Description - linkable to tool page */}
                   <Link href={`/tools/${tool.id}`} className="block">
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-4 mb-4 line-clamp-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-2 sm:mt-4 mb-2 sm:mb-4 line-clamp-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors text-xs sm:text-base">
                       {highlightText(tool.description, search)}
                     </p>
                   </Link>
@@ -1495,7 +1495,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
 
                   {/* Footer */}
                   <div className="flex items-center justify-between gap-3">
-                    <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} whitespace-nowrap`}>
+                    <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} whitespace-nowrap`}>
                       {tool.category}
                     </span>
                     
@@ -1643,9 +1643,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         )}
 
         {/* Newsletter */}
-        <div className="mt-16 mb-10">
-          <div className="bg-gradient-to-br from-indigo-50/80 via-white to-purple-50/80 dark:from-indigo-950/60 dark:via-gray-900 dark:to-purple-950/60 backdrop-blur-xl border border-white/60 dark:border-indigo-500/10 shadow-xl shadow-indigo-500/5 dark:shadow-2xl dark:shadow-indigo-500/5 rounded-3xl p-8 sm:p-12 text-center">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2">
+        <div className="mt-8 sm:mt-16 mb-6 sm:mb-10">
+          <div className="bg-gradient-to-br from-indigo-50/80 via-white to-purple-50/80 dark:from-indigo-950/60 dark:via-gray-900 dark:to-purple-950/60 backdrop-blur-xl border border-white/60 dark:border-indigo-500/10 shadow-xl shadow-indigo-500/5 dark:shadow-2xl dark:shadow-indigo-500/5 rounded-3xl p-4 sm:p-12 text-center">
+            <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2">
               📬 Stay Updated
             </h2>
             <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
