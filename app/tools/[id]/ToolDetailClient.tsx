@@ -165,8 +165,8 @@ const getAffiliateLinkWithUTM = (tool: Tool): string => {
 
 // CTA A/B test variants
 const ctaVariants = {
-  A: '🔗 Try It Free',
-  B: '🚀 Get Started Now',
+  A: 'Get Started for Free',
+  B: 'Get Started for Free',
 };
 
 // Get CTA variant based on user
@@ -332,7 +332,7 @@ export default function ToolDetailClient({ tool, relatedTools, relatedArticles =
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [openFAQIndex, setOpenFAQIndex] = useState<number | null>(null);
   const hasAffiliate = hasAffiliateLink(tool);
-  const ctaText = hasAffiliate ? ctaVariants[getCTAVariant()] : 'Visit Official Website';
+  const ctaText = hasAffiliate ? ctaVariants[getCTAVariant()] : 'Visit Website';
   const ctaUrl = hasAffiliate ? getAffiliateLinkWithUTM(tool) : tool.url;
   const faqs = toolFAQs[tool.id];
   const processedFAQs = faqs?.map(faq => ({
@@ -542,9 +542,14 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
                 href={ctaUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
+                className={`inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 font-semibold rounded-xl transition-all duration-300 ${
+                  hasAffiliate
+                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25 hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl hover:shadow-emerald-500/30'
+                    : 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30'
+                } hover:-translate-y-0.5`}
               >
                 {ctaText}
+                {hasAffiliate && <span className="text-[10px] opacity-60 ml-1">via partner</span>}
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <Link

@@ -213,7 +213,11 @@ const ToolCard = memo(function ToolCard({
               href={getAffiliateLink(tool) || tool.url}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[36px] min-w-[36px] sm:min-h-[44px] sm:min-w-[44px] border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
+              className={`inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[36px] min-w-[36px] sm:min-h-[44px] sm:min-w-[44px] text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98] ${
+                hasAffiliate
+                  ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:from-emerald-600 hover:to-teal-600 hover:shadow-md hover:shadow-emerald-500/25 border border-transparent'
+                  : 'border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent'
+              }`}
             >
               <svg
                 className="w-3.5 h-3.5 sm:w-4 sm:h-4"
@@ -229,6 +233,7 @@ const ToolCard = memo(function ToolCard({
                 />
               </svg>
               <span className="hidden sm:inline">{ctaText}</span>
+              {hasAffiliate && <span className="hidden sm:inline text-[10px] opacity-60 ml-0.5">via partner</span>}
             </a>
             <button
               onClick={(e) => {
@@ -315,8 +320,8 @@ const getAffiliateLink = (tool: Tool): string => {
 
 // CTA A/B test variants
 const ctaVariants = {
-  A: '🔗 Try It Free',
-  B: '🚀 Get Started Now',
+  A: 'Get Started for Free',
+  B: 'Get Started for Free',
 };
 
 type Category = string;
@@ -1369,7 +1374,6 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
             const hasAffiliate = hasAffiliateLink(tool);
             const ctaText = hasAffiliate ? ctaVariants[ctaVariant] : 'Visit Website';
-            
             return (
               <div
                 key={tool.id}
@@ -1519,7 +1523,11 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                         href={getAffiliateLink(tool) || tool.url}
                         target="_blank"
                         rel="noopener noreferrer sponsored"
-                        className="inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
+                        className={`inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98] ${
+                          hasAffiliate
+                            ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:from-emerald-600 hover:to-teal-600 hover:shadow-md hover:shadow-emerald-500/25 border border-transparent'
+                            : 'border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent'
+                        }`}
                       >
                         <svg
                           className="w-3.5 h-3.5 sm:w-4 sm:h-4"
@@ -1535,6 +1543,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                           />
                         </svg>
                         <span className="hidden sm:inline">{ctaText}</span>
+                        {hasAffiliate && <span className="hidden sm:inline text-[10px] opacity-60 ml-0.5">via partner</span>}
                       </a>
                       <button
                         onClick={(e) => {

@@ -34,3 +34,33 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Google Search Console Auto-Submit
+
+Submit new blog articles to Google Search Console for faster indexing.
+
+### Setup (one-time)
+
+1. Create a service account in [Google Cloud Console](https://console.cloud.google.com/):
+   - Enable the "Indexing API"
+   - Create a service account and download the JSON key
+   - Add the service account email as a site owner in [GSC](https://search.google.com/search-console)
+
+2. Run the setup wizard:
+   ```bash
+   node scripts/setup-gsc.js
+   ```
+   This creates `credentials.json` at the project root (already in `.gitignore`).
+
+### Submit articles
+
+```bash
+# Submit articles from the last 1 day
+bash scripts/run-gsc-submit.sh --days 1
+
+# Submit articles from the last 7 days
+bash scripts/run-gsc-submit.sh --days 7
+
+# Dry run (preview without submitting)
+python3 scripts/auto-submit-gsc.py --days 1 --dry-run
+```
