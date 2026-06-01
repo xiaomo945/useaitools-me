@@ -60091,5 +60091,1535 @@
       "Professional",
       "Studio"
     ]
+  },
+  {
+    "id": 1137,
+    "name": "Buffer AI",
+    "description": "AI-powered social media scheduling and analytics. Optimize posting times and generate content suggestions automatically.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://buffer-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI social media scheduling and analytics.",
+    "rating": 4.6,
+    "rating_count": 2279,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.315956357297315,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.341123864566908,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.333292292376896,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.400660749703513,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Social Media",
+      "Scheduling",
+      "Analytics"
+    ]
+  },
+  {
+    "id": 1138,
+    "name": "Hootsuite AI",
+    "description": "Enterprise social media management with AI-powered content suggestions, optimal timing, and engagement predictions.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://hootsuite-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Enterprise AI social media management.",
+    "rating": 4.4,
+    "rating_count": 1342,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.537039482119399,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.335204569353068,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.405445949850331,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.336045055319191,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.569131279537386,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.995874886411152,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Social Media",
+      "Enterprise",
+      "Management"
+    ]
+  },
+  {
+    "id": 1139,
+    "name": "Sprout Social",
+    "description": "AI-driven social media suite with smart inbox, sentiment analysis, and automated reporting.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://sprout-social.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI social media suite with analytics.",
+    "rating": 4.2,
+    "rating_count": 4001,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.065532630985466,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.064679980479985,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.798249845825733,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.959137229510424,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.811416653372677,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.919401389038634,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Social Media",
+      "Analytics",
+      "Enterprise"
+    ]
+  },
+  {
+    "id": 1140,
+    "name": "SocialBee AI",
+    "description": "AI-powered social media scheduling with content categorization and recycling for consistent posting.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://socialbee-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI social media content scheduling.",
+    "rating": 4,
+    "rating_count": 3239,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.201006473797404,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.246706914469957,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.347267493920127,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.291723031439581,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.257897896712556,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.503780307174224,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Scheduling",
+      "Content",
+      "Recycling"
+    ]
+  },
+  {
+    "id": 1141,
+    "name": "Munch AI",
+    "description": "Extract the most engaging clips from long-form videos using AI. Auto-crop, caption, and format for any platform.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://munch-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video clip extraction and formatting.",
+    "rating": 4.7,
+    "rating_count": 3626,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.442470501820991,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.2504784418282675,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.360957420832765,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video Clips",
+      "Extraction",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 1142,
+    "name": "Vidyo AI",
+    "description": "AI video repurposing platform. Transform podcasts and webinars into short social media videos automatically.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://vidyo-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video repurposing from long content.",
+    "rating": 4.2,
+    "rating_count": 2322,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.891282770520742,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.523511980147024,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.297408839123078,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.555679724602961,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.474644233840398,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.88052719752682,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Repurposing",
+      "Podcasts",
+      "Short Videos"
+    ]
+  },
+  {
+    "id": 1143,
+    "name": "Klap AI",
+    "description": "Generate TikToks, Reels, and Shorts from YouTube videos with AI. Auto-captions and smart cropping included.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://klap-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Generate short videos from YouTube.",
+    "rating": 4.5,
+    "rating_count": 3868,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.9199259756201466,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.7516141035048705,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.967814965059202,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.809461523853994,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.467028381404307,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.7879088362858075,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "TikTok",
+      "Reels",
+      "Shorts"
+    ]
+  },
+  {
+    "id": 1144,
+    "name": "Eklipse AI",
+    "description": "AI gaming clip generator that automatically creates highlights from Twitch streams and gaming sessions.",
+    "category": "Video",
+    "pricing": "Free",
+    "url": "https://eklipse-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI gaming clip highlights generator.",
+    "rating": 4.7,
+    "rating_count": 1855,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.224839263348606,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.77109381229301,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.878443323808911,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.561016351889245,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.963820267512014,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Gaming",
+      "Twitch",
+      "Highlights"
+    ]
+  },
+  {
+    "id": 1145,
+    "name": "Podcastle AI",
+    "description": "All-in-one podcast creation platform with AI noise removal, transcription, and multi-track recording.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://podcastle-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "All-in-one AI podcast creation platform.",
+    "rating": 4.7,
+    "rating_count": 372,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.987659964651105,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.8393574727421305,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.785566596235817,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.7062235594471185,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Podcasting",
+      "Recording",
+      "Editing"
+    ]
+  },
+  {
+    "id": 1146,
+    "name": "Riverside FM",
+    "description": "Remote podcast and video recording studio with AI transcription, clips, and local high-quality recording.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://riverside-fm.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Remote podcast recording with AI.",
+    "rating": 4.5,
+    "rating_count": 914,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7154344614752794,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.453938511527324,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.135831518818828,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.779469454394653,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.848615816647554,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.759107639483141,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Remote Recording",
+      "Podcast",
+      "Studio"
+    ]
+  },
+  {
+    "id": 1147,
+    "name": "Snyk",
+    "description": "AI-powered cloud security platform that finds and fixes vulnerabilities in code, containers, and infrastructure.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://snyk.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI cloud security and vulnerability scanning.",
+    "rating": 4.7,
+    "rating_count": 1268,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.498338269265383,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.824335876062087,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Security",
+      "Cloud",
+      "Vulnerabilities"
+    ]
+  },
+  {
+    "id": 1148,
+    "name": "SonarQube AI",
+    "description": "AI-enhanced code quality and security platform. Detect bugs, vulnerabilities, and code smells automatically.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://sonarqube-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI code quality and security analysis.",
+    "rating": 4.5,
+    "rating_count": 4809,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.640290876464265,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.33841412119717,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.3126047711207445,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.768285054637456,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.877441276351724,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.395206690393634,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Code Quality",
+      "Security",
+      "Analysis"
+    ]
+  },
+  {
+    "id": 1149,
+    "name": "CrowdStrike Falcon",
+    "description": "AI-native cloud security platform with real-time threat detection and automated response capabilities.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://crowdstrike-falcon.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-native cloud security platform.",
+    "rating": 4.5,
+    "rating_count": 3853,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.961498963599299,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.280665773700374,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.287272450443087,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.59106682198079,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.497092617062125,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.284845425735635,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "advanced",
+    "best_for": [
+      "Cloud Security",
+      "Threat Detection",
+      "Enterprise"
+    ]
+  },
+  {
+    "id": 1150,
+    "name": "Wiz AI",
+    "description": "AI-powered cloud security posture management. Find misconfigurations and risks across cloud environments.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://wiz-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI cloud security posture management.",
+    "rating": 4.1,
+    "rating_count": 1915,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.599094083972311,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.23030106043544,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.026616271540562,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 3.9980563474788826,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.5410748094807225,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.400322833779004,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Cloud Security",
+      "Posture",
+      "Compliance"
+    ]
+  },
+  {
+    "id": 1151,
+    "name": "Lacework AI",
+    "description": "AI-driven cloud security with behavioral analytics. Automatically detect anomalous activities in cloud infrastructure.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://lacework-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI cloud security behavioral analytics.",
+    "rating": 4.5,
+    "rating_count": 950,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.087106626635653,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.548800665386685,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.961401356318369,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.767216341694638,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.198793261220948,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.736080529126229,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "advanced",
+    "best_for": [
+      "Behavioral Analytics",
+      "Cloud",
+      "Security"
+    ]
+  },
+  {
+    "id": 1152,
+    "name": "Teeinblue",
+    "description": "AI-powered product personalization for e-commerce. Let customers customize t-shirts, mugs, and more with AI.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://teeinblue.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI product personalization for e-commerce.",
+    "rating": 4.2,
+    "rating_count": 3607,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.70907650154617,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.091175888932785,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.57437837612202,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.054916594341675,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.551380582556844,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.542754423646796,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "E-commerce",
+      "Personalization",
+      "T-Shirts"
+    ]
+  },
+  {
+    "id": 1153,
+    "name": "Printful AI",
+    "description": "AI-enhanced print-on-demand platform. Generate designs, mockups, and fulfill orders automatically.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://printful-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI print-on-demand with design generation.",
+    "rating": 4.6,
+    "rating_count": 3233,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.8319611938791995,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.831791454856859,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.5006832239092365,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.512320277464985,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Print-on-Demand",
+      "Mockups",
+      "E-commerce"
+    ]
+  },
+  {
+    "id": 1154,
+    "name": "Kittl AI",
+    "description": "AI-powered design platform for creating t-shirt graphics, logos, and illustrations with text-to-image generation.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://kittl-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI design platform for t-shirt graphics.",
+    "rating": 4.1,
+    "rating_count": 4538,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8735816863716783,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.73222894187668,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.424043945497847,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.244815478966123,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.1003434543111865,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.6470902836371413,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "T-Shirt Design",
+      "Graphics",
+      "Illustration"
+    ]
+  },
+  {
+    "id": 1155,
+    "name": "Printify AI",
+    "description": "AI-enhanced print-on-demand marketplace with design tools, mockup generation, and automated fulfillment.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://printify-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI print-on-demand marketplace.",
+    "rating": 4.2,
+    "rating_count": 311,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4694888741919945,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.048956355965275,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.079049426039339,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.0304886096120605,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.1486017458477935,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.069291632953442,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Print-on-Demand",
+      "Marketplace",
+      "Design"
+    ]
+  },
+  {
+    "id": 1156,
+    "name": "Gelato AI",
+    "description": "Global print-on-demand with AI design tools. Create and sell custom products worldwide with local production.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://gelato-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI global print-on-demand platform.",
+    "rating": 4.7,
+    "rating_count": 969,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.890691696378475,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.871079623304002,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.340094513933154,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.446197439555774,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Global",
+      "Print-on-Demand",
+      "Local Production"
+    ]
+  },
+  {
+    "id": 1157,
+    "name": "Salesloft AI",
+    "description": "AI-powered sales engagement platform with automated cadences, email tracking, and conversation intelligence.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://salesloft-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI sales engagement platform.",
+    "rating": 4.6,
+    "rating_count": 236,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.467603070893659,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.650612951803134,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.994254730767021,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.901595501355206,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Sales",
+      "Engagement",
+      "Automation"
+    ]
+  },
+  {
+    "id": 1158,
+    "name": "Outreach AI",
+    "description": "AI-driven sales execution platform with smart sequencing, analytics, and deal intelligence.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://outreach-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI sales execution platform.",
+    "rating": 4.6,
+    "rating_count": 4327,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2701058061491945,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.874320457744299,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.65753270111664,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.960692566490804,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.333219767997751,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.584754885300932,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Sales",
+      "Sequencing",
+      "Intelligence"
+    ]
+  },
+  {
+    "id": 1159,
+    "name": "Gong AI",
+    "description": "AI revenue intelligence platform that analyzes sales calls, emails, and deals to improve win rates.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://gong-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI revenue intelligence for sales teams.",
+    "rating": 4.1,
+    "rating_count": 593,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.926297017318918,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.671921874306429,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.633070632434962,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.570818789587227,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.120452969794007,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.889588923258629,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Revenue Intelligence",
+      "Sales",
+      "Analytics"
+    ]
+  },
+  {
+    "id": 1160,
+    "name": "Clay AI",
+    "description": "AI-powered CRM with automated enrichment, personalized outreach, and workflow automation.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://clay-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI CRM with automated enrichment.",
+    "rating": 4.5,
+    "rating_count": 2961,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.70410669470184,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.586012887030425,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.796307649507113,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.9007709278330935,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.404520064466398,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.724589897035807,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "CRM",
+      "Enrichment",
+      "Outreach"
+    ]
+  },
+  {
+    "id": 1161,
+    "name": "Apollo AI",
+    "description": "AI sales intelligence and engagement platform with B2B database, sequencing, and analytics.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://apollo-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI sales intelligence platform.",
+    "rating": 4.2,
+    "rating_count": 1791,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.626038533920545,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.801281965030205,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.781556138673987,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.1516097747489145,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.723749279598167,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.73431448037312,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Sales Intelligence",
+      "B2B",
+      "Database"
+    ]
+  },
+  {
+    "id": 1162,
+    "name": "ZoomInfo AI",
+    "description": "AI-powered B2B data platform with buyer intent signals, company insights, and sales automation.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://zoominfo-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI B2B data and buyer intent platform.",
+    "rating": 4.4,
+    "rating_count": 649,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.796087223534432,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.575500757018589,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.249957294018246,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.877161282701016,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.499049163908396,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "B2B Data",
+      "Buyer Intent",
+      "Sales"
+    ]
+  },
+  {
+    "id": 1163,
+    "name": "Remote AI",
+    "description": "AI-powered HR platform for remote teams. Automate payroll, compliance, and benefits across countries.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://remote-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI HR platform for remote teams.",
+    "rating": 4.3,
+    "rating_count": 3326,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.198244932982561,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.082407101551207,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.9122000591927675,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.775715883566702,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.380740273406211,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.9314939245719955,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "HR",
+      "Remote",
+      "Payroll"
+    ]
+  },
+  {
+    "id": 1164,
+    "name": "Deel AI",
+    "description": "AI-enhanced global payroll and compliance platform for remote contractors and employees worldwide.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://deel-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI global payroll and compliance.",
+    "rating": 4,
+    "rating_count": 3094,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.7339119062432267,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.448005235129886,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.0800309660114,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.535135447750246,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.730915543740904,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.1445058224816265,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Payroll",
+      "Compliance",
+      "Global"
+    ]
+  },
+  {
+    "id": 1165,
+    "name": "Mural AI",
+    "description": "AI-powered visual collaboration workspace for remote teams. Smart templates and facilitation tools.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://mural-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI visual collaboration for remote teams.",
+    "rating": 4.6,
+    "rating_count": 1609,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.83502384698475,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.574591971248655,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.281893875904326,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.991112909940488,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.595576988645697,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.596130626537201,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Collaboration",
+      "Visual",
+      "Remote"
+    ]
+  },
+  {
+    "id": 1166,
+    "name": "Monday AI",
+    "description": "AI-powered work OS with smart column suggestions, automated workflows, and predictive project timelines.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://monday-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered work OS with smart column suggestions, automated workflows, and predictive project timelines.",
+    "rating": 4.4,
+    "rating_count": 2800,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "note": "Easy"
+      },
+      "output_quality": {
+        "score": 4.3,
+        "note": "Good"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Rich"
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "note": "Fair"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Stable"
+      },
+      "support": {
+        "score": 4.1,
+        "note": "OK"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Work OS",
+      "Automation",
+      "Predictive"
+    ]
   }
 ]
