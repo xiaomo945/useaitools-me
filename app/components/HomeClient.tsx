@@ -413,6 +413,17 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     } catch { /* ignore */ }
   };
 
+  const clearRecentSearches = () => {
+    setRecentSearches([]);
+    localStorage.removeItem('recentSearches');
+  };
+
+  const removeRecentSearch = (termToRemove: string) => {
+    const updated = recentSearches.filter(s => s !== termToRemove);
+    setRecentSearches(updated);
+    localStorage.setItem('recentSearches', JSON.stringify(updated));
+  };
+
   const loadMoreTools = async () => {
     if (isLoadingMore || !hasMore) return;
     
@@ -1045,26 +1056,56 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                   )
                 ) : (
                   <div className="py-1">
-                    <div className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                      Recent Searches
+                    <div className="flex items-center justify-between px-4 py-2">
+                      <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                        Recent Searches
+                      </span>
+                      {recentSearches.length > 0 && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            clearRecentSearches();
+                          }}
+                          className="text-xs text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        >
+                          Clear All
+                        </button>
+                      )}
                     </div>
-                    {recentSearches.map((term, i) => (
-                      <button
-                        key={i}
-                        className={`w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2 ${i === selectedIndex ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'hover:bg-emerald-50 dark:hover:bg-emerald-900/20'}`}
-                        onClick={() => {
-                          if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
-                          setSearch(term);
-                          setShowSuggestions(false);
-                          setSelectedIndex(-1);
-                        }}
-                      >
-                        <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        {term}
-                      </button>
-                    ))}
+                    {recentSearches.length > 0 ? (
+                      recentSearches.map((term, i) => (
+                        <button
+                          key={i}
+                          className={`w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2 group ${i === selectedIndex ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'hover:bg-emerald-50 dark:hover:bg-emerald-900/20'}`}
+                          onClick={() => {
+                            if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
+                            setSearch(term);
+                            setShowSuggestions(false);
+                            setSelectedIndex(-1);
+                          }}
+                        >
+                          <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          <span className="flex-1 truncate">{term}</span>
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              removeRecentSearch(term);
+                            }}
+                            className="p-1 rounded-full hover:bg-slate-200 dark:hover:bg-gray-700 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 opacity-0 group-hover:opacity-100 transition-all"
+                          >
+                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                          </button>
+                        </button>
+                      ))
+                    ) : (
+                      <div className="px-4 py-6 text-center text-sm text-slate-500">
+                        No recent searches
+                      </div>
+                    )}
                   </div>
                 )}
                 {search.trim() && (
