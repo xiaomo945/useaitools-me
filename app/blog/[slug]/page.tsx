@@ -129,6 +129,9 @@ export async function generateMetadata({
       title: post.title,
       description: post.description,
     },
+    alternates: {
+      canonical: `https://useaitools.me/blog/${slug}`,
+    },
   };
 }
 
@@ -183,6 +186,31 @@ export default async function BlogDetailPage({
       .replace(/\{\{AFFILIATE_ELEVENLABS\}\}/g, process.env.AFFILIATE_ELEVENLABS || 'https://elevenlabs.io'),
   };
 
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Home',
+        'item': 'https://useaitools.me',
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': 'Blog',
+        'item': 'https://useaitools.me/blog',
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': post.title,
+        'item': `https://useaitools.me/blog/${slug}`,
+      },
+    ],
+  };
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -207,6 +235,10 @@ export default async function BlogDetailPage({
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -92,6 +92,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title,
       description,
+      siteName: 'Use AI Tools',
+      type: 'website',
+      url: `https://useaitools.me/category/${slug}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: `https://useaitools.me/category/${slug}`,
     },
   };
 }
@@ -113,7 +124,25 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   const description = categoryDescriptions[category];
   const categoryName = categoryNames[category];
 
-  // CollectionPage Schema
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Home',
+        'item': 'https://useaitools.me',
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': `${categoryName} AI Tools`,
+        'item': `https://useaitools.me/category/${slug}`,
+      },
+    ],
+  };
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -147,6 +176,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

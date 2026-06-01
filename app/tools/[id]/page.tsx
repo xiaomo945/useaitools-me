@@ -171,7 +171,18 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     description,
     openGraph: {
       title,
-      description
+      description,
+      siteName: 'Use AI Tools',
+      type: 'website',
+      url: `https://useaitools.me/tools/${tool.id}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: `https://useaitools.me/tools/${tool.id}`,
     },
     other: {
       'application/ld+json': JSON.stringify(jsonLd)
@@ -247,6 +258,31 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 5);
 
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Home',
+        'item': 'https://useaitools.me',
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': `${tool.category} AI Tools`,
+        'item': `https://useaitools.me/category/${tool.category.toLowerCase()}`,
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': tool.name,
+        'item': `https://useaitools.me/tools/${tool.id}`,
+      },
+    ],
+  };
+
   const pageJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -273,6 +309,10 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
