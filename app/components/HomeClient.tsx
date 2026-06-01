@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import StarRating from './StarRating';
 import SkeletonCard from './Skeleton';
+import { useToast } from './Toast';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -44,7 +45,8 @@ const ToolCard = memo(function ToolCard({
   getPricingColors,
   getSkillLevelColors,
   getAffiliateLink,
-  router
+  router,
+  comparePulse
 }: {
   tool: any;
   index: number;
@@ -58,12 +60,14 @@ const ToolCard = memo(function ToolCard({
   heartBurst: boolean;
   getCategoryColors: (cat: string) => any;
   getPricingColors: (pricing: string) => any;
-  getSkillLevelColors: (level: string) => any;
+  getSkillLevelColors: (level: 'beginner' | 'intermediate' | 'advanced') => any;
   getAffiliateLink: (tool: any) => string;
   router: any;
+  comparePulse: boolean;
 }) {
   const colors = getCategoryColors(tool.category);
   const pricingColors = getPricingColors(tool.pricing);
+  const [saveAnimating, setSaveAnimating] = useState(false);
 
   return (
     <div
@@ -123,7 +127,7 @@ const ToolCard = memo(function ToolCard({
               </div>
             </div>
           </div>
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-1.5 relative">
             <button
               onClick={(e) => {
                 e.preventDefault();
@@ -143,6 +147,9 @@ const ToolCard = memo(function ToolCard({
                 </svg>
               )}
             </button>
+            {comparePulse && (
+              <div className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-30" />
+            )}
             <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold whitespace-nowrap ${pricingColors.bg} ${pricingColors.text}`}>
               {tool.pricing}
             </span>
@@ -239,17 +246,32 @@ const ToolCard = memo(function ToolCard({
             <button
               onClick={(e) => {
                 e.preventDefault();
+                setSaveAnimating(true);
+                setTimeout(() => setSaveAnimating(false), 400);
                 toggleSave(tool.id);
               }}
               className={`inline-flex items-center justify-center gap-0.5 px-1.5 min-h-[44px] min-w-[44px] rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ease-out relative overflow-hidden whitespace-nowrap active:scale-[0.98] ${
                 isSaved
                   ? 'bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300 hover:bg-rose-200 dark:hover:bg-rose-500/30'
                   : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
-              }`}
+              } ${saveAnimating ? 'scale-125' : ''}`}
               aria-label={isSaved ? `Unsave ${tool.name}` : `Save ${tool.name}`}
             >
-              <span>{heartBurst && <span className="heart-burst absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />}</span>
-              ❤️ <span className="hidden sm:inline">{isSaved ? 'Saved' : 'Save'}</span>
+              {isSaved ? (
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              ) : (
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              )}
+              {heartBurst && (
+                <span className="absolute inset-0 flex items-center justify-center">
+                  <span className="w-4 h-4 bg-rose-500 rounded-full animate-heart-burst" />
+                </span>
+              )}
+              <span className="hidden sm:inline ml-1">{isSaved ? 'Saved' : 'Save'}</span>
             </button>
           </div>
         </div>
@@ -371,6 +393,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const heartBurstRefs = useRef<{ [key: number]: HTMLSpanElement | null }>({});
   const categoryButtonsRef = useRef<(HTMLButtonElement | null)[]>([]);
   const loadMoreTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [showWelcomeTip, setShowWelcomeTip] = useState(false);
+  const [comparePulse, setComparePulse] = useState<{ [key: number]: boolean }>({});
+  const { addToast } = useToast();
   
   // Load localStorage data after mount (SSR-safe)
   useEffect(() => {
@@ -400,6 +425,17 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         const v = Math.random() < 0.5 ? 'A' : 'B';
         setCtaVariant(v);
         localStorage.setItem('ctaVariant', v);
+      }
+    } catch { /* ignore */ }
+
+    // Check if first visit
+    try {
+      const hasVisited = localStorage.getItem('hasVisitedBefore');
+      if (!hasVisited) {
+        setShowWelcomeTip(true);
+        localStorage.setItem('hasVisitedBefore', 'true');
+        // Auto hide after 10 seconds
+        setTimeout(() => setShowWelcomeTip(false), 10000);
       }
     } catch { /* ignore */ }
   }, []);
@@ -534,6 +570,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   useEffect(() => {
     if (search.trim()) {
       toolsGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setShowWelcomeTip(false);
     }
   }, [search]);
 
@@ -553,6 +590,13 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     { type: 'category', label: 'AI Code Tools', value: 'code' },
     { type: 'category', label: 'AI Productivity Tools', value: 'productivity' },
   ];
+
+  // Get popular tools by rating count
+  const popularTools = useMemo(() => {
+    return [...displayedTools]
+      .sort((a, b) => (b.rating_count || 0) - (a.rating_count || 0))
+      .slice(0, 3);
+  }, [displayedTools]);
 
   // Get search suggestions based on input
   const searchSuggestions = useMemo(() => {
@@ -661,26 +705,34 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   
   // Save toggle function with heart burst effect
   const toggleSave = (id: number) => {
-    const newSavedIds = savedIds.includes(id)
+    const wasSaved = savedIds.includes(id);
+    const newSavedIds = wasSaved
       ? savedIds.filter((savedId) => savedId !== id)
       : [...savedIds, id];
     setSavedIds(newSavedIds);
     localStorage.setItem('savedTools', JSON.stringify(newSavedIds));
     
-    if (!savedIds.includes(id)) {
+    if (!wasSaved) {
       setHeartBurst(prev => ({ ...prev, [id]: true }));
       setTimeout(() => {
         setHeartBurst(prev => ({ ...prev, [id]: false }));
       }, 500);
+      addToast('❤️ Added to favorites', 'success');
+    } else {
+      addToast('Removed from favorites', 'info');
     }
   };
 
   // Toggle tool for comparison
   const toggleCompare = (id: number) => {
+    const wasSelected = selectedForCompare.includes(id);
     setSelectedForCompare(prev => {
-      if (prev.includes(id)) {
+      if (wasSelected) {
         return prev.filter(toolId => toolId !== id);
       } else {
+        setComparePulse(prev => ({ ...prev, [id]: true }));
+        setTimeout(() => setComparePulse(prev => ({ ...prev, [id]: false })), 600);
+        addToast('📊 Added to compare', 'success');
         if (prev.length >= 2) {
           return prev.slice(1).concat(id);
         }
@@ -837,7 +889,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     }
   };
 
-  const getSkillLevelColors = (level: 'beginner' | 'intermediate' | 'advanced') => {
+  const getSkillLevelColors = (level: string) => {
     switch (level) {
       case 'beginner':
         return {
@@ -1056,56 +1108,94 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                   )
                 ) : (
                   <div className="py-1">
-                    <div className="flex items-center justify-between px-4 py-2">
-                      <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                        Recent Searches
-                      </span>
-                      {recentSearches.length > 0 && (
+                    {/* Popular Tools Section */}
+                    <div>
+                      <div className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                        🔥 Popular Tools
+                      </div>
+                      {popularTools.map((tool, i) => (
                         <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            clearRecentSearches();
-                          }}
-                          className="text-xs text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-                        >
-                          Clear All
-                        </button>
-                      )}
-                    </div>
-                    {recentSearches.length > 0 ? (
-                      recentSearches.map((term, i) => (
-                        <button
-                          key={i}
-                          className={`w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2 group ${i === selectedIndex ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'hover:bg-emerald-50 dark:hover:bg-emerald-900/20'}`}
+                          key={`popular-${tool.id}`}
+                          className={`w-full text-left px-4 py-3 text-sm transition-colors flex items-center gap-3 ${i === selectedIndex ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'hover:bg-emerald-50 dark:hover:bg-emerald-900/20'}`}
                           onClick={() => {
                             if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
-                            setSearch(term);
+                            router.push(`/tools/${tool.id}`);
                             setShowSuggestions(false);
                             setSelectedIndex(-1);
                           }}
                         >
-                          <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          <svg className="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                           </svg>
-                          <span className="flex-1 truncate">{term}</span>
+                          <span className="font-medium text-slate-900 dark:text-white truncate">{tool.name}</span>
+                          <div className="ml-auto flex items-center gap-1">
+                            <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-400 shrink-0">
+                              {tool.category}
+                            </span>
+                            <div className="flex items-center gap-0.5">
+                              <svg className="w-3 h-3 text-amber-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                              </svg>
+                              <span className="text-xs text-slate-500">{tool.rating}</span>
+                            </div>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                    
+                    {/* Recent Searches Section */}
+                    <div className="border-t border-slate-200 dark:border-gray-700">
+                      <div className="flex items-center justify-between px-4 py-2">
+                        <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                          Recent Searches
+                        </span>
+                        {recentSearches.length > 0 && (
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
-                              removeRecentSearch(term);
+                              clearRecentSearches();
                             }}
-                            className="p-1 rounded-full hover:bg-slate-200 dark:hover:bg-gray-700 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 opacity-0 group-hover:opacity-100 transition-all"
+                            className="text-xs text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                           >
-                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
+                            Clear All
                           </button>
-                        </button>
-                      ))
-                    ) : (
-                      <div className="px-4 py-6 text-center text-sm text-slate-500">
-                        No recent searches
+                        )}
                       </div>
-                    )}
+                      {recentSearches.length > 0 ? (
+                        recentSearches.map((term, i) => (
+                          <button
+                            key={i}
+                            className={`w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2 group ${i + popularTools.length === selectedIndex ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'hover:bg-emerald-50 dark:hover:bg-emerald-900/20'}`}
+                            onClick={() => {
+                              if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
+                              setSearch(term);
+                              setShowSuggestions(false);
+                              setSelectedIndex(-1);
+                            }}
+                          >
+                            <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span className="flex-1 truncate">{term}</span>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                removeRecentSearch(term);
+                              }}
+                              className="p-1 rounded-full hover:bg-slate-200 dark:hover:bg-gray-700 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 opacity-0 group-hover:opacity-100 transition-all"
+                            >
+                              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                              </svg>
+                            </button>
+                          </button>
+                        ))
+                      ) : (
+                        <div className="px-4 py-6 text-center text-sm text-slate-500">
+                          No recent searches
+                        </div>
+                      )}
+                    </div>
                   </div>
                 )}
                 {search.trim() && (
@@ -1125,6 +1215,24 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                     </button>
                   </div>
                 )}
+              </div>
+            )}
+            
+            {/* Welcome Tip */}
+            {showWelcomeTip && (
+              <div className="mt-3 flex items-center justify-center gap-2 px-4 py-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-xl border border-emerald-200 dark:border-emerald-800 animate-slide-in">
+                <span className="text-xl">👋</span>
+                <p className="text-sm text-emerald-800 dark:text-emerald-200">
+                  Try searching for <span className="font-semibold">"AI writer"</span> or browse by category below
+                </p>
+                <button
+                  onClick={() => setShowWelcomeTip(false)}
+                  className="ml-2 p-1 rounded-full hover:bg-emerald-200 dark:hover:bg-emerald-800 transition-colors"
+                >
+                  <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
               </div>
             )}
           </div>
@@ -1552,206 +1660,31 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         {/* Tools Grid */}
         <div ref={toolsGridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-7 transition-all duration-300 ease-out">
           {filteredTools.map((tool, index) => {
-            const colors = getCategoryColors(tool.category);
-            const pricingColors = getPricingColors(tool.pricing);
             const isSaved = savedIds.includes(tool.id);
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
             const hasAffiliate = hasAffiliateLink(tool);
             const ctaText = hasAffiliate ? ctaVariants[ctaVariant] : 'Visit Website';
+            
             return (
-              <div
+              <ToolCard
                 key={tool.id}
-                className={`bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative ${hasAffiliate ? 'affiliate-card' : ''}`}
-                style={{ 
-                  animationDelay: `${index * 50}ms`,
-                  willChange: 'transform'
-                }}
-              >
-                {/* Shimmer effect for affiliate cards */}
-                {hasAffiliate && (
-                  <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
-                    <div className="shimmer-sweep" />
-                  </div>
-                )}
-                
-                {/* Staff Pick Badge for affiliate tools */}
-                {hasAffiliate && (
-                  <div className="absolute top-3 right-3 z-10">
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25 animate-pulse-glow">
-                      🏷️ Staff Pick
-                    </span>
-                  </div>
-                )}
-                
-                {/* Category Color Bar - 3px Height */}
-                <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
-                
-                <div className="p-3 sm:p-5">
-                  {/* Tool Header with Compare Checkbox */}
-                  <div className="flex items-start justify-between gap-2 sm:gap-4 mb-2 sm:mb-4">
-                    <div className="flex items-center gap-2 sm:gap-3">
-                      <Link
-                        href={`/tools/${tool.id}`}
-                        className={`w-8 h-8 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xs sm:text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`} 
-                        style={{ fontFamily: 'Playfair Display, serif' }}
-                      >
-                        {tool.name.charAt(0)}
-                      </Link>
-                      <div>
-                        <Link href={`/tools/${tool.id}`} className="inline-block">
-                          <h3 className="font-semibold text-sm sm:text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
-                            {highlightText(tool.name, search)}
-                          </h3>
-                        </Link>
-                        <div className="flex items-center gap-1.5 mt-1">
-                          {tool.needs_vpn ? (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                              🪜 VPN Required
-                            </span>
-                          ) : (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
-                              ✅ Direct Access
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          toggleCompare(tool.id);
-                        }}
-                        className={`w-6 h-6 rounded border-2 transition-all duration-300 ease-out flex items-center justify-center ${
-                          isSelectedForCompare 
-                            ? 'bg-emerald-500 border-emerald-500 text-white' 
-                            : 'border-slate-300 dark:border-slate-600 hover:border-emerald-400'
-                        }`}
-                        aria-label={`Select ${tool.name} for comparison`}
-                        title="Select for comparison"
-                      >
-                        {isSelectedForCompare && (
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                        )}
-                      </button>
-                      <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold whitespace-nowrap ${pricingColors.bg} ${pricingColors.text}`}>
-                        {tool.pricing}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Description - linkable to tool page */}
-                  <Link href={`/tools/${tool.id}`} className="block">
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-2 sm:mt-4 mb-2 sm:mb-4 line-clamp-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors text-xs sm:text-base">
-                      {highlightText(tool.description, search)}
-                    </p>
-                  </Link>
-
-                  {/* Star Rating */}
-                  <div className="flex items-center gap-2 mb-4">
-                    <StarRating 
-                      rating={tool.rating || 4.0} 
-                      count={tool.rating_count || 0}
-                      size="sm"
-                    />
-                  </div>
-
-                  {/* Skill Level & Best For Tags */}
-                  <div className="mb-4 space-y-2">
-                    {tool.skill_level && (
-                      <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
-                        {getSkillLevelColors(tool.skill_level).label}
-                      </span>
-                    )}
-                    <div className="flex flex-wrap gap-1.5">
-                      {tool.best_for?.slice(0, 3).map((tag, i) => (
-                        <span 
-                          key={i} 
-                          className="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-medium whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Footer */}
-                  <div className="flex items-center justify-between gap-3">
-                    <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} whitespace-nowrap`}>
-                      {tool.category}
-                    </span>
-                    
-                    <div className="flex items-center gap-1.5 sm:gap-2">
-                      <button
-                        onClick={() => router.push(`/compare?tool=${tool.id}`)}
-                        className="inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
-                      >
-                        <svg
-                          className="w-3.5 h-3.5 sm:w-4 sm:h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01"
-                          />
-                        </svg>
-                        <span className="hidden sm:inline">Compare</span>
-                      </button>
-                      <a
-                        href={getAffiliateLink(tool) || tool.url}
-                        target="_blank"
-                        rel="noopener noreferrer sponsored"
-                        className={`inline-flex items-center justify-center gap-1 sm:gap-1.5 px-2 sm:px-3 min-h-[44px] min-w-[44px] text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98] ${
-                          hasAffiliate
-                            ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:from-emerald-600 hover:to-teal-600 hover:shadow-md hover:shadow-emerald-500/25 border border-transparent'
-                            : 'border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent'
-                        }`}
-                      >
-                        <svg
-                          className="w-3.5 h-3.5 sm:w-4 sm:h-4"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M7 17L17 7"
-                          />
-                        </svg>
-                        <span className="hidden sm:inline">{ctaText}</span>
-                        {hasAffiliate && <span className="hidden sm:inline text-[10px] opacity-60 ml-0.5">via partner</span>}
-                      </a>
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          toggleSave(tool.id);
-                        }}
-                        className={`inline-flex items-center justify-center gap-0.5 px-2 min-h-[44px] min-w-[44px] rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ease-out relative overflow-hidden whitespace-nowrap active:scale-[0.98] ${
-                          isSaved
-                            ? 'bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300 hover:bg-rose-200 dark:hover:bg-rose-500/30'
-                            : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
-                        }`}
-                        aria-label={isSaved ? `Unsave ${tool.name}` : `Save ${tool.name}`}
-                      >
-                        <span ref={el => { heartBurstRefs.current[tool.id] = el; }}>
-                          {heartBurst[tool.id] && (
-                            <span className="heart-burst absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-                          )}
-                        </span>
-                        ❤️ <span className="hidden sm:inline">{isSaved ? 'Saved' : 'Save'}</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                tool={tool}
+                index={index}
+                search={search}
+                isSaved={isSaved}
+                isSelectedForCompare={isSelectedForCompare}
+                toggleSave={toggleSave}
+                toggleCompare={toggleCompare}
+                hasAffiliate={hasAffiliate}
+                ctaText={ctaText}
+                heartBurst={!!heartBurst[tool.id]}
+                getCategoryColors={getCategoryColors}
+                getPricingColors={getPricingColors}
+                getSkillLevelColors={getSkillLevelColors}
+                getAffiliateLink={getAffiliateLink}
+                router={router}
+                comparePulse={!!comparePulse[tool.id]}
+              />
             );
           })}
         </div>

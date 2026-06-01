@@ -1,9 +1,16 @@
 import React from 'react';
 
-export default function SkeletonCard() {
+export default function SkeletonCard({ delay = 0 }: { delay?: number }) {
   return (
-    <div className="bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-5 animate-pulse">
-      <div className="flex items-center gap-3 mb-3">
+    <div 
+      className="bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-5 animate-pulse"
+      style={{ 
+        animationDelay: `${delay}ms`,
+        opacity: 0,
+        animation: 'fadeInUp 0.4s ease-out forwards',
+      }}
+    >
+      <div className="flex items-center gap-2 mb-3">
         <div className="w-11 h-11 rounded-xl bg-gray-200 dark:bg-gray-700" />
         <div className="flex-1">
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-2" />
