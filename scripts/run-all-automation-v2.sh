@@ -281,12 +281,6 @@ run_gsc_submit() {
         return 0
     fi
     
-    if [ ! -f "$PROJECT_DIR/credentials.json" ]; then
-        log_warn "⚠ credentials.json not found - skipping GSC submission"
-        log_warn "  See .tmp/gsc-setup-guide.md for setup instructions"
-        return 0
-    fi
-    
     if check_command python3; then
         if run_task "Submit new content to GSC" "python3 '$gsc_script' --days 1" 2; then
             log "✓ GSC auto-submit complete"

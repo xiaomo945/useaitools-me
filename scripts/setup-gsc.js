@@ -4,8 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 
-const CREDENTIALS_PATH = path.join(__dirname, '..', 'credentials.json');
-
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -16,17 +14,8 @@ const question = (prompt) => new Promise((resolve) => rl.question(prompt, resolv
 async function main() {
   console.log('\n🔧 GSC Configuration Wizard — Use AI Tools');
   console.log('='.repeat(50));
-  console.log('This wizard will create credentials.json for Google Search Console auto-submission.\n');
-
-  if (fs.existsSync(CREDENTIALS_PATH)) {
-    console.log('⚠️  credentials.json already exists at project root.');
-    const overwrite = await question('Overwrite? (y/N): ');
-    if (overwrite.toLowerCase() !== 'y') {
-      console.log('Aborted. Existing credentials.json preserved.');
-      rl.close();
-      return;
-    }
-  }
+  console.log('This wizard will help you configure Google Search Console auto-submission.');
+  console.log('Credentials are now managed via GOOGLE_CREDENTIALS_JSON environment variable.\n');
 
   console.log('\n📋 You need the following from Google Cloud Console:');
   console.log('   1. Service account email (e.g., gsc-submit@project.iam.gserviceaccount.com)');
@@ -69,16 +58,25 @@ async function main() {
     client_x509_cert_url: `https://www.googleapis.com/robot/v1/metadata/x509/${encodeURIComponent(clientEmail.trim())}`,
   };
 
-  fs.writeFileSync(CREDENTIALS_PATH, JSON.stringify(credentials, null, 2), 'utf8');
+  const credentialsJson = JSON.stringify(credentials, null, 2);
 
-  console.log('\n✅ credentials.json created at project root!');
-  console.log(`   Path: ${CREDENTIALS_PATH}`);
+  console.log('\n✅ Configuration complete!');
+  console.log('='.repeat(50));
+  console.log('\n📌 Set the following environment variable in Vercel:');
+  console.log('   Variable Name: GOOGLE_CREDENTIALS_JSON');
+  console.log('   Variable Value: (paste the JSON below)\n');
+  console.log(credentialsJson);
+  console.log('\n🔒 Important:');
+  console.log('   - This JSON contains sensitive credentials.');
+  console.log('   - Never commit this to version control.');
+  console.log('   - Set this in Vercel Dashboard > Settings > Environment Variables\n');
+
   console.log('\n📌 Next steps:');
   console.log('   1. Make sure the service account is added as a site owner in GSC:');
   console.log(`      https://search.google.com/search-console/owners?resource_id=sc-domain:${domain}`);
   console.log('   2. Run the submission script:');
   console.log('      bash scripts/run-gsc-submit.sh --days 1');
-  console.log('\n🔒 credentials.json is already in .gitignore — it will NOT be committed.\n');
+  console.log('   3. For GitHub Actions, add the env var to your workflow\n');
 
   rl.close();
 }

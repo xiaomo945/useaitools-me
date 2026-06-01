@@ -7,12 +7,6 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 echo "🚀 GSC Auto-Submit Runner"
 echo "========================="
 
-if [ ! -f "$PROJECT_DIR/credentials.json" ]; then
-  echo "❌ credentials.json not found at project root."
-  echo "   Run 'node scripts/setup-gsc.js' first to configure."
-  exit 1
-fi
-
 PYTHON_CMD=""
 if command -v python3 &>/dev/null; then
   PYTHON_CMD="python3"

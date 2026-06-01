@@ -72,30 +72,24 @@ def get_recent_articles(days=1):
 
 
 def get_credentials():
-    """从 credentials.json 或环境变量获取凭证"""
-    if Path(CREDENTIALS_FILE).exists():
-        return Credentials.from_service_account_file(
-            CREDENTIALS_FILE,
-            scopes=["https://www.googleapis.com/auth/indexing"]
-        )
+    """从环境变量 GOOGLE_CREDENTIALS_JSON 获取凭证"""
+    credentials_json = os.environ.get("GOOGLE_CREDENTIALS_JSON")
     
-    gsc_email = os.environ.get("GSC_CLIENT_EMAIL", "")
-    gsc_key = os.environ.get("GSC_PRIVATE_KEY", "")
+    if not credentials_json:
+        return None
     
-    if gsc_email and gsc_key:
-        gsc_key = gsc_key.replace("\\n", "\n")
-        info = {
-            "type": "service_account",
-            "client_email": gsc_email,
-            "private_key": gsc_key,
-            "token_uri": "https://oauth2.googleapis.com/token",
-        }
+    try:
+        credentials_info = json.loads(credentials_json)
         return Credentials.from_service_account_info(
-            info,
+            credentials_info,
             scopes=["https://www.googleapis.com/auth/indexing"]
         )
-    
-    return None
+    except json.JSONDecodeError:
+        print("❌ GOOGLE_CREDENTIALS_JSON 环境变量不是有效的JSON格式")
+        return None
+    except Exception as e:
+        print(f"❌ 解析 GOOGLE_CREDENTIALS_JSON 失败: {e}")
+        return None
 
 
 def submit_url_to_gsc(url):
@@ -106,7 +100,7 @@ def submit_url_to_gsc(url):
     
     credentials = get_credentials()
     if not credentials:
-        print(f"⚠️ 跳过 {url} (凭证缺失：需要 credentials.json 或设置 GSC_CLIENT_EMAIL + GSC_PRIVATE_KEY 环境变量)")
+        print(f"❌ 跳过 {url} (凭证缺失：请设置 GOOGLE_CREDENTIALS_JSON 环境变量)")
         return False
     
     try:
