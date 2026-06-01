@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import tools from '@/data/tools.json';
 import { Home, Share2, Check, Copy } from 'lucide-react';
 import Footer from '@/app/components/Footer';
-import StarRating from '@/app/components/StarRating';
+
+const StarRating = dynamic(() => import('@/app/components/StarRating'), { ssr: false });
 
 type RatingDimension = {
   score: number;

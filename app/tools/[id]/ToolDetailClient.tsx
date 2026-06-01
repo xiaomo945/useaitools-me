@@ -785,6 +785,7 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
                         width="600"
                         height="400"
                         loading="lazy"
+                        decoding="async"
                         onLoad={(e) => {
                           (e.currentTarget as HTMLImageElement).classList.remove('opacity-0');
                           (e.currentTarget as HTMLImageElement).classList.add('opacity-100');
@@ -897,6 +898,7 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
                         alt={article.images[0].alt}
                         className="w-full h-32 object-cover rounded-lg mb-3"
                         loading="lazy"
+                        decoding="async"
                       />
                     )}
                     <div className="flex items-center gap-2 mb-2">

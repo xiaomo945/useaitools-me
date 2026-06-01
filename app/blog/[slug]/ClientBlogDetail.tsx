@@ -92,6 +92,7 @@ const renderBlogImage = (image: BlogImage, index: number) => {
       alt="${image.alt}"
       class="w-full max-w-full h-auto rounded-xl shadow-lg"
       loading="lazy"
+      decoding="async"
     />
     ${image.caption ? `<figcaption class="mt-3 text-center text-sm text-slate-500 dark:text-gray-400 italic">${image.caption}</figcaption>` : ''}
   </figure>`;
@@ -478,6 +479,7 @@ export default function ClientBlogDetail({
                         alt={relatedPost.images[0].alt}
                         className="w-full h-32 object-cover rounded-lg mb-3"
                         loading="lazy"
+                        decoding="async"
                       />
                     )}
                     <div className="flex items-center gap-2 mb-2">

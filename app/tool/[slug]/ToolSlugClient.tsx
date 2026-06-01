@@ -445,6 +445,7 @@ export default function ToolSlugClient({
                         width="600"
                         height="400"
                         loading="lazy"
+                        decoding="async"
                       />
                     </div>
                     <div className="bg-gray-50 dark:bg-gray-800/60 rounded-lg p-4 flex flex-col">
@@ -561,6 +562,7 @@ export default function ToolSlugClient({
                         alt={article.images[0].alt}
                         className="w-full h-32 object-cover rounded-lg mb-3"
                         loading="lazy"
+                        decoding="async"
                       />
                     )}
                     <div className="flex items-center gap-2 mb-2">

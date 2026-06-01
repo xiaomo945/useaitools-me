@@ -40,7 +40,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed bottom-4 right-4 z-40 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-lg hover:shadow-xl hover:-translate-y-1 active:scale-95 transition-all duration-300 ease-out"
+      className="fixed bottom-20 left-4 md:bottom-4 md:left-auto md:right-4 z-40 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-lg hover:shadow-xl hover:-translate-y-1 active:scale-95 transition-all duration-300 ease-out"
       aria-label={theme === 'light' ? '切换到深色模式' : 'Switch to light mode'}
     >
       {theme === 'light' ? (

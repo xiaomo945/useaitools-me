@@ -4,6 +4,7 @@ import React, { useState, useMemo, useRef, useEffect, memo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import StarRating from './StarRating';
+import SkeletonCard from './Skeleton';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -16,7 +17,7 @@ const highlightText = (text: string, searchTerm: string) => {
     <>
       {parts.map((part, i) =>
         part.toLowerCase() === searchTerm.toLowerCase() ? (
-          <span key={i} className="bg-yellow-200 dark:bg-yellow-800 rounded px-1">
+          <span key={i} className="bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-200 rounded px-1">
             {part}
           </span>
         ) : (
@@ -111,11 +112,11 @@ const ToolCard = memo(function ToolCard({
               </Link>
               <div className="flex items-center gap-1 mt-0.5">
                 {tool.needs_vpn ? (
-                  <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                     🪜 VPN
                   </span>
                 ) : (
-                  <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                  <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold whitespace-nowrap bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
                     ✅ Direct
                   </span>
                 )}
@@ -142,7 +143,7 @@ const ToolCard = memo(function ToolCard({
                 </svg>
               )}
             </button>
-            <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
+            <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold whitespace-nowrap ${pricingColors.bg} ${pricingColors.text}`}>
               {tool.pricing}
             </span>
           </div>
@@ -167,7 +168,7 @@ const ToolCard = memo(function ToolCard({
         {/* Skill Level & Best For Tags */}
         <div className="mb-3 space-y-1.5">
           {tool.skill_level && (
-            <span className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
+            <span className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold whitespace-nowrap ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
               {getSkillLevelColors(tool.skill_level).label}
             </span>
           )}
@@ -175,7 +176,7 @@ const ToolCard = memo(function ToolCard({
             {tool.best_for?.slice(0, 3).map((tag: string, i: number) => (
               <span
                 key={i}
-                className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] sm:text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
+                className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] sm:text-xs font-medium whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
               >
                 {tag}
               </span>
@@ -355,6 +356,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
   const [selectedPricing, setSelectedPricing] = useState<string>('All');
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const blurTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const router = useRouter();
   const toolsGridRef = useRef<HTMLDivElement>(null);
   const loadMoreRef = useRef<HTMLDivElement>(null);
@@ -381,6 +385,11 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       const recent = localStorage.getItem('recentlyViewed');
       if (recent) setRecentlyViewedIds(JSON.parse(recent));
     } catch { /* ignore */ }
+
+    try {
+      const searches = localStorage.getItem('recentSearches');
+      if (searches) setRecentSearches(JSON.parse(searches));
+    } catch { /* ignore */ }
     
     // Load CTA variant (A/B test)
     try {
@@ -394,6 +403,15 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       }
     } catch { /* ignore */ }
   }, []);
+
+  const saveRecentSearch = (term: string) => {
+    if (!term.trim()) return;
+    try {
+      const updated = [term, ...recentSearches.filter(s => s !== term)].slice(0, 5);
+      setRecentSearches(updated);
+      localStorage.setItem('recentSearches', JSON.stringify(updated));
+    } catch { /* ignore */ }
+  };
 
   const loadMoreTools = async () => {
     if (isLoadingMore || !hasMore) return;
@@ -444,6 +462,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       if (loadMoreTimeoutRef.current) {
         clearTimeout(loadMoreTimeoutRef.current);
       }
+      if (blurTimeoutRef.current) {
+        clearTimeout(blurTimeoutRef.current);
+      }
     };
   }, []);
 
@@ -456,10 +477,43 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   
   // Keyboard navigation for search box (Esc to clear, Enter to search page)
   const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const itemCount = search.trim() ? autocompleteItems.length : recentSearches.length;
     if (e.key === 'Escape') {
       setSearch('');
+      setShowSuggestions(false);
+      setSelectedIndex(-1);
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setSelectedIndex(prev => (prev < itemCount - 1 ? prev + 1 : 0));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setSelectedIndex(prev => (prev > 0 ? prev - 1 : itemCount - 1));
     } else if (e.key === 'Enter') {
-      if (search.trim()) {
+      if (selectedIndex >= 0 && selectedIndex < itemCount) {
+        e.preventDefault();
+        if (search.trim()) {
+          const item = autocompleteItems[selectedIndex];
+          if (item) {
+            if (item.type === 'tool') {
+              setSearch(item.name);
+              saveRecentSearch(item.name);
+            } else {
+              saveRecentSearch(item.name);
+              router.push(`/blog/${blogPosts.find(p => p.id === item.id)?.slug || ''}`);
+            }
+            setShowSuggestions(false);
+            setSelectedIndex(-1);
+          }
+        } else {
+          const term = recentSearches[selectedIndex];
+          if (term) {
+            setSearch(term);
+            setShowSuggestions(false);
+            setSelectedIndex(-1);
+          }
+        }
+      } else if (search.trim()) {
+        saveRecentSearch(search.trim());
         router.push(`/search?q=${encodeURIComponent(search.trim())}`);
       }
     }
@@ -532,6 +586,25 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
 
     return suggestions.slice(0, 10);
   }, [search, displayedTools]);
+
+  const autocompleteItems = useMemo(() => {
+    if (!search.trim()) return [];
+    const query = search.toLowerCase();
+    const items: { type: 'tool' | 'blog'; name: string; category: string; id: number }[] = [];
+    displayedTools.forEach(tool => {
+      if (items.length >= 5) return;
+      if (tool.name.toLowerCase().includes(query)) {
+        items.push({ type: 'tool', name: tool.name, category: tool.category, id: tool.id });
+      }
+    });
+    blogPosts.forEach(post => {
+      if (items.length >= 5) return;
+      if (post.title.toLowerCase().includes(query)) {
+        items.push({ type: 'blog', name: post.title, category: post.category, id: post.id });
+      }
+    });
+    return items;
+  }, [search, displayedTools, blogPosts]);
 
   // Handle suggestion click
   const handleSuggestionClick = (suggestion: { type: string; label: string; value: string; toolId?: number }) => {
@@ -823,7 +896,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           {/* Background Breathing Glow - Only Desktop */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent rounded-full blur-3xl animate-breathe pointer-events-none hidden sm:block" />
           
-          <img src="/logo.png" alt="Use AI Tools Logo - Discover the best AI tools" className="h-8 sm:h-12 lg:h-14 w-auto mx-auto mb-2 sm:mb-3 relative z-10" width="72" height="43" loading="eager" />
+          <img src="/logo.png" alt="Use AI Tools Logo - Discover the best AI tools" className="h-8 sm:h-12 lg:h-14 w-auto mx-auto mb-2 sm:mb-3 relative z-10" width="72" height="43" loading="eager" decoding="async" />
           <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight mb-1 sm:mb-2 relative z-10">
             <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
               Use AI Tools
@@ -868,8 +941,20 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 onChange={(e) => {
                   setSearch(e.target.value);
                   setShowSuggestions(true);
+                  setSelectedIndex(-1);
                 }}
-                onFocus={() => setShowSuggestions(true)}
+                onFocus={() => {
+                  if (blurTimeoutRef.current) {
+                    clearTimeout(blurTimeoutRef.current);
+                  }
+                  setShowSuggestions(true);
+                }}
+                onBlur={() => {
+                  blurTimeoutRef.current = setTimeout(() => {
+                    setShowSuggestions(false);
+                    setSelectedIndex(-1);
+                  }, 200);
+                }}
                 onKeyDown={handleSearchKeyDown}
                 aria-label="Search AI tools"
                 autoComplete="off"
@@ -907,55 +992,95 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             </div>
 
             {/* Search Suggestions Dropdown */}
-            {showSuggestions && searchSuggestions.length > 0 && (
-              <div className="absolute z-50 w-full mt-2 bg-white dark:bg-gray-900 rounded-xl border border-slate-200 dark:border-gray-700 shadow-xl overflow-hidden">
-                <div className="p-2">
-                  {!search.trim() && (
-                    <div className="px-3 py-2 text-xs font-semibold text-slate-500 dark:text-gray-400 uppercase tracking-wider">
-                      Popular Searches
+            {showSuggestions && (search.trim() || recentSearches.length > 0) && (
+              <div className="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl shadow-xl z-50 overflow-hidden">
+                {search.trim() ? (
+                  autocompleteItems.length > 0 ? (
+                    <div className="py-1">
+                      <div className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                        Suggestions
+                      </div>
+                      {autocompleteItems.map((item, i) => (
+                        <button
+                          key={`${item.type}-${item.id}`}
+                          className={`w-full text-left px-4 py-3 text-sm transition-colors flex items-center gap-3 ${i === selectedIndex ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'hover:bg-emerald-50 dark:hover:bg-emerald-900/20'}`}
+                          onClick={() => {
+                            if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
+                            if (item.type === 'tool') {
+                              setSearch(item.name);
+                              saveRecentSearch(item.name);
+                            } else {
+                              saveRecentSearch(item.name);
+                              const post = blogPosts.find(p => p.id === item.id);
+                              if (post) router.push(`/blog/${post.slug}`);
+                            }
+                            setShowSuggestions(false);
+                            setSelectedIndex(-1);
+                          }}
+                        >
+                          {item.type === 'tool' ? (
+                            <svg className="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                          ) : (
+                            <svg className="w-4 h-4 text-indigo-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                            </svg>
+                          )}
+                          <span className="font-medium text-slate-900 dark:text-white truncate">{item.name}</span>
+                          <span className={`ml-auto text-xs px-2 py-0.5 rounded-full shrink-0 ${
+                            item.type === 'tool'
+                              ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-400'
+                              : 'bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-400'
+                          }`}>
+                            {item.type === 'tool' ? item.category : 'Blog'}
+                          </span>
+                        </button>
+                      ))}
                     </div>
-                  )}
-                  {search.trim() && (
-                    <div className="px-3 py-2 text-xs font-semibold text-slate-500 dark:text-gray-400 uppercase tracking-wider">
-                      Search Results
+                  ) : (
+                    <div className="px-4 py-6 text-center text-sm text-slate-500">
+                      No results found
                     </div>
-                  )}
-                  {searchSuggestions.map((suggestion, index) => (
-                    <button
-                      key={`${suggestion.type}-${suggestion.value}-${index}`}
-                      onClick={() => handleSuggestionClick(suggestion)}
-                      className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 dark:hover:bg-gray-800 transition-colors text-left group"
-                    >
-                      {suggestion.type === 'tool' ? (
-                        <svg className="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  )
+                ) : (
+                  <div className="py-1">
+                    <div className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                      Recent Searches
+                    </div>
+                    {recentSearches.map((term, i) => (
+                      <button
+                        key={i}
+                        className={`w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2 ${i === selectedIndex ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'hover:bg-emerald-50 dark:hover:bg-emerald-900/20'}`}
+                        onClick={() => {
+                          if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
+                          setSearch(term);
+                          setShowSuggestions(false);
+                          setSelectedIndex(-1);
+                        }}
+                      >
+                        <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                      ) : (
-                        <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
-                        </svg>
-                      )}
-                      <span className="text-sm text-slate-700 dark:text-gray-200">{suggestion.label}</span>
-                      <span className={`ml-auto text-xs px-2 py-0.5 rounded-full ${
-                        suggestion.type === 'tool' 
-                          ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-400'
-                          : 'bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-400'
-                      }`}>
-                        {suggestion.type === 'tool' ? 'Tool' : 'Category'}
-                      </span>
-                    </button>
-                  ))}
-                </div>
+                        {term}
+                      </button>
+                    ))}
+                  </div>
+                )}
                 {search.trim() && (
                   <div className="border-t border-slate-200 dark:border-gray-700 px-3 py-2">
                     <button
-                      onClick={goToSearchPage}
+                      onClick={() => {
+                        if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
+                        saveRecentSearch(search.trim());
+                        goToSearchPage();
+                      }}
                       className="w-full flex items-center justify-center gap-2 text-sm text-slate-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                       </svg>
-                      Search for "{search}"
+                      Search for &quot;{search}&quot;
                     </button>
                   </div>
                 )}
@@ -1189,6 +1314,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                         alt={post.images[0].alt}
                         className="w-full h-40 object-cover rounded-xl mb-4"
                         loading="lazy"
+                        decoding="async"
                       />
                     )}
                     <div className="flex items-center gap-2 mb-3">
@@ -1329,11 +1455,11 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                             {tool.category}
                           </span>
                           {tool.needs_vpn ? (
-                            <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                            <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                               🪜 VPN
                             </span>
                           ) : (
-                            <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                            <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold whitespace-nowrap bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
                               ✅ Direct
                             </span>
                           )}
@@ -1438,11 +1564,11 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                         </Link>
                         <div className="flex items-center gap-1.5 mt-1">
                           {tool.needs_vpn ? (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                               🪜 VPN Required
                             </span>
                           ) : (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
                               ✅ Direct Access
                             </span>
                           )}
@@ -1469,7 +1595,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                           </svg>
                         )}
                       </button>
-                      <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
+                      <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold whitespace-nowrap ${pricingColors.bg} ${pricingColors.text}`}>
                         {tool.pricing}
                       </span>
                     </div>
@@ -1494,7 +1620,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                   {/* Skill Level & Best For Tags */}
                   <div className="mb-4 space-y-2">
                     {tool.skill_level && (
-                      <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
+                      <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
                         {getSkillLevelColors(tool.skill_level).label}
                       </span>
                     )}
@@ -1502,7 +1628,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                       {tool.best_for?.slice(0, 3).map((tag, i) => (
                         <span 
                           key={i} 
-                          className="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
+                          className="inline-flex items-center px-2 py-1 rounded-full text-[10px] font-medium whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
                         >
                           {tag}
                         </span>
@@ -1601,13 +1727,10 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           </div>
         )}
         {isLoadingMore && (
-          <div className="h-20 flex items-center justify-center">
-            <div className="flex items-center gap-3 text-slate-500 dark:text-gray-400">
-              <svg className="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-              <span className="text-sm font-medium">Loading more tools...</span>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            {[1, 2, 3, 4].map((i) => (
+              <SkeletonCard key={i} />
+            ))}
           </div>
         )}
 
