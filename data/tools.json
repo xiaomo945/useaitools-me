@@ -58357,5 +58357,1739 @@
         "Learning curve for advanced customization options"
       ]
     }
+  },
+  {
+    "id": 1103,
+    "name": "AutoShorts AI",
+    "description": "AI-powered platform that automatically generates short-form videos for TikTok, Reels, and YouTube Shorts from text or blog posts. Includes auto-captioning and trending audio suggestions.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://autoshorts-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Auto-generate short videos for social media platforms.",
+    "rating": 4.5,
+    "rating_count": 634,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1223911409892935,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.509333500802613,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.633535012548245,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.576818785678671,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.093672723423151,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "TikTok",
+      "Reels",
+      "Shorts"
+    ]
+  },
+  {
+    "id": 1104,
+    "name": "Repurpose.io",
+    "description": "Automatically convert your content into multiple formats for different platforms. Transform YouTube videos into clips, podcasts into blog posts, and more.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://repurpose.io.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Convert content across multiple platforms automatically.",
+    "rating": 4.3,
+    "rating_count": 144,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5926233448895175,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.862553255859284,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.346644634662484,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.2046294502576735,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.796833560722825,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.940459485342586,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Content Repurposing",
+      "Social Media",
+      "Automation"
+    ]
+  },
+  {
+    "id": 1105,
+    "name": "Castmagic",
+    "description": "AI-powered podcast production tool that generates show notes, timestamps, social media clips, and full transcripts automatically.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://castmagic.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI podcast production with automated content generation.",
+    "rating": 4.5,
+    "rating_count": 431,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.431527088432091,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.383374156870871,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.719550883351482,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.2943202952395945,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.717807098346301,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.0629626746536,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Podcasting",
+      "Show Notes",
+      "Automation"
+    ]
+  },
+  {
+    "id": 1106,
+    "name": "Fireflies AI",
+    "description": "AI meeting assistant that transcribes, summarizes, and analyzes your meetings. Integrates with Zoom, Google Meet, and Teams.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://fireflies-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI meeting transcription and analysis.",
+    "rating": 4.2,
+    "rating_count": 2846,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.671362765028758,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.9547840971934223,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.540025469893602,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.461348182991973,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.475392552288378,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.9114559546025287,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Meetings",
+      "Transcription",
+      "Notes"
+    ]
+  },
+  {
+    "id": 1107,
+    "name": "AdCreative AI",
+    "description": "Generate high-converting ad creatives and copy with AI. Create multiple variations for A/B testing in seconds.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://adcreative-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered ad creative generation.",
+    "rating": 4.2,
+    "rating_count": 2138,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.226406999119586,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.498544809504134,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 3.891376459150568,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.225293872376017,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.586166504565329,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.9898414280085914,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Advertising",
+      "Marketing",
+      "Conversion"
+    ]
+  },
+  {
+    "id": 1108,
+    "name": "PlayHT",
+    "description": "Realistic AI voice generation with emotional expression. Create natural-sounding voiceovers for videos, podcasts, and e-learning.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://playht.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Realistic AI voice generation with emotions.",
+    "rating": 4.6,
+    "rating_count": 1699,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.138560268148074,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.601520958042682,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.467540468160344,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.650199798241452,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Voiceover",
+      "TTS",
+      "Audio"
+    ]
+  },
+  {
+    "id": 1109,
+    "name": "Jasper Art",
+    "description": "AI image generation integrated with Jasper's content platform. Create visuals that match your brand style.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://jasper-art.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI image generation for brands.",
+    "rating": 4.3,
+    "rating_count": 1975,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.400928229467126,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.680962699762618,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.672912673875334,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.688285305859441,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.456405537293344,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Brand Images",
+      "Marketing",
+      "Creative"
+    ]
+  },
+  {
+    "id": 1110,
+    "name": "Cohere",
+    "description": "Enterprise AI platform for building LLM-powered applications. Embeddings, classification, and semantic search.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://cohere.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Enterprise AI platform for applications.",
+    "rating": 4.2,
+    "rating_count": 4977,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2615310375470585,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.5827299912662545,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.4507221406045945,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.973945653857307,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.721966518811511,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.91706396208394,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "advanced",
+    "best_for": [
+      "Enterprise",
+      "LLM",
+      "API"
+    ]
+  },
+  {
+    "id": 1111,
+    "name": "Phind",
+    "description": "AI search engine designed for developers. Get instant answers to programming questions with code examples.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://phind.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI search engine for developers.",
+    "rating": 4.5,
+    "rating_count": 2449,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.600902298714347,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.889697847401483,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.925176413709138,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.871923315344808,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.8120524937261155,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.179236495551545,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Search",
+      "Code Help",
+      "Development"
+    ]
+  },
+  {
+    "id": 1112,
+    "name": "Loom AI",
+    "description": "AI-powered video messaging platform. Auto-generated titles, summaries, and chapter markers.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://loom-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video messaging and recording.",
+    "rating": 4.3,
+    "rating_count": 3553,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8060880969501536,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.44450837104015,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.713424036282873,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.264914291541636,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.546152851838097,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.9882683404495496,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video Messages",
+      "Async",
+      "Communication"
+    ]
+  },
+  {
+    "id": 1113,
+    "name": "Tome AI",
+    "description": "AI-powered presentation and storytelling tool. Create visually stunning presentations from text prompts.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://tome-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI presentation and storytelling tool.",
+    "rating": 4.3,
+    "rating_count": 3999,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2736749249955635,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.142883252174234,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.030668604511018,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.60068613719571,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.000256400514252,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.844078798060043,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Presentations",
+      "Storytelling",
+      "Slides"
+    ]
+  },
+  {
+    "id": 1114,
+    "name": "Make AI",
+    "description": "Visual automation platform with AI capabilities. Build complex workflows without code.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://make-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Visual automation with AI.",
+    "rating": 4.1,
+    "rating_count": 941,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.7844979416586315,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.282786926537672,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.642978791577785,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.5599286728971835,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.08546510561218,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.488495423874925,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Automation",
+      "Workflows",
+      "No Code"
+    ]
+  },
+  {
+    "id": 1115,
+    "name": "Craft AI",
+    "description": "AI-powered note-taking app with beautiful design. Generate content and organize your thoughts.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://craft-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered note-taking.",
+    "rating": 4.7,
+    "rating_count": 2654,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.890134827204227,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.6785930970053204,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.830670254830892,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.642028389393498,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Note-taking",
+      "Design",
+      "Organization"
+    ]
+  },
+  {
+    "id": 1116,
+    "name": "Logseq AI",
+    "description": "Privacy-first knowledge management with AI assistance. Outliner and graph view with local storage.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://logseq-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Privacy-first knowledge management.",
+    "rating": 4.1,
+    "rating_count": 2758,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.6961191239610187,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.595865927476643,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.2859495622545305,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 3.9322269498675326,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.846710192964454,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.020730748156577,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Knowledge",
+      "Privacy",
+      "Outliner"
+    ]
+  },
+  {
+    "id": 1117,
+    "name": "Napkin AI",
+    "description": "AI-powered tool for creating visual content from text. Turn your ideas into infographics and graphics.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://napkin-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Create visual content from text.",
+    "rating": 4.4,
+    "rating_count": 1361,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.498381161706088,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.276440437321425,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.4561370032416,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.593797136998871,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.757938411288662,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.159558525790103,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Graphics",
+      "Infographics",
+      "Visual"
+    ]
+  },
+  {
+    "id": 1118,
+    "name": "Pika AI",
+    "description": "AI video generation platform for creating and editing videos. User-friendly interface for content creators.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://pika-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "User-friendly AI video generation.",
+    "rating": 4.4,
+    "rating_count": 2418,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.791493865734254,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.471675328701114,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.913561599020036,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.208440884422986,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.8395521269495525,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.828665503440274,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video Creation",
+      "AI",
+      "Content"
+    ]
+  },
+  {
+    "id": 1119,
+    "name": "Hailuo AI",
+    "description": "AI-powered video creation from text. Developed by MiniMax for high-quality video generation.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://hailuo-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video generation by MiniMax.",
+    "rating": 4.5,
+    "rating_count": 3263,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.155837036516465,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.551884442985554,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.783338334990482,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.970446113512174,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.094559434655409,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Video Generation",
+      "AI",
+      "Text-to-Video"
+    ]
+  },
+  {
+    "id": 1120,
+    "name": "Meshy AI",
+    "description": "AI-powered 3D model creation from text or images. Transform concepts into 3D assets quickly.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://meshy-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI 3D model creation.",
+    "rating": 4.8,
+    "rating_count": 4681,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.945172000546308,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.460205815214859,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "3D Models",
+      "AI",
+      "Design"
+    ]
+  },
+  {
+    "id": 1121,
+    "name": " Spline AI",
+    "description": "AI-assisted 3D design tool in browser. Create 3D scenes and animations with AI assistance.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://-spline-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-assisted 3D design.",
+    "rating": 4.7,
+    "rating_count": 1608,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.650838491101875,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.852319970145437,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.571291968878523,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.892745918900267,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.724367995353076,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "3D Design",
+      "Browser",
+      "Animation"
+    ]
+  },
+  {
+    "id": 1122,
+    "name": "RAGFlow",
+    "description": "Open-source RAG engine for enterprise. Deep document understanding with intelligent retrieval.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://ragflow.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Open-source RAG engine for documents.",
+    "rating": 4,
+    "rating_count": 2295,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.342968137238207,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.123366836866425,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.356830295964103,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.36678794472957,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.853229682867588,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.682430183072909,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "advanced",
+    "best_for": [
+      "RAG",
+      "Enterprise",
+      "Documents"
+    ]
+  },
+  {
+    "id": 1123,
+    "name": "Dify",
+    "description": "Open-source LLM app development platform. Build AI applications with visual workflow.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://dify.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Open-source LLM app platform.",
+    "rating": 4.7,
+    "rating_count": 2272,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.575086782097416,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.681321194792359,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.6318132633941715,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.700172596319973,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.714814153241336,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "LLM Apps",
+      "Development",
+      "No Code"
+    ]
+  },
+  {
+    "id": 1124,
+    "name": "Flowise AI",
+    "description": "Drag-and-drop UI for building LLM flows. Create custom AI workflows without coding.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://flowise-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Drag-and-drop LLM flows builder.",
+    "rating": 4.2,
+    "rating_count": 3411,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.212628446170525,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.382755421567331,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.545525115105893,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.421464246269464,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.209474739436101,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.331568217104415,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "LLM Flows",
+      "No Code",
+      "Automation"
+    ]
+  },
+  {
+    "id": 1125,
+    "name": "AutoGen Studio",
+    "description": "Microsoft's open-source tool for building LLM agents. Create multi-agent workflows visually.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://autogen-studio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Microsoft's LLM agent builder.",
+    "rating": 4.6,
+    "rating_count": 4677,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.258113017506461,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.569025692715372,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.868178303424677,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.585756525832798,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.862688681409213,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "advanced",
+    "best_for": [
+      "LLM Agents",
+      "Microsoft",
+      "Automation"
+    ]
+  },
+  {
+    "id": 1126,
+    "name": "EmbedAI",
+    "description": "Create AI chatbots trained on your data. Build customer support and knowledge base bots easily.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://embedai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI chatbots from your data.",
+    "rating": 4.4,
+    "rating_count": 4926,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.687030468289498,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.994379099242584,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.495236214328206,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.682341396700725,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.51792754716087,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Chatbots",
+      "Support",
+      "Knowledge Base"
+    ]
+  },
+  {
+    "id": 1127,
+    "name": "Chatbase",
+    "description": "Build AI chatbots from your documents and websites. No coding required.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://chatbase.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Build chatbots from documents.",
+    "rating": 4.7,
+    "rating_count": 4186,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.881945233335713,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.591801421490546,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.686971886447931,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.335816944665774,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Chatbots",
+      "No Code",
+      "Support"
+    ]
+  },
+  {
+    "id": 1128,
+    "name": "Voiceflow",
+    "description": "Design and deploy AI assistants across channels. Visual conversation designer.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://voiceflow.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Visual AI assistant designer.",
+    "rating": 4.2,
+    "rating_count": 3144,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9271388087519314,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.849580642055459,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.18756347536147,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.997970069986728,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.65947672421642,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 3.849723389724337,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Voice Assistants",
+      "Design",
+      "Multi-channel"
+    ]
+  },
+  {
+    "id": 1129,
+    "name": "Leiapix",
+    "description": "Transform 2D photos into stunning 3D animations. Create dynamic visuals with depth effects.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://leiapix.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Transform photos into 3D animations.",
+    "rating": 4.5,
+    "rating_count": 433,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.107862689406098,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.296874624688455,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.483746093491919,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.5627541596499,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.618819690075602,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.0728606601173825,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "3D Effects",
+      "Photo",
+      "Creative"
+    ]
+  },
+  {
+    "id": 1130,
+    "name": "Toongineer Cartoonizer",
+    "description": "AI-powered tool to convert photos into cartoon or anime-style images. Fun and easy to use.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://toongineer-cartoonizer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Convert photos to cartoon style.",
+    "rating": 4.7,
+    "rating_count": 889,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.711878449227182,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.684928011179305,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.498421724903187,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Cartoon",
+      "Anime",
+      "Photo"
+    ]
+  },
+  {
+    "id": 1131,
+    "name": "ProPhotos AI",
+    "description": "AI-powered photo enhancement and editing. Remove backgrounds, enhance portraits, and more.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://prophotos-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI photo enhancement and editing.",
+    "rating": 4.3,
+    "rating_count": 781,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.521506244335207,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.331519469701687,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.8882781763228245,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.548429212782402,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.736390028648039,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.5841866229753165,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Photo Editing",
+      "Portraits",
+      "Enhancement"
+    ]
+  },
+  {
+    "id": 1132,
+    "name": "Pixlr AI",
+    "description": "Online photo editor with AI features. Background removal, generative fill, and smart tools.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://pixlr-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Online AI photo editor.",
+    "rating": 4.5,
+    "rating_count": 4884,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.634292612081779,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.314978291236378,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.5574498247339985,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.89888137466053,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.416993470229098,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.029231786455349,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Photo Editing",
+      "Online",
+      "AI Tools"
+    ]
+  },
+  {
+    "id": 1133,
+    "name": "InstaFill AI",
+    "description": "AI-powered Instagram content generator. Create posts, stories, and reels with AI assistance.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://instafill-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI for Instagram content creation.",
+    "rating": 4.3,
+    "rating_count": 3500,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.812225088417025,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.494949272872736,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.526640124150596,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.691281976343544,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.44865377428436,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.393502005736497,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Instagram",
+      "Social Media",
+      "Content"
+    ]
+  },
+  {
+    "id": 1134,
+    "name": "HeadshotPro",
+    "description": "AI professional headshot generator. Get studio-quality headshots from selfies.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://headshotpro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI professional headshots.",
+    "rating": 4.1,
+    "rating_count": 2329,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.694096798974968,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 3.9757205818989525,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.531207711759757,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.533506299438154,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.651465622877542,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.164133838095179,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Headshots",
+      "Professional",
+      "Portraits"
+    ]
+  },
+  {
+    "id": 1135,
+    "name": "Aragon AI",
+    "description": "Create professional headshots and portraits with AI. Perfect for LinkedIn and resumes.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://aragon-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI professional headshot creator.",
+    "rating": 4.5,
+    "rating_count": 3826,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.938015927845217,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 4.54056928645786,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.402352052006911,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.6009473285708005,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 4.420571910019562,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Headshots",
+      "LinkedIn",
+      "Professional"
+    ]
+  },
+  {
+    "id": 1136,
+    "name": "StudioShot",
+    "description": "AI-powered portrait studio. Transform casual photos into professional headshots.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://studioshot.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI portrait studio.",
+    "rating": 4.7,
+    "rating_count": 841,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.21647110862161,
+        "note": "User-friendly interface"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High-quality output"
+      },
+      "features": {
+        "score": 4.410923469426133,
+        "note": "Rich feature set"
+      },
+      "value_for_money": {
+        "score": 4.645780643353696,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.832444567283333,
+        "note": "Reliable performance"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Portraits",
+      "Professional",
+      "Studio"
+    ]
   }
 ]
