@@ -1,1 +1,9 @@
-{}
+{
+  "redirects": [
+    { "source": "/blog/", "destination": "/blog", "permanent": true },
+    { "source": "/compare/", "destination": "/compare", "permanent": true },
+    { "source": "/category/:slug/", "destination": "/category/:slug", "permanent": true },
+    { "source": "/blog/:slug/", "destination": "/blog/:slug", "permanent": true },
+    { "source": "/tool/:slug/", "destination": "/tool/:slug", "permanent": true }
+  ]
+}
