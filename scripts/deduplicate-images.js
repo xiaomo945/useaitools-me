@@ -97,7 +97,7 @@ async function deduplicateImages() {
       let article = JSON.parse(fs.readFileSync(articlePath, 'utf8'));
       
       // 重新生成图片
-      article = await generateImagesForArticle(article, article.title);
+      article = await generateImagesForArticle(article);
       
       // 更新文章文件
       fs.writeFileSync(articlePath, JSON.stringify(article, null, 2));

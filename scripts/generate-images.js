@@ -52,11 +52,14 @@ async function generateImagesForArticle(article) {
   const category = article.category || 'Productivity';
   const title = article.title;
   
-  // 生成图片提示词
-  const imagePrompts = {
-    header: `clean tech illustration, emerald green accents, modern ${category} AI tools workspace, professional banner, 16:9 aspect ratio, minimalist design, white background`,
-    mid: `clean tech illustration, emerald green accents, team collaboration with ${category} AI tools, detailed, 16:9 aspect ratio, professional, modern office`,
-    cta: `clean tech illustration, emerald green accents, call to action scene, user engagement with ${category} AI tools, inviting and encouraging, 16:9 aspect ratio`
+  // 生成图片提示词 - 添加 articleId, position and random seed for uniqueness
+  const imagePrompts = (position) => {
+    const randomSeed = Math.floor(Math.random() * 1000000);
+    return {
+      header: `clean tech illustration, emerald green accents, modern ${category} AI tools workspace, professional banner, 16:9 aspect ratio, minimalist design, white background, unique id ${articleId} position ${position} seed ${randomSeed}`,
+      mid: `clean tech illustration, emerald green accents, team collaboration with ${category} AI tools, detailed, 16:9 aspect ratio, professional, modern office, unique id ${articleId} position ${position} seed ${randomSeed}`,
+      cta: `clean tech illustration, emerald green accents, call to action scene, user engagement with ${category} AI tools, inviting and encouraging, 16:9 aspect ratio, unique id ${articleId} position ${position} seed ${randomSeed}`
+    };
   };
   
   const images = [];
@@ -68,8 +71,10 @@ async function generateImagesForArticle(article) {
     const outputPath = path.join(outputDir, fileName);
     const publicPath = `/blog-images/${fileName}`;
     
+    // 获取当前位置的提示词
+    const promptsForPosition = imagePrompts(position);
     // 尝试生成图片
-    const success = await generateSingleImage(imagePrompts[position], outputPath);
+    const success = await generateSingleImage(promptsForPosition[position], outputPath);
     
     images.push({
       url: success ? publicPath : 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=630&fit=crop',
@@ -77,7 +82,7 @@ async function generateImagesForArticle(article) {
       alt: title,
       caption: `${category} AI tools`,
       position: position,
-      prompt: imagePrompts[position],
+      prompt: promptsForPosition[position],
       generated: success
     });
   }

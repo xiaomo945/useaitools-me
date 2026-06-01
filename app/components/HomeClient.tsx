@@ -366,6 +366,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const [ctaVariant, setCtaVariant] = useState<keyof typeof ctaVariants>('A');
   const heartBurstRefs = useRef<{ [key: number]: HTMLSpanElement | null }>({});
   const categoryButtonsRef = useRef<(HTMLButtonElement | null)[]>([]);
+  const loadMoreTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   
   // Load localStorage data after mount (SSR-safe)
   useEffect(() => {
@@ -396,19 +397,26 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
 
   const loadMoreTools = async () => {
     if (isLoadingMore || !hasMore) return;
-    setIsLoadingMore(true);
-    try {
-      const nextPage = page + 1;
-      const response = await fetch(`/api/tools?page=${nextPage}&limit=20`);
-      const data = await response.json();
-      setDisplayedTools(prev => [...prev, ...data.tools]);
-      setPage(nextPage);
-      setHasMore(data.hasMore);
-    } catch (error) {
-      console.error('Failed to load more tools:', error);
-    } finally {
-      setIsLoadingMore(false);
+    
+    if (loadMoreTimeoutRef.current) {
+      clearTimeout(loadMoreTimeoutRef.current);
     }
+    
+    loadMoreTimeoutRef.current = setTimeout(async () => {
+      setIsLoadingMore(true);
+      try {
+        const nextPage = page + 1;
+        const response = await fetch(`/api/tools?page=${nextPage}&limit=20`);
+        const data = await response.json();
+        setDisplayedTools(prev => [...prev, ...data.tools]);
+        setPage(nextPage);
+        setHasMore(data.hasMore);
+      } catch (error) {
+        console.error('Failed to load more tools:', error);
+      } finally {
+        setIsLoadingMore(false);
+      }
+    }, 300);
   };
 
   useEffect(() => {
@@ -429,6 +437,15 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       }
     };
   }, [isLoadingMore, hasMore, page]);
+
+  // Clean up timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (loadMoreTimeoutRef.current) {
+        clearTimeout(loadMoreTimeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (displayedTools.length > 0) {
