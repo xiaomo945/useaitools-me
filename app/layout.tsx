@@ -8,6 +8,7 @@ import BackToTop from "./components/BackToTop";
 import MobileNav from "./components/MobileNav";
 import ThemeToggle from "./components/ThemeToggle";
 import { ToastProvider } from "./components/Toast";
+import PageTransition from "./components/PageTransition";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -109,7 +110,7 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <PageProgress />
           </Suspense>
-          {children}
+          <PageTransition>{children}</PageTransition>
           <Analytics />
           <Suspense fallback={null}>
             <BackToTop />

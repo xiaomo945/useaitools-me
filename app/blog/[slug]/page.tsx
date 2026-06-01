@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { blogPosts, type BlogPost } from '@/types';
+import { blogPosts } from '@/data/blog-posts';
+import type { BlogPost } from '@/types';
 import toolsData from '@/data/tools.json';
 import ClientBlogDetail from './ClientBlogDetail';
 

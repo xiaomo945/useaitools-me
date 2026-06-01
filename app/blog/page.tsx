@@ -1,161 +1,160 @@
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { blogPosts, type BlogPost } from '@/types';
-import { Home } from 'lucide-react';
-import Footer from '@/app/components/Footer';
-import { Metadata } from 'next';
-
-// Calculate estimated reading time
-const calculateReadTime = (content: string): { minutes: number; display: string } => {
-  const wordsPerMinute = 200;
-  // Strip HTML tags and markdown
-  const plainText = content
-    .replace(/<[^>]*>/g, '')
-    .replace(/\*\*(.*?)\*\*/g, '$1')
-    .replace(/\[\[link:[^\|]+\|([^\]]+)\]\]/g, '$1');
-  const wordCount = plainText.trim().split(/\s+/).length;
-  const readTime = Math.ceil(wordCount / wordsPerMinute);
-  return {
-    minutes: readTime,
-    display: `⏱️ ${readTime} min read`
-  };
-};
-
-// Format relative date
-const formatRelativeDate = (dateStr: string): string => {
-  const date = new Date(dateStr);
-  const now = new Date();
-  const diffTime = Math.abs(now.getTime() - date.getTime());
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  
-  if (diffDays === 1) {
-    return 'yesterday';
-  } else if (diffDays < 7) {
-    return `${diffDays} days ago`;
-  } else if (diffDays < 14) {
-    return 'last week';
-  } else if (diffDays < 30) {
-    const weeks = Math.floor(diffDays / 7);
-    return `${weeks} weeks ago`;
-  } else if (diffDays < 60) {
-    return 'last month';
-  } else {
-    const months = Math.floor(diffDays / 30);
-    return `${months} months ago`;
-  }
-};
-
-export const metadata: Metadata = {
-  title: 'AI Tools Blog – Use AI Tools',
-  description: 'In-depth comparisons, reviews, and guides for AI tools.',
-};
+import { ArrowRight, Calendar, Clock, Tag } from 'lucide-react';
+import { useToast } from '@/app/components/Toast';
+import { blogPosts } from '@/data/blog-posts';
+import type { BlogPost } from '@/types';
 
 export default function BlogPage() {
-  // Blog CollectionPage Schema
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    'name': 'AI Tools Blog - Use AI Tools',
-    'description': 'In-depth comparisons, reviews, and guides for AI tools.',
-    'url': 'https://useaitools.me/blog',
-    'publisher': {
-      '@type': 'Organization',
-      'name': 'Use AI Tools',
-      'logo': {
-        '@type': 'ImageObject',
-        'url': 'https://useaitools.me/logo.png'
+  const { addToast } = useToast();
+  
+  // Pull to refresh state
+  const [pullStartY, setPullStartY] = useState(0);
+  const [pullDistance, setPullDistance] = useState(0);
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [showPullIndicator, setShowPullIndicator] = useState(false);
+  const [posts, setPosts] = useState<BlogPost[]>(blogPosts);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (window.scrollY === 0 && !isRefreshing) {
+      setPullStartY(e.touches[0].clientY);
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (window.scrollY === 0 && !isRefreshing && pullStartY > 0) {
+      const currentY = e.touches[0].clientY;
+      const distance = currentY - pullStartY;
+      
+      if (distance > 0) {
+        setPullDistance(distance);
+        setShowPullIndicator(true);
       }
-    },
-    'author': {
-      '@type': 'Organization',
-      'name': 'Use AI Tools'
-    },
-    'mainEntity': {
-      '@type': 'ItemList',
-      'numberOfItems': blogPosts.length,
-      'itemListElement': blogPosts.map((post, index) => ({
-        '@type': 'ListItem',
-        'position': index + 1,
-        'name': post.title,
-        'url': `https://useaitools.me/blog/${post.slug}`,
-        'description': post.description
-      }))
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (pullDistance > 60 && !isRefreshing) {
+      setIsRefreshing(true);
+      setPullDistance(60);
+      
+      // Simulate refresh
+      setTimeout(() => {
+        setPosts([...blogPosts]);
+        setIsRefreshing(false);
+        setPullDistance(0);
+        setShowPullIndicator(false);
+        addToast('✅ Page refreshed');
+      }, 1000);
+    } else {
+      setPullDistance(0);
+      setShowPullIndicator(false);
     }
   };
 
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16 grid-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          {/* Back to Home Link */}
-          <div className="mb-8">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300"
+    <div
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+      onTouchCancel={handleTouchEnd}
+      className="min-h-screen"
+    >
+      {/* Pull to refresh indicator */}
+      {showPullIndicator && (
+        <div
+          className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center pt-4"
+          style={{ 
+            transform: `translateY(${Math.min(pullDistance / 2, 40)}px)`,
+            transition: isRefreshing ? 'none' : 'transform 0.2s ease-out'
+          }}
+        >
+          <div className={`flex flex-col items-center gap-2 ${isRefreshing ? 'animate-pulse' : ''}`}>
+            <svg
+              className={`w-6 h-6 text-indigo-500 ${isRefreshing ? 'animate-spin' : ''}`}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
             >
-              <Home className="w-5 h-5" />
-              <span className="font-medium">Back to Home</span>
-            </Link>
-          </div>
-
-          {/* Blog Header */}
-          <div className="mb-10">
-            <div className="bg-gradient-to-br from-purple-50/80 via-white to-indigo-50/80 dark:from-purple-950/60 dark:via-gray-900 dark:to-indigo-950/60 backdrop-blur-xl border border-white/60 dark:border-purple-500/10 shadow-xl shadow-purple-500/5 dark:shadow-2xl dark:shadow-purple-500/5 rounded-3xl p-8 sm:p-12">
-              <div className="text-center">
-                <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
-                  AI Tools Blog
-                </h1>
-                <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400">
-                  In-depth comparisons, reviews, and guides for AI tools.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Blog Posts List */}
-          <div className="space-y-6">
-            {blogPosts.map((post) => {
-              const { display: readTime } = calculateReadTime(post.content);
-              const relativeDate = formatRelativeDate(post.date);
-              return (
-                <div
-                  key={post.id}
-                  className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out"
-                >
-                  <div className="flex flex-col gap-3">
-                    <div className="flex items-center gap-3">
-                      <span className="text-sm font-medium text-slate-500 dark:text-gray-400">
-                        {relativeDate}
-                      </span>
-                      <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
-                        {readTime}
-                      </span>
-                    </div>
-                    <Link href={`/blog/${post.slug}`}>
-                      <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-300">
-                        {post.title}
-                      </h2>
-                    </Link>
-                    <p className="text-slate-600 dark:text-gray-300 leading-relaxed sm:leading-loose text-base">
-                      {post.description}
-                    </p>
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors duration-300"
-                    >
-                      Read More →
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
+              {isRefreshing ? (
+                <circle cx="12" cy="12" r="10" strokeLinecap="round" strokeDasharray="100" strokeDashoffset="50" />
+              ) : (
+                <>
+                  <path d="M12 2v4" strokeLinecap="round" />
+                  <path d="M18.36 5.64l-2.83 2.83" strokeLinecap="round" />
+                  <path d="M22 12h-4" strokeLinecap="round" />
+                  <path d="M18.36 18.36l-2.83-2.83" strokeLinecap="round" />
+                  <path d="M12 18v4" strokeLinecap="round" />
+                  <path d="M5.64 18.36l2.83-2.83" strokeLinecap="round" />
+                  <path d="M2 12h4" strokeLinecap="round" />
+                  <path d="M5.64 5.64l2.83 2.83" strokeLinecap="round" />
+                </>
+              )}
+            </svg>
+            <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
+              {isRefreshing ? 'Refreshing...' : pullDistance > 60 ? 'Release to refresh' : 'Pull to refresh'}
+            </span>
           </div>
         </div>
-        <Footer />
+      )}
+
+      <div className="max-w-6xl mx-auto px-4 py-12">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-4 font-playfair">
+            AI Tools Blog
+          </h1>
+          <p className="text-slate-600 dark:text-slate-400 text-lg">
+            In-depth comparisons, reviews, and guides for AI tools.
+          </p>
+        </div>
+
+        {/* Blog Posts Grid */}
+        <div className="grid gap-8">
+          {posts.map((post, index) => (
+            <article
+              key={post.id}
+              className="group bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300 ease-out hover:-translate-y-1 overflow-hidden"
+              style={{ animationDelay: `${index * 50}ms` }}
+            >
+              <Link href={`/blog/${post.slug}`} className="block">
+                <div className="p-6 md:p-8">
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="inline-flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+                      <Calendar className="w-3 h-3" />
+                      {post.date}
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+                      <Clock className="w-3 h-3" />
+                      {post.reading_time}
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400">
+                      <Tag className="w-3 h-3" />
+                      {post.category}
+                    </span>
+                  </div>
+                  
+                  <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-slate-100 mb-3 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors font-playfair">
+                    {post.title}
+                  </h2>
+                  
+                  <p className="text-slate-600 dark:text-slate-400 mb-4">
+                    {post.description}
+                  </p>
+                  
+                  <div className="flex items-center text-emerald-600 dark:text-emerald-400 font-semibold group-hover:gap-3 transition-all duration-300">
+                    Read more
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </div>
+                </div>
+              </Link>
+            </article>
+          ))}
+        </div>
       </div>
-    </>
+    </div>
   );
 }

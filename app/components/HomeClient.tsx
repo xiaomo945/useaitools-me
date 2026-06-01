@@ -46,7 +46,8 @@ const ToolCard = memo(function ToolCard({
   getSkillLevelColors,
   getAffiliateLink,
   router,
-  comparePulse
+  comparePulse,
+  onLongPress
 }: {
   tool: any;
   index: number;
@@ -64,19 +65,49 @@ const ToolCard = memo(function ToolCard({
   getAffiliateLink: (tool: any) => string;
   router: any;
   comparePulse: boolean;
+  onLongPress: (tool: any) => void;
 }) {
   const colors = getCategoryColors(tool.category);
   const pricingColors = getPricingColors(tool.pricing);
   const [saveAnimating, setSaveAnimating] = useState(false);
+  const longPressTimer = useRef<NodeJS.Timeout | null>(null);
+  const [isLongPress, setIsLongPress] = useState(false);
+
+  const handleTouchStart = () => {
+    setIsLongPress(false);
+    longPressTimer.current = setTimeout(() => {
+      setIsLongPress(true);
+      if (navigator.vibrate) {
+        navigator.vibrate(10);
+      }
+      onLongPress(tool);
+    }, 500);
+  };
+
+  const handleTouchEnd = () => {
+    if (longPressTimer.current) {
+      clearTimeout(longPressTimer.current);
+    }
+  };
+
+  const handleTouchMove = () => {
+    if (longPressTimer.current) {
+      clearTimeout(longPressTimer.current);
+    }
+  };
 
   return (
     <div
       key={tool.id}
-      className={`bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative ${hasAffiliate ? 'affiliate-card' : ''}`}
+      className={`bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative select-none ${hasAffiliate ? 'affiliate-card' : ''}`}
       style={{
         animationDelay: `${index * 50}ms`,
         willChange: 'transform'
       }}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onTouchMove={handleTouchMove}
+      onTouchCancel={handleTouchEnd}
     >
       {/* Shimmer effect for affiliate cards */}
       {hasAffiliate && (
@@ -396,6 +427,16 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const [showWelcomeTip, setShowWelcomeTip] = useState(false);
   const [comparePulse, setComparePulse] = useState<{ [key: number]: boolean }>({});
   const { addToast } = useToast();
+
+  // Pull to refresh state
+  const [pullStartY, setPullStartY] = useState(0);
+  const [pullDistance, setPullDistance] = useState(0);
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const [showPullIndicator, setShowPullIndicator] = useState(false);
+
+  // Long press menu state
+  const [selectedTool, setSelectedTool] = useState<Tool | null>(null);
+  const [showMenu, setShowMenu] = useState(false);
   
   // Load localStorage data after mount (SSR-safe)
   useEffect(() => {
@@ -740,6 +781,74 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       }
     });
   };
+
+  // Pull to refresh functions
+  const handleTouchStartPull = (e: React.TouchEvent) => {
+    if (window.scrollY === 0 && !isRefreshing) {
+      setPullStartY(e.touches[0].clientY);
+    }
+  };
+
+  const handleTouchMovePull = (e: React.TouchEvent) => {
+    if (window.scrollY === 0 && !isRefreshing && pullStartY) {
+      const currentY = e.touches[0].clientY;
+      const distance = currentY - pullStartY;
+      if (distance > 0) {
+        setPullDistance(distance);
+        setShowPullIndicator(true);
+      }
+    }
+  };
+
+  const handleTouchEndPull = async () => {
+    if (pullDistance > 60 && !isRefreshing) {
+      setIsRefreshing(true);
+      // Simulate refresh
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Reset tools to initial state
+      setDisplayedTools(initialTools);
+      setPage(1);
+      setIsRefreshing(false);
+      addToast('✅ Page refreshed', 'success');
+    }
+    setPullDistance(0);
+    setShowPullIndicator(false);
+    setPullStartY(0);
+  };
+
+  // Long press menu handlers
+  const handleLongPress = (tool: Tool) => {
+    setSelectedTool(tool);
+    setShowMenu(true);
+  };
+
+  const closeMenu = () => {
+    setShowMenu(false);
+    setTimeout(() => setSelectedTool(null), 300);
+  };
+
+  const handleMenuAction = (action: string) => {
+    if (!selectedTool) return;
+    
+    switch (action) {
+      case 'favorite':
+        toggleSave(selectedTool.id);
+        break;
+      case 'compare':
+        toggleCompare(selectedTool.id);
+        break;
+      case 'copy':
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(selectedTool.url);
+          addToast('🔗 Link copied to clipboard', 'success');
+        }
+        break;
+      case 'details':
+        router.push(`/tools/${selectedTool.id}`);
+        break;
+    }
+    closeMenu();
+  };
   
 
 
@@ -931,7 +1040,39 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-gray-950 relative overflow-x-hidden">
+    <div 
+      className="min-h-screen bg-slate-50 dark:bg-gray-950 relative overflow-x-hidden"
+      onTouchStart={handleTouchStartPull}
+      onTouchMove={handleTouchMovePull}
+      onTouchEnd={handleTouchEndPull}
+      onTouchCancel={handleTouchEndPull}
+    >
+      {/* Pull to refresh indicator */}
+      {showPullIndicator && (
+        <div 
+          className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center transition-all duration-200"
+          style={{ transform: `translateY(${Math.min(pullDistance * 0.5, 80)}px)`, paddingTop: '10px' }}
+        >
+          <div className={`flex flex-col items-center gap-2 ${isRefreshing ? 'animate-pulse' : ''}`}>
+            <svg 
+              className={`w-6 h-6 text-emerald-500 ${isRefreshing ? 'animate-spin' : ''}`}
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" 
+              />
+            </svg>
+            <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
+              {isRefreshing ? 'Refreshing...' : pullDistance > 60 ? 'Release to refresh' : 'Pull to refresh'}
+            </span>
+          </div>
+        </div>
+      )}
       {/* Announcement Banner */}
       {showBanner && (
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-4 z-10 relative">
@@ -1684,6 +1825,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 getAffiliateLink={getAffiliateLink}
                 router={router}
                 comparePulse={!!comparePulse[tool.id]}
+                onLongPress={handleLongPress}
               />
             );
           })}
@@ -1927,6 +2069,86 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             </div>
           </div>
         </div>
+      )}
+
+      {/* Long Press Menu */}
+      {showMenu && selectedTool && (
+        <>
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50" 
+            onClick={closeMenu}
+          />
+          {/* Menu */}
+          <div className="fixed bottom-0 left-0 right-0 z-50">
+            <div className="bg-white dark:bg-gray-900 rounded-t-3xl shadow-2xl p-6 drawer-enter">
+              <div className="w-12 h-1 bg-slate-200 dark:bg-slate-700 rounded-full mx-auto mb-6" />
+              <div className="text-center mb-6">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{selectedTool.name}</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400">{selectedTool.category} • {selectedTool.pricing}</p>
+              </div>
+              <div className="space-y-3">
+                <button 
+                  onClick={() => handleMenuAction('favorite')}
+                  className="w-full flex items-center gap-4 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+                    <span className="text-xl">❤️</span>
+                  </div>
+                  <div className="text-left">
+                    <div className="font-semibold text-slate-900 dark:text-white">Save to Favorites</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Keep this tool handy for later</div>
+                  </div>
+                </button>
+                
+                <button 
+                  onClick={() => handleMenuAction('compare')}
+                  className="w-full flex items-center gap-4 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+                    <span className="text-xl">📊</span>
+                  </div>
+                  <div className="text-left">
+                    <div className="font-semibold text-slate-900 dark:text-white">Add to Compare</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Compare with other tools</div>
+                  </div>
+                </button>
+                
+                <button 
+                  onClick={() => handleMenuAction('copy')}
+                  className="w-full flex items-center gap-4 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+                    <span className="text-xl">🔗</span>
+                  </div>
+                  <div className="text-left">
+                    <div className="font-semibold text-slate-900 dark:text-white">Copy Tool Link</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Share this tool with others</div>
+                  </div>
+                </button>
+                
+                <button 
+                  onClick={() => handleMenuAction('details')}
+                  className="w-full flex items-center gap-4 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+                    <span className="text-xl">📋</span>
+                  </div>
+                  <div className="text-left">
+                    <div className="font-semibold text-slate-900 dark:text-white">View Details</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">See full tool information</div>
+                  </div>
+                </button>
+              </div>
+              <button 
+                onClick={closeMenu}
+                className="w-full mt-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </>
       )}
     </div>
   );

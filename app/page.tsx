@@ -1,5 +1,5 @@
 import tools from '@/data/tools.json';
-import { blogPosts } from '@/types';
+import { blogPosts } from '@/data/blog-posts';
 import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
 import type { Tool } from '@/types';

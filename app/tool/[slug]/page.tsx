@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import tools from '@/data/tools.json';
-import { blogPosts } from '@/types';
+import { blogPosts } from '@/data/blog-posts';
 import ToolSlugClient from './ToolSlugClient';
 
 type Tool = {
