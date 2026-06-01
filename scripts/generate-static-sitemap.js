@@ -50,7 +50,7 @@ function loadBlogPosts() {
 
 // Generate sitemap XML
 function generateSitemap() {
-  const today = '2026-05-30';
+  const today = '2026-06-01';
   const tools = loadTools();
   const blogPosts = loadBlogPosts();
   
