@@ -1552,6 +1552,37 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             </Link>
           </div>
 
+          {/* Recently Viewed Quick Access */}
+          {recentlyViewedIds.length > 0 && (
+            <div className="mb-4 sm:mb-6">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xs sm:text-sm font-semibold text-slate-500 dark:text-slate-400">🕐 Recently Viewed</span>
+              </div>
+              <div className="flex overflow-x-auto scrollbar-hide gap-2 pb-1">
+                {recentlyViewedIds.slice(0, 5).map((toolId) => {
+                  const tool = displayedTools.find(t => t.id === toolId);
+                  if (!tool) return null;
+                  const colors = getCategoryColors(tool.category);
+                  return (
+                    <Link
+                      key={tool.id}
+                      href={`/tools/${tool.id}`}
+                      className="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-full whitespace-nowrap hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-md transition-all duration-300 ease-out shrink-0"
+                    >
+                      <span className={`w-5 h-5 rounded-md ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-[10px] font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                        {tool.name.charAt(0)}
+                      </span>
+                      <span className="text-xs font-medium text-slate-700 dark:text-slate-300 truncate max-w-[100px]">{tool.name}</span>
+                      <span className={`text-[9px] font-semibold px-1.5 py-0.5 rounded-full ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text}`}>
+                        {tool.category}
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           {/* Category Buttons */}
           <div className="relative">
             {/* Left Gradient Fade */}

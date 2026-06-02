@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import tools from '@/data/tools.json';
-import { Home, Download, Check } from 'lucide-react';
+import { Home, Download, Check, Copy, Link2 } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 
@@ -54,6 +54,8 @@ export default function SavedPage() {
   const [savedIds, setSavedIds] = useState<number[]>(getSavedIds());
   const [exporting, setExporting] = useState(false);
   const [exportSuccess, setExportSuccess] = useState(false);
+  const [showExportMenu, setShowExportMenu] = useState(false);
+  const [copySuccess, setCopySuccess] = useState<'text' | 'links' | null>(null);
   
   // Get saved tools
   const savedTools = tools.filter((tool) => savedIds.includes(tool.id));
@@ -67,6 +69,26 @@ export default function SavedPage() {
       setExportSuccess(true);
       setTimeout(() => setExportSuccess(false), 2000);
     }, 300);
+  };
+
+  const handleCopyAsText = async () => {
+    try {
+      const text = savedTools.map(t => t.name).join('\n');
+      await navigator.clipboard.writeText(text);
+      setCopySuccess('text');
+      setShowExportMenu(false);
+      setTimeout(() => setCopySuccess(null), 2000);
+    } catch { /* ignore */ }
+  };
+
+  const handleCopyAsLinks = async () => {
+    try {
+      const links = savedTools.map(t => `${t.name}: https://useaitools.me/tools/${t.id}`).join('\n');
+      await navigator.clipboard.writeText(links);
+      setCopySuccess('links');
+      setShowExportMenu(false);
+      setTimeout(() => setCopySuccess(null), 2000);
+    } catch { /* ignore */ }
   };
   
   // Helper to get colors
@@ -198,32 +220,75 @@ export default function SavedPage() {
                 Your favorite AI tools all in one place.
               </p>
               {savedTools.length > 0 && (
-                <button
-                  onClick={handleExport}
-                  disabled={exporting}
-                  className={`inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ease-out ${
-                    exportSuccess
-                      ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/30'
-                      : 'bg-gradient-to-r from-slate-700 to-slate-800 text-white hover:from-slate-600 hover:to-slate-700 shadow-lg shadow-slate-700/30 hover:shadow-slate-600/40 hover:-translate-y-0.5'
-                  } disabled:opacity-50 disabled:cursor-not-allowed`}
-                >
-                  {exportSuccess ? (
-                    <>
-                      <Check className="w-5 h-5" />
-                      Exported Successfully!
-                    </>
-                  ) : exporting ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Exporting...
-                    </>
-                  ) : (
-                    <>
-                      <Download className="w-5 h-5" />
-                      Export Favorites ({savedTools.length})
-                    </>
+                <div className="relative inline-block">
+                  {copySuccess && (
+                    <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg animate-pulse whitespace-nowrap z-10">
+                      {copySuccess === 'text' ? '📋 Names copied!' : '🔗 Links copied!'}
+                    </div>
                   )}
-                </button>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={handleExport}
+                      disabled={exporting}
+                      className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold transition-all duration-300 ease-out ${
+                        exportSuccess
+                          ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/30'
+                          : 'bg-gradient-to-r from-slate-700 to-slate-800 text-white hover:from-slate-600 hover:to-slate-700 shadow-lg shadow-slate-700/30 hover:shadow-slate-600/40 hover:-translate-y-0.5'
+                      } disabled:opacity-50 disabled:cursor-not-allowed`}
+                    >
+                      {exportSuccess ? (
+                        <>
+                          <Check className="w-4 h-4" />
+                          Exported!
+                        </>
+                      ) : exporting ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                          Exporting...
+                        </>
+                      ) : (
+                        <>
+                          <Download className="w-4 h-4" />
+                          CSV
+                        </>
+                      )}
+                    </button>
+                    <button
+                      onClick={() => setShowExportMenu(!showExportMenu)}
+                      className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 dark:border-emerald-500 rounded-xl font-semibold hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition-all duration-300 ease-out hover:-translate-y-0.5"
+                    >
+                      <Copy className="w-4 h-4" />
+                      Copy
+                      <svg className={`w-3 h-3 transition-transform duration-200 ${showExportMenu ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                  </div>
+                  {showExportMenu && (
+                    <div className="absolute top-full left-0 mt-2 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-700 rounded-xl shadow-xl z-20 overflow-hidden min-w-[200px]">
+                      <button
+                        onClick={handleCopyAsText}
+                        className="w-full flex items-center gap-3 px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors"
+                      >
+                        <Copy className="w-4 h-4 text-emerald-500" />
+                        <div className="text-left">
+                          <div className="font-medium">Copy as Text</div>
+                          <div className="text-xs text-slate-500 dark:text-slate-400">Tool names, one per line</div>
+                        </div>
+                      </button>
+                      <button
+                        onClick={handleCopyAsLinks}
+                        className="w-full flex items-center gap-3 px-4 py-3 text-sm text-slate-700 dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors border-t border-slate-100 dark:border-gray-800"
+                      >
+                        <Link2 className="w-4 h-4 text-emerald-500" />
+                        <div className="text-left">
+                          <div className="font-medium">Copy as Links</div>
+                          <div className="text-xs text-slate-500 dark:text-slate-400">Names + URLs, one per line</div>
+                        </div>
+                      </button>
+                    </div>
+                  )}
+                </div>
               )}
             </div>
           </div>

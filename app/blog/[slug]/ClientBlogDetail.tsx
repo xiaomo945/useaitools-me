@@ -325,6 +325,26 @@ export default function ClientBlogDetail({
     }
   };
 
+  const handleNativeShare = async () => {
+    const shareData = {
+      title: `${post.title} - Use AI Tools`,
+      text: post.description,
+      url,
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (err) {
+        if ((err as Error).name !== 'AbortError') {
+          console.error('Share failed:', err);
+        }
+      }
+    } else {
+      await handleCopyLink();
+    }
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-10 sm:py-16 grid-background">
       <ReadingProgress />
@@ -445,6 +465,13 @@ export default function ClientBlogDetail({
             <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Share this article</h3>
           </div>
           <div className="flex flex-wrap gap-4">
+            <button
+              onClick={handleNativeShare}
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-medium rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <Share2 className="w-4 h-4" />
+              Share
+            </button>
             <a
               href={`https://x.com/intent/tweet?text=${encodedTitle}&url=${encodeURIComponent(url)}`}
               target="_blank"

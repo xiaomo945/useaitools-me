@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { ArrowRight, Home, Copy, Check, ChevronDown } from 'lucide-react';
+import { ArrowRight, Home, Copy, Check, ChevronDown, Share2 } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import toolsData from '@/data/tools.json';
@@ -369,6 +369,33 @@ export default function ToolDetailClient({ tool, relatedTools, relatedArticles =
     }
   };
 
+  const handleShare = async () => {
+    const shareUrl = typeof window !== 'undefined' ? window.location.href : `https://useaitools.me/tools/${tool.id}`;
+    const shareData = {
+      title: `${tool.name} - Use AI Tools`,
+      text: `${tool.name}: ${tool.description.slice(0, 100)}...`,
+      url: shareUrl,
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (err) {
+        if ((err as Error).name !== 'AbortError') {
+          console.error('Share failed:', err);
+        }
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        setCopiedIndex(-1);
+        setTimeout(() => setCopiedIndex(null), 2000);
+      } catch (err) {
+        console.error('Failed to copy link:', err);
+      }
+    }
+  };
+
 const StarRating = ({ rating }: { rating: number }) => (
     <div className="flex items-center gap-0.5">
       {[1, 2, 3, 4, 5].map((star) => (
@@ -561,6 +588,17 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
                 </svg>
                 Compare
               </Link>
+              <button
+                onClick={handleShare}
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
+              >
+                {copiedIndex === -1 ? (
+                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />
+                ) : (
+                  <Share2 className="w-4 h-4 sm:w-5 sm:h-5" />
+                )}
+                {copiedIndex === -1 ? 'Copied!' : 'Share'}
+              </button>
             </div>
 
             {/* Trust Signal */}
