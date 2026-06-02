@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { ArrowRight, Home, Copy, Check, ChevronDown, Share2 } from 'lucide-react';
 import Footer from '@/app/components/Footer';
@@ -327,6 +328,7 @@ type BlogPost = {
 };
 
 export default function ToolDetailClient({ tool, relatedTools, relatedArticles = [] }: { tool: Tool; relatedTools: Tool[]; relatedArticles?: BlogPost[] }) {
+  const router = useRouter();
   const colors = getCategoryColors(tool.category);
   const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
@@ -543,9 +545,32 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
   );
 };
 
+  const [hasReferrer, setHasReferrer] = useState(false);
+
+  useEffect(() => {
+    setHasReferrer(!!sessionStorage.getItem('useaitools_scrollY'));
+  }, []);
+
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-10 sm:py-16">
       <div className="max-w-4xl mx-auto px-3 sm:px-6">
+        {/* Back Button */}
+        <button
+          onClick={() => {
+            if (hasReferrer || document.referrer.includes('useaitools')) {
+              router.back();
+            } else {
+              router.push('/');
+            }
+          }}
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:underline mb-4 transition-colors duration-200"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          {hasReferrer ? 'Back to results' : 'Browse all tools'}
+        </button>
+
         {/* Breadcrumbs */}
         <Breadcrumbs 
           items={[

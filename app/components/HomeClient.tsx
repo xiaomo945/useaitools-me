@@ -439,7 +439,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const [hasMore, setHasMore] = useState(true);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [search, setSearch] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<Category>('All');
+  const [selectedCategories, setSelectedCategories] = useState<Category[]>(['All']);
   const [selectedPricing, setSelectedPricing] = useState<string>('All');
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -737,20 +737,38 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const autocompleteItems = useMemo(() => {
     if (!search.trim()) return [];
     const query = search.toLowerCase();
-    const items: { type: 'tool' | 'blog'; name: string; category: string; id: number }[] = [];
+    const items: { type: 'tool' | 'blog'; name: string; category: string; id: number; score: number }[] = [];
+    
     displayedTools.forEach(tool => {
-      if (items.length >= 5) return;
-      if (tool.name.toLowerCase().includes(query)) {
-        items.push({ type: 'tool', name: tool.name, category: tool.category, id: tool.id });
+      if (items.length >= 8) return;
+      const nameMatch = tool.name.toLowerCase().includes(query);
+      const descMatch = tool.description.toLowerCase().includes(query);
+      if (nameMatch || descMatch) {
+        items.push({
+          type: 'tool',
+          name: tool.name,
+          category: tool.category,
+          id: tool.id,
+          score: nameMatch ? (tool.rating || 4) * 10 : (tool.rating || 4)
+        });
       }
     });
+    
     blogPosts.forEach(post => {
-      if (items.length >= 5) return;
-      if (post.title.toLowerCase().includes(query)) {
-        items.push({ type: 'blog', name: post.title, category: post.category, id: post.id });
+      if (items.length >= 10) return;
+      if (post.title.toLowerCase().includes(query) || post.description.toLowerCase().includes(query)) {
+        const titleMatch = post.title.toLowerCase().includes(query);
+        items.push({
+          type: 'blog',
+          name: post.title,
+          category: post.category,
+          id: post.id,
+          score: titleMatch ? 50 : 20
+        });
       }
     });
-    return items;
+    
+    return items.sort((a, b) => b.score - a.score).slice(0, 5);
   }, [search, displayedTools, blogPosts]);
 
   // Handle suggestion click
@@ -920,42 +938,120 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     return () => clearTimeout(timer);
   }, [search]);
 
+  // Synonym map for search enhancement
+  const searchSynonyms: Record<string, string[]> = {
+    'photo': ['image', 'picture', 'visual'],
+    'picture': ['image', 'photo', 'visual'],
+    'image': ['photo', 'picture', 'visual'],
+    'video': ['movie', 'film', 'animation'],
+    'audio': ['music', 'sound', 'voice', 'speech'],
+    'voice': ['audio', 'speech', 'tts'],
+    'writing': ['text', 'content', 'copy', 'writer'],
+    'writer': ['writing', 'text', 'content'],
+    'code': ['programming', 'developer', 'coding'],
+    'coding': ['code', 'programming', 'developer'],
+    'text': ['writing', 'content', 'writer'],
+    'music': ['audio', 'sound'],
+    'art': ['image', 'design', 'creative'],
+    'design': ['image', 'art', 'creative'],
+  };
+
+  // Levenshtein distance for typo tolerance
+  const levenshtein = (a: string, b: string): number => {
+    const matrix: number[][] = [];
+    for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+    for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+    for (let i = 1; i <= b.length; i++) {
+      for (let j = 1; j <= a.length; j++) {
+        matrix[i][j] = b[i-1] === a[j-1]
+          ? matrix[i-1][j-1]
+          : Math.min(matrix[i-1][j-1]+1, matrix[i][j-1]+1, matrix[i-1][j]+1);
+      }
+    }
+    return matrix[b.length][a.length];
+  };
+
+  // Enhanced search matching
+  const fuzzyMatch = (text: string, query: string): { match: boolean; score: number } => {
+    const lowerText = text.toLowerCase();
+    const lowerQuery = query.toLowerCase();
+    
+    // Exact substring match (highest score)
+    if (lowerText.includes(lowerQuery)) {
+      const index = lowerText.indexOf(lowerQuery);
+      return { match: true, score: index === 0 ? 100 : 80 };
+    }
+    
+    // Synonym match
+    const synonyms = searchSynonyms[lowerQuery];
+    if (synonyms) {
+      for (const syn of synonyms) {
+        if (lowerText.includes(syn)) {
+          return { match: true, score: 60 };
+        }
+      }
+    }
+    
+    // Typo tolerance: check each word in text against query
+    const words = lowerText.split(/\s+/);
+    for (const word of words) {
+      if (word.length >= 3 && lowerQuery.length >= 3) {
+        const dist = levenshtein(word.substring(0, lowerQuery.length + 2), lowerQuery);
+        if (dist <= 1) {
+          return { match: true, score: 40 };
+        }
+      }
+    }
+    
+    return { match: false, score: 0 };
+  };
+
   // 智能排序：优先展示海外 AI 工具（needs_vpn: true），中文工具排在后面
   const filteredTools = useMemo(() => {
-    const filtered = displayedTools.filter((tool) => {
-      const matchesSearch = 
-        tool.name.toLowerCase().includes(debouncedSearch.toLowerCase()) || 
-        tool.description.toLowerCase().includes(debouncedSearch.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
+    const filtered = displayedTools.map((tool) => {
+      if (!debouncedSearch.trim()) {
+        const matchesCategory = selectedCategories.includes('All') || selectedCategories.includes(tool.category);
+        const matchesPricing = selectedPricing === 'All' || tool.pricing === selectedPricing;
+        return { tool, score: 0, matches: matchesCategory && matchesPricing };
+      }
+      
+      const nameMatch = fuzzyMatch(tool.name, debouncedSearch);
+      const descMatch = fuzzyMatch(tool.description, debouncedSearch);
+      const matchesSearch = nameMatch.match || descMatch.match;
+      const searchScore = Math.max(nameMatch.score, descMatch.score * 0.7);
+      
+      const matchesCategory = selectedCategories.includes('All') || selectedCategories.includes(tool.category);
       const matchesPricing = selectedPricing === 'All' || tool.pricing === selectedPricing;
-      return matchesSearch && matchesCategory && matchesPricing;
-    });
+      
+      return { tool, score: searchScore, matches: matchesSearch && matchesCategory && matchesPricing };
+    }).filter(item => item.matches);
     
-    // 智能排序：Staff Pick(联盟) > 海外工具(needs_vpn) > 按名称字母排序
+    // Sort by relevance score (search), then Staff Pick, then VPN, then name
     return [...filtered].sort((a, b) => {
-      const aHasAffiliate = hasAffiliateLink(a);
-      const bHasAffiliate = hasAffiliateLink(b);
-
-      // 1. 联盟链接工具优先 (Staff Pick)
+      // Search relevance first
+      if (debouncedSearch.trim()) {
+        if (a.score !== b.score) return b.score - a.score;
+      }
+      
+      const aHasAffiliate = hasAffiliateLink(a.tool);
+      const bHasAffiliate = hasAffiliateLink(b.tool);
       if (aHasAffiliate && !bHasAffiliate) return -1;
       if (!aHasAffiliate && bHasAffiliate) return 1;
 
-      // 2. 海外工具优先
-      if (a.needs_vpn && !b.needs_vpn) return -1;
-      if (!a.needs_vpn && b.needs_vpn) return 1;
+      if (a.tool.needs_vpn && !b.tool.needs_vpn) return -1;
+      if (!a.tool.needs_vpn && b.tool.needs_vpn) return 1;
 
-      // 3. 按名称字母排序
-      return a.name.localeCompare(b.name);
-    });
-  }, [debouncedSearch, selectedCategory, selectedPricing, displayedTools]);
+      return a.tool.name.localeCompare(b.tool.name);
+    }).map(item => item.tool);
+  }, [debouncedSearch, selectedCategories, selectedPricing, displayedTools]);
 
   useEffect(() => {
-    if (selectedCategory !== 'All' || selectedPricing !== 'All' || debouncedSearch) {
+    if (!selectedCategories.includes('All') || selectedPricing !== 'All' || debouncedSearch) {
       setIsFilterTransitioning(true);
       const timer = setTimeout(() => setIsFilterTransitioning(false), 300);
       return () => clearTimeout(timer);
     }
-  }, [selectedCategory, selectedPricing, debouncedSearch]);
+  }, [selectedCategories, selectedPricing, debouncedSearch]);
 
   useEffect(() => {
     const handleOpenTool = (e: Event) => {
@@ -983,6 +1079,48 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => window.removeEventListener('beforeunload', handleBeforeUnload);
   }, [search, selectedForCompare]);
+
+  // Save scroll position and filter state before navigating away
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('a[href^="/tools/"]');
+      if (anchor) {
+        try {
+          sessionStorage.setItem('useaitools_scrollY', String(window.scrollY));
+          sessionStorage.setItem('useaitools_filters', JSON.stringify({
+            selectedCategories,
+            selectedPricing,
+            search
+          }));
+        } catch { /* ignore */ }
+      }
+    };
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, [selectedCategories, selectedPricing, search]);
+
+  // Restore scroll position and filter state on return
+  useEffect(() => {
+    try {
+      const isBackNavigation = sessionStorage.getItem('useaitools_scrollY');
+      if (isBackNavigation) {
+        const filters = sessionStorage.getItem('useaitools_filters');
+        if (filters) {
+          const parsed = JSON.parse(filters);
+          if (parsed.selectedCategories) setSelectedCategories(parsed.selectedCategories);
+          if (parsed.selectedPricing) setSelectedPricing(parsed.selectedPricing);
+          if (parsed.search) setSearch(parsed.search);
+        }
+        const scrollY = parseInt(isBackNavigation, 10);
+        sessionStorage.removeItem('useaitools_scrollY');
+        sessionStorage.removeItem('useaitools_filters');
+        requestAnimationFrame(() => {
+          window.scrollTo(0, scrollY);
+        });
+      }
+    } catch { /* ignore */ }
+  }, []);
 
   const getCategoryColors = (category: string) => {
     switch (category) {
@@ -1415,13 +1553,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                           }}
                         >
                           {item.type === 'tool' ? (
-                            <svg className="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                            </svg>
+                            <span className="text-sm">🛠️</span>
                           ) : (
-                            <svg className="w-4 h-4 text-indigo-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                            </svg>
+                            <span className="text-sm">📝</span>
                           )}
                           <span className="font-medium text-slate-900 dark:text-white truncate">{item.name}</span>
                           <span className={`ml-auto text-xs px-2 py-0.5 rounded-full shrink-0 ${
@@ -1623,7 +1757,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             
             <div className="flex overflow-x-auto scrollbar-hide gap-1 sm:gap-2.5 sm:justify-center sm:flex-wrap px-2 sm:px-0 py-1">
               {categories.map((category, index) => {
-                const isActive = selectedCategory === category;
+                const isActive = category === 'All' ? selectedCategories.includes('All') : selectedCategories.includes(category);
                 
                 const buttonStyle = `px-2 py-1 sm:px-4 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.98] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[44px] flex items-center justify-center ${
                   isActive
@@ -1642,8 +1776,20 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                       }
                     }}
                     onClick={() => {
-                      debugLog('Filter', `Category changed: ${category}`);
-                      setSelectedCategory(category);
+                      debugLog('Filter', `Category toggled: ${category}`);
+                      if (category === 'All') {
+                        setSelectedCategories(['All']);
+                      } else {
+                        setSelectedCategories(prev => {
+                          const withoutAll = prev.filter(c => c !== 'All');
+                          if (prev.includes(category)) {
+                            const newCats = withoutAll.filter(c => c !== category);
+                            return newCats.length === 0 ? ['All'] : newCats;
+                          } else {
+                            return [...withoutAll, category];
+                          }
+                        });
+                      }
                       if (toolsGridRef.current) {
                         toolsGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
                       }
@@ -1653,6 +1799,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                     title={tooltipMap[category]}
                   >
                     {category}
+                    {category !== 'All' && selectedCategories.includes(category) && selectedCategories.length > 1 && (
+                      <span className="ml-1 w-4 h-4 rounded-full bg-white/30 text-[10px] flex items-center justify-center">✓</span>
+                    )}
                   </button>
                 );
               })}
@@ -1688,12 +1837,67 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             </div>
           </div>
           
+          {/* Clear All Filters Button */}
+          {(!selectedCategories.includes('All') || selectedPricing !== 'All' || debouncedSearch) && (
+            <div className="flex justify-center mt-2 mb-2">
+              <button
+                onClick={() => {
+                  setSelectedCategories(['All']);
+                  setSelectedPricing('All');
+                  setSearch('');
+                  debugLog('Filter', 'All filters cleared');
+                  if (toolsGridRef.current) {
+                    toolsGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors duration-200"
+              >
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                Clear All Filters
+              </button>
+            </div>
+          )}
+
+          {/* Active Filter Tags */}
+          {(!selectedCategories.includes('All') || selectedPricing !== 'All') && (
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
+              {!selectedCategories.includes('All') && selectedCategories.map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => {
+                    const newCats = selectedCategories.filter(c => c !== cat);
+                    setSelectedCategories(newCats.length === 0 ? ['All'] : newCats);
+                  }}
+                  className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-rose-100 dark:hover:bg-rose-900/30 hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200"
+                >
+                  {cat}
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              ))}
+              {selectedPricing !== 'All' && (
+                <button
+                  onClick={() => setSelectedPricing('All')}
+                  className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 hover:bg-rose-100 dark:hover:bg-rose-900/30 hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200"
+                >
+                  💰 {selectedPricing}
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              )}
+            </div>
+          )}
+          
           {/* Search Result Count */}
           <div className="text-center mb-8">
             <p className={`text-sm sm:text-lg font-semibold text-slate-600 dark:text-slate-300 ${
-              search.trim() || selectedCategory !== 'All' || selectedPricing !== 'All' ? 'animate-pulse' : ''
+              search.trim() || !selectedCategories.includes('All') || selectedPricing !== 'All' ? 'animate-pulse' : ''
             }`}>
-              {search.trim() || selectedCategory !== 'All' || selectedPricing !== 'All' ? (
+              {search.trim() || !selectedCategories.includes('All') || selectedPricing !== 'All' ? (
                 filteredTools.length === 0 ? (
                   <span className="text-rose-500 dark:text-rose-400">No tools found</span>
                 ) : (
@@ -2123,7 +2327,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                   key={suggestion}
                   onClick={() => {
                     setSearch(suggestion);
-                    setSelectedCategory('All');
+                    setSelectedCategories(['All']);
                   }}
                   className="px-3 py-1.5 text-sm bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
                 >
