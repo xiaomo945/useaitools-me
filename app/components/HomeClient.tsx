@@ -277,7 +277,14 @@ const ToolCard = memo(function ToolCard({
               href={getAffiliateLink(tool) || tool.url}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              onClick={() => debugLog('ToolClick', `CTA clicked: ${tool.name} (affiliate: ${hasAffiliate})`)}
+              onClick={(e) => {
+                debugLog('ToolClick', `CTA clicked: ${tool.name} (affiliate: ${hasAffiliate})`);
+                try {
+                  const url = new URL(getAffiliateLink(tool) || tool.url);
+                  const domain = url.hostname.replace('www.', '');
+                  window.dispatchEvent(new CustomEvent('useaitools:external-link', { detail: { domain } }));
+                } catch { /* ignore */ }
+              }}
               className={`inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[44px] min-w-[44px] text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98] ${
                 hasAffiliate
                   ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:from-emerald-600 hover:to-teal-600 hover:shadow-md hover:shadow-emerald-500/25 border border-transparent'
@@ -2124,6 +2131,44 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 </button>
               ))}
             </div>
+
+            {/* Top 3 Recommended Tools */}
+            {(() => {
+              const topRated = [...displayedTools]
+                .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+                .slice(0, 3);
+              if (topRated.length === 0) return null;
+              return (
+                <div className="mt-10 max-w-2xl mx-auto">
+                  <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">⭐ Popular picks you might like</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    {topRated.map((tool) => {
+                      const colors = getCategoryColors(tool.category);
+                      return (
+                        <Link
+                          key={tool.id}
+                          href={`/tools/${tool.id}`}
+                          className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 shadow-sm hover:shadow-lg hover:border-emerald-300 dark:hover:border-emerald-600 hover:-translate-y-1 transition-all duration-300 text-left relative"
+                        >
+                          <span className="absolute top-2 right-2 px-1.5 py-0.5 rounded-full text-[9px] font-bold bg-gradient-to-r from-emerald-500 to-teal-500 text-white">Recommended</span>
+                          <div className="flex items-center gap-2 mb-2">
+                            <span className={`w-7 h-7 rounded-lg ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-sm font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                              {tool.name.charAt(0)}
+                            </span>
+                            <h4 className="font-semibold text-sm text-slate-900 dark:text-white truncate">{tool.name}</h4>
+                          </div>
+                          <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mb-2">{tool.description}</p>
+                          <div className="flex items-center gap-1.5">
+                            <span className={`px-1.5 py-0.5 rounded-full text-[9px] font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text}`}>{tool.category}</span>
+                            <span className="text-[10px] text-amber-500 font-semibold">★ {tool.rating || '4.5'}</span>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })()}
           </div>
         )}
 

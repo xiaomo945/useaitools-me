@@ -297,19 +297,32 @@ export default function SavedPage() {
         {/* Saved Tools Grid or Empty State */}
         {savedTools.length === 0 ? (
           <div className="text-center py-20">
-            <div className="mx-auto w-20 h-20 mb-6 text-slate-300 dark:text-slate-600">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-              </svg>
+            <div className="mx-auto w-24 h-24 mb-8 flex items-center justify-center">
+              <div className="relative">
+                <svg className="w-20 h-20 text-slate-200 dark:text-slate-700" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                <div className="absolute -top-1 -right-1 w-8 h-8 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/30">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
+                  </svg>
+                </div>
+              </div>
             </div>
-            <p className="text-slate-500 dark:text-slate-500 text-lg font-medium mb-4">
-              No saved tools yet. Start exploring and save your favorites!
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">
+              Your favorites list is empty
+            </h2>
+            <p className="text-slate-500 dark:text-slate-400 text-base max-w-md mx-auto mb-8 leading-relaxed">
+              Start exploring tools and click the heart icon to save them here.
             </p>
             <Link
               href="/"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
             >
-              Explore Tools →
+              Browse Popular Tools
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
         ) : (

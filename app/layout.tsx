@@ -10,6 +10,8 @@ import ThemeToggle from "./components/ThemeToggle";
 import { ToastProvider } from "./components/Toast";
 import PageTransition from "./components/PageTransition";
 import KeyboardNavigation from "./components/KeyboardNavigation";
+import NetworkStatus from "./components/NetworkStatus";
+import ExternalLinkToast from "./components/ExternalLinkToast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -119,6 +121,9 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col pb-16 md:pb-0">
         <ToastProvider>
           <Suspense fallback={null}>
+            <NetworkStatus />
+          </Suspense>
+          <Suspense fallback={null}>
             <PageProgress />
           </Suspense>
           <PageTransition>{children}</PageTransition>
@@ -133,6 +138,7 @@ export default function RootLayout({
             <ThemeToggle />
           </Suspense>
           <KeyboardNavigation />
+          <ExternalLinkToast />
         </ToastProvider>
       </body>
     </html>
