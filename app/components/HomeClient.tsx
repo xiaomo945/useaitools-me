@@ -72,6 +72,17 @@ const ToolCard = memo(function ToolCard({
   const [saveAnimating, setSaveAnimating] = useState(false);
   const longPressTimer = useRef<NodeJS.Timeout | null>(null);
   const [isLongPress, setIsLongPress] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
+    e.dataTransfer.setData('text/plain', String(tool.id));
+    e.dataTransfer.effectAllowed = 'copy';
+    setIsDragging(true);
+  };
+
+  const handleDragEnd = () => {
+    setIsDragging(false);
+  };
 
   const handleTouchStart = () => {
     setIsLongPress(false);
@@ -99,7 +110,10 @@ const ToolCard = memo(function ToolCard({
   return (
     <div
       key={tool.id}
-      className={`bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative select-none ${hasAffiliate ? 'affiliate-card' : ''}`}
+      draggable
+      onDragStart={handleDragStart}
+      onDragEnd={handleDragEnd}
+      className={`bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative select-none ${isDragging ? 'opacity-50 scale-[0.98]' : ''} ${hasAffiliate ? 'affiliate-card' : ''}`}
       style={{
         animationDelay: `${index * 50}ms`,
         willChange: 'transform'
@@ -1029,6 +1043,67 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
 
   const [showBanner, setShowBanner] = useState(true);
 
+  const [isListening, setIsListening] = useState(false);
+  const [speechSupported, setSpeechSupported] = useState(false);
+  const [isDragOver, setIsDragOver] = useState(false);
+
+  useEffect(() => {
+    setSpeechSupported(
+      typeof window !== 'undefined' &&
+      ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window)
+    );
+  }, []);
+
+  const startVoiceSearch = () => {
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SpeechRecognition) return;
+
+    const recognition = new SpeechRecognition();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.onstart = () => {
+      setIsListening(true);
+    };
+
+    recognition.onresult = (event: any) => {
+      const transcript = event.results[0][0].transcript;
+      setSearch(transcript);
+      setShowSuggestions(true);
+      setIsListening(false);
+    };
+
+    recognition.onerror = () => {
+      setIsListening(false);
+    };
+
+    recognition.onend = () => {
+      setIsListening(false);
+    };
+
+    recognition.start();
+  };
+
+  const handleDragOverCompare = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'copy';
+    setIsDragOver(true);
+  };
+
+  const handleDragLeaveCompare = () => {
+    setIsDragOver(false);
+  };
+
+  const handleDropCompare = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragOver(false);
+    const toolId = parseInt(e.dataTransfer.getData('text/plain'), 10);
+    if (!isNaN(toolId) && !selectedForCompare.includes(toolId)) {
+      toggleCompare(toolId);
+    }
+  };
+
   const tooltipMap: Record<string, string> = {
     'All': 'Browse all AI tools',
     'Writing': 'Discover AI Writing assistants',
@@ -1167,6 +1242,21 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 className="w-full px-3 sm:px-5 py-2 sm:py-3 pl-9 sm:pl-14 pr-16 sm:pr-24 h-9 sm:h-11 text-sm sm:text-base rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
               />
               <div className="absolute right-1.5 sm:right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-0.5 sm:gap-1">
+                {speechSupported && (
+                  <button
+                    onClick={startVoiceSearch}
+                    className={`p-1.5 sm:p-2 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center ${
+                      isListening
+                        ? 'bg-red-500 text-white animate-pulse'
+                        : 'hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400'
+                    }`}
+                    aria-label={isListening ? 'Listening...' : 'Voice search'}
+                  >
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                    </svg>
+                  </button>
+                )}
                 {search && (
                   <button
                     onClick={() => setSearch('')}
@@ -2032,7 +2122,12 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
 
       {/* Comparison Bar */}
       {selectedForCompare.length > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 border-t border-slate-200 dark:border-gray-800 shadow-2xl z-50 transform transition-transform duration-300 ease-out">
+        <div
+          onDragOver={handleDragOverCompare}
+          onDragLeave={handleDragLeaveCompare}
+          onDrop={handleDropCompare}
+          className={`fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 border-t border-slate-200 dark:border-gray-800 shadow-2xl z-50 transform transition-all duration-300 ease-out ${isDragOver ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30 shadow-emerald-500/20' : ''}`}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">

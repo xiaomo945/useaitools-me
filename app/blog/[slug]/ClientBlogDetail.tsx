@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Home, Share2, Copy, ChevronRight, List } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import ReadingProgress from '@/app/components/ReadingProgress';
 
 type BlogImage = {
   url: string;
@@ -239,6 +240,7 @@ export default function ClientBlogDetail({
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-10 sm:py-16 grid-background">
+      <ReadingProgress />
       <div className="max-w-6xl mx-auto px-3 sm:px-6">
         {/* Breadcrumbs */}
         <Breadcrumbs 
