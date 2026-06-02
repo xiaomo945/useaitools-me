@@ -7,6 +7,7 @@ import PageProgress from "./components/PageProgress";
 import BackToTop from "./components/BackToTop";
 import MobileNav from "./components/MobileNav";
 import ThemeToggle from "./components/ThemeToggle";
+import SoundToggle from "./components/SoundToggle";
 import { ToastProvider } from "./components/Toast";
 import PageTransition from "./components/PageTransition";
 import KeyboardNavigation from "./components/KeyboardNavigation";
@@ -136,6 +137,9 @@ export default function RootLayout({
           </Suspense>
           <Suspense fallback={null}>
             <ThemeToggle />
+            <div className="fixed bottom-20 left-4 md:bottom-4 md:left-4 z-40">
+              <SoundToggle />
+            </div>
           </Suspense>
           <KeyboardNavigation />
           <ExternalLinkToast />

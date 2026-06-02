@@ -7,6 +7,7 @@ import StarRating from './StarRating';
 import SkeletonCard from './Skeleton';
 import { useToast } from './Toast';
 import { debugLog } from '../utils/debug';
+import { playSaveSound, playUnsaveSound, playCompareSound, playSearchSound } from '../utils/sound';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -49,7 +50,8 @@ const ToolCard = memo(function ToolCard({
   router,
   comparePulse,
   onLongPress,
-  shortcutNumber
+  shortcutNumber,
+  onSwipeCategory
 }: {
   tool: any;
   index: number;
@@ -69,6 +71,7 @@ const ToolCard = memo(function ToolCard({
   comparePulse: boolean;
   onLongPress: (tool: any) => void;
   shortcutNumber?: number;
+  onSwipeCategory?: (direction: 'left' | 'right') => void;
 }) {
   const colors = getCategoryColors(tool.category);
   const pricingColors = getPricingColors(tool.pricing);
@@ -76,6 +79,11 @@ const ToolCard = memo(function ToolCard({
   const longPressTimer = useRef<NodeJS.Timeout | null>(null);
   const [isLongPress, setIsLongPress] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  const lastTapRef = useRef<number>(0);
+  const [doubleTapHeart, setDoubleTapHeart] = useState(false);
+  const touchStartXRef = useRef<number>(0);
+  const touchStartYRef = useRef<number>(0);
+  const [swipeOffset, setSwipeOffset] = useState(0);
 
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
     e.dataTransfer.setData('text/plain', String(tool.id));
@@ -87,27 +95,45 @@ const ToolCard = memo(function ToolCard({
     setIsDragging(false);
   };
 
-  const handleTouchStart = () => {
+  const handleTouchStart = (e: React.TouchEvent) => {
     setIsLongPress(false);
+    touchStartXRef.current = e.touches[0].clientX;
+    touchStartYRef.current = e.touches[0].clientY;
     longPressTimer.current = setTimeout(() => {
       setIsLongPress(true);
-      if (navigator.vibrate) {
-        navigator.vibrate(10);
-      }
+      if (navigator.vibrate) navigator.vibrate(10);
       onLongPress(tool);
     }, 500);
   };
 
-  const handleTouchEnd = () => {
-    if (longPressTimer.current) {
-      clearTimeout(longPressTimer.current);
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (longPressTimer.current) clearTimeout(longPressTimer.current);
+    const deltaX = e.touches[0].clientX - touchStartXRef.current;
+    const deltaY = e.touches[0].clientY - touchStartYRef.current;
+    // Only horizontal swipe (not vertical scroll)
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 10) {
+      setSwipeOffset(deltaX * 0.3);
     }
   };
 
-  const handleTouchMove = () => {
-    if (longPressTimer.current) {
-      clearTimeout(longPressTimer.current);
+  const handleTouchEnd = (_e: React.TouchEvent) => {
+    if (longPressTimer.current) clearTimeout(longPressTimer.current);
+    
+    const deltaX = swipeOffset;
+    // Swipe detection
+    if (Math.abs(deltaX) > 40 && onSwipeCategory) {
+      onSwipeCategory(deltaX > 0 ? 'right' : 'left');
     }
+    setSwipeOffset(0);
+    
+    // Double-tap detection
+    const now = Date.now();
+    if (now - lastTapRef.current < 300) {
+      toggleSave(tool.id);
+      setDoubleTapHeart(true);
+      setTimeout(() => setDoubleTapHeart(false), 500);
+    }
+    lastTapRef.current = now;
   };
 
   return (
@@ -119,7 +145,9 @@ const ToolCard = memo(function ToolCard({
       className={`group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative select-none ${isDragging ? 'opacity-50 scale-[0.98]' : ''} ${hasAffiliate ? 'affiliate-card' : ''}`}
       style={{
         animationDelay: `${index * 50}ms`,
-        willChange: 'transform'
+        willChange: 'transform',
+        transform: swipeOffset ? `translateX(${swipeOffset}px)` : undefined,
+        transition: swipeOffset ? 'none' : undefined,
       }}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -150,6 +178,11 @@ const ToolCard = memo(function ToolCard({
           <kbd className="px-1 py-0.5 text-[9px] font-mono font-bold bg-slate-900/60 dark:bg-white/20 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
             Alt+{shortcutNumber}
           </kbd>
+        </div>
+      )}
+      {doubleTapHeart && (
+        <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+          <span className="text-5xl animate-ping opacity-80">❤️</span>
         </div>
       )}
       
@@ -460,6 +493,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const [showWelcomeTip, setShowWelcomeTip] = useState(false);
   const [comparePulse, setComparePulse] = useState<{ [key: number]: boolean }>({});
   const [showNewContentBanner, setShowNewContentBanner] = useState(false);
+  const [showRestoredNotice, setShowRestoredNotice] = useState(false);
   const { addToast } = useToast();
 
   // Pull to refresh state
@@ -529,6 +563,44 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       }
       localStorage.setItem('lastVisitTimestamp', String(now));
     } catch { /* ignore */ }
+  }, []);
+
+  // Save filter preferences to localStorage
+  useEffect(() => {
+    try {
+      const hasVisited = localStorage.getItem('useaitools_visited');
+      if (hasVisited) {
+        localStorage.setItem('useaitools_prefs', JSON.stringify({
+          selectedCategories,
+          selectedPricing,
+        }));
+      }
+    } catch {}
+  }, [selectedCategories, selectedPricing]);
+
+  // Restore filter preferences on first visit (not first-time users)
+  useEffect(() => {
+    try {
+      const hasVisited = localStorage.getItem('useaitools_visited');
+      if (!hasVisited) {
+        localStorage.setItem('useaitools_visited', 'true');
+        return;
+      }
+      const prefs = localStorage.getItem('useaitools_prefs');
+      if (prefs) {
+        const parsed = JSON.parse(prefs);
+        if (parsed.selectedCategories && !parsed.selectedCategories.includes('All')) {
+          setSelectedCategories(parsed.selectedCategories);
+          setShowRestoredNotice(true);
+          setTimeout(() => setShowRestoredNotice(false), 3000);
+        }
+        if (parsed.selectedPricing && parsed.selectedPricing !== 'All') {
+          setSelectedPricing(parsed.selectedPricing);
+          setShowRestoredNotice(true);
+          setTimeout(() => setShowRestoredNotice(false), 3000);
+        }
+      }
+    } catch {}
   }, []);
 
   const saveRecentSearch = (term: string) => {
@@ -669,6 +741,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const goToSearchPage = () => {
     if (search.trim()) {
       debugLog('Search', `Navigating to search page: "${search.trim()}"`);
+      playSearchSound();
       router.push(`/search?q=${encodeURIComponent(search.trim())}`);
     }
   };
@@ -817,6 +890,11 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const toggleSave = (id: number) => {
     const wasSaved = savedIds.includes(id);
     debugLog('Save', wasSaved ? `Removing tool ${id}` : `Saving tool ${id}`);
+    if (wasSaved) {
+      playUnsaveSound();
+    } else {
+      playSaveSound();
+    }
     const newSavedIds = wasSaved
       ? savedIds.filter((savedId) => savedId !== id)
       : [...savedIds, id];
@@ -838,6 +916,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const toggleCompare = (id: number) => {
     const wasSelected = selectedForCompare.includes(id);
     debugLog('Compare', wasSelected ? `Removing tool ${id} from compare` : `Adding tool ${id} to compare`);
+    if (!wasSelected) playCompareSound();
     setSelectedForCompare(prev => {
       if (wasSelected) {
         return prev.filter(toolId => toolId !== id);
@@ -2055,6 +2134,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                   setSelectedCategories(['All']);
                   setSelectedPricing('All');
                   setSearch('');
+                  try { localStorage.removeItem('useaitools_prefs'); } catch {}
                   debugLog('Filter', 'All filters cleared');
                   if (toolsGridRef.current) {
                     toolsGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -2071,6 +2151,13 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           )}
 
           {/* Active Filter Tags */}
+          {showRestoredNotice && (
+            <div className="flex justify-center mb-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 animate-fade-in-up">
+                🔄 Filters restored from last visit
+              </span>
+            </div>
+          )}
           {(!selectedCategories.includes('All') || selectedPricing !== 'All') && (
             <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
               {!selectedCategories.includes('All') && selectedCategories.map(cat => (
@@ -2476,6 +2563,14 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 comparePulse={!!comparePulse[tool.id]}
                 onLongPress={handleLongPress}
                 shortcutNumber={index < 9 ? index + 1 : undefined}
+                onSwipeCategory={(direction) => {
+                  const catIndex = categories.indexOf(selectedCategories.filter(c => c !== 'All')[0] || 'All');
+                  if (direction === 'left' && catIndex > 0) {
+                    setSelectedCategories([categories[catIndex - 1]]);
+                  } else if (direction === 'right' && catIndex < categories.length - 1) {
+                    setSelectedCategories([categories[catIndex + 1]]);
+                  }
+                }}
               />
             );
           })}

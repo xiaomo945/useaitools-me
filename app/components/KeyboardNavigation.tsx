@@ -8,6 +8,9 @@ const shortcuts = [
   { keys: ['Esc'], description: 'Close this panel' },
   { keys: ['/'], description: 'Focus search box' },
   { keys: ['Alt', '1-9'], description: 'Open tool card #1-9' },
+  { keys: ['Double-tap'], description: 'Save/unsave a tool (mobile)' },
+  { keys: ['Swipe ←/→'], description: 'Switch category (mobile)' },
+  { keys: ['🔊 Button'], description: 'Toggle sound effects' },
 ];
 
 export default function KeyboardNavigation() {
