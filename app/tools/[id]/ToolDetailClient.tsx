@@ -965,6 +965,90 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
           </div>
         )}
 
+        {/* Complete Your Toolkit - Complementary Tools */}
+        {(() => {
+          const complementaryMap: Record<string, { category: string; reason: string }[]> = {
+            'Writing': [
+              { category: 'Image', reason: 'Pair with this for visuals' },
+              { category: 'Productivity', reason: 'Publish & schedule content' },
+            ],
+            'Image': [
+              { category: 'Writing', reason: 'Add compelling copy' },
+              { category: 'Video', reason: 'Animate your visuals' },
+            ],
+            'Video': [
+              { category: 'Audio', reason: 'Add voice & music' },
+              { category: 'Writing', reason: 'Script your videos' },
+            ],
+            'Audio': [
+              { category: 'Video', reason: 'Add visual elements' },
+              { category: 'Writing', reason: 'Create show notes' },
+            ],
+            'Code': [
+              { category: 'Productivity', reason: 'Manage your projects' },
+              { category: 'Writing', reason: 'Document your code' },
+            ],
+            'Productivity': [
+              { category: 'Writing', reason: 'Draft communications' },
+              { category: 'Code', reason: 'Automate workflows' },
+            ],
+          };
+          const complements = complementaryMap[tool.category] || [];
+          const relatedIds = new Set(relatedTools.map(t => t.id));
+          const complementTools = complements
+            .map(c => ({
+              ...c,
+              tool: allTools.find(t => t.category === c.category && t.id !== tool.id && !relatedIds.has(t.id))
+            }))
+            .filter(c => c.tool)
+            .slice(0, 2);
+          
+          if (complementTools.length === 0) return null;
+          return (
+            <div className="bg-gradient-to-br from-amber-50/60 to-orange-50/40 dark:from-amber-950/20 dark:via-gray-900 dark:to-orange-950/20 border border-amber-200/60 dark:border-amber-800/30 rounded-3xl p-6 sm:p-8 mb-8">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-lg shadow-amber-500/25">
+                  <span className="text-white text-lg">🔄</span>
+                </div>
+                <div>
+                  <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Complete Your Toolkit</h2>
+                  <p className="text-sm text-slate-500 dark:text-gray-400">Tools that pair perfectly with {tool.name}</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {complementTools.map((item) => {
+                  const t = item.tool!;
+                  const catColors: Record<string, string> = {
+                    'Writing': 'bg-blue-500', 'Image': 'bg-violet-500', 'Video': 'bg-indigo-500',
+                    'Audio': 'bg-pink-500', 'Code': 'bg-orange-500', 'Productivity': 'bg-teal-500',
+                  };
+                  return (
+                    <Link
+                      key={t.id}
+                      href={`/tools/${t.id}`}
+                      className="group bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                    >
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className={`w-9 h-9 rounded-lg ${catColors[t.category] || 'bg-slate-500'}/10 flex items-center justify-center text-sm font-bold ${catColors[t.category]?.replace('bg-', 'text-').replace('-500', '-600') || 'text-slate-600'}`}>
+                          {t.name.charAt(0)}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-semibold text-sm text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors truncate">{t.name}</h4>
+                          <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${catColors[t.category] || 'bg-slate-500'} text-white`}>{t.category}</span>
+                        </div>
+                      </div>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mb-2">{t.description}</p>
+                      <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-amber-600 dark:text-amber-400">
+                        🔗 {item.reason}
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
+
         {/* Similar Tools Section - Enhanced with Smart Recommendations */}
         {relatedTools.length > 0 && (
           <div className="bg-gradient-to-br from-slate-50 to-emerald-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">

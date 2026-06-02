@@ -926,6 +926,88 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const categories: Category[] = ['All', 'Writing', 'Image', 'Productivity', 'Code', 'Audio', 'Video'];
   const pricingOptions: string[] = ['All', 'Free', 'Freemium', 'Free Trial', 'Paid', 'Open Source'];
 
+  // Daily Discovery - seeded by date, same tool for all users on same day
+  const dailyPick = useMemo(() => {
+    const today = new Date().toISOString().slice(0, 10); // "2026-06-02"
+    const dismissed = typeof window !== 'undefined' ? localStorage.getItem('dailyPickDismissed') : '';
+    if (dismissed === today) return null;
+    
+    // Seed a pseudo-random index from date
+    let hash = 0;
+    for (let i = 0; i < today.length; i++) {
+      hash = ((hash << 5) - hash) + today.charCodeAt(i);
+      hash |= 0;
+    }
+    
+    // Filter high-rated but less popular tools (hidden gems)
+    const candidates = displayedTools.filter(t => 
+      (t.rating || 0) >= 4.0 && !savedIds.includes(t.id)
+    );
+    if (candidates.length === 0) return null;
+    
+    return candidates[Math.abs(hash) % candidates.length];
+  }, [displayedTools, savedIds]);
+
+  // Mystery Box logic
+  const getMysteryCount = () => {
+    try {
+      const today = new Date().toISOString().slice(0, 10);
+      const stored = localStorage.getItem('mysteryBoxCount');
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (parsed.date === today) return parsed.count;
+      }
+      return 0;
+    } catch { return 0; }
+  };
+
+  const incrementMysteryCount = () => {
+    try {
+      const today = new Date().toISOString().slice(0, 10);
+      const newCount = mysteryCount + 1;
+      localStorage.setItem('mysteryBoxCount', JSON.stringify({ date: today, count: newCount }));
+      setMysteryCount(newCount);
+    } catch {}
+  };
+
+  const openMysteryBox = () => {
+    const unsaved = displayedTools.filter(t => !savedIds.includes(t.id));
+    if (unsaved.length === 0) return;
+    const random = unsaved[Math.floor(Math.random() * unsaved.length)];
+    setMysteryTool(random);
+    setMysteryRevealed(false);
+    
+    // Generate 3 hints
+    const hints: string[] = [];
+    const categoryHints: Record<string, string> = {
+      'Writing': 'This tool helps you write faster',
+      'Image': 'This tool creates stunning visuals',
+      'Video': 'This tool brings videos to life',
+      'Audio': 'This tool transforms audio content',
+      'Code': 'This tool supercharges your coding',
+      'Productivity': 'This tool boosts your productivity',
+    };
+    hints.push(categoryHints[random.category] || 'This tool uses AI in creative ways');
+    
+    if (random.pricing === 'Free' || random.pricing === 'Freemium') {
+      hints.push('Free plan available');
+    } else {
+      hints.push('Premium quality experience');
+    }
+    
+    const ratingHint = (random.rating || 4.0) >= 4.5 ? 'Loved by users worldwide' : 'Highly rated by the community';
+    hints.push(ratingHint);
+    
+    setMysteryHints(hints);
+    setShowMysteryBox(true);
+    incrementMysteryCount();
+  };
+
+  // Initialize mystery count
+  useEffect(() => {
+    setMysteryCount(getMysteryCount());
+  }, []);
+
   // Debounced search with 300ms delay
   const [debouncedSearch, setDebouncedSearch] = useState('');
   useEffect(() => {
@@ -1257,6 +1339,12 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   };
 
   const [showBanner, setShowBanner] = useState(true);
+  const [showDailyPick, setShowDailyPick] = useState(true);
+  const [showMysteryBox, setShowMysteryBox] = useState(false);
+  const [mysteryTool, setMysteryTool] = useState<Tool | null>(null);
+  const [mysteryRevealed, setMysteryRevealed] = useState(false);
+  const [mysteryHints, setMysteryHints] = useState<string[]>([]);
+  const [mysteryCount, setMysteryCount] = useState(0);
 
   const [isListening, setIsListening] = useState(false);
   const [speechSupported, setSpeechSupported] = useState(false);
@@ -1704,8 +1792,8 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             )}
           </div>
 
-          {/* Submit Tool Button */}
-          <div className="text-center mb-6 sm:mb-8">
+          {/* Submit Tool + Mystery Box Buttons */}
+          <div className="text-center mb-6 sm:mb-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/submit"
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 rounded-full hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition-all duration-300 min-h-[44px]"
@@ -1715,7 +1803,83 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               </svg>
               Submit a Tool
             </Link>
+            <button
+              onClick={openMysteryBox}
+              disabled={mysteryCount >= 3}
+              className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold rounded-full transition-all duration-300 min-h-[44px] ${
+                mysteryCount >= 3
+                  ? 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed'
+                  : 'bg-gradient-to-r from-amber-400 to-orange-400 dark:from-amber-500 dark:to-orange-500 text-white hover:shadow-lg hover:shadow-amber-400/25 hover:-translate-y-0.5 active:scale-[0.98]'
+              }`}
+            >
+              🎁 Mystery Box {mysteryCount >= 3 ? '(Done today)' : `(${3 - mysteryCount} left)`}
+            </button>
           </div>
+
+          {/* Today's Discovery - Daily Pick */}
+          {showDailyPick && dailyPick && (() => {
+            const colors = getCategoryColors(dailyPick.category);
+            const reasons = [
+              'A hidden gem worth exploring',
+              'Highly rated but often overlooked',
+              'Users love this underrated tool',
+              'Try something new today',
+              'A fresh pick just for you',
+            ];
+            const today = new Date().toISOString().slice(0, 10);
+            let hash = 0;
+            for (let i = 0; i < today.length; i++) {
+              hash = ((hash << 5) - hash) + today.charCodeAt(i);
+              hash |= 0;
+            }
+            const reason = reasons[Math.abs(hash) % reasons.length];
+            return (
+              <div className="mb-6 sm:mb-8">
+                <div className="bg-gradient-to-r from-emerald-50 via-white to-teal-50 dark:from-emerald-950/30 dark:via-gray-900 dark:to-teal-950/30 border border-emerald-200/60 dark:border-emerald-800/40 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <button
+                    onClick={() => {
+                      setShowDailyPick(false);
+                      try { localStorage.setItem('dailyPickDismissed', today); } catch {}
+                    }}
+                    className="absolute top-2 right-2 p-1 hover:bg-emerald-200 dark:hover:bg-emerald-800 rounded-full transition-colors z-10"
+                    aria-label="Dismiss daily pick"
+                  >
+                    <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm">
+                      💡 Daily Pick
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <Link
+                      href={`/tools/${dailyPick.id}`}
+                      className={`w-10 h-10 sm:w-14 sm:h-14 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-lg sm:text-2xl font-bold shrink-0 hover:scale-105 transition-transform duration-300`}
+                      style={{ fontFamily: 'Playfair Display, serif' }}
+                    >
+                      {dailyPick.name.charAt(0)}
+                    </Link>
+                    <div className="flex-1 min-w-0">
+                      <Link href={`/tools/${dailyPick.id}`} className="inline-block">
+                        <h3 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate">
+                          🌟 {dailyPick.name}
+                        </h3>
+                      </Link>
+                      <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5 truncate">{reason}</p>
+                    </div>
+                    <Link
+                      href={`/tools/${dailyPick.id}`}
+                      className="shrink-0 inline-flex items-center gap-1 px-3 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px]"
+                    >
+                      Try It →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            );
+          })()}
 
           {/* Recently Viewed Quick Access */}
           {recentlyViewedIds.length > 0 && (
@@ -2507,6 +2671,70 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         </p>
       </div>
       </div>
+
+      {/* Mystery Box Modal */}
+      {showMysteryBox && mysteryTool && (
+        <>
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50" onClick={() => { setShowMysteryBox(false); setMysteryRevealed(false); }} />
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 pointer-events-none">
+            <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl border border-slate-200 dark:border-gray-700 max-w-md w-full overflow-hidden pointer-events-auto animate-fade-in-up">
+              {!mysteryRevealed ? (
+                <div className="p-6 sm:p-8 text-center">
+                  <div className="text-6xl mb-4 animate-bounce">🎁</div>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">What's inside?</h3>
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Here are some clues...</p>
+                  <div className="space-y-3 mb-8">
+                    {mysteryHints.map((hint, i) => (
+                      <div key={i} className="flex items-center gap-3 px-4 py-3 bg-amber-50 dark:bg-amber-900/20 rounded-xl text-left">
+                        <span className="text-lg">💡</span>
+                        <span className="text-sm font-medium text-slate-700 dark:text-slate-300">{hint}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <button
+                    onClick={() => setMysteryRevealed(true)}
+                    className="w-full px-6 py-3 bg-gradient-to-r from-amber-400 to-orange-400 dark:from-amber-500 dark:to-orange-500 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 text-lg"
+                  >
+                    🎁 Reveal!
+                  </button>
+                </div>
+              ) : (
+                <div className="p-6 sm:p-8 text-center">
+                  <div className="text-4xl mb-2">🎉</div>
+                  <p className="text-xs font-semibold text-amber-500 mb-3 uppercase tracking-wider">You discovered</p>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">{mysteryTool.name}</h3>
+                  <div className="flex items-center justify-center gap-2 mb-3">
+                    <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${getCategoryColors(mysteryTool.category).bg} text-white`}>
+                      {mysteryTool.category}
+                    </span>
+                    <span className="text-amber-500 font-semibold text-sm">★ {mysteryTool.rating || '4.5'}</span>
+                  </div>
+                  <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">{mysteryTool.description}</p>
+                  <div className="flex flex-col gap-3">
+                    <Link
+                      href={`/tools/${mysteryTool.id}`}
+                      onClick={() => { setShowMysteryBox(false); setMysteryRevealed(false); }}
+                      className="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    >
+                      View Details →
+                    </Link>
+                    {mysteryCount < 3 ? (
+                      <button
+                        onClick={() => { setMysteryRevealed(false); openMysteryBox(); }}
+                        className="w-full px-6 py-3 border-2 border-slate-200 dark:border-gray-700 text-slate-700 dark:text-slate-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-800 transition-all duration-300"
+                      >
+                        🎲 Try Another
+                      </button>
+                    ) : (
+                      <p className="text-xs text-slate-400 dark:text-slate-500">Come back tomorrow for more mystery boxes!</p>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </>
+      )}
 
       {/* Comparison Bar */}
       {selectedForCompare.length > 0 && (

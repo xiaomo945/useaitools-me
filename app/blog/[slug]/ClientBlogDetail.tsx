@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import toolsData from '@/data/tools.json';
 import { Home, Share2, Copy, ChevronRight, List } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
@@ -510,6 +511,77 @@ export default function ClientBlogDetail({
             </div>
           </div>
         </div>
+
+        {/* Tools Mentioned in This Guide */}
+        {(() => {
+          const toolLinkRegex = /\[\[link:\/tools\/(\d+)\|([^\]]+)\]\]/g;
+          const mentionedToolIds: number[] = [];
+          let match;
+          while ((match = toolLinkRegex.exec(post.content)) !== null) {
+            mentionedToolIds.push(parseInt(match[1], 10));
+          }
+          const mentionedTools = mentionedToolIds
+            .filter((id, i, arr) => arr.indexOf(id) === i)
+            .map(id => toolsData.find((t: any) => t.id === id))
+            .filter(Boolean)
+            .slice(0, 6);
+
+          if (mentionedTools.length > 0) {
+            return (
+              <div className="mt-12 bg-gradient-to-br from-slate-50 to-blue-50/30 dark:from-gray-900 dark:to-blue-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/25">
+                    <span className="text-white text-lg">🛠️</span>
+                  </div>
+                  <div>
+                    <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">Tools Mentioned in This Guide</h2>
+                    <p className="text-sm text-slate-500 dark:text-gray-400">Quick access to all tools covered</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                  {mentionedTools.map((tool: any) => {
+                    const catColors: Record<string, string> = {
+                      'Writing': 'bg-blue-500', 'Image': 'bg-violet-500', 'Video': 'bg-indigo-500',
+                      'Audio': 'bg-pink-500', 'Code': 'bg-orange-500', 'Productivity': 'bg-teal-500',
+                    };
+                    return (
+                      <Link
+                        key={tool.id}
+                        href={`/tools/${tool.id}`}
+                        className="group bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl p-3 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <div className={`w-8 h-8 rounded-lg ${catColors[tool.category] || 'bg-slate-500'}/10 flex items-center justify-center text-xs font-bold`}>
+                            {tool.name.charAt(0)}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="font-semibold text-sm text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors truncate">{tool.name}</h4>
+                            <span className={`text-[9px] font-semibold px-1.5 py-0.5 rounded-full ${catColors[tool.category] || 'bg-slate-500'} text-white`}>{tool.category}</span>
+                          </div>
+                        </div>
+                        <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2 mt-1.5">{tool.description}</p>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          }
+
+          // No tools mentioned — show discover link
+          const categorySlug = post.category?.toLowerCase().replace(/\s+/g, '-');
+          return (
+            <div className="mt-12 text-center py-8">
+              <p className="text-sm text-slate-500 dark:text-slate-400 mb-3">No specific tools mentioned in this article</p>
+              <Link
+                href={categorySlug ? `/category/${categorySlug}` : '/'}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+              >
+                Discover tools for this topic →
+              </Link>
+            </div>
+          );
+        })()}
 
         {/* Related Tools Recommendation */}
         {relatedTools.length > 0 && (
