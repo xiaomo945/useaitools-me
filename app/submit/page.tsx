@@ -17,14 +17,45 @@ export default function SubmitToolPage() {
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target;
-    setFormData(prev => ({ 
-      ...prev, 
-      [name]: type === 'checkbox' && 'checked' in e.target ? (e.target as HTMLInputElement).checked : value 
-    }));
+    let processedValue = type === 'checkbox' && 'checked' in e.target ? (e.target as HTMLInputElement).checked : value;
+    
+    // Auto-capitalize tool name
+    if (name === 'name' && typeof processedValue === 'string' && processedValue.length > 0) {
+      processedValue = processedValue.charAt(0).toUpperCase() + processedValue.slice(1);
+    }
+    
+    // Auto-prefix URL with https://
+    if (name === 'url' && typeof processedValue === 'string') {
+      const trimmed = processedValue.trim();
+      if (trimmed && !trimmed.startsWith('http://') && !trimmed.startsWith('https://')) {
+        processedValue = 'https://' + trimmed;
+      }
+    }
+    
+    setFormData(prev => ({ ...prev, [name]: processedValue }));
   };
+
+  const suggestCategory = (name: string): string => {
+    const lower = name.toLowerCase();
+    const keywords: Record<string, string[]> = {
+      'Writing': ['write', 'writer', 'writing', 'text', 'copy', 'blog', 'article', 'content', 'grammar', 'spell'],
+      'Image': ['image', 'photo', 'picture', 'art', 'design', 'draw', 'illustration', 'visual', 'midjourney', 'dall-e', 'stable diffusion'],
+      'Video': ['video', 'movie', 'film', 'animation', 'clip', 'edit', 'youtube', 'tiktok'],
+      'Audio': ['audio', 'music', 'sound', 'voice', 'speech', 'podcast', 'tts', 'sing'],
+      'Code': ['code', 'coding', 'developer', 'programming', 'debug', 'github', 'copilot', 'ide'],
+      'Productivity': ['productivity', 'task', 'project', 'note', 'organize', 'schedule', 'calendar', 'notion', 'slack'],
+    };
+    for (const [category, words] of Object.entries(keywords)) {
+      if (words.some(w => lower.includes(w))) return category;
+    }
+    return '';
+  };
+
+  const suggestedCategory = formData.name ? suggestCategory(formData.name) : '';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,6 +77,7 @@ export default function SubmitToolPage() {
       }
     } catch (error) {
       console.error('Submission failed:', error);
+      setError('Submission failed. Please try again. Your data has been preserved.');
     } finally {
       setLoading(false);
     }
@@ -206,6 +238,11 @@ export default function SubmitToolPage() {
                 <option value="Audio">Audio</option>
                 <option value="Video">Video</option>
               </select>
+              {suggestedCategory && !formData.category && (
+                <p className="mt-1.5 text-xs text-emerald-600 dark:text-emerald-400">
+                  💡 Suggestion: <button type="button" onClick={() => setFormData(prev => ({ ...prev, category: suggestedCategory }))} className="underline font-semibold">{suggestedCategory}</button>
+                </p>
+              )}
             </div>
 
             <div>
@@ -257,6 +294,12 @@ export default function SubmitToolPage() {
                 Requires VPN to access
               </label>
             </div>
+
+            {error && (
+              <div className="p-4 rounded-xl bg-rose-50 dark:bg-rose-900/20 border border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300 text-sm font-medium">
+                {error}
+              </div>
+            )}
 
             <div className="pt-4">
               <button

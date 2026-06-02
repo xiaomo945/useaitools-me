@@ -11,6 +11,7 @@ import SoundToggle from "./components/SoundToggle";
 import { ToastProvider } from "./components/Toast";
 import PageTransition from "./components/PageTransition";
 import KeyboardNavigation from "./components/KeyboardNavigation";
+import GuidedTour from "./components/GuidedTour";
 import NetworkStatus from "./components/NetworkStatus";
 import ExternalLinkToast from "./components/ExternalLinkToast";
 
@@ -142,6 +143,7 @@ export default function RootLayout({
             </div>
           </Suspense>
           <KeyboardNavigation />
+          <GuidedTour />
           <ExternalLinkToast />
         </ToastProvider>
       </body>

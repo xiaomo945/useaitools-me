@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import SearchHighlight from '@/app/components/SearchHighlight';
 
 type Tool = (typeof tools)[0];
 
@@ -251,6 +252,36 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
                   ))}
                 </div>
               </div>
+              {/* Smart Recommendations for zero results */}
+              {(() => {
+                const topRated = [...allTools].sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
+                return (
+                  <div className="mt-8 max-w-lg mx-auto">
+                    <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-3">⭐ You might like these</p>
+                    <div className="space-y-2">
+                      {topRated.map(tool => {
+                        const colors = getCategoryColors(tool.category);
+                        return (
+                          <Link
+                            key={tool.id}
+                            href={`/tools/${tool.id}`}
+                            className="flex items-center gap-3 px-4 py-3 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl hover:shadow-md hover:border-emerald-300 dark:hover:border-emerald-600 transition-all duration-300"
+                          >
+                            <div className={`w-8 h-8 rounded-lg ${colors.bg}/10 ${colors.textLight} flex items-center justify-center text-sm font-bold`}>
+                              {tool.name.charAt(0)}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <span className="font-medium text-sm text-slate-900 dark:text-white">{tool.name}</span>
+                              <span className={`ml-2 text-[9px] font-semibold px-1.5 py-0.5 rounded-full text-white ${colors.bg}`}>{tool.category}</span>
+                            </div>
+                            <span className="text-xs text-amber-500 font-semibold">★ {tool.rating || '4.5'}</span>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
           )}
 
@@ -288,7 +319,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
                           </div>
                           <div>
                             <h3 className="font-semibold text-lg text-slate-900 dark:text-white">
-                              {tool.name}
+                              <SearchHighlight text={tool.name} query={query} />
                             </h3>
                             <div className="flex items-center gap-1.5 mt-1">
                               {tool.needs_vpn ? (
@@ -309,7 +340,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
                       </div>
 
                       <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 line-clamp-2">
-                        {tool.description}
+                        <SearchHighlight text={tool.description} query={query} />
                       </p>
 
                       <div className="flex items-center justify-between gap-3">

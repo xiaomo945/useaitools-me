@@ -145,6 +145,12 @@ export default function Footer() {
                 Changelog
               </Link>
               <Link
+                href="/?replay-tour=1"
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                Replay Guide
+              </Link>
+              <Link
                 href="/about"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >

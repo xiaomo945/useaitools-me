@@ -2038,7 +2038,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           })()}
 
           {/* Category Buttons */}
-          <div className="relative">
+          <div className="relative" data-tour="categories">
             {/* Left Gradient Fade */}
             <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-10 bg-gradient-to-r from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
             {/* Right Gradient Fade */}
@@ -2535,7 +2535,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 dark:via-emerald-700/40 to-transparent mb-16 mx-auto max-w-2xl" />
 
         {/* Tools Grid */}
-        <div ref={toolsGridRef} className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 md:gap-6 lg:gap-7 transition-all duration-300 ease-out ${isFilterTransitioning ? 'opacity-50' : 'opacity-100'}`}>
+        <div ref={toolsGridRef} className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 md:gap-6 lg:gap-7 transition-all duration-300 ease-out ${isFilterTransitioning ? 'opacity-50' : 'opacity-100'}`} data-tour="toolcard">
           {filteredTools.map((tool, index) => {
             const isSaved = savedIds.includes(tool.id);
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
