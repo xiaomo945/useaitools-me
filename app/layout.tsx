@@ -9,6 +9,7 @@ import MobileNav from "./components/MobileNav";
 import ThemeToggle from "./components/ThemeToggle";
 import { ToastProvider } from "./components/Toast";
 import PageTransition from "./components/PageTransition";
+import KeyboardNavigation from "./components/KeyboardNavigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -131,6 +132,7 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <ThemeToggle />
           </Suspense>
+          <KeyboardNavigation />
         </ToastProvider>
       </body>
     </html>

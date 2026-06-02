@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { Home, Share2, Copy, ChevronRight, List } from 'lucide-react';
 import Footer from '@/app/components/Footer';
@@ -100,11 +100,22 @@ const renderBlogImage = (image: BlogImage, index: number) => {
 };
 
 // Simple function to parse basic markdown-like content and insert images at appropriate positions
-const renderContentWithImages = (content: string, images: BlogImage[] = []) => {
+const renderContentWithImages = (content: string, images: BlogImage[] = [], highlightKeyword?: string | null) => {
   let html = content;
 
   // Internal links first - format: [[link:/path|text]]
   html = html.replace(/\[\[link:([^\|]+)\|([^\]]+)\]\]/g, '<a href="$1" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 underline font-medium transition-colors duration-300">$2</a>');
+
+  // Graceful degradation for malformed internal links
+  html = html.replace(/\[\[link:([^\|\]]+)(?:\|([^\]]*))?\]\]/g, (match, path, text) => {
+    if (text && text.trim()) {
+      return `<a href="${path}" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 underline font-medium transition-colors duration-300">${text}</a>`;
+    }
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+      console.warn('[InternalLink] Malformed link resolved as plain text:', match);
+    }
+    return path;
+  });
 
   // Headings - add id for TOC navigation
   html = html.replace(/^## (.*?)$/gm, (match, headingText) => {
@@ -129,9 +140,33 @@ const renderContentWithImages = (content: string, images: BlogImage[] = []) => {
   // External links
   html = html.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 underline transition-colors duration-300">$1</a>');
 
+  // Highlight search terms from ?highlight= query param
+  if (highlightKeyword) {
+    const escapedTerm = highlightKeyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const highlightRegex = new RegExp(`(?<=>[^<]*)(${escapedTerm})(?=[^<]*<)`, 'gi');
+    html = html.replace(highlightRegex, '<mark class="bg-emerald-100 dark:bg-emerald-900/50 text-emerald-900 dark:text-emerald-200 rounded px-1">$1</mark>');
+  }
+
   // Wrap tables in scrollable container with shadow hint
   html = html.replace(/<table([^>]*)>/g, '<div class="table-scroll-wrapper relative my-6 overflow-x-auto"><div class="table-scroll-shadow"></div><table$1>');
   html = html.replace(/<\/table>/g, '</table></div>');
+
+  // Wrap code blocks with language label and copy button
+  html = html.replace(/<pre><code(?:\s+class="language-(\w+)")?>([\s\S]*?)<\/code><\/pre>/g,
+    (_match, lang, code) => {
+      const language = lang ? lang.charAt(0).toUpperCase() + lang.slice(1) : 'Code';
+      return `<div class="code-block-wrapper relative my-6 rounded-xl overflow-hidden border border-slate-200 dark:border-gray-700">
+        <div class="code-block-header flex items-center justify-between px-4 py-2 bg-slate-800 dark:bg-gray-800">
+          <span class="bg-slate-700 text-slate-300 text-xs rounded px-2 py-0.5 font-mono">${language}</span>
+          <button class="code-copy-btn flex items-center gap-1.5 text-xs text-slate-400 hover:text-white transition-colors duration-200 px-2 py-1 rounded hover:bg-slate-700" data-code="${encodeURIComponent(code)}">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+            <span class="code-copy-label">Copy</span>
+          </button>
+        </div>
+        <pre class="!mt-0 !mb-0 !rounded-none !border-0"><code${lang ? ` class="language-${lang}"` : ''}>${code}</code></pre>
+      </div>`;
+    }
+  );
 
   // Insert images at appropriate positions
   const paragraphs = html.split(/(?=<p|<h2|<hr)/g);
@@ -194,6 +229,7 @@ export default function ClientBlogDetail({
   const [copied, setCopied] = useState(false);
   const [activeHeading, setActiveHeading] = useState('');
   const [showToc, setShowToc] = useState(false);
+  const [highlightTerm, setHighlightTerm] = useState<string | null>(null);
   const url = `https://useaitools.me/blog/${slug}`;
   const encodedTitle = encodeURIComponent(post.title);
   const { display: readTime } = calculateReadTime(post.content);
@@ -231,6 +267,53 @@ export default function ClientBlogDetail({
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [tocItems]);
+
+  // Read highlight query param and scroll to first match
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const term = params.get('highlight');
+    if (term) {
+      setHighlightTerm(term);
+      setTimeout(() => {
+        const firstMark = document.querySelector('mark');
+        if (firstMark) {
+          firstMark.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 500);
+    }
+  }, []);
+
+  // Initialize code copy buttons
+  useEffect(() => {
+    const handleClick = async (e: Event) => {
+      const target = e.target as HTMLElement;
+      const btn = target.closest('.code-copy-btn') as HTMLElement;
+      if (!btn) return;
+
+      const encodedCode = btn.getAttribute('data-code');
+      if (!encodedCode) return;
+
+      try {
+        const code = decodeURIComponent(encodedCode);
+        const text = code.replace(/<[^>]*>/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#x27;/g, "'");
+        await navigator.clipboard.writeText(text);
+
+        const label = btn.querySelector('.code-copy-label');
+        if (label) label.textContent = 'Copied!';
+        btn.classList.add('text-emerald-400');
+
+        setTimeout(() => {
+          if (label) label.textContent = 'Copy';
+          btn.classList.remove('text-emerald-400');
+        }, 1500);
+      } catch (err) {
+        console.error('Failed to copy code:', err);
+      }
+    };
+
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, []);
 
   const handleCopyLink = async () => {
     try {
@@ -289,7 +372,7 @@ export default function ClientBlogDetail({
             <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-5 sm:p-8 lg:p-10 shadow-xl mb-8 max-w-3xl mx-auto">
               <article
                 className="prose prose-slate dark:prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images) }}
+                dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images, highlightTerm) }}
               />
             </div>
           </div>
