@@ -357,8 +357,46 @@ export default function ToolDetailClient({ tool, relatedTools, relatedArticles =
   };
   const bestAlternatives = getBestAlternatives();
   
+  // People Also Viewed - based on browsing history
+  const [peopleAlsoViewed, setPeopleAlsoViewed] = useState<Tool[]>([]);
+  
   useEffect(() => {
     saveToHistory(tool.id);
+    
+    try {
+      const saved = localStorage.getItem('toolHistory');
+      if (saved) {
+        const history: { toolId: number; timestamp: number }[] = JSON.parse(saved);
+        const excludeIds = new Set([tool.id, ...relatedToolIds, ...bestAlternatives.map(t => t.id)]);
+        const historyToolIds = history.map(h => h.toolId).filter(id => !excludeIds.has(id));
+        const historyTools = allTools.filter(t => historyToolIds.includes(t.id) && t.category === tool.category);
+        
+        if (historyTools.length >= 3) {
+          setPeopleAlsoViewed(historyTools.slice(0, 3));
+        } else {
+          const popularOthers = allTools.filter(t => 
+            t.category === tool.category && 
+            !excludeIds.has(t.id) && 
+            !historyToolIds.includes(t.id)
+          ).sort((a, b) => (b.rating || 0) - (a.rating || 0));
+          setPeopleAlsoViewed([...historyTools, ...popularOthers].slice(0, 3));
+        }
+      } else {
+        const popular = allTools.filter(t => 
+          t.category === tool.category && 
+          t.id !== tool.id && 
+          !relatedToolIds.has(t.id)
+        ).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
+        setPeopleAlsoViewed(popular);
+      }
+    } catch {
+      const popular = allTools.filter(t => 
+        t.category === tool.category && 
+        t.id !== tool.id && 
+        !relatedToolIds.has(t.id)
+      ).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
+      setPeopleAlsoViewed(popular);
+    }
   }, [tool.id]);
 
   const copyToClipboard = async (text: string, index: number) => {
@@ -984,6 +1022,47 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* People Also Viewed */}
+        {peopleAlsoViewed.length > 0 && (
+          <div className="bg-gradient-to-br from-sky-50/50 to-cyan-50/30 dark:from-gray-900 dark:to-sky-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-sky-500/25">
+                <span className="text-white text-lg">👀</span>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">People Also Viewed</h2>
+                <p className="text-sm text-slate-500 dark:text-gray-400">Other {tool.category} tools users explored</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {peopleAlsoViewed.map((viewedTool) => {
+                const vColors = getCategoryColors(viewedTool.category);
+                return (
+                  <Link
+                    key={viewedTool.id}
+                    href={`/tools/${viewedTool.id}`}
+                    className="group bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                  >
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className={`w-9 h-9 rounded-lg ${vColors.bg}/10 flex items-center justify-center text-sm font-bold ${vColors.textLight}`}>
+                        {viewedTool.name.charAt(0)}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-semibold text-sm text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors truncate">{viewedTool.name}</h4>
+                        <div className="flex items-center gap-1">
+                          <span className="text-xs text-amber-500">★</span>
+                          <span className="text-xs text-slate-500">{viewedTool.rating || 4.0}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">{viewedTool.description}</p>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         )}

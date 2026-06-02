@@ -38,8 +38,6 @@ const DIMENSION_LABELS: Record<string, string> = {
 
 const DIMENSIONS = Object.keys(DIMENSION_LABELS);
 
-type Tool = (typeof tools)[0];
-
 interface AIRecommendation {
   toolRecommendations: {
     toolName: string;
@@ -55,7 +53,7 @@ const generateAIRecommendation = (selectedTools: Tool[]): AIRecommendation | nul
   if (selectedTools.length === 0) return null;
 
   const toolRecommendations = selectedTools.map(tool => {
-    const breakdown = (tool as Record<string, unknown>).rating_breakdown as RatingBreakdown | undefined;
+    const breakdown = (tool as unknown as Record<string, unknown>).rating_breakdown as RatingBreakdown | undefined;
     let strongestDimension = '';
     let strongestScore = 0;
     let totalScore = 0;
@@ -417,6 +415,7 @@ export default function ComparePage() {
                   </button>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         )}

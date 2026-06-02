@@ -15,6 +15,7 @@ import GuidedTour from "./components/GuidedTour";
 import NetworkStatus from "./components/NetworkStatus";
 import ExternalLinkToast from "./components/ExternalLinkToast";
 import ErrorBoundary from "./components/ErrorBoundary";
+import HolidayBanner from "./components/HolidayBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -124,6 +125,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col pb-16 md:pb-0">
+        <Suspense fallback={null}>
+          <HolidayBanner />
+        </Suspense>
         <ToastProvider>
           <Suspense fallback={null}>
             <NetworkStatus />
