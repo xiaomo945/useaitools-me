@@ -48,7 +48,8 @@ const ToolCard = memo(function ToolCard({
   getAffiliateLink,
   router,
   comparePulse,
-  onLongPress
+  onLongPress,
+  shortcutNumber
 }: {
   tool: any;
   index: number;
@@ -67,6 +68,7 @@ const ToolCard = memo(function ToolCard({
   router: any;
   comparePulse: boolean;
   onLongPress: (tool: any) => void;
+  shortcutNumber?: number;
 }) {
   const colors = getCategoryColors(tool.category);
   const pricingColors = getPricingColors(tool.pricing);
@@ -114,7 +116,7 @@ const ToolCard = memo(function ToolCard({
       draggable
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
-      className={`bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative select-none ${isDragging ? 'opacity-50 scale-[0.98]' : ''} ${hasAffiliate ? 'affiliate-card' : ''}`}
+      className={`group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative select-none ${isDragging ? 'opacity-50 scale-[0.98]' : ''} ${hasAffiliate ? 'affiliate-card' : ''}`}
       style={{
         animationDelay: `${index * 50}ms`,
         willChange: 'transform'
@@ -142,6 +144,14 @@ const ToolCard = memo(function ToolCard({
       
       {/* Category Color Bar - 3px Height */}
       <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
+      
+      {shortcutNumber && (
+        <div className="absolute top-2 left-2 z-10">
+          <kbd className="px-1 py-0.5 text-[9px] font-mono font-bold bg-slate-900/60 dark:bg-white/20 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+            Alt+{shortcutNumber}
+          </kbd>
+        </div>
+      )}
       
       <div className="p-3 sm:p-5">
         {/* Tool Header with Compare Checkbox */}
@@ -939,6 +949,20 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       return () => clearTimeout(timer);
     }
   }, [selectedCategory, selectedPricing, debouncedSearch]);
+
+  useEffect(() => {
+    const handleOpenTool = (e: Event) => {
+      const { index } = (e as CustomEvent).detail;
+      const tool = filteredTools[index];
+      if (tool) {
+        debugLog('Shortcut', `Alt+${index + 1} opening tool: ${tool.name}`);
+        router.push(`/tools/${tool.id}`);
+      }
+    };
+
+    window.addEventListener('useaitools:open-tool', handleOpenTool);
+    return () => window.removeEventListener('useaitools:open-tool', handleOpenTool);
+  }, [filteredTools, router]);
 
   useEffect(() => {
     const handleBeforeUnload = (e: BeforeUnloadEvent) => {
@@ -2030,6 +2054,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 router={router}
                 comparePulse={!!comparePulse[tool.id]}
                 onLongPress={handleLongPress}
+                shortcutNumber={index < 9 ? index + 1 : undefined}
               />
             );
           })}

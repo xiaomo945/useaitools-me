@@ -7,6 +7,7 @@ const shortcuts = [
   { keys: ['Ctrl', '/'], description: 'Show keyboard shortcuts' },
   { keys: ['Esc'], description: 'Close this panel' },
   { keys: ['/'], description: 'Focus search box' },
+  { keys: ['Alt', '1-9'], description: 'Open tool card #1-9' },
 ];
 
 export default function KeyboardNavigation() {
@@ -32,6 +33,14 @@ export default function KeyboardNavigation() {
       const searchInput = document.querySelector('input[type="text"][placeholder*="Search"]') as HTMLInputElement;
       if (searchInput) {
         searchInput.focus();
+      }
+    }
+
+    if (e.altKey && !isInputFocused) {
+      const num = parseInt(e.key, 10);
+      if (num >= 1 && num <= 9) {
+        e.preventDefault();
+        window.dispatchEvent(new CustomEvent('useaitools:open-tool', { detail: { index: num - 1 } }));
       }
     }
   }, [showHelp]);
