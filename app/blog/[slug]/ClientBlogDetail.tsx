@@ -129,6 +129,10 @@ const renderContentWithImages = (content: string, images: BlogImage[] = []) => {
   // External links
   html = html.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 underline transition-colors duration-300">$1</a>');
 
+  // Wrap tables in scrollable container with shadow hint
+  html = html.replace(/<table([^>]*)>/g, '<div class="table-scroll-wrapper relative my-6 overflow-x-auto"><div class="table-scroll-shadow"></div><table$1>');
+  html = html.replace(/<\/table>/g, '</table></div>');
+
   // Insert images at appropriate positions
   const paragraphs = html.split(/(?=<p|<h2|<hr)/g);
   

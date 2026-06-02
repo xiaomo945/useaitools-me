@@ -159,13 +159,13 @@ const ToolCard = memo(function ToolCard({
                   {highlightText(tool.name, search)}
                 </h3>
               </Link>
-              <div className="flex items-center gap-1 mt-0.5">
+              <div className="flex items-center gap-1.5 mt-0.5">
                 {tool.needs_vpn ? (
-                  <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                     🪜 VPN
                   </span>
                 ) : (
-                  <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold whitespace-nowrap bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
                     ✅ Direct
                   </span>
                 )}
@@ -195,7 +195,7 @@ const ToolCard = memo(function ToolCard({
             {comparePulse && (
               <div className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-30" />
             )}
-            <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold whitespace-nowrap ${pricingColors.bg} ${pricingColors.text}`}>
+            <span className={`px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap ${pricingColors.bg} ${pricingColors.text}`}>
               {tool.pricing}
             </span>
           </div>
@@ -220,15 +220,15 @@ const ToolCard = memo(function ToolCard({
         {/* Skill Level & Best For Tags */}
         <div className="mb-3 space-y-1.5">
           {tool.skill_level && (
-            <span className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[10px] font-semibold whitespace-nowrap ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
+            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
               {getSkillLevelColors(tool.skill_level).label}
             </span>
           )}
-          <div className="flex flex-wrap gap-0.5 sm:gap-1.5">
+          <div className="flex flex-wrap gap-1.5">
             {tool.best_for?.slice(0, 3).map((tag: string, i: number) => (
               <span
                 key={i}
-                className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] sm:text-xs font-medium whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
+                className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium whitespace-nowrap bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
               >
                 {tag}
               </span>
@@ -238,7 +238,7 @@ const ToolCard = memo(function ToolCard({
 
         {/* Footer */}
         <div className="flex items-center justify-between gap-3">
-          <span className={`px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} whitespace-nowrap`}>
+          <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text} whitespace-nowrap`}>
             {tool.category}
           </span>
           
@@ -440,6 +440,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const loadMoreTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [showWelcomeTip, setShowWelcomeTip] = useState(false);
   const [comparePulse, setComparePulse] = useState<{ [key: number]: boolean }>({});
+  const [showNewContentBanner, setShowNewContentBanner] = useState(false);
   const { addToast } = useToast();
 
   // Pull to refresh state
@@ -489,9 +490,25 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       if (!hasVisited) {
         setShowWelcomeTip(true);
         localStorage.setItem('hasVisitedBefore', 'true');
-        // Auto hide after 10 seconds
         setTimeout(() => setShowWelcomeTip(false), 10000);
       }
+    } catch { /* ignore */ }
+
+    // Check for new content since last visit
+    try {
+      const lastVisit = localStorage.getItem('lastVisitTimestamp');
+      const now = Date.now();
+      if (lastVisit) {
+        const lastVisitTime = parseInt(lastVisit, 10);
+        const daysSinceLastVisit = (now - lastVisitTime) / (1000 * 60 * 60 * 24);
+        if (daysSinceLastVisit > 1) {
+          const dismissedBanner = localStorage.getItem('dismissedNewContentBanner');
+          if (!dismissedBanner || parseInt(dismissedBanner, 10) < lastVisitTime) {
+            setShowNewContentBanner(true);
+          }
+        }
+      }
+      localStorage.setItem('lastVisitTimestamp', String(now));
     } catch { /* ignore */ }
   }, []);
 
@@ -907,6 +924,14 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     });
   }, [debouncedSearch, selectedCategory, selectedPricing, displayedTools]);
 
+  useEffect(() => {
+    if (selectedCategory !== 'All' || selectedPricing !== 'All' || debouncedSearch) {
+      setIsFilterTransitioning(true);
+      const timer = setTimeout(() => setIsFilterTransitioning(false), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [selectedCategory, selectedPricing, debouncedSearch]);
+
   const getCategoryColors = (category: string) => {
     switch (category) {
       case 'Writing':
@@ -1046,6 +1071,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const [isListening, setIsListening] = useState(false);
   const [speechSupported, setSpeechSupported] = useState(false);
   const [isDragOver, setIsDragOver] = useState(false);
+  const [isFilterTransitioning, setIsFilterTransitioning] = useState(false);
 
   useEffect(() => {
     setSpeechSupported(
@@ -1145,6 +1171,30 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
               {isRefreshing ? 'Refreshing...' : pullDistance > 60 ? 'Release to refresh' : 'Pull to refresh'}
             </span>
+          </div>
+        </div>
+      )}
+      {/* New Content Banner */}
+      {showNewContentBanner && (
+        <div className="bg-emerald-50 dark:bg-emerald-950/30 border-b border-emerald-200 dark:border-emerald-800 py-3 px-4 z-10 relative animate-slide-in">
+          <div className="max-w-7xl mx-auto flex items-center justify-center gap-3">
+            <span className="text-sm sm:text-base font-medium text-emerald-700 dark:text-emerald-300">
+              🆕 New tools added since your last visit. Check them out!
+            </span>
+            <button
+              onClick={() => {
+                setShowNewContentBanner(false);
+                try {
+                  localStorage.setItem('dismissedNewContentBanner', String(Date.now()));
+                } catch { /* ignore */ }
+              }}
+              className="p-1 hover:bg-emerald-200 dark:hover:bg-emerald-800 rounded-full transition-colors duration-200"
+              aria-label="Dismiss new content notification"
+            >
+              <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
         </div>
       )}
@@ -1508,7 +1558,12 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                         categoryButtonsRef.current[index] = el;
                       }
                     }}
-                    onClick={() => setSelectedCategory(category)}
+                    onClick={() => {
+                      setSelectedCategory(category);
+                      if (toolsGridRef.current) {
+                        toolsGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }}
                     onKeyDown={(e) => handleCategoryKeyDown(e, index)}
                     className={buttonStyle}
                     title={tooltipMap[category]}
@@ -1525,7 +1580,12 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             <div className="relative">
               <select
                 value={selectedPricing}
-                onChange={(e) => setSelectedPricing(e.target.value)}
+                onChange={(e) => {
+                  setSelectedPricing(e.target.value);
+                  if (toolsGridRef.current) {
+                    toolsGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
                 aria-label="Filter by pricing type"
                 className="appearance-none pl-3 sm:pl-4 pr-10 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 active:bg-gray-200 dark:active:bg-gray-700 transition-all duration-300 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 border border-transparent focus:border-emerald-300 min-h-[44px]"
               >
@@ -1889,7 +1949,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 dark:via-emerald-700/40 to-transparent mb-16 mx-auto max-w-2xl" />
 
         {/* Tools Grid */}
-        <div ref={toolsGridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-7 transition-all duration-300 ease-out">
+        <div ref={toolsGridRef} className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-7 transition-all duration-300 ease-out ${isFilterTransitioning ? 'opacity-50' : 'opacity-100'}`}>
           {filteredTools.map((tool, index) => {
             const isSaved = savedIds.includes(tool.id);
             const isSelectedForCompare = selectedForCompare.includes(tool.id);

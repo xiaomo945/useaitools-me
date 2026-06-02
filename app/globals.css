@@ -346,3 +346,64 @@ pre, code {
 .drawer-exit {
   animation: slideDown 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
+
+/* Table Scroll Wrapper */
+.table-scroll-wrapper {
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.dark .table-scroll-wrapper {
+  border-color: rgba(55, 65, 81, 0.5);
+}
+
+.table-scroll-wrapper table {
+  min-width: 500px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.table-scroll-wrapper th,
+.table-scroll-wrapper td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.dark .table-scroll-wrapper th,
+.dark .table-scroll-wrapper td {
+  border-bottom-color: rgba(55, 65, 81, 0.4);
+}
+
+.table-scroll-wrapper th {
+  font-weight: 600;
+  background: rgba(241, 245, 249, 0.5);
+}
+
+.dark .table-scroll-wrapper th {
+  background: rgba(31, 41, 55, 0.5);
+}
+
+.table-scroll-shadow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  background: linear-gradient(to right, transparent, rgba(148, 163, 184, 0.15));
+  pointer-events: none;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.dark .table-scroll-shadow {
+  background: linear-gradient(to right, transparent, rgba(75, 85, 99, 0.2));
+}
+
+/* Filter transition */
+.filter-transition {
+  transition: opacity 150ms ease-out;
+}
