@@ -32,7 +32,7 @@ export function PageGridSkeleton({ count = 8 }: { count?: number }) {
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-10 sm:py-16">
       <div className="max-w-7xl mx-auto px-3 sm:px-6">
         <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded w-48 mb-8 animate-pulse" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
           {Array.from({ length: count }).map((_, i) => (
             <SkeletonCard key={i} />
           ))}

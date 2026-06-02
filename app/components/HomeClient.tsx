@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import StarRating from './StarRating';
 import SkeletonCard from './Skeleton';
 import { useToast } from './Toast';
+import { debugLog } from '../utils/debug';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -266,6 +267,7 @@ const ToolCard = memo(function ToolCard({
               href={getAffiliateLink(tool) || tool.url}
               target="_blank"
               rel="noopener noreferrer sponsored"
+              onClick={() => debugLog('ToolClick', `CTA clicked: ${tool.name} (affiliate: ${hasAffiliate})`)}
               className={`inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[44px] min-w-[44px] text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98] ${
                 hasAffiliate
                   ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:from-emerald-600 hover:to-teal-600 hover:shadow-md hover:shadow-emerald-500/25 border border-transparent'
@@ -649,6 +651,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   // Navigate to search page
   const goToSearchPage = () => {
     if (search.trim()) {
+      debugLog('Search', `Navigating to search page: "${search.trim()}"`);
       router.push(`/search?q=${encodeURIComponent(search.trim())}`);
     }
   };
@@ -778,6 +781,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   // Save toggle function with heart burst effect
   const toggleSave = (id: number) => {
     const wasSaved = savedIds.includes(id);
+    debugLog('Save', wasSaved ? `Removing tool ${id}` : `Saving tool ${id}`);
     const newSavedIds = wasSaved
       ? savedIds.filter((savedId) => savedId !== id)
       : [...savedIds, id];
@@ -798,6 +802,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   // Toggle tool for comparison
   const toggleCompare = (id: number) => {
     const wasSelected = selectedForCompare.includes(id);
+    debugLog('Compare', wasSelected ? `Removing tool ${id} from compare` : `Adding tool ${id} to compare`);
     setSelectedForCompare(prev => {
       if (wasSelected) {
         return prev.filter(toolId => toolId !== id);
@@ -891,6 +896,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedSearch(search);
+      if (search.trim()) {
+        debugLog('Search', `Debounced search: "${search}"`);
+      }
     }, 300);
     return () => clearTimeout(timer);
   }, [search]);
@@ -931,6 +939,19 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       return () => clearTimeout(timer);
     }
   }, [selectedCategory, selectedPricing, debouncedSearch]);
+
+  useEffect(() => {
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      const hasUnsubmittedSearch = search.trim().length > 0;
+      const hasUnviewedCompare = selectedForCompare.length > 0;
+      if (hasUnsubmittedSearch || hasUnviewedCompare) {
+        e.preventDefault();
+      }
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [search, selectedForCompare]);
 
   const getCategoryColors = (category: string) => {
     switch (category) {
@@ -1559,6 +1580,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                       }
                     }}
                     onClick={() => {
+                      debugLog('Filter', `Category changed: ${category}`);
                       setSelectedCategory(category);
                       if (toolsGridRef.current) {
                         toolsGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1581,6 +1603,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               <select
                 value={selectedPricing}
                 onChange={(e) => {
+                  debugLog('Filter', `Pricing changed: ${e.target.value}`);
                   setSelectedPricing(e.target.value);
                   if (toolsGridRef.current) {
                     toolsGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1949,7 +1972,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 dark:via-emerald-700/40 to-transparent mb-16 mx-auto max-w-2xl" />
 
         {/* Tools Grid */}
-        <div ref={toolsGridRef} className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-7 transition-all duration-300 ease-out ${isFilterTransitioning ? 'opacity-50' : 'opacity-100'}`}>
+        <div ref={toolsGridRef} className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 md:gap-6 lg:gap-7 transition-all duration-300 ease-out ${isFilterTransitioning ? 'opacity-50' : 'opacity-100'}`}>
           {filteredTools.map((tool, index) => {
             const isSaved = savedIds.includes(tool.id);
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
@@ -1993,7 +2016,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           </div>
         )}
         {isLoadingMore && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
             {[1, 2, 3, 4].map((i) => (
               <SkeletonCard key={i} />
             ))}

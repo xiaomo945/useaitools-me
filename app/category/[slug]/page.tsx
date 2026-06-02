@@ -244,7 +244,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
           <div className={`h-px bg-gradient-to-r from-transparent via-${categorySlug.toLowerCase()}-300 dark:via-${categorySlug.toLowerCase()}-500/20 to-transparent mb-10 mx-auto max-w-2xl`} />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
             {categoryTools.map((tool, index) => {
               const hasAffiliate = hasAffiliateLink(tool);
               const ctaText = hasAffiliate ? '🔗 Try It Free' : 'Visit Website';

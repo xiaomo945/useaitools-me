@@ -833,7 +833,7 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
                 <p className="text-sm text-slate-500 dark:text-gray-400">Same category, same skill level — different approach</p>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {bestAlternatives.map((altTool) => (
                 <AlternativeToolCard key={altTool.id} altTool={altTool} />
               ))}
@@ -853,7 +853,7 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
                 <p className="text-sm text-slate-500 dark:text-gray-400">Based on category, pricing, and user preferences</p>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {relatedTools.map((relatedTool, index) => (
                 <SimilarToolCard key={relatedTool.id} relatedTool={relatedTool} />
               ))}

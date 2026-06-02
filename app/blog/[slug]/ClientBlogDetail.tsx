@@ -496,7 +496,7 @@ export default function ClientBlogDetail({
                 <p className="text-sm text-slate-500 dark:text-gray-400">AI tools mentioned or related to this article</p>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {relatedTools.map((tool) => {
                 const getCategoryColor = (cat: string) => {
                   switch (cat) {
