@@ -1,13 +1,15 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import tools from '@/data/tools.json';
+import toolsData from '@/data/tools.json';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
 import CategoryHero from './CategoryHero';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import CategoryStats from '@/app/components/CategoryStats';
+import type { Tool } from '@/types';
 
-type Tool = (typeof tools)[0];
+const tools = toolsData as Tool[];
 type Category = Tool['category'];
 
 const categoryDescriptions: Record<Category, string> = {
@@ -241,6 +243,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             categoryName={categoryName}
             description={description}
           />
+
+          {/* Stats Component */}
+          <CategoryStats category={category} tools={categoryTools} />
 
           <div className={`h-px bg-gradient-to-r from-transparent via-${categorySlug.toLowerCase()}-300 dark:via-${categorySlug.toLowerCase()}-500/20 to-transparent mb-10 mx-auto max-w-2xl`} />
 

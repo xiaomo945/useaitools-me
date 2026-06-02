@@ -2,12 +2,14 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import tools from '@/data/tools.json';
+import toolsData from '@/data/tools.json';
 import { Home, Download, Check, Copy, Link2 } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import UserToolList from '@/app/components/UserToolList';
+import type { Tool } from '@/types';
 
-type Tool = (typeof tools)[0];
+const tools = toolsData as Tool[];
 
 // Load saved ids from localStorage on initialization
 const getSavedIds = (): number[] => {
@@ -293,6 +295,11 @@ export default function SavedPage() {
             </div>
           </div>
         </div>
+
+        {/* User Recommendation Lists */}
+        {savedTools.length > 0 && (
+          <UserToolList savedTools={savedTools} />
+        )}
 
         {/* Saved Tools Grid or Empty State */}
         {savedTools.length === 0 ? (

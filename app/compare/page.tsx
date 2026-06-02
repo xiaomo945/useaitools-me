@@ -3,9 +3,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import tools from '@/data/tools.json';
+import toolsData from '@/data/tools.json';
 import { Home, Share2, Check, Copy } from 'lucide-react';
 import Footer from '@/app/components/Footer';
+import ComparisonVisualization from '@/app/components/ComparisonVisualization';
+import type { Tool } from '@/types';
+
+const tools = toolsData as Tool[];
 
 const StarRating = dynamic(() => import('@/app/components/StarRating'), { ssr: false });
 
@@ -248,7 +252,12 @@ export default function ComparePage() {
         </div>
 
         {selectedTools.length > 0 && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-xl overflow-x-auto">
+          <div className="space-y-8">
+            {/* Visualization */}
+            <ComparisonVisualization tools={selectedTools} />
+            
+            {/* Main Table */}
+            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl overflow-hidden shadow-xl overflow-x-auto">
             {(() => {
               const recommendation = generateAIRecommendation(selectedTools);
               if (!recommendation) return null;

@@ -14,6 +14,7 @@ import KeyboardNavigation from "./components/KeyboardNavigation";
 import GuidedTour from "./components/GuidedTour";
 import NetworkStatus from "./components/NetworkStatus";
 import ExternalLinkToast from "./components/ExternalLinkToast";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -80,6 +81,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://images.pexels.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -128,7 +131,9 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <PageProgress />
           </Suspense>
-          <PageTransition>{children}</PageTransition>
+          <ErrorBoundary>
+            <PageTransition>{children}</PageTransition>
+          </ErrorBoundary>
           <Analytics />
           <Suspense fallback={null}>
             <BackToTop />
