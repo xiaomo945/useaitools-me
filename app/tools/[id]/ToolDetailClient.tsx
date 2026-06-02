@@ -690,10 +690,52 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
               </button>
             </div>
 
-            {/* Trust Signal */}
+            {/* Trust Signal + Feedback */}
             {tool.rating && tool.rating_count && (
-              <div className="mt-4 flex items-center justify-center text-sm text-slate-500 dark:text-slate-400">
-                <RatingTooltip overallRating={tool.rating} />
+              <div className="mt-4 flex flex-col items-center gap-3">
+                <div className="flex items-center text-sm text-slate-500 dark:text-slate-400">
+                  <RatingTooltip overallRating={tool.rating} />
+                </div>
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() => {
+                      const key = `feedback_${tool.id}`;
+                      const current = localStorage.getItem(key);
+                      if (current === 'up') {
+                        localStorage.removeItem(key);
+                      } else {
+                        localStorage.setItem(key, 'up');
+                      }
+                      window.dispatchEvent(new Event('feedback-updated'));
+                    }}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 ${
+                      typeof window !== 'undefined' && localStorage.getItem(`feedback_${tool.id}`) === 'up'
+                        ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700'
+                        : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700 hover:bg-emerald-50 dark:hover:bg-emerald-900/20'
+                    }`}
+                  >
+                    👍 Helpful
+                  </button>
+                  <button
+                    onClick={() => {
+                      const key = `feedback_${tool.id}`;
+                      const current = localStorage.getItem(key);
+                      if (current === 'down') {
+                        localStorage.removeItem(key);
+                      } else {
+                        localStorage.setItem(key, 'down');
+                      }
+                      window.dispatchEvent(new Event('feedback-updated'));
+                    }}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 ${
+                      typeof window !== 'undefined' && localStorage.getItem(`feedback_${tool.id}`) === 'down'
+                        ? 'bg-rose-100 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 border border-rose-300 dark:border-rose-700'
+                        : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700 hover:bg-rose-50 dark:hover:bg-rose-900/20'
+                    }`}
+                  >
+                    👎 Not for me
+                  </button>
+                </div>
               </div>
             )}
             {/* Data Update Status - New Trust Signal */}

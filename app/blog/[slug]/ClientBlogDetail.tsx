@@ -459,6 +459,111 @@ export default function ClientBlogDetail({
           )}
         </div>
 
+        {/* Tools in This Guide - Quick Access */}
+        {(() => {
+          const toolLinkRegex = /\[\[link:\/tools\/(\d+)\|([^\]]+)\]\]/g;
+          const mentionedToolIds: { id: number; name: string }[] = [];
+          let m;
+          while ((m = toolLinkRegex.exec(post.content)) !== null) {
+            const id = parseInt(m[1], 10);
+            if (!mentionedToolIds.find(t => t.id === id)) {
+              mentionedToolIds.push({ id, name: m[2] });
+            }
+          }
+          if (mentionedToolIds.length === 0) return null;
+
+          const mentionedTools = mentionedToolIds
+            .map(item => {
+              const t = (toolsData as any[]).find((td: any) => td.id === item.id);
+              return t ? { ...t, linkName: item.name } : null;
+            })
+            .filter(Boolean)
+            .slice(0, 8);
+
+          return (
+            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-5 shadow-lg mb-6">
+              <details className="lg:hidden" open>
+                <summary className="flex items-center gap-2 cursor-pointer text-sm font-semibold text-slate-900 dark:text-white mb-3">
+                  <span>🛠️</span>
+                  <span>Tools in This Guide ({mentionedTools.length})</span>
+                </summary>
+                <div className="space-y-2 mt-2">
+                  {mentionedTools.map((tool: any) => (
+                    <Link
+                      key={tool.id}
+                      href={`/tools/${tool.id}`}
+                      className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors text-sm"
+                    >
+                      <span className="font-medium text-slate-700 dark:text-slate-300">{tool.linkName || tool.name}</span>
+                      <span className="text-[9px] font-semibold px-1.5 py-0.5 rounded-full bg-blue-500 text-white">{tool.category}</span>
+                    </Link>
+                  ))}
+                </div>
+              </details>
+              <div className="hidden lg:block">
+                <h4 className="flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white mb-3">
+                  <span>🛠️</span>
+                  <span>Tools in This Guide ({mentionedTools.length})</span>
+                </h4>
+                <div className="space-y-1.5">
+                  {mentionedTools.map((tool: any) => (
+                    <Link
+                      key={tool.id}
+                      href={`/tools/${tool.id}`}
+                      className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors text-sm group"
+                    >
+                      <span className="font-medium text-slate-700 dark:text-slate-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">{tool.linkName || tool.name}</span>
+                      <span className="text-[9px] font-semibold px-1.5 py-0.5 rounded-full bg-blue-500 text-white">{tool.category}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* Article Feedback */}
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 shadow-lg mb-6">
+          <div className="text-center">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Was this guide helpful?</h3>
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <button
+                onClick={() => {
+                  try { localStorage.setItem(`blog_feedback_${post.id}`, 'yes'); } catch {}
+                  const el = document.getElementById('blog-feedback-result');
+                  if (el) el.textContent = 'Thanks for your feedback! 🎉';
+                }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-700 hover:bg-emerald-200 dark:hover:bg-emerald-900/50 transition-all duration-300"
+              >
+                👍 Yes
+              </button>
+              <button
+                onClick={() => {
+                  try { localStorage.setItem(`blog_feedback_${post.id}`, 'no'); } catch {}
+                  const el = document.getElementById('blog-feedback-result');
+                  if (el) el.textContent = 'Thanks for your feedback! 🙏';
+                  const form = document.getElementById('blog-feedback-form');
+                  if (form) form.style.display = 'block';
+                }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300"
+              >
+                👎 No
+              </button>
+            </div>
+            <p id="blog-feedback-result" className="text-sm text-emerald-600 dark:text-emerald-400 font-medium" />
+            <div id="blog-feedback-form" style={{ display: 'none' }} className="mt-3">
+              <textarea
+                placeholder="What was missing? (optional)"
+                className="w-full max-w-md mx-auto px-4 py-3 text-sm bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
+                rows={2}
+                onBlur={(e) => {
+                  try { localStorage.setItem(`blog_feedback_text_${post.id}`, e.target.value); } catch {}
+                }}
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Share Buttons */}
         <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 shadow-lg">
           <div className="flex items-center gap-4 mb-4">

@@ -1912,6 +1912,52 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             </div>
           )}
 
+          {/* For You - Personalized Recommendations */}
+          {(() => {
+            const viewedCategories: Record<string, number> = {};
+            recentlyViewedIds.forEach(id => {
+              const t = displayedTools.find(tool => tool.id === id);
+              if (t) viewedCategories[t.category] = (viewedCategories[t.category] || 0) + 1;
+            });
+            const topCategory = Object.entries(viewedCategories).sort((a, b) => b[1] - a[1])[0]?.[0];
+            const unviewed = displayedTools.filter(t => !recentlyViewedIds.includes(t.id));
+            const forYouTools = topCategory
+              ? unviewed.filter(t => t.category === topCategory).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3)
+              : unviewed.sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
+            
+            if (forYouTools.length === 0) return null;
+            return (
+              <div className="mb-4 sm:mb-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-400">🫵 For You</span>
+                  {topCategory && (
+                    <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 font-medium">
+                      Based on your {topCategory} interest
+                    </span>
+                  )}
+                </div>
+                <div className="flex overflow-x-auto scrollbar-hide gap-2 pb-1">
+                  {forYouTools.map((tool) => {
+                    const colors = getCategoryColors(tool.category);
+                    return (
+                      <Link
+                        key={tool.id}
+                        href={`/tools/${tool.id}`}
+                        className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-emerald-50 to-white dark:from-emerald-950/20 dark:to-gray-900 border border-emerald-200/60 dark:border-emerald-800/40 rounded-full whitespace-nowrap hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-md transition-all duration-300 ease-out shrink-0"
+                      >
+                        <span className={`w-5 h-5 rounded-md ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-[10px] font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                          {tool.name.charAt(0)}
+                        </span>
+                        <span className="text-xs font-medium text-slate-700 dark:text-slate-300 truncate max-w-[100px]">{tool.name}</span>
+                        <span className="text-[10px] text-amber-500 font-semibold">★ {tool.rating || '4.5'}</span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })()}
+
           {/* Category Buttons */}
           <div className="relative">
             {/* Left Gradient Fade */}
