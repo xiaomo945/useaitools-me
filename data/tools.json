@@ -65839,5 +65839,1890 @@
       "Sound Design",
       "Adaptive Layering"
     ]
+  },
+  {
+    "id": 1318,
+    "name": "NovelAI",
+    "description": "AI-powered creative writing platform for storytelling and world-building with customizable AI models and image generation for visual storytelling.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://novelai.net",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered creative writing platform for storytelling and world-building with customizable AI models and image generation for visual storytelling.",
+    "rating": 4.4,
+    "rating_count": 428,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9,
+        "note": "Feature-rich interface with a moderate learning curve"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Excellent creative output with strong narrative coherence"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Unique combination of writing and image generation"
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "note": "Generous free tier and affordable paid plans"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable service with good uptime"
+      },
+      "support": {
+        "score": 3.8,
+        "note": "Community-driven support with limited direct channels"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Creative Writing",
+      "World-Building",
+      "Visual Storytelling"
+    ]
+  },
+  {
+    "id": 1321,
+    "name": "Sassbook",
+    "description": "AI text generation tool for fiction writing and creative content with multiple genre modes and configurable style controls for authors and storytellers.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://sassbook.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI text generation tool for fiction writing and creative content with multiple genre modes and configurable style controls for authors and storytellers.",
+    "rating": 4,
+    "rating_count": 189,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4,
+        "note": "Simple and focused interface for text generation"
+      },
+      "output_quality": {
+        "score": 3.9,
+        "note": "Decent creative output with genre-specific tuning"
+      },
+      "features": {
+        "score": 3.8,
+        "note": "Core features are solid but limited compared to rivals"
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "note": "Affordable pricing with a usable free tier"
+      },
+      "stability": {
+        "score": 3.9,
+        "note": "Occasional slowdowns during peak usage"
+      },
+      "support": {
+        "score": 3.7,
+        "note": "Basic support with documentation"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "beginner",
+    "best_for": [
+      "Fiction Writing",
+      "Genre Fiction",
+      "Creative Content"
+    ]
+  },
+  {
+    "id": 1322,
+    "name": "Krea AI",
+    "description": "Real-time AI image generation with enhanced control and style transfer, enabling artists to iterate quickly with live preview and fine-grained adjustments.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://krea.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Real-time AI image generation with enhanced control and style transfer, enabling artists to iterate quickly with live preview and fine-grained adjustments.",
+    "rating": 4.5,
+    "rating_count": 342,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Real-time feedback makes iteration intuitive"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "Impressive output quality with strong style consistency"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Real-time generation and style transfer are standout"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Fair pricing for the real-time capabilities offered"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable real-time performance with minimal lag"
+      },
+      "support": {
+        "score": 4.1,
+        "note": "Active Discord community and responsive team"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Real-Time Generation",
+      "Style Transfer",
+      "Creative Iteration"
+    ]
+  },
+  {
+    "id": 1323,
+    "name": "Leonardo Canvas",
+    "description": "AI image editor with real-time generation and layer-based editing, combining generative AI with professional design workflows for digital artists.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://leonardo.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI image editor with real-time generation and layer-based editing, combining generative AI with professional design workflows for digital artists.",
+    "rating": 4.6,
+    "rating_count": 465,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4,
+        "note": "Powerful but requires time to master all features"
+      },
+      "output_quality": {
+        "score": 4.7,
+        "note": "Outstanding image quality with fine control"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Layer-based editing with AI generation is a game-changer"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Generous free tier with affordable upgrades"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Solid performance even with complex compositions"
+      },
+      "support": {
+        "score": 4.2,
+        "note": "Strong community and regular feature updates"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "advanced",
+    "best_for": [
+      "Image Editing",
+      "Layer-Based Design",
+      "Digital Art"
+    ]
+  },
+  {
+    "id": 1327,
+    "name": "Reclaim AI",
+    "description": "AI calendar assistant that auto-schedules tasks, habits, and meetings while protecting focus time, integrating seamlessly with Google Calendar workflows.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://reclaim.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI calendar assistant that auto-schedules tasks, habits, and meetings while protecting focus time, integrating seamlessly with Google Calendar workflows.",
+    "rating": 4.5,
+    "rating_count": 412,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Smooth Google Calendar integration with minimal setup"
+      },
+      "output_quality": {
+        "score": 4.5,
+        "note": "Smart scheduling that adapts to changing priorities"
+      },
+      "features": {
+        "score": 4.6,
+        "note": "Excellent task, habit, and meeting scheduling features"
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "note": "Free plan is generous; paid plans add team features"
+      },
+      "stability": {
+        "score": 4.4,
+        "note": "Reliable sync with calendar platforms"
+      },
+      "support": {
+        "score": 4.1,
+        "note": "Responsive support with helpful documentation"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "beginner",
+    "best_for": [
+      "Calendar Management",
+      "Focus Time",
+      "Task Scheduling"
+    ]
+  },
+  {
+    "id": 1328,
+    "name": "Clockwise",
+    "description": "AI-powered calendar optimizer for team scheduling and focus time protection, automatically resolving meeting conflicts and creating uninterrupted work blocks.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://getclockwise.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered calendar optimizer for team scheduling and focus time protection, automatically resolving meeting conflicts and creating uninterrupted work blocks.",
+    "rating": 4.4,
+    "rating_count": 356,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Setup is quick with guided onboarding flow"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "Effective at consolidating fragmented schedules"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Strong focus time protection and flexible meetings"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Free for individuals; team features require paid plan"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable calendar sync and optimization"
+      },
+      "support": {
+        "score": 4,
+        "note": "Good support with detailed help center"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "beginner",
+    "best_for": [
+      "Team Scheduling",
+      "Focus Time",
+      "Meeting Optimization"
+    ]
+  },
+  {
+    "id": 1331,
+    "name": "Glean",
+    "description": "AI-powered enterprise search across all company apps and documents, delivering instant answers with contextual understanding and enterprise-grade security.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://glean.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered enterprise search across all company apps and documents, delivering instant answers with contextual understanding and enterprise-grade security.",
+    "rating": 4.5,
+    "rating_count": 198,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "note": "Familiar search interface with powerful filters"
+      },
+      "output_quality": {
+        "score": 4.6,
+        "note": "Highly accurate results with contextual understanding"
+      },
+      "features": {
+        "score": 4.5,
+        "note": "Deep integration with 100+ enterprise applications"
+      },
+      "value_for_money": {
+        "score": 3.8,
+        "note": "Enterprise pricing may be steep for smaller teams"
+      },
+      "stability": {
+        "score": 4.5,
+        "note": "Robust infrastructure with enterprise SLAs"
+      },
+      "support": {
+        "score": 4.3,
+        "note": "Dedicated support with implementation assistance"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "advanced",
+    "best_for": [
+      "Enterprise Search",
+      "Knowledge Management",
+      "Cross-App Discovery"
+    ]
+  },
+  {
+    "id": 1332,
+    "name": "Pieces",
+    "description": "AI code snippet manager with contextual search and code reuse features, helping developers organize, find, and share code across projects efficiently.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://pieces.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI code snippet manager with contextual search and code reuse features, helping developers organize, find, and share code across projects efficiently.",
+    "rating": 4.3,
+    "rating_count": 234,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1,
+        "note": "IDE integrations make saving snippets effortless"
+      },
+      "output_quality": {
+        "score": 4.2,
+        "note": "Smart search and AI-enriched descriptions"
+      },
+      "features": {
+        "score": 4.4,
+        "note": "Rich snippet management with AI-powered search"
+      },
+      "value_for_money": {
+        "score": 4.7,
+        "note": "Completely free with no feature limitations"
+      },
+      "stability": {
+        "score": 4.1,
+        "note": "Solid desktop app with reliable sync"
+      },
+      "support": {
+        "score": 4,
+        "note": "Active community and responsive development team"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Code Snippets",
+      "Code Reuse",
+      "Developer Productivity"
+    ]
+  },
+  {
+    "id": 1333,
+    "name": "Codiga",
+    "description": "AI code analysis tool for automated code reviews and security scanning, providing real-time feedback in IDEs and CI/CD pipelines to improve code quality.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://codiga.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI code analysis tool for automated code reviews and security scanning, providing real-time feedback in IDEs and CI/CD pipelines to improve code quality.",
+    "rating": 4.1,
+    "rating_count": 178,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4,
+        "note": "Easy IDE setup with pre-configured rulesets"
+      },
+      "output_quality": {
+        "score": 4.1,
+        "note": "Accurate vulnerability detection and code suggestions"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Strong CI/CD integration and custom rules support"
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "note": "Good free tier with reasonable paid plans"
+      },
+      "stability": {
+        "score": 4,
+        "note": "Consistent analysis performance"
+      },
+      "support": {
+        "score": 3.8,
+        "note": "Documentation-focused with community channels"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Code Review",
+      "Security Scanning",
+      "CI/CD Integration"
+    ]
+  },
+  {
+    "id": 1335,
+    "name": "Safurai",
+    "description": "AI coding assistant for IDE with code generation and explanation, providing context-aware suggestions and in-editor chat for faster development workflows.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://safurai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI coding assistant for IDE with code generation and explanation, providing context-aware suggestions and in-editor chat for faster development workflows.",
+    "rating": 4.1,
+    "rating_count": 143,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Seamless IDE integration with intuitive chat interface"
+      },
+      "output_quality": {
+        "score": 4,
+        "note": "Good code suggestions with clear explanations"
+      },
+      "features": {
+        "score": 4.1,
+        "note": "Solid IDE chat and code generation capabilities"
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "note": "Free to use with no usage limits currently"
+      },
+      "stability": {
+        "score": 3.9,
+        "note": "Occasional latency in complex codebase contexts"
+      },
+      "support": {
+        "score": 3.8,
+        "note": "Community-driven support with active development"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "intermediate",
+    "best_for": [
+      "IDE Assistant",
+      "Code Generation",
+      "Code Explanation"
+    ]
+  },
+  {
+    "id": 1336,
+    "name": "Bito",
+    "description": "AI developer assistant for code generation, testing, and explanation, integrating with popular IDEs to accelerate development with context-aware AI suggestions.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://bito.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI developer assistant for code generation, testing, and explanation, integrating with popular IDEs to accelerate development with context-aware AI suggestions.",
+    "rating": 4.2,
+    "rating_count": 287,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "note": "Quick IDE setup with familiar chat-based interaction"
+      },
+      "output_quality": {
+        "score": 4.2,
+        "note": "Strong code generation with good test creation"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Comprehensive dev assistance including test generation"
+      },
+      "value_for_money": {
+        "score": 4.1,
+        "note": "Reasonable free tier with useful daily limits"
+      },
+      "stability": {
+        "score": 4.1,
+        "note": "Consistent performance across supported IDEs"
+      },
+      "support": {
+        "score": 4,
+        "note": "Active community and regular updates"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "beginner",
+    "best_for": [
+      "Code Generation",
+      "Test Creation",
+      "Developer Productivity"
+    ]
+  },
+  {
+    "id": 1339,
+    "name": "Boomy",
+    "description": "AI music creation platform for instant song generation and distribution, enabling anyone to create and release original music to streaming platforms in minutes.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://boomy.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI music creation platform for instant song generation and distribution, enabling anyone to create and release original music to streaming platforms in minutes.",
+    "rating": 4.1,
+    "rating_count": 298,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "note": "Create a song in seconds with minimal input"
+      },
+      "output_quality": {
+        "score": 3.8,
+        "note": "Fun results but limited control over fine details"
+      },
+      "features": {
+        "score": 4.2,
+        "note": "Unique distribution feature to streaming platforms"
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "note": "Free to create with affordable creator plans"
+      },
+      "stability": {
+        "score": 4,
+        "note": "Reliable generation with quick turnaround"
+      },
+      "support": {
+        "score": 3.7,
+        "note": "Basic support with community resources"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "beginner",
+    "best_for": [
+      "Instant Song Creation",
+      "Music Distribution",
+      "Casual Music Making"
+    ]
+  },
+  {
+    "id": 1340,
+    "name": "SplashMusic",
+    "description": "AI-powered music creation and mixing tool for content creators, offering an extensive sound library and intuitive mixing for professional-quality audio production.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://splashmusic.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-powered music creation and mixing tool for content creators, offering an extensive sound library and intuitive mixing for professional-quality audio production.",
+    "rating": 4,
+    "rating_count": 167,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1,
+        "note": "Approachable interface with guided music creation"
+      },
+      "output_quality": {
+        "score": 4,
+        "note": "Good quality output with room for more control"
+      },
+      "features": {
+        "score": 4,
+        "note": "Solid sound library and mixing capabilities"
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "note": "Free tier available with reasonable paid options"
+      },
+      "stability": {
+        "score": 3.9,
+        "note": "Generally stable with occasional rendering delays"
+      },
+      "support": {
+        "score": 3.7,
+        "note": "Community support with limited direct channels"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "beginner",
+    "best_for": [
+      "Music Mixing",
+      "Content Creation",
+      "Sound Library"
+    ]
+  },
+  {
+    "id": 1341,
+    "name": "Wavtool",
+    "description": "AI audio editing tool with text-to-audio generation capabilities, combining a professional DAW interface with AI-powered creation for musicians and podcasters.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://wavtool.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI audio editing tool with text-to-audio generation capabilities, combining a professional DAW interface with AI-powered creation for musicians and podcasters.",
+    "rating": 4.2,
+    "rating_count": 134,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8,
+        "note": "DAW-style interface requires some audio production knowledge"
+      },
+      "output_quality": {
+        "score": 4.2,
+        "note": "High-quality audio output with AI generation"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Unique text-to-audio with professional editing tools"
+      },
+      "value_for_money": {
+        "score": 4.1,
+        "note": "Free tier with affordable premium features"
+      },
+      "stability": {
+        "score": 4,
+        "note": "Solid browser-based performance"
+      },
+      "support": {
+        "score": 3.8,
+        "note": "Growing community with helpful tutorials"
+      }
+    },
+    "last_updated": "2026-06-02",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Text-to-Audio",
+      "Audio Editing",
+      "DAA Production"
+    ]
+  },
+  {
+    "id": 1349,
+    "name": "Textblaze",
+    "description": "Text expansion and automation tool with AI-powered templates that eliminates repetitive typing and boosts productivity across any web application.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://blaze.today",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 187
+  },
+  {
+    "id": 1350,
+    "name": "Hypotenuse AI",
+    "description": "AI writing assistant specialized in e-commerce product descriptions, generating SEO-optimized content at scale for online stores and catalogs.",
+    "category": "Writing",
+    "pricing": "Free Trial",
+    "url": "https://hypotenuse.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 134
+  },
+  {
+    "id": 1351,
+    "name": "Longshot AI",
+    "description": "AI content generator with built-in fact-checking and SEO optimization, ensuring accurate and search-engine-friendly long-form articles and blogs.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://longshot.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 156
+  },
+  {
+    "id": 1353,
+    "name": "DreamStudio",
+    "description": "Official Stable Diffusion web interface for professional image generation, offering fine-grained control over parameters and high-quality visual output.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://dreamstudio.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 245
+  },
+  {
+    "id": 1359,
+    "name": "Taskade",
+    "description": "AI productivity workspace combining tasks, notes, and team collaboration with AI agents that automate workflows and generate project outlines.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://taskade.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 215
+  },
+  {
+    "id": 1365,
+    "name": "Amazon Q Developer",
+    "description": "AWS AI coding companion for cloud development, providing code suggestions, security scans, and AWS best practices directly within your IDE.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://aws.amazon.com/q/developer",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 167
+  },
+  {
+    "id": 1368,
+    "name": "Descript Audio",
+    "description": "AI audio transcription and editing with text-based interface, letting you edit audio by editing text with automatic filler word removal and enhancement.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://descript.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 356
+  },
+  {
+    "id": 1369,
+    "name": "Krisp",
+    "description": "AI noise cancellation tool for meetings and audio recordings, removing background noise and echo in real time for crystal-clear communication.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://krisp.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.7,
+    "rating_count": 423
+  },
+  {
+    "id": 1375,
+    "name": "Elai",
+    "description": "AI video generation from text with digital presenters, enabling scalable personalized video content without cameras, studios, or production crews.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://elai.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 143
+  },
+  {
+    "id": 1376,
+    "name": "Vidyard",
+    "description": "AI video platform for sales outreach and marketing campaigns, combining video recording, hosting, and analytics to drive engagement and conversions.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://vidyard.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 276
+  },
+  {
+    "id": 1381,
+    "name": "Writer",
+    "description": "Enterprise AI writing platform with style guide enforcement, terminology management, and team collaboration features.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://writer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 223
+  },
+  {
+    "id": 1383,
+    "name": "Remove.bg",
+    "description": "AI background removal tool that instantly creates transparent backgrounds from any photo with a single click.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://remove.bg",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 345
+  },
+  {
+    "id": 1384,
+    "name": "Let's Enhance",
+    "description": "AI image upscaling and enhancement tool that transforms low-resolution photos into print-quality visuals effortlessly.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://letsenhance.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 178
+  },
+  {
+    "id": 1385,
+    "name": "Deep Dream Generator",
+    "description": "AI art platform that uses neural network visualization to transform photos into surreal and psychedelic artworks.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://deepdreamgenerator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 134
+  },
+  {
+    "id": 1386,
+    "name": "Artbreeder",
+    "description": "AI collaborative art tool for mixing and evolving images through generative adversarial networks and community creativity.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://artbreeder.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 201
+  },
+  {
+    "id": 1387,
+    "name": "Otter.ai",
+    "description": "AI meeting transcription and note-taking tool with speaker identification and real-time collaboration for productive meetings.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://otter.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 367
+  },
+  {
+    "id": 1388,
+    "name": "Fireflies.ai",
+    "description": "AI meeting assistant that automates transcription, conversation intelligence, and action item extraction across platforms.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://fireflies.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 298
+  },
+  {
+    "id": 1390,
+    "name": "Tldv",
+    "description": "AI meeting recorder with automatic transcription, timestamped summaries, and clip sharing for async team collaboration.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://tldv.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 234
+  },
+  {
+    "id": 1391,
+    "name": "Airgram",
+    "description": "AI meeting management tool with agenda planning, real-time transcription, and action item tracking for organized workflows.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://airgram.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 143
+  },
+  {
+    "id": 1393,
+    "name": "Warp",
+    "description": "AI-powered terminal with intelligent command suggestions, workflow automation, and collaborative features for developers.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://warp.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 289
+  },
+  {
+    "id": 1396,
+    "name": "CodeRabbit",
+    "description": "AI code review tool that provides automated pull request analysis with actionable suggestions and context-aware feedback.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://coderabbit.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 198
+  },
+  {
+    "id": 1397,
+    "name": "Suno",
+    "description": "AI music generation platform for creating full songs with vocals and instruments from simple text prompts in seconds.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://suno.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 378
+  },
+  {
+    "id": 1398,
+    "name": "Udio",
+    "description": "AI music creation tool for generating high-quality songs and compositions across genres from descriptive text prompts.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://udio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 267
+  },
+  {
+    "id": 1399,
+    "name": "Mubert",
+    "description": "AI music generator for creating royalty-free tracks tailored for content creators, streamers, and brand videos.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://mubert.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 189
+  },
+  {
+    "id": 1400,
+    "name": "Epidemic Sound",
+    "description": "AI-powered music licensing platform offering a vast library of royalty-free tracks and sound effects for creators.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://epidemicsound.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 245
+  },
+  {
+    "id": 1401,
+    "name": "Amper Music",
+    "description": "AI music composition tool for creating custom soundtracks and background music for videos, podcasts, and games.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://ampermusic.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 112
+  },
+  {
+    "id": 1403,
+    "name": "Vizard AI",
+    "description": "AI video editing platform for creating social media clips from long recordings with automatic captioning and layout.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://vizard.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 178
+  },
+  {
+    "id": 1404,
+    "name": "Munch",
+    "description": "AI video editing tool that extracts viral-worthy clips from long-form content using trend analysis and engagement scoring.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://getmunch.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 156
+  },
+  {
+    "id": 1405,
+    "name": "Eklipse",
+    "description": "AI clip generator that automatically captures highlights from gaming streams and podcast recordings for social sharing.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://eklipse.gg",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 134
+  },
+  {
+    "id": 1406,
+    "name": "Wisecut",
+    "description": "AI video editor that automatically generates cuts, storyboards, and captions to streamline post-production workflows.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://wisecut.video",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 145
+  },
+  {
+    "id": 1408,
+    "name": "Snazzy AI",
+    "description": "AI writing assistant for creating landing page copy, product descriptions, and ad content with GPT-powered generation.",
+    "category": "Writing",
+    "pricing": "Free",
+    "url": "https://snazzy.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 124
+  },
+  {
+    "id": 1410,
+    "name": "Peppertype",
+    "description": "AI content creation platform for generating high-converting copy across ads, emails, and long-form blog content.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://peppertype.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 203
+  },
+  {
+    "id": 1411,
+    "name": "Simplified AI",
+    "description": "All-in-one AI writing and design tool for marketing teams to create copy, graphics, and videos from one workspace.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://simplified.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 298
+  },
+  {
+    "id": 1412,
+    "name": "Topaz Labs",
+    "description": "AI image enhancement tool for upscaling, denoising, and sharpening photos with industry-leading quality and detail recovery.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://topazlabs.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.7,
+    "rating_count": 412
+  },
+  {
+    "id": 1415,
+    "name": "VanceAI",
+    "description": "AI image processing tool for upscaling, enhancing, and converting photos with batch processing and workflow automation.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://vanceai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 178
+  },
+  {
+    "id": 1416,
+    "name": "Hotpot AI",
+    "description": "AI art and design tool for creating graphics, art, and marketing visuals from templates with easy customization options.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://hotpot.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 145
+  },
+  {
+    "id": 1418,
+    "name": "Make",
+    "description": "Visual automation platform with AI-powered scenario building and data processing for complex multi-app workflows.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://make.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 356
+  },
+  {
+    "id": 1419,
+    "name": "Bardeen",
+    "description": "AI workflow automation tool for browser-based repetitive tasks, scraping, and app integration without coding.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://bardeen.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 213
+  },
+  {
+    "id": 1420,
+    "name": "Levity",
+    "description": "AI automation tool for document processing, email classification, and data extraction without writing any code.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://levity.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 134
+  },
+  {
+    "id": 1421,
+    "name": "Automate.io",
+    "description": "AI workflow automation for connecting cloud apps and streamlining business processes with multi-step integrations.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://automate.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 189
+  },
+  {
+    "id": 1422,
+    "name": "GitLab Duo",
+    "description": "AI-powered DevSecOps platform with code suggestions, security scanning, and chat-based assistance for developers.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://about.gitlab.com/gitlab-duo",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 234
+  },
+  {
+    "id": 1423,
+    "name": "JetBrains AI",
+    "description": "AI assistant integrated into JetBrains IDEs for intelligent code completion, refactoring, and in-editor documentation.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://jetbrains.com/ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 312
+  },
+  {
+    "id": 1425,
+    "name": "OpenAI Codex",
+    "description": "AI code generation model powering various developer tools with natural language to code translation capabilities.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://openai.com/codex",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 423
+  },
+  {
+    "id": 1426,
+    "name": "DevGPT",
+    "description": "AI developer assistant for code generation, debugging, and documentation with context-aware suggestions and explanations.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://devgpt.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 97
+  },
+  {
+    "id": 1427,
+    "name": "LANDR",
+    "description": "AI-powered music mastering and distribution platform for musicians to achieve professional sound quality instantly.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://landr.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 367
+  },
+  {
+    "id": 1428,
+    "name": "Dolby On",
+    "description": "AI audio recording app with noise reduction and studio-quality enhancement for musicians and podcasters on the go.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://dolby.com/on",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 189
+  },
+  {
+    "id": 1429,
+    "name": "BandLab",
+    "description": "AI music creation and collaboration platform for musicians and producers with cloud-based mixing and sharing tools.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://bandlab.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 412
+  },
+  {
+    "id": 1430,
+    "name": "Splice",
+    "description": "AI-powered music production platform with curated samples, preset management, and intelligent creative suggestions.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://splice.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 345
+  },
+  {
+    "id": 1431,
+    "name": "Audacity AI",
+    "description": "AI-enhanced audio editor with noise removal, auto-leveling, and speech-to-text transcription for podcast production.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://audacityteam.org",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 278
+  },
+  {
+    "id": 1434,
+    "name": "Promo",
+    "description": "AI video creation tool for social media marketing and advertising with premium footage and customizable templates.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://promo.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 156
+  },
+  {
+    "id": 1435,
+    "name": "Renderforest",
+    "description": "AI video and animation maker for branding and marketing content with logo animation and explainer video templates.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://renderforest.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 267
+  },
+  {
+    "id": 1436,
+    "name": "Biteable",
+    "description": "AI video creation platform for making professional videos quickly with customizable templates and brand kit integration.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://biteable.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 213
+  },
+  {
+    "id": 1437,
+    "name": "Rytr Pro",
+    "description": "Advanced AI writing assistant with long-form content capabilities and brand voice customization for professional creators.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://rytr.me",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 312
+  },
+  {
+    "id": 1439,
+    "name": "LanguageTool",
+    "description": "AI-powered writing assistant for grammar and style checking supporting over 30 languages with context-aware suggestions.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://languagetool.org",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish"
+    ],
+    "rating": 4.3,
+    "rating_count": 389
+  },
+  {
+    "id": 1440,
+    "name": "Zyro AI",
+    "description": "AI content generator for website copy and e-commerce product descriptions that creates SEO-optimized text instantly.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://zyro.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 156
+  },
+  {
+    "id": 1441,
+    "name": "Nichesss",
+    "description": "AI content generation tool for discovering profitable niches and creating targeted marketing content at scale.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://nichesss.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4,
+    "rating_count": 98
+  },
+  {
+    "id": 1442,
+    "name": "Lensa AI",
+    "description": "AI photo editor with magic retouching and avatar generation features for creating stunning social media portraits.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://lensa-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 345
+  },
+  {
+    "id": 1443,
+    "name": "Epik AI",
+    "description": "AI photo editing app for generating professional headshots and creative avatars with realistic style transfer effects.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://epik-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 267
+  },
+  {
+    "id": 1444,
+    "name": "FaceApp",
+    "description": "AI face editing tool for realistic photo transformations including age progression, gender swap, and style enhancements.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://faceapp.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 412
+  },
+  {
+    "id": 1445,
+    "name": "Relight",
+    "description": "AI photo relighting tool for adjusting light direction and intensity after the photo is taken for perfect illumination.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://clipdrop.co/relight",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 189
+  },
+  {
+    "id": 1446,
+    "name": "Cleanup.pictures",
+    "description": "AI object removal tool for seamlessly cleaning up photos by erasing unwanted people, text, and blemishes instantly.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://cleanup.pictures",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 234
+  },
+  {
+    "id": 1452,
+    "name": "Codestral",
+    "description": "AI code generation model specialized for software development tasks with deep understanding of codebase context.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://mistral.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 178
+  },
+  {
+    "id": 1453,
+    "name": "DeepSeek Coder",
+    "description": "AI coding model for code generation and understanding across multiple programming languages with strong reasoning.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://deepseek.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 223
+  },
+  {
+    "id": 1454,
+    "name": "Qodo",
+    "description": "AI code quality tool for generating meaningful tests and documentation that improve codebase reliability and coverage.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://qodo.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 134
+  },
+  {
+    "id": 1456,
+    "name": "MutableAI",
+    "description": "AI-powered code transformation tool for automated refactoring, documentation generation, and codebase modernization.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://mutable.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.1,
+    "rating_count": 89
+  },
+  {
+    "id": 1457,
+    "name": "Stable Audio",
+    "description": "AI music and sound effect generation tool for content creators producing royalty-free audio from text descriptions.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://stableaudio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 198
+  },
+  {
+    "id": 1458,
+    "name": "Tracktrap",
+    "description": "AI-powered music production suite for beat making, mixing, and mastering with intelligent arrangement suggestions.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://tracktrap.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4,
+    "rating_count": 76
+  },
+  {
+    "id": 1459,
+    "name": "Moises",
+    "description": "AI music practice app with stem separation, pitch detection, and tempo control for musicians to learn any song.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://moises.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.6,
+    "rating_count": 345
+  },
+  {
+    "id": 1460,
+    "name": "Vocal Remover",
+    "description": "AI tool for separating vocals from music tracks enabling remixing, karaoke creation, and sample extraction instantly.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://vocalremover.org",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 267
+  },
+  {
+    "id": 1462,
+    "name": "Pictory Pro",
+    "description": "AI video creation tool for transforming long-form blog content and podcasts into engaging short video clips automatically.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://pictory.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 234
+  },
+  {
+    "id": 1463,
+    "name": "Synthesia Studio",
+    "description": "AI video generation platform for creating professional training and corporate videos with realistic AI avatars.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://synthesia.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.5,
+    "rating_count": 312
+  },
+  {
+    "id": 1465,
+    "name": "Pika",
+    "description": "AI video generation platform for creating and editing videos from text prompts with creative style control and effects.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://pika.art",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.4,
+    "rating_count": 267
+  },
+  {
+    "id": 1466,
+    "name": "Kaiber",
+    "description": "AI video generation tool for creating mesmerizing music videos and visual art with animation from images and audio.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://kaiber.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.2,
+    "rating_count": 178
   }
 ]
