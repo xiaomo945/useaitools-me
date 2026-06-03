@@ -65,6 +65,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://useaitools.me',
+    languages: {
+      'en': 'https://useaitools.me',
+      'zh': 'https://useaitools.me/zh',
+    },
   },
 };
 

@@ -86,5 +86,24 @@
     "browsed_tools": "Browsed Tools",
     "category_distribution": "Category Distribution",
     "weekly_activity": "Weekly Activity"
+  },
+  "advertise": {
+    "title": "Advertise on Use AI Tools",
+    "subtitle": "Reach thousands of AI enthusiasts looking for their next tool",
+    "homepage_featured": "Homepage Featured Spot",
+    "category_banner": "Category Page Banner",
+    "tool_recommendation": "Tool Detail Page Recommendation",
+    "blog_sponsorship": "Blog Post Sponsorship",
+    "newsletter_ad": "Newsletter Ad",
+    "per_month": "/month",
+    "per_article": "/article",
+    "per_issue": "/issue",
+    "contact_custom": "Contact Us for Custom Packages"
+  },
+  "submit": {
+    "featured_title": "Get Your AI Tool Featured",
+    "basic_listing": "Basic Listing",
+    "featured_listing": "Featured Listing",
+    "upgrade_cta": "Upgrade to Featured"
   }
 }

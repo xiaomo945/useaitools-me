@@ -16,7 +16,7 @@ const fs = require('fs');
 const path = require('path');
 
 const TOOLS_FILE = path.join(__dirname, '..', 'data', 'tools.json');
-const BLOG_FILE = path.join(__dirname, '..', 'data', 'blog-posts.json');
+const BLOG_DIR = path.join(__dirname, '..', 'data', 'blog-posts');
 const REPORT_FILE = path.join(__dirname, '..', '.tmp', 'internal-link-health-report.md');
 
 // Valid categories
@@ -36,8 +36,13 @@ function checkInternalLinks() {
     const toolsData = fs.readFileSync(TOOLS_FILE, 'utf8');
     tools = JSON.parse(toolsData);
     
-    const blogData = fs.readFileSync(BLOG_FILE, 'utf8');
-    blogPosts = JSON.parse(blogData);
+    // Read blog posts from individual JSON files in blog-posts directory
+    const blogFiles = fs.readdirSync(BLOG_DIR).filter(f => f.endsWith('.json'));
+    blogPosts = blogFiles.map(f => {
+      try {
+        return JSON.parse(fs.readFileSync(path.join(BLOG_DIR, f), 'utf8'));
+      } catch { return null; }
+    }).filter(Boolean);
   } catch (err) {
     console.error('❌ Failed to read data files:', err.message);
     process.exit(1);

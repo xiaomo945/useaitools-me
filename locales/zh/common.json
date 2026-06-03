@@ -86,5 +86,24 @@
     "browsed_tools": "浏览工具",
     "category_distribution": "分类分布",
     "weekly_activity": "每周活动"
+  },
+  "advertise": {
+    "title": "在 Use AI Tools 投放广告",
+    "subtitle": "触达数千名寻找下一款AI工具的爱好者",
+    "homepage_featured": "首页精选位",
+    "category_banner": "分类页横幅",
+    "tool_recommendation": "工具详情页推荐位",
+    "blog_sponsorship": "博客文章赞助",
+    "newsletter_ad": "Newsletter广告",
+    "per_month": "/月",
+    "per_article": "/篇",
+    "per_issue": "/期",
+    "contact_custom": "联系我们获取定制套餐"
+  },
+  "submit": {
+    "featured_title": "让您的AI工具获得精选推荐",
+    "basic_listing": "基础收录",
+    "featured_listing": "精选收录",
+    "upgrade_cta": "升级为精选"
   }
 }
