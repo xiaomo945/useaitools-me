@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import NewsletterSubscribe from './NewsletterSubscribe';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Footer() {
   return (
@@ -145,6 +146,18 @@ export default function Footer() {
                 Changelog
               </Link>
               <Link
+                href="/help"
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                Help Center
+              </Link>
+              <Link
+                href="/dashboard"
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                Dashboard
+              </Link>
+              <Link
                 href="/?replay-tour=1"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >
@@ -180,6 +193,11 @@ export default function Footer() {
               >
                 Contact
               </a>
+            </div>
+            
+            {/* Language Switcher */}
+            <div className="flex justify-center mb-6">
+              <LanguageSwitcher />
             </div>
             
             <p className="text-slate-500 dark:text-gray-500 text-sm">

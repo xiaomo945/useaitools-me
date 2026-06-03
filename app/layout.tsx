@@ -125,6 +125,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col pb-16 md:pb-0">
+        <a href="#main-content" className="skip-to-main">Skip to main content</a>
         <Suspense fallback={null}>
           <HolidayBanner />
         </Suspense>
@@ -138,6 +139,7 @@ export default function RootLayout({
           <ErrorBoundary>
             <PageTransition>{children}</PageTransition>
           </ErrorBoundary>
+          <div aria-live="polite" aria-atomic="true" className="sr-only" />
           <Analytics />
           <Suspense fallback={null}>
             <BackToTop />

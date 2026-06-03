@@ -2,6 +2,12 @@
   "nav": {
     "home": "Home",
     "blog": "Blog",
+    "compare": "Compare",
+    "saved": "Saved",
+    "history": "History",
+    "submit": "Submit Tool",
+    "dashboard": "Dashboard",
+    "help": "Help Center",
     "categories": {
       "writing": "Writing",
       "image": "Image",
@@ -16,12 +22,69 @@
     "subtitle": "Handpicked directory of AI tools for every task. Find, compare, and choose the perfect AI tool for your needs.",
     "cta": "Explore Tools"
   },
+  "search": {
+    "placeholder": "Search AI tools...",
+    "suggestions_title": "Popular Searches",
+    "no_results": "No tools found. Try a different search term.",
+    "clear": "Clear"
+  },
+  "filter": {
+    "all": "All",
+    "pricing": {
+      "free": "Free",
+      "freemium": "Freemium",
+      "paid": "Paid",
+      "open_source": "Open Source"
+    },
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "clear_all": "Clear All Filters"
+  },
+  "common": {
+    "visit_website": "Visit Website",
+    "save": "Save",
+    "saved": "Saved",
+    "compare": "Compare",
+    "share": "Share",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "try_again": "Try Again",
+    "go_home": "Go Home",
+    "back_to_top": "Back to Top",
+    "learn_more": "Learn More"
+  },
   "footer": {
     "copyright": "© 2026 Use AI Tools. All rights reserved.",
     "links": {
       "home": "Home",
       "blog": "Blog",
-      "affiliate": "Affiliate Disclosure"
+      "affiliate": "Affiliate Disclosure",
+      "help": "Help Center",
+      "dashboard": "Dashboard",
+      "about": "About",
+      "changelog": "Changelog",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact"
     }
+  },
+  "help": {
+    "title": "Help Center",
+    "subtitle": "Find answers to common questions about using our AI tools directory.",
+    "still_questions": "Still have questions?",
+    "contact_us": "Contact Us"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Site statistics and health overview",
+    "total_tools": "Total Tools",
+    "free_tools": "Free/Freemium",
+    "saved_tools": "Saved Tools",
+    "browsed_tools": "Browsed Tools",
+    "category_distribution": "Category Distribution",
+    "weekly_activity": "Weekly Activity"
   }
 }
