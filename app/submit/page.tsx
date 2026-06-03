@@ -155,6 +155,12 @@ export default function SubmitToolPage() {
                 Back to Home
               </Link>
               <Link
+                href="/submit/featured"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+              >
+                ⭐ Upgrade to Featured
+              </Link>
+              <Link
                 href="/submit"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-slate-300 dark:border-gray-700 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 transition-all duration-300"
               >

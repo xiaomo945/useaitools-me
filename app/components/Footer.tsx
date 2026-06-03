@@ -176,23 +176,23 @@ export default function Footer() {
                 Affiliate Disclosure
               </Link>
               <Link
-                href="#"
+                href="/privacy"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >
                 Privacy Policy
               </Link>
               <Link
-                href="#"
+                href="/terms"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >
                 Terms of Service
               </Link>
-              <a
-                href="mailto:affiliate@useaitools.me"
+              <Link
+                href="/contact"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >
                 Contact
-              </a>
+              </Link>
             </div>
             
             {/* Language Switcher */}

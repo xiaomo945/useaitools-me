@@ -782,12 +782,10 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
                 <span className="text-lg">✅</span>
                 <span className="font-semibold text-emerald-700 dark:text-emerald-300">Verified</span>
               </div>
-              {tool.last_updated && (
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-gray-700">
-                  <span className="text-lg">📅</span>
-                  <span className="text-slate-600 dark:text-slate-300">Last updated: {tool.last_updated}</span>
-                </div>
-              )}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-gray-700">
+                <span className="text-lg">📅</span>
+                <span className="text-slate-600 dark:text-slate-300">Listed on Use AI Tools: {tool.last_updated || '2026'}</span>
+              </div>
             </div>
           </div>
         </div>

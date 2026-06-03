@@ -20678,7 +20678,7 @@
     ]
   },
   {
-    "id": 425,
+    "id": 1467,
     "name": "Superhuman AI",
     "description": "AI-powered email client that learns your preferences and helps you reach inbox zero 3x faster. Features include AI email drafting, intelligent summarization, and smart reply suggestions.",
     "category": "Productivity",
@@ -20732,7 +20732,7 @@
     ]
   },
   {
-    "id": 428,
+    "id": 1468,
     "name": "Copy.ai Pro",
     "description": "Enterprise-grade AI copywriting platform with advanced features for marketing teams. Includes brand voice training, workflow automation, and collaborative tools.",
     "category": "Writing",
@@ -20786,7 +20786,7 @@
     ]
   },
   {
-    "id": 429,
+    "id": 1469,
     "name": "Stability AI SDXL Turbo",
     "description": "Blazing-fast image generation model from Stability AI that creates stunning visuals in under a second with exceptional quality and detail.",
     "category": "Image",
@@ -20840,7 +20840,7 @@
     ]
   },
   {
-    "id": 430,
+    "id": 1470,
     "name": "Pika Labs 2.0",
     "description": "Advanced AI video generation platform that creates stunning videos from text prompts, images, or other videos with unprecedented control and quality.",
     "category": "Video",
@@ -20894,7 +20894,7 @@
     ]
   },
   {
-    "id": 431,
+    "id": 1471,
     "name": "Suno AI Chirp",
     "description": "Revolutionary AI music generation platform that creates complete songs with vocals, instrumentation, and lyrics from simple text prompts.",
     "category": "Audio",
@@ -20948,7 +20948,7 @@
     ]
   },
   {
-    "id": 433,
+    "id": 1472,
     "name": "Cursor AI",
     "description": "AI-first code editor built from the ground up for AI pair programming. Features intelligent autocompletion, chat-based coding, and smart refactoring tools.",
     "category": "Code",
@@ -21002,7 +21002,7 @@
     ]
   },
   {
-    "id": 444,
+    "id": 1473,
     "name": "Later AI",
     "description": "AI-powered social media scheduler and content creator for Instagram. Generates captions, hashtag suggestions, and optimal posting times to maximize engagement.",
     "category": "Productivity",
@@ -21056,7 +21056,7 @@
     ]
   },
   {
-    "id": 445,
+    "id": 1474,
     "name": "Ocoya",
     "description": "AI content creation and social media automation platform that generates posts, graphics, and scheduling across Instagram, Facebook, Twitter, and LinkedIn.",
     "category": "Productivity",
@@ -21110,7 +21110,7 @@
     ]
   },
   {
-    "id": 446,
+    "id": 1475,
     "name": "TubeBuddy AI",
     "description": "AI-powered YouTube optimization tool that generates titles, descriptions, tags, and thumbnail suggestions to boost video discoverability.",
     "category": "Video",
@@ -21164,7 +21164,7 @@
     ]
   },
   {
-    "id": 447,
+    "id": 1476,
     "name": "VidIQ AI",
     "description": "AI YouTube analytics and optimization platform that provides keyword research, competitor analysis, and content suggestions to grow your channel faster.",
     "category": "Video",
@@ -21218,7 +21218,7 @@
     ]
   },
   {
-    "id": 448,
+    "id": 1477,
     "name": "NightCafe Creator",
     "description": "AI art generator with multiple algorithms (Stable Diffusion, DALL-E, etc.) optimized for creating high-resolution prints and wall art. Features community challenges and style transfer.",
     "category": "Image",
@@ -21272,7 +21272,7 @@
     ]
   },
   {
-    "id": 450,
+    "id": 1478,
     "name": "ElevenLabs Reader",
     "description": "AI-powered audiobook creation platform with ultra-realistic voices in 29 languages. Perfect for converting books, articles, and scripts into professional audiobooks.",
     "category": "Audio",
@@ -21326,7 +21326,7 @@
     ]
   },
   {
-    "id": 452,
+    "id": 1479,
     "name": "GitHub Copilot for DevOps",
     "description": "AI pair programmer extended for infrastructure-as-code, CI/CD pipelines, and cloud configuration. Supports Terraform, Kubernetes, Docker, and AWS/GCP/Azure templates.",
     "category": "Code",
@@ -21380,7 +21380,7 @@
     ]
   },
   {
-    "id": 454,
+    "id": 1480,
     "name": "Warp Terminal",
     "description": "AI-powered terminal with natural language command input, block-based output, and intelligent suggestions for common DevOps workflows.",
     "category": "Code",
@@ -21434,7 +21434,7 @@
     ]
   },
   {
-    "id": 458,
+    "id": 1481,
     "name": "Colossyan",
     "description": "AI video creation platform with realistic avatars for learning and development content. Features automatic translations and collaborative editing.",
     "category": "Video",
@@ -21488,7 +21488,7 @@
     ]
   },
   {
-    "id": 459,
+    "id": 1482,
     "name": "Lavender",
     "description": "AI email coach for sales teams that analyzes and optimizes cold emails in real-time. Provides response rate predictions and improvement suggestions.",
     "category": "Productivity",
@@ -21542,7 +21542,7 @@
     ]
   },
   {
-    "id": 460,
+    "id": 1483,
     "name": "Regie.ai",
     "description": "AI sales content platform that generates sales scripts, email sequences, call scripts, and LinkedIn outreach messages with CRM integration.",
     "category": "Productivity",
@@ -21596,7 +21596,7 @@
     ]
   },
   {
-    "id": 461,
+    "id": 1484,
     "name": "Motion",
     "description": "AI-powered calendar and task manager that auto-schedules your day, prioritizes tasks, and adjusts plans when priorities change. Perfect for freelancers managing multiple clients.",
     "category": "Productivity",
@@ -21650,7 +21650,7 @@
     ]
   },
   {
-    "id": 462,
+    "id": 1485,
     "name": "Lago Fast",
     "description": "AI freelance business assistant that handles invoicing, time tracking, proposal writing, and client communication. All-in-one platform for independent workers.",
     "category": "Productivity",
@@ -21704,7 +21704,7 @@
     ]
   },
   {
-    "id": 463,
+    "id": 1486,
     "name": "EazyStock",
     "description": "AI inventory management and demand forecasting tool that predicts stock levels, automates reordering, and optimizes warehouse operations for small to medium businesses.",
     "category": "Productivity",
@@ -21758,7 +21758,7 @@
     ]
   },
   {
-    "id": 464,
+    "id": 1487,
     "name": "Inventory Planner",
     "description": "AI-powered inventory planning and purchasing tool that integrates with Shopify, Amazon, and WooCommerce. Generates smart purchase orders and demand forecasts.",
     "category": "Productivity",
@@ -21812,7 +21812,7 @@
     ]
   },
   {
-    "id": 466,
+    "id": 1488,
     "name": "Otter AI",
     "description": "AI meeting assistant that records, transcribes, and summarizes meetings in real-time. Integrates with Zoom, Google Meet, and Teams with action item extraction.",
     "category": "Productivity",
@@ -21866,7 +21866,7 @@
     ]
   },
   {
-    "id": 467,
+    "id": 1489,
     "name": "Beautiful.ai",
     "description": "AI presentation designer that creates professional slideshows from outlines or content. Auto-adjusts layouts, suggests visuals, and maintains design consistency.",
     "category": "Productivity",
@@ -21920,7 +21920,7 @@
     ]
   },
   {
-    "id": 468,
+    "id": 1490,
     "name": "Gamma AI",
     "description": "AI-powered document and presentation generator that creates polished decks, docs, and webpages from simple prompts. Collaborative and embeddable.",
     "category": "Productivity",
@@ -21974,7 +21974,7 @@
     ]
   },
   {
-    "id": 469,
+    "id": 1491,
     "name": "Runway ML Gen-3",
     "description": "Next-generation AI video generation platform with photorealistic outputs, motion brush control, and cinematic quality. Industry-leading creative tools for filmmakers.",
     "category": "Video",
@@ -22028,7 +22028,7 @@
     ]
   },
   {
-    "id": 471,
+    "id": 1492,
     "name": "Krisp AI",
     "description": "AI noise cancellation app for meetings and recordings. Removes background noise, echoes, and distractions in real-time for crystal-clear audio communication.",
     "category": "Audio",
@@ -22082,7 +22082,7 @@
     ]
   },
   {
-    "id": 474,
+    "id": 1493,
     "name": "Wordtune",
     "description": "AI-powered writing companion that rewrites your sentences for clarity, tone, and style. Helps you express your thoughts precisely and write more efficiently across platforms.",
     "category": "Writing",
@@ -22136,7 +22136,7 @@
     ]
   },
   {
-    "id": 476,
+    "id": 1494,
     "name": "Clipdrop",
     "description": "AI-powered image editing suite with background removal, relighting, cleanup, and upscaling tools. Part of Stability AI ecosystem with professional-grade outputs.",
     "category": "Image",
@@ -22190,7 +22190,7 @@
     ]
   },
   {
-    "id": 477,
+    "id": 1495,
     "name": "Photoroom",
     "description": "AI background removal and product photography tool that creates studio-quality images from simple smartphone photos. Perfect for e-commerce and social media.",
     "category": "Image",
@@ -22244,7 +22244,7 @@
     ]
   },
   {
-    "id": 479,
+    "id": 1496,
     "name": "Opus Clip",
     "description": "AI video repurposing tool that automatically extracts viral short clips from long-form videos. Perfect for creating TikTok, Reels, and Shorts content from podcasts and YouTube videos.",
     "category": "Video",
@@ -22298,7 +22298,7 @@
     ]
   },
   {
-    "id": 480,
+    "id": 1497,
     "name": "Adobe Podcast AI",
     "description": "AI-powered audio enhancement tool that removes background noise, improves voice quality, and creates studio-grade recordings from any microphone. Includes transcription and editing.",
     "category": "Audio",
@@ -22352,7 +22352,7 @@
     ]
   },
   {
-    "id": 482,
+    "id": 1498,
     "name": "Continue.dev",
     "description": "Open-source AI code assistant that integrates with VS Code and JetBrains. Provides code completion, chat-based assistance, and custom prompt templates for any coding workflow.",
     "category": "Code",
@@ -22406,7 +22406,7 @@
     ]
   },
   {
-    "id": 484,
+    "id": 1499,
     "name": "Mem AI",
     "description": "AI-powered workspace that organizes notes, documents, and knowledge automatically. Uses AI to connect ideas, surface relevant information, and create a personal knowledge base.",
     "category": "Productivity",
@@ -22460,7 +22460,7 @@
     ]
   },
   {
-    "id": 485,
+    "id": 1500,
     "name": "Notta AI",
     "description": "AI meeting transcription and note-taking tool that converts audio to text in 104 languages. Features speaker identification, summaries, and action item extraction.",
     "category": "Productivity",
@@ -22514,7 +22514,7 @@
     ]
   },
   {
-    "id": 487,
+    "id": 1501,
     "name": "Taskade AI",
     "description": "AI-powered project management and collaboration platform with task generation, mind mapping, and automated workflows. Combines notes, tasks, and AI in one workspace.",
     "category": "Productivity",
@@ -22568,7 +22568,7 @@
     ]
   },
   {
-    "id": 488,
+    "id": 1502,
     "name": "Jenni AI",
     "description": "AI writing assistant for academics and researchers with citation management, literature review assistance, and plagiarism detection. Helps write papers and research articles faster.",
     "category": "Writing",
@@ -22622,7 +22622,7 @@
     ]
   },
   {
-    "id": 489,
+    "id": 1503,
     "name": "HyperWrite",
     "description": "AI writing assistant browser extension that helps you write anywhere on the web. Generates content, rewrites text, and provides suggestions in any text field.",
     "category": "Writing",
@@ -22676,7 +22676,7 @@
     ]
   },
   {
-    "id": 491,
+    "id": 1504,
     "name": "Fliki AI",
     "description": "AI video creation tool that converts text, blog posts, and scripts into engaging videos with AI voiceover and stock media. Perfect for social media content at scale.",
     "category": "Video",
@@ -22730,7 +22730,7 @@
     ]
   },
   {
-    "id": 492,
+    "id": 1505,
     "name": "Canva AI Magic Studio",
     "description": "AI-enhanced design platform with Magic Write, Magic Edit, background removal, and AI image generation. All-in-one design tool for non-designers and professionals.",
     "category": "Image",
@@ -22784,7 +22784,7 @@
     ]
   },
   {
-    "id": 493,
+    "id": 1506,
     "name": "Looka AI",
     "description": "AI logo and brand identity generator that creates professional logos, business cards, and brand guidelines. Perfect for startups and small businesses on a budget.",
     "category": "Image",
@@ -22838,7 +22838,7 @@
     ]
   },
   {
-    "id": 494,
+    "id": 1507,
     "name": "v0 by Vercel",
     "description": "AI-powered UI generation tool from Vercel that creates React components from text descriptions. Integrates with Tailwind CSS and shadcn/ui for production-ready code.",
     "category": "Code",
@@ -22892,7 +22892,7 @@
     ]
   },
   {
-    "id": 495,
+    "id": 1508,
     "name": "Sweep.dev",
     "description": "AI-powered code refactoring tool that automatically fixes bugs, adds features, and cleans up technical debt through GitHub issues. Works as a GitHub bot.",
     "category": "Code",
@@ -22946,7 +22946,7 @@
     ]
   },
   {
-    "id": 496,
+    "id": 1509,
     "name": "VoiceMode",
     "description": "AI voice cloning and text-to-speech platform with ultra-realistic voice generation. Create custom voiceovers for videos, podcasts, and audiobooks with natural-sounding results.",
     "category": "Audio",
@@ -23000,7 +23000,7 @@
     ]
   },
   {
-    "id": 497,
+    "id": 1510,
     "name": "Beatoven AI",
     "description": "AI music composition tool that creates royalty-free background music for videos, podcasts, and content. Customize mood, genre, tempo, and duration with simple controls.",
     "category": "Audio",
@@ -23054,7 +23054,7 @@
     ]
   },
   {
-    "id": 498,
+    "id": 1511,
     "name": "Notewise AI",
     "description": "AI note-taking app for students and professionals that records lectures, transcribes audio, and generates study materials, flashcards, and summaries automatically.",
     "category": "Productivity",
@@ -23108,7 +23108,7 @@
     ]
   },
   {
-    "id": 499,
+    "id": 1512,
     "name": "Rewind AI",
     "description": "Personal AI search engine that indexes everything you do on your computer - apps, websites, meetings, documents - and lets you search your entire digital life with natural language.",
     "category": "Productivity",
@@ -23162,7 +23162,7 @@
     ]
   },
   {
-    "id": 502,
+    "id": 1513,
     "name": "Luma Dream Machine",
     "description": "AI video generation model that creates realistic, high-quality videos from text and images. Features temporal consistency, camera control, and cinematic quality outputs.",
     "category": "Video",
@@ -23216,7 +23216,7 @@
     ]
   },
   {
-    "id": 503,
+    "id": 1514,
     "name": "Kling AI",
     "description": "Advanced AI video generation platform that produces high-quality, temporally consistent videos from text prompts. Supports up to 5-minute videos with realistic motion and detail.",
     "category": "Video",
