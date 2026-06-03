@@ -186,7 +186,7 @@
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://canva.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.canva.com/affiliates",
     "icon_url": "",
     "examples": [
       {
@@ -246,7 +246,7 @@
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://notion.so",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.notion.so/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -426,7 +426,7 @@
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://elevenlabs.io",
-    "affiliate_link": "",
+    "affiliate_link": "https://elevenlabs.io/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -974,7 +974,7 @@
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://jasper.ai",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.jasper.ai/partners",
     "icon_url": "",
     "examples": [
       {
@@ -1170,7 +1170,7 @@
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://rytr.me",
-    "affiliate_link": "",
+    "affiliate_link": "https://rytr.me/affiliates",
     "icon_url": "",
     "examples": [
       {
@@ -1263,7 +1263,7 @@
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://veed.io",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.veed.io/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -2121,7 +2121,7 @@
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.copy.ai",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.copy.ai/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -2257,7 +2257,7 @@
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://murf.ai",
-    "affiliate_link": "",
+    "affiliate_link": "https://murf.ai/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -2316,7 +2316,7 @@
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://www.descript.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.descript.com/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -2384,7 +2384,7 @@
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://www.heygen.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.heygen.com/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -2708,7 +2708,7 @@
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.grammarly.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.grammarly.com/affiliates",
     "icon_url": "",
     "examples": [
       {
@@ -2912,7 +2912,7 @@
     "category": "Video",
     "pricing": "Paid",
     "url": "https://www.synthesia.io",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.synthesia.io/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -3200,7 +3200,7 @@
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://pictory.ai",
-    "affiliate_link": "",
+    "affiliate_link": "https://pictory.ai/affiliate",
     "icon_url": "",
     "needs_vpn": true,
     "languages": [
@@ -4466,7 +4466,7 @@
     "category": "Audio",
     "pricing": "Paid",
     "url": "https://descript-studio-sound.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.descript.com/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -5741,7 +5741,7 @@
     "category": "Productivity",
     "pricing": "Paid",
     "url": "https://surfer-seo.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://surferseo.com/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -7220,7 +7220,7 @@
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://pictory-ai.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://pictory.ai/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -7883,7 +7883,7 @@
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://canva-ai.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.canva.com/affiliates",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -8393,7 +8393,7 @@
     "category": "Productivity",
     "pricing": "Paid",
     "url": "https://grammarly-business.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.grammarly.com/affiliates",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -12269,7 +12269,7 @@
     "category": "Productivity",
     "pricing": "Paid",
     "url": "https://canva-pro-ai.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.canva.com/affiliates",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -12830,7 +12830,7 @@
     "category": "Video",
     "pricing": "Paid",
     "url": "https://synthesia-lite.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.synthesia.io/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -14717,7 +14717,7 @@
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://sleep-story-ai.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.copy.ai/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -15839,7 +15839,7 @@
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://peppertype.ai.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://elevenlabs.io/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -17573,7 +17573,7 @@
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://notion-plus-ai.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.notion.so/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -17879,7 +17879,7 @@
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://copy.ai-enterprise.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.copy.ai/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -17981,7 +17981,7 @@
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://surfer-ai.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.canva.com/affiliates",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -18083,7 +18083,7 @@
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://grammarlygo-business.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.grammarly.com/affiliates",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -18134,7 +18134,7 @@
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://jasper-teams.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.jasper.ai/partners",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -18593,7 +18593,7 @@
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://descript-pro.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.descript.com/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -19001,7 +19001,7 @@
     "category": "Productivity",
     "pricing": "Paid",
     "url": "https://notion-ai-teams.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.notion.so/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -19358,7 +19358,7 @@
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://copy.ai-ultimate.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.copy.ai/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -19409,7 +19409,7 @@
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://jasper-enterprise.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.jasper.ai/partners",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -19868,7 +19868,7 @@
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://canva-magic-studio.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.canva.com/affiliates",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -20225,7 +20225,7 @@
     "category": "Video",
     "pricing": "Paid",
     "url": "https://synthesia-pro-max.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.synthesia.io/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": true,
@@ -20276,7 +20276,7 @@
     "category": "Video",
     "pricing": "Paid",
     "url": "https://heygen-enterprise.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.heygen.com/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": true,
@@ -20738,7 +20738,7 @@
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://copy.ai",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.copy.ai/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -21278,7 +21278,7 @@
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://elevenlabs.io",
-    "affiliate_link": "",
+    "affiliate_link": "https://elevenlabs.io/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -22412,7 +22412,7 @@
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://get.mem.ai",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.notion.so/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -22736,7 +22736,7 @@
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://canva.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.canva.com/affiliates",
     "icon_url": "",
     "examples": [
       {
@@ -22844,7 +22844,7 @@
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://v0.dev",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.grammarly.com/affiliates",
     "icon_url": "",
     "examples": [
       {
@@ -22898,7 +22898,7 @@
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://sweep.dev",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.jasper.ai/partners",
     "icon_url": "",
     "examples": [
       {
@@ -25571,7 +25571,7 @@
     "category": "Video",
     "pricing": "Paid",
     "url": "https://synthesia-ai.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.synthesia.io/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -25622,7 +25622,7 @@
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://heygen-studio.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.heygen.com/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -30395,7 +30395,7 @@
       "Enterprise",
       "Professional Video"
     ],
-    "affiliate_link": "",
+    "affiliate_link": "https://www.synthesia.io/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -30450,7 +30450,7 @@
       "Global Content",
       "Marketing"
     ],
-    "affiliate_link": "",
+    "affiliate_link": "https://www.heygen.com/affiliate",
     "icon_url": "",
     "examples": [
       {
@@ -32556,7 +32556,7 @@
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://shopify-ai-assistant.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.shopify.com/affiliates",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -32862,7 +32862,7 @@
     "category": "Audio",
     "pricing": "Paid",
     "url": "https://elevenlabs-pro.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://elevenlabs.io/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -33372,7 +33372,7 @@
     "category": "Audio",
     "pricing": "Paid",
     "url": "https://murf-ai-studio.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://murf.ai/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -35412,7 +35412,7 @@
     "category": "Video",
     "pricing": "Paid",
     "url": "https://synthesia-ai-avatar.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.synthesia.io/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -35463,7 +35463,7 @@
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://heygen-ai-video-studio.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.heygen.com/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -40584,7 +40584,7 @@
     "category": "Video",
     "pricing": "Paid",
     "url": "https://synthesia.io",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.synthesia.io/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -55290,7 +55290,7 @@
     "category": "Image",
     "pricing": "Paid",
     "url": "https://jasper-art.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.jasper.ai/partners",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -55443,7 +55443,7 @@
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://loom-ai.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.loom.com/affiliate",
     "icon_url": "",
     "examples": [],
     "needs_vpn": false,
@@ -66657,7 +66657,7 @@
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://descript.com",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.descript.com/affiliate",
     "icon_url": "",
     "needs_vpn": false,
     "languages": [
@@ -67393,7 +67393,7 @@
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://rytr.me",
-    "affiliate_link": "",
+    "affiliate_link": "https://rytr.me/affiliates",
     "icon_url": "",
     "needs_vpn": false,
     "languages": [
@@ -67668,7 +67668,7 @@
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://pictory.ai",
-    "affiliate_link": "",
+    "affiliate_link": "https://pictory.ai/affiliate",
     "icon_url": "",
     "needs_vpn": false,
     "languages": [
@@ -67684,7 +67684,7 @@
     "category": "Video",
     "pricing": "Paid",
     "url": "https://synthesia.io",
-    "affiliate_link": "",
+    "affiliate_link": "https://www.synthesia.io/affiliate",
     "icon_url": "",
     "needs_vpn": false,
     "languages": [
