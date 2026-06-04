@@ -31,6 +31,7 @@ export async function POST(request: Request) {
     fs.writeFileSync(subscribersPath, JSON.stringify(subscribers, null, 2));
 
     return NextResponse.json({ success: true, message: 'Thanks for subscribing!' });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- error handled by returning error response
   } catch (error) {
     return NextResponse.json({ success: false, message: 'Internal server error' }, { status: 500 });
   }

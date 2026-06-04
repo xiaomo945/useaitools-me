@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import toolsData from '@/data/tools.json';
@@ -8,6 +8,7 @@ import { Home, Share2, Copy, ChevronRight, List } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ReadingProgress from '@/app/components/ReadingProgress';
+import type { Tool } from '@/types';
 
 type BlogImage = {
   url: string;
@@ -473,11 +474,11 @@ export default function ClientBlogDetail({
 
           const mentionedTools = mentionedToolIds
             .map(item => {
-              const t = (toolsData as any[]).find((td: any) => td.id === item.id);
+              const t = (toolsData as Tool[]).find((td) => td.id === item.id);
               return t ? { ...t, linkName: item.name } : null;
             })
-            .filter(Boolean)
-            .slice(0, 8);
+            .filter(t => t !== null)
+            .slice(0, 8) as (Tool & { linkName: string })[];
 
           return (
             <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-5 shadow-lg mb-6">
@@ -487,7 +488,7 @@ export default function ClientBlogDetail({
                   <span>Tools in This Guide ({mentionedTools.length})</span>
                 </summary>
                 <div className="space-y-2 mt-2">
-                  {mentionedTools.map((tool: any) => (
+                  {mentionedTools.map((tool) => (
                     <Link
                       key={tool.id}
                       href={`/tools/${tool.id}`}
@@ -505,7 +506,7 @@ export default function ClientBlogDetail({
                   <span>Tools in This Guide ({mentionedTools.length})</span>
                 </h4>
                 <div className="space-y-1.5">
-                  {mentionedTools.map((tool: any) => (
+                  {mentionedTools.map((tool) => (
                     <Link
                       key={tool.id}
                       href={`/tools/${tool.id}`}
@@ -626,9 +627,10 @@ export default function ClientBlogDetail({
           }
           const mentionedTools = mentionedToolIds
             .filter((id, i, arr) => arr.indexOf(id) === i)
-            .map(id => toolsData.find((t: any) => t.id === id))
-            .filter(Boolean)
-            .slice(0, 6);
+            .map(id => toolsData.find((t) => t.id === id))
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion -- filtered by find result
+            .filter(t => t !== undefined)
+            .slice(0, 6) as Tool[];
 
           if (mentionedTools.length > 0) {
             return (
@@ -643,7 +645,7 @@ export default function ClientBlogDetail({
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                  {mentionedTools.map((tool: any) => {
+                  {mentionedTools.map((tool) => {
                     const catColors: Record<string, string> = {
                       'Writing': 'bg-blue-500', 'Image': 'bg-violet-500', 'Video': 'bg-indigo-500',
                       'Audio': 'bg-pink-500', 'Code': 'bg-orange-500', 'Productivity': 'bg-teal-500',

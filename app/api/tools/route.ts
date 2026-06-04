@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import tools from '@/data/tools.json';
+import type { Tool } from '@/types';
 
-function getAffiliateLink(tool: any): string {
+function getAffiliateLink(tool: Tool): string {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
   let shortEnvVarName = '';
   if (tool.name === 'Rytr') {

@@ -9,6 +9,7 @@ export default function MobileNav() {
   const pathname = usePathname();
   const [activeTab, setActiveTab] = useState(pathname);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Sync active tab with pathname
   useEffect(() => {
     setActiveTab(pathname);
   }, [pathname]);

@@ -6,6 +6,7 @@ export default function NetworkStatus() {
   const [isOffline, setIsOffline] = useState(false);
   const [justRestored, setJustRestored] = useState(false);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Initialize network status and subscribe to events
   useEffect(() => {
     setIsOffline(!navigator.onLine);
 

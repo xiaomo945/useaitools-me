@@ -41,6 +41,7 @@ export default function ComparisonVisualization({ tools }: ComparisonVisualizati
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {tools.map((tool, idx) => {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any -- rating_breakdown type is complex and optional
                 const ratingBreakdown = (tool as any).rating_breakdown;
                 const score = ratingBreakdown?.[dim]?.score || 0;
                 const percentage = (score / 5) * 100;

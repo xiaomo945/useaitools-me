@@ -6,6 +6,7 @@ import { Volume2, VolumeX } from 'lucide-react';
 export default function SoundToggle() {
   const [enabled, setEnabled] = useState(true);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Initialize sound preference from localStorage
   useEffect(() => {
     try {
       const stored = localStorage.getItem('useaitools_sound');

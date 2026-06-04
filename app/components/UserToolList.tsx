@@ -24,12 +24,13 @@ export default function UserToolList({ savedTools }: UserToolListProps) {
   const [sharingListId, setSharingListId] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Load saved recommendation lists from localStorage
   useEffect(() => {
     const savedLists = localStorage.getItem('user_recommendation_lists');
     if (savedLists) {
       try {
         const parsed = JSON.parse(savedLists);
-        setLists(parsed.map((list: any) => ({
+        setLists(parsed.map((list: { createdAt: string }) => ({
           ...list,
           createdAt: new Date(list.createdAt)
         })));

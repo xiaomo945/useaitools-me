@@ -6,6 +6,7 @@ import { getLocale, setLocale, type Locale } from '@/app/i18n';
 export default function LanguageSwitcher() {
   const [locale, setLocalLocale] = useState<Locale>('en');
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Initialize locale from storage on mount
   useEffect(() => {
     setLocalLocale(getLocale());
   }, []);

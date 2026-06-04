@@ -12,6 +12,7 @@ export default function PageTransition({
   const [displayChildren, setDisplayChildren] = useState(children);
   const [transitionKey, setTransitionKey] = useState(0);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Trigger transition animation on route change
   useEffect(() => {
     // When path changes, trigger a transition
     setTransitionKey(prev => prev + 1);

@@ -360,6 +360,7 @@ export default function ToolDetailClient({ tool, relatedTools, relatedArticles =
   // People Also Viewed - based on browsing history
   const [peopleAlsoViewed, setPeopleAlsoViewed] = useState<Tool[]>([]);
   
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Load "people also viewed" tools from history
   useEffect(() => {
     saveToHistory(tool.id);
     
@@ -585,6 +586,7 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
 
   const [hasReferrer, setHasReferrer] = useState(false);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Check if user navigated from another page on site
   useEffect(() => {
     setHasReferrer(!!sessionStorage.getItem('useaitools_scrollY'));
   }, []);

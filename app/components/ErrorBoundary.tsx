@@ -32,7 +32,7 @@ class ErrorBoundary extends Component<Props, State> {
           <h1 className="text-6xl mb-4">😵</h1>
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Something went wrong</h2>
           <p className="text-slate-600 dark:text-slate-400 mb-6 max-w-md">
-            We're sorry, but there was an error loading this page.
+            We&apos;re sorry, but there was an error loading this page.
           </p>
           <div className="flex gap-4">
             <button

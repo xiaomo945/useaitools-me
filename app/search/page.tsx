@@ -197,7 +197,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
             </h1>
             {query && (
               <p className="text-2xl sm:text-3xl font-light text-slate-700 dark:text-slate-300 mb-6">
-                for "{query}"
+                for &ldquo;{query}&rdquo;
               </p>
             )}
             <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
@@ -227,7 +227,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
                 No results found
               </h2>
               <p className="text-slate-500 dark:text-slate-400 text-lg mb-8 max-w-md mx-auto">
-                We couldn't find any tools matching "{query}". Try a different search term.
+                We couldn&apos;t find any tools matching &ldquo;{query}&rdquo;. Try a different search term.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link

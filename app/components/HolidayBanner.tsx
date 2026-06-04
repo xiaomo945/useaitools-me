@@ -6,6 +6,7 @@ import { getHolidayTheme, dismissHolidayTheme, type HolidayTheme } from '@/app/u
 export default function HolidayBanner() {
   const [theme, setTheme] = useState<HolidayTheme | null>(null);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Initialize holiday theme on mount
   useEffect(() => {
     setTheme(getHolidayTheme());
   }, []);

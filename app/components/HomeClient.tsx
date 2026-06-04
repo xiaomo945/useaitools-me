@@ -8,6 +8,26 @@ import SkeletonCard from './Skeleton';
 import { useToast } from './Toast';
 import { debugLog } from '../utils/debug';
 import { playSaveSound, playUnsaveSound, playCompareSound, playSearchSound } from '../utils/sound';
+import type { Tool } from '@/types';
+
+type CategoryColors = {
+  bg: string;
+  bgDark: string;
+  text: string;
+  textLight?: string;
+  textDark?: string;
+  border: string;
+  borderDark?: string;
+  ring?: string;
+  shadow?: string;
+};
+
+type SkillLevelColors = {
+  bg: string;
+  text: string;
+  border: string;
+  label?: string;
+};
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -53,7 +73,7 @@ const ToolCard = memo(function ToolCard({
   shortcutNumber,
   onSwipeCategory
 }: {
-  tool: any;
+  tool: Tool;
   index: number;
   search: string;
   isSaved: boolean;
@@ -63,13 +83,13 @@ const ToolCard = memo(function ToolCard({
   hasAffiliate: boolean;
   ctaText: string;
   heartBurst: boolean;
-  getCategoryColors: (cat: string) => any;
-  getPricingColors: (pricing: string) => any;
-  getSkillLevelColors: (level: 'beginner' | 'intermediate' | 'advanced') => any;
-  getAffiliateLink: (tool: any) => string;
-  router: any;
+  getCategoryColors: (cat: string) => CategoryColors;
+  getPricingColors: (pricing: string) => CategoryColors;
+  getSkillLevelColors: (level?: string) => SkillLevelColors;
+  getAffiliateLink: (tool: Tool) => string;
+  router: ReturnType<typeof useRouter>;
   comparePulse: boolean;
-  onLongPress: (tool: any) => void;
+  onLongPress: (tool: Tool) => void;
   shortcutNumber?: number;
   onSwipeCategory?: (direction: 'left' | 'right') => void;
 }) {
@@ -77,6 +97,7 @@ const ToolCard = memo(function ToolCard({
   const pricingColors = getPricingColors(tool.pricing);
   const [saveAnimating, setSaveAnimating] = useState(false);
   const longPressTimer = useRef<NodeJS.Timeout | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- isLongPress used for long press detection logic
   const [isLongPress, setIsLongPress] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const lastTapRef = useRef<number>(0);
@@ -377,24 +398,6 @@ const ToolCard = memo(function ToolCard({
   );
 });
 
-type Tool = {
-  id: number;
-  name: string;
-  description: string;
-  category: string;
-  pricing: string;
-  url: string;
-  affiliate_link: string;
-  icon_url: string;
-  examples?: { prompt: string; image_url: string }[];
-  needs_vpn: boolean;
-  languages: string[];
-  rating?: number;
-  rating_count?: number;
-  skill_level?: 'beginner' | 'intermediate' | 'advanced';
-  best_for?: string[];
-};
-
 // Helper function to check if a tool has affiliate link (environment variable or JSON field)
 const hasAffiliateLink = (tool: Tool): boolean => {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
@@ -507,6 +510,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const [showMenu, setShowMenu] = useState(false);
   
   // Load localStorage data after mount (SSR-safe)
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Initialize state from localStorage on mount
   useEffect(() => {
     // Load saved tools
     try {
@@ -579,6 +583,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   }, [selectedCategories, selectedPricing]);
 
   // Restore filter preferences on first visit (not first-time users)
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Restore saved preferences from localStorage
   useEffect(() => {
     try {
       const hasVisited = localStorage.getItem('useaitools_visited');
@@ -730,6 +735,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   };
 
   // Auto scroll to tools grid when search is entered
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Hide welcome tip when user starts searching
   useEffect(() => {
     if (search.trim()) {
       toolsGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1262,6 +1268,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   }, [selectedCategories, selectedPricing, search]);
 
   // Restore scroll position and filter state on return
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Restore scroll position and filters from sessionStorage
   useEffect(() => {
     try {
       const isBackNavigation = sessionStorage.getItem('useaitools_scrollY');
@@ -1363,55 +1370,69 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       case 'Freemium':
         return {
           bg: 'bg-emerald-100 dark:bg-emerald-500/20',
+          bgDark: 'bg-emerald-500/20',
           text: 'text-emerald-700 dark:text-emerald-300',
+          border: 'border-emerald-200',
         };
       case 'Free Trial':
         return {
           bg: 'bg-blue-100 dark:bg-blue-500/20',
+          bgDark: 'bg-blue-500/20',
           text: 'text-blue-700 dark:text-blue-300',
+          border: 'border-blue-200',
         };
       case 'Paid':
         return {
           bg: 'bg-slate-100 dark:bg-slate-800',
+          bgDark: 'bg-slate-800',
           text: 'text-slate-700 dark:text-slate-300',
+          border: 'border-slate-200',
         };
       case 'Open Source':
         return {
           bg: 'bg-purple-100 dark:bg-purple-500/20',
+          bgDark: 'bg-purple-500/20',
           text: 'text-purple-700 dark:text-purple-300',
+          border: 'border-purple-200',
         };
       default:
         return {
           bg: 'bg-slate-100 dark:bg-slate-800',
+          bgDark: 'bg-slate-800',
           text: 'text-slate-700 dark:text-slate-300',
+          border: 'border-slate-200',
         };
     }
   };
 
-  const getSkillLevelColors = (level: string) => {
+  const getSkillLevelColors = (level?: string) => {
     switch (level) {
       case 'beginner':
         return {
           bg: 'bg-emerald-100 dark:bg-emerald-500/20',
           text: 'text-emerald-700 dark:text-emerald-300',
+          border: 'border-emerald-200',
           label: '🌱 Beginner',
         };
       case 'intermediate':
         return {
           bg: 'bg-amber-100 dark:bg-amber-500/20',
           text: 'text-amber-700 dark:text-amber-300',
+          border: 'border-amber-200',
           label: '🔥 Intermediate',
         };
       case 'advanced':
         return {
           bg: 'bg-rose-100 dark:bg-rose-500/20',
           text: 'text-rose-700 dark:text-rose-300',
+          border: 'border-rose-200',
           label: '⚡ Advanced',
         };
       default:
         return {
           bg: 'bg-slate-100 dark:bg-slate-800',
           text: 'text-slate-700 dark:text-slate-300',
+          border: 'border-slate-200',
           label: '🌱 Beginner',
         };
     }
@@ -1430,6 +1451,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const [isDragOver, setIsDragOver] = useState(false);
   const [isFilterTransitioning, setIsFilterTransitioning] = useState(false);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Check if speech recognition is supported
   useEffect(() => {
     setSpeechSupported(
       typeof window !== 'undefined' &&
@@ -1450,6 +1472,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       setIsListening(true);
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any -- SpeechRecognition event type not in standard lib
     recognition.onresult = (event: any) => {
       const transcript = event.results[0][0].transcript;
       setSearch(transcript);
@@ -1857,7 +1880,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               <div className="mt-3 flex items-center justify-center gap-2 px-4 py-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-xl border border-emerald-200 dark:border-emerald-800 animate-slide-in">
                 <span className="text-xl">👋</span>
                 <p className="text-sm text-emerald-800 dark:text-emerald-200">
-                  Try searching for <span className="font-semibold">"AI writer"</span> or browse by category below
+                  Try searching for <span className="font-semibold">&ldquo;AI writer&rdquo;</span> or browse by category below
                 </p>
                 <button
                   onClick={() => setShowWelcomeTip(false)}
@@ -2822,7 +2845,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               {!mysteryRevealed ? (
                 <div className="p-6 sm:p-8 text-center">
                   <div className="text-6xl mb-4 animate-bounce">🎁</div>
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">What's inside?</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">What&apos;s inside?</h3>
                   <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Here are some clues...</p>
                   <div className="space-y-3 mb-8">
                     {mysteryHints.map((hint, i) => (

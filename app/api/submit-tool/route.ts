@@ -48,6 +48,7 @@ export async function POST(request: Request) {
       message: 'Tool submitted successfully! We will review it and add it to the directory.',
       tool: newTool
     });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- error handled by returning error response
   } catch (error) {
     return NextResponse.json({ success: false, message: 'Internal server error' }, { status: 500 });
   }

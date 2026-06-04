@@ -72,16 +72,16 @@ export interface Tool {
   pricing: string;
   url: string;
   affiliate_link: string;
-  icon_url: string;
-  examples: ToolExample[];
-  needs_vpn: boolean;
-  languages: string[];
+  icon_url?: string;
+  examples?: ToolExample[];
+  needs_vpn?: boolean;
+  languages?: string[];
   description_en?: string;
   rating?: number;
   rating_count?: number;
   rating_breakdown?: RatingBreakdown;
   use_cases?: UseCase[];
   pros_cons?: ProsCons;
-  skill_level?: 'beginner' | 'intermediate' | 'advanced';
+  skill_level?: string;
   best_for?: string[];
 }

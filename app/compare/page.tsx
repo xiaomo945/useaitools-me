@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import toolsData from '@/data/tools.json';
-import { Home, Share2, Check, Copy } from 'lucide-react';
+import { Home, Share2, Check } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import ComparisonVisualization from '@/app/components/ComparisonVisualization';
 import type { Tool } from '@/types';
@@ -161,6 +161,7 @@ export default function ComparePage() {
   const [tool3Id, setTool3Id] = useState<string>('');
   const [copied, setCopied] = useState(false);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Load tool IDs from URL params
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const tool = params.get('tool');
@@ -368,8 +369,8 @@ export default function ComparePage() {
                 <tr>
                   <td className="px-6 py-4 text-sm font-medium text-slate-700 dark:text-gray-300">User Review</td>
                   {selectedTools.map((tool, idx) => (
-                    <td key={idx} className="px-6 py-4 text-sm text-slate-600 dark:text-gray-400">
-                      "{getMockReview(tool.name)}"
+                    <td className="px-6 py-4 text-sm text-slate-600 dark:text-gray-400">
+                      &ldquo;{getMockReview(tool.name)}&rdquo;
                     </td>
                   ))}
                 </tr>

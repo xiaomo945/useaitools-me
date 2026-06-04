@@ -23,6 +23,7 @@ export default function DashboardPage() {
   const [savedCount, setSavedCount] = useState(0);
   const [historyCount, setHistoryCount] = useState(0);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Load user statistics from localStorage
   useEffect(() => {
     try {
       const clicks = parseInt(localStorage.getItem('affiliateClickCount') || '0');

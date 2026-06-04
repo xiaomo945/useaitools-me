@@ -7,6 +7,7 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState<'light' | 'dark' | null>(null);
   const [isManual, setIsManual] = useState(false);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- Initialize theme from localStorage or system preference
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark';
     const manualFlag = localStorage.getItem('themeManual');
