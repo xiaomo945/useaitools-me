@@ -69254,5 +69254,1484 @@
       "Performance",
       "Best Practices"
     ]
+  },
+  {
+    "id": 1497,
+    "name": "AI Facebook Manager",
+    "description": "AI工具，帮助管理Facebook营销活动和广告优化。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://ai-facebook-manager.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Facebook marketing manager.",
+    "rating": 4.5,
+    "rating_count": 1484,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.904260614908018,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.306782134656655,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.434730837644964,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.978041884023957,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Facebook",
+      "Marketing",
+      "Ads"
+    ]
+  },
+  {
+    "id": 1498,
+    "name": "AI Social Scheduler",
+    "description": "智能社交媒体排程工具，自动优化发布时间。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://ai-social-scheduler.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI social media scheduler.",
+    "rating": 4.6,
+    "rating_count": 1475,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.907168041840915,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.684294773550538,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.853318197543988,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.833925117300205,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Scheduling",
+      "Social Media",
+      "Automation"
+    ]
+  },
+  {
+    "id": 1499,
+    "name": "AI Ad Copywriter",
+    "description": "AI广告文案生成器，为Facebook和Instagram创建高转化广告。",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://ai-ad-copywriter.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI ad copywriter.",
+    "rating": 4.5,
+    "rating_count": 3855,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.469552693813347,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.303904840746978,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.3709101986008205,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.540107622156633,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.2967046419927435,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Advertising",
+      "Copywriting",
+      "Facebook"
+    ]
+  },
+  {
+    "id": 1500,
+    "name": "AI Audience Analyzer",
+    "description": "AI受众分析工具，深入了解Facebook受众特征。",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://ai-audience-analyzer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI audience analyzer.",
+    "rating": 4.7,
+    "rating_count": 2634,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.374402954084748,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.640820143940491,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.455871524198266,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.3182504023078625,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "advanced",
+    "best_for": [
+      "Analytics",
+      "Audience",
+      "Facebook"
+    ]
+  },
+  {
+    "id": 1501,
+    "name": "AI Campaign Optimizer",
+    "description": "AI广告活动优化器，自动调整预算和投放策略。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://ai-campaign-optimizer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI campaign optimizer.",
+    "rating": 4.2,
+    "rating_count": 3262,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.622776844293741,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.3354736001993475,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.111607950086064,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.711960164534956,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.75706214945838,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.276057212694385,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Campaigns",
+      "Optimization",
+      "Advertising"
+    ]
+  },
+  {
+    "id": 1502,
+    "name": "AI Reels Editor",
+    "description": "专为Instagram Reels设计的AI视频编辑器。",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://ai-reels-editor.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Reels video editor.",
+    "rating": 4.8,
+    "rating_count": 2128,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.612043204266212,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.889774763785143,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.710218850162545,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.284615072236566,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Instagram Reels",
+      "Video Editing",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 1503,
+    "name": "AI Story Creator",
+    "description": "AI Instagram Story创建工具，自动生成精美故事。",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://ai-story-creator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Story creator.",
+    "rating": 4.4,
+    "rating_count": 4209,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5340226517495426,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.658858319458849,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.219784727567733,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.922158970995706,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.959180668642209,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.362435936083511,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Instagram Stories",
+      "Video",
+      "Creative"
+    ]
+  },
+  {
+    "id": 1504,
+    "name": "AI Video Trimmer",
+    "description": "AI视频裁剪工具，智能识别最佳片段。",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://ai-video-trimmer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video trimmer.",
+    "rating": 4.1,
+    "rating_count": 620,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.144293149988565,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 3.9910433680849633,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.657881035948806,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.318811666571241,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.504443376969001,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 3.8761510352007043,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video Editing",
+      "Trimming",
+      "Content Creation"
+    ]
+  },
+  {
+    "id": 1505,
+    "name": "AI Subtitle Generator",
+    "description": "AI字幕生成器，自动为视频添加多语言字幕。",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://ai-subtitle-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI subtitle generator.",
+    "rating": 4.2,
+    "rating_count": 2837,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.907557001467975,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.838709629890538,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.40667576769089,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.188915874802647,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.767925201486829,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.28543327698371,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Subtitles",
+      "Video",
+      "Multilingual"
+    ]
+  },
+  {
+    "id": 1506,
+    "name": "AI Thumbnail Maker",
+    "description": "AI视频缩略图生成器，创建吸引点击的封面。",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://ai-thumbnail-maker.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI thumbnail maker.",
+    "rating": 4.1,
+    "rating_count": 107,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.46399184601092,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 3.8173938027125938,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.654764616628054,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.1590810950083155,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 3.8367816351641997,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 3.7730669737532008,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Thumbnails",
+      "YouTube",
+      "Design"
+    ]
+  },
+  {
+    "id": 1507,
+    "name": "AI Logo Creator",
+    "description": "AI Logo设计工具，快速生成专业品牌标识。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://ai-logo-creator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI logo creator.",
+    "rating": 4.3,
+    "rating_count": 4314,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.801833597932286,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.492679045601748,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.069074619550948,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.818327155953367,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.497834078933042,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.347212399364876,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Logo Design",
+      "Branding",
+      "Business"
+    ]
+  },
+  {
+    "id": 1508,
+    "name": "AI Brand Kit Builder",
+    "description": "AI品牌套件生成器，一键创建完整品牌视觉系统。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://ai-brand-kit-builder.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI brand kit builder.",
+    "rating": 4.4,
+    "rating_count": 2549,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.633266168061085,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.509183120264862,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.243471273120503,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.647082117523549,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 3.9242088612291606,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Branding",
+      "Design",
+      "Business"
+    ]
+  },
+  {
+    "id": 1509,
+    "name": "AI Icon Generator",
+    "description": "AI图标生成器，为应用和网站创建精美图标。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://ai-icon-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI icon generator.",
+    "rating": 4.6,
+    "rating_count": 4053,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.599680983691185,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.690795633131896,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.795596928071108,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.894318862194252,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.7249052993186975,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.887138141322039,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Icons",
+      "Design",
+      "App Development"
+    ]
+  },
+  {
+    "id": 1510,
+    "name": "AI Mascot Designer",
+    "description": "AI吉祥物设计工具，为品牌创建独特的角色形象。",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://ai-mascot-designer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI mascot designer.",
+    "rating": 4.8,
+    "rating_count": 3711,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.588098235476624,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.593855715874926,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.615679582820344,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.628716615564597,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Mascot",
+      "Branding",
+      "Character Design"
+    ]
+  },
+  {
+    "id": 1511,
+    "name": "AI Watermark Remover",
+    "description": "AI水印移除工具，智能去除图片水印。",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://ai-watermark-remover.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI watermark remover.",
+    "rating": 4.3,
+    "rating_count": 2779,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.05172267922987,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.603520475276973,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 3.9378607833139414,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.502835852409442,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.334173147007233,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.238209014162229,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Watermark",
+      "Image Editing",
+      "Restoration"
+    ]
+  },
+  {
+    "id": 1512,
+    "name": "AI Podcast Editor",
+    "description": "AI播客编辑器，自动去除噪音和填充词。",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://ai-podcast-editor.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI podcast editor.",
+    "rating": 4.2,
+    "rating_count": 4552,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.827840763344269,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.002193749555629,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.3267976182740195,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.9154741725842666,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.160120405553069,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Podcast",
+      "Audio Editing",
+      "Noise Removal"
+    ]
+  },
+  {
+    "id": 1513,
+    "name": "AI Audio Enhancer",
+    "description": "AI音频增强工具，提升录音质量。",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://ai-audio-enhancer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI audio enhancer.",
+    "rating": 4.3,
+    "rating_count": 4940,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9307849341009056,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.689972449737879,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.046927324724121,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.187564413536842,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.796038150467939,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 3.8572942245544555,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Audio Quality",
+      "Enhancement",
+      "Recording"
+    ]
+  },
+  {
+    "id": 1514,
+    "name": "AI Podcast Transcriber",
+    "description": "AI播客转录工具，将音频转为文字。",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://ai-podcast-transcriber.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI podcast transcriber.",
+    "rating": 4.2,
+    "rating_count": 606,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.165340663247269,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.403419260972984,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.632025489650659,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.055880571098707,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.270382226995324,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 3.9122073105270068,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Transcription",
+      "Podcast",
+      "Text"
+    ]
+  },
+  {
+    "id": 1515,
+    "name": "AI Interview Editor",
+    "description": "AI采访编辑器，自动编辑和整理采访录音。",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://ai-interview-editor.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI interview editor.",
+    "rating": 4.3,
+    "rating_count": 231,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.078943563152919,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.82027289089598,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.506634065419795,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.682888968988353,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.011499691036778,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.5902625163932,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Interviews",
+      "Editing",
+      "Journalism"
+    ]
+  },
+  {
+    "id": 1516,
+    "name": "AI API Builder",
+    "description": "AI API构建工具，快速创建和部署REST API。",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://ai-api-builder.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI API builder.",
+    "rating": 4.5,
+    "rating_count": 906,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.029514973259678,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.342463669904994,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.593201552337739,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 5,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.489198982497783,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 3.989424633253793,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "API",
+      "Backend",
+      "Development"
+    ]
+  },
+  {
+    "id": 1517,
+    "name": "AI API Tester",
+    "description": "AI API测试工具，自动生成测试用例。",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://ai-api-tester.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI API tester.",
+    "rating": 4.7,
+    "rating_count": 679,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 5,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 5,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.692871820457871,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 5,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 5,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Testing",
+      "API",
+      "QA"
+    ]
+  },
+  {
+    "id": 1518,
+    "name": "AI Endpoint Manager",
+    "description": "AI API端点管理工具，监控和管理API性能。",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://ai-endpoint-manager.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI endpoint manager.",
+    "rating": 4.4,
+    "rating_count": 4553,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.256368642255767,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.42910868534764,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.500170422843698,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.768272137568101,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.735047987207117,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.583880378114359,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "advanced",
+    "best_for": [
+      "API Management",
+      "Monitoring",
+      "Performance"
+    ]
+  },
+  {
+    "id": 1519,
+    "name": "AI Schema Generator",
+    "description": "AI数据模型生成器，从描述自动生成API Schema。",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://ai-schema-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI schema generator.",
+    "rating": 4.5,
+    "rating_count": 1371,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.399832458494382,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.589801777073633,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.9296975954096744,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.910129846855009,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.78033691974862,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.488818857225201,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Schema",
+      "API",
+      "Database"
+    ]
+  },
+  {
+    "id": 1520,
+    "name": "AI Documentation Writer",
+    "description": "AI文档生成器，自动为API创建文档。",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://ai-documentation-writer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI documentation writer.",
+    "rating": 4.2,
+    "rating_count": 2442,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.485691198789416,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.117139841577303,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 3.848398307665338,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.46554920401568,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.552726333799397,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.524216066787253,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Documentation",
+      "API",
+      "Technical Writing"
+    ]
+  },
+  {
+    "id": 1521,
+    "name": "AI Blog Outliner",
+    "description": "AI博客大纲生成器，快速创建结构化文章大纲。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://ai-blog-outliner.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI blog outliner.",
+    "rating": 4.2,
+    "rating_count": 2349,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8909355365027336,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 3.9982223305402904,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.529045971056806,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.522853617770464,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.818239526625595,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.268118259947091,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Blog Writing",
+      "Outlining",
+      "Content"
+    ]
+  },
+  {
+    "id": 1522,
+    "name": "AI SEO Writer",
+    "description": "AI SEO写作工具，优化博客文章的搜索引擎排名。",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://ai-seo-writer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI SEO writer.",
+    "rating": 4.2,
+    "rating_count": 1538,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.115012041184382,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 3.9378308386487384,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.279816078311586,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.287433043129059,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.044088743588216,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.1585469947950395,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "SEO",
+      "Blog Writing",
+      "Optimization"
+    ]
+  },
+  {
+    "id": 1523,
+    "name": "AI Content Rewriter",
+    "description": "AI内容改写工具，智能重写文章保持原意。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://ai-content-rewriter.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI content rewriter.",
+    "rating": 4.5,
+    "rating_count": 238,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.943637086885074,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 5,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.593179409629581,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.9734243644352185,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.1648235313929645,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.816940618557077,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Rewriting",
+      "Content",
+      "Editing"
+    ]
+  },
+  {
+    "id": 1524,
+    "name": "AI Headline Generator",
+    "description": "AI标题生成器，创建吸引点击的博客标题。",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://ai-headline-generator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI headline generator.",
+    "rating": 4.2,
+    "rating_count": 846,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.352956348214871,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.648262921993925,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 4.616089383170995,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.095227180487039,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.852584654210425,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.028774905297569,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Headlines",
+      "Blog Writing",
+      "CTR"
+    ]
+  },
+  {
+    "id": 1525,
+    "name": "AI Email Automator",
+    "description": "AI邮件自动化工具，智能管理邮件营销活动。",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://ai-email-automator.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI email automator.",
+    "rating": 4,
+    "rating_count": 4503,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.04699327437875,
+        "note": "User-friendly"
+      },
+      "output_quality": {
+        "score": 4.3047384376454385,
+        "note": "High quality"
+      },
+      "features": {
+        "score": 3.6969065140612867,
+        "note": "Rich features"
+      },
+      "value_for_money": {
+        "score": 4.132904642278853,
+        "note": "Good value"
+      },
+      "stability": {
+        "score": 4.634632356830134,
+        "note": "Reliable"
+      },
+      "support": {
+        "score": 4.004509038971163,
+        "note": "Helpful support"
+      }
+    },
+    "last_updated": "2026-06-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Email",
+      "Automation",
+      "Marketing"
+    ]
   }
 ]
