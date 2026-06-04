@@ -128,7 +128,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col pb-16 md:pb-0">
+      <body className="min-h-full flex flex-col pb-16 md:pb-0 overflow-x-hidden">
         <a href="#main-content" className="skip-to-main">Skip to main content</a>
         <Suspense fallback={null}>
           <HolidayBanner />
@@ -153,7 +153,7 @@ export default function RootLayout({
           </Suspense>
           <Suspense fallback={null}>
             <ThemeToggle />
-            <div className="fixed bottom-20 left-4 md:bottom-4 md:left-4 z-40">
+            <div className="fixed bottom-20 left-4 md:bottom-4 md:left-4 z-40 safe-area-inset-bottom">
               <SoundToggle />
             </div>
           </Suspense>

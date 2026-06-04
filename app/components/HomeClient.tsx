@@ -337,6 +337,7 @@ const ToolCard = memo(function ToolCard({
                   d="M7 17L17 7"
                 />
               </svg>
+              <span className="sm:hidden text-[10px]">Visit</span>
               <span className="hidden sm:inline">{ctaText}</span>
               {hasAffiliate && <span className="hidden sm:inline text-[10px] opacity-60 ml-0.5">via partner</span>}
             </a>
@@ -2040,9 +2041,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           {/* Category Buttons */}
           <div className="relative" data-tour="categories">
             {/* Left Gradient Fade */}
-            <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-10 bg-gradient-to-r from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
+            <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-10 bg-gradient-to-r from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
             {/* Right Gradient Fade */}
-            <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-10 bg-gradient-to-l from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-10 bg-gradient-to-l from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
             
             <div className="flex overflow-x-auto scrollbar-hide gap-1 sm:gap-2.5 sm:justify-center sm:flex-wrap px-2 sm:px-0 py-1">
               {categories.map((category, index) => {
@@ -2218,9 +2219,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6">
             {/* Use AI Writer */}
-            <div className="bg-white dark:bg-gray-900 border-2 border-emerald-200 dark:border-emerald-500/20 rounded-2xl p-4 sm:p-6 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+            <div className="bg-white dark:bg-gray-900 border-2 border-emerald-200 dark:border-emerald-500/20 rounded-2xl p-3 sm:p-6 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-transparent to-teal-500/5 pointer-events-none" />
               {/* Live Now Badge */}
@@ -2229,9 +2230,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                   ✨ Live Now
                 </span>
               </div>
-              <div className="text-4xl mb-4">🖋️</div>
-              <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white mb-2">Use AI Writer</h3>
-              <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-2">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🖋️</div>
+              <h3 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white mb-1 sm:mb-2">Use AI Writer</h3>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed line-clamp-2">
                 Write 3x faster with AI — try it free. The AI writing tool built for creators who refuse to overpay. $5/mo vs Jasper $49/mo.
               </p>
               <div className="flex items-center gap-2 mb-4">
@@ -2249,10 +2250,10 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             </div>
 
             {/* Use AI Image */}
-            <div className="bg-white dark:bg-gray-900 border-2 border-violet-200 dark:border-violet-500/20 rounded-2xl p-4 sm:p-6 shadow-sm hover:shadow-xl hover:shadow-violet-500/5 hover:-translate-y-1 transition-all duration-300">
-              <div className="text-4xl mb-4">🎨</div>
-              <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white mb-2">Use AI Image</h3>
-              <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-2">
+            <div className="bg-white dark:bg-gray-900 border-2 border-violet-200 dark:border-violet-500/20 rounded-2xl p-3 sm:p-6 shadow-sm hover:shadow-xl hover:shadow-violet-500/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
+              <h3 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white mb-1 sm:mb-2">Use AI Image</h3>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed line-clamp-2">
                 Create stunning visuals in seconds. Text to image, multiple art styles, commercial use allowed.
               </p>
               <div className="flex items-center gap-2 mb-4">
@@ -2268,13 +2269,13 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             </div>
 
             {/* Mobile App */}
-            <div className="bg-white dark:bg-gray-900 border-2 border-slate-200 dark:border-slate-500/20 rounded-2xl p-4 sm:p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+            <div className="bg-white dark:bg-gray-900 border-2 border-slate-200 dark:border-slate-500/20 rounded-2xl p-3 sm:p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
               <div className="absolute top-3 right-3">
                 <span className="px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400">Coming Soon</span>
               </div>
-              <div className="text-4xl mb-4">📱</div>
-              <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white mb-2">Mobile App</h3>
-              <p className="text-sm text-slate-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-2">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
+              <h3 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white mb-1 sm:mb-2">Mobile App</h3>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed line-clamp-2">
                 Your favorite AI tools, now in your pocket. Push notifications, offline access, widget support.
               </p>
               <div className="flex items-center gap-2 mb-4">
@@ -2307,7 +2308,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             </Link>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
             {[...blogPosts]
               .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
               .slice(0, 5)
@@ -2327,7 +2328,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                   <Link
                     key={post.id}
                     href={`/blog/${post.slug}`}
-                    className="group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up"
+                    className="group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-3 sm:p-5 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up"
                     style={{ 
                       animationDelay: `${index * 50}ms`,
                       opacity: 0,
@@ -2338,26 +2339,26 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                       <img
                         src={post.images[0].url}
                         alt={post.images[0].alt}
-                        className="w-full h-40 object-cover rounded-xl mb-4"
+                        className="w-full h-28 sm:h-40 object-cover rounded-xl mb-3 sm:mb-4"
                         loading="lazy"
                         decoding="async"
                       />
                     )}
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+                    <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                      <span className="inline-flex items-center gap-1 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                         {post.category}
                       </span>
-                      <span className="text-xs text-slate-400 dark:text-gray-500">
+                      <span className="text-[10px] sm:text-xs text-slate-400 dark:text-gray-500">
                         {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                       </span>
                     </div>
-                    <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2">
+                    <h3 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white mb-1 sm:mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-slate-600 dark:text-gray-300 leading-relaxed line-clamp-2 mb-4">
+                    <p className="text-xs sm:text-sm text-slate-600 dark:text-gray-300 leading-relaxed line-clamp-2 mb-2 sm:mb-4">
                       {post.description}
                     </p>
-                    <div className="flex items-center gap-1 font-semibold text-sm text-emerald-600 dark:text-emerald-400">
+                    <div className="flex items-center gap-1 font-semibold text-xs sm:text-sm text-emerald-600 dark:text-emerald-400">
                       Read More →
                     </div>
                   </Link>
@@ -2377,7 +2378,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
             {[
               {
                 title: 'Content Creation',
@@ -2432,13 +2433,13 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               <Link
                 key={useCase.title}
                 href={useCase.href}
-                className={`group p-5 rounded-xl ${useCase.color} border border-transparent hover:border-slate-200 dark:hover:border-gray-700 transition-all duration-300 ease-out hover:-translate-y-1`}
+                className={`group p-3 sm:p-5 rounded-xl ${useCase.color} border border-transparent hover:border-slate-200 dark:hover:border-gray-700 transition-all duration-300 ease-out hover:-translate-y-1`}
               >
-                <div className="text-3xl mb-3">{useCase.icon}</div>
-                <h3 className="font-semibold text-slate-900 dark:text-white text-sm mb-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">{useCase.icon}</div>
+                <h3 className="font-semibold text-slate-900 dark:text-white text-xs sm:text-sm mb-0.5 sm:mb-1 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors truncate">
                   {useCase.title}
                 </h3>
-                <p className="text-xs text-slate-500 dark:text-gray-400">
+                <p className="text-[10px] sm:text-xs text-slate-500 dark:text-gray-400 truncate">
                   {useCase.description}
                 </p>
               </Link>
@@ -2453,13 +2454,13 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               🔥 Featured This Week
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {featuredTools.map((tool, index) => {
               const colors = getCategoryColors(tool.category);
               return (
                 <div
                   key={tool.id}
-                  className="shimmer-card bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up"
+                  className="shimmer-card bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-3 sm:p-5 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up"
                   style={{ 
                     willChange: 'transform', 
                     animationDelay: `${index * 50}ms`,
@@ -2511,7 +2512,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         {/* Blog Entry Card */}
         <div className="mb-16">
           <Link href="/blog" className="block">
-            <div className="bg-gradient-to-br from-emerald-50/90 via-white to-teal-50/90 dark:from-emerald-950/70 dark:via-gray-900 dark:to-teal-950/70 backdrop-blur-xl border border-emerald-200/60 dark:border-emerald-500/10 shadow-xl shadow-emerald-500/5 dark:shadow-2xl dark:shadow-emerald-500/5 rounded-3xl p-8 sm:p-10 hover:shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-1 transition-all duration-300 ease-out">
+            <div className="bg-gradient-to-br from-emerald-50/90 via-white to-teal-50/90 dark:from-emerald-950/70 dark:via-gray-900 dark:to-teal-950/70 backdrop-blur-xl border border-emerald-200/60 dark:border-emerald-500/10 shadow-xl shadow-emerald-500/5 dark:shadow-2xl dark:shadow-emerald-500/5 rounded-3xl p-5 sm:p-10 hover:shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-1 transition-all duration-300 ease-out">
               <div className="text-center">
                 <div className="text-3xl sm:text-4xl mb-3">📝</div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
