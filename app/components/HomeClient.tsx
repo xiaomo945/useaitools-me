@@ -589,7 +589,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       const prefs = localStorage.getItem('useaitools_prefs');
       if (prefs) {
         const parsed = JSON.parse(prefs);
-        if (parsed.selectedCategories && !parsed.selectedCategories.includes('All')) {
+        if (parsed.selectedCategories && parsed.selectedCategories.length > 0 && !parsed.selectedCategories.includes('All')) {
           setSelectedCategories(parsed.selectedCategories);
           setShowRestoredNotice(true);
           setTimeout(() => setShowRestoredNotice(false), 3000);
@@ -1269,7 +1269,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         const filters = sessionStorage.getItem('useaitools_filters');
         if (filters) {
           const parsed = JSON.parse(filters);
-          if (parsed.selectedCategories) setSelectedCategories(parsed.selectedCategories);
+          if (parsed.selectedCategories && parsed.selectedCategories.length > 0) setSelectedCategories(parsed.selectedCategories);
           if (parsed.selectedPricing) setSelectedPricing(parsed.selectedPricing);
           if (parsed.search) setSearch(parsed.search);
         }
