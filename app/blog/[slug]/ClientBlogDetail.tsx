@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import toolsData from '@/data/tools.json';
 import { Home, Share2, Copy, ChevronRight, List } from 'lucide-react';
 import Footer from '@/app/components/Footer';
@@ -230,7 +231,8 @@ export default function ClientBlogDetail({
   const [copied, setCopied] = useState(false);
   const [activeHeading, setActiveHeading] = useState('');
   const [showToc, setShowToc] = useState(false);
-  const [highlightTerm, setHighlightTerm] = useState<string | null>(null);
+  const searchParams = useSearchParams();
+  const highlightTerm = useMemo(() => searchParams.get('highlight'), [searchParams]);
   const url = `https://useaitools.me/blog/${slug}`;
   const encodedTitle = encodeURIComponent(post.title);
   const { display: readTime } = calculateReadTime(post.content);
@@ -271,10 +273,7 @@ export default function ClientBlogDetail({
 
   // Read highlight query param and scroll to first match
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const term = params.get('highlight');
-    if (term) {
-      setHighlightTerm(term);
+    if (highlightTerm) {
       setTimeout(() => {
         const firstMark = document.querySelector('mark');
         if (firstMark) {
@@ -282,7 +281,7 @@ export default function ClientBlogDetail({
         }
       }, 500);
     }
-  }, []);
+  }, [highlightTerm]);
 
   // Initialize code copy buttons
   useEffect(() => {
