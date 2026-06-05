@@ -157,7 +157,7 @@ const ToolCard = memo(function ToolCard({
       onTouchCancel={handleTouchEnd}
     >
       {/* Particle Effect */}
-      <CardParticleEffect active={true} />
+      <CardParticleEffect />
       
       {/* Shimmer effect for affiliate cards */}
       {hasAffiliate && (

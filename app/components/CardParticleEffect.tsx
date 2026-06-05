@@ -13,13 +13,25 @@ interface Particle {
   color: string;
 }
 
-export default function CardParticleEffect({ active }: { active: boolean }) {
+export default function CardParticleEffect() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isHovering, setIsHovering] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const particlesRef = useRef<Particle[]>([]);
   const animationRef = useRef<number | null>(null);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+    
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -36,22 +48,19 @@ export default function CardParticleEffect({ active }: { active: boolean }) {
       'rgba(16, 185, 129, 0.8)', // emerald-500
       'rgba(20, 184, 166, 0.8)', // teal-500
       'rgba(167, 139, 250, 0.8)', // violet-400
-      'rgba(251, 191, 36, 0.8)', // amber-400
-      'rgba(96, 165, 250, 0.8)', // blue-400
-      'rgba(244, 114, 182, 0.8)', // pink-400
     ];
 
     const createParticle = (x: number, y: number) => {
       const angle = Math.random() * Math.PI * 2;
-      const speed = Math.random() * 2 + 1;
+      const speed = Math.random() * 1.5 + 0.5;
       return {
         x,
         y,
         vx: Math.cos(angle) * speed,
         vy: Math.sin(angle) * speed,
         life: 1,
-        maxLife: Math.random() * 1 + 0.5,
-        radius: Math.random() * 4 + 2,
+        maxLife: Math.random() * 0.8 + 0.4,
+        radius: Math.random() * 2.5 + 1,
         color: colors[Math.floor(Math.random() * colors.length)],
       };
     };
@@ -62,14 +71,14 @@ export default function CardParticleEffect({ active }: { active: boolean }) {
       particlesRef.current = particlesRef.current.filter((particle) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
-        particle.life -= 0.02;
-        particle.vy += 0.05; // gravity
+        particle.life -= 0.025;
+        particle.vy += 0.04;
 
         if (particle.life <= 0) return false;
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.radius * particle.life, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color.replace('0.8', String(particle.life * 0.8));
+        ctx.fillStyle = particle.color.replace('0.8', String(particle.life * 0.7));
         ctx.fill();
 
         return true;
@@ -84,30 +93,14 @@ export default function CardParticleEffect({ active }: { active: boolean }) {
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       
-      for (let i = 0; i < 2; i++) {
-        particlesRef.current.push(createParticle(x, y));
-      }
-    };
-
-    const handleTouchMove = (e: TouchEvent) => {
-      if (!isHovering) return;
-      const rect = canvas.getBoundingClientRect();
-      if (e.touches.length > 0) {
-        const x = e.touches[0].clientX - rect.left;
-        const y = e.touches[0].clientY - rect.top;
-        
-        for (let i = 0; i < 2; i++) {
-          particlesRef.current.push(createParticle(x, y));
-        }
-      }
+      particlesRef.current.push(createParticle(x, y));
     };
 
     const handleMouseEnter = () => {
       setIsHovering(true);
-      // Create burst effect
       const centerX = canvas.width / 2;
       const centerY = canvas.height / 2;
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < 12; i++) {
         particlesRef.current.push(createParticle(centerX, centerY));
       }
     };
@@ -118,7 +111,6 @@ export default function CardParticleEffect({ active }: { active: boolean }) {
 
     window.addEventListener('resize', resizeCanvas);
     canvas.addEventListener('mousemove', handleMouseMove);
-    canvas.addEventListener('touchmove', handleTouchMove);
     canvas.addEventListener('mouseenter', handleMouseEnter);
     canvas.addEventListener('mouseleave', handleMouseLeave);
 
@@ -128,7 +120,6 @@ export default function CardParticleEffect({ active }: { active: boolean }) {
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       canvas.removeEventListener('mousemove', handleMouseMove);
-      canvas.removeEventListener('touchmove', handleTouchMove);
       canvas.removeEventListener('mouseenter', handleMouseEnter);
       canvas.removeEventListener('mouseleave', handleMouseLeave);
       
@@ -136,7 +127,9 @@ export default function CardParticleEffect({ active }: { active: boolean }) {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [isHovering]);
+  }, [isHovering, isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <canvas
