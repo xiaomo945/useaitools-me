@@ -8,6 +8,8 @@ import SkeletonCard from './Skeleton';
 import { useToast } from './Toast';
 import { debugLog } from '../utils/debug';
 import { playSaveSound, playUnsaveSound, playCompareSound, playSearchSound } from '../utils/sound';
+import CardParticleEffect from './CardParticleEffect';
+import EnhancedHeroEffect from './EnhancedHeroEffect';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -154,6 +156,9 @@ const ToolCard = memo(function ToolCard({
       onTouchMove={handleTouchMove}
       onTouchCancel={handleTouchEnd}
     >
+      {/* Particle Effect */}
+      <CardParticleEffect active={true} />
+      
       {/* Shimmer effect for affiliate cards */}
       {hasAffiliate && (
         <div className="absolute inset-0 overflow-hidden rounded-2xl pointer-events-none">
@@ -1580,6 +1585,8 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       <div className="max-w-7xl mx-auto px-3 sm:px-6">
         {/* Hero Section with Glow */}
         <div className="text-center mb-8 sm:mb-16 relative">
+          {/* Enhanced Hero Background Effect */}
+          <EnhancedHeroEffect />
           {/* Background Breathing Glow - Only Desktop */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent rounded-full blur-3xl animate-breathe pointer-events-none hidden sm:block" />
           
