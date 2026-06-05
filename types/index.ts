@@ -1,10 +1,11 @@
 export interface BlogImage {
   url: string;
   alt: string;
-  caption: string;
+  caption?: string;
   position?: string;
   prompt?: string;
   image_url?: string;
+  generated?: boolean;
 }
 
 export interface BlogPost {
@@ -15,11 +16,13 @@ export interface BlogPost {
   description: string;
   style?: string;
   category: string;
-  author?: string;
+  author?: string | { name?: string; avatar?: string };
   reading_time?: string;
   featured?: boolean;
+  thumbnail?: string;
   images: BlogImage[];
   content: string;
+  [key: string]: any; // 允许额外字段
 }
 
 export interface ToolExample {
