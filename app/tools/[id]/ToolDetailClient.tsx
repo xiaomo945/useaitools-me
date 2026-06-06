@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { ArrowRight, Home, Copy, Check, ChevronDown, Share2 } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import ToolVerdict from '@/app/components/ToolVerdict';
 import toolsData from '@/data/tools.json';
 
 // Save tool to browsing history
@@ -791,6 +792,16 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
             </div>
           </div>
         </div>
+
+        {/* Tool Verdict: Editor's one-liner recommendation */}
+        <ToolVerdict
+          name={tool.name}
+          category={tool.category}
+          pricing={tool.pricing}
+          best_for={tool.best_for}
+          hasAffiliate={hasAffiliate}
+          affiliateUrl={ctaUrl}
+        />
 
         {/* Use Cases Section */}
         {tool.use_cases && tool.use_cases.length > 0 && (
