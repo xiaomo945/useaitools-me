@@ -25,3 +25,4 @@
 | 17 | 商业战略 | `.trae/rules/17-business.md` | 商业模式、竞品分析、退出策略 | ⏳ 待创建 |
 | 18 | 日志自动化 | `.trae/rules/18-logging.md` | 日志生成、自动分篇、自动推送 | ⏳ 待创建 |
 | 19 | 素材管理 | `.trae/rules/19-assets.md` | 自动备份、分类存储、自动清理 | ⏳ 待创建 |
+| 24 | 决策引擎 | `.trae/rules/24-decision-engine.md` | 决策矩阵、场景推荐、对比引擎 | ✅ 已创建 |

@@ -1879,8 +1879,17 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             )}
           </div>
 
-          {/* Submit Tool + Mystery Box Buttons */}
+          {/* Help Me Choose + Submit Tool + Mystery Box Buttons */}
           <div className="text-center mb-6 sm:mb-8 flex flex-wrap items-center justify-center gap-3">
+            <Link
+              href="/compare"
+              className="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-emerald-600 dark:border-emerald-500 text-emerald-600 dark:text-emerald-400 font-semibold rounded-xl hover:bg-emerald-50 dark:hover:bg-emerald-500/10 hover:-translate-y-0.5 transition-all duration-300 text-sm"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+              Help Me Choose
+            </Link>
             <Link
               href="/submit"
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 rounded-full hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition-all duration-300 min-h-[44px]"
