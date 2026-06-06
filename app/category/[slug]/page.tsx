@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 import CategoryHero from './CategoryHero';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import CategoryStats from '@/app/components/CategoryStats';
+import GoldPicks from '@/app/components/GoldPicks';
 import type { Tool } from '@/types';
 
 const tools = toolsData as Tool[];
@@ -250,6 +251,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
           {/* Stats Component */}
           <CategoryStats category={category} tools={categoryTools} />
+
+          {/* Gold Picks: Top 3 Editor Recommendations */}
+          <GoldPicks tools={categoryTools} categoryColors={colors} />
 
           <div className={`h-px bg-gradient-to-r from-transparent via-${categorySlug.toLowerCase()}-300 dark:via-${categorySlug.toLowerCase()}-500/20 to-transparent mb-10 mx-auto max-w-2xl`} />
 
