@@ -1,3 +1,20 @@
+/**
+ * Batch Content Producer
+ * 
+ * Article Type Ratio (Updated 2026-06):
+ * - Comparison/Review: 60% (A vs B vs C or scenario decision guides) — MUST include Decision Matrix module
+ * - List/Recommendation: 25% (Best AI Tools for XXX)
+ * - Tutorial/How-to: 10% (How to XXX)
+ * - Other: 5%
+ * 
+ * Decision Matrix Module Template (for comparison articles):
+ * Append before CTA section:
+ * ---
+ * ## 🧭 Still Not Sure? Use Our Decision Matrix
+ * Can't decide which tool is right for you? Our interactive Decision Matrix lets you compare tools side-by-side based on your specific use case.
+ * 👉 [Open the Decision Matrix →](/compare)
+ * ---
+ */
 const fs = require('fs');
 const path = require('path');
 

@@ -4,9 +4,12 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import toolsData from '@/data/tools.json';
+import decisionMatricesData from '@/data/decision-matrices.json';
 import { Home, Share2, Check, Copy } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import ComparisonVisualization from '@/app/components/ComparisonVisualization';
+import { DecisionMatrixWithSwitcher } from '@/app/components/DecisionMatrix';
+import type { DecisionMatrixData } from '@/app/components/DecisionMatrix';
 import type { Tool } from '@/types';
 
 const tools = toolsData as Tool[];
@@ -220,6 +223,33 @@ export default function ComparePage() {
                 Select up to 3 AI tools to compare them side by side.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Quick Decision Matrix */}
+        <div className="mb-10">
+          <div className="bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl p-6 sm:p-8">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
+                🧭 Quick Decision
+              </h2>
+              <p className="text-sm text-slate-600 dark:text-gray-400">
+                Find the right tool for your scenario in seconds
+              </p>
+            </div>
+            <DecisionMatrixWithSwitcher matrices={decisionMatricesData as Record<string, DecisionMatrixData>} defaultCategory="Writing" />
+          </div>
+        </div>
+
+        {/* Detailed Comparison */}
+        <div className="mb-10">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-2">
+              Detailed Comparison
+            </h2>
+            <p className="text-sm text-slate-600 dark:text-gray-400">
+              Select specific tools for an in-depth side-by-side comparison
+            </p>
           </div>
         </div>
 
