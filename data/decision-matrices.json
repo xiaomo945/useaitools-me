@@ -1,0 +1,1106 @@
+{
+  "Writing": {
+    "category": "Writing",
+    "scenarios": [
+      {
+        "id": "blog",
+        "name": "Blog Posts",
+        "icon": "📝"
+      },
+      {
+        "id": "email",
+        "name": "Email",
+        "icon": "📧"
+      },
+      {
+        "id": "ad_copy",
+        "name": "Ad Copy",
+        "icon": "📢"
+      },
+      {
+        "id": "social_media",
+        "name": "Social Media",
+        "icon": "💬"
+      },
+      {
+        "id": "academic",
+        "name": "Academic",
+        "icon": "🎓"
+      }
+    ],
+    "tools": [
+      {
+        "id": 737,
+        "name": "ContentAI Writer",
+        "rating": 4.9,
+        "pricing": "Open Source",
+        "affiliateLink": "",
+        "url": "https://example.com/ai-tool-737"
+      },
+      {
+        "id": 786,
+        "name": "Review Comparison AI",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://review-comparison-ai.com"
+      },
+      {
+        "id": 1257,
+        "name": "ConvertWrite AI",
+        "rating": 4.9,
+        "pricing": "Paid",
+        "affiliateLink": "",
+        "url": "https://convertwriteai.com"
+      },
+      {
+        "id": 73,
+        "name": "Poe",
+        "rating": 4.8,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://poe.com"
+      },
+      {
+        "id": 90,
+        "name": "GrammarlyGO",
+        "rating": 4.8,
+        "pricing": "Freemium",
+        "affiliateLink": "https://www.grammarly.com/affiliates",
+        "url": "https://www.grammarly.com"
+      }
+    ],
+    "matrix": {
+      "73": {
+        "blog": {
+          "level": "best_fit",
+          "reason": "Poe excels here (4.8/5) — optimized for Content Creation"
+        },
+        "email": {
+          "level": "viable",
+          "reason": "Poe works well (4.8/5) but not specifically designed for this"
+        },
+        "ad_copy": {
+          "level": "viable",
+          "reason": "Poe works well (4.8/5) but not specifically designed for this"
+        },
+        "social_media": {
+          "level": "viable",
+          "reason": "Poe works well (4.8/5) but not specifically designed for this"
+        },
+        "academic": {
+          "level": "viable",
+          "reason": "Poe works well (4.8/5) but not specifically designed for this"
+        }
+      },
+      "90": {
+        "blog": {
+          "level": "best_fit",
+          "reason": "GrammarlyGO excels here (4.8/5) — optimized for Content Creation"
+        },
+        "email": {
+          "level": "viable",
+          "reason": "GrammarlyGO works well (4.8/5) but not specifically designed for this"
+        },
+        "ad_copy": {
+          "level": "viable",
+          "reason": "GrammarlyGO works well (4.8/5) but not specifically designed for this"
+        },
+        "social_media": {
+          "level": "viable",
+          "reason": "GrammarlyGO works well (4.8/5) but not specifically designed for this"
+        },
+        "academic": {
+          "level": "viable",
+          "reason": "GrammarlyGO works well (4.8/5) but not specifically designed for this"
+        }
+      },
+      "737": {
+        "blog": {
+          "level": "best_fit",
+          "reason": "ContentAI Writer excels here (4.9/5) — optimized for Content Creation"
+        },
+        "email": {
+          "level": "viable",
+          "reason": "ContentAI Writer works well (4.9/5) but not specifically designed for this"
+        },
+        "ad_copy": {
+          "level": "viable",
+          "reason": "ContentAI Writer works well (4.9/5) but not specifically designed for this"
+        },
+        "social_media": {
+          "level": "viable",
+          "reason": "ContentAI Writer works well (4.9/5) but not specifically designed for this"
+        },
+        "academic": {
+          "level": "viable",
+          "reason": "ContentAI Writer works well (4.9/5) but not specifically designed for this"
+        }
+      },
+      "786": {
+        "blog": {
+          "level": "best_fit",
+          "reason": "Review Comparison AI excels here (4.9/5) — optimized for Content"
+        },
+        "email": {
+          "level": "viable",
+          "reason": "Review Comparison AI works well (4.9/5) but not specifically designed for this"
+        },
+        "ad_copy": {
+          "level": "viable",
+          "reason": "Review Comparison AI works well (4.9/5) but not specifically designed for this"
+        },
+        "social_media": {
+          "level": "viable",
+          "reason": "Review Comparison AI works well (4.9/5) but not specifically designed for this"
+        },
+        "academic": {
+          "level": "viable",
+          "reason": "Review Comparison AI works well (4.9/5) but not specifically designed for this"
+        }
+      },
+      "1257": {
+        "blog": {
+          "level": "best_fit",
+          "reason": "ConvertWrite AI excels here (4.9/5) — optimized for Copywriting Frameworks"
+        },
+        "email": {
+          "level": "viable",
+          "reason": "ConvertWrite AI works well (4.9/5) but not specifically designed for this"
+        },
+        "ad_copy": {
+          "level": "best_fit",
+          "reason": "ConvertWrite AI excels here (4.9/5) — optimized for Landing Page Copy, Copywriting Frameworks"
+        },
+        "social_media": {
+          "level": "viable",
+          "reason": "ConvertWrite AI works well (4.9/5) but not specifically designed for this"
+        },
+        "academic": {
+          "level": "viable",
+          "reason": "ConvertWrite AI works well (4.9/5) but not specifically designed for this"
+        }
+      }
+    }
+  },
+  "Image": {
+    "category": "Image",
+    "scenarios": [
+      {
+        "id": "logo",
+        "name": "Logo Design",
+        "icon": "🏷️"
+      },
+      {
+        "id": "photo",
+        "name": "Photo Editing",
+        "icon": "📷"
+      },
+      {
+        "id": "illustration",
+        "name": "Illustration",
+        "icon": "🎨"
+      },
+      {
+        "id": "book_cover",
+        "name": "Book Cover",
+        "icon": "📖"
+      },
+      {
+        "id": "social_media",
+        "name": "Social Media",
+        "icon": "💬"
+      }
+    ],
+    "tools": [
+      {
+        "id": 19,
+        "name": "Adobe Firefly",
+        "rating": 5,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://firefly.adobe.com"
+      },
+      {
+        "id": 1179,
+        "name": "HeroSketch AI",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://herosketchai.com"
+      },
+      {
+        "id": 3,
+        "name": "Stable Diffusion",
+        "rating": 4.8,
+        "pricing": "Open Source",
+        "affiliateLink": "",
+        "url": "https://stability.ai"
+      },
+      {
+        "id": 77,
+        "name": "Ideogram",
+        "rating": 4.8,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://ideogram.ai"
+      },
+      {
+        "id": 392,
+        "name": "AI Decorator",
+        "rating": 4.8,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://ai-decorator.com"
+      }
+    ],
+    "matrix": {
+      "3": {
+        "logo": {
+          "level": "viable",
+          "reason": "Stable Diffusion works well (4.8/5) but not specifically designed for this"
+        },
+        "photo": {
+          "level": "viable",
+          "reason": "Stable Diffusion works well (4.8/5) but not specifically designed for this"
+        },
+        "illustration": {
+          "level": "viable",
+          "reason": "Stable Diffusion works well (4.8/5) but not specifically designed for this"
+        },
+        "book_cover": {
+          "level": "viable",
+          "reason": "Stable Diffusion works well (4.8/5) but not specifically designed for this"
+        },
+        "social_media": {
+          "level": "viable",
+          "reason": "Stable Diffusion works well (4.8/5) but not specifically designed for this"
+        }
+      },
+      "19": {
+        "logo": {
+          "level": "viable",
+          "reason": "Adobe Firefly works well (5.0/5) but not specifically designed for this"
+        },
+        "photo": {
+          "level": "viable",
+          "reason": "Adobe Firefly works well (5.0/5) but not specifically designed for this"
+        },
+        "illustration": {
+          "level": "best_fit",
+          "reason": "Adobe Firefly excels here (5.0/5) — optimized for Creative Projects"
+        },
+        "book_cover": {
+          "level": "viable",
+          "reason": "Adobe Firefly works well (5.0/5) but not specifically designed for this"
+        },
+        "social_media": {
+          "level": "best_fit",
+          "reason": "Adobe Firefly excels here (5.0/5) — optimized for Social Media"
+        }
+      },
+      "77": {
+        "logo": {
+          "level": "viable",
+          "reason": "Ideogram works well (4.8/5) but not specifically designed for this"
+        },
+        "photo": {
+          "level": "viable",
+          "reason": "Ideogram works well (4.8/5) but not specifically designed for this"
+        },
+        "illustration": {
+          "level": "best_fit",
+          "reason": "Ideogram excels here (4.8/5) — optimized for Creative Projects"
+        },
+        "book_cover": {
+          "level": "viable",
+          "reason": "Ideogram works well (4.8/5) but not specifically designed for this"
+        },
+        "social_media": {
+          "level": "best_fit",
+          "reason": "Ideogram excels here (4.8/5) — optimized for Social Media"
+        }
+      },
+      "392": {
+        "logo": {
+          "level": "viable",
+          "reason": "AI Decorator works well (4.8/5) but not specifically designed for this"
+        },
+        "photo": {
+          "level": "viable",
+          "reason": "AI Decorator works well (4.8/5) but not specifically designed for this"
+        },
+        "illustration": {
+          "level": "viable",
+          "reason": "AI Decorator works well (4.8/5) but not specifically designed for this"
+        },
+        "book_cover": {
+          "level": "viable",
+          "reason": "AI Decorator works well (4.8/5) but not specifically designed for this"
+        },
+        "social_media": {
+          "level": "viable",
+          "reason": "AI Decorator works well (4.8/5) but not specifically designed for this"
+        }
+      },
+      "1179": {
+        "logo": {
+          "level": "viable",
+          "reason": "HeroSketch AI works well (4.9/5) but not specifically designed for this"
+        },
+        "photo": {
+          "level": "viable",
+          "reason": "HeroSketch AI works well (4.9/5) but not specifically designed for this"
+        },
+        "illustration": {
+          "level": "viable",
+          "reason": "HeroSketch AI works well (4.9/5) but not specifically designed for this"
+        },
+        "book_cover": {
+          "level": "viable",
+          "reason": "HeroSketch AI works well (4.9/5) but not specifically designed for this"
+        },
+        "social_media": {
+          "level": "viable",
+          "reason": "HeroSketch AI works well (4.9/5) but not specifically designed for this"
+        }
+      }
+    }
+  },
+  "Video": {
+    "category": "Video",
+    "scenarios": [
+      {
+        "id": "youtube",
+        "name": "YouTube",
+        "icon": "▶️"
+      },
+      {
+        "id": "tiktok",
+        "name": "TikTok",
+        "icon": "🎵"
+      },
+      {
+        "id": "instagram",
+        "name": "Instagram Reels",
+        "icon": "📸"
+      },
+      {
+        "id": "professional",
+        "name": "Professional",
+        "icon": "💼"
+      },
+      {
+        "id": "course",
+        "name": "Course Content",
+        "icon": "📚"
+      }
+    ],
+    "tools": [
+      {
+        "id": 51,
+        "name": "VEED.io",
+        "rating": 5,
+        "pricing": "Freemium",
+        "affiliateLink": "https://www.veed.io/affiliate",
+        "url": "https://veed.io"
+      },
+      {
+        "id": 724,
+        "name": "DocumentaryAI",
+        "rating": 5,
+        "pricing": "Paid",
+        "affiliateLink": "",
+        "url": "https://example.com/ai-tool-724"
+      },
+      {
+        "id": 96,
+        "name": "Synthesia",
+        "rating": 4.9,
+        "pricing": "Paid",
+        "affiliateLink": "https://www.synthesia.io/affiliate",
+        "url": "https://www.synthesia.io"
+      },
+      {
+        "id": 856,
+        "name": "Property Listings AI",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://property-listings-ai.com"
+      },
+      {
+        "id": 511,
+        "name": "InVideo AI Studio",
+        "rating": 4.8,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://invideo-ai-studio.com"
+      }
+    ],
+    "matrix": {
+      "51": {
+        "youtube": {
+          "level": "viable",
+          "reason": "VEED.io works well (5.0/5) but not specifically designed for this"
+        },
+        "tiktok": {
+          "level": "viable",
+          "reason": "VEED.io works well (5.0/5) but not specifically designed for this"
+        },
+        "instagram": {
+          "level": "viable",
+          "reason": "VEED.io works well (5.0/5) but not specifically designed for this"
+        },
+        "professional": {
+          "level": "viable",
+          "reason": "VEED.io works well (5.0/5) but not specifically designed for this"
+        },
+        "course": {
+          "level": "viable",
+          "reason": "VEED.io works well (5.0/5) but not specifically designed for this"
+        }
+      },
+      "96": {
+        "youtube": {
+          "level": "viable",
+          "reason": "Synthesia works well (4.9/5) but not specifically designed for this"
+        },
+        "tiktok": {
+          "level": "viable",
+          "reason": "Synthesia works well (4.9/5) but not specifically designed for this"
+        },
+        "instagram": {
+          "level": "viable",
+          "reason": "Synthesia works well (4.9/5) but not specifically designed for this"
+        },
+        "professional": {
+          "level": "viable",
+          "reason": "Synthesia works well (4.9/5) but not specifically designed for this"
+        },
+        "course": {
+          "level": "best_fit",
+          "reason": "Synthesia excels here (4.9/5) — optimized for Training"
+        }
+      },
+      "511": {
+        "youtube": {
+          "level": "best_fit",
+          "reason": "InVideo AI Studio excels here (4.8/5) — optimized for Professional video, Content creation"
+        },
+        "tiktok": {
+          "level": "viable",
+          "reason": "InVideo AI Studio works well (4.8/5) but not specifically designed for this"
+        },
+        "instagram": {
+          "level": "viable",
+          "reason": "InVideo AI Studio works well (4.8/5) but not specifically designed for this"
+        },
+        "professional": {
+          "level": "best_fit",
+          "reason": "InVideo AI Studio excels here (4.8/5) — optimized for Professional video"
+        },
+        "course": {
+          "level": "viable",
+          "reason": "InVideo AI Studio works well (4.8/5) but not specifically designed for this"
+        }
+      },
+      "724": {
+        "youtube": {
+          "level": "best_fit",
+          "reason": "DocumentaryAI excels here (5.0/5) — optimized for Content Creation"
+        },
+        "tiktok": {
+          "level": "viable",
+          "reason": "DocumentaryAI works well (5.0/5) but not specifically designed for this"
+        },
+        "instagram": {
+          "level": "viable",
+          "reason": "DocumentaryAI works well (5.0/5) but not specifically designed for this"
+        },
+        "professional": {
+          "level": "viable",
+          "reason": "DocumentaryAI works well (5.0/5) but not specifically designed for this"
+        },
+        "course": {
+          "level": "viable",
+          "reason": "DocumentaryAI works well (5.0/5) but not specifically designed for this"
+        }
+      },
+      "856": {
+        "youtube": {
+          "level": "best_fit",
+          "reason": "Property Listings AI excels here (4.9/5) — optimized for Real Estate Videos"
+        },
+        "tiktok": {
+          "level": "viable",
+          "reason": "Property Listings AI works well (4.9/5) but not specifically designed for this"
+        },
+        "instagram": {
+          "level": "viable",
+          "reason": "Property Listings AI works well (4.9/5) but not specifically designed for this"
+        },
+        "professional": {
+          "level": "viable",
+          "reason": "Property Listings AI works well (4.9/5) but not specifically designed for this"
+        },
+        "course": {
+          "level": "viable",
+          "reason": "Property Listings AI works well (4.9/5) but not specifically designed for this"
+        }
+      }
+    }
+  },
+  "Audio": {
+    "category": "Audio",
+    "scenarios": [
+      {
+        "id": "podcast",
+        "name": "Podcast",
+        "icon": "🎙️"
+      },
+      {
+        "id": "voiceover",
+        "name": "Voiceover",
+        "icon": "🗣️"
+      },
+      {
+        "id": "music",
+        "name": "Music Creation",
+        "icon": "🎶"
+      },
+      {
+        "id": "transcription",
+        "name": "Transcription",
+        "icon": "📋"
+      },
+      {
+        "id": "audiobook",
+        "name": "Audiobook",
+        "icon": "🎧"
+      }
+    ],
+    "tools": [
+      {
+        "id": 711,
+        "name": "VoiceMaster Pro",
+        "rating": 4.9,
+        "pricing": "Paid",
+        "affiliateLink": "",
+        "url": "https://example.com/ai-tool-711"
+      },
+      {
+        "id": 1181,
+        "name": "TingleForge AI",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://tingleforgeai.com"
+      },
+      {
+        "id": 1208,
+        "name": "RemixEngine AI",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://remixengineai.com"
+      },
+      {
+        "id": 8,
+        "name": "ElevenLabs",
+        "rating": 4.8,
+        "pricing": "Freemium",
+        "affiliateLink": "https://elevenlabs.io/affiliate",
+        "url": "https://elevenlabs.io"
+      },
+      {
+        "id": 78,
+        "name": "Murf AI",
+        "rating": 4.8,
+        "pricing": "Freemium",
+        "affiliateLink": "https://murf.ai/affiliate",
+        "url": "https://murf.ai"
+      }
+    ],
+    "matrix": {
+      "8": {
+        "podcast": {
+          "level": "viable",
+          "reason": "ElevenLabs works well (4.8/5) but not specifically designed for this"
+        },
+        "voiceover": {
+          "level": "viable",
+          "reason": "ElevenLabs works well (4.8/5) but not specifically designed for this"
+        },
+        "music": {
+          "level": "viable",
+          "reason": "ElevenLabs works well (4.8/5) but not specifically designed for this"
+        },
+        "transcription": {
+          "level": "viable",
+          "reason": "ElevenLabs works well (4.8/5) but not specifically designed for this"
+        },
+        "audiobook": {
+          "level": "viable",
+          "reason": "ElevenLabs works well (4.8/5) but not specifically designed for this"
+        }
+      },
+      "78": {
+        "podcast": {
+          "level": "viable",
+          "reason": "Murf AI works well (4.8/5) but not specifically designed for this"
+        },
+        "voiceover": {
+          "level": "viable",
+          "reason": "Murf AI works well (4.8/5) but not specifically designed for this"
+        },
+        "music": {
+          "level": "viable",
+          "reason": "Murf AI works well (4.8/5) but not specifically designed for this"
+        },
+        "transcription": {
+          "level": "viable",
+          "reason": "Murf AI works well (4.8/5) but not specifically designed for this"
+        },
+        "audiobook": {
+          "level": "viable",
+          "reason": "Murf AI works well (4.8/5) but not specifically designed for this"
+        }
+      },
+      "711": {
+        "podcast": {
+          "level": "viable",
+          "reason": "VoiceMaster Pro works well (4.9/5) but not specifically designed for this"
+        },
+        "voiceover": {
+          "level": "viable",
+          "reason": "VoiceMaster Pro works well (4.9/5) but not specifically designed for this"
+        },
+        "music": {
+          "level": "viable",
+          "reason": "VoiceMaster Pro works well (4.9/5) but not specifically designed for this"
+        },
+        "transcription": {
+          "level": "viable",
+          "reason": "VoiceMaster Pro works well (4.9/5) but not specifically designed for this"
+        },
+        "audiobook": {
+          "level": "viable",
+          "reason": "VoiceMaster Pro works well (4.9/5) but not specifically designed for this"
+        }
+      },
+      "1181": {
+        "podcast": {
+          "level": "best_fit",
+          "reason": "TingleForge AI excels here (4.9/5) — optimized for Spatial Audio"
+        },
+        "voiceover": {
+          "level": "viable",
+          "reason": "TingleForge AI works well (4.9/5) but not specifically designed for this"
+        },
+        "music": {
+          "level": "viable",
+          "reason": "TingleForge AI works well (4.9/5) but not specifically designed for this"
+        },
+        "transcription": {
+          "level": "viable",
+          "reason": "TingleForge AI works well (4.9/5) but not specifically designed for this"
+        },
+        "audiobook": {
+          "level": "viable",
+          "reason": "TingleForge AI works well (4.9/5) but not specifically designed for this"
+        }
+      },
+      "1208": {
+        "podcast": {
+          "level": "viable",
+          "reason": "RemixEngine AI works well (4.9/5) but not specifically designed for this"
+        },
+        "voiceover": {
+          "level": "viable",
+          "reason": "RemixEngine AI works well (4.9/5) but not specifically designed for this"
+        },
+        "music": {
+          "level": "viable",
+          "reason": "RemixEngine AI works well (4.9/5) but not specifically designed for this"
+        },
+        "transcription": {
+          "level": "viable",
+          "reason": "RemixEngine AI works well (4.9/5) but not specifically designed for this"
+        },
+        "audiobook": {
+          "level": "viable",
+          "reason": "RemixEngine AI works well (4.9/5) but not specifically designed for this"
+        }
+      }
+    }
+  },
+  "Code": {
+    "category": "Code",
+    "scenarios": [
+      {
+        "id": "web_dev",
+        "name": "Web Development",
+        "icon": "🌐"
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile Apps",
+        "icon": "📱"
+      },
+      {
+        "id": "data_science",
+        "name": "Data Science",
+        "icon": "📊"
+      },
+      {
+        "id": "devops",
+        "name": "DevOps",
+        "icon": "⚙️"
+      },
+      {
+        "id": "debugging",
+        "name": "Debugging",
+        "icon": "🐛"
+      }
+    ],
+    "tools": [
+      {
+        "id": 722,
+        "name": "SecurityAI Coder",
+        "rating": 5,
+        "pricing": "Open Source",
+        "affiliateLink": "",
+        "url": "https://example.com/ai-tool-722"
+      },
+      {
+        "id": 85,
+        "name": "Replit AI",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://replit.com"
+      },
+      {
+        "id": 1233,
+        "name": "ReactNative AI",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://reactnativeai.com"
+      },
+      {
+        "id": 1255,
+        "name": "RestGen AI",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://restgenai.com"
+      },
+      {
+        "id": 92,
+        "name": "Hugging Face",
+        "rating": 4.8,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://huggingface.co"
+      }
+    ],
+    "matrix": {
+      "85": {
+        "web_dev": {
+          "level": "viable",
+          "reason": "Replit AI works well (4.9/5) but not specifically designed for this"
+        },
+        "mobile": {
+          "level": "viable",
+          "reason": "Replit AI works well (4.9/5) but not specifically designed for this"
+        },
+        "data_science": {
+          "level": "viable",
+          "reason": "Replit AI works well (4.9/5) but not specifically designed for this"
+        },
+        "devops": {
+          "level": "viable",
+          "reason": "Replit AI works well (4.9/5) but not specifically designed for this"
+        },
+        "debugging": {
+          "level": "viable",
+          "reason": "Replit AI works well (4.9/5) but not specifically designed for this"
+        }
+      },
+      "92": {
+        "web_dev": {
+          "level": "viable",
+          "reason": "Hugging Face works well (4.8/5) but not specifically designed for this"
+        },
+        "mobile": {
+          "level": "viable",
+          "reason": "Hugging Face works well (4.8/5) but not specifically designed for this"
+        },
+        "data_science": {
+          "level": "viable",
+          "reason": "Hugging Face works well (4.8/5) but not specifically designed for this"
+        },
+        "devops": {
+          "level": "viable",
+          "reason": "Hugging Face works well (4.8/5) but not specifically designed for this"
+        },
+        "debugging": {
+          "level": "viable",
+          "reason": "Hugging Face works well (4.8/5) but not specifically designed for this"
+        }
+      },
+      "722": {
+        "web_dev": {
+          "level": "viable",
+          "reason": "SecurityAI Coder works well (5.0/5) but not specifically designed for this"
+        },
+        "mobile": {
+          "level": "viable",
+          "reason": "SecurityAI Coder works well (5.0/5) but not specifically designed for this"
+        },
+        "data_science": {
+          "level": "viable",
+          "reason": "SecurityAI Coder works well (5.0/5) but not specifically designed for this"
+        },
+        "devops": {
+          "level": "viable",
+          "reason": "SecurityAI Coder works well (5.0/5) but not specifically designed for this"
+        },
+        "debugging": {
+          "level": "viable",
+          "reason": "SecurityAI Coder works well (5.0/5) but not specifically designed for this"
+        }
+      },
+      "1233": {
+        "web_dev": {
+          "level": "viable",
+          "reason": "ReactNative AI works well (4.9/5) but not specifically designed for this"
+        },
+        "mobile": {
+          "level": "viable",
+          "reason": "ReactNative AI works well (4.9/5) but not specifically designed for this"
+        },
+        "data_science": {
+          "level": "viable",
+          "reason": "ReactNative AI works well (4.9/5) but not specifically designed for this"
+        },
+        "devops": {
+          "level": "viable",
+          "reason": "ReactNative AI works well (4.9/5) but not specifically designed for this"
+        },
+        "debugging": {
+          "level": "viable",
+          "reason": "ReactNative AI works well (4.9/5) but not specifically designed for this"
+        }
+      },
+      "1255": {
+        "web_dev": {
+          "level": "viable",
+          "reason": "RestGen AI works well (4.9/5) but not specifically designed for this"
+        },
+        "mobile": {
+          "level": "viable",
+          "reason": "RestGen AI works well (4.9/5) but not specifically designed for this"
+        },
+        "data_science": {
+          "level": "viable",
+          "reason": "RestGen AI works well (4.9/5) but not specifically designed for this"
+        },
+        "devops": {
+          "level": "viable",
+          "reason": "RestGen AI works well (4.9/5) but not specifically designed for this"
+        },
+        "debugging": {
+          "level": "best_fit",
+          "reason": "RestGen AI excels here (4.9/5) — optimized for Error Handling"
+        }
+      }
+    }
+  },
+  "Productivity": {
+    "category": "Productivity",
+    "scenarios": [
+      {
+        "id": "project_mgmt",
+        "name": "Project Management",
+        "icon": "📋"
+      },
+      {
+        "id": "note_taking",
+        "name": "Note Taking",
+        "icon": "📝"
+      },
+      {
+        "id": "automation",
+        "name": "Automation",
+        "icon": "🤖"
+      },
+      {
+        "id": "collaboration",
+        "name": "Collaboration",
+        "icon": "👥"
+      },
+      {
+        "id": "scheduling",
+        "name": "Scheduling",
+        "icon": "📅"
+      }
+    ],
+    "tools": [
+      {
+        "id": 55,
+        "name": "AgentGPT",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://agentgpt.reworkd.ai"
+      },
+      {
+        "id": 63,
+        "name": "Khanmigo",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://www.khanacademy.org/khanmigo"
+      },
+      {
+        "id": 750,
+        "name": "Content Planner AI",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://content-planner-ai.com"
+      },
+      {
+        "id": 781,
+        "name": "YouTube Shorts Analytics AI",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://youtube-shorts-analytics-ai.com"
+      },
+      {
+        "id": 827,
+        "name": "Pitch Deck AI",
+        "rating": 4.9,
+        "pricing": "Freemium",
+        "affiliateLink": "",
+        "url": "https://pitch-deck-ai.com"
+      }
+    ],
+    "matrix": {
+      "55": {
+        "project_mgmt": {
+          "level": "viable",
+          "reason": "AgentGPT works well (4.9/5) but not specifically designed for this"
+        },
+        "note_taking": {
+          "level": "viable",
+          "reason": "AgentGPT works well (4.9/5) but not specifically designed for this"
+        },
+        "automation": {
+          "level": "viable",
+          "reason": "AgentGPT works well (4.9/5) but not specifically designed for this"
+        },
+        "collaboration": {
+          "level": "best_fit",
+          "reason": "AgentGPT excels here (4.9/5) — optimized for Teams"
+        },
+        "scheduling": {
+          "level": "viable",
+          "reason": "AgentGPT works well (4.9/5) but not specifically designed for this"
+        }
+      },
+      "63": {
+        "project_mgmt": {
+          "level": "viable",
+          "reason": "Khanmigo works well (4.9/5) but not specifically designed for this"
+        },
+        "note_taking": {
+          "level": "viable",
+          "reason": "Khanmigo works well (4.9/5) but not specifically designed for this"
+        },
+        "automation": {
+          "level": "viable",
+          "reason": "Khanmigo works well (4.9/5) but not specifically designed for this"
+        },
+        "collaboration": {
+          "level": "best_fit",
+          "reason": "Khanmigo excels here (4.9/5) — optimized for Teams"
+        },
+        "scheduling": {
+          "level": "viable",
+          "reason": "Khanmigo works well (4.9/5) but not specifically designed for this"
+        }
+      },
+      "750": {
+        "project_mgmt": {
+          "level": "best_fit",
+          "reason": "Content Planner AI excels here (4.9/5) — optimized for Content Planning"
+        },
+        "note_taking": {
+          "level": "viable",
+          "reason": "Content Planner AI works well (4.9/5) but not specifically designed for this"
+        },
+        "automation": {
+          "level": "viable",
+          "reason": "Content Planner AI works well (4.9/5) but not specifically designed for this"
+        },
+        "collaboration": {
+          "level": "viable",
+          "reason": "Content Planner AI works well (4.9/5) but not specifically designed for this"
+        },
+        "scheduling": {
+          "level": "viable",
+          "reason": "Content Planner AI works well (4.9/5) but not specifically designed for this"
+        }
+      },
+      "781": {
+        "project_mgmt": {
+          "level": "viable",
+          "reason": "YouTube Shorts Analytics AI works well (4.9/5) but not specifically designed for this"
+        },
+        "note_taking": {
+          "level": "viable",
+          "reason": "YouTube Shorts Analytics AI works well (4.9/5) but not specifically designed for this"
+        },
+        "automation": {
+          "level": "viable",
+          "reason": "YouTube Shorts Analytics AI works well (4.9/5) but not specifically designed for this"
+        },
+        "collaboration": {
+          "level": "viable",
+          "reason": "YouTube Shorts Analytics AI works well (4.9/5) but not specifically designed for this"
+        },
+        "scheduling": {
+          "level": "viable",
+          "reason": "YouTube Shorts Analytics AI works well (4.9/5) but not specifically designed for this"
+        }
+      },
+      "827": {
+        "project_mgmt": {
+          "level": "viable",
+          "reason": "Pitch Deck AI works well (4.9/5) but not specifically designed for this"
+        },
+        "note_taking": {
+          "level": "viable",
+          "reason": "Pitch Deck AI works well (4.9/5) but not specifically designed for this"
+        },
+        "automation": {
+          "level": "viable",
+          "reason": "Pitch Deck AI works well (4.9/5) but not specifically designed for this"
+        },
+        "collaboration": {
+          "level": "viable",
+          "reason": "Pitch Deck AI works well (4.9/5) but not specifically designed for this"
+        },
+        "scheduling": {
+          "level": "viable",
+          "reason": "Pitch Deck AI works well (4.9/5) but not specifically designed for this"
+        }
+      }
+    }
+  }
+}
