@@ -20,6 +20,7 @@ export interface BlogPost {
   featured?: boolean;
   images: BlogImage[];
   content: string;
+  tldr?: string; // TL;DR summary shown at the top (conclusion-first format)
 }
 
 export interface ToolExample {

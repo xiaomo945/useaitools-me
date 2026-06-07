@@ -23,6 +23,7 @@ type BlogPost = {
   content: string;
   category?: string;
   images?: BlogImage[];
+  tldr?: string;
 };
 
 interface TocItem {
@@ -372,6 +373,14 @@ export default function ClientBlogDetail({
           <h1 className="text-2.5xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
             {post.title}
           </h1>
+          
+          {/* TL;DR Section */}
+          {post.tldr && (
+            <div className="mt-6 p-4 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 rounded-xl">
+              <h2 className="text-sm font-bold text-emerald-700 dark:text-emerald-300 mb-1">TL;DR</h2>
+              <p className="text-sm text-slate-700 dark:text-slate-300">{post.tldr}</p>
+            </div>
+          )}
           
           {/* Mobile TOC Button */}
           {tocItems.length > 0 && (
