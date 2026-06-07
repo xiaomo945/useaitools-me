@@ -186,6 +186,76 @@ export default function AboutPage() {
             </div>
           </section>
 
+          {/* How We Review */}
+          <section className="mb-12" id="how-we-review">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-10 shadow-sm border border-slate-200 dark:border-gray-800">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center text-2xl">
+                    🔬
+                  </div>
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">How We Review &amp; Rate Tools</h2>
+              </div>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg mb-8">
+                Every tool in our directory is evaluated against a consistent set of criteria. Here&apos;s exactly how we do it:
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                {[
+                  { icon: '🎯', title: 'Ease of Use', desc: 'Can a beginner get productive results within 10 minutes? We test the onboarding flow, UI clarity, and learning curve.' },
+                  { icon: '⭐', title: 'Output Quality', desc: 'Does the tool deliver accurate, relevant, and professional results? We test real-world use cases, not just demos.' },
+                  { icon: '🧩', title: 'Features', desc: 'Breadth and depth of capabilities. Does it solve one problem well, or many problems adequately? We value focused excellence.' },
+                  { icon: '💰', title: 'Value for Money', desc: 'Pricing relative to competitors and actual usage. A $9 tool that replaces a $49 tool scores higher than an overpriced one.' },
+                  { icon: '🔒', title: 'Stability & Privacy', desc: 'Uptime, response speed, data handling practices. We flag tools with known privacy issues or frequent outages.' },
+                  { icon: '🤝', title: 'Support & Community', desc: 'Quality of documentation, customer support responsiveness, and whether there&apos;s an active user community.' },
+                ].map((item, i) => (
+                  <div key={i} className="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-xl">{item.icon}</span>
+                      <h3 className="font-semibold text-slate-900 dark:text-white">{item.title}</h3>
+                    </div>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Rating Scale */}
+              <div className="p-6 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800/50 rounded-xl">
+                <h3 className="font-semibold text-emerald-700 dark:text-emerald-300 mb-3">Our Rating Scale</h3>
+                <div className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                  <div className="flex items-start gap-3">
+                    <span className="font-bold text-amber-500 flex-shrink-0">★★★★★ (4.5+)</span>
+                    <span>Exceptional — Best in class, highly recommended</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="font-bold text-amber-500 flex-shrink-0">★★★★ (4.0–4.4)</span>
+                    <span>Excellent — Strong choice, minor areas for improvement</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="font-bold text-slate-500 flex-shrink-0">★★★ (3.0–3.9)</span>
+                    <span>Good — Solid tool with notable limitations</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="font-bold text-slate-400 flex-shrink-0">★★ (2.0–2.9)</span>
+                    <span>Fair — Works but has significant drawbacks</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="font-bold text-slate-400 flex-shrink-0">★ (1.0–1.9)</span>
+                    <span>Poor — Not recommended, better alternatives exist</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 text-sm text-slate-500 dark:text-slate-400">
+                <p>
+                  Ratings are based on our hands-on testing combined with aggregated user feedback from platforms like Reddit, Trustpilot, and verified user reviews. 
+                  Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Contact */}
           <section className="mb-12">
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-10 shadow-sm border border-slate-200 dark:border-gray-800 text-center">
