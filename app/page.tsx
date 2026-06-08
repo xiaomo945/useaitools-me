@@ -2,6 +2,7 @@ import tools from '@/data/tools.json';
 import { blogPosts } from '@/data/blog-posts';
 import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
+import SceneExplorer from '@/app/components/SceneExplorer';
 import type { Tool } from '@/types';
 
 // Helper function to get affiliate link from environment variable or fallback to JSON
@@ -142,12 +143,13 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }}
       />
-      <HomeClient 
-        initialTools={initialTools} 
-        featuredTools={selected} 
+      <HomeClient
+        initialTools={initialTools}
+        featuredTools={selected}
         blogPosts={blogPosts}
         totalCount={enrichedTools.length}
       />
+      <SceneExplorer />
       <Footer />
     </>
   );
