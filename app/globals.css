@@ -506,3 +506,50 @@ pre, code {
 .stagger-4 { animation-delay: 200ms; }
 .stagger-5 { animation-delay: 250ms; }
 .stagger-6 { animation-delay: 300ms; }
+
+/* Dark Mode Contrast Audit - WCAG AA 强化 */
+.dark {
+  /* 确保主文本对比度 ≥4.5:1 */
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #94a3b8;  /* 提升对比度 */
+  --slate-600: #cbd5e1;  /* 提升对比度 */
+  --slate-700: #e2e8f0;
+  --slate-800: #f1f5f9;
+  --slate-900: #ffffff;
+}
+
+/* 暗色模式常用文字增强 */
+.dark .text-slate-500 {
+  color: #94a3b8; /* 从 #64748b 提升 */
+}
+
+.dark .text-slate-400 {
+  color: #cbd5e1; /* 从 #94a3b8 提升 */
+}
+
+.dark .text-gray-500 {
+  color: #94a3b8;
+}
+
+.dark .text-gray-400 {
+  color: #cbd5e1;
+}
+
+/* 暗色模式边框增强可见性 */
+.dark .border-slate-200 {
+  border-color: rgba(148, 163, 184, 0.18); /* 提升可见性 */
+}
+
+.dark .border-gray-800 {
+  border-color: rgba(148, 163, 184, 0.18);
+}
+
+/* 暗色模式 placeholder 增强 */
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #94a3b8;
+  opacity: 0.7;
+}

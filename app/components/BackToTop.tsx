@@ -1,54 +1,35 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { ArrowUp } from 'lucide-react';
 
 export default function BackToTop() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+    const onScroll = () => {
+      setVisible(window.scrollY > 500);
     };
-
-    window.addEventListener('scroll', toggleVisibility);
-
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <>
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-20 right-4 md:bottom-8 md:right-8 z-50 p-3 rounded-full bg-emerald-600 text-white shadow-lg hover:bg-emerald-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 dark:focus:ring-offset-gray-950 animate-fade-in-up"
-          aria-label="Back to top"
-        >
-          <svg 
-            className="w-6 h-6" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M5 15l7-7 7 7" 
-            />
-          </svg>
-        </button>
-      )}
-    </>
+    <button
+      onClick={scrollToTop}
+      aria-label="Back to top"
+      className={`fixed bottom-6 right-6 z-30 w-11 h-11 rounded-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-lg hover:shadow-xl text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300 flex items-center justify-center ${
+        visible
+          ? 'opacity-100 translate-y-0 pointer-events-auto'
+          : 'opacity-0 translate-y-2 pointer-events-none'
+      }`}
+    >
+      <ArrowUp className="w-5 h-5" />
+    </button>
   );
 }

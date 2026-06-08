@@ -3,6 +3,7 @@ import { blogPosts } from '@/data/blog-posts';
 import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
 import SceneExplorer from '@/app/components/SceneExplorer';
+import StoryCard from '@/app/components/StoryCard';
 import type { Tool } from '@/types';
 
 // Helper function to get affiliate link from environment variable or fallback to JSON
@@ -150,6 +151,7 @@ export default function Home() {
         totalCount={enrichedTools.length}
       />
       <SceneExplorer />
+      <StoryCard />
       <Footer />
     </>
   );
