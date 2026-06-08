@@ -178,6 +178,163 @@ export const scenes: SceneConfig[] = [
         answer: 'AI-generated SEO content is not necessarily "better" than human-written content, but it\'s significantly faster. The best approach is a hybrid: AI generates the first draft following SEO best practices, then a human editor adds unique insights, examples, and brand voice. This combination delivers both speed and quality.'
       }
     ]
+  },
+  // ===== Phase 2: 用户意图驱动的场景（反方核心建议） =====
+  {
+    slug: 'youtube-shorts',
+    title: 'YouTube Shorts',
+    subtitle: 'Create Viral Short-Form Videos',
+    description: 'AI tools that help you script, edit, and optimize YouTube Shorts. From idea to upload in minutes.',
+    heroTag: '📱',
+    heroTagLabel: 'Short-Form Video',
+    metaTitle: 'Best AI Tools for YouTube Shorts in 2026: Script, Edit, Publish',
+    metaDescription: 'Create viral YouTube Shorts with AI. Auto-generate scripts, edit videos, add captions, and optimize for the algorithm.',
+    includes: [
+      'VEED.io', 'Pictory', 'InVideo', 'Descript', 'Opus Clip',
+      'CapCut', 'HeyGen', 'Lumen5', 'FlexClip', 'Murf AI',
+      'ElevenLabs', 'Synthesia', 'Fliki', 'Suno', 'Udio'
+    ],
+    topPicks: ['VEED.io', 'Pictory', 'InVideo'],
+    faq: [
+      {
+        question: 'What is the best AI tool for making YouTube Shorts?',
+        answer: 'For editing, CapCut is free and has built-in AI features. For scripting and creating from scratch, VEED.io and InVideo are the most beginner-friendly. For repurposing long videos into Shorts, Opus Clip uses AI to find the most viral moments automatically.'
+      }
+    ]
+  },
+  {
+    slug: 'resume-writing',
+    title: 'Resume & Cover Letter',
+    subtitle: 'AI Tools to Land Your Dream Job',
+    description: 'Stand out with AI-crafted resumes and cover letters. Beat ATS systems and impress recruiters.',
+    heroTag: '💼',
+    heroTagLabel: 'Job Search',
+    metaTitle: 'Best AI Resume & Cover Letter Tools in 2026: Land More Interviews',
+    metaDescription: 'AI tools to write resumes, cover letters, and LinkedIn profiles that get you interviews. Beat ATS systems and impress recruiters.',
+    includes: [
+      'Rytr', 'Resume.io', 'Rezi', 'Kickresume', 'Teal',
+      'Grammarly', 'Jasper', 'Copy.ai', 'Wordtune', 'QuillBot',
+      'LinkedIn', 'Enhancv', 'Zety'
+    ],
+    topPicks: ['Rytr', 'Rezi', 'Teal'],
+    faq: [
+      {
+        question: 'Can AI write a good resume?',
+        answer: 'Yes, modern AI resume tools can write ATS-optimized resumes that pass screening systems. Tools like Rezi and Teal specifically focus on ATS compatibility, keyword optimization, and recruiter-friendly formatting. For best results, use AI to draft the content, then customize with your personal achievements.'
+      }
+    ]
+  },
+  {
+    slug: 'language-learning',
+    title: 'Language Learning',
+    subtitle: 'AI Tutors for Any Language',
+    description: 'Learn languages faster with AI tutors. Practice conversation, get instant feedback, and improve pronunciation.',
+    heroTag: '🗣️',
+    heroTagLabel: 'Education',
+    metaTitle: 'Best AI Language Learning Tools in 2026: Speak Fluently Faster',
+    metaDescription: 'AI language tutors for English, Spanish, French, and 50+ languages. Practice conversation, get corrections, and improve pronunciation.',
+    includes: [
+      'Duolingo', 'Babbel', 'Speechify', 'Grammarly', 'Murf AI',
+      'ElevenLabs', 'Speechmatics', 'Loora', 'Speak', 'BoldVoice',
+      'Cake', 'Elsa Speak', 'Lingvist'
+    ],
+    topPicks: ['Murf AI', 'Speechify', 'Grammarly'],
+  },
+  {
+    slug: 'study-learning',
+    title: 'Study & Learning',
+    subtitle: 'AI Tools for Students and Self-Learners',
+    description: 'Learn anything faster with AI tutors, note-takers, and study planners. Perfect for students and lifelong learners.',
+    heroTag: '📚',
+    heroTagLabel: 'Education',
+    metaTitle: 'Best AI Study Tools in 2026: Learn Faster, Remember More',
+    metaDescription: 'AI tools for students and self-learners. Note-taking, flashcards, summarization, and personalized tutoring for any subject.',
+    includes: [
+      'Notion AI', 'Grammarly', 'QuillBot', 'Speechify', 'ChatGPT',
+      'Perplexity', 'Wolfram Alpha', 'Socratic', 'Quizlet', 'Anki',
+      'Elicit', 'Consensus', 'Genei', 'Scholarcy'
+    ],
+    topPicks: ['Notion AI', 'QuillBot', 'Grammarly'],
+  },
+  {
+    slug: 'design-graphics',
+    title: 'Design & Graphics',
+    subtitle: 'Create Stunning Visuals Without Skills',
+    description: 'Design logos, social media graphics, presentations, and marketing materials with AI. No Photoshop needed.',
+    heroTag: '🎨',
+    heroTagLabel: 'Visual Design',
+    metaTitle: 'Best AI Design & Graphics Tools in 2026: Create Like a Pro',
+    metaDescription: 'Create professional designs with AI. Logos, social media graphics, presentations, and marketing materials — no design skills required.',
+    includes: [
+      'Canva', 'Adobe Firefly', 'Midjourney', 'DALL-E', 'Ideogram',
+      'Leonardo', 'Stable Diffusion', 'Looka', 'Brandmark', 'Designs.ai',
+      'Microsoft Designer', 'Snappa', 'Figma', 'Recraft'
+    ],
+    topPicks: ['Canva', 'Adobe Firefly', 'Midjourney'],
+  },
+  {
+    slug: 'data-analysis',
+    title: 'Data Analysis',
+    subtitle: 'AI Tools for Insights and Visualization',
+    description: 'Turn data into insights with AI. Analyze spreadsheets, generate reports, and create visualizations automatically.',
+    heroTag: '📊',
+    heroTagLabel: 'Business Intelligence',
+    metaTitle: 'Best AI Data Analysis Tools in 2026: Insights Without Coding',
+    metaDescription: 'AI tools for data analysis, visualization, and reporting. Analyze spreadsheets, generate insights, and create dashboards automatically.',
+    includes: [
+      'Julius AI', 'ChatGPT', 'Microsoft Copilot', 'Google Bard', 'DataRobot',
+      'Tableau', 'Power BI', 'Akkio', 'Obviously AI', 'MonkeyLearn',
+      'Airtable', 'Notion AI'
+    ],
+    topPicks: ['Julius AI', 'Microsoft Copilot', 'Akkio'],
+  },
+  {
+    slug: 'customer-support',
+    title: 'Customer Support',
+    subtitle: 'AI Tools for Support Teams',
+    description: 'AI chatbots, ticket triage, and help desk automation. Deliver 24/7 support without scaling your team.',
+    heroTag: '💬',
+    heroTagLabel: 'Customer Service',
+    metaTitle: 'Best AI Customer Support Tools in 2026: 24/7 Service at Scale',
+    metaDescription: 'AI tools for customer support. Chatbots, ticket triage, knowledge bases, and help desk automation for any business size.',
+    includes: [
+      'Intercom', 'Zendesk', 'Drift', 'Tidio', 'Ada',
+      'LivePerson', 'Freshdesk', 'Kustomer', 'Crisp', 'Help Scout',
+      'ChatGPT', 'Claude', 'Forethought'
+    ],
+    topPicks: ['Intercom', 'Tidio', 'Crisp'],
+  },
+  {
+    slug: 'meeting-productivity',
+    title: 'Meeting Productivity',
+    subtitle: 'AI Tools for Smarter Meetings',
+    description: 'Transcribe, summarize, and extract action items from meetings automatically. Never take notes again.',
+    heroTag: '🎯',
+    heroTagLabel: 'Productivity',
+    metaTitle: 'Best AI Meeting Tools in 2026: Never Take Notes Again',
+    metaDescription: 'AI tools for meeting transcription, summarization, and action item extraction. Save 5+ hours per week with smart meeting assistants.',
+    includes: [
+      'Otter.ai', 'Fireflies.ai', 'Fathom', 'Zoom', 'Microsoft Teams',
+      'Notion AI', 'Granola', 'tl;dv', 'Read.ai', 'Avoma',
+      'Krisp', 'Sembly'
+    ],
+    topPicks: ['Otter.ai', 'Fathom', 'Granola'],
+  },
+  {
+    slug: 'ai-art-generation',
+    title: 'AI Art Generation',
+    subtitle: 'Create Beautiful Artwork with AI',
+    description: 'Generate stunning artwork, illustrations, and concept art with AI. From photorealistic to anime styles.',
+    heroTag: '🖼️',
+    heroTagLabel: 'Creative Arts',
+    metaTitle: 'Best AI Art Generators in 2026: From Realistic to Anime',
+    metaDescription: 'Compare the top AI art generators. Midjourney, DALL-E, Stable Diffusion and more. Create stunning artwork in any style.',
+    includes: [
+      'Midjourney', 'DALL-E', 'Stable Diffusion', 'Leonardo', 'Ideogram',
+      'Adobe Firefly', 'Recraft', 'Flux', 'Krea', 'Playground AI',
+      'Lexica', 'NightCafe', 'Bing Image Creator', 'Sora'
+    ],
+    topPicks: ['Midjourney', 'DALL-E', 'Adobe Firefly'],
   }
 ];
 

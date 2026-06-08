@@ -7,14 +7,14 @@ const tourSteps = [
   {
     target: 'search',
     selector: 'input[type="text"][placeholder*="Search" i]',
-    title: '🔍 Search for Tools',
-    description: 'Start by searching for a tool you need. Just type and hit Enter!',
+    title: '🔍 Search 1,300+ Tools',
+    description: 'Type any tool name, category, or use case. Try "Rytr" or "blog writing".',
   },
   {
     target: 'categories',
     selector: '[data-tour="categories"]',
     title: '📂 Browse by Category',
-    description: 'Or explore tools by category — Writing, Image, Video, and more.',
+    description: 'Or filter by category — Writing, Image, Productivity, Code, Audio, Video.',
   },
   {
     target: 'toolcard',
@@ -25,42 +25,72 @@ const tourSteps = [
 ];
 
 const STORAGE_KEY = 'useaitools_tour_completed';
+const INTERACTION_KEY = 'useaitools_tour_interaction';
+// 800ms 内检测到任意交互，认为用户"已经懂了"
+const SKIP_CHECK_DELAY = 800;
 
 export default function GuidedTour() {
   const [step, setStep] = useState(0);
   const [visible, setVisible] = useState(false);
-  const [position, setPosition] = useState({ top: 0, left: 0, placement: 'bottom' as 'top' | 'bottom' });
+  const [position, setPosition] = useState({ top: 0, left: 0 });
   const [targetRect, setTargetRect] = useState<{ top: number; left: number; width: number; height: number } | null>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
-  const lastScrollY = useRef(0);
-
-  // 初始化：检查是否需要展示
-  useEffect(() => {
-    try {
-      const params = new URLSearchParams(window.location.search);
-      if (params.get('replay-tour') === '1') {
-        localStorage.removeItem(STORAGE_KEY);
-        window.history.replaceState({}, '', '/');
-      }
-      const completed = localStorage.getItem(STORAGE_KEY);
-      // 延迟展示：等首屏渲染完成
-      if (!completed) {
-        const timer = setTimeout(() => setVisible(true), 2000);
-        return () => clearTimeout(timer);
-      }
-    } catch {
-      // localStorage 不可用时直接跳过引导
-    }
-  }, []);
+  const interactionDetected = useRef(false);
 
   const closeTour = useCallback(() => {
     setVisible(false);
     try {
       localStorage.setItem(STORAGE_KEY, 'true');
-    } catch {
-      // 静默失败
-    }
+    } catch {}
   }, []);
+
+  // 启动引导 + 智能检测用户是否已经交互
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('replay-tour') === '1') {
+        localStorage.removeItem(STORAGE_KEY);
+        localStorage.removeItem(INTERACTION_KEY);
+        window.history.replaceState({}, '', '/');
+      }
+      const completed = localStorage.getItem(STORAGE_KEY);
+      if (completed) return;
+
+      // 监听用户首次交互
+      const handleFirstInteraction = () => {
+        if (interactionDetected.current) return;
+        interactionDetected.current = true;
+        try {
+          localStorage.setItem(INTERACTION_KEY, 'true');
+        } catch {}
+        // 800ms 后检查，决定是否跳过引导
+        setTimeout(() => {
+          if (visible) {
+            // 用户已开始操作，关闭引导
+            closeTour();
+          }
+        }, SKIP_CHECK_DELAY);
+      };
+
+      // 监听多种交互事件
+      const events: Array<keyof DocumentEventMap> = ['click', 'keydown', 'scroll', 'touchstart'];
+      events.forEach(ev => document.addEventListener(ev, handleFirstInteraction, { once: true, passive: true }));
+
+      // 500ms 后才显示引导（比之前的 2000ms 快很多）
+      const showTimer = setTimeout(() => {
+        if (!interactionDetected.current) {
+          setVisible(true);
+        }
+      }, 500);
+
+      return () => {
+        clearTimeout(showTimer);
+        events.forEach(ev => document.removeEventListener(ev, handleFirstInteraction));
+      };
+    } catch {
+      // localStorage 不可用，静默跳过
+    }
+  }, [visible, closeTour]);
 
   // 键盘 Esc 关闭
   useEffect(() => {
@@ -92,9 +122,7 @@ export default function GuidedTour() {
       }
 
       const rect = el.getBoundingClientRect();
-      lastScrollY.current = window.scrollY;
 
-      // 高亮区域
       setTargetRect({
         top: rect.top,
         left: rect.left,
@@ -102,21 +130,19 @@ export default function GuidedTour() {
         height: rect.height,
       });
 
-      // 智能选择 tooltip 位置：优先在目标元素下方，空间不够则放上方
+      // 智能选择 tooltip 位置
       const tooltipHeight = 200;
       const spaceBelow = window.innerHeight - rect.bottom;
-      const placement: 'top' | 'bottom' = spaceBelow > tooltipHeight + 40 ? 'bottom' : 'top';
-
-      const top = placement === 'bottom'
+      const top = spaceBelow > tooltipHeight + 40
         ? rect.bottom + window.scrollY + 12
         : rect.top + window.scrollY - tooltipHeight - 12;
 
-      // tooltip 居中于目标，约束在视口内
+      // 居中 + 视口约束
       const tooltipWidth = 288;
       let left = rect.left + rect.width / 2 - tooltipWidth / 2;
       left = Math.max(16, Math.min(left, window.innerWidth - tooltipWidth - 16));
 
-      setPosition({ top, left, placement });
+      setPosition({ top, left });
     };
 
     updatePosition();
@@ -140,21 +166,6 @@ export default function GuidedTour() {
     if (step > 0) setStep(s => s - 1);
   };
 
-  // 点击目标元素时不关闭引导（让用户实际操作）
-  const handleTargetClick = (e: MouseEvent) => {
-    // 允许用户点击目标区域；不阻止事件传播
-  };
-
-  useEffect(() => {
-    if (!visible || !targetRect) return;
-    const currentStep = tourSteps[step];
-    if (!currentStep) return;
-    const el = document.querySelector(currentStep.selector);
-    if (!el) return;
-    el.addEventListener('click', handleTargetClick as any);
-    return () => el.removeEventListener('click', handleTargetClick as any);
-  }, [step, visible, targetRect]);
-
   if (!visible) return null;
 
   const currentStep = tourSteps[step];
@@ -162,7 +173,7 @@ export default function GuidedTour() {
 
   return (
     <>
-      {/* 高亮框（不拦截事件）—— 装饰性提示，不阻挡用户操作 */}
+      {/* 高亮框（不拦截事件） */}
       {targetRect && (
         <div
           className="fixed z-40 pointer-events-none rounded-2xl ring-4 ring-emerald-400/60 transition-all duration-300 animate-fade-in"
@@ -171,12 +182,12 @@ export default function GuidedTour() {
             left: targetRect.left - 8,
             width: targetRect.width + 16,
             height: targetRect.height + 16,
-            boxShadow: '0 0 0 9999px rgba(0, 0, 0, 0.15)',
+            boxShadow: '0 0 0 9999px rgba(0, 0, 0, 0.18)',
           }}
         />
       )}
 
-      {/* Tooltip 浮层 —— 可交互，但不阻挡其他 UI */}
+      {/* Tooltip */}
       <div
         ref={tooltipRef}
         role="dialog"
@@ -188,7 +199,7 @@ export default function GuidedTour() {
           left: `${position.left}px`,
         }}
       >
-        {/* 关闭按钮 —— 永远可见，救命稻草 */}
+        {/* 关闭按钮 */}
         <button
           onClick={closeTour}
           aria-label="Close tour"
@@ -244,7 +255,7 @@ export default function GuidedTour() {
         </div>
 
         <p className="mt-3 text-[10px] text-slate-400 dark:text-slate-500 text-center">
-          Press Esc anytime to close
+          Press Esc anytime · auto-closes when you start exploring
         </p>
       </div>
     </>
