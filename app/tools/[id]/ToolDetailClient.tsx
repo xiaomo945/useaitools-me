@@ -7,6 +7,7 @@ import { ArrowRight, Home, Copy, Check, ChevronDown, Share2 } from 'lucide-react
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ToolVerdict from '@/app/components/ToolVerdict';
+import RelatedTools from '@/app/components/RelatedTools';
 import toolsData from '@/data/tools.json';
 
 // Save tool to browsing history
@@ -1270,6 +1271,9 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
             Back to Home
           </Link>
         </div>
+
+        {/* Related Tools: Similar tools in same category */}
+        <RelatedTools currentTool={tool} allTools={toolsData as any} limit={4} />
       </div>
       <Footer />
     </div>
