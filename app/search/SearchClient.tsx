@@ -55,19 +55,33 @@ function SearchPageInner() {
               type="text"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search 1,300+ AI tools..."
-              className="w-full pl-12 pr-4 py-4 rounded-2xl border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-slate-900 dark:text-white placeholder:text-slate-400 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+              placeholder="Search 1,300+ AI tools (try 'Rytr', 'blog writing', 'free video editor')..."
+              className="w-full pl-12 pr-32 py-4 rounded-2xl border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-slate-900 dark:text-white placeholder:text-slate-400 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
               autoFocus
             />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-semibold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300"
-              >
-                Clear
-              </button>
-            )}
+            {/* 实时结果计数 - 解决挑刺 #19 */}
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
+              {searchQuery && (
+                <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hidden sm:inline">
+                  {textFiltered.length} {textFiltered.length === 1 ? 'result' : 'results'}
+                </span>
+              )}
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="text-xs font-semibold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 px-2 py-1 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
           </div>
+          {/* 移动端结果计数 */}
+          {searchQuery && (
+            <p className="sm:hidden text-center text-xs text-slate-500 dark:text-slate-400 mt-2">
+              {textFiltered.length} {textFiltered.length === 1 ? 'result' : 'results'} for &ldquo;{searchQuery}&rdquo;
+            </p>
+          )}
         </div>
 
         {/* Filters + Results */}
