@@ -40,8 +40,34 @@ export default function PrivacyPage() {
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">You have the right to access, correct, or delete your data at any time. Since we store data locally in your browser, you can clear it through browser settings. For any questions, contact us at affiliate@useaitools.me.</p>
           </section>
           <section>
-            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">7. Changes to This Policy</h2>
-            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date.</p>
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">7. GDPR Compliance (EU/EEA Users)</h2>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">If you are located in the European Economic Area (EEA), you have the following rights under the General Data Protection Regulation (GDPR):</p>
+            <ul className="list-disc pl-5 space-y-2 mt-3 text-slate-600 dark:text-slate-400">
+              <li><strong>Right of Access</strong> — You can request a copy of your personal data we hold.</li>
+              <li><strong>Right to Rectification</strong> — You can ask us to correct inaccurate or incomplete data.</li>
+              <li><strong>Right to Erasure</strong> — You can request deletion of your personal data ("right to be forgotten").</li>
+              <li><strong>Right to Restriction</strong> — You can ask us to limit how we process your data.</li>
+              <li><strong>Right to Data Portability</strong> — You can request your data in a machine-readable format.</li>
+              <li><strong>Right to Object</strong> — You can object to processing based on legitimate interests.</li>
+            </ul>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed mt-3">Our legal basis for processing is <strong>legitimate interest</strong> (Article 6(1)(f)) — providing and improving our service. We store all user preferences locally in your browser, not on our servers. To exercise any of these rights, email us at <strong>affiliate@useaitools.me</strong>. We will respond within 30 days.</p>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed mt-3">You also have the right to lodge a complaint with your local data protection supervisory authority.</p>
+          </section>
+          <section>
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">8. International Data Transfers</h2>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">Our website is hosted through Vercel, which may process data on servers located globally including the United States. Vercel is certified under the EU-U.S. Data Privacy Framework, ensuring adequate protection for personal data transferred from the EEA. Your localStorage data never leaves your browser.</p>
+          </section>
+          <section>
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">9. Data Retention</h2>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">We do not store personal data on our servers. All preferences (saved tools, theme, language) are stored in your browser's localStorage and remain there until you clear your browser data. You can delete this data at any time through your browser settings.</p>
+          </section>
+          <section>
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">10. Children's Privacy</h2>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">Our service is not directed to children under 13 (or 16 in the EEA). We do not knowingly collect personal data from children. If you believe a child has provided us with personal data, please contact us and we will delete it.</p>
+          </section>
+          <section>
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">11. Changes to This Policy</h2>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date. For material changes, we will display a notice on our homepage.</p>
           </section>
         </div>
       </div>

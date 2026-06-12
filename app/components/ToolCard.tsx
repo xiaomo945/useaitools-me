@@ -25,6 +25,28 @@ const highlightText = (text: string, searchTerm: string) => {
   );
 };
 
+interface ToolCardProps {
+  tool: any;
+  index: number;
+  search: string;
+  isSaved: boolean;
+  isSelectedForCompare: boolean;
+  toggleSave: (id: number) => void;
+  toggleCompare: (id: number) => void;
+  hasAffiliate: boolean;
+  ctaText: string;
+  heartBurst: boolean;
+  getCategoryColors: (cat: string) => any;
+  getPricingColors: (pricing: string) => any;
+  getSkillLevelColors: (level: 'beginner' | 'intermediate' | 'advanced') => any;
+  getAffiliateLink: (tool: any) => string;
+  router: any;
+  comparePulse: boolean;
+  onLongPress: (tool: any) => void;
+  shortcutNumber?: number;
+  onSwipeCategory?: (direction: 'left' | 'right') => void;
+}
+
 const ToolCard = memo(function ToolCard({
   tool,
   index,
@@ -45,27 +67,7 @@ const ToolCard = memo(function ToolCard({
   onLongPress,
   shortcutNumber,
   onSwipeCategory
-}: {
-  tool: any;
-  index: number;
-  search: string;
-  isSaved: boolean;
-  isSelectedForCompare: boolean;
-  toggleSave: (id: number) => void;
-  toggleCompare: (id: number) => void;
-  hasAffiliate: boolean;
-  ctaText: string;
-  heartBurst: boolean;
-  getCategoryColors: (cat: string) => any;
-  getPricingColors: (pricing: string) => any;
-  getSkillLevelColors: (level: 'beginner' | 'intermediate' | 'advanced') => any;
-  getAffiliateLink: (tool: any) => string;
-  router: any;
-  comparePulse: boolean;
-  onLongPress: (tool: any) => void;
-  shortcutNumber?: number;
-  onSwipeCategory?: (direction: 'left' | 'right') => void;
-}) {
+}: ToolCardProps) {
   const colors = getCategoryColors(tool.category);
   const pricingColors = getPricingColors(tool.pricing);
   const [saveAnimating, setSaveAnimating] = useState(false);
@@ -291,9 +293,11 @@ const ToolCard = memo(function ToolCard({
                   window.dispatchEvent(new CustomEvent('useaitools:external-link', { detail: { domain } }));
                 } catch { /* ignore */ }
               }}
-              className={`inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[44px] min-w-[44px] text-xs sm:text-sm font-semibold rounded-xl transition-all duration-300 ease-out hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98] ${
+              className={`inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[44px] min-w-[44px] text-xs sm:text-sm font-semibold rounded-xl transition-all duration-300 ease-out hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98] ${
                 hasAffiliate
-                  ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl hover:shadow-emerald-500/25 border border-transparent'
+                  ? (ctaText || '').includes('10,000')
+                    ? 'bg-gradient-to-r from-indigo-500 to-violet-500 text-white shadow-sm hover:from-indigo-600 hover:to-violet-600 hover:shadow-xl hover:shadow-indigo-500/25 border border-transparent'
+                    : 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl hover:shadow-emerald-500/25 border border-transparent'
                   : 'border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent'
               }`}
             >
@@ -349,6 +353,6 @@ const ToolCard = memo(function ToolCard({
       </div>
     </div>
   );
-});
+})
 
 export default ToolCard;

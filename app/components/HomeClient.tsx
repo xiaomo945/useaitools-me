@@ -450,10 +450,14 @@ const getAffiliateLink = (tool: Tool): string => {
   return url.toString();
 };
 
-// CTA A/B test variants
+// CTA A/B test variants — track via Vercel Analytics
+// Variant A: direct action-oriented ("Try It Free")
+// Variant B: low-commitment discovery ("Explore Tool")
+// Variant C: social proof ("Join 10,000+ Users")
 const ctaVariants = {
-  A: 'Get Started for Free',
-  B: 'Get Started for Free',
+  A: { text: 'Try It Free', color: 'emerald' },
+  B: { text: 'Explore Tool', color: 'emerald' },
+  C: { text: 'Join 10,000+ Users', color: 'indigo' },
 };
 
 type Category = string;
@@ -550,13 +554,14 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       if (searches) setTimeout(() => setRecentSearches(JSON.parse(searches)), 0);
     } catch { /* ignore */ }
     
-    // Load CTA variant (A/B test)
+    // Load CTA variant (A/B/C test)
     try {
       const stored = localStorage.getItem('ctaVariant') as keyof typeof ctaVariants;
-      if (stored === 'A' || stored === 'B') {
+      if (stored === 'A' || stored === 'B' || stored === 'C') {
         setTimeout(() => setCtaVariant(stored), 0);
       } else {
-        const v = Math.random() < 0.5 ? 'A' : 'B';
+        const variants: (keyof typeof ctaVariants)[] = ['A', 'B', 'C'];
+        const v = variants[Math.floor(Math.random() * variants.length)];
         setTimeout(() => setCtaVariant(v), 0);
         localStorage.setItem('ctaVariant', v);
       }
@@ -2085,7 +2090,8 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             const isSaved = savedIds.includes(tool.id);
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
             const hasAffiliate = hasAffiliateLink(tool);
-            const ctaText = hasAffiliate ? ctaVariants[ctaVariant] : 'Visit Website';
+            const ctaText = hasAffiliate ? ctaVariants[ctaVariant].text : 'Visit Website';
+            const ctaColor = hasAffiliate ? ctaVariants[ctaVariant].color : 'emerald';
             
             return (
               <ToolCard

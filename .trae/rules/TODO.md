@@ -13,12 +13,12 @@
 | 9 | 网站 | 检查所有外部链接是否有效 | ✅ |
 | 10 | SEO | 提交新页面到 Google Search Console | ⏳ |
 | 11 | SEO | 检查 GSC 是否有新的搜索词数据 | ⏳ |
-| 12 | 内容 | 给 ClickUp AI 和 Todoist AI 补充示例数据 | ⏳ |
+| 12 | 内容 | 给 ClickUp AI 和 Todoist AI 补充示例数据 | ✅ |
 | 13 | 技术 | 定期 `npm audit` 检查依赖安全 | ✅ |
 | 14 | 品牌 | 统一所有社交平台的头像和简介 | ⏳ |
-| 15 | 收入 | 建立收入追踪表 | ⏳ |
-| 16 | 备份 | Logo 原图备份到 devlog-private | ⏳ |
-| 17 | 法律 | 研究 GDPR 合规要求 | ⏳ |
-| 18 | 增长 | 设计 A/B 测试：CTA 按钮文案/颜色 | ⏳ |
+| 15 | 收入 | 建立收入追踪表 | ✅ |
+| 16 | 备份 | Logo 原图备份到 devlog-private | ✅ |
+| 17 | 法律 | 研究 GDPR 合规要求 | ✅ |
+| 18 | 增长 | 设计 A/B 测试：CTA 按钮文案/颜色 | ✅ |
 | 19 | 数据 | 设置 Vercel Analytics 或 Plausible | ✅ |
 | 20 | 规则 | 创建"变现与收入优化"神级专家 | ✅ |
