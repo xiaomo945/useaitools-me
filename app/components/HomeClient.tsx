@@ -8,6 +8,9 @@ import SkeletonCard from './Skeleton';
 import { useToast } from './Toast';
 import { debugLog } from '../utils/debug';
 import { playSaveSound, playUnsaveSound, playCompareSound, playSearchSound } from '../utils/sound';
+import SearchBar from './SearchBar';
+import CategoryFilters from './CategoryFilters';
+import HeroSection from './HeroSection';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -1491,16 +1494,6 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     }
   };
 
-  const tooltipMap: Record<string, string> = {
-    'All': 'Browse all AI tools',
-    'Writing': 'Discover AI Writing assistants',
-    'Image': 'Explore AI Image generators',
-    'Productivity': 'Boost productivity with AI',
-    'Code': 'AI Coding companions',
-    'Audio': 'AI Audio tools',
-    'Video': 'AI Video creation'
-  };
-
   return (
     <div 
       className="min-h-screen bg-slate-50 dark:bg-gray-950 relative overflow-x-hidden"
@@ -1582,389 +1575,43 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       <div className="py-6 sm:py-16 px-3 sm:px-8 relative z-10">
       <div className="max-w-7xl mx-auto px-3 sm:px-6">
         {/* Hero Section with Glow */}
-        <div className="text-center mb-8 sm:mb-16 relative">
-          {/* Background Breathing Glow - Only Desktop */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent rounded-full blur-3xl animate-breathe pointer-events-none hidden sm:block" />
-          
-          <img src="/logo.png" alt="Use AI Tools Logo - Discover the best AI tools" className="h-8 sm:h-12 lg:h-14 w-auto mx-auto mb-2 sm:mb-3 relative z-10" width="72" height="43" loading="eager" decoding="async" />
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight mb-1 sm:mb-2 relative z-10">
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-              Use AI Tools
-            </span>
-          </h1>
-          <p className="text-sm sm:text-xl lg:text-3xl font-light text-emerald-600 dark:text-emerald-400 mb-2 sm:mb-4 relative z-10">
-            Your AI Toolbox
-          </p>
-          <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-lg max-w-2xl mx-auto mb-4 sm:mb-8 relative z-10 leading-relaxed">
-            Discover and compare AI tools in our comprehensive AI tools directory. Find the best AI tools for writing, images, video, and more. Curated weekly.
-          </p>
-          
-          {/* Trust Signal */}
-          <div className="mb-4 sm:mb-8 relative z-10">
-            <p className="text-[10px] sm:text-sm text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
-              Built in public by an indie maker from an internet café in China. 690+ tools handpicked, not paid for.
-            </p>
-          </div>
-          
-          {/* Search Box */}
-          <div className="search-container relative max-w-2xl mx-auto mb-4 sm:mb-8 px-3 sm:px-0">
-            <div className="relative">
-              <svg
-                className="absolute left-3 sm:left-5 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-slate-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-              <input
-                ref={searchInputRef}
-                type="text"
-                placeholder="Search AI tools..."
-                value={search}
-                onChange={(e) => {
-                  setSearch(e.target.value);
-                  setShowSuggestions(true);
-                  setSelectedIndex(-1);
-                }}
-                onFocus={() => {
-                  if (blurTimeoutRef.current) {
-                    clearTimeout(blurTimeoutRef.current);
-                  }
-                  setShowSuggestions(true);
-                }}
-                onBlur={() => {
-                  blurTimeoutRef.current = setTimeout(() => {
-                    setShowSuggestions(false);
-                    setSelectedIndex(-1);
-                  }, 200);
-                }}
-                onKeyDown={handleSearchKeyDown}
-                aria-label="Search AI tools"
-                autoComplete="off"
-                autoCorrect="off"
-                spellCheck="false"
-                className="w-full px-3 sm:px-5 py-2 sm:py-3 pl-9 sm:pl-14 pr-16 sm:pr-24 h-9 sm:h-11 text-sm sm:text-base rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
-              />
-              <div className="absolute right-1.5 sm:right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-0.5 sm:gap-1">
-                {speechSupported && (
-                  <button
-                    onClick={startVoiceSearch}
-                    className={`p-1.5 sm:p-2 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center ${
-                      isListening
-                        ? 'bg-red-500 text-white animate-pulse'
-                        : 'hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400'
-                    }`}
-                    aria-label={isListening ? 'Listening...' : 'Voice search'}
-                  >
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                    </svg>
-                  </button>
-                )}
-                {search && (
-                  <button
-                    onClick={() => setSearch('')}
-                    className="p-1.5 sm:p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center"
-                    aria-label="Clear search"
-                  >
-                    <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                )}
-                <button
-                  onClick={goToSearchPage}
-                  disabled={!search.trim()}
-                  className={`p-1.5 sm:p-2 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center ${
-                    search.trim()
-                      ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:shadow-lg hover:shadow-emerald-500/30'
-                      : 'bg-slate-100 dark:bg-slate-800 text-slate-400 cursor-not-allowed'
-                  }`}
-                  aria-label="Search"
-                >
-                  <svg className="w-3.5 h-3.5 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            {/* Search Suggestions Dropdown */}
-            {showSuggestions && (search.trim() || recentSearches.length > 0) && (
-              <div className="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl shadow-xl z-50 overflow-hidden">
-                {search.trim() ? (
-                  autocompleteItems.length > 0 ? (
-                    <div className="py-1">
-                      <div className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                        Suggestions
-                      </div>
-                      {autocompleteItems.map((item, i) => (
-                        <button
-                          key={`${item.type}-${item.id}`}
-                          className={`w-full text-left px-4 py-3 text-sm transition-colors flex items-center gap-3 ${i === selectedIndex ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'hover:bg-emerald-50 dark:hover:bg-emerald-900/20'}`}
-                          onClick={() => {
-                            if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
-                            if (item.type === 'tool') {
-                              setSearch(item.name);
-                              saveRecentSearch(item.name);
-                            } else {
-                              saveRecentSearch(item.name);
-                              const post = blogPosts.find(p => p.id === item.id);
-                              if (post) router.push(`/blog/${post.slug}`);
-                            }
-                            setShowSuggestions(false);
-                            setSelectedIndex(-1);
-                          }}
-                        >
-                          {item.type === 'tool' ? (
-                            <span className="text-sm">🛠️</span>
-                          ) : (
-                            <span className="text-sm">📝</span>
-                          )}
-                          <span className="font-medium text-slate-900 dark:text-white truncate">{item.name}</span>
-                          <span className={`ml-auto text-xs px-2 py-0.5 rounded-full shrink-0 ${
-                            item.type === 'tool'
-                              ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-400'
-                              : 'bg-indigo-100 text-indigo-700 dark:bg-indigo-500/20 dark:text-indigo-400'
-                          }`}>
-                            {item.type === 'tool' ? item.category : 'Blog'}
-                          </span>
-                        </button>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="px-4 py-6 text-center text-sm text-slate-500">
-                      No results found
-                    </div>
-                  )
-                ) : (
-                  <div className="py-1">
-                    {/* Popular Tools Section */}
-                    <div>
-                      <div className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                        🔥 Popular Tools
-                      </div>
-                      {popularTools.map((tool, i) => (
-                        <button
-                          key={`popular-${tool.id}`}
-                          className={`w-full text-left px-4 py-3 text-sm transition-colors flex items-center gap-3 ${i === selectedIndex ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'hover:bg-emerald-50 dark:hover:bg-emerald-900/20'}`}
-                          onClick={() => {
-                            if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
-                            router.push(`/tools/${tool.id}`);
-                            setShowSuggestions(false);
-                            setSelectedIndex(-1);
-                          }}
-                        >
-                          <svg className="w-4 h-4 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                          </svg>
-                          <span className="font-medium text-slate-900 dark:text-white truncate">{tool.name}</span>
-                          <div className="ml-auto flex items-center gap-1">
-                            <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-400 shrink-0">
-                              {tool.category}
-                            </span>
-                            <div className="flex items-center gap-0.5">
-                              <svg className="w-3 h-3 text-amber-500" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                              </svg>
-                              <span className="text-xs text-slate-500">{tool.rating}</span>
-                            </div>
-                          </div>
-                        </button>
-                      ))}
-                    </div>
-                    
-                    {/* Recent Searches Section */}
-                    <div className="border-t border-slate-200 dark:border-gray-700">
-                      <div className="flex items-center justify-between px-4 py-2">
-                        <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                          Recent Searches
-                        </span>
-                        {recentSearches.length > 0 && (
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              clearRecentSearches();
-                            }}
-                            className="text-xs text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-                          >
-                            Clear All
-                          </button>
-                        )}
-                      </div>
-                      {recentSearches.length > 0 ? (
-                        recentSearches.map((term, i) => (
-                          <button
-                            key={i}
-                            className={`w-full text-left px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 transition-colors flex items-center gap-2 group ${i + popularTools.length === selectedIndex ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'hover:bg-emerald-50 dark:hover:bg-emerald-900/20'}`}
-                            onClick={() => {
-                              if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
-                              setSearch(term);
-                              setShowSuggestions(false);
-                              setSelectedIndex(-1);
-                            }}
-                          >
-                            <svg className="w-4 h-4 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <span className="flex-1 truncate">{term}</span>
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                removeRecentSearch(term);
-                              }}
-                              className="p-1 rounded-full hover:bg-slate-200 dark:hover:bg-gray-700 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 opacity-0 group-hover:opacity-100 transition-all"
-                            >
-                              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                              </svg>
-                            </button>
-                          </button>
-                        ))
-                      ) : (
-                        <div className="px-4 py-6 text-center text-sm text-slate-500">
-                          No recent searches
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                )}
-                {search.trim() && (
-                  <div className="border-t border-slate-200 dark:border-gray-700 px-3 py-2">
-                    <button
-                      onClick={() => {
-                        if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
-                        saveRecentSearch(search.trim());
-                        goToSearchPage();
-                      }}
-                      className="w-full flex items-center justify-center gap-2 text-sm text-slate-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                      </svg>
-                      Search for &quot;{search}&quot;
-                    </button>
-                  </div>
-                )}
-              </div>
-            )}
-            
-            {/* Welcome Tip */}
-            {showWelcomeTip && (
-              <div className="mt-3 flex items-center justify-center gap-2 px-4 py-3 bg-emerald-50 dark:bg-emerald-950/30 rounded-xl border border-emerald-200 dark:border-emerald-800 animate-slide-in">
-                <span className="text-xl">👋</span>
-                <p className="text-sm text-emerald-800 dark:text-emerald-200">
-                  Try searching for <span className="font-semibold">"AI writer"</span> or browse by category below
-                </p>
-                <button
-                  onClick={() => setShowWelcomeTip(false)}
-                  className="ml-2 p-1 rounded-full hover:bg-emerald-200 dark:hover:bg-emerald-800 transition-colors"
-                >
-                  <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-            )}
-          </div>
-
-          {/* Submit Tool + Mystery Box Buttons */}
-          <div className="text-center mb-6 sm:mb-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/submit"
-              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 rounded-full hover:bg-emerald-50 dark:hover:bg-emerald-950/30 transition-all duration-300 min-h-[44px]"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-              Submit a Tool
-            </Link>
-            <button
-              onClick={openMysteryBox}
-              disabled={mysteryCount >= 3}
-              className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold rounded-full transition-all duration-300 min-h-[44px] ${
-                mysteryCount >= 3
-                  ? 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-amber-400 to-orange-400 dark:from-amber-500 dark:to-orange-500 text-white hover:shadow-lg hover:shadow-amber-400/25 hover:-translate-y-0.5 active:scale-[0.98]'
-              }`}
-            >
-              🎁 Mystery Box {mysteryCount >= 3 ? '(Done today)' : `(${3 - mysteryCount} left)`}
-            </button>
-          </div>
-
-          {/* Today's Discovery - Daily Pick */}
-          {showDailyPick && dailyPick && (() => {
-            const colors = getCategoryColors(dailyPick.category);
-            const reasons = [
-              'A hidden gem worth exploring',
-              'Highly rated but often overlooked',
-              'Users love this underrated tool',
-              'Try something new today',
-              'A fresh pick just for you',
-            ];
-            const today = new Date().toISOString().slice(0, 10);
-            let hash = 0;
-            for (let i = 0; i < today.length; i++) {
-              hash = ((hash << 5) - hash) + today.charCodeAt(i);
-              hash |= 0;
-            }
-            const reason = reasons[Math.abs(hash) % reasons.length];
-            return (
-              <div className="mb-6 sm:mb-8">
-                <div className="bg-gradient-to-r from-emerald-50 via-white to-teal-50 dark:from-emerald-950/30 dark:via-gray-900 dark:to-teal-950/30 border border-emerald-200/60 dark:border-emerald-800/40 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden">
-                  <button
-                    onClick={() => {
-                      setShowDailyPick(false);
-                      try { localStorage.setItem('dailyPickDismissed', today); } catch {}
-                    }}
-                    className="absolute top-2 right-2 p-1 hover:bg-emerald-200 dark:hover:bg-emerald-800 rounded-full transition-colors z-10"
-                    aria-label="Dismiss daily pick"
-                  >
-                    <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm">
-                      💡 Daily Pick
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <Link
-                      href={`/tools/${dailyPick.id}`}
-                      className={`w-10 h-10 sm:w-14 sm:h-14 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-lg sm:text-2xl font-bold shrink-0 hover:scale-105 transition-transform duration-300`}
-                      style={{ fontFamily: 'Playfair Display, serif' }}
-                    >
-                      {dailyPick.name.charAt(0)}
-                    </Link>
-                    <div className="flex-1 min-w-0">
-                      <Link href={`/tools/${dailyPick.id}`} className="inline-block">
-                        <h3 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate">
-                          🌟 {dailyPick.name}
-                        </h3>
-                      </Link>
-                      <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5 truncate">{reason}</p>
-                    </div>
-                    <Link
-                      href={`/tools/${dailyPick.id}`}
-                      className="shrink-0 inline-flex items-center gap-1 px-3 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px]"
-                    >
-                      Try It →
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            );
-          })()}
-
-          {/* Recently Viewed Quick Access */}
+        <HeroSection
+          mysteryCount={mysteryCount}
+          openMysteryBox={openMysteryBox}
+          showDailyPick={showDailyPick}
+          dailyPick={dailyPick}
+          getCategoryColors={getCategoryColors}
+          setShowDailyPick={setShowDailyPick}
+        />
+        
+        {/* Search Box */}
+        <SearchBar
+          search={search}
+          setSearch={setSearch}
+          showSuggestions={showSuggestions}
+          setShowSuggestions={setShowSuggestions}
+          selectedIndex={selectedIndex}
+          setSelectedIndex={setSelectedIndex}
+          recentSearches={recentSearches}
+          clearRecentSearches={clearRecentSearches}
+          removeRecentSearch={removeRecentSearch}
+          saveRecentSearch={saveRecentSearch}
+          autocompleteItems={autocompleteItems}
+          popularTools={popularTools}
+          blogPosts={blogPosts}
+          router={router}
+          goToSearchPage={goToSearchPage}
+          handleSearchKeyDown={handleSearchKeyDown}
+          speechSupported={speechSupported}
+          isListening={isListening}
+          startVoiceSearch={startVoiceSearch}
+          showWelcomeTip={showWelcomeTip}
+          setShowWelcomeTip={setShowWelcomeTip}
+          searchInputRef={searchInputRef}
+          blurTimeoutRef={blurTimeoutRef}
+        />
+        
+        {/* Recently Viewed Quick Access */}
           {recentlyViewedIds.length > 0 && (
             <div className="mb-4 sm:mb-6">
               <div className="flex items-center gap-2 mb-2">
@@ -2041,118 +1688,19 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             );
           })()}
 
-          {/* Category Buttons */}
-          <div className="relative" data-tour="categories">
-            {/* Left Gradient Fade */}
-            <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-10 bg-gradient-to-r from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
-            {/* Right Gradient Fade */}
-            <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-10 bg-gradient-to-l from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
-            
-            <div className="flex overflow-x-auto scrollbar-hide gap-1 sm:gap-2.5 sm:justify-center sm:flex-wrap px-2 sm:px-0 py-1">
-              {categories.map((category, index) => {
-                const isActive = category === 'All' ? selectedCategories.includes('All') : selectedCategories.includes(category);
-                
-                const buttonStyle = `px-2 py-1 sm:px-4 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.98] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[44px] flex items-center justify-center ${
-                  isActive
-                    ? category === 'All'
-                      ? 'bg-emerald-600 text-white'
-                      : 'bg-emerald-600 text-white dark:bg-emerald-600 dark:text-white'
-                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 active:bg-gray-200 dark:active:bg-gray-700'
-                }`;
-                
-                return (
-                  <button
-                    key={category}
-                    ref={(el) => {
-                      if (el) {
-                        categoryButtonsRef.current[index] = el;
-                      }
-                    }}
-                    onClick={() => {
-                      debugLog('Filter', `Category toggled: ${category}`);
-                      if (category === 'All') {
-                        setSelectedCategories(['All']);
-                      } else {
-                        setSelectedCategories(prev => {
-                          const withoutAll = prev.filter(c => c !== 'All');
-                          if (prev.includes(category)) {
-                            const newCats = withoutAll.filter(c => c !== category);
-                            return newCats.length === 0 ? ['All'] : newCats;
-                          } else {
-                            return [...withoutAll, category];
-                          }
-                        });
-                      }
-                      if (toolsGridRef.current) {
-                        toolsGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                      }
-                    }}
-                    onKeyDown={(e) => handleCategoryKeyDown(e, index)}
-                    className={buttonStyle}
-                    title={tooltipMap[category]}
-                  >
-                    {category}
-                    {category !== 'All' && selectedCategories.includes(category) && selectedCategories.length > 1 && (
-                      <span className="ml-1 w-4 h-4 rounded-full bg-white/30 text-[10px] flex items-center justify-center">✓</span>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-          
-          {/* Pricing Filter Dropdown */}
-          <div className="flex justify-center mt-4 mb-2">
-            <div className="relative">
-              <select
-                value={selectedPricing}
-                onChange={(e) => {
-                  debugLog('Filter', `Pricing changed: ${e.target.value}`);
-                  setSelectedPricing(e.target.value);
-                  if (toolsGridRef.current) {
-                    toolsGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}
-                aria-label="Filter by pricing type"
-                className="appearance-none pl-3 sm:pl-4 pr-10 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 active:bg-gray-200 dark:active:bg-gray-700 transition-all duration-300 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 border border-transparent focus:border-emerald-300 min-h-[44px]"
-              >
-                {pricingOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option === 'All' ? '💰 All Pricing' : option}
-                  </option>
-                ))}
-              </select>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </div>
-          </div>
-          
-          {/* Clear All Filters Button */}
-          {(!selectedCategories.includes('All') || selectedPricing !== 'All' || debouncedSearch) && (
-            <div className="flex justify-center mt-2 mb-2">
-              <button
-                onClick={() => {
-                  setSelectedCategories(['All']);
-                  setSelectedPricing('All');
-                  setSearch('');
-                  try { localStorage.removeItem('useaitools_prefs'); } catch {}
-                  debugLog('Filter', 'All filters cleared');
-                  if (toolsGridRef.current) {
-                    toolsGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                }}
-                className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors duration-200"
-              >
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-                Clear All Filters
-              </button>
-            </div>
-          )}
+          {/* Category Filters */}
+          <CategoryFilters
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            selectedPricing={selectedPricing}
+            setSelectedPricing={setSelectedPricing}
+            categories={categories}
+            pricingOptions={pricingOptions}
+            getCategoryColors={getCategoryColors}
+            categoryButtonsRef={categoryButtonsRef}
+            handleCategoryKeyDown={handleCategoryKeyDown}
+            toolsGridRef={toolsGridRef}
+          />
 
           {/* Active Filter Tags */}
           {showRestoredNotice && (
@@ -2160,36 +1708,6 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 animate-fade-in-up">
                 🔄 Filters restored from last visit
               </span>
-            </div>
-          )}
-          {(!selectedCategories.includes('All') || selectedPricing !== 'All') && (
-            <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
-              {!selectedCategories.includes('All') && selectedCategories.map(cat => (
-                <button
-                  key={cat}
-                  onClick={() => {
-                    const newCats = selectedCategories.filter(c => c !== cat);
-                    setSelectedCategories(newCats.length === 0 ? ['All'] : newCats);
-                  }}
-                  className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-rose-100 dark:hover:bg-rose-900/30 hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200"
-                >
-                  {cat}
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              ))}
-              {selectedPricing !== 'All' && (
-                <button
-                  onClick={() => setSelectedPricing('All')}
-                  className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 hover:bg-rose-100 dark:hover:bg-rose-900/30 hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200"
-                >
-                  💰 {selectedPricing}
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              )}
             </div>
           )}
           
@@ -2814,7 +2332,6 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         <p style={{ display: 'none' }}>
           Impact-Site-Verification: 8b49f367-76f9-42f1-b988-7c24a629b8d8
         </p>
-      </div>
       </div>
 
       {/* Mystery Box Modal */}
