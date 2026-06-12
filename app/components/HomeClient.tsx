@@ -11,6 +11,11 @@ import { playSaveSound, playUnsaveSound, playCompareSound, playSearchSound } fro
 import SearchBar from './SearchBar';
 import CategoryFilters from './CategoryFilters';
 import HeroSection from './HeroSection';
+import NewsletterSignup from './NewsletterSignup';
+import RecentlyViewed from './RecentlyViewed';
+import CompareBar from './CompareBar';
+import LongPressMenu from './LongPressMenu';
+import MysteryBoxModal from './MysteryBoxModal';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -2204,85 +2209,15 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         )}
 
         {/* Newsletter */}
-        <div className="mt-8 sm:mt-16 mb-6 sm:mb-10">
-          <div className="bg-gradient-to-br from-indigo-50/80 via-white to-purple-50/80 dark:from-indigo-950/60 dark:via-gray-900 dark:to-purple-950/60 backdrop-blur-xl border border-white/60 dark:border-indigo-500/10 shadow-xl shadow-indigo-500/5 dark:shadow-2xl dark:shadow-indigo-500/5 rounded-3xl p-4 sm:p-12 text-center">
-            <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2">
-              📬 Stay Updated
-            </h2>
-            <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-              Get the best new AI tools delivered weekly.
-            </p>
-            <form
-              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert('Thanks for subscribing!');
-              }}
-            >
-              <input
-                type="email"
-                placeholder="Your email"
-                aria-label="Email address for newsletter"
-                className="flex-1 px-5 py-3 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-slate-200 dark:border-gray-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all duration-300"
-                required
-              />
-              <button
-                type="submit"
-                className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-full shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-0.5 transition-all duration-300"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
+        <NewsletterSignup />
 
         {/* Recently Viewed Section */}
-        {recentlyViewedIds.length > 0 && (
-          <div className="mt-16 mb-10">
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-8 text-center">
-              Recently Viewed
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              {recentlyViewedIds.map((toolId) => {
-                const tool = displayedTools.find(t => t.id === toolId);
-                if (!tool) return null;
-                
-                const colors = getCategoryColors(tool.category);
-                const pricingColors = getPricingColors(tool.pricing);
-                
-                return (
-                  <Link
-                    key={tool.id}
-                    href={`/tools/${tool.id}`}
-                    className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out"
-                  >
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className={`w-10 h-10 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
-                        {tool.name.charAt(0)}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg text-slate-900 dark:text-white truncate">
-                          {tool.name}
-                        </h3>
-                        <div className="flex items-center gap-2 mt-1">
-                          <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${colors.bgDark} ${colors.textLight} dark:${colors.text}`}>
-                            {tool.category}
-                          </span>
-                          <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
-                            {tool.pricing}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed line-clamp-2">
-                      {tool.description}
-                    </p>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        )}
+        <RecentlyViewed
+          recentlyViewedIds={recentlyViewedIds}
+          tools={displayedTools}
+          getCategoryColors={getCategoryColors}
+          getPricingColors={getPricingColors}
+        />
 
         {/* FAQ Section */}
         <div className="mt-16 mb-10">
@@ -2399,130 +2334,50 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       )}
 
       {/* Comparison Bar */}
-      {selectedForCompare.length > 0 && (
-        <div
-          onDragOver={handleDragOverCompare}
-          onDragLeave={handleDragLeaveCompare}
-          onDrop={handleDropCompare}
-          className={`fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 border-t border-slate-200 dark:border-gray-800 shadow-2xl z-50 transform transition-all duration-300 ease-out ${isDragOver ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30 shadow-emerald-500/20' : ''}`}
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                  {selectedForCompare.length === 1 ? '1 tool selected' : '2 tools selected'}
-                </span>
-                <div className="flex items-center gap-2">
-                  {selectedForCompare.map((toolId) => {
-                    const tool = displayedTools.find(t => t.id === toolId);
-                    if (!tool) return null;
-                    const colors = getCategoryColors(tool.category);
-                    return (
-                      <span key={tool.id} className={`px-3 py-1 rounded-full text-xs font-semibold ${colors.bgDark} ${colors.textLight} dark:${colors.text}`}>
-                        {tool.name}
-                      </span>
-                    );
-                  })}
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <button
-                  onClick={() => setSelectedForCompare([])}
-                  className="px-3 py-2 text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
-                >
-                  Clear
-                </button>
-                <Link
-                  href={`/compare?tool=${selectedForCompare[0]}${selectedForCompare[1] ? `&tool=${selectedForCompare[1]}` : ''}`}
-                  className="px-6 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
-                >
-                  Compare Now →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <CompareBar
+        selectedForCompare={selectedForCompare}
+        displayedTools={displayedTools}
+        isDragOver={isDragOver}
+        onClear={() => setSelectedForCompare([])}
+        onDragOver={handleDragOverCompare}
+        onDragLeave={handleDragLeaveCompare}
+        onDrop={handleDropCompare}
+        getCategoryColors={getCategoryColors}
+      />
 
       {/* Long Press Menu */}
-      {showMenu && selectedTool && (
-        <>
-          {/* Backdrop */}
-          <div 
-            className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50" 
-            onClick={closeMenu}
-          />
-          {/* Menu */}
-          <div className="fixed bottom-0 left-0 right-0 z-50">
-            <div className="bg-white dark:bg-gray-900 rounded-t-3xl shadow-2xl p-6 drawer-enter">
-              <div className="w-12 h-1 bg-slate-200 dark:bg-slate-700 rounded-full mx-auto mb-6" />
-              <div className="text-center mb-6">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{selectedTool.name}</h3>
-                <p className="text-sm text-slate-500 dark:text-slate-400">{selectedTool.category} • {selectedTool.pricing}</p>
-              </div>
-              <div className="space-y-3">
-                <button 
-                  onClick={() => handleMenuAction('favorite')}
-                  className="w-full flex items-center gap-4 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
-                    <span className="text-xl">❤️</span>
-                  </div>
-                  <div className="text-left">
-                    <div className="font-semibold text-slate-900 dark:text-white">Save to Favorites</div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">Keep this tool handy for later</div>
-                  </div>
-                </button>
-                
-                <button 
-                  onClick={() => handleMenuAction('compare')}
-                  className="w-full flex items-center gap-4 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
-                    <span className="text-xl">📊</span>
-                  </div>
-                  <div className="text-left">
-                    <div className="font-semibold text-slate-900 dark:text-white">Add to Compare</div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">Compare with other tools</div>
-                  </div>
-                </button>
-                
-                <button 
-                  onClick={() => handleMenuAction('copy')}
-                  className="w-full flex items-center gap-4 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
-                    <span className="text-xl">🔗</span>
-                  </div>
-                  <div className="text-left">
-                    <div className="font-semibold text-slate-900 dark:text-white">Copy Tool Link</div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">Share this tool with others</div>
-                  </div>
-                </button>
-                
-                <button 
-                  onClick={() => handleMenuAction('details')}
-                  className="w-full flex items-center gap-4 px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
-                    <span className="text-xl">📋</span>
-                  </div>
-                  <div className="text-left">
-                    <div className="font-semibold text-slate-900 dark:text-white">View Details</div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">See full tool information</div>
-                  </div>
-                </button>
-              </div>
-              <button 
-                onClick={closeMenu}
-                className="w-full mt-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
-              >
-                Cancel
-              </button>
-            </div>
-          </div>
-        </>
-      )}
+      <LongPressMenu
+        show={showMenu}
+        selectedTool={selectedTool}
+        onClose={closeMenu}
+        onSave={toggleSave}
+        onCompare={toggleCompare}
+        onCopyLink={(tool) => {
+          if (navigator.clipboard && tool?.url) {
+            navigator.clipboard.writeText(tool.url);
+          }
+        }}
+        onViewDetails={(id) => router.push(`/tools/${id}`)}
+      />
+
+      {/* Mystery Box Modal */}
+      <MysteryBoxModal
+        show={showMysteryBox}
+        tool={mysteryTool}
+        revealed={mysteryRevealed}
+        hints={mysteryHints}
+        mysteryCount={mysteryCount}
+        onClose={() => {
+          setShowMysteryBox(false);
+          setMysteryRevealed(false);
+        }}
+        onReveal={() => setMysteryRevealed(true)}
+        onTryAnother={() => {
+          setMysteryRevealed(false);
+          openMysteryBox();
+        }}
+        getCategoryColors={getCategoryColors}
+      />
     </div>
   );
 }
