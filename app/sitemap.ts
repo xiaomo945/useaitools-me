@@ -29,92 +29,63 @@ function loadBlogPosts() {
   return [];
 }
 
+// 加载工作流数据
+function loadWorkflows() {
+  const workflowsPath = path.join(process.cwd(), 'data', 'workflows.json');
+  if (fs.existsSync(workflowsPath)) {
+    const data = fs.readFileSync(workflowsPath, 'utf8');
+    return JSON.parse(data);
+  }
+  return [];
+}
+
+// 加载场景数据
+function loadScenes(): string[] {
+  const scenesPath = path.join(process.cwd(), 'data', 'scenes.ts');
+  if (fs.existsSync(scenesPath)) {
+    const content = fs.readFileSync(scenesPath, 'utf8');
+    const slugRegex = /slug:\s*'([^']+)'/g;
+    const slugs: string[] = [];
+    let match;
+    while ((match = slugRegex.exec(content)) !== null) {
+      slugs.push(match[1]);
+    }
+    return slugs;
+  }
+  return [];
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const tools = loadTools();
   const blogPosts = loadBlogPosts();
+  const workflows = loadWorkflows();
+  const sceneSlugs = loadScenes();
   const baseUrl = 'https://useaitools.me';
   
   const currentDate = new Date();
   
   const staticPages = [
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/compare`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/changelog`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.4,
-    },
-    {
-      url: `${baseUrl}/deals`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/leaderboard`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/help`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.4,
-    },
-    {
-      url: `${baseUrl}/dashboard`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/saved`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/search`,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/submit`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/workflows`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.4,
-    },
+    { url: baseUrl, lastModified: currentDate, changeFrequency: 'daily' as const, priority: 1 },
+    { url: `${baseUrl}/about`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${baseUrl}/blog`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/compare`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${baseUrl}/compare/video`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
+    { url: `${baseUrl}/compare/writing`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
+    { url: `${baseUrl}/compare/audio`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
+    { url: `${baseUrl}/changelog`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${baseUrl}/contact`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${baseUrl}/deals`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
+    { url: `${baseUrl}/history`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.5 },
+    { url: `${baseUrl}/leaderboard`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
+    { url: `${baseUrl}/help`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${baseUrl}/dashboard`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.5 },
+    { url: `${baseUrl}/privacy`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
+    { url: `${baseUrl}/saved`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.5 },
+    { url: `${baseUrl}/scenes`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${baseUrl}/search`, lastModified: currentDate, changeFrequency: 'daily' as const, priority: 0.7 },
+    { url: `${baseUrl}/submit`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
+    { url: `${baseUrl}/terms`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
+    { url: `${baseUrl}/workflows`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
   ];
 
   const categoryPages = categories.map((category) => ({
@@ -122,6 +93,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: currentDate,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
+  }));
+
+  const scenePages = sceneSlugs.map((slug) => ({
+    url: `${baseUrl}/scenes/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
   }));
 
   const toolPages = tools.map((tool: { id: number }) => ({
@@ -138,10 +116,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  const workflowPages = workflows.map((wf: { slug: string }) => ({
+    url: `${baseUrl}/workflows/${wf.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }));
+
   return [
     ...staticPages,
     ...categoryPages,
+    ...scenePages,
     ...toolPages,
     ...blogPostPages,
+    ...workflowPages,
   ];
 }
