@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import tools from '@/data/tools.json';
 import { blogPosts } from '@/data/blog-posts';
 import ToolSlugClient from './ToolSlugClient';
@@ -159,7 +158,7 @@ export default async function ToolSlugPage({ params }: { params: Promise<{ slug:
 
   const relatedTools = typedTools
     .filter(t => t.id !== tool.id && t.category === tool.category)
-    .sort(() => Math.random() - 0.5)
+    .sort((a, b) => ((a.id * 7 + 3) % 13) - ((b.id * 7 + 3) % 13))
     .slice(0, 5)
     .map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
 

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import tools from '@/data/tools.json';
 
-function getAffiliateLink(tool: any): string {
+function getAffiliateLink(tool: { name: string; affiliate_link?: string }): string {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
   let shortEnvVarName = '';
   if (tool.name.includes('Rytr')) {
@@ -16,7 +16,7 @@ function getAffiliateLink(tool: any): string {
     shortEnvVarName = 'AFFILIATE_GRAMMARLY';
   }
   const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return envLink || tool.affiliate_link;
+  return envLink || tool.affiliate_link || '';
 }
 
 export async function GET(request: NextRequest) {

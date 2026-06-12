@@ -10,7 +10,7 @@ export default function MobileNav() {
   const [activeTab, setActiveTab] = useState(pathname);
 
   useEffect(() => {
-    setActiveTab(pathname);
+    setTimeout(() => setActiveTab(pathname), 0);
   }, [pathname]);
 
   const navItems = [

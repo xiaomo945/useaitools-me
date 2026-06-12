@@ -7,7 +7,7 @@ export default function HolidayBanner() {
   const [theme, setTheme] = useState<HolidayTheme | null>(null);
 
   useEffect(() => {
-    setTheme(getHolidayTheme());
+    setTimeout(() => setTheme(getHolidayTheme()), 0);
   }, []);
 
   if (!theme) return null;

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo, useRef, useEffect, memo } from 'react';
+import React, { useState, useMemo, useRef, useEffect, useCallback, memo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import StarRating from './StarRating';
@@ -508,6 +508,19 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const [showRestoredNotice, setShowRestoredNotice] = useState(false);
   const { addToast } = useToast();
 
+  const [showBanner, setShowBanner] = useState(true);
+  const [showDailyPick, setShowDailyPick] = useState(true);
+  const [showMysteryBox, setShowMysteryBox] = useState(false);
+  const [mysteryTool, setMysteryTool] = useState<Tool | null>(null);
+  const [mysteryRevealed, setMysteryRevealed] = useState(false);
+  const [mysteryHints, setMysteryHints] = useState<string[]>([]);
+  const [mysteryCount, setMysteryCount] = useState(0);
+
+  const [isListening, setIsListening] = useState(false);
+  const [speechSupported, setSpeechSupported] = useState(false);
+  const [isDragOver, setIsDragOver] = useState(false);
+  const [isFilterTransitioning, setIsFilterTransitioning] = useState(false);
+
   // Pull to refresh state
   const [pullStartY, setPullStartY] = useState(0);
   const [pullDistance, setPullDistance] = useState(0);
@@ -523,28 +536,28 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     // Load saved tools
     try {
       const saved = localStorage.getItem('savedTools');
-      if (saved) setSavedIds(JSON.parse(saved));
+      if (saved) setTimeout(() => setSavedIds(JSON.parse(saved)), 0);
     } catch { /* ignore */ }
     
     // Load recently viewed
     try {
       const recent = localStorage.getItem('recentlyViewed');
-      if (recent) setRecentlyViewedIds(JSON.parse(recent));
+      if (recent) setTimeout(() => setRecentlyViewedIds(JSON.parse(recent)), 0);
     } catch { /* ignore */ }
 
     try {
       const searches = localStorage.getItem('recentSearches');
-      if (searches) setRecentSearches(JSON.parse(searches));
+      if (searches) setTimeout(() => setRecentSearches(JSON.parse(searches)), 0);
     } catch { /* ignore */ }
     
     // Load CTA variant (A/B test)
     try {
       const stored = localStorage.getItem('ctaVariant') as keyof typeof ctaVariants;
       if (stored === 'A' || stored === 'B') {
-        setCtaVariant(stored);
+        setTimeout(() => setCtaVariant(stored), 0);
       } else {
         const v = Math.random() < 0.5 ? 'A' : 'B';
-        setCtaVariant(v);
+        setTimeout(() => setCtaVariant(v), 0);
         localStorage.setItem('ctaVariant', v);
       }
     } catch { /* ignore */ }
@@ -553,7 +566,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     try {
       const hasVisited = localStorage.getItem('hasVisitedBefore');
       if (!hasVisited) {
-        setShowWelcomeTip(true);
+        setTimeout(() => setShowWelcomeTip(true), 0);
         localStorage.setItem('hasVisitedBefore', 'true');
         setTimeout(() => setShowWelcomeTip(false), 10000);
       }
@@ -569,7 +582,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         if (daysSinceLastVisit > 1) {
           const dismissedBanner = localStorage.getItem('dismissedNewContentBanner');
           if (!dismissedBanner || parseInt(dismissedBanner, 10) < lastVisitTime) {
-            setShowNewContentBanner(true);
+            setTimeout(() => setShowNewContentBanner(true), 0);
           }
         }
       }
@@ -602,13 +615,13 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       if (prefs) {
         const parsed = JSON.parse(prefs);
         if (parsed.selectedCategories && !parsed.selectedCategories.includes('All')) {
-          setSelectedCategories(parsed.selectedCategories);
-          setShowRestoredNotice(true);
+          setTimeout(() => setSelectedCategories(parsed.selectedCategories), 0);
+          setTimeout(() => setShowRestoredNotice(true), 0);
           setTimeout(() => setShowRestoredNotice(false), 3000);
         }
         if (parsed.selectedPricing && parsed.selectedPricing !== 'All') {
-          setSelectedPricing(parsed.selectedPricing);
-          setShowRestoredNotice(true);
+          setTimeout(() => setSelectedPricing(parsed.selectedPricing), 0);
+          setTimeout(() => setShowRestoredNotice(true), 0);
           setTimeout(() => setShowRestoredNotice(false), 3000);
         }
       }
@@ -745,7 +758,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   useEffect(() => {
     if (search.trim()) {
       toolsGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setShowWelcomeTip(false);
+      setTimeout(() => setShowWelcomeTip(false), 0);
     }
   }, [search]);
 
@@ -819,42 +832,47 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     return suggestions.slice(0, 10);
   }, [search, displayedTools]);
 
-  const autocompleteItems = useMemo(() => {
-    if (!search.trim()) return [];
-    const query = search.toLowerCase();
-    const items: { type: 'tool' | 'blog'; name: string; category: string; id: number; score: number }[] = [];
+  const q = search.trim();
+  const autocompleteItems = (() => {
+    if (!q) return [];
+    const query = q.toLowerCase();
     
-    displayedTools.forEach(tool => {
-      if (items.length >= 8) return;
-      const nameMatch = tool.name.toLowerCase().includes(query);
-      const descMatch = tool.description.toLowerCase().includes(query);
-      if (nameMatch || descMatch) {
-        items.push({
-          type: 'tool',
+    const toolItems = displayedTools
+      .filter(tool => {
+        return tool.name.toLowerCase().includes(query) || tool.description.toLowerCase().includes(query);
+      })
+      .slice(0, 8)
+      .map(tool => {
+        const nameMatch = tool.name.toLowerCase().includes(query);
+        return {
+          type: 'tool' as const,
           name: tool.name,
           category: tool.category,
           id: tool.id,
           score: nameMatch ? (tool.rating || 4) * 10 : (tool.rating || 4)
-        });
-      }
-    });
+        };
+      });
     
-    blogPosts.forEach(post => {
-      if (items.length >= 10) return;
-      if (post.title.toLowerCase().includes(query) || post.description.toLowerCase().includes(query)) {
+    const blogItems = blogPosts
+      .filter(post => {
+        return post.title.toLowerCase().includes(query) || post.description.toLowerCase().includes(query);
+      })
+      .slice(0, 10 - toolItems.length)
+      .map(post => {
         const titleMatch = post.title.toLowerCase().includes(query);
-        items.push({
-          type: 'blog',
+        return {
+          type: 'blog' as const,
           name: post.title,
           category: post.category,
           id: post.id,
           score: titleMatch ? 50 : 20
-        });
-      }
-    });
+        };
+      });
     
-    return items.sort((a, b) => b.score - a.score).slice(0, 5);
-  }, [search, displayedTools, blogPosts]);
+    return [...toolItems, ...blogItems]
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 5);
+  })();
 
   // Handle suggestion click
   const handleSuggestionClick = (suggestion: { type: string; label: string; value: string; toolId?: number }) => {
@@ -1052,16 +1070,18 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     } catch { return 0; }
   };
 
-  const incrementMysteryCount = () => {
+  const incrementMysteryCount = useCallback(() => {
     try {
       const today = new Date().toISOString().slice(0, 10);
-      const newCount = mysteryCount + 1;
-      localStorage.setItem('mysteryBoxCount', JSON.stringify({ date: today, count: newCount }));
-      setMysteryCount(newCount);
+      setMysteryCount(prev => {
+        const newCount = prev + 1;
+        localStorage.setItem('mysteryBoxCount', JSON.stringify({ date: today, count: newCount }));
+        return newCount;
+      });
     } catch {}
-  };
+  }, []);
 
-  const openMysteryBox = () => {
+  const openMysteryBox = useCallback(() => {
     const unsaved = displayedTools.filter(t => !savedIds.includes(t.id));
     if (unsaved.length === 0) return;
     const random = unsaved[Math.floor(Math.random() * unsaved.length)];
@@ -1092,11 +1112,11 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     setMysteryHints(hints);
     setShowMysteryBox(true);
     incrementMysteryCount();
-  };
+  }, [displayedTools, savedIds, incrementMysteryCount]);
 
   // Initialize mystery count
   useEffect(() => {
-    setMysteryCount(getMysteryCount());
+    setTimeout(() => setMysteryCount(getMysteryCount()), 0);
   }, []);
 
   // Debounced search with 300ms delay
@@ -1220,7 +1240,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
 
   useEffect(() => {
     if (!selectedCategories.includes('All') || selectedPricing !== 'All' || debouncedSearch) {
-      setIsFilterTransitioning(true);
+      setTimeout(() => setIsFilterTransitioning(true), 0);
       const timer = setTimeout(() => setIsFilterTransitioning(false), 300);
       return () => clearTimeout(timer);
     }
@@ -1281,9 +1301,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         const filters = sessionStorage.getItem('useaitools_filters');
         if (filters) {
           const parsed = JSON.parse(filters);
-          if (parsed.selectedCategories) setSelectedCategories(parsed.selectedCategories);
-          if (parsed.selectedPricing) setSelectedPricing(parsed.selectedPricing);
-          if (parsed.search) setSearch(parsed.search);
+          if (parsed.selectedCategories) setTimeout(() => setSelectedCategories(parsed.selectedCategories), 0);
+          if (parsed.selectedPricing) setTimeout(() => setSelectedPricing(parsed.selectedPricing), 0);
+          if (parsed.search) setTimeout(() => setSearch(parsed.search), 0);
         }
         const scrollY = parseInt(isBackNavigation, 10);
         sessionStorage.removeItem('useaitools_scrollY');
@@ -1429,31 +1449,29 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     }
   };
 
-  const [showBanner, setShowBanner] = useState(true);
-  const [showDailyPick, setShowDailyPick] = useState(true);
-  const [showMysteryBox, setShowMysteryBox] = useState(false);
-  const [mysteryTool, setMysteryTool] = useState<Tool | null>(null);
-  const [mysteryRevealed, setMysteryRevealed] = useState(false);
-  const [mysteryHints, setMysteryHints] = useState<string[]>([]);
-  const [mysteryCount, setMysteryCount] = useState(0);
-
-  const [isListening, setIsListening] = useState(false);
-  const [speechSupported, setSpeechSupported] = useState(false);
-  const [isDragOver, setIsDragOver] = useState(false);
-  const [isFilterTransitioning, setIsFilterTransitioning] = useState(false);
+  
 
   useEffect(() => {
-    setSpeechSupported(
+    setTimeout(() => setSpeechSupported(
       typeof window !== 'undefined' &&
       ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window)
-    );
+    ), 0);
   }, []);
 
   const startVoiceSearch = () => {
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    const SpeechRecognition = (window as unknown as Record<string, unknown>).SpeechRecognition || (window as unknown as Record<string, unknown>).webkitSpeechRecognition;
     if (!SpeechRecognition) return;
 
-    const recognition = new SpeechRecognition();
+    const recognition = new (SpeechRecognition as new () => {
+      lang: string;
+      interimResults: boolean;
+      maxAlternatives: number;
+      onstart: (() => void) | null;
+      onresult: ((e: { results: Array<Array<{ transcript: string }>> }) => void) | null;
+      onerror: (() => void) | null;
+      onend: (() => void) | null;
+      start: () => void;
+    })();
     recognition.lang = 'en-US';
     recognition.interimResults = false;
     recognition.maxAlternatives = 1;
@@ -1462,7 +1480,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       setIsListening(true);
     };
 
-    recognition.onresult = (event: any) => {
+    recognition.onresult = (event) => {
       const transcript = event.results[0][0].transcript;
       setSearch(transcript);
       setShowSuggestions(true);
@@ -2278,7 +2296,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               {!mysteryRevealed ? (
                 <div className="p-6 sm:p-8 text-center">
                   <div className="text-6xl mb-4 animate-bounce">🎁</div>
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">What's inside?</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">What&rsquo;s inside?</h3>
                   <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Here are some clues...</p>
                   <div className="space-y-3 mb-8">
                     {mysteryHints.map((hint, i) => (

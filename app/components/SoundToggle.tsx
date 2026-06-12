@@ -9,7 +9,7 @@ export default function SoundToggle() {
   useEffect(() => {
     try {
       const stored = localStorage.getItem('useaitools_sound');
-      setEnabled(stored !== 'disabled');
+      setTimeout(() => setEnabled(stored !== 'disabled'), 0);
     } catch {}
   }, []);
 

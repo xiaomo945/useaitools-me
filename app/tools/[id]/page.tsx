@@ -1,9 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import tools from '@/data/tools.json';
 import { blogPosts } from '@/data/blog-posts';
-import Footer from '@/app/components/Footer';
 import ToolDetailClient from './ToolDetailClient';
 
 type Tool = {
@@ -24,25 +22,6 @@ type Tool = {
 
 // 类型断言确保数据符合我们的类型要求
 const typedTools = tools as Tool[];
-
-// Helper function to check if a tool has affiliate link (environment variable or JSON field)
-function hasAffiliateLink(tool: Tool): boolean {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name.includes('Rytr')) {
-    shortEnvVarName = 'AFFILIATE_RYTR';
-  } else if (tool.name.includes('VEED')) {
-    shortEnvVarName = 'AFFILIATE_VEED';
-  } else if (tool.name.includes('Murf')) {
-    shortEnvVarName = 'AFFILIATE_MURF';
-  } else if (tool.name.includes('Pictory')) {
-    shortEnvVarName = 'AFFILIATE_PICTORY';
-  } else if (tool.name.includes('Grammarly')) {
-    shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  }
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return !!(envLink || tool.affiliate_link);
-}
 
 // Helper function to get affiliate link from environment variable or fallback to JSON
 function getAffiliateLink(tool: Tool): string {

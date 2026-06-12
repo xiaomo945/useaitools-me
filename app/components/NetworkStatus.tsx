@@ -7,7 +7,7 @@ export default function NetworkStatus() {
   const [justRestored, setJustRestored] = useState(false);
 
   useEffect(() => {
-    setIsOffline(!navigator.onLine);
+    setTimeout(() => setIsOffline(!navigator.onLine), 0);
 
     const handleOffline = () => {
       setIsOffline(true);

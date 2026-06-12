@@ -11,14 +11,16 @@ export default function ThemeToggle() {
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark';
     const manualFlag = localStorage.getItem('themeManual');
 
-    if (savedTheme && manualFlag === 'true') {
-      setTheme(savedTheme);
-      setIsManual(true);
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setTheme(prefersDark ? 'dark' : 'light');
-      setIsManual(false);
-    }
+    setTimeout(() => {
+      if (savedTheme && manualFlag === 'true') {
+        setTheme(savedTheme);
+        setIsManual(true);
+      } else {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(prefersDark ? 'dark' : 'light');
+        setIsManual(false);
+      }
+    }, 0);
   }, []);
 
   useEffect(() => {

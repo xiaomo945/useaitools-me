@@ -7,7 +7,7 @@ export default function LanguageSwitcher() {
   const [locale, setLocalLocale] = useState<Locale>('en');
 
   useEffect(() => {
-    setLocalLocale(getLocale());
+    setTimeout(() => setLocalLocale(getLocale()), 0);
   }, []);
 
   const handleSwitch = (newLocale: Locale) => {

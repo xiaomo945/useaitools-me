@@ -26,11 +26,13 @@ export default function DashboardPage() {
   useEffect(() => {
     try {
       const clicks = parseInt(localStorage.getItem('affiliateClickCount') || '0');
-      setAffiliateClicks(clicks);
       const saved = JSON.parse(localStorage.getItem('savedTools') || '[]');
-      setSavedCount(saved.length);
       const history = JSON.parse(localStorage.getItem('toolHistory') || '[]');
-      setHistoryCount(history.length);
+      setTimeout(() => {
+        setAffiliateClicks(clicks);
+        setSavedCount(saved.length);
+        setHistoryCount(history.length);
+      }, 0);
     } catch {}
   }, []);
 

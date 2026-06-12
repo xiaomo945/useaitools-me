@@ -7,7 +7,6 @@ import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import StarRating from '@/app/components/StarRating';
 
-type Workflow = (typeof workflows)[0];
 type Tool = (typeof tools)[0];
 
 const difficultyConfig: Record<string, { bg: string; text: string; label: string }> = {

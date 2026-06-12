@@ -275,7 +275,7 @@ export default function ClientBlogDetail({
     const params = new URLSearchParams(window.location.search);
     const term = params.get('highlight');
     if (term) {
-      setHighlightTerm(term);
+      setTimeout(() => setHighlightTerm(term), 0);
       setTimeout(() => {
         const firstMark = document.querySelector('mark');
         if (firstMark) {

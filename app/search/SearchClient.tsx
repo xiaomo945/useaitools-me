@@ -14,7 +14,7 @@ function SearchPageInner() {
   const [searchQuery, setSearchQuery] = useState(query);
 
   useEffect(() => {
-    setSearchQuery(query);
+    setTimeout(() => setSearchQuery(query), 0);
   }, [query]);
 
   // Apply text search first, then hand off to filters

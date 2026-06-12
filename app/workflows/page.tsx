@@ -4,8 +4,6 @@ import workflows from '@/data/workflows.json';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 
-type Workflow = (typeof workflows)[0];
-
 const difficultyConfig: Record<string, { bg: string; text: string; label: string }> = {
   beginner: { bg: 'bg-emerald-100 dark:bg-emerald-500/20', text: 'text-emerald-700 dark:text-emerald-300', label: '🌱 Beginner' },
   intermediate: { bg: 'bg-amber-100 dark:bg-amber-500/20', text: 'text-amber-700 dark:text-amber-300', label: '🔥 Intermediate' },

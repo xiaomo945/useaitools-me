@@ -58,7 +58,7 @@ export default function LeaderboardPage() {
     .slice(0, 10);
 
   const popularTools = [...tools]
-    .sort(() => Math.random() - 0.5)
+    .sort((a, b) => ((a.id * 7 + 3) % 13) - ((b.id * 7 + 3) % 13))
     .slice(0, 10);
 
   return (

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Zap, Brain, Shield, Check, X } from 'lucide-react';
+import { ArrowRight, Zap, Brain, Shield } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import { Metadata } from 'next';

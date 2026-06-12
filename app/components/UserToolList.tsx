@@ -29,10 +29,10 @@ export default function UserToolList({ savedTools }: UserToolListProps) {
     if (savedLists) {
       try {
         const parsed = JSON.parse(savedLists);
-        setLists(parsed.map((list: any) => ({
+        setTimeout(() => setLists(parsed.map((list: Omit<RecommendationList, 'createdAt'> & { createdAt: string }) => ({
           ...list,
           createdAt: new Date(list.createdAt)
-        })));
+        }))), 0);
       } catch (e) {
         console.error('Failed to parse saved lists:', e);
       }

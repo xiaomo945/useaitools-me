@@ -30,8 +30,8 @@ async function saveToSupabase(email: string): Promise<boolean> {
       throw new Error(`Supabase error: ${response.status}`);
     }
     return true;
-  } catch (error: any) {
-    if (error.message === 'DUPLICATE') {
+  } catch (error: unknown) {
+    if (error instanceof Error && error.message === 'DUPLICATE') {
       throw error;
     }
     console.error('Supabase save failed:', error);
@@ -81,8 +81,8 @@ export async function POST(request: Request) {
       try {
         await saveToSupabase(email);
         return NextResponse.json({ success: true, message: 'Thanks for subscribing!' });
-      } catch (error: any) {
-        if (error.message === 'DUPLICATE') {
+      } catch (error: unknown) {
+        if (error instanceof Error && error.message === 'DUPLICATE') {
           return NextResponse.json({ success: false, message: 'Email already subscribed' }, { status: 409 });
         }
         // Fall through to local storage

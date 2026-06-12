@@ -41,7 +41,7 @@ export default function ComparisonVisualization({ tools }: ComparisonVisualizati
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {tools.map((tool, idx) => {
-                const ratingBreakdown = (tool as any).rating_breakdown;
+                const ratingBreakdown = tool.rating_breakdown;
                 const score = ratingBreakdown?.[dim]?.score || 0;
                 const percentage = (score / 5) * 100;
                 

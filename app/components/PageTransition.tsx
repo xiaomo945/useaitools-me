@@ -14,8 +14,10 @@ export default function PageTransition({
 
   useEffect(() => {
     // When path changes, trigger a transition
-    setTransitionKey(prev => prev + 1);
-    setDisplayChildren(children);
+    setTimeout(() => {
+      setTransitionKey(prev => prev + 1);
+      setDisplayChildren(children);
+    }, 0);
   }, [pathname, children]);
 
   return (

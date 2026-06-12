@@ -124,14 +124,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  const toolPages = tools.map((tool: any) => ({
+  const toolPages = tools.map((tool: { id: number }) => ({
     url: `${baseUrl}/tools/${tool.id}`,
     lastModified: currentDate,
     changeFrequency: 'weekly' as const,
     priority: 0.7,
   }));
 
-  const blogPostPages = blogPosts.map((post: any) => ({
+  const blogPostPages = blogPosts.map((post: { slug: string; date: string }) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.date),
     changeFrequency: 'monthly' as const,

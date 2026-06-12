@@ -318,140 +318,21 @@ const getCategoryColors = (category: Tool['category']) => {
     }
   };
 
-// Export function
-type BlogPost = {
-  id: number;
-  title: string;
-  slug: string;
-  date: string;
-  description: string;
-  category?: string;
-  images?: { url: string; alt: string }[];
-};
-
-export default function ToolDetailClient({ tool, relatedTools, relatedArticles = [] }: { tool: Tool; relatedTools: Tool[]; relatedArticles?: BlogPost[] }) {
-  const router = useRouter();
-  const colors = getCategoryColors(tool.category);
-  const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
-  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
-  const [openFAQIndex, setOpenFAQIndex] = useState<number | null>(null);
-  const hasAffiliate = hasAffiliateLink(tool);
-  const ctaText = hasAffiliate ? ctaVariants[getCTAVariant()] : 'Visit Website';
-  const ctaUrl = hasAffiliate ? getAffiliateLinkWithUTM(tool) : tool.url;
-  const faqs = toolFAQs[tool.id];
-  const processedFAQs = faqs?.map(faq => ({
-    ...faq,
-    answer: faq.answer.replace(/\{CTA_URL\}/g, ctaUrl)
-  }));
-
-  const allTools = toolsData as Tool[];
-  const relatedToolIds = new Set(relatedTools.map(t => t.id));
-  const getBestAlternatives = (): Tool[] => {
-    const excludeIds = new Set([tool.id, ...relatedToolIds]);
-    const sameCategory = allTools.filter(t => t.category === tool.category && !excludeIds.has(t.id));
-    const sameCategoryAndSkill = tool.skill_level
-      ? sameCategory.filter(t => t.skill_level === tool.skill_level)
-      : [];
-    const pool = sameCategoryAndSkill.length > 0 ? sameCategoryAndSkill : sameCategory;
-    return [...pool]
-      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
-      .slice(0, 3);
-  };
-  const bestAlternatives = getBestAlternatives();
-  
-  // People Also Viewed - based on browsing history
-  const [peopleAlsoViewed, setPeopleAlsoViewed] = useState<Tool[]>([]);
-  
-  useEffect(() => {
-    saveToHistory(tool.id);
-    
-    try {
-      const saved = localStorage.getItem('toolHistory');
-      if (saved) {
-        const history: { toolId: number; timestamp: number }[] = JSON.parse(saved);
-        const excludeIds = new Set([tool.id, ...relatedToolIds, ...bestAlternatives.map(t => t.id)]);
-        const historyToolIds = history.map(h => h.toolId).filter(id => !excludeIds.has(id));
-        const historyTools = allTools.filter(t => historyToolIds.includes(t.id) && t.category === tool.category);
-        
-        if (historyTools.length >= 3) {
-          setPeopleAlsoViewed(historyTools.slice(0, 3));
-        } else {
-          const popularOthers = allTools.filter(t => 
-            t.category === tool.category && 
-            !excludeIds.has(t.id) && 
-            !historyToolIds.includes(t.id)
-          ).sort((a, b) => (b.rating || 0) - (a.rating || 0));
-          setPeopleAlsoViewed([...historyTools, ...popularOthers].slice(0, 3));
-        }
-      } else {
-        const popular = allTools.filter(t => 
-          t.category === tool.category && 
-          t.id !== tool.id && 
-          !relatedToolIds.has(t.id)
-        ).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
-        setPeopleAlsoViewed(popular);
-      }
-    } catch {
-      const popular = allTools.filter(t => 
-        t.category === tool.category && 
-        t.id !== tool.id && 
-        !relatedToolIds.has(t.id)
-      ).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
-      setPeopleAlsoViewed(popular);
-    }
-  }, [tool.id]);
-
-  const copyToClipboard = async (text: string, index: number) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopiedIndex(index);
-      setTimeout(() => setCopiedIndex(null), 2000);
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
-  };
-
-  const handleShare = async () => {
-    const shareUrl = typeof window !== 'undefined' ? window.location.href : `https://useaitools.me/tools/${tool.id}`;
-    const shareData = {
-      title: `${tool.name} - Use AI Tools`,
-      text: `${tool.name}: ${tool.description.slice(0, 100)}...`,
-      url: shareUrl,
-    };
-
-    if (navigator.share) {
-      try {
-        await navigator.share(shareData);
-      } catch (err) {
-        if ((err as Error).name !== 'AbortError') {
-          console.error('Share failed:', err);
-        }
-      }
-    } else {
-      try {
-        await navigator.clipboard.writeText(shareUrl);
-        setCopiedIndex(-1);
-        setTimeout(() => setCopiedIndex(null), 2000);
-      } catch (err) {
-        console.error('Failed to copy link:', err);
-      }
-    }
-  };
-
+// StarRating component
 const StarRating = ({ rating }: { rating: number }) => (
-    <div className="flex items-center gap-0.5">
-      {[1, 2, 3, 4, 5].map((star) => (
-        <svg
-          key={star}
-          className={`w-4 h-4 ${star <= rating ? 'text-amber-400' : 'text-slate-300 dark:text-slate-600'}`}
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-        </svg>
-      ))}
-    </div>
-  );
+  <div className="flex items-center gap-0.5">
+    {[1, 2, 3, 4, 5].map((star) => (
+      <svg
+        key={star}
+        className={`w-4 h-4 ${star <= rating ? 'text-amber-400' : 'text-slate-300 dark:text-slate-600'}`}
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+      </svg>
+    ))}
+  </div>
+);
 
 const ratingDimensions = [
   { key: 'ease', label: 'Ease of Use', desc: 'How intuitive is the interface?' },
@@ -462,7 +343,7 @@ const ratingDimensions = [
   { key: 'support', label: 'Support', desc: 'Responsiveness and helpfulness' },
 ];
 
-const RatingTooltip = ({ overallRating }: { overallRating: number }) => {
+const RatingTooltip = ({ overallRating, ratingCount }: { overallRating: number; ratingCount?: number }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const getDimensionRating = (key: string, base: number): number => {
@@ -483,7 +364,7 @@ const RatingTooltip = ({ overallRating }: { overallRating: number }) => {
         <StarRating rating={Math.round(overallRating)} />
         <span className="font-medium">{overallRating}</span>
         <span className="text-slate-400 dark:text-slate-500">·</span>
-        <span>Already used by {tool.rating_count?.toLocaleString()} users</span>
+        <span>Already used by {ratingCount?.toLocaleString()} users</span>
         <svg className="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
       </button>
       {showTooltip && (
@@ -585,11 +466,132 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
   );
 };
 
-  const [hasReferrer, setHasReferrer] = useState(false);
+// Export function
+type BlogPost = {
+  id: number;
+  title: string;
+  slug: string;
+  date: string;
+  description: string;
+  category?: string;
+  images?: { url: string; alt: string }[];
+};
 
+export default function ToolDetailClient({ tool, relatedTools, relatedArticles = [] }: { tool: Tool; relatedTools: Tool[]; relatedArticles?: BlogPost[] }) {
+  const router = useRouter();
+  const colors = getCategoryColors(tool.category);
+  const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const [openFAQIndex, setOpenFAQIndex] = useState<number | null>(null);
+  const hasAffiliate = hasAffiliateLink(tool);
+  const ctaText = hasAffiliate ? ctaVariants[getCTAVariant()] : 'Visit Website';
+  const ctaUrl = hasAffiliate ? getAffiliateLinkWithUTM(tool) : tool.url;
+  const faqs = toolFAQs[tool.id];
+  const processedFAQs = faqs?.map(faq => ({
+    ...faq,
+    answer: faq.answer.replace(/\{CTA_URL\}/g, ctaUrl)
+  }));
+
+  const allTools = toolsData as Tool[];
+  const relatedToolIds = new Set(relatedTools.map(t => t.id));
+  const getBestAlternatives = (): Tool[] => {
+    const excludeIds = new Set([tool.id, ...relatedToolIds]);
+    const sameCategory = allTools.filter(t => t.category === tool.category && !excludeIds.has(t.id));
+    const sameCategoryAndSkill = tool.skill_level
+      ? sameCategory.filter(t => t.skill_level === tool.skill_level)
+      : [];
+    const pool = sameCategoryAndSkill.length > 0 ? sameCategoryAndSkill : sameCategory;
+    return [...pool]
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+      .slice(0, 3);
+  };
+  const bestAlternatives = getBestAlternatives();
+  
+  // People Also Viewed - based on browsing history
+  const [peopleAlsoViewed, setPeopleAlsoViewed] = useState<Tool[]>([]);
+  
   useEffect(() => {
-    setHasReferrer(!!sessionStorage.getItem('useaitools_scrollY'));
-  }, []);
+    saveToHistory(tool.id);
+    
+    const compute = () => {
+      try {
+        const saved = localStorage.getItem('toolHistory');
+        if (saved) {
+          const history: { toolId: number; timestamp: number }[] = JSON.parse(saved);
+          const excludeIds = new Set([tool.id, ...relatedToolIds, ...bestAlternatives.map(t => t.id)]);
+          const historyToolIds = history.map(h => h.toolId).filter(id => !excludeIds.has(id));
+          const historyTools = allTools.filter(t => historyToolIds.includes(t.id) && t.category === tool.category);
+          
+          if (historyTools.length >= 3) {
+            setPeopleAlsoViewed(historyTools.slice(0, 3));
+          } else {
+            const popularOthers = allTools.filter(t => 
+              t.category === tool.category && 
+              !excludeIds.has(t.id) && 
+              !historyToolIds.includes(t.id)
+            ).sort((a, b) => (b.rating || 0) - (a.rating || 0));
+            setPeopleAlsoViewed([...historyTools, ...popularOthers].slice(0, 3));
+          }
+        } else {
+          const popular = allTools.filter(t => 
+            t.category === tool.category && 
+            t.id !== tool.id && 
+            !relatedToolIds.has(t.id)
+          ).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
+          setPeopleAlsoViewed(popular);
+        }
+      } catch {
+        const popular = allTools.filter(t => 
+          t.category === tool.category && 
+          t.id !== tool.id && 
+          !relatedToolIds.has(t.id)
+        ).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
+        setPeopleAlsoViewed(popular);
+      }
+    };
+    queueMicrotask(compute);
+  }, [tool.id]);
+
+  const copyToClipboard = async (text: string, index: number) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedIndex(index);
+      setTimeout(() => setCopiedIndex(null), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
+
+  const handleShare = async () => {
+    const shareUrl = typeof window !== 'undefined' ? window.location.href : `https://useaitools.me/tools/${tool.id}`;
+    const shareData = {
+      title: `${tool.name} - Use AI Tools`,
+      text: `${tool.name}: ${tool.description.slice(0, 100)}...`,
+      url: shareUrl,
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (err) {
+        if ((err as Error).name !== 'AbortError') {
+          console.error('Share failed:', err);
+        }
+      }
+    } else {
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        setCopiedIndex(-1);
+        setTimeout(() => setCopiedIndex(null), 2000);
+      } catch (err) {
+        console.error('Failed to copy link:', err);
+      }
+    }
+  };
+
+const [hasReferrer] = useState(() => {
+    try { return !!sessionStorage.getItem('useaitools_scrollY'); } catch { return false; }
+  });
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-10 sm:py-16">
@@ -734,7 +736,7 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
             {tool.rating && tool.rating_count && (
               <div className="mt-4 flex flex-col items-center gap-3">
                 <div className="flex items-center text-sm text-slate-500 dark:text-slate-400">
-                  <RatingTooltip overallRating={tool.rating} />
+                  <RatingTooltip overallRating={tool.rating} ratingCount={tool.rating_count} />
                 </div>
                 <div className="flex items-center gap-3">
                   <button
@@ -1273,7 +1275,7 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
         </div>
 
         {/* Related Tools: Similar tools in same category */}
-        <RelatedTools currentTool={tool} allTools={toolsData as any} limit={4} />
+        <RelatedTools currentTool={tool} allTools={toolsData as { id: number; name: string; description: string; category: string; pricing: string; rating?: number; best_for?: string[] }[]} limit={4} />
       </div>
       <Footer />
     </div>
