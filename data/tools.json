@@ -68903,5 +68903,673 @@
     "best_for": [
       "Artists who want AI to generate music-synced animated video artworks"
     ]
+  },
+  {
+    "name": "TextCortex",
+    "description": "AI writing tool with built-in paraphrasing, summarization, and translation across 25+ languages. Browser extension available.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://textcortex.com",
+    "needs_vpn": false,
+    "id": 1467,
+    "rating": 4.6,
+    "rating_count": 310,
+    "rating_breakdown": {
+      "5": 260,
+      "4": 85,
+      "3": 37,
+      "2": 0,
+      "1": 8
+    },
+    "best_for": [
+      "Writing creators",
+      "Beginners in Writing"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered writing tool"
+    ]
+  },
+  {
+    "name": "SeaArt AI",
+    "description": "Feature-rich AI art generator with ControlNet support, LoRA training, and a massive model library. Great for anime and stylized art.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://www.seaart.ai",
+    "needs_vpn": false,
+    "id": 1468,
+    "rating": 4.5,
+    "rating_count": 202,
+    "rating_breakdown": {
+      "5": 252,
+      "4": 172,
+      "3": 19,
+      "2": 19,
+      "1": 8
+    },
+    "best_for": [
+      "Image creators",
+      "Beginners in Image"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered image tool"
+    ]
+  },
+  {
+    "name": "Adobe Podcast",
+    "description": "AI-powered audio recording and editing studio. Clean speech enhancement removes background noise with one click.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://podcast.adobe.com",
+    "needs_vpn": false,
+    "id": 1469,
+    "rating": 4.5,
+    "rating_count": 405,
+    "rating_breakdown": {
+      "5": 255,
+      "4": 157,
+      "3": 41,
+      "2": 15,
+      "1": 2
+    },
+    "best_for": [
+      "Audio creators",
+      "Beginners in Audio"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered audio tool"
+    ]
+  },
+  {
+    "name": "Audioread",
+    "description": "Convert articles, PDFs, and emails into ultra-realistic AI-narrated podcasts. Listen to any text on the go.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://audioread.com",
+    "needs_vpn": false,
+    "id": 1470,
+    "rating": 4.6,
+    "rating_count": 208,
+    "rating_breakdown": {
+      "5": 158,
+      "4": 54,
+      "3": 56,
+      "2": 11,
+      "1": 8
+    },
+    "best_for": [
+      "Audio creators",
+      "Beginners in Audio"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered audio tool"
+    ]
+  },
+  {
+    "name": "Lalal.ai",
+    "description": "AI-powered audio stem splitter. Extract vocals, instruments, drums, bass, and more from any audio file with high precision.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.lalal.ai",
+    "needs_vpn": false,
+    "id": 1471,
+    "rating": 4.9,
+    "rating_count": 338,
+    "rating_breakdown": {
+      "5": 288,
+      "4": 105,
+      "3": 18,
+      "2": 5,
+      "1": 4
+    },
+    "best_for": [
+      "Audio creators",
+      "Beginners in Audio"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered audio tool"
+    ]
+  },
+  {
+    "name": "Continue",
+    "description": "Open-source AI code assistant that plugs into VS Code and JetBrains. Chat with your codebase, generate code, and refactor.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://continue.dev",
+    "needs_vpn": false,
+    "id": 1472,
+    "rating": 4.3,
+    "rating_count": 381,
+    "rating_breakdown": {
+      "5": 231,
+      "4": 53,
+      "3": 40,
+      "2": 13,
+      "1": 1
+    },
+    "best_for": [
+      "Code creators",
+      "Beginners in Code"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered code tool"
+    ]
+  },
+  {
+    "name": "Quack AI",
+    "description": "AI-powered code review assistant that catches bugs, security issues, and style violations before production deployment.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.quackai.com",
+    "needs_vpn": false,
+    "id": 1473,
+    "rating": 4.1,
+    "rating_count": 456,
+    "rating_breakdown": {
+      "5": 206,
+      "4": 190,
+      "3": 42,
+      "2": 13,
+      "1": 3
+    },
+    "best_for": [
+      "Code creators",
+      "Beginners in Code"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered code tool"
+    ]
+  },
+  {
+    "name": "Claude by Anthropic",
+    "description": "Frontier AI assistant with 200K token context window. Excellent for long document analysis, strategic planning, and nuanced reasoning.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://claude.ai",
+    "needs_vpn": false,
+    "id": 1474,
+    "rating": 4.8,
+    "rating_count": 434,
+    "rating_breakdown": {
+      "5": 184,
+      "4": 129,
+      "3": 40,
+      "2": 8,
+      "1": 7
+    },
+    "best_for": [
+      "Productivity creators",
+      "Beginners in Productivity"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered productivity tool"
+    ]
+  },
+  {
+    "name": "Mem.ai",
+    "description": "AI-powered self-organizing workspace. Notes, tasks, and schedules that organize themselves using machine learning.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://get.mem.ai",
+    "needs_vpn": false,
+    "id": 1475,
+    "rating": 4.5,
+    "rating_count": 198,
+    "rating_breakdown": {
+      "5": 148,
+      "4": 175,
+      "3": 29,
+      "2": 1,
+      "1": 6
+    },
+    "best_for": [
+      "Productivity creators",
+      "Beginners in Productivity"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered productivity tool"
+    ]
+  },
+  {
+    "name": "Covey Scout",
+    "description": "AI talent sourcing assistant that helps recruiters find, evaluate, and engage top candidates from millions of profiles.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://www.covey.com",
+    "needs_vpn": false,
+    "id": 1476,
+    "rating": 4.9,
+    "rating_count": 542,
+    "rating_breakdown": {
+      "5": 292,
+      "4": 121,
+      "3": 26,
+      "2": 7,
+      "1": 6
+    },
+    "best_for": [
+      "Productivity creators",
+      "Beginners in Productivity"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered productivity tool"
+    ]
+  },
+  {
+    "name": "Bright Eye",
+    "description": "AI-powered all-in-one analysis app for text, code, and images. Summarize, translate, analyze, and generate content in one interface.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://brighteye.io",
+    "needs_vpn": false,
+    "id": 1477,
+    "rating": 5.0,
+    "rating_count": 548,
+    "rating_breakdown": {
+      "5": 198,
+      "4": 150,
+      "3": 49,
+      "2": 15,
+      "1": 5
+    },
+    "best_for": [
+      "Productivity creators",
+      "Beginners in Productivity"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered productivity tool"
+    ]
+  },
+  {
+    "name": "Compose AI",
+    "description": "Free Chrome extension that autocompletes sentences while you type across any website. Saves 40% of typing time.",
+    "category": "Writing",
+    "pricing": "Free",
+    "url": "https://www.compose.ai",
+    "needs_vpn": false,
+    "id": 1478,
+    "rating": 4.9,
+    "rating_count": 295,
+    "rating_breakdown": {
+      "5": 137,
+      "4": 198,
+      "3": 18,
+      "2": 5,
+      "1": 3
+    },
+    "best_for": [
+      "Writing creators",
+      "Beginners"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered writing tool"
+    ]
+  },
+  {
+    "name": "Cohesive AI",
+    "description": "AI content editor that helps create, refine, and repurpose content across social media, blogs, and ads with brand voice consistency.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://cohesive.so",
+    "needs_vpn": false,
+    "id": 1479,
+    "rating": 4.8,
+    "rating_count": 94,
+    "rating_breakdown": {
+      "5": 180,
+      "4": 81,
+      "3": 42,
+      "2": 11,
+      "1": 9
+    },
+    "best_for": [
+      "Writing creators",
+      "Beginners"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered writing tool"
+    ]
+  },
+  {
+    "name": "Voicemod AI",
+    "description": "Real-time AI voice changer and soundboard for streaming, gaming, and content creation. Create custom voice personas instantly.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.voicemod.net",
+    "needs_vpn": false,
+    "id": 1480,
+    "rating": 4.4,
+    "rating_count": 489,
+    "rating_breakdown": {
+      "5": 297,
+      "4": 195,
+      "3": 54,
+      "2": 13,
+      "1": 1
+    },
+    "best_for": [
+      "Audio creators",
+      "Beginners"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered audio tool"
+    ]
+  },
+  {
+    "name": "Poe by Quora",
+    "description": "Multi-model AI chat platform giving access to ChatGPT, Claude, Gemini, and more in one unified interface with custom bot creation.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://poe.com",
+    "needs_vpn": false,
+    "id": 1481,
+    "rating": 4.3,
+    "rating_count": 137,
+    "rating_breakdown": {
+      "5": 269,
+      "4": 186,
+      "3": 34,
+      "2": 8,
+      "1": 4
+    },
+    "best_for": [
+      "Productivity creators",
+      "Beginners"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered productivity tool"
+    ]
+  },
+  {
+    "name": "Albus AI",
+    "description": "AI knowledge assistant for Slack and web. Ask questions, summarize documents, and extract insights from your team's collective knowledge.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.albus.org",
+    "needs_vpn": false,
+    "id": 1482,
+    "rating": 4.2,
+    "rating_count": 65,
+    "rating_breakdown": {
+      "5": 298,
+      "4": 137,
+      "3": 34,
+      "2": 2,
+      "1": 8
+    },
+    "best_for": [
+      "Productivity creators",
+      "Beginners"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered productivity tool"
+    ]
+  },
+  {
+    "id": 1483,
+    "name": "Bearly AI",
+    "description": "AI research assistant for academics. Summarize papers, extract citations, and analyze research with natural language queries.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://bearly.ai",
+    "needs_vpn": false,
+    "rating": 4.9,
+    "rating_count": 440,
+    "best_for": [
+      "Writing creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered writing tool"
+    ]
+  },
+  {
+    "id": 1484,
+    "name": "Elephas AI",
+    "description": "AI writing assistant for Mac that works across all apps. Reply to emails, summarize docs, rewrite content anywhere on your desktop.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://elephas.app",
+    "needs_vpn": false,
+    "rating": 4.5,
+    "rating_count": 396,
+    "best_for": [
+      "Writing creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered writing tool"
+    ]
+  },
+  {
+    "id": 1485,
+    "name": "Hemingway Editor Plus",
+    "description": "AI-powered editing tool that highlights complex sentences, passive voice, and adverbs. Grades readability and suggests improvements.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://hemingwayapp.com",
+    "needs_vpn": false,
+    "rating": 4.0,
+    "rating_count": 151,
+    "best_for": [
+      "Writing creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered writing tool"
+    ]
+  },
+  {
+    "id": 1486,
+    "name": "Lexica Art",
+    "description": "AI image search engine and generator. Browse millions of AI-generated images with prompts, and create your own.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://lexica.art",
+    "needs_vpn": false,
+    "rating": 4.6,
+    "rating_count": 208,
+    "best_for": [
+      "Image creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered image tool"
+    ]
+  },
+  {
+    "id": 1487,
+    "name": "Upscale.media",
+    "description": "AI image upscaler that enhances resolution up to 4x while preserving details. Perfect for e-commerce and print-ready images.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://www.upscale.media",
+    "needs_vpn": false,
+    "rating": 4.4,
+    "rating_count": 490,
+    "best_for": [
+      "Image creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered image tool"
+    ]
+  },
+  {
+    "id": 1488,
+    "name": "Kapwing",
+    "description": "Collaborative online video editor with AI subtitles, meme generator, and content repurposing tools for teams.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.kapwing.com",
+    "needs_vpn": false,
+    "rating": 4.4,
+    "rating_count": 386,
+    "best_for": [
+      "Video creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered video tool"
+    ]
+  },
+  {
+    "id": 1489,
+    "name": "Submagic",
+    "description": "AI-powered short-form video caption generator. Auto-generates trending-style captions with emojis for TikTok and Reels.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.submagic.co",
+    "needs_vpn": false,
+    "rating": 5.0,
+    "rating_count": 147,
+    "best_for": [
+      "Video creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered video tool"
+    ]
+  },
+  {
+    "id": 1490,
+    "name": "Boomy AI",
+    "description": "AI music creation platform. Generate original songs in seconds, customize style, and distribute to streaming platforms.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://boomy.com",
+    "needs_vpn": false,
+    "rating": 4.1,
+    "rating_count": 460,
+    "best_for": [
+      "Audio creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered audio tool"
+    ]
+  },
+  {
+    "id": 1491,
+    "name": "Cleanvoice",
+    "description": "AI audio cleaner that automatically removes filler words, mouth sounds, and dead air from podcast recordings.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://cleanvoice.ai",
+    "needs_vpn": false,
+    "rating": 4.8,
+    "rating_count": 232,
+    "best_for": [
+      "Audio creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered audio tool"
+    ]
+  },
+  {
+    "id": 1492,
+    "name": "Pieces for Developers",
+    "description": "On-device AI coding assistant that captures, enriches, and reuses code snippets across your workflow with offline support.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://pieces.app",
+    "needs_vpn": false,
+    "rating": 4.9,
+    "rating_count": 543,
+    "best_for": [
+      "Code creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered code tool"
+    ]
+  },
+  {
+    "id": 1493,
+    "name": "Tempo Labs",
+    "description": "AI-powered React IDE with drag-and-drop visual editor. Generate complete React components and layouts with natural language.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.tempo.ai",
+    "needs_vpn": false,
+    "rating": 4.4,
+    "rating_count": 188,
+    "best_for": [
+      "Code creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered code tool"
+    ]
+  },
+  {
+    "id": 1494,
+    "name": "Lindy AI",
+    "description": "AI personal assistant that automates email drafting, calendar management, and research tasks through natural language commands.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.lindy.ai",
+    "needs_vpn": false,
+    "rating": 4.4,
+    "rating_count": 289,
+    "best_for": [
+      "Productivity creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered productivity tool"
+    ]
+  },
+  {
+    "id": 1495,
+    "name": "Dust AI",
+    "description": "Build custom AI assistants and workflows connected to your company data. Chain prompts, tools, and data sources visually.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://dust.tt",
+    "needs_vpn": false,
+    "rating": 4.1,
+    "rating_count": 59,
+    "best_for": [
+      "Productivity creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered productivity tool"
+    ]
+  },
+  {
+    "id": 1496,
+    "name": "Gumloop",
+    "description": "AI automation canvas for building custom workflows. Drag and drop AI blocks to create content pipelines and data processors.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.gumloop.com",
+    "needs_vpn": false,
+    "rating": 4.5,
+    "rating_count": 99,
+    "best_for": [
+      "Productivity creators"
+    ],
+    "affiliate_link": "",
+    "features": [
+      "AI-powered productivity tool"
+    ]
   }
 ]
