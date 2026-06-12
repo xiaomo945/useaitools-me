@@ -328,6 +328,24 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             })}
           </div>
 
+          {/* Promote Your Tool — Featured Listing */}
+          <div className="mt-12 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border border-emerald-200/60 dark:border-emerald-800/40 rounded-2xl p-6 sm:p-8">
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <div className="flex-1 text-center sm:text-left">
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">🚀 Promote Your AI Tool</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400">
+                  Get featured in this category and reach thousands of AI enthusiasts. Starting at <span className="font-semibold text-emerald-600 dark:text-emerald-400">$19/listing</span>.
+                </p>
+              </div>
+              <Link
+                href="/submit/featured"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
+              >
+                Get Featured →
+              </Link>
+            </div>
+          </div>
+
           <div className="text-center mt-12">
             <Link
               href="/"
