@@ -222,8 +222,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a
                       href="https://tryaiwriter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      target="_blank" rel="noopener noreferrer"
                       className="flex-shrink-0 inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
                     >
                       Try Use AI Writer Free
@@ -314,8 +313,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                     </span>
                     <a
                       href={getAffiliateLink(tool) || tool.url}
-                      target="_blank"
-                      rel="noopener noreferrer sponsored"
+                      target="_blank" rel="noopener noreferrer"
                       className={`inline-flex items-center gap-2 px-4 py-2 border ${colors.border} dark:${colors.bgDark} dark:border-transparent ${colors.textLight} dark:${colors.text} text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:${colors.bg} hover:text-white hover:border-transparent`}
                     >
                       {ctaText}

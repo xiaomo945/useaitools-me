@@ -220,8 +220,7 @@ export default function HistoryPage() {
                             </Link>
                             <a
                               href={item.tool.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                              target="_blank" rel="noopener noreferrer"
                               className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
                             >
                               <ExternalLink className="w-4 h-4" />

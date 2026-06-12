@@ -160,8 +160,7 @@ export default function GoldPicks({ tools, categoryColors }: GoldPicksProps) {
                 {/* CTA Button */}
                 <a
                   href={affiliateUrl}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
+                  target="_blank" rel="noopener noreferrer"
                   className={`w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 ${
                     isFeatured
                       ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25 hover:shadow-lg hover:shadow-emerald-500/30'

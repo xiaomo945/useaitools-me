@@ -20729,7 +20729,27 @@
       "Professionals",
       "Executives",
       "Entrepreneurs"
-    ]
+    ],
+    "rating": 4.2,
+    "rating_count": 1850,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.1,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.1,
+        "description": ""
+      },
+      "features": {
+        "score": 4.2,
+        "description": ""
+      }
+    }
   },
   {
     "id": 428,
@@ -20783,7 +20803,27 @@
       "Marketing Teams",
       "Agencies",
       "Startups"
-    ]
+    ],
+    "rating": 4.5,
+    "rating_count": 3200,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.4,
+        "description": ""
+      },
+      "features": {
+        "score": 4.5,
+        "description": ""
+      }
+    }
   },
   {
     "id": 429,
@@ -20837,7 +20877,27 @@
       "Creatives",
       "Designers",
       "Artists"
-    ]
+    ],
+    "rating": 4.3,
+    "rating_count": 2100,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.2,
+        "description": ""
+      },
+      "features": {
+        "score": 4.3,
+        "description": ""
+      }
+    }
   },
   {
     "id": 430,
@@ -20891,7 +20951,27 @@
       "Creatives",
       "Filmmakers",
       "Animators"
-    ]
+    ],
+    "rating": 4.4,
+    "rating_count": 2800,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.3,
+        "description": ""
+      },
+      "features": {
+        "score": 4.4,
+        "description": ""
+      }
+    }
   },
   {
     "id": 431,
@@ -20945,7 +21025,27 @@
       "Creatives",
       "Musicians",
       "Content Creators"
-    ]
+    ],
+    "rating": 4.2,
+    "rating_count": 1500,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.1,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.1,
+        "description": ""
+      },
+      "features": {
+        "score": 4.2,
+        "description": ""
+      }
+    }
   },
   {
     "id": 433,
@@ -20999,7 +21099,27 @@
       "Developers",
       "Students",
       "Teams"
-    ]
+    ],
+    "rating": 4.7,
+    "rating_count": 5600,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.6,
+        "description": ""
+      },
+      "features": {
+        "score": 4.7,
+        "description": ""
+      }
+    }
   },
   {
     "id": 444,
@@ -21053,7 +21173,27 @@
       "Social Media Managers",
       "Brands",
       "Influencers"
-    ]
+    ],
+    "rating": 3.9,
+    "rating_count": 850,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 3.8,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 3.8,
+        "description": ""
+      },
+      "features": {
+        "score": 3.9,
+        "description": ""
+      }
+    }
   },
   {
     "id": 445,
@@ -21107,7 +21247,27 @@
       "Small Businesses",
       "Content Creators",
       "Marketers"
-    ]
+    ],
+    "rating": 4.0,
+    "rating_count": 1200,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.0,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 3.9,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 3.9,
+        "description": ""
+      },
+      "features": {
+        "score": 4.0,
+        "description": ""
+      }
+    }
   },
   {
     "id": 446,
@@ -21161,7 +21321,27 @@
       "YouTubers",
       "Content Creators",
       "Video Marketers"
-    ]
+    ],
+    "rating": 4.1,
+    "rating_count": 2400,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.0,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.0,
+        "description": ""
+      },
+      "features": {
+        "score": 4.1,
+        "description": ""
+      }
+    }
   },
   {
     "id": 447,
@@ -21215,7 +21395,27 @@
       "YouTubers",
       "Channel Managers",
       "Video Marketers"
-    ]
+    ],
+    "rating": 4.3,
+    "rating_count": 2600,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.2,
+        "description": ""
+      },
+      "features": {
+        "score": 4.3,
+        "description": ""
+      }
+    }
   },
   {
     "id": 448,
@@ -21269,7 +21469,27 @@
       "Artists",
       "Print Designers",
       "Home Decor"
-    ]
+    ],
+    "rating": 4.0,
+    "rating_count": 1800,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.0,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 3.9,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 3.9,
+        "description": ""
+      },
+      "features": {
+        "score": 4.0,
+        "description": ""
+      }
+    }
   },
   {
     "id": 450,
@@ -21323,7 +21543,27 @@
       "Authors",
       "Publishers",
       "Content Creators"
-    ]
+    ],
+    "rating": 4.1,
+    "rating_count": 1100,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.0,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.0,
+        "description": ""
+      },
+      "features": {
+        "score": 4.1,
+        "description": ""
+      }
+    }
   },
   {
     "id": 452,
@@ -21377,7 +21617,27 @@
       "DevOps Engineers",
       "Developers",
       "SREs"
-    ]
+    ],
+    "rating": 4.4,
+    "rating_count": 1900,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.3,
+        "description": ""
+      },
+      "features": {
+        "score": 4.4,
+        "description": ""
+      }
+    }
   },
   {
     "id": 454,
@@ -21431,7 +21691,27 @@
       "Developers",
       "DevOps",
       "System Admins"
-    ]
+    ],
+    "rating": 4.5,
+    "rating_count": 2200,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.4,
+        "description": ""
+      },
+      "features": {
+        "score": 4.5,
+        "description": ""
+      }
+    }
   },
   {
     "id": 458,
@@ -21485,7 +21765,27 @@
       "L&D Teams",
       "Corporate Training",
       "HR"
-    ]
+    ],
+    "rating": 4.2,
+    "rating_count": 1400,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.1,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.1,
+        "description": ""
+      },
+      "features": {
+        "score": 4.2,
+        "description": ""
+      }
+    }
   },
   {
     "id": 459,
@@ -21539,7 +21839,27 @@
       "Sales Teams",
       "SDRs",
       "Founders"
-    ]
+    ],
+    "rating": 4.3,
+    "rating_count": 1600,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.2,
+        "description": ""
+      },
+      "features": {
+        "score": 4.3,
+        "description": ""
+      }
+    }
   },
   {
     "id": 460,
@@ -21593,7 +21913,27 @@
       "Sales Teams",
       "Revenue Teams",
       "SDRs"
-    ]
+    ],
+    "rating": 4.1,
+    "rating_count": 1100,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.0,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.0,
+        "description": ""
+      },
+      "features": {
+        "score": 4.1,
+        "description": ""
+      }
+    }
   },
   {
     "id": 461,
@@ -21647,7 +21987,27 @@
       "Freelancers",
       "Project Managers",
       "Solopreneurs"
-    ]
+    ],
+    "rating": 4.4,
+    "rating_count": 2000,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.3,
+        "description": ""
+      },
+      "features": {
+        "score": 4.4,
+        "description": ""
+      }
+    }
   },
   {
     "id": 462,
@@ -21701,7 +22061,27 @@
       "Freelancers",
       "Consultants",
       "Contractors"
-    ]
+    ],
+    "rating": 3.9,
+    "rating_count": 750,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 3.8,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 3.8,
+        "description": ""
+      },
+      "features": {
+        "score": 3.9,
+        "description": ""
+      }
+    }
   },
   {
     "id": 463,
@@ -21755,7 +22135,27 @@
       "Retail",
       "E-commerce",
       "Warehouses"
-    ]
+    ],
+    "rating": 3.8,
+    "rating_count": 680,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 3.7,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 3.7,
+        "description": ""
+      },
+      "features": {
+        "score": 3.8,
+        "description": ""
+      }
+    }
   },
   {
     "id": 464,
@@ -21809,7 +22209,27 @@
       "E-commerce",
       "Retailers",
       "Distributors"
-    ]
+    ],
+    "rating": 4.0,
+    "rating_count": 900,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.0,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 3.9,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 3.9,
+        "description": ""
+      },
+      "features": {
+        "score": 4.0,
+        "description": ""
+      }
+    }
   },
   {
     "id": 466,
@@ -21863,7 +22283,27 @@
       "Teams",
       "Students",
       "Journalists"
-    ]
+    ],
+    "rating": 4.5,
+    "rating_count": 3800,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.4,
+        "description": ""
+      },
+      "features": {
+        "score": 4.5,
+        "description": ""
+      }
+    }
   },
   {
     "id": 467,
@@ -21917,7 +22357,27 @@
       "Presenters",
       "Marketers",
       "Consultants"
-    ]
+    ],
+    "rating": 4.2,
+    "rating_count": 2200,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.1,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.1,
+        "description": ""
+      },
+      "features": {
+        "score": 4.2,
+        "description": ""
+      }
+    }
   },
   {
     "id": 468,
@@ -21971,7 +22431,27 @@
       "Teams",
       "Startups",
       "Educators"
-    ]
+    ],
+    "rating": 4.4,
+    "rating_count": 2500,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.3,
+        "description": ""
+      },
+      "features": {
+        "score": 4.4,
+        "description": ""
+      }
+    }
   },
   {
     "id": 469,
@@ -22025,7 +22505,27 @@
       "Filmmakers",
       "Creatives",
       "Agencies"
-    ]
+    ],
+    "rating": 4.6,
+    "rating_count": 3500,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.5,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.5,
+        "description": ""
+      },
+      "features": {
+        "score": 4.6,
+        "description": ""
+      }
+    }
   },
   {
     "id": 471,
@@ -22079,7 +22579,27 @@
       "Remote Workers",
       "Podcasters",
       "Streamers"
-    ]
+    ],
+    "rating": 4.4,
+    "rating_count": 2800,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.3,
+        "description": ""
+      },
+      "features": {
+        "score": 4.4,
+        "description": ""
+      }
+    }
   },
   {
     "id": 474,
@@ -22133,7 +22653,27 @@
       "Writers",
       "Professionals",
       "Students"
-    ]
+    ],
+    "rating": 4.4,
+    "rating_count": 3000,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.4,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.3,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.3,
+        "description": ""
+      },
+      "features": {
+        "score": 4.4,
+        "description": ""
+      }
+    }
   },
   {
     "id": 476,
@@ -22187,7 +22727,27 @@
       "Designers",
       "Photographers",
       "E-commerce"
-    ]
+    ],
+    "rating": 4.3,
+    "rating_count": 2100,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.2,
+        "description": ""
+      },
+      "features": {
+        "score": 4.3,
+        "description": ""
+      }
+    }
   },
   {
     "id": 477,
@@ -22241,7 +22801,27 @@
       "E-commerce",
       "Sellers",
       "Social Media"
-    ]
+    ],
+    "rating": 4.5,
+    "rating_count": 2800,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.4,
+        "description": ""
+      },
+      "features": {
+        "score": 4.5,
+        "description": ""
+      }
+    }
   },
   {
     "id": 479,
@@ -22295,7 +22875,27 @@
       "Content Creators",
       "Podcasters",
       "YouTubers"
-    ]
+    ],
+    "rating": 4.3,
+    "rating_count": 2100,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.2,
+        "description": ""
+      },
+      "features": {
+        "score": 4.3,
+        "description": ""
+      }
+    }
   },
   {
     "id": 480,
@@ -22349,7 +22949,27 @@
       "Podcasters",
       "YouTubers",
       "Interviewers"
-    ]
+    ],
+    "rating": 4.5,
+    "rating_count": 2400,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.4,
+        "description": ""
+      },
+      "features": {
+        "score": 4.5,
+        "description": ""
+      }
+    }
   },
   {
     "id": 482,
@@ -22403,7 +23023,27 @@
       "Developers",
       "Open Source Fans",
       "Teams"
-    ]
+    ],
+    "rating": 4.1,
+    "rating_count": 1200,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.0,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.0,
+        "description": ""
+      },
+      "features": {
+        "score": 4.1,
+        "description": ""
+      }
+    }
   },
   {
     "id": 484,
@@ -22457,7 +23097,27 @@
       "Knowledge Workers",
       "Researchers",
       "Writers"
-    ]
+    ],
+    "rating": 4.1,
+    "rating_count": 1300,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.0,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.0,
+        "description": ""
+      },
+      "features": {
+        "score": 4.1,
+        "description": ""
+      }
+    }
   },
   {
     "id": 485,
@@ -22511,7 +23171,27 @@
       "Teams",
       "Students",
       "Journalists"
-    ]
+    ],
+    "rating": 4.2,
+    "rating_count": 1500,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.1,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.1,
+        "description": ""
+      },
+      "features": {
+        "score": 4.2,
+        "description": ""
+      }
+    }
   },
   {
     "id": 487,
@@ -22565,7 +23245,27 @@
       "Teams",
       "Project Managers",
       "Creatives"
-    ]
+    ],
+    "rating": 4.3,
+    "rating_count": 1800,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.2,
+        "description": ""
+      },
+      "features": {
+        "score": 4.3,
+        "description": ""
+      }
+    }
   },
   {
     "id": 488,
@@ -22619,7 +23319,27 @@
       "Researchers",
       "Students",
       "Academics"
-    ]
+    ],
+    "rating": 4.3,
+    "rating_count": 1800,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.3,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.2,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.2,
+        "description": ""
+      },
+      "features": {
+        "score": 4.3,
+        "description": ""
+      }
+    }
   },
   {
     "id": 489,
@@ -22673,7 +23393,27 @@
       "Writers",
       "Social Media Managers",
       "Bloggers"
-    ]
+    ],
+    "rating": 4.2,
+    "rating_count": 1400,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.1,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.1,
+        "description": ""
+      },
+      "features": {
+        "score": 4.2,
+        "description": ""
+      }
+    }
   },
   {
     "id": 491,
@@ -22727,7 +23467,27 @@
       "Content Creators",
       "Social Media",
       "Marketers"
-    ]
+    ],
+    "rating": 4.2,
+    "rating_count": 1500,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.1,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.1,
+        "description": ""
+      },
+      "features": {
+        "score": 4.2,
+        "description": ""
+      }
+    }
   },
   {
     "id": 492,
@@ -22781,7 +23541,27 @@
       "Designers",
       "Marketers",
       "Small Businesses"
-    ]
+    ],
+    "rating": 4.6,
+    "rating_count": 4500,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.6,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.5,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.5,
+        "description": ""
+      },
+      "features": {
+        "score": 4.6,
+        "description": ""
+      }
+    }
   },
   {
     "id": 493,
@@ -22835,7 +23615,27 @@
       "Startups",
       "Small Businesses",
       "Freelancers"
-    ]
+    ],
+    "rating": 4.1,
+    "rating_count": 1600,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.1,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.0,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.0,
+        "description": ""
+      },
+      "features": {
+        "score": 4.1,
+        "description": ""
+      }
+    }
   },
   {
     "id": 494,
@@ -22889,7 +23689,27 @@
       "Frontend Developers",
       "Designers",
       "Startups"
-    ]
+    ],
+    "rating": 4.7,
+    "rating_count": 4300,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.7,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.6,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.6,
+        "description": ""
+      },
+      "features": {
+        "score": 4.7,
+        "description": ""
+      }
+    }
   },
   {
     "id": 495,
@@ -22943,7 +23763,27 @@
       "Developers",
       "Teams",
       "Open Source"
-    ]
+    ],
+    "rating": 4.2,
+    "rating_count": 1300,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.1,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.1,
+        "description": ""
+      },
+      "features": {
+        "score": 4.2,
+        "description": ""
+      }
+    }
   },
   {
     "id": 496,
@@ -22997,7 +23837,27 @@
       "Content Creators",
       "Podcasters",
       "Audiobook Producers"
-    ]
+    ],
+    "rating": 3.8,
+    "rating_count": 680,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.8,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 3.7,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 3.7,
+        "description": ""
+      },
+      "features": {
+        "score": 3.8,
+        "description": ""
+      }
+    }
   },
   {
     "id": 497,
@@ -23051,7 +23911,27 @@
       "Video Creators",
       "Podcasters",
       "Filmmakers"
-    ]
+    ],
+    "rating": 4.2,
+    "rating_count": 1500,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.1,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.1,
+        "description": ""
+      },
+      "features": {
+        "score": 4.2,
+        "description": ""
+      }
+    }
   },
   {
     "id": 498,
@@ -23105,7 +23985,27 @@
       "Students",
       "Professionals",
       "Researchers"
-    ]
+    ],
+    "rating": 3.9,
+    "rating_count": 750,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 3.9,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 3.8,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 3.8,
+        "description": ""
+      },
+      "features": {
+        "score": 3.9,
+        "description": ""
+      }
+    }
   },
   {
     "id": 499,
@@ -23159,7 +24059,27 @@
       "Knowledge Workers",
       "Executives",
       "Researchers"
-    ]
+    ],
+    "rating": 4.2,
+    "rating_count": 1600,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.1,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.1,
+        "description": ""
+      },
+      "features": {
+        "score": 4.2,
+        "description": ""
+      }
+    }
   },
   {
     "id": 502,
@@ -23213,7 +24133,27 @@
       "Filmmakers",
       "Creatives",
       "Marketers"
-    ]
+    ],
+    "rating": 4.5,
+    "rating_count": 3200,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.5,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 4.4,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 4.4,
+        "description": ""
+      },
+      "features": {
+        "score": 4.5,
+        "description": ""
+      }
+    }
   },
   {
     "id": 503,
@@ -23267,7 +24207,27 @@
       "Video Creators",
       "Filmmakers",
       "Advertisers"
-    ]
+    ],
+    "rating": 4.0,
+    "rating_count": 1800,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.0,
+        "description": ""
+      },
+      "value_for_money": {
+        "score": 3.9,
+        "description": ""
+      },
+      "customer_support": {
+        "score": 3.9,
+        "description": ""
+      },
+      "features": {
+        "score": 4.0,
+        "description": ""
+      }
+    }
   },
   {
     "id": 545,
@@ -66568,7 +67528,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 187
+    "rating_count": 187,
+    "best_for": [
+      "Teams that need AI text expansion and keyboard shortcuts for repetitive writing"
+    ]
   },
   {
     "id": 1350,
@@ -66584,7 +67547,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 134
+    "rating_count": 134,
+    "best_for": [
+      "E-commerce brands needing AI product descriptions and marketing copy at scale"
+    ]
   },
   {
     "id": 1351,
@@ -66600,7 +67566,10 @@
       "English"
     ],
     "rating": 4.1,
-    "rating_count": 156
+    "rating_count": 156,
+    "best_for": [
+      "Content marketers who need AI to research and write fact-checked long-form articles"
+    ]
   },
   {
     "id": 1353,
@@ -66616,7 +67585,10 @@
       "English"
     ],
     "rating": 4.3,
-    "rating_count": 245
+    "rating_count": 245,
+    "best_for": [
+      "Artists who want Stable Diffusion with an intuitive web interface and fine controls"
+    ]
   },
   {
     "id": 1359,
@@ -66632,7 +67604,10 @@
       "English"
     ],
     "rating": 4.3,
-    "rating_count": 215
+    "rating_count": 215,
+    "best_for": [
+      "Remote teams that need AI-powered task management and real-time collaboration"
+    ]
   },
   {
     "id": 1365,
@@ -66648,7 +67623,10 @@
       "English"
     ],
     "rating": 4.1,
-    "rating_count": 167
+    "rating_count": 167,
+    "best_for": [
+      "AWS developers who want AI code suggestions optimized for cloud services"
+    ]
   },
   {
     "id": 1368,
@@ -66664,7 +67642,10 @@
       "English"
     ],
     "rating": 4.6,
-    "rating_count": 356
+    "rating_count": 356,
+    "best_for": [
+      "Podcasters who need AI audio editing, transcription, and filler word removal"
+    ]
   },
   {
     "id": 1369,
@@ -66680,7 +67661,10 @@
       "English"
     ],
     "rating": 4.7,
-    "rating_count": 423
+    "rating_count": 423,
+    "best_for": [
+      "Remote workers needing AI background noise removal during calls and recordings"
+    ]
   },
   {
     "id": 1375,
@@ -66696,7 +67680,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 143
+    "rating_count": 143,
+    "best_for": [
+      "Corporate trainers creating AI presenter videos with digital avatars"
+    ]
   },
   {
     "id": 1376,
@@ -66712,7 +67699,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 276
+    "rating_count": 276,
+    "best_for": [
+      "Sales teams using AI to create personalized video messages for prospects"
+    ]
   },
   {
     "id": 1381,
@@ -66728,7 +67718,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 223
+    "rating_count": 223,
+    "best_for": [
+      "Enterprise teams needing AI writing with brand governance and style guides"
+    ]
   },
   {
     "id": 1383,
@@ -66744,7 +67737,10 @@
       "English"
     ],
     "rating": 4.6,
-    "rating_count": 345
+    "rating_count": 345,
+    "best_for": [
+      "Anyone needing quick AI background removal from photos"
+    ]
   },
   {
     "id": 1384,
@@ -66760,7 +67756,10 @@
       "English"
     ],
     "rating": 4.3,
-    "rating_count": 178
+    "rating_count": 178,
+    "best_for": [
+      "Photographers and designers who need AI image upscaling without quality loss"
+    ]
   },
   {
     "id": 1385,
@@ -66776,7 +67775,10 @@
       "English"
     ],
     "rating": 4.1,
-    "rating_count": 134
+    "rating_count": 134,
+    "best_for": [
+      "Artists who want to create surreal and dreamlike AI-generated artwork"
+    ]
   },
   {
     "id": 1386,
@@ -66792,7 +67794,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 201
+    "rating_count": 201,
+    "best_for": [
+      "Creatives who want to breed and evolve AI-generated images through genetic mixing"
+    ]
   },
   {
     "id": 1387,
@@ -66808,7 +67813,10 @@
       "English"
     ],
     "rating": 4.5,
-    "rating_count": 367
+    "rating_count": 367,
+    "best_for": [
+      "Meeting-heavy professionals who want AI transcription and searchable notes"
+    ]
   },
   {
     "id": 1388,
@@ -66824,7 +67832,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 298
+    "rating_count": 298,
+    "best_for": [
+      "Sales and customer success teams that need AI meeting analysis and insights"
+    ]
   },
   {
     "id": 1390,
@@ -66840,7 +67851,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 234
+    "rating_count": 234,
+    "best_for": [
+      "Teams that need AI to record, transcribe, and highlight key moments in meetings"
+    ]
   },
   {
     "id": 1391,
@@ -66856,7 +67870,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 143
+    "rating_count": 143,
+    "best_for": [
+      "Managers who need AI meeting summaries with action item extraction"
+    ]
   },
   {
     "id": 1393,
@@ -66872,7 +67889,10 @@
       "English"
     ],
     "rating": 4.5,
-    "rating_count": 289
+    "rating_count": 289,
+    "best_for": [
+      "Developers who want an AI-enhanced terminal with modern features and smart completions"
+    ]
   },
   {
     "id": 1396,
@@ -66888,7 +67908,10 @@
       "English"
     ],
     "rating": 4.5,
-    "rating_count": 198
+    "rating_count": 198,
+    "best_for": [
+      "Dev teams wanting AI code review that catches bugs before merging PRs"
+    ]
   },
   {
     "id": 1397,
@@ -66904,7 +67927,10 @@
       "English"
     ],
     "rating": 4.6,
-    "rating_count": 378
+    "rating_count": 378,
+    "best_for": [
+      "Musicians and creators who want AI to generate original songs from text prompts"
+    ]
   },
   {
     "id": 1398,
@@ -66920,7 +67946,10 @@
       "English"
     ],
     "rating": 4.5,
-    "rating_count": 267
+    "rating_count": 267,
+    "best_for": [
+      "Music enthusiasts wanting AI music generation with high-quality instrumentation"
+    ]
   },
   {
     "id": 1399,
@@ -66936,7 +67965,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 189
+    "rating_count": 189,
+    "best_for": [
+      "Content creators needing AI-generated royalty-free background music"
+    ]
   },
   {
     "id": 1400,
@@ -66952,7 +67984,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 245
+    "rating_count": 245,
+    "best_for": [
+      "Video creators who need AI to find and license the perfect soundtrack"
+    ]
   },
   {
     "id": 1401,
@@ -66968,7 +68003,10 @@
       "English"
     ],
     "rating": 4.1,
-    "rating_count": 112
+    "rating_count": 112,
+    "best_for": [
+      "Content creators who want AI to compose original background music instantly"
+    ]
   },
   {
     "id": 1403,
@@ -66984,7 +68022,10 @@
       "English"
     ],
     "rating": 4.3,
-    "rating_count": 178
+    "rating_count": 178,
+    "best_for": [
+      "Social media managers who need AI to repurpose long videos into short clips"
+    ]
   },
   {
     "id": 1404,
@@ -67000,7 +68041,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 156
+    "rating_count": 156,
+    "best_for": [
+      "Content marketers who need AI to extract the most engaging moments from videos"
+    ]
   },
   {
     "id": 1405,
@@ -67016,7 +68060,10 @@
       "English"
     ],
     "rating": 4.1,
-    "rating_count": 134
+    "rating_count": 134,
+    "best_for": [
+      "Gaming streamers who want AI to automatically create highlight clips from streams"
+    ]
   },
   {
     "id": 1406,
@@ -67032,7 +68079,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 145
+    "rating_count": 145,
+    "best_for": [
+      "Video editors who want AI to auto-remove silences and create smooth jump cuts"
+    ]
   },
   {
     "id": 1408,
@@ -67048,7 +68098,10 @@
       "English"
     ],
     "rating": 4.1,
-    "rating_count": 124
+    "rating_count": 124,
+    "best_for": [
+      "Startups who need AI to generate marketing copy for multiple channels quickly"
+    ]
   },
   {
     "id": 1410,
@@ -67064,7 +68117,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 203
+    "rating_count": 203,
+    "best_for": [
+      "Marketing teams wanting quick AI copywriting for ads, emails, and social posts"
+    ]
   },
   {
     "id": 1411,
@@ -67080,7 +68136,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 298
+    "rating_count": 298,
+    "best_for": [
+      "Content teams needing an all-in-one AI design and writing platform"
+    ]
   },
   {
     "id": 1412,
@@ -67096,7 +68155,10 @@
       "English"
     ],
     "rating": 4.7,
-    "rating_count": 412
+    "rating_count": 412,
+    "best_for": [
+      "Photographers who need AI to sharpen, denoise, and upscale images to pro quality"
+    ]
   },
   {
     "id": 1415,
@@ -67112,7 +68174,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 178
+    "rating_count": 178,
+    "best_for": [
+      "E-commerce sellers needing batch AI photo enhancement and background processing"
+    ]
   },
   {
     "id": 1416,
@@ -67128,7 +68193,10 @@
       "English"
     ],
     "rating": 4.1,
-    "rating_count": 145
+    "rating_count": 145,
+    "best_for": [
+      "Non-designers who want AI to create social graphics, icons, and mockups"
+    ]
   },
   {
     "id": 1418,
@@ -67144,7 +68212,10 @@
       "English"
     ],
     "rating": 4.5,
-    "rating_count": 356
+    "rating_count": 356,
+    "best_for": [
+      "Power users who want to build AI-automated workflows without coding"
+    ]
   },
   {
     "id": 1419,
@@ -67160,7 +68231,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 213
+    "rating_count": 213,
+    "best_for": [
+      "Professionals wanting AI browser automation to eliminate repetitive tasks"
+    ]
   },
   {
     "id": 1420,
@@ -67176,7 +68250,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 134
+    "rating_count": 134,
+    "best_for": [
+      "Teams that need AI to build custom classification and automation models without code"
+    ]
   },
   {
     "id": 1421,
@@ -67192,7 +68269,10 @@
       "English"
     ],
     "rating": 4.3,
-    "rating_count": 189
+    "rating_count": 189,
+    "best_for": [
+      "Businesses wanting AI to connect apps and automate data transfers"
+    ]
   },
   {
     "id": 1422,
@@ -67208,7 +68288,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 234
+    "rating_count": 234,
+    "best_for": [
+      "GitLab users who want AI code suggestions and vulnerability explanations"
+    ]
   },
   {
     "id": 1423,
@@ -67224,7 +68307,10 @@
       "English"
     ],
     "rating": 4.5,
-    "rating_count": 312
+    "rating_count": 312,
+    "best_for": [
+      "JetBrains IDE users wanting AI code completion and refactoring assistance"
+    ]
   },
   {
     "id": 1425,
@@ -67240,7 +68326,10 @@
       "English"
     ],
     "rating": 4.6,
-    "rating_count": 423
+    "rating_count": 423,
+    "best_for": [
+      "Developers exploring OpenAI's code generation and natural language programming"
+    ]
   },
   {
     "id": 1426,
@@ -67256,7 +68345,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 97
+    "rating_count": 97,
+    "best_for": [
+      "Startup teams wanting AI to auto-generate full-stack boilerplate from prompts"
+    ]
   },
   {
     "id": 1427,
@@ -67272,7 +68364,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 367
+    "rating_count": 367,
+    "best_for": [
+      "Musicians who need AI-powered audio mastering to make tracks sound professional"
+    ]
   },
   {
     "id": 1428,
@@ -67288,7 +68383,10 @@
       "English"
     ],
     "rating": 4.3,
-    "rating_count": 189
+    "rating_count": 189,
+    "best_for": [
+      "Mobile creators wanting pro-quality AI audio recording and noise reduction"
+    ]
   },
   {
     "id": 1429,
@@ -67304,7 +68402,10 @@
       "English"
     ],
     "rating": 4.5,
-    "rating_count": 412
+    "rating_count": 412,
+    "best_for": [
+      "Beginner musicians wanting AI-assisted music creation and collaboration tools"
+    ]
   },
   {
     "id": 1430,
@@ -67320,7 +68421,10 @@
       "English"
     ],
     "rating": 4.6,
-    "rating_count": 345
+    "rating_count": 345,
+    "best_for": [
+      "Music producers who need AI to discover and match samples and sounds"
+    ]
   },
   {
     "id": 1431,
@@ -67336,7 +68440,10 @@
       "English"
     ],
     "rating": 4.3,
-    "rating_count": 278
+    "rating_count": 278,
+    "best_for": [
+      "Podcasters wanting open-source AI audio editing with noise reduction plugins"
+    ]
   },
   {
     "id": 1434,
@@ -67352,7 +68459,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 156
+    "rating_count": 156,
+    "best_for": [
+      "Marketers creating AI-powered promotional and social media videos quickly"
+    ]
   },
   {
     "id": 1435,
@@ -67368,7 +68478,10 @@
       "English"
     ],
     "rating": 4.3,
-    "rating_count": 267
+    "rating_count": 267,
+    "best_for": [
+      "Businesses needing AI video creation with templates for logos, intros, and explainers"
+    ]
   },
   {
     "id": 1436,
@@ -67384,7 +68497,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 213
+    "rating_count": 213,
+    "best_for": [
+      "Small teams wanting to create simple AI-animated explainer videos"
+    ]
   },
   {
     "id": 1437,
@@ -67400,7 +68516,10 @@
       "English"
     ],
     "rating": 4.5,
-    "rating_count": 312
+    "rating_count": 312,
+    "best_for": [
+      "Agencies needing AI copywriting with advanced tone matching and SEO features"
+    ]
   },
   {
     "id": 1439,
@@ -67419,7 +68538,10 @@
       "Spanish"
     ],
     "rating": 4.3,
-    "rating_count": 389
+    "rating_count": 389,
+    "best_for": [
+      "Writers who need AI-powered grammar checking with multilingual support"
+    ]
   },
   {
     "id": 1440,
@@ -67435,7 +68557,10 @@
       "English"
     ],
     "rating": 4.1,
-    "rating_count": 156
+    "rating_count": 156,
+    "best_for": [
+      "Small business owners wanting AI website copy and product descriptions"
+    ]
   },
   {
     "id": 1441,
@@ -67451,7 +68576,10 @@
       "English"
     ],
     "rating": 4,
-    "rating_count": 98
+    "rating_count": 98,
+    "best_for": [
+      "Side hustlers who need AI to generate niche business and marketing ideas"
+    ]
   },
   {
     "id": 1442,
@@ -67467,7 +68595,10 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 345
+    "rating_count": 345,
+    "best_for": [
+      "Selfie enthusiasts wanting AI portrait enhancement and artistic style filters"
+    ]
   },
   {
     "id": 1443,
@@ -67483,7 +68614,10 @@
       "English"
     ],
     "rating": 4.1,
-    "rating_count": 267
+    "rating_count": 267,
+    "best_for": [
+      "Portrait photographers using AI for professional photo retouching and enhancement"
+    ]
   },
   {
     "id": 1444,
@@ -67499,7 +68633,10 @@
       "English"
     ],
     "rating": 4.3,
-    "rating_count": 412
+    "rating_count": 412,
+    "best_for": [
+      "Users who want AI face aging, gender swap, and fun photo transformations"
+    ]
   },
   {
     "id": 1445,
@@ -67515,7 +68652,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 189
+    "rating_count": 189,
+    "best_for": [
+      "Photographers who need AI to relight portraits with studio-quality lighting effects"
+    ]
   },
   {
     "id": 1446,
@@ -67531,7 +68671,10 @@
       "English"
     ],
     "rating": 4.5,
-    "rating_count": 234
+    "rating_count": 234,
+    "best_for": [
+      "Anyone who needs AI to instantly remove unwanted objects from photos"
+    ]
   },
   {
     "id": 1452,
@@ -67547,7 +68690,10 @@
       "English"
     ],
     "rating": 4.5,
-    "rating_count": 178
+    "rating_count": 178,
+    "best_for": [
+      "Mistral users who want an optimized AI code assistant for fast completions"
+    ]
   },
   {
     "id": 1453,
@@ -67563,7 +68709,10 @@
       "English"
     ],
     "rating": 4.6,
-    "rating_count": 223
+    "rating_count": 223,
+    "best_for": [
+      "Chinese-speaking developers wanting open-source AI code generation and completion"
+    ]
   },
   {
     "id": 1454,
@@ -67579,7 +68728,10 @@
       "English"
     ],
     "rating": 4.3,
-    "rating_count": 134
+    "rating_count": 134,
+    "best_for": [
+      "QA engineers who want AI to auto-generate comprehensive test suites"
+    ]
   },
   {
     "id": 1456,
@@ -67595,7 +68747,10 @@
       "English"
     ],
     "rating": 4.1,
-    "rating_count": 89
+    "rating_count": 89,
+    "best_for": [
+      "Solo developers wanting AI to refactor code, write tests, and document APIs"
+    ]
   },
   {
     "id": 1457,
@@ -67611,7 +68766,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 198
+    "rating_count": 198,
+    "best_for": [
+      "Sound designers who want AI to generate custom audio samples from text descriptions"
+    ]
   },
   {
     "id": 1458,
@@ -67627,7 +68785,10 @@
       "English"
     ],
     "rating": 4,
-    "rating_count": 76
+    "rating_count": 76,
+    "best_for": [
+      "Music producers who need AI to extract stems, acapellas, and instrumentals"
+    ]
   },
   {
     "id": 1459,
@@ -67643,7 +68804,10 @@
       "English"
     ],
     "rating": 4.6,
-    "rating_count": 345
+    "rating_count": 345,
+    "best_for": [
+      "Musicians who want AI to separate vocals, drums, and instruments from any song"
+    ]
   },
   {
     "id": 1460,
@@ -67659,7 +68823,10 @@
       "English"
     ],
     "rating": 4.3,
-    "rating_count": 267
+    "rating_count": 267,
+    "best_for": [
+      "Karaoke creators who need AI to remove vocals and create backing tracks"
+    ]
   },
   {
     "id": 1462,
@@ -67675,7 +68842,10 @@
       "English"
     ],
     "rating": 4.3,
-    "rating_count": 234
+    "rating_count": 234,
+    "best_for": [
+      "Content creators who need AI to turn blog posts into professional videos"
+    ]
   },
   {
     "id": 1463,
@@ -67691,7 +68861,10 @@
       "English"
     ],
     "rating": 4.5,
-    "rating_count": 312
+    "rating_count": 312,
+    "best_for": [
+      "Enterprises wanting AI-powered digital human video presenters for training"
+    ]
   },
   {
     "id": 1465,
@@ -67707,7 +68880,10 @@
       "English"
     ],
     "rating": 4.4,
-    "rating_count": 267
+    "rating_count": 267,
+    "best_for": [
+      "Creators who want AI to generate whimsical and artistic short video clips"
+    ]
   },
   {
     "id": 1466,
@@ -67723,6 +68899,9 @@
       "English"
     ],
     "rating": 4.2,
-    "rating_count": 178
+    "rating_count": 178,
+    "best_for": [
+      "Artists who want AI to generate music-synced animated video artworks"
+    ]
   }
 ]

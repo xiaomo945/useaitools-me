@@ -298,8 +298,7 @@ export default function ToolSlugClient({
             <div className="flex flex-wrap gap-3">
               <a
                 href={ctaUrl}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
+                target="_blank" rel="noopener noreferrer"
                 className={`inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 font-semibold rounded-xl transition-all duration-300 ${
                   hasAffiliate
                     ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25 hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl hover:shadow-emerald-500/30'

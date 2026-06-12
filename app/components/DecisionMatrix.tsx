@@ -97,8 +97,7 @@ function ToolHeader({ tool, compact }: { tool: MatrixTool; compact?: boolean }) 
         {!compact && (
           <a
             href={tool.affiliateLink || tool.url}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
+            target="_blank" rel="noopener noreferrer"
             className="mt-1 inline-flex items-center gap-1 px-3 py-1.5 text-xs font-semibold rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:shadow-md hover:shadow-emerald-500/25 hover:-translate-y-0.5 transition-all duration-300"
           >
             Visit

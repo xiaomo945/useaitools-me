@@ -589,8 +589,7 @@ export default function ClientBlogDetail({
             </button>
             <a
               href={`https://x.com/intent/tweet?text=${encodedTitle}&url=${encodeURIComponent(url)}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-black hover:bg-gray-800 text-white font-medium rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
@@ -600,8 +599,7 @@ export default function ClientBlogDetail({
             </a>
             <a
               href={`https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodedTitle}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-full shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
             >
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">

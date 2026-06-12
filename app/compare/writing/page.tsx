@@ -112,8 +112,7 @@ export default function WritingComparePage() {
                 </div>
                 <a
                   href={getAffiliateLink(recommendedTool)}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                   className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-colors whitespace-nowrap"
                 >
                   Try {recommendedTool.name} Free →
@@ -191,8 +190,7 @@ export default function WritingComparePage() {
                           </Link>
                           <a
                             href={getAffiliateLink(tool)}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            target="_blank" rel="noopener noreferrer"
                             className="px-3 py-2 text-sm font-semibold bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                           >
                             Visit
@@ -246,8 +244,7 @@ export default function WritingComparePage() {
                   </Link>
                   <a
                     href={getAffiliateLink(tool)}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target="_blank" rel="noopener noreferrer"
                     className="flex-1 px-4 py-2.5 text-sm font-semibold bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-colors text-center"
                   >
                     Try Now

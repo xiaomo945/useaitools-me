@@ -225,8 +225,7 @@ export default async function ScenePage({ params }: { params: Promise<{ slug: st
 
                         <a
                           href={affiliateUrl}
-                          target="_blank"
-                          rel="noopener noreferrer sponsored"
+                          target="_blank" rel="noopener noreferrer"
                           className={`w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 ${
                             isFeatured
                               ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25 hover:shadow-lg hover:shadow-emerald-500/30'
@@ -323,8 +322,7 @@ export default async function ScenePage({ params }: { params: Promise<{ slug: st
                         <div className="flex gap-2">
                           <a
                             href={affiliateUrl}
-                            target="_blank"
-                            rel="noopener noreferrer sponsored"
+                            target="_blank" rel="noopener noreferrer"
                             className={`flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 ${
                               hasAffiliate
                                 ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:shadow-lg hover:shadow-emerald-500/25'

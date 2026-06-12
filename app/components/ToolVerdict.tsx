@@ -53,8 +53,7 @@ export default function ToolVerdict({ name, category, pricing, best_for, hasAffi
           {hasAffiliate && (
             <a
               href={affiliateUrl}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
+              target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
             >
               Try {name} Free

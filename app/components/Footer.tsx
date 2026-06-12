@@ -27,8 +27,7 @@ export default function Footer() {
             <div className="flex justify-center gap-4 mb-6">
               <a
                 href="https://x.com/jiongxiaomo"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="text-slate-500 hover:text-slate-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-300"
                 aria-label="X (formerly Twitter)"
               >
@@ -38,8 +37,7 @@ export default function Footer() {
               </a>
               <a
                 href="https://dev.to/xiaomo"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="text-slate-500 hover:text-slate-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-300"
                 aria-label="Dev.to"
               >
@@ -50,8 +48,7 @@ export default function Footer() {
               </a>
               <a
                 href="https://github.com/xiaomo945"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="text-slate-500 hover:text-slate-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors duration-300"
                 aria-label="GitHub"
               >
@@ -103,8 +100,7 @@ export default function Footer() {
               <div className="flex justify-center gap-4 flex-wrap">
                 <a
                   href="https://tryaiwriter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 dark:bg-gray-800 border border-gray-700 text-xs text-gray-400 dark:text-gray-500 hover:border-emerald-500/40 hover:text-emerald-400 dark:hover:text-emerald-400 transition-all duration-300"
                 >
                   🖋️ tryaiwriter.com
@@ -112,8 +108,7 @@ export default function Footer() {
                 </a>
                 <a
                   href="https://useaiimage.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 dark:bg-gray-800 border border-gray-700 text-xs text-gray-400 dark:text-gray-500 hover:border-violet-500/40 hover:text-violet-400 dark:hover:text-violet-400 transition-all duration-300"
                 >
                   🎨 useaiimage.com
@@ -121,8 +116,7 @@ export default function Footer() {
                 </a>
                 <a
                   href="https://useaipen.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 dark:bg-gray-800 border border-gray-700 text-xs text-gray-400 dark:text-gray-500 hover:border-teal-500/40 hover:text-teal-400 dark:hover:text-teal-400 transition-all duration-300"
                 >
                   🖊️ useaipen.com

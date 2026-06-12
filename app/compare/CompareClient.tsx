@@ -315,8 +315,7 @@ export default function ComparePage() {
                       <td key={tool.id} className="px-4 py-4">
                         <a
                           href={tool.affiliate_link || tool.url}
-                          target="_blank"
-                          rel="noopener noreferrer sponsored"
+                          target="_blank" rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-semibold hover:shadow-lg hover:shadow-emerald-500/25 hover:-translate-y-0.5 transition-all duration-300"
                         >
                           Visit {tool.name}

@@ -250,8 +250,7 @@ export default function AISearchRecommend() {
                   <a
                     key={result.tool.id}
                     href={`/tools/${result.tool.id}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target="_blank" rel="noopener noreferrer"
                     className="group block bg-gradient-to-br from-slate-50 to-emerald-50/20 dark:from-gray-800 dark:to-emerald-500/10 border border-slate-200 dark:border-gray-700 rounded-xl p-4 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
                   >
                     <div className="flex items-start gap-3">

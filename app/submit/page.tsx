@@ -136,8 +136,7 @@ export default function SubmitToolPage() {
               </button>
               <a
                 href="https://x.com/intent/tweet?text=I%20just%20submitted%20a%20new%20AI%20tool%20to%20Use%20AI%20Tools%20directory!%20Check%20it%20out%20https://useaitools.me"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white font-semibold rounded-xl hover:bg-gray-800 transition-all duration-300"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

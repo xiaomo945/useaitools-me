@@ -112,8 +112,7 @@ export default function VideoComparePage() {
                 </div>
                 <a
                   href={getAffiliateLink(recommendedTool)}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target="_blank" rel="noopener noreferrer"
                   className="px-6 py-3 bg-white text-indigo-600 font-semibold rounded-xl hover:bg-indigo-50 transition-colors whitespace-nowrap"
                 >
                   Try {recommendedTool.name} Free →
@@ -191,8 +190,7 @@ export default function VideoComparePage() {
                           </Link>
                           <a
                             href={getAffiliateLink(tool)}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            target="_blank" rel="noopener noreferrer"
                             className="px-3 py-2 text-sm font-semibold bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors"
                           >
                             Visit
@@ -246,8 +244,7 @@ export default function VideoComparePage() {
                   </Link>
                   <a
                     href={getAffiliateLink(tool)}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target="_blank" rel="noopener noreferrer"
                     className="flex-1 px-4 py-2.5 text-sm font-semibold bg-indigo-500 text-white rounded-xl hover:bg-indigo-600 transition-colors text-center"
                   >
                     Try Now

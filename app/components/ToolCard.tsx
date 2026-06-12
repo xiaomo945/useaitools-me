@@ -284,8 +284,7 @@ const ToolCard = memo(function ToolCard({
             </button>
             <a
               href={getAffiliateLink(tool) || tool.url}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
+              target="_blank" rel="noopener noreferrer"
               onClick={(e) => {
                 try {
                   const url = new URL(getAffiliateLink(tool) || tool.url);

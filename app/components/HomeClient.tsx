@@ -316,8 +316,7 @@ const ToolCard = memo(function ToolCard({
             </button>
             <a
               href={getAffiliateLink(tool) || tool.url}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
+              target="_blank" rel="noopener noreferrer"
               onClick={(e) => {
                 debugLog('ToolClick', `CTA clicked: ${tool.name} (affiliate: ${hasAffiliate})`);
                 try {
@@ -1790,8 +1789,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               </div>
               <a
                 href="https://tryaiwriter.com"
-                target="_blank"
-                rel="noopener noreferrer"
+                target="_blank" rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 sm:py-3 h-9 sm:h-11 text-sm sm:text-base bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px] whitespace-nowrap"
               >
                 Try It Free →
