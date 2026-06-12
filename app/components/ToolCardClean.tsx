@@ -1,8 +1,11 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import type { Tool } from '@/types';
 import { ArrowRight, Star } from 'lucide-react';
-import Link from 'next/link';
 import PricingBadge from './PricingBadge';
 import { trackCtaClick } from '@/lib/analytics';
+import { getAbVariant, trackAbConversion } from '@/lib/ab-testing';
 
 interface ToolCardCleanProps {
   tool: Tool;
@@ -30,6 +33,16 @@ function getAccent(category: string) {
 
 export default function ToolCardClean({ tool, hasAffiliate, affiliateUrl, index = 0, layout = 'grid' }: ToolCardCleanProps) {
   const accent = getAccent(tool.category);
+  const [variant, setVariant] = useState<'A' | 'B'>('A');
+
+  // A/B Test: Get variant on mount
+  useEffect(() => {
+    const v = getAbVariant('cta_button');
+    setVariant(v);
+  }, []);
+
+  // CTA Button text based on A/B variant
+  const ctaText = variant === 'A' ? 'Visit Website' : 'Try Free Now';
 
   if (layout === 'list') {
     return (
@@ -46,9 +59,9 @@ export default function ToolCardClean({ tool, hasAffiliate, affiliateUrl, index 
               <h3 className="font-semibold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors truncate">
                 {tool.name}
               </h3>
-              {hasAffiliate && (
-                <span className="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[9px] font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white">
-                  🏷️ Staff Pick
+              {(hasAffiliate || tool.isFeatured) && (
+                <span className="hidden sm:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[9px] font-semibold bg-gradient-to-r from-amber-400 to-orange-400 text-white">
+                  ⭐ Featured
                 </span>
               )}
             </div>
@@ -74,10 +87,13 @@ export default function ToolCardClean({ tool, hasAffiliate, affiliateUrl, index 
             href={affiliateUrl}
             target="_blank"
             rel="noopener noreferrer sponsored"
-            onClick={() => trackCtaClick(tool.name, 'Visit', 'list_card', hasAffiliate)}
+            onClick={() => {
+              trackCtaClick(tool.name, ctaText, 'list_card', hasAffiliate);
+              trackAbConversion('cta_button', variant, `list_card_${tool.id}`);
+            }}
             className="flex-shrink-0 inline-flex items-center gap-1 px-3 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white text-slate-700 dark:text-slate-300 text-xs font-semibold transition-all duration-300"
           >
-            Visit
+            {ctaText}
             <ArrowRight className="w-3 h-3" />
           </a>
         </div>
@@ -90,10 +106,10 @@ export default function ToolCardClean({ tool, hasAffiliate, affiliateUrl, index 
       className={`group relative bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 ${accent.line} border-l-4 rounded-2xl overflow-hidden hover:border-slate-300 dark:hover:border-gray-700 hover:shadow-xl hover:shadow-slate-900/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up`}
       style={{ animationDelay: `${index * 30}ms` }}
     >
-      {hasAffiliate && (
+      {(hasAffiliate || tool.isFeatured) && (
         <div className="absolute top-3 right-3 z-10">
-          <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-[9px] font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm">
-            🏷️ Staff Pick
+          <span className="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full text-[9px] font-semibold bg-gradient-to-r from-amber-400 to-orange-400 text-white shadow-sm">
+            ⭐ Featured
           </span>
         </div>
       )}
@@ -143,10 +159,13 @@ export default function ToolCardClean({ tool, hasAffiliate, affiliateUrl, index 
             href={affiliateUrl}
             target="_blank"
             rel="noopener noreferrer sponsored"
-            onClick={() => trackCtaClick(tool.name, 'Visit', 'grid_card', hasAffiliate)}
+            onClick={() => {
+              trackCtaClick(tool.name, ctaText, 'grid_card', hasAffiliate);
+              trackAbConversion('cta_button', variant, `grid_card_${tool.id}`);
+            }}
             className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1"
           >
-            Visit
+            {ctaText}
             <ArrowRight className="w-3 h-3" />
           </a>
         </div>

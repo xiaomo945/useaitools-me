@@ -1166,6 +1166,7 @@
   {
     "id": 23,
     "name": "Rytr",
+    "isFeatured": true,
     "description": "The most affordable AI writing tool trusted by 10M+ creators worldwide. Write blog posts, emails, social media, and marketing copy in 30+ languages — all starting at just $9/month. 3x faster than Jasper at half the price, with built-in plagiarism checker and SEO optimizer. Perfect for solopreneurs, bloggers, and small businesses who want premium quality without the enterprise budget.",
     "category": "Writing",
     "pricing": "Freemium",
@@ -1259,6 +1260,7 @@
   {
     "id": 51,
     "name": "VEED.io",
+    "isFeatured": true,
     "description": "Browser-based AI video editor used by 50M+ creators, with 100,000+ 5-star reviews. Auto-generate subtitles in 100+ languages, remove backgrounds, add AI voiceovers, and create polished videos — all in your browser with zero downloads. Save 80% editing time compared to traditional tools like Premiere Pro, at a fraction of the cost.",
     "category": "Video",
     "pricing": "Freemium",

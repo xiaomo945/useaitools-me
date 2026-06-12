@@ -85,4 +85,6 @@ export interface Tool {
   pros_cons?: ProsCons;
   skill_level?: 'beginner' | 'intermediate' | 'advanced';
   best_for?: string[];
+  /** Whether this tool has a paid Featured Listing */
+  isFeatured?: boolean;
 }
