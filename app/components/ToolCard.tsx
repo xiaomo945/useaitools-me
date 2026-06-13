@@ -270,25 +270,6 @@ const ToolCard = memo(function ToolCard({
           </span>
           
           <div className="flex items-center gap-1 sm:gap-2">
-            <button
-              onClick={() => router.push(`/compare?tool=${tool.id}`)}
-              className="inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[44px] min-w-[44px] border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
-            >
-              <svg
-                className="w-3.5 h-3.5 sm:w-4 sm:h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01"
-                />
-              </svg>
-              <span className="hidden sm:inline">Compare</span>
-            </button>
             <a
               href={getAffiliateLink(tool) || tool.url}
               target="_blank" rel="noopener noreferrer"

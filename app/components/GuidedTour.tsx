@@ -9,7 +9,6 @@ export default function GuidedTour() {
   const [visible, setVisible] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const autoDismissTimerRef = useRef<NodeJS.Timeout | null>(null);
-  const searchInputRef = useRef<HTMLInputElement | null>(null);
 
   const closeTour = () => {
     setIsClosing(true);
@@ -31,16 +30,10 @@ export default function GuidedTour() {
       const completed = localStorage.getItem(STORAGE_KEY);
       if (completed) return;
 
-      // 查找搜索框
-      const searchInput = document.querySelector('input[type="text"][placeholder*="Search" i]') as HTMLInputElement;
-      if (searchInput) {
-        searchInputRef.current = searchInput;
-      }
-
       // 1秒后显示提示气泡
       const showTimer = setTimeout(() => {
         setVisible(true);
-        // 启动 8 秒自动关闭计时器
+        // 启动 3 秒自动关闭计时器
         autoDismissTimerRef.current = setTimeout(() => {
           closeTour();
         }, AUTO_DISMISS_DELAY);
