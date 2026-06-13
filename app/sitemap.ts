@@ -19,14 +19,22 @@ function loadTools() {
   return [];
 }
 
-// 加载博客文章数据
-function loadBlogPosts() {
-  const blogPostsPath = path.join(process.cwd(), 'data', 'blog-posts.json');
-  if (fs.existsSync(blogPostsPath)) {
-    const data = fs.readFileSync(blogPostsPath, 'utf8');
-    return JSON.parse(data);
-  }
-  return [];
+// 加载博客文章数据（从 data/blog-posts/ 目录扫描所有 JSON 文件）
+function loadBlogPosts(): { slug: string; date: string }[] {
+  const blogPostsDir = path.join(process.cwd(), 'data', 'blog-posts');
+  if (!fs.existsSync(blogPostsDir)) return [];
+
+  return fs.readdirSync(blogPostsDir)
+    .filter((f: string) => f.endsWith('.json'))
+    .map((f: string) => {
+      const slug = f.replace('.json', '');
+      try {
+        const data = JSON.parse(fs.readFileSync(path.join(blogPostsDir, f), 'utf8'));
+        return { slug: data.slug || slug, date: data.date || '2026-01-01' };
+      } catch {
+        return { slug, date: '2026-01-01' };
+      }
+    });
 }
 
 // 加载工作流数据

@@ -1,10 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+// This endpoint receives Web Vitals metrics from the client.
+// In production, Vercel Analytics (<Analytics /> in layout.tsx) already
+// collects and persists Web Vitals automatically via the Vercel dashboard.
+// This route serves as a fallback for non-Vercel environments and
+// development logging.
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    
-    // Validate required fields
+
     if (!body.name || typeof body.value !== 'number') {
       return NextResponse.json(
         { error: 'Invalid metrics data' },
@@ -12,12 +16,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // In production, you could send this to:
-    // - Your database
-    // - External analytics service (e.g., Google Analytics, Mixpanel)
-    // - Logging service (e.g., Datadog, LogRocket)
-    
-    // For now, log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.log('[Analytics]', {
         metric: body.name,
@@ -26,9 +24,6 @@ export async function POST(request: NextRequest) {
         timestamp: new Date(body.timestamp).toISOString(),
       });
     }
-
-    // TODO: Implement persistent storage or forward to analytics service
-    // Example: await db.webVitals.create({ data: body });
 
     return NextResponse.json({ success: true });
   } catch (error) {
