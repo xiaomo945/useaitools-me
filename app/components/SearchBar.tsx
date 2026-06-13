@@ -99,7 +99,7 @@ export default function SearchBar({
           autoComplete="off"
           autoCorrect="off"
           spellCheck="false"
-          className="w-full px-3 sm:px-5 py-2 sm:py-3 pl-9 sm:pl-14 pr-16 sm:pr-24 h-9 sm:h-11 text-sm sm:text-base rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
+          className="w-full px-3 sm:px-5 py-2 sm:py-3 pl-9 sm:pl-14 pr-16 sm:pr-24 h-9 sm:h-11 text-sm sm:text-base rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-lg shadow-emerald-500/10 dark:shadow-emerald-500/5 ring-4 ring-emerald-500/5 dark:ring-emerald-500/3 transition-all duration-300 ease-out"
         />
         <div className="absolute right-1.5 sm:right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-0.5 sm:gap-1">
           {speechSupported && (
