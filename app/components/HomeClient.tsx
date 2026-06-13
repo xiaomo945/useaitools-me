@@ -2179,7 +2179,15 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             const isSaved = savedIds.includes(tool.id);
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
             const hasAffiliate = hasAffiliateLink(tool);
-            const ctaText = hasAffiliate ? ctaVariants[ctaVariant].text : 'Visit Website';
+            const ctaText = hasAffiliate
+              ? ctaVariants[ctaVariant].text
+              : (tool.pricing === 'Free' || tool.pricing === 'Open Source')
+                ? 'Try Free'
+                : tool.pricing === 'Freemium'
+                  ? 'Start Free'
+                  : tool.pricing === 'Paid'
+                    ? 'View Pricing'
+                    : 'Visit Website';
             const ctaColor = hasAffiliate ? ctaVariants[ctaVariant].color : 'emerald';
             
             return (
