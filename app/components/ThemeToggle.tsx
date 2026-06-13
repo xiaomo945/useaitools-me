@@ -72,13 +72,13 @@ export default function ThemeToggle() {
     <div className="fixed bottom-20 left-4 md:bottom-4 md:left-auto md:right-4 z-40 flex flex-col items-center gap-1">
       <button
         onClick={toggleTheme}
-        className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-lg hover:shadow-xl hover:-translate-y-1 active:scale-95 transition-all duration-300 ease-out"
+        className="w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-lg hover:shadow-xl hover:-translate-y-1 active:scale-95 opacity-70 hover:opacity-100 transition-all duration-300 ease-out"
         aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
       >
         {theme === 'light' ? (
-          <Moon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-700" />
+          <Moon className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-slate-700" />
         ) : (
-          <Sun className="w-4 h-4 sm:w-5 sm:h-5 text-slate-200" />
+          <Sun className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-slate-200" />
         )}
       </button>
       <button

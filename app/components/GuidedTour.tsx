@@ -28,6 +28,8 @@ const STORAGE_KEY = 'useaitools_tour_completed';
 const INTERACTION_KEY = 'useaitools_tour_interaction';
 // 800ms 内检测到任意交互，认为用户"已经懂了"
 const SKIP_CHECK_DELAY = 800;
+// 5秒自动关闭计时器
+const AUTO_DISMISS_DELAY = 5000;
 
 export default function GuidedTour() {
   const [step, setStep] = useState(0);
@@ -36,9 +38,21 @@ export default function GuidedTour() {
   const [targetRect, setTargetRect] = useState<{ top: number; left: number; width: number; height: number } | null>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
   const interactionDetected = useRef(false);
+  const autoDismissTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
 
   const closeTour = useCallback(() => {
     setVisible(false);
+    // 清除自动关闭计时器
+    if (autoDismissTimerRef.current) {
+      clearTimeout(autoDismissTimerRef.current);
+      autoDismissTimerRef.current = null;
+    }
+    // 恢复焦点到之前的元素
+    if (previousFocusRef.current) {
+      previousFocusRef.current.focus();
+      previousFocusRef.current = null;
+    }
     try {
       localStorage.setItem(STORAGE_KEY, 'true');
     } catch {}
@@ -79,12 +93,23 @@ export default function GuidedTour() {
       // 500ms 后才显示引导（比之前的 2000ms 快很多）
       const showTimer = setTimeout(() => {
         if (!interactionDetected.current) {
+          // 保存当前焦点元素
+          previousFocusRef.current = document.activeElement as HTMLElement;
           setVisible(true);
+          // 启动 5 秒自动关闭计时器
+          autoDismissTimerRef.current = setTimeout(() => {
+            if (visible) {
+              closeTour();
+            }
+          }, AUTO_DISMISS_DELAY);
         }
       }, 500);
 
       return () => {
         clearTimeout(showTimer);
+        if (autoDismissTimerRef.current) {
+          clearTimeout(autoDismissTimerRef.current);
+        }
         events.forEach(ev => document.removeEventListener(ev, handleFirstInteraction));
       };
     } catch {
@@ -228,12 +253,6 @@ export default function GuidedTour() {
         </div>
 
         <div className="flex items-center justify-between">
-          <button
-            onClick={closeTour}
-            className="text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors"
-          >
-            Skip tour
-          </button>
           <div className="flex items-center gap-1.5">
             {step > 0 && (
               <button
@@ -254,8 +273,18 @@ export default function GuidedTour() {
           </div>
         </div>
 
-        <p className="mt-3 text-[10px] text-slate-400 dark:text-slate-500 text-center">
-          Press Esc anytime · auto-closes when you start exploring
+        {/* 醒目的 Skip Tour 按钮 */}
+        <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800">
+          <button
+            onClick={closeTour}
+            className="w-full py-2.5 text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 rounded-lg transition-all duration-200 min-h-[44px]"
+          >
+            Skip Tour
+          </button>
+        </div>
+
+        <p className="mt-2 text-[10px] text-slate-400 dark:text-slate-500 text-center">
+          Press Esc anytime · auto-closes in 5s or when you start exploring
         </p>
       </div>
     </>
