@@ -41,7 +41,7 @@ export default function CategoryFilters({
   return (
     <>
       {/* Category Buttons */}
-      <div className="relative" data-tour="categories">
+      <div className="relative" data-tour="categories" role="group" aria-label="Filter by category">
         {/* Left Gradient Fade */}
         <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-10 bg-gradient-to-r from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
         {/* Right Gradient Fade */}
@@ -89,10 +89,12 @@ export default function CategoryFilters({
                 onKeyDown={(e) => handleCategoryKeyDown(e, index)}
                 className={buttonStyle}
                 title={tooltipMap[category]}
+                aria-label={`${tooltipMap[category]}`}
+                aria-pressed={isActive}
               >
                 {category}
                 {category !== 'All' && selectedCategories.includes(category) && selectedCategories.length > 1 && (
-                  <span className="ml-1 w-4 h-4 rounded-full bg-white/30 text-[10px] flex items-center justify-center">✓</span>
+                  <span className="ml-1 w-4 h-4 rounded-full bg-white/30 text-[10px] flex items-center justify-center" aria-hidden="true">✓</span>
                 )}
               </button>
             );

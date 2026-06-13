@@ -16,6 +16,7 @@ import NetworkStatus from "./components/NetworkStatus";
 import ExternalLinkToast from "./components/ExternalLinkToast";
 import ErrorBoundary from "./components/ErrorBoundary";
 import HolidayBanner from "./components/HolidayBanner";
+import WebVitals from "./components/WebVitals";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -169,6 +170,7 @@ export default function RootLayout({
           <KeyboardNavigation />
           <GuidedTour />
           <ExternalLinkToast />
+          <WebVitals />
         </ToastProvider>
       </body>
     </html>
