@@ -534,6 +534,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const [selectedTool, setSelectedTool] = useState<Tool | null>(null);
   const [showMenu, setShowMenu] = useState(false);
   
+  // Committed search - only updates on Enter or search button click
+  const [committedSearch, setCommittedSearch] = useState('');
+  
   // Load localStorage data after mount (SSR-safe)
   useEffect(() => {
     // Load saved tools
@@ -758,13 +761,13 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     }
   };
 
-  // Auto scroll to tools grid when search is entered
+  // Auto scroll to tools grid when search is committed (only on Enter or button click)
   useEffect(() => {
-    if (search.trim()) {
+    if (committedSearch.trim()) {
       toolsGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setTimeout(() => setShowWelcomeTip(false), 0);
     }
-  }, [search]);
+  }, [committedSearch]);
 
   // Navigate to search page
   const goToSearchPage = () => {
@@ -1123,18 +1126,6 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     setTimeout(() => setMysteryCount(getMysteryCount()), 0);
   }, []);
 
-  // Debounced search with 300ms delay
-  const [debouncedSearch, setDebouncedSearch] = useState('');
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setDebouncedSearch(search);
-      if (search.trim()) {
-        debugLog('Search', `Debounced search: "${search}"`);
-      }
-    }, 300);
-    return () => clearTimeout(timer);
-  }, [search]);
-
   // Synonym map for search enhancement
   const searchSynonyms: Record<string, string[]> = {
     'photo': ['image', 'picture', 'visual'],
@@ -1206,14 +1197,14 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   // 智能排序：优先展示海外 AI 工具（needs_vpn: true），中文工具排在后面
   const filteredTools = useMemo(() => {
     const filtered = displayedTools.map((tool) => {
-      if (!debouncedSearch.trim()) {
+      if (!committedSearch.trim()) {
         const matchesCategory = selectedCategories.includes('All') || selectedCategories.includes(tool.category);
         const matchesPricing = selectedPricing === 'All' || tool.pricing === selectedPricing;
         return { tool, score: 0, matches: matchesCategory && matchesPricing };
       }
       
-      const nameMatch = fuzzyMatch(tool.name, debouncedSearch);
-      const descMatch = fuzzyMatch(tool.description, debouncedSearch);
+      const nameMatch = fuzzyMatch(tool.name, committedSearch);
+      const descMatch = fuzzyMatch(tool.description, committedSearch);
       const matchesSearch = nameMatch.match || descMatch.match;
       const searchScore = Math.max(nameMatch.score, descMatch.score * 0.7);
       
@@ -1226,7 +1217,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     // Sort by relevance score (search), then Staff Pick, then VPN, then name
     return [...filtered].sort((a, b) => {
       // Search relevance first
-      if (debouncedSearch.trim()) {
+      if (committedSearch.trim()) {
         if (a.score !== b.score) return b.score - a.score;
       }
       
@@ -1240,15 +1231,15 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
 
       return a.tool.name.localeCompare(b.tool.name);
     }).map(item => item.tool);
-  }, [debouncedSearch, selectedCategories, selectedPricing, displayedTools]);
+  }, [committedSearch, selectedCategories, selectedPricing, displayedTools]);
 
   useEffect(() => {
-    if (!selectedCategories.includes('All') || selectedPricing !== 'All' || debouncedSearch) {
+    if (!selectedCategories.includes('All') || selectedPricing !== 'All' || committedSearch) {
       setTimeout(() => setIsFilterTransitioning(true), 0);
       const timer = setTimeout(() => setIsFilterTransitioning(false), 300);
       return () => clearTimeout(timer);
     }
-  }, [selectedCategories, selectedPricing, debouncedSearch]);
+  }, [selectedCategories, selectedPricing, committedSearch]);
 
   useEffect(() => {
     const handleOpenTool = (e: Event) => {
@@ -1295,7 +1286,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     };
     document.addEventListener('click', handleClick);
     return () => document.removeEventListener('click', handleClick);
-  }, [selectedCategories, selectedPricing, search]);
+  }, [selectedCategories, selectedPricing, committedSearch]);
 
   // Restore scroll position and filter state on return
   useEffect(() => {
