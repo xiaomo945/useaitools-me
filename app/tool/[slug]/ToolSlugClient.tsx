@@ -331,6 +331,88 @@ export default function ToolSlugClient({
           </div>
         </div>
 
+        {/* Editor's Verdict */}
+        {tool.rating && tool.rating_breakdown && (
+          <div className="bg-gradient-to-br from-emerald-50/80 via-white to-teal-50/50 dark:from-emerald-950/30 dark:via-gray-900 dark:to-teal-950/20 border border-emerald-200/60 dark:border-emerald-800/40 rounded-3xl p-6 sm:p-8 mb-8 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
+            <div className="relative">
+              <div className="flex items-center gap-2 mb-5">
+                <span className="text-xl">🏆</span>
+                <h2 className="text-xl font-bold text-slate-900 dark:text-white">Editor&apos;s Verdict</h2>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-6 sm:gap-10">
+                {/* Overall Score */}
+                <div className="flex flex-col items-center justify-center flex-shrink-0">
+                  <div className="relative w-24 h-24 flex items-center justify-center">
+                    <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" strokeWidth="8" className="text-slate-200 dark:text-slate-700" />
+                      <circle
+                        cx="50" cy="50" r="42" fill="none" strokeWidth="8"
+                        stroke="url(#scoreGradient)"
+                        strokeLinecap="round"
+                        strokeDasharray={`${(tool.rating / 5) * 264} 264`}
+                      />
+                      <defs>
+                        <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop offset="0%" stopColor="#10b981" />
+                          <stop offset="100%" stopColor="#14b8a6" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <span className="text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">{tool.rating}</span>
+                  </div>
+                  <span className="text-xs text-slate-500 dark:text-slate-400 mt-2 font-medium">
+                    {tool.rating_count?.toLocaleString()} reviews
+                  </span>
+                </div>
+
+                {/* 6-Dimension Scores */}
+                <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                  {Object.entries(tool.rating_breakdown).map(([key, val]) => {
+                    const labels: Record<string, { label: string; icon: string }> = {
+                      ease_of_use: { label: 'Ease of Use', icon: '🎯' },
+                      output_quality: { label: 'Output Quality', icon: '✨' },
+                      features: { label: 'Features', icon: '🔧' },
+                      value_for_money: { label: 'Value', icon: '💰' },
+                      stability: { label: 'Stability', icon: '🛡️' },
+                      support: { label: 'Support', icon: '💬' },
+                    };
+                    const info = labels[key] || { label: key, icon: '📊' };
+                    const pct = (val.score / 5) * 100;
+                    return (
+                      <div key={key}>
+                        <div className="flex items-center justify-between mb-1">
+                          <span className="text-sm text-slate-600 dark:text-slate-300 font-medium">
+                            <span className="mr-1">{info.icon}</span>{info.label}
+                          </span>
+                          <span className="text-sm font-bold text-slate-900 dark:text-white">{val.score}</span>
+                        </div>
+                        <div className="h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full transition-all duration-700 ease-out"
+                            style={{ width: `${pct}%` }}
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Best For */}
+              {tool.best_for && tool.best_for.length > 0 && (
+                <div className="mt-5 pt-5 border-t border-emerald-200/50 dark:border-emerald-800/30">
+                  <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Best for: </span>
+                  <span className="text-sm text-emerald-600 dark:text-emerald-400">
+                    {tool.best_for.join(' · ')}
+                  </span>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* Use Cases */}
         {tool.use_cases && tool.use_cases.length > 0 && (
           <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
