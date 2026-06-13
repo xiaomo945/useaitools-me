@@ -536,6 +536,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   
   // Committed search - only updates on Enter or search button click
   const [committedSearch, setCommittedSearch] = useState('');
+  const SEARCH_PREVIEW_LIMIT = 6;
   
   // Load localStorage data after mount (SSR-safe)
   useEffect(() => {
@@ -1976,8 +1977,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                         src={post.images[0].url}
                         alt={post.images[0].alt}
                         className="w-full h-40 object-cover rounded-xl mb-4"
-                        loading="lazy"
+                        loading={index < 2 ? "eager" : "lazy"}
                         decoding="async"
+                        fetchPriority={index < 2 ? "high" : "auto"}
                       />
                     )}
                     <div className="flex items-center gap-2 mb-3">
@@ -2173,7 +2175,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
 
         {/* Tools Grid */}
         <div ref={toolsGridRef} className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5 md:gap-6 lg:gap-7 transition-all duration-300 ease-out ${isFilterTransitioning ? 'opacity-50' : 'opacity-100'}`} data-tour="toolcard">
-          {filteredTools.map((tool, index) => {
+          {(committedSearch.trim() ? filteredTools.slice(0, SEARCH_PREVIEW_LIMIT) : filteredTools).map((tool, index) => {
             const isSaved = savedIds.includes(tool.id);
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
             const hasAffiliate = hasAffiliateLink(tool);
@@ -2213,6 +2215,18 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             );
           })}
         </div>
+
+        {/* View All Results Button */}
+        {committedSearch.trim() && filteredTools.length > SEARCH_PREVIEW_LIMIT && (
+          <div className="text-center mt-8">
+            <Link
+              href={`/search?q=${encodeURIComponent(committedSearch)}`}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+            >
+              View all {filteredTools.length} results →
+            </Link>
+          </div>
+        )}
 
         {/* Load More Sentinel */}
         {!isLoadingMore && hasMore && (

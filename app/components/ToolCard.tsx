@@ -210,22 +210,29 @@ const ToolCard = memo(function ToolCard({
                 e.preventDefault();
                 toggleCompare(tool.id);
               }}
-              className={`w-6 h-6 rounded border-2 transition-all duration-300 ease-out flex items-center justify-center ${
+              className={`group/compare w-7 h-7 rounded-lg border-2 transition-all duration-300 ease-out flex items-center justify-center relative ${
                 isSelectedForCompare
-                  ? 'bg-emerald-500 border-emerald-500 text-white'
-                  : 'border-slate-300 dark:border-slate-600 hover:border-emerald-400'
+                  ? 'bg-emerald-500 border-emerald-500 text-white shadow-md shadow-emerald-500/25'
+                  : 'border-slate-300 dark:border-slate-600 hover:border-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/20'
               }`}
               aria-label={`Select ${tool.name} for comparison`}
-              title="Select for comparison"
+              title="Add to compare"
             >
-              {isSelectedForCompare && (
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              {isSelectedForCompare ? (
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                 </svg>
+              ) : (
+                <svg className="w-4 h-4 text-slate-400 group-hover/compare:text-emerald-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01" />
+                </svg>
+              )}
+              {!isSelectedForCompare && (
+                <span className="absolute -top-1 -right-1 w-2 h-2 bg-emerald-400 rounded-full opacity-0 group-hover/compare:opacity-100 transition-opacity" />
               )}
             </button>
             {comparePulse && (
-              <div className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-30" />
+              <div className="absolute inset-0 rounded-lg bg-emerald-500 animate-ping opacity-30" />
             )}
             <span className={`px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap ${pricingColors.bg} ${pricingColors.text}`}>
               {tool.pricing}

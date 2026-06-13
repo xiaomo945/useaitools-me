@@ -25,7 +25,7 @@ export default function HeroSection({
       {/* Background Breathing Glow - Only Desktop */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/10 via-transparent to-transparent rounded-full blur-3xl animate-breathe pointer-events-none hidden sm:block" />
       
-      <img src="/logo.png" alt="Use AI Tools Logo - Discover the best AI tools" className="h-8 sm:h-12 lg:h-14 w-auto mx-auto mb-2 sm:mb-3 relative z-10" width="72" height="43" loading="eager" decoding="async" />
+      <img src="/logo.png" alt="Use AI Tools Logo - Discover the best AI tools" className="h-8 sm:h-12 lg:h-14 w-auto mx-auto mb-2 sm:mb-3 relative z-10" width="72" height="43" loading="eager" decoding="sync" fetchPriority="high" />
       <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight mb-2 sm:mb-3 relative z-10 max-w-3xl mx-auto leading-tight">
         <span className="text-slate-900 dark:text-white">
           Find the Best AI Tools for Any Task
