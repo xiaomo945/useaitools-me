@@ -16,7 +16,7 @@ export default function MobileNav() {
   const navItems = [
     { path: '/', icon: Home, label: 'Home' },
     { path: '/search', icon: Search, label: 'Search' },
-    { path: '/history', icon: Clock, label: 'History' },
+    { path: '/history', icon: Clock, label: 'Recent' },
     { path: '/saved', icon: Bookmark, label: 'Saved' },
     { path: '/leaderboard', icon: BarChart3, label: 'Top' },
   ];
