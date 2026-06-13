@@ -1629,35 +1629,11 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           blurTimeoutRef={blurTimeoutRef}
         />
         
-        {/* Scene Guidance Cards */}
-        <div className="max-w-2xl mx-auto mb-6 sm:mb-10">
-          <div className="grid grid-cols-2 gap-3 sm:gap-5">
-            {[
-              { icon: '✍️', label: 'Write a blog post', href: '/compare?category=Writing', color: 'from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 border-blue-200 dark:border-blue-800/60 hover:border-blue-400 dark:hover:border-blue-600' },
-              { icon: '🎬', label: 'Edit a video', href: '/compare?category=Video', color: 'from-rose-50 to-pink-50 dark:from-rose-950/30 dark:to-pink-950/30 border-rose-200 dark:border-rose-800/60 hover:border-rose-400 dark:hover:border-rose-600' },
-              { icon: '🎨', label: 'Generate images', href: '/compare?category=Image', color: 'from-violet-50 to-purple-50 dark:from-violet-950/30 dark:to-purple-950/30 border-violet-200 dark:border-violet-800/60 hover:border-violet-400 dark:hover:border-violet-600' },
-              { icon: '📊', label: 'Boost productivity', href: '/compare?category=Productivity', color: 'from-teal-50 to-emerald-50 dark:from-teal-950/30 dark:to-emerald-950/30 border-teal-200 dark:border-teal-800/60 hover:border-teal-400 dark:hover:border-teal-600' },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`group flex items-center gap-3 sm:gap-4 p-4 sm:p-5 bg-gradient-to-br ${item.color} border-2 rounded-2xl hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out`}
-              >
-                <span className="text-2xl sm:text-3xl shrink-0">{item.icon}</span>
-                <span className="text-sm sm:text-base font-semibold text-slate-700 dark:text-slate-200 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">{item.label}</span>
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-auto text-slate-400 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* 🎯 Discover Section - Daily Pick + Mystery Box */}
+        {/* Today's Discovery - Daily Pick + Mystery Box */}
         <div className="mb-6 sm:mb-10">
           <div className="text-center mb-4">
             <h2 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
-              🎯 Discover
+              🎯 Today's Discovery
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
               Daily picks and surprises just for you
@@ -1682,21 +1658,21 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
               }
               const reason = reasons[Math.abs(hash) % reasons.length];
               return (
-                <div className="bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-emerald-950/30 dark:via-gray-900 dark:to-teal-950/30 border-2 border-emerald-200/60 dark:border-emerald-800/40 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-4 sm:p-5 relative overflow-hidden">
                   <button
                     onClick={() => {
                       setShowDailyPick(false);
                       try { localStorage.setItem('dailyPickDismissed', today); } catch {}
                     }}
-                    className="absolute top-2 right-2 p-1 hover:bg-emerald-200 dark:hover:bg-emerald-800 rounded-full transition-colors z-10"
+                    className="absolute top-2 right-2 p-1 hover:bg-slate-100 dark:hover:bg-gray-800 rounded-full transition-colors z-10"
                     aria-label="Dismiss daily pick"
                   >
-                    <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-emerald-500 text-white shadow-sm">
                       💡 Daily Pick
                     </span>
                   </div>
@@ -1719,7 +1695,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                   </div>
                   <Link
                     href={`/tools/${dailyPick.id}`}
-                    className="mt-3 w-full inline-flex items-center justify-center gap-1 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[40px]"
+                    className="mt-3 w-full inline-flex items-center justify-center gap-1 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-sm hover:shadow-md transition-all duration-300 min-h-[40px]"
                   >
                     Try It →
                   </Link>
@@ -1728,7 +1704,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
             })()}
 
             {/* Mystery Box Card */}
-            <div className="bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-amber-950/30 dark:via-gray-900 dark:to-orange-950/30 border-2 border-amber-200/60 dark:border-amber-800/40 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center">
+            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-4 sm:p-5 flex flex-col items-center justify-center text-center">
               <div className="text-4xl sm:text-5xl mb-3">🎁</div>
               <h3 className="font-bold text-base sm:text-lg text-slate-900 dark:text-white mb-1">
                 Mystery Box
@@ -1742,7 +1718,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 className={`w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold rounded-xl transition-all duration-300 min-h-[44px] ${
                   mysteryCount >= 3
                     ? 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed'
-                    : 'bg-gradient-to-r from-amber-400 to-orange-400 dark:from-amber-500 dark:to-orange-500 text-white hover:shadow-lg hover:shadow-amber-400/25 hover:-translate-y-0.5 active:scale-[0.98]'
+                    : 'bg-amber-500 hover:bg-amber-600 text-white hover:shadow-md active:scale-[0.98]'
                 }`}
               >
                 {mysteryCount >= 3 ? 'Come back tomorrow' : `Open (${3 - mysteryCount} left today)`}

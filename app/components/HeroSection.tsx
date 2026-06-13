@@ -34,12 +34,12 @@ export default function HeroSection({
           All in One Place
         </span>
       </h1>
-      <p className="text-xs sm:text-lg lg:text-xl text-slate-500 dark:text-slate-400 mb-2 sm:mb-5 max-w-2xl mx-auto relative z-10 leading-relaxed font-normal">
+      <p className="text-sm sm:text-lg lg:text-xl text-slate-500 dark:text-slate-400 mb-2 sm:mb-5 max-w-2xl mx-auto relative z-10 leading-relaxed font-normal">
         1,400+ AI tools across 6 categories. Honest reviews. Instant comparisons. Zero fluff.
       </p>
       
-      {/* Trust Signal - hidden on mobile for cleaner look */}
-      <div className="mb-4 sm:mb-8 relative z-10 hidden sm:block">
+      {/* Trust Signal */}
+      <div className="mb-4 sm:mb-8 relative z-10">
         <p className="text-xs sm:text-sm text-slate-400 dark:text-slate-500 font-medium leading-relaxed">
           Built in public by an indie maker from an internet café. 1,400+ tools handpicked, not paid for.
         </p>
@@ -88,21 +88,21 @@ export default function HeroSection({
         const reason = reasons[Math.abs(hash) % reasons.length];
         return (
           <div className="mb-6 sm:mb-8">
-            <div className="bg-gradient-to-r from-emerald-50 via-white to-teal-50 dark:from-emerald-950/30 dark:via-gray-900 dark:to-teal-950/30 border border-emerald-200/60 dark:border-emerald-800/40 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden">
               <button
                 onClick={() => {
                   setShowDailyPick(false);
                   try { localStorage.setItem('dailyPickDismissed', today); } catch {}
                 }}
-                className="absolute top-2 right-2 p-1 hover:bg-emerald-200 dark:hover:bg-emerald-800 rounded-full transition-colors z-10"
+                className="absolute top-2 right-2 p-1 hover:bg-slate-100 dark:hover:bg-gray-800 rounded-full transition-colors z-10"
                 aria-label="Dismiss daily pick"
               >
-                <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
               <div className="flex items-center gap-2 mb-3">
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm">
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-emerald-500 text-white shadow-sm">
                   💡 Daily Pick
                 </span>
               </div>
@@ -124,7 +124,7 @@ export default function HeroSection({
                 </div>
                 <Link
                   href={`/tools/${dailyPick.id}`}
-                  className="shrink-0 inline-flex items-center gap-1 px-3 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px]"
+                  className="shrink-0 inline-flex items-center gap-1 px-3 sm:px-5 py-2 sm:py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-sm hover:shadow-md transition-all duration-300 min-h-[44px]"
                 >
                   Try It →
                 </Link>

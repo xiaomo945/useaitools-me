@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 const STORAGE_KEY = 'useaitools_tour_completed';
-const AUTO_DISMISS_DELAY = 8000;
+const AUTO_DISMISS_DELAY = 3000;
 
 export default function GuidedTour() {
   const [visible, setVisible] = useState(false);
@@ -71,25 +71,25 @@ export default function GuidedTour() {
 
   return (
     <div
-      className={`absolute left-0 right-0 mt-2 z-40 transition-all duration-300 ${
-        isClosing ? 'opacity-0 -translate-y-2' : 'opacity-100 translate-y-0'
+      className={`absolute left-0 right-0 mt-2 z-40 transition-opacity duration-300 ${
+        isClosing ? 'opacity-0' : 'opacity-100'
       }`}
       role="dialog"
       aria-live="polite"
     >
-      <div className="mx-3 sm:mx-0 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-teal-950/40 border-2 border-emerald-200 dark:border-emerald-800/60 rounded-2xl shadow-lg shadow-emerald-500/10 px-4 py-3 flex items-center gap-3">
+      <div className="mx-3 sm:mx-0 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-lg shadow-sm px-4 py-2 flex items-center gap-3">
         {/* 提示文字 */}
-        <p className="flex-1 text-sm sm:text-base font-medium text-slate-700 dark:text-slate-200">
-          👋 Try searching for an AI tool or browse by category
+        <p className="flex-1 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+          💡 试试搜索"blog writing"或选择分类
         </p>
         
         {/* 关闭按钮 */}
         <button
           onClick={closeTour}
           aria-label="Close tip"
-          className="shrink-0 w-11 h-11 flex items-center justify-center rounded-full hover:bg-emerald-100 dark:hover:bg-emerald-900/30 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-all duration-200 active:scale-95"
+          className="shrink-0 w-8 h-8 flex items-center justify-center rounded hover:bg-slate-100 dark:hover:bg-gray-800 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
