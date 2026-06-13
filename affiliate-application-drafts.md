@@ -128,6 +128,47 @@ Twitter: @jiongxiaomo
 
 ---
 
+## 4. Synthesia 联盟计划跟进
+
+**收件人**: partnerships@synthesia.io 或 affiliate@synthesia.io  
+**主题**: Follow-up: UseAITools.me Partnership Inquiry - AI Video Avatar Platform
+
+Dear Synthesia Team,
+
+I'm following up on my previous email regarding partnership opportunities with UseAITools.me.
+
+**Quick Recap:**
+- UseAITools.me is a curated AI tools directory with 80+ tools and 776+ blog articles
+- We've featured Synthesia prominently in our "Best AI Video Avatar Tools" comparison
+- Our audience includes content creators, L&D professionals, and enterprise teams looking for AI video solutions
+
+**Why This Partnership Makes Sense:**
+- Synthesia is the market leader in AI video avatars (60,000+ businesses, 50% of Fortune 100)
+- We're creating detailed comparison content (Synthesia vs HeyGen vs Elai) that drives informed traffic
+- Our audience is actively searching for professional video creation solutions
+
+**Current Status:**
+I noticed that our Synthesia listing doesn't have an affiliate link yet. I'd love to join your affiliate program to monetize our editorial content while providing value to our audience.
+
+**Next Steps:**
+Could you please:
+1. Confirm if you received my initial partnership inquiry
+2. Share details about your affiliate program (commission structure, cookie duration, etc.)
+3. Let me know the application process
+
+I'm happy to provide any additional information about our platform, traffic, or audience demographics.
+
+Looking forward to hearing from you.
+
+Best regards,  
+Xiaomo  
+Founder, UseAITools.me  
+Email: affiliate@useaitools.me  
+Twitter: @jiongxiaomo  
+Website: https://useaitools.me
+
+---
+
 ## 发送前检查清单
 
 - [ ] 更新每月访客数据
