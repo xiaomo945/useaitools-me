@@ -2,20 +2,20 @@
 
 | # | 类别 | 事项 | 状态 |
 |:---|:---|:---|:---|
-| 1 | 变现 | Synthesia 联盟审核跟进 — 查邮箱，发跟进邮件 | ⏳ |
-| 2 | 变现 | 申请新联盟：Descript、Notion AI、Grammarly | ⏳ |
+| 1 | 变现 | Synthesia 联盟审核跟进 — 查邮箱，发跟进邮件 | 📝 已准备跟进邮件草稿 |
+| 2 | 变现 | 申请新联盟：Descript、Notion AI、Grammarly | 📝 已准备申请邮件草稿 |
 | 3 | 变现 | 在网站上添加"Affiliate Disclosure"声明 | ✅ |
-| 4 | 推广 | Indie Hackers 继续养号评论 | ⏳ |
-| 5 | 推广 | Reddit r/SideProject 发帖（账号养好后） | ⏳ |
-| 6 | 推广 | 提交更多免费导航站（目标 20+ 个） | ⏳ |
+| 4 | 推广 | Indie Hackers 继续养号评论 | 📝 已准备养号策略文档 |
+| 5 | 推广 | Reddit r/SideProject 发帖（账号养好后） | 📝 已准备发帖草稿 |
+| 6 | 推广 | 提交更多免费导航站（目标 20+ 个） | 📝 已准备 25 个导航站清单和素材 |
 | 7 | 网站 | 添加隐私政策 & 服务条款页面 | ✅ |
 | 8 | 网站 | 安装 Microsoft Clarity 免费热力图 & 录屏 | ✅ |
 | 9 | 网站 | 检查所有外部链接是否有效 | ✅ |
-| 10 | SEO | 提交新页面到 Google Search Console | ⏳ |
-| 11 | SEO | 检查 GSC 是否有新的搜索词数据 | ⏳ |
+| 10 | SEO | 提交新页面到 Google Search Console | 📝 已准备 GSC 提交指南 |
+| 11 | SEO | 检查 GSC 是否有新的搜索词数据 | ⏳ 待执行 |
 | 12 | 内容 | 给 ClickUp AI 和 Todoist AI 补充示例数据 | ✅ |
 | 13 | 技术 | 定期 `npm audit` 检查依赖安全 | ✅ |
-| 14 | 品牌 | 统一所有社交平台的头像和简介 | ⏳ |
+| 14 | 品牌 | 统一所有社交平台的头像和简介 | 📝 已准备统一简介模板 |
 | 15 | 收入 | 建立收入追踪表 | ✅ |
 | 16 | 备份 | Logo 原图备份到 devlog-private | ✅ |
 | 17 | 法律 | 研究 GDPR 合规要求 | ✅ |
