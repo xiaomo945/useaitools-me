@@ -13,10 +13,29 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setSubmitted(true);
-    setLoading(false);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        alert(data.message || '发送失败，请稍后重试');
+      }
+    } catch (error) {
+      console.error('提交错误:', error);
+      alert('发送失败，请稍后重试');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
