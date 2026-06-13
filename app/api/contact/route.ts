@@ -1,8 +1,47 @@
 import { NextResponse } from 'next/server';
 
+// 简单的速率限制：使用内存存储（生产环境应该使用 Redis 或数据库）
+const rateLimitMap = new Map<string, number[]>();
+const RATE_LIMIT_WINDOW = 60 * 1000; // 1分钟
+const RATE_LIMIT_MAX = 3; // 每分钟最多3次
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const requests = rateLimitMap.get(ip) || [];
+  
+  // 清理过期的记录
+  const recentRequests = requests.filter(timestamp => now - timestamp < RATE_LIMIT_WINDOW);
+  
+  if (recentRequests.length >= RATE_LIMIT_MAX) {
+    return false;
+  }
+  
+  recentRequests.push(now);
+  rateLimitMap.set(ip, recentRequests);
+  return true;
+}
+
 export async function POST(request: Request) {
   try {
-    const { name, email, message } = await request.json();
+    // 获取客户端IP（用于速率限制）
+    const forwarded = request.headers.get('x-forwarded-for');
+    const ip = forwarded ? forwarded.split(',')[0] : 'unknown';
+    
+    // 检查速率限制
+    if (!checkRateLimit(ip)) {
+      return NextResponse.json(
+        { success: false, message: '请求过于频繁，请稍后再试' },
+        { status: 429 }
+      );
+    }
+
+    const { name, email, message, honeypot } = await request.json();
+
+    // 蜜罐检查：如果 honeypot 字段有值，说明是机器人
+    if (honeypot) {
+      // 静默拒绝，返回成功但实际不处理
+      return NextResponse.json({ success: true, message: '消息已发送' });
+    }
 
     // 验证必填字段
     if (!name || !email || !message) {
@@ -21,18 +60,24 @@ export async function POST(request: Request) {
       );
     }
 
-    // 在实际生产环境中，这里应该：
-    // 1. 发送邮件通知（使用 Resend、SendGrid 等服务）
-    // 2. 或者保存到数据库/文件
-    // 3. 或者集成第三方服务（如 Formspree、Getform）
+    // 验证消息长度
+    if (message.length > 2000) {
+      return NextResponse.json(
+        { success: false, message: '消息内容过长，请限制在2000字以内' },
+        { status: 400 }
+      );
+    }
 
-    // 临时方案：记录到控制台（生产环境应该替换为真实的邮件发送）
-    console.log('📧 新的联系表单提交:', {
-      name,
-      email,
-      message,
-      timestamp: new Date().toISOString()
-    });
+    // 生产环境：集成真实的邮件发送服务
+    // 开发环境：仅记录日志
+    if (process.env.NODE_ENV === 'development') {
+      console.log('📧 新的联系表单提交:', {
+        name,
+        email,
+        message,
+        timestamp: new Date().toISOString()
+      });
+    }
 
     // TODO: 集成真实的邮件发送服务
     // 示例：使用 Resend
@@ -50,7 +95,10 @@ export async function POST(request: Request) {
     });
 
   } catch (error) {
-    console.error('联系表单提交错误:', error);
+    // 生产环境：发送到错误追踪服务（如 Sentry）
+    if (process.env.NODE_ENV === 'development') {
+      console.error('联系表单提交错误:', error);
+    }
     return NextResponse.json(
       { success: false, message: '发送失败，请稍后重试' },
       { status: 500 }

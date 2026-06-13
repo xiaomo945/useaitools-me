@@ -673,7 +673,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         setPage(nextPage);
         setHasMore(data.hasMore);
       } catch (error) {
-        console.error('Failed to load more tools:', error);
+        // 静默处理加载失败，用户界面已有反馈
       } finally {
         setIsLoadingMore(false);
       }

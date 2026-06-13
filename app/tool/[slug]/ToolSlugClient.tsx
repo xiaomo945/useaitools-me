@@ -213,7 +213,7 @@ export default function ToolSlugClient({
       setCopiedIndex(index);
       setTimeout(() => setCopiedIndex(null), 2000);
     } catch (err) {
-      console.error('Failed to copy:', err);
+      // 静默处理复制失败，用户界面已有反馈
     }
   };
 
