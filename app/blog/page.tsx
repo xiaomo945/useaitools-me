@@ -16,6 +16,21 @@ export default function BlogPage() {
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [showPullIndicator, setShowPullIndicator] = useState(false);
   const [posts, setPosts] = useState<BlogPost[]>(blogPosts);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  // 获取所有分类
+  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
+  
+  // 根据分类筛选文章
+  const filteredPosts = selectedCategory === 'all' 
+    ? posts 
+    : posts.filter(post => post.category === selectedCategory);
+
+  // 统计每个分类的文章数量
+  const getCategoryCount = (category: string) => {
+    if (category === 'all') return posts.length;
+    return posts.filter(post => post.category === category).length;
+  };
 
   const handleTouchStart = (e: React.TouchEvent) => {
     if (window.scrollY === 0 && !isRefreshing) {
@@ -112,9 +127,26 @@ export default function BlogPage() {
           </p>
         </div>
 
+        {/* Category Filter */}
+        <div className="mb-8 flex flex-wrap gap-2 justify-center">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                selectedCategory === category
+                  ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-500/30'
+                  : 'bg-slate-100 dark:bg-gray-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-gray-700'
+              }`}
+            >
+              {category === 'all' ? 'All' : category} ({getCategoryCount(category)})
+            </button>
+          ))}
+        </div>
+
         {/* Blog Posts Grid */}
         <div className="grid gap-8">
-          {posts.map((post, index) => (
+          {filteredPosts.map((post, index) => (
             <article
               key={post.id}
               className="group bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300 ease-out hover:-translate-y-1 overflow-hidden"
