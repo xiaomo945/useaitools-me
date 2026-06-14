@@ -34,6 +34,7 @@ model User {
   discussionComments DiscussionComment[]
   notifications Notification[]
   emailSubscription EmailSubscription?
+  blogPosts     BlogPost[]
 }
 
 // ============================================
@@ -390,3 +391,72 @@ model EmailLog {
   @@index([sentAt])
   @@index([status])
 }
+
+// ============================================
+// 博客分类模型
+// ============================================
+model BlogCategory {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  slug        String    @unique
+  description String?
+  
+  // 时间戳
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  // 关联
+  posts       BlogPost[]
+  
+  @@index([slug])
+}
+
+// ============================================
+// 博客文章模型
+// ============================================
+model BlogPost {
+  id              String    @id @default(cuid())
+  title           String
+  slug            String    @unique
+  excerpt         String    // 摘要
+  content         String    // Markdown 内容
+  
+  // SEO
+  metaTitle       String?
+  metaDescription String?
+  
+  // 封面图
+  coverImage      String?
+  coverImageAlt   String?
+  
+  // 分类和标签
+  categoryId      String
+  category        BlogCategory @relation(fields: [categoryId], references: [id])
+  tags            String?     // JSON array
+  
+  // 关联工具
+  relatedToolIds  String?     // JSON array: 相关工具 ID
+  
+  // 统计
+  viewCount       Int       @default(0)
+  likeCount       Int       @default(0)
+  
+  // 状态
+  isPublished     Boolean   @default(false)
+  isFeatured      Boolean   @default(false)
+  publishedAt     DateTime?
+  
+  // 作者
+  authorId        String
+  author          User      @relation(fields: [authorId], references: [id])
+  
+  // 时间戳
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  
+  @@index([slug])
+  @@index([categoryId])
+  @@index([isPublished])
+  @@index([publishedAt])
+}
+
