@@ -77,6 +77,7 @@ async function findToolBySlug(slug: string): Promise<Tool | null> {
     languages: [],
     rating: dbTool.rating,
     rating_count: dbTool.reviewCount,
+    use_cases: dbTool.useCases ? JSON.parse(dbTool.useCases) : [],
   };
 }
 
