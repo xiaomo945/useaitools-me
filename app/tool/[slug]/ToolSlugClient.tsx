@@ -30,6 +30,12 @@ type RatingBreakdown = {
   support: { score: number; note: string };
 };
 
+type PricingTier = {
+  name: string;
+  price: string;
+  features: string[];
+};
+
 type Tool = {
   id: number;
   name: string;
@@ -50,6 +56,8 @@ type Tool = {
   rating_breakdown?: RatingBreakdown;
   skill_level?: string;
   best_for?: string[];
+  video_url?: string;
+  pricing_tiers?: PricingTier[];
 };
 
 type BlogPost = {
@@ -429,6 +437,75 @@ export default function ToolSlugClient({
                       <p className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed">{useCase.detail}</p>
                     </div>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Video Demo */}
+        {tool.video_url && (
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">🎬 Video Demo</h2>
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
+              <iframe
+                src={tool.video_url}
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        )}
+
+        {/* Pricing Comparison */}
+        {tool.pricing_tiers && tool.pricing_tiers.length > 0 && (
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">💰 Pricing Plans</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {tool.pricing_tiers.map((tier, index) => (
+                <div
+                  key={index}
+                  className={`relative rounded-2xl p-6 border-2 transition-all duration-300 hover:-translate-y-1 ${
+                    index === 1
+                      ? 'border-emerald-500 dark:border-emerald-400 shadow-xl shadow-emerald-500/10'
+                      : 'border-slate-200 dark:border-gray-700'
+                  }`}
+                >
+                  {index === 1 && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                      <span className="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white shadow-md">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{tier.name}</h3>
+                  <div className="mb-4">
+                    <span className="text-3xl font-extrabold text-slate-900 dark:text-white">{tier.price}</span>
+                  </div>
+                  <ul className="space-y-3 mb-6">
+                    {tier.features.map((feature, fIndex) => (
+                      <li key={fIndex} className="flex items-start gap-2 text-sm text-slate-600 dark:text-gray-300">
+                        <svg className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href={ctaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                      index === 1
+                        ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg hover:shadow-xl'
+                        : 'bg-slate-100 dark:bg-gray-800 text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-gray-700'
+                    }`}
+                  >
+                    Get Started
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
                 </div>
               ))}
             </div>
