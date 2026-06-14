@@ -492,3 +492,20 @@ model SponsoredSlot {
   @@index([slotName, status])
   @@index([status])
 }
+
+model Keyword {
+  id               String   @id @default(cuid())
+  keyword          String   @unique
+  position         Int
+  previousPosition Int
+  change           Int
+  url              String
+  searchVolume     Int
+  difficulty       Int
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([keyword])
+  @@index([position])
+  @@index([change])
+}
