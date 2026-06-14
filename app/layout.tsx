@@ -20,6 +20,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import HolidayBanner from "./components/HolidayBanner";
 import WebVitals from "./components/WebVitals";
 import AuthProvider from "./components/AuthProvider";
+import { ABTestProvider } from "./components/ABTestProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -143,9 +144,10 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col pb-16 md:pb-0">
-        <AuthProvider>
-          <Analytics />
-          <a href="#main-content" className="skip-to-main">Skip to main content</a>
+        <ABTestProvider>
+          <AuthProvider>
+            <Analytics />
+            <a href="#main-content" className="skip-to-main">Skip to main content</a>
           <Suspense fallback={null}>
             <HolidayBanner />
           </Suspense>
@@ -182,6 +184,7 @@ export default function RootLayout({
             <WebVitals />
           </ToastProvider>
         </AuthProvider>
+        </ABTestProvider>
       </body>
     </html>
   );
