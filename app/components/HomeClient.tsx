@@ -17,6 +17,7 @@ import CompareBar from './CompareBar';
 import LongPressMenu from './LongPressMenu';
 import MysteryBoxModal from './MysteryBoxModal';
 import TodayDiscovery from './TodayDiscovery';
+import SmartRecommendations from './SmartRecommendations';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -1640,6 +1641,9 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           setShowDailyPick={setShowDailyPick}
           openMysteryBox={openMysteryBox}
         />
+
+        {/* Smart Recommendations - AI-powered personalized suggestions */}
+        <SmartRecommendations tools={displayedTools} />
 
         {/* Recently Viewed Quick Access */}
           {recentlyViewedIds.length > 0 && (
