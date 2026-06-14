@@ -2,55 +2,69 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import tools from '@/data/tools.json';
-import { Home, Clock, Trash2, ExternalLink } from 'lucide-react';
+import { useSession } from 'next-auth/react';
+import { Home, Clock, Trash2, ExternalLink, LogIn } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 
-type Tool = (typeof tools)[0];
-
-interface HistoryItem {
-  toolId: number;
-  timestamp: number;
+interface Tool {
+  id: number;
+  name: string;
+  description: string;
+  category: string;
+  url: string;
+  affiliate_link?: string;
+  icon_url?: string;
+  rating: number;
+  rating_count: number;
 }
 
-// Load history from localStorage
-const getHistory = (): HistoryItem[] => {
-  try {
-    const history = localStorage.getItem('toolHistory');
-    return history ? JSON.parse(history) : [];
-  } catch {
-    return [];
-  }
-};
-
-// Save history to localStorage
-const saveHistory = (history: HistoryItem[]) => {
-  localStorage.setItem('toolHistory', JSON.stringify(history));
-};
-
-// Add tool to history
-const addToHistory = (toolId: number) => {
-  const history = getHistory();
-  // Remove if already exists to move to top
-  const filtered = history.filter((item) => item.toolId !== toolId);
-  const newHistory = [{ toolId, timestamp: Date.now() }, ...filtered].slice(0, 50);
-  saveHistory(newHistory);
-};
+interface HistoryItem {
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  url: string;
+  affiliate_link: string;
+  icon_url: string;
+  rating: number;
+  rating_count: number;
+  lastAccessed: string;
+  accessType: 'bookmarked' | 'reviewed';
+}
 
 export default function HistoryPage() {
-  const [historyItems, setHistoryItems] = useState<HistoryItem[]>(getHistory());
+  const { data: session, status } = useSession();
+  const [historyItems, setHistoryItems] = useState<HistoryItem[]>([]);
+  const [loading, setLoading] = useState(true);
   const [deletingItem, setDeletingItem] = useState<number | null>(null);
-  const [clearingAll, setClearingAll] = useState(false);
 
-  // Get tools from history
-  const historyTools = historyItems.map((item) => {
-    const tool = tools.find((t) => t.id === item.toolId);
-    return { ...item, tool };
-  }).filter((item): item is typeof item & { tool: Tool } => item.tool !== undefined);
+  // 从数据库加载历史记录
+  useEffect(() => {
+    if (status === 'authenticated') {
+      loadHistory();
+    } else if (status === 'unauthenticated') {
+      setLoading(false);
+    }
+  }, [status]);
 
-  // Get category colors
-  const getCategoryColors = (category: Tool['category']) => {
+  const loadHistory = async () => {
+    try {
+      setLoading(true);
+      const res = await fetch('/api/history');
+      if (res.ok) {
+        const data = await res.json();
+        setHistoryItems(data.history || []);
+      }
+    } catch (error) {
+      console.error('加载历史记录失败:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // 获取分类颜色
+  const getCategoryColors = (category: string) => {
     switch (category) {
       case 'Writing':
         return { bg: 'bg-blue-500', textLight: 'text-blue-600', text: 'text-blue-300' };
@@ -69,9 +83,9 @@ export default function HistoryPage() {
     }
   };
 
-  // Format time
-  const formatTime = (timestamp: number) => {
-    const date = new Date(timestamp);
+  // 格式化时间
+  const formatTime = (dateString: string) => {
+    const date = new Date(dateString);
     const now = new Date();
     const diff = now.getTime() - date.getTime();
     
@@ -82,33 +96,12 @@ export default function HistoryPage() {
     return date.toLocaleDateString();
   };
 
-  // Remove item from history
-  const removeFromHistory = (toolId: number) => {
-    setDeletingItem(toolId);
-    setTimeout(() => {
-      const newHistory = historyItems.filter((item) => item.toolId !== toolId);
-      setHistoryItems(newHistory);
-      saveHistory(newHistory);
-      setDeletingItem(null);
-    }, 200);
-  };
-
-  // Clear all history
-  const clearAllHistory = () => {
-    setClearingAll(true);
-    setTimeout(() => {
-      setHistoryItems([]);
-      saveHistory([]);
-      setClearingAll(false);
-    }, 300);
-  };
-
-  // Get grouped history by date
+  // 按日期分组
   const getGroupedHistory = () => {
-    const groups: Record<string, typeof historyTools> = {};
+    const groups: Record<string, HistoryItem[]> = {};
     
-    historyTools.forEach((item) => {
-      const date = new Date(item.timestamp);
+    historyItems.forEach((item) => {
+      const date = new Date(item.lastAccessed);
       const dateKey = date.toLocaleDateString('en-US', { 
         month: 'short', 
         day: 'numeric',
@@ -125,6 +118,38 @@ export default function HistoryPage() {
   };
 
   const groupedHistory = getGroupedHistory();
+
+  // 未登录状态
+  if (status === 'unauthenticated') {
+    return (
+      <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <Breadcrumbs 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'Browsing History', href: '/history', current: true }
+            ]} 
+          />
+
+          <div className="text-center py-20">
+            <div className="mx-auto w-20 h-20 mb-6 text-slate-300 dark:text-slate-600">
+              <LogIn className="w-full h-full" />
+            </div>
+            <p className="text-slate-500 dark:text-slate-500 text-lg font-medium mb-4">
+              Please log in to view your browsing history.
+            </p>
+            <Link
+              href="/api/auth/signin"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
+            >
+              Sign In →
+            </Link>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
@@ -149,26 +174,30 @@ export default function HistoryPage() {
                   Track the AI tools you've recently explored.
                 </p>
               </div>
-              {historyTools.length > 0 && (
-                <button
-                  onClick={clearAllHistory}
-                  disabled={clearingAll}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-500/10 hover:bg-rose-100 dark:hover:bg-rose-500/20 transition-all duration-300 ease-out disabled:opacity-50"
-                >
-                  {clearingAll ? (
-                    <div className="w-4 h-4 border-2 border-rose-400 border-t-transparent rounded-full animate-spin" />
-                  ) : (
-                    <Trash2 className="w-4 h-4" />
-                  )}
-                  Clear All
-                </button>
+              {historyItems.length > 0 && (
+                <div className="text-sm text-slate-500 dark:text-slate-400">
+                  {historyItems.length} {historyItems.length === 1 ? 'tool' : 'tools'} in history
+                </div>
               )}
             </div>
           </div>
         </div>
 
-        {/* History Timeline or Empty State */}
-        {historyTools.length === 0 ? (
+        {/* Loading State */}
+        {loading ? (
+          <div className="space-y-4">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className="animate-pulse flex items-center gap-4 p-4 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl">
+                <div className="w-12 h-12 bg-slate-200 dark:bg-gray-700 rounded-xl" />
+                <div className="flex-1 space-y-2">
+                  <div className="h-4 bg-slate-200 dark:bg-gray-700 rounded w-1/4" />
+                  <div className="h-3 bg-slate-200 dark:bg-gray-700 rounded w-3/4" />
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : historyItems.length === 0 ? (
+          /* Empty State */
           <div className="text-center py-20">
             <div className="mx-auto w-20 h-20 mb-6 text-slate-300 dark:text-slate-600">
               <Clock className="w-full h-full" />
@@ -184,6 +213,7 @@ export default function HistoryPage() {
             </Link>
           </div>
         ) : (
+          /* History Timeline */
           <div className="space-y-8">
             {Object.entries(groupedHistory).map(([date, items]) => (
               <div key={date} className="animate-fade-in-up">
@@ -194,32 +224,32 @@ export default function HistoryPage() {
                 
                 <div className="space-y-3">
                   {items.map((item, index) => {
-                    const colors = getCategoryColors(item.tool.category);
+                    const colors = getCategoryColors(item.category);
                     
                     return (
                       <div
-                        key={item.toolId}
+                        key={item.id}
                         className={`group flex items-center gap-4 p-4 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl hover:border-slate-300 dark:hover:border-gray-700 transition-all duration-300 ${
-                          deletingItem === item.toolId ? 'opacity-0 scale-95' : ''
+                          deletingItem === item.id ? 'opacity-0 scale-95' : ''
                         }`}
                         style={{ animationDelay: `${index * 30}ms` }}
                       >
                         {/* Tool Icon */}
                         <div className={`w-12 h-12 rounded-xl ${colors.bg}/10 flex items-center justify-center text-xl font-bold ${colors.textLight} dark:${colors.text}`} style={{ fontFamily: 'Playfair Display, serif' }}>
-                          {item.tool.name.charAt(0)}
+                          {item.name.charAt(0)}
                         </div>
                         
                         {/* Tool Info */}
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2">
                             <Link
-                              href={`/tools/${item.tool.id}`}
+                              href={`/tools/${item.id}`}
                               className="font-semibold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate"
                             >
-                              {item.tool.name}
+                              {item.name}
                             </Link>
                             <a
-                              href={item.tool.url}
+                              href={item.url}
                               target="_blank" rel="noopener noreferrer"
                               className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
                             >
@@ -227,27 +257,19 @@ export default function HistoryPage() {
                             </a>
                           </div>
                           <p className="text-sm text-slate-500 dark:text-gray-400 truncate mt-1">
-                            {item.tool.description}
+                            {item.description}
                           </p>
                           <div className="flex items-center gap-3 mt-2">
                             <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${colors.bg}/10 ${colors.textLight} dark:${colors.text}`}>
-                              {item.tool.category}
+                              {item.category}
                             </span>
                             <span className="text-xs text-slate-400 dark:text-gray-500">
-                              {formatTime(item.timestamp)}
+                              {formatTime(item.lastAccessed)}
+                            </span>
+                            <span className="text-xs text-slate-400 dark:text-gray-500 capitalize">
+                              via {item.accessType}
                             </span>
                           </div>
-                        </div>
-                        
-                        {/* Actions */}
-                        <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                          <button
-                            onClick={() => removeFromHistory(item.toolId)}
-                            className="p-2 text-slate-400 hover:text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-500/10 rounded-lg transition-all"
-                            title="Remove from history"
-                          >
-                            <Trash2 className="w-4 h-4" />
-                          </button>
                         </div>
                       </div>
                     );
