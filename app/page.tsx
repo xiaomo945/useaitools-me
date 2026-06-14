@@ -228,6 +228,7 @@ export default async function Home() {
         blogPosts={blogPosts}
         totalCount={tools.length}
       />
+      <BlogPreviewSection />
       <SceneExplorer />
       <StoryCard />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -334,4 +335,91 @@ async function TopPicksGrid() {
     console.error('Failed to load top picks:', err);
     return null;
   }
+}
+
+function BlogPreviewSection() {
+  const posts = blogPosts?.slice(0, 4) || [];
+
+  if (posts.length === 0) return null;
+
+  const categoryColors: Record<string, { bg: string; lightBg: string; text: string; glow: string }> = {
+    writing: { bg: 'from-blue-500 to-indigo-500', lightBg: 'bg-blue-50 dark:bg-blue-500/10', text: 'text-blue-600 dark:text-blue-400', glow: 'shadow-blue-500/20' },
+    image: { bg: 'from-violet-500 to-fuchsia-500', lightBg: 'bg-violet-50 dark:bg-violet-500/10', text: 'text-violet-600 dark:text-violet-400', glow: 'shadow-violet-500/20' },
+    video: { bg: 'from-indigo-500 to-blue-500', lightBg: 'bg-indigo-50 dark:bg-indigo-500/10', text: 'text-indigo-600 dark:text-indigo-400', glow: 'shadow-indigo-500/20' },
+    audio: { bg: 'from-pink-500 to-rose-500', lightBg: 'bg-pink-50 dark:bg-pink-500/10', text: 'text-pink-600 dark:text-pink-400', glow: 'shadow-pink-500/20' },
+    code: { bg: 'from-orange-500 to-amber-500', lightBg: 'bg-orange-50 dark:bg-orange-500/10', text: 'text-orange-600 dark:text-orange-400', glow: 'shadow-orange-500/20' },
+    productivity: { bg: 'from-teal-500 to-emerald-500', lightBg: 'bg-teal-50 dark:bg-teal-500/10', text: 'text-teal-600 dark:text-teal-400', glow: 'shadow-teal-500/20' },
+  };
+
+  const formatDate = (d: string) =>
+    new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+
+  return (
+    <section className="py-14 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-emerald-50/30 dark:from-gray-950 dark:via-gray-900 dark:to-emerald-950/10 border-t border-slate-200 dark:border-gray-800">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
+          <div>
+            <div className="inline-block px-3 py-1 rounded-full bg-emerald-100/70 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-bold mb-3">
+              📚 Latest from our Blog
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 tracking-tight">
+              AI Guides &amp; Comparisons
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
+              Expert reviews, side-by-side comparisons and practical how-to guides
+            </p>
+          </div>
+          <a
+            href="/blog"
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:gap-2.5 transition-all"
+          >
+            View all articles →
+          </a>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          {posts.map((post: any) => {
+            const cat = (post.category || '').toLowerCase();
+            const color = categoryColors[cat] || {
+              bg: 'from-slate-500 to-gray-500',
+              lightBg: 'bg-slate-50 dark:bg-slate-500/10',
+              text: 'text-slate-600 dark:text-slate-400',
+              glow: 'shadow-slate-500/20',
+            };
+
+            return (
+              <a
+                key={post.id || post.slug}
+                href={`/blog/${post.slug}`}
+                className={`group relative bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out ${color.glow}`}
+              >
+                <div className={`h-1.5 bg-gradient-to-r ${color.bg}`} />
+                <div className="p-5">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className={`inline-flex items-center text-[10px] font-bold px-2.5 py-1 rounded-full ${color.lightBg} ${color.text}`}>
+                      {post.category}
+                    </span>
+                    <span className="text-[11px] text-slate-400 dark:text-slate-500">
+                      {formatDate(post.date)}
+                    </span>
+                  </div>
+                  <h3 className="text-base font-bold text-slate-900 dark:text-white mb-3 leading-snug group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors line-clamp-3">
+                    {post.title}
+                  </h3>
+                  {post.description && (
+                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2 mb-4">
+                      {post.description}
+                    </p>
+                  )}
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 group-hover:gap-2.5 transition-all">
+                    Read article →
+                  </span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 }

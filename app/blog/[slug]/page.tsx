@@ -4,8 +4,7 @@ import { blogPosts, blogPostBySlug } from '@/data/blog-posts';
 import type { BlogPost } from '@/types';
 import toolsData from '@/data/tools.json';
 import { prisma } from '@/lib/prisma';
-import ClientBlogDetail from './ClientBlogDetail';
-import EmailSubscribe from '@/app/components/EmailSubscribe';
+import BlogDetailV2 from './BlogDetailV2';
 import SponsoredSlot from '@/app/components/SponsoredSlot';
 
 type Tool = {
@@ -262,11 +261,10 @@ export default async function BlogDetailPage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
         />
       )}
-      <ClientBlogDetail post={processedPost} slug={slug} relatedPosts={relatedPosts} relatedTools={relatedTools} />
+      <BlogDetailV2 post={processedPost} slug={slug} relatedPosts={relatedPosts} relatedTools={relatedTools} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SponsoredSlot slotName="blog-bottom" />
       </div>
-      <EmailSubscribe source="blog-detail" />
     </>
   );
 }
