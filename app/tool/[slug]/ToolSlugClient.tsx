@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { ArrowRight, Home, Copy, Check, ChevronDown } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import ToolReviews from '@/app/components/ToolReviews';
 
 type Example = {
   prompt: string;
@@ -54,7 +55,7 @@ type Tool = {
   rating?: number;
   rating_count?: number;
   rating_breakdown?: RatingBreakdown;
-  skill_level?: string;
+  skill_level?: 'beginner' | 'intermediate' | 'advanced';
   best_for?: string[];
   video_url?: string;
   pricing_tiers?: PricingTier[];
@@ -742,6 +743,9 @@ export default function ToolSlugClient({
             </div>
           </div>
         )}
+
+        {/* User Reviews */}
+        <ToolReviews tool={tool} />
 
         {/* Back to Home */}
         <div className="text-center">
