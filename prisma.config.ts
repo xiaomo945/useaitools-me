@@ -3,12 +3,16 @@
 import "dotenv/config";
 import { defineConfig } from "prisma/config";
 
+// 使用环境变量覆盖，否则回退到本地 SQLite
+const databaseUrl =
+  process.env.DATABASE_URL || `file:${process.cwd()}/prisma/dev.db`;
+
 export default defineConfig({
   schema: "prisma/schema.prisma",
   migrations: {
     path: "prisma/migrations",
   },
   datasource: {
-    url: "file:./prisma/dev.db",
+    url: databaseUrl,
   },
 });
