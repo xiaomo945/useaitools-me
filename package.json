@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/setup-db.mjs && next build",
     "start": "next start",
     "lint": "eslint",
     "analyze": "echo 'Plausible dashboard: https://plausible.io/'${NEXT_PUBLIC_PLAUSIBLE_DOMAIN:-useaitools-me}",
     "postinstall": "prisma generate",
+    "setup-db": "node scripts/setup-db.mjs",
     "seed": "npx tsx scripts/migrate-tools.ts",
     "report:weekly": "npx tsx scripts/generate-report.ts --type=weekly",
     "report:monthly": "npx tsx scripts/generate-report.ts --type=monthly"

@@ -1,12 +1,13 @@
 // 构建前数据库初始化脚本
 // - 确保 prisma/dev.db 存在
-// - 确保所有表已创建 (prisma db push)
+// - 调用 `prisma db push` 把 schema 同步到数据库（建表）
 // - 如果工具表为空，从 data/tools.json 导入
 // - 默认创建示例赞助位、联盟链接等
 // 用于: Vercel 构建环境、新开发者首次 clone 后运行
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,7 +22,7 @@ if (!fs.existsSync(prismaDir)) {
   console.log('✓ 已创建 prisma 目录');
 }
 
-// ---- Step 1: 确保 dev.db 文件存在（空数据库）----
+// ---- Step 1: 确保 dev.db 文件存在（空数据库） ----
 let dbCreated = false;
 if (!fs.existsSync(dbPath)) {
   fs.writeFileSync(dbPath, '');
@@ -30,6 +31,26 @@ if (!fs.existsSync(dbPath)) {
 } else {
   const stats = fs.statSync(dbPath);
   console.log(`✓ 数据库已存在，大小: ${(stats.size / 1024).toFixed(1)} KB`);
+}
+
+// ---- Step 2: 调用 prisma db push 同步 schema（建表） ----
+// 这一步在 Vercel 环境尤为关键 — 必须在 next build 之前
+console.log('\n▶ 执行 prisma db push 同步 schema ...');
+try {
+  execSync('npx prisma db push --skip-generate', {
+    cwd: projectRoot,
+    stdio: 'pipe',
+    env: {
+      ...process.env,
+      DATABASE_URL: `file:./prisma/dev.db`,
+    },
+  });
+  console.log('✓ schema 已同步到 SQLite');
+} catch (err) {
+  // db push 是非破坏性的，失败也不致命（可能表已存在）
+  const msg = err.stdout?.toString() || err.message;
+  console.warn(`  ⚠ prisma db push 输出:`, msg.split('\n').slice(0, 3).join('\n  '));
+  console.warn('  → 将在 Prisma Client 层继续，可能缺少某些表');
 }
 
 // ---- Step 2: 读取 tools.json 用于 seed ----
@@ -104,7 +125,7 @@ try {
         const slice = batch.slice(i, i + BATCH);
         // 注意: sqlite 不支持 createMany returning id，所以直接 try createMany
         try {
-          await (prisma.tool as any).createMany({ data: slice });
+          await prisma.tool.createMany({ data: slice });
           inserted += slice.length;
         } catch (innerErr) {
           // createMany 失败时退化为逐个插入
@@ -159,7 +180,7 @@ try {
   try {
     const affCount = await prisma.affiliateLink.count().catch(() => 0);
     if (affCount === 0) {
-      const topNames = toolsJson.slice(0, 30).map((t: any) => t.name).filter(Boolean);
+      const topNames = toolsJson.slice(0, 30).map((t) => t.name).filter(Boolean);
       const partners = ['Synthesia', 'ElevenLabs', 'Rytr', 'VEED.io', 'Murf AI', 'Descript', 'Adobe Firefly', 'SecurityAI Coder'];
       let seeded = 0;
       for (const name of partners.concat(topNames.slice(0, 10))) {

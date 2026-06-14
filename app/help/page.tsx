@@ -205,7 +205,7 @@ export default async function HelpPage() {
           {/* Hero */}
           <div className="text-center mb-14">
             <div className="inline-block px-4 py-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-600 dark:text-emerald-400 text-sm font-semibold mb-6">
-              💡 {totalTools} tools · {categories.length} categories · avg ★{avgRating}
+              💡 {totalTools || 1300}+ tools · {categories.length || 6} categories
             </div>
             <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
               Help Center
