@@ -398,3 +398,58 @@ model EmailLog {
   @@index([sentAt])
   @@index([status])
 }
+
+model SiteSubscription {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  source    String   @default("website")
+  status    String   @default("active")
+  interests String?
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([email])
+  @@index([status])
+  @@index([source])
+}
+
+model ContentReport {
+  id          String   @id @default(cuid())
+  reportType  String   // weekly, monthly, seo, tools, content
+  periodStart DateTime
+  periodEnd   DateTime
+  data        String   // JSON object
+  summary     String?  // Human-readable summary
+  generatedBy String   // system or user email
+  createdAt   DateTime @default(now())
+
+  @@index([reportType])
+  @@index([periodStart])
+  @@index([createdAt])
+}
+
+model AffiliateLink {
+  id              String   @id @default(cuid())
+  toolId          String?
+  toolName        String
+  linkType        String
+  affiliateUrl    String
+  originalUrl     String?
+  network         String?
+  status          String   @default("active")
+  clickCount      Int      @default(0)
+  conversionCount Int      @default(0)
+  revenue         Float    @default(0)
+  startDate       DateTime?
+  endDate         DateTime?
+  notes           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([toolId])
+  @@index([status])
+  @@index([network])
+}

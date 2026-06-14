@@ -1,101 +1,114 @@
-import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { NextRequest, NextResponse } from 'next/server';
+import { prisma } from '@/lib/prisma';
 
-const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-async function saveToSupabase(email: string): Promise<boolean> {
-  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-    return false;
-  }
-
+export async function POST(request: NextRequest) {
   try {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
-      method: 'POST',
-      headers: {
-      'Content-Type': 'application/json',
-      apikey: SUPABASE_ANON_KEY,
-      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-      Prefer: 'return=minimal',
-    },
-      body: JSON.stringify({ email, subscribed_at: new Date().toISOString() }),
-  });
+    let body: any = {};
 
-    if (response.status === 409) {
-      throw new Error('DUPLICATE');
-    }
-
-    if (!response.ok) {
-      throw new Error(`Supabase error: ${response.status}`);
-    }
-    return true;
-  } catch (error: unknown) {
-    if (error instanceof Error && error.message === 'DUPLICATE') {
-      throw error;
-    }
-    console.error('Supabase save failed:', error);
-    return false;
-  }
-}
-
-function saveToLocal(email: string): { success: boolean; message: string; status?: number } {
-  const subscribersPath = path.join(process.cwd(), 'data', 'subscribers.json');
-
-  let subscribers: { email: string; subscribedAt: string }[] = [];
-
-  if (fs.existsSync(subscribersPath)) {
-    const data = fs.readFileSync(subscribersPath, 'utf-8');
-    subscribers = JSON.parse(data);
-  }
-
-  if (subscribers.some(sub => sub.email === email)) {
-      return { success: false, message: 'Email already subscribed', status: 409 };
-    }
-
-  subscribers.push({
-      email,
-      subscribedAt: new Date().toISOString()
-    });
-
-  fs.writeFileSync(subscribersPath, JSON.stringify(subscribers, null, 2));
-
-  console.warn(
-    '[Newsletter] Using local JSON storage — data will be lost on redeploy. ' +
-    'Set SUPABASE_URL and SUPABASE_ANON_KEY to enable persistent storage.'
-  );
-
-  return { success: true, message: 'Thanks for subscribing!' };
-}
-
-export async function POST(request: Request) {
-  try {
-    const { email } = await request.json();
-
-    if (!email || !email.includes('@')) {
-      return NextResponse.json({ success: false, message: 'Invalid email address' }, { status: 400 });
-    }
-
-    // Try Supabase first
-    if (SUPABASE_URL && SUPABASE_ANON_KEY) {
-      try {
-        await saveToSupabase(email);
-        return NextResponse.json({ success: true, message: 'Thanks for subscribing!' });
-      } catch (error: unknown) {
-        if (error instanceof Error && error.message === 'DUPLICATE') {
-          return NextResponse.json({ success: false, message: 'Email already subscribed' }, { status: 409 });
-        }
-        // Fall through to local storage
+    const contentType = request.headers.get('content-type') || '';
+    if (contentType.includes('application/json')) {
+      body = await request.json().catch(() => ({}));
+    } else {
+      const formData = await request.formData().catch(() => null);
+      if (formData) {
+        body = {
+          email: formData.get('email')?.toString() || '',
+          name: formData.get('name')?.toString() || '',
+          source: formData.get('source')?.toString() || '',
+          interests: formData.get('interests')?.toString() || '',
+        };
       }
     }
 
-    // Fallback to local storage
-    const result = saveToLocal(email);
-    return NextResponse.json(
-      { success: result.success, message: result.message },
-      { status: result.status || 200 }
-    );
+    const email = (body.email as string)?.trim().toLowerCase() || '';
+    const name = (body.name as string)?.trim() || undefined;
+    const source = (body.source as string)?.trim() || 'website';
+    const interests = body.interests;
+
+    if (!email) {
+      return NextResponse.json(
+        { success: false, message: '请输入邮箱地址。' },
+        { status: 400 }
+      );
+    }
+
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { success: false, message: '请提供有效的邮箱地址。' },
+        { status: 400 }
+      );
+    }
+
+    let interestsStr: string | undefined;
+    if (interests) {
+      if (typeof interests === 'string') {
+        interestsStr = interests;
+      } else {
+        interestsStr = JSON.stringify(interests);
+      }
+    }
+
+    let ipAddress: string | undefined;
+    let userAgent: string | undefined;
+    try {
+      ipAddress =
+        request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+        request.headers.get('x-real-ip') ||
+        undefined;
+      userAgent = request.headers.get('user-agent') || undefined;
+    } catch {
+      // 忽略 IP/UA 解析错误
+    }
+
+    const existing = await prisma.siteSubscription
+      .findUnique({ where: { email } })
+      .catch(() => null);
+
+    const subscription = await prisma.siteSubscription.upsert({
+      where: { email },
+      create: {
+        email,
+        name,
+        source,
+        status: 'active',
+        interests: interestsStr,
+        ipAddress,
+        userAgent,
+      },
+      update: {
+        name: name || undefined,
+        source,
+        status: 'active',
+        interests: interestsStr,
+        userAgent,
+      },
+    });
+
+    const isNew =
+      !existing ||
+      existing.createdAt.getTime() === subscription.createdAt.getTime();
+
+    return NextResponse.json({
+      success: true,
+      status: isNew ? 'new' : 'existing',
+      message: isNew
+        ? '感谢订阅！我们会定期向您发送精选内容。'
+        : '您已在订阅列表中，欢迎继续关注我们！',
+    });
   } catch (error) {
-    return NextResponse.json({ success: false, message: 'Internal server error' }, { status: 500 });
+    console.error('订阅失败:', error);
+    return NextResponse.json(
+      { success: false, message: '服务器错误，请稍后再试。' },
+      { status: 500 }
+    );
   }
+}
+
+export async function GET() {
+  return NextResponse.json(
+    { success: false, message: '仅支持 POST 请求。' },
+    { status: 405 }
+  );
 }

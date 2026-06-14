@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { prisma } from '@/lib/prisma';
 import BlogListClient from './BlogListClient';
-import NewsletterSignup from '@/app/components/NewsletterSignup';
+import EmailSubscribe from '@/app/components/EmailSubscribe';
 
 export const metadata: Metadata = {
   title: 'Best AI Tools Blog 2026 – Reviews, Comparisons & Guides',
@@ -110,7 +110,7 @@ export default async function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogLd) }}
       />
       <BlogListClient posts={posts} />
-      <NewsletterSignup />
+      <EmailSubscribe source="blog-list" />
     </>
   );
 }

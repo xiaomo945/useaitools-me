@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
 import { Suspense } from "react";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next';
+import Analytics from "./components/Analytics";
 import "./globals.css";
 import Header from "./components/Header";
 import PageProgress from "./components/PageProgress";
@@ -143,6 +144,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col pb-16 md:pb-0">
         <AuthProvider>
+          <Analytics />
           <a href="#main-content" className="skip-to-main">Skip to main content</a>
           <Suspense fallback={null}>
             <HolidayBanner />
@@ -161,7 +163,7 @@ export default function RootLayout({
               <PageTransition>{children}</PageTransition>
             </ErrorBoundary>
             <div aria-live="polite" aria-atomic="true" className="sr-only" />
-            <Analytics />
+            <VercelAnalytics />
             <Suspense fallback={null}>
               <BackToTop />
             </Suspense>

@@ -5,6 +5,7 @@ import type { BlogPost } from '@/types';
 import toolsData from '@/data/tools.json';
 import { prisma } from '@/lib/prisma';
 import ClientBlogDetail from './ClientBlogDetail';
+import EmailSubscribe from '@/app/components/EmailSubscribe';
 
 type Tool = {
   id: number;
@@ -375,6 +376,7 @@ export default async function BlogDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <ClientBlogDetail post={processedPost} slug={slug} relatedPosts={relatedPosts} relatedTools={relatedTools} />
+      <EmailSubscribe source="blog-detail" />
     </>
   );
 }

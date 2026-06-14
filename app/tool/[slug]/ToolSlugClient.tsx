@@ -46,6 +46,7 @@ type Tool = {
   pricing: string;
   url: string;
   affiliate_link: string;
+  affiliate_link_id?: string;
   icon_url: string;
   examples?: Example[];
   needs_vpn: boolean;
@@ -86,16 +87,26 @@ const getAffiliateLinkWithUTM = (tool: Tool): string => {
   }
 };
 
-const ctaVariants = {
-  A: 'Get Started for Free',
-  B: 'Get Started for Free',
-};
-
-const getCTAVariant = (): keyof typeof ctaVariants => {
+const trackAndOpen = async (tool: Tool) => {
+  const destination = getAffiliateLinkWithUTM(tool) || tool.url;
   try {
-    return (localStorage.getItem('ctaVariant') as keyof typeof ctaVariants) || 'A';
+    await fetch('/api/track', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        affiliateLinkId: tool.affiliate_link_id || undefined,
+        toolId: String(tool.id),
+        toolName: tool.name,
+        destination,
+      }),
+      keepalive: true,
+    }).catch(() => undefined);
   } catch {
-    return 'A';
+    // 静默失败
+  } finally {
+    if (destination) {
+      window.open(destination, '_blank', 'noopener,noreferrer');
+    }
   }
 };
 
@@ -213,8 +224,13 @@ export default function ToolSlugClient({
   const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const hasAffiliate = hasAffiliateLink(tool);
-  const ctaText = hasAffiliate ? ctaVariants[getCTAVariant()] : 'Visit Website';
+  const ctaText = hasAffiliate ? 'Try Free' : 'Visit Website';
   const ctaUrl = hasAffiliate ? getAffiliateLinkWithUTM(tool) : tool.url;
+
+  const handleCTAClick = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    await trackAndOpen(tool);
+  };
 
   const copyToClipboard = async (text: string, index: number) => {
     try {
@@ -305,9 +321,9 @@ export default function ToolSlugClient({
             )}
 
             <div className="flex flex-wrap gap-3">
-              <a
-                href={ctaUrl}
-                target="_blank" rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={handleCTAClick}
                 className={`inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 font-semibold rounded-xl transition-all duration-300 ${
                   hasAffiliate
                     ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25 hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl hover:shadow-emerald-500/30'
@@ -317,7 +333,7 @@ export default function ToolSlugClient({
                 {ctaText}
                 {hasAffiliate && <span className="text-[10px] opacity-60 ml-1">via partner</span>}
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-              </a>
+              </button>
               <Link
                 href={`/compare?tool=${tool.id}`}
                 className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
@@ -494,10 +510,9 @@ export default function ToolSlugClient({
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href={ctaUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    onClick={handleCTAClick}
                     className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${
                       index === 1
                         ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg hover:shadow-xl'
@@ -506,7 +521,7 @@ export default function ToolSlugClient({
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4" />
-                  </a>
+                  </button>
                 </div>
               ))}
             </div>

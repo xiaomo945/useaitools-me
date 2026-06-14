@@ -13,6 +13,7 @@ type Tool = {
   pricing: string;
   url: string;
   affiliate_link: string;
+  affiliate_link_id?: string;
   icon_url: string;
   examples?: { prompt: string; image_url: string }[];
   needs_vpn: boolean;
@@ -42,7 +43,7 @@ export function generateSlugFromName(name: string): string {
     .replace(/^-|-$/g, '');
 }
 
-function getAffiliateLink(tool: any): string {
+function getAffiliateLinkFromEnv(tool: any): string {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
   let shortEnvVarName = '';
   if (tool.name.includes('Rytr')) shortEnvVarName = 'AFFILIATE_RYTR';
@@ -50,118 +51,103 @@ function getAffiliateLink(tool: any): string {
   else if (tool.name.includes('Murf')) shortEnvVarName = 'AFFILIATE_MURF';
   else if (tool.name.includes('Pictory')) shortEnvVarName = 'AFFILIATE_PICTORY';
   else if (tool.name.includes('Grammarly')) shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return envLink || tool.affiliateUrl || '';
+  const envLink =
+    (shortEnvVarName && process.env[shortEnvVarName]) ||
+    process.env[envVarName];
+  return envLink || '';
 }
 
-async function findToolBySlug(slug: string): Promise<Tool | null> {
+async function findToolBySlug(slug: string): Promise<{
+  tool: Tool;
+  affiliateLinkId?: string;
+} | null> {
   const dbTool = await prisma.tool.findFirst({
-    where: {
-      slug,
-      isActive: true,
-    },
+    where: { slug, isActive: true },
   });
 
   if (!dbTool) return null;
 
+  let affiliateLinkId: string | undefined = undefined;
+  let affiliateUrl = getAffiliateLinkFromEnv(dbTool) || dbTool.affiliateUrl || '';
+
+  // 从 AffiliateLink 表查询（优先级最高，保持向后兼容）
+  try {
+    const dbAffiliate = await prisma.affiliateLink.findFirst({
+      where: {
+        toolName: dbTool.name,
+        status: 'active',
+      },
+      orderBy: { clickCount: 'desc' },
+      take: 1,
+    });
+    if (dbAffiliate) {
+      affiliateLinkId = dbAffiliate.id;
+      affiliateUrl = dbAffiliate.affiliateUrl || affiliateUrl;
+    }
+  } catch (e) {
+    console.error('Failed to query affiliate link for tool:', dbTool.name, e);
+  }
+
   return {
-    id: parseInt(dbTool.id),
-    name: dbTool.name,
-    description: dbTool.description,
-    category: dbTool.category as Tool['category'],
-    pricing: dbTool.pricing,
-    url: dbTool.url,
-    affiliate_link: getAffiliateLink(dbTool),
-    icon_url: dbTool.iconUrl || '',
-    needs_vpn: false,
-    languages: [],
-    rating: dbTool.rating,
-    rating_count: dbTool.reviewCount,
-    use_cases: dbTool.useCases ? JSON.parse(dbTool.useCases) : [],
+    tool: {
+      id: parseInt(dbTool.id),
+      name: dbTool.name,
+      description: dbTool.description,
+      category: dbTool.category as Tool['category'],
+      pricing: dbTool.pricing,
+      url: dbTool.url,
+      affiliate_link: affiliateUrl,
+      affiliate_link_id: affiliateLinkId,
+      icon_url: dbTool.iconUrl || '',
+      needs_vpn: false,
+      languages: [],
+      rating: dbTool.rating,
+      rating_count: dbTool.reviewCount,
+      use_cases: dbTool.useCases ? JSON.parse(dbTool.useCases) : [],
+    },
+    affiliateLinkId,
   };
 }
 
 export async function generateStaticParams() {
-  const tools = await prisma.tool.findMany({
-    where: { isActive: true },
-    select: { name: true },
-  });
+  try {
+    const tools = await prisma.tool.findMany({
+      where: { isActive: true },
+      select: { name: true },
+    });
 
-  return tools.map(tool => ({
-    slug: generateSlugFromName(tool.name),
-  }));
+    return tools.map((tool) => ({
+      slug: generateSlugFromName(tool.name),
+    }));
+  } catch {
+    return [];
+  }
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
-  const tool = await findToolBySlug(slug);
+  const result = await findToolBySlug(slug);
 
-  if (!tool) {
+  if (!result) {
     return {
       title: 'Tool Not Found – Use AI Tools',
       description: 'The tool you are looking for could not be found.',
     };
   }
 
+  const tool = result.tool;
   const title = `${tool.name} ${new Date().getFullYear()} – Review, Pricing & Features`;
   const description = `${tool.description.slice(0, 160)}. Category: ${tool.category}. Pricing: ${tool.pricing}.`;
-  const keywords = [
-    `${tool.name} AI tool review`,
-    `best ${tool.category.toLowerCase()} AI tools`,
-    `${tool.pricing.toLowerCase()} ${tool.name}`,
-  ];
-
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: tool.name,
-    description: tool.description,
-    image: tool.icon_url,
-    applicationCategory: `https://schema.org/${tool.category}Application`,
-    operatingSystem: 'Web',
-    url: `https://useaitools.me/tool/${slug}`,
-    offers: {
-      '@type': 'Offer',
-      price: ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        price: ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
-        priceCurrency: 'USD',
-        description: tool.pricing,
-      },
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: tool.rating ? String(tool.rating) : '4.5',
-      ratingCount: tool.rating_count ? String(tool.rating_count) : '100',
-      bestRating: '5',
-      worstRating: '1',
-    },
-    author: {
-      '@type': 'Organization',
-      name: 'Use AI Tools',
-      url: 'https://useaitools.me',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Use AI Tools',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://useaitools.me/logo.png',
-      },
-    },
-  };
 
   return {
     title,
     description,
-    keywords,
     robots: { index: true, follow: true },
-    alternates: {
-      canonical: `/tool/${slug}`,
-    },
+    alternates: { canonical: `/tool/${slug}` },
     openGraph: {
       title,
       description,
@@ -177,98 +163,118 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       creator: '@useaitools',
       images: tool.icon_url ? [tool.icon_url] : undefined,
     },
-    other: {
-      'application/ld+json': JSON.stringify(jsonLd),
-    },
   };
 }
 
-export default async function ToolSlugPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ToolSlugPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
-  const tool = await findToolBySlug(slug);
+  const result = await findToolBySlug(slug);
 
-  if (!tool) {
+  if (!result) {
     notFound();
   }
 
   const enrichedTool = {
-    ...tool,
-    affiliate_link: getAffiliateLink(tool),
+    ...result.tool,
+    affiliate_link:
+      result.tool.affiliate_link || getAffiliateLinkFromEnv(result.tool),
+    affiliate_link_id: result.affiliateLinkId,
   };
 
-  // 从数据库加载同分类的相关工具
   const dbRelatedTools = await prisma.tool.findMany({
     where: {
-      category: tool.category,
+      category: result.tool.category,
       isActive: true,
       slug: { not: slug },
     },
     take: 5,
   });
 
-  const relatedTools = dbRelatedTools.map(t => ({
-    id: parseInt(t.id),
-    name: t.name,
-    description: t.description,
-    category: t.category as Tool['category'],
-    pricing: t.pricing,
-    url: t.url,
-    affiliate_link: getAffiliateLink(t),
-    icon_url: t.iconUrl || '',
-    needs_vpn: false,
-    languages: [],
-    rating: t.rating,
-    rating_count: t.reviewCount,
-  }));
+  const relatedTools: Tool[] = await Promise.all(
+    dbRelatedTools.map(async (t) => {
+      let relatedAffiliateId: string | undefined = undefined;
+      let relatedAffiliateUrl =
+        getAffiliateLinkFromEnv(t) || t.affiliateUrl || '';
+      try {
+        const relAff = await prisma.affiliateLink.findFirst({
+          where: { toolName: t.name, status: 'active' },
+          orderBy: { clickCount: 'desc' },
+          take: 1,
+        });
+        if (relAff) {
+          relatedAffiliateId = relAff.id;
+          relatedAffiliateUrl = relAff.affiliateUrl || relatedAffiliateUrl;
+        }
+      } catch {
+        // 忽略
+      }
+      return {
+        id: parseInt(t.id),
+        name: t.name,
+        description: t.description,
+        category: t.category as Tool['category'],
+        pricing: t.pricing,
+        url: t.url,
+        affiliate_link: relatedAffiliateUrl,
+        affiliate_link_id: relatedAffiliateId,
+        icon_url: t.iconUrl || '',
+        needs_vpn: false,
+        languages: [],
+        rating: t.rating,
+        rating_count: t.reviewCount,
+      };
+    })
+  );
 
   const relatedArticles = blogPosts
-    .filter(post => {
-      const postCategory = post.category?.toLowerCase() || '';
-      const toolCategory = tool.category.toLowerCase();
+    .filter((post) => {
+      const postCategory = (post as any).category?.toLowerCase() || '';
+      const toolCategory = result.tool.category.toLowerCase();
       return postCategory === toolCategory || postCategory.includes(toolCategory);
     })
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .sort((a, b) => {
+      const da = new Date((a as any).date || 0).getTime();
+      const db = new Date((b as any).date || 0).getTime();
+      return db - da;
+    })
     .slice(0, 5);
 
   const pageJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: tool.name,
-    description: tool.description,
-    applicationCategory: `https://schema.org/${tool.category}Application`,
+    name: result.tool.name,
+    description: result.tool.description,
+    applicationCategory: `https://schema.org/${result.tool.category}Application`,
     operatingSystem: 'Web',
     url: `https://useaitools.me/tool/${slug}`,
     offers: {
       '@type': 'Offer',
-      price: ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
+      price: ['Free', 'Freemium', 'Open Source'].includes(
+        result.tool.pricing
+      )
+        ? '0'
+        : '9.99',
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        price: ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
-        priceCurrency: 'USD',
-        description: tool.pricing,
-      },
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: tool.rating ? String(tool.rating) : '4.5',
-      ratingCount: tool.rating_count ? String(tool.rating_count) : '100',
+      ratingValue: result.tool.rating ? String(result.tool.rating) : '4.5',
+      ratingCount: result.tool.rating_count
+        ? String(result.tool.rating_count)
+        : '100',
       bestRating: '5',
       worstRating: '1',
     },
-    author: {
-      '@type': 'Organization',
-      name: 'Use AI Tools',
-      url: 'https://useaitools.me',
-    },
+    author: { '@type': 'Organization', name: 'Use AI Tools' },
     publisher: {
       '@type': 'Organization',
       name: 'Use AI Tools',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://useaitools.me/logo.png',
-      },
+      logo: { '@type': 'ImageObject', url: 'https://useaitools.me/logo.png' },
     },
   };
 
