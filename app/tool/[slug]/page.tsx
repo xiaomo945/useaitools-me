@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import tools from '@/data/tools.json';
+import { prisma } from '@/lib/prisma';
 import { blogPosts } from '@/data/blog-posts';
 import ToolSlugClient from './ToolSlugClient';
 
@@ -33,8 +33,6 @@ type Tool = {
   best_for?: string[];
 };
 
-const typedTools = tools as Tool[];
-
 export function generateSlugFromName(name: string): string {
   return name
     .toLowerCase()
@@ -44,7 +42,7 @@ export function generateSlugFromName(name: string): string {
     .replace(/^-|-$/g, '');
 }
 
-function getAffiliateLink(tool: Tool): string {
+function getAffiliateLink(tool: any): string {
   const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
   let shortEnvVarName = '';
   if (tool.name.includes('Rytr')) shortEnvVarName = 'AFFILIATE_RYTR';
@@ -53,22 +51,49 @@ function getAffiliateLink(tool: Tool): string {
   else if (tool.name.includes('Pictory')) shortEnvVarName = 'AFFILIATE_PICTORY';
   else if (tool.name.includes('Grammarly')) shortEnvVarName = 'AFFILIATE_GRAMMARLY';
   const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return envLink || tool.affiliate_link || '';
+  return envLink || tool.affiliateUrl || '';
 }
 
-function findToolBySlug(slug: string): Tool | undefined {
-  return typedTools.find(t => generateSlugFromName(t.name) === slug);
+async function findToolBySlug(slug: string): Promise<Tool | null> {
+  const dbTool = await prisma.tool.findFirst({
+    where: {
+      slug,
+      isActive: true,
+    },
+  });
+
+  if (!dbTool) return null;
+
+  return {
+    id: parseInt(dbTool.id),
+    name: dbTool.name,
+    description: dbTool.description,
+    category: dbTool.category as Tool['category'],
+    pricing: dbTool.pricing,
+    url: dbTool.url,
+    affiliate_link: getAffiliateLink(dbTool),
+    icon_url: dbTool.iconUrl || '',
+    needs_vpn: false,
+    languages: [],
+    rating: dbTool.rating,
+    rating_count: dbTool.reviewCount,
+  };
 }
 
 export async function generateStaticParams() {
-  return typedTools.map(tool => ({
+  const tools = await prisma.tool.findMany({
+    where: { isActive: true },
+    select: { name: true },
+  });
+
+  return tools.map(tool => ({
     slug: generateSlugFromName(tool.name),
   }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const tool = findToolBySlug(slug);
+  const tool = await findToolBySlug(slug);
 
   if (!tool) {
     return {
@@ -145,7 +170,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ToolSlugPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const tool = findToolBySlug(slug);
+  const tool = await findToolBySlug(slug);
 
   if (!tool) {
     notFound();
@@ -156,11 +181,30 @@ export default async function ToolSlugPage({ params }: { params: Promise<{ slug:
     affiliate_link: getAffiliateLink(tool),
   };
 
-  const relatedTools = typedTools
-    .filter(t => t.id !== tool.id && t.category === tool.category)
-    .sort((a, b) => ((a.id * 7 + 3) % 13) - ((b.id * 7 + 3) % 13))
-    .slice(0, 5)
-    .map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
+  // 从数据库加载同分类的相关工具
+  const dbRelatedTools = await prisma.tool.findMany({
+    where: {
+      category: tool.category,
+      isActive: true,
+      slug: { not: slug },
+    },
+    take: 5,
+  });
+
+  const relatedTools = dbRelatedTools.map(t => ({
+    id: parseInt(t.id),
+    name: t.name,
+    description: t.description,
+    category: t.category as Tool['category'],
+    pricing: t.pricing,
+    url: t.url,
+    affiliate_link: getAffiliateLink(t),
+    icon_url: t.iconUrl || '',
+    needs_vpn: false,
+    languages: [],
+    rating: t.rating,
+    rating_count: t.reviewCount,
+  }));
 
   const relatedArticles = blogPosts
     .filter(post => {

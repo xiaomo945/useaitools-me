@@ -1,4 +1,4 @@
-import tools from '@/data/tools.json';
+import { prisma } from '@/lib/prisma';
 import { blogPosts } from '@/data/blog-posts';
 import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
@@ -42,18 +42,34 @@ function getAffiliateLink(tool: any): string {
     shortEnvVarName = 'AFFILIATE_GRAMMARLY';
   }
   const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return envLink || tool.affiliate_link;
+  return envLink || tool.affiliateUrl || '';
 }
 
-export default function Home() {
-  // Enrich tools with affiliate links from environment variables
-  const enrichedTools = tools.map(tool => ({
-    ...tool,
-    affiliate_link: getAffiliateLink(tool)
-  })) as Tool[];
+export default async function Home() {
+  // 从数据库加载工具数据
+  const dbTools = await prisma.tool.findMany({
+    where: { isActive: true },
+    orderBy: { rating: 'desc' },
+  });
+
+  // 转换为前端需要的格式
+  const tools: Tool[] = dbTools.map(tool => ({
+    id: parseInt(tool.id),
+    name: tool.name,
+    description: tool.description,
+    category: tool.category as Tool['category'],
+    pricing: tool.pricing,
+    url: tool.url,
+    affiliate_link: getAffiliateLink(tool),
+    icon_url: tool.iconUrl || '',
+    needs_vpn: false, // 数据库中没有这个字段，默认为 false
+    languages: [], // 数据库中没有这个字段，默认为空数组
+    rating: tool.rating,
+    rating_count: tool.reviewCount,
+  }));
 
   // Sort tools by rating + rating_count for featured selection
-  const sortedTools = [...enrichedTools].sort((a, b) => {
+  const sortedTools = [...tools].sort((a, b) => {
     const scoreA = (a.rating || 4.0) * 100 + (a.rating_count || 0);
     const scoreB = (b.rating || 4.0) * 100 + (b.rating_count || 0);
     return scoreB - scoreA;
@@ -147,7 +163,7 @@ export default function Home() {
       '@type': 'Thing',
       'name': 'Artificial Intelligence Tools',
     },
-    'numberOfItems': enrichedTools.length,
+    'numberOfItems': tools.length,
   };
 
   return (
@@ -168,7 +184,7 @@ export default function Home() {
         initialTools={initialTools}
         featuredTools={selected}
         blogPosts={blogPosts}
-        totalCount={enrichedTools.length}
+        totalCount={tools.length}
       />
       <SceneExplorer />
       <StoryCard />

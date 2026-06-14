@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import toolsData from '@/data/tools.json';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
@@ -9,8 +8,7 @@ import Breadcrumbs from '@/app/components/Breadcrumbs';
 import CategoryStats from '@/app/components/CategoryStats';
 import GoldPicks from '@/app/components/GoldPicks';
 import type { Tool } from '@/types';
-
-const tools = toolsData as Tool[];
+import { prisma } from '@/lib/prisma';
 type Category = Tool['category'];
 
 const categoryDescriptions: Record<Category, string> = {
@@ -123,10 +121,32 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  // Enrich tools with affiliate links from environment variables
-  const categoryTools = tools
-    .filter(t => t.category === category)
-    .map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
+  // 从数据库加载分类工具
+  const dbTools = await prisma.tool.findMany({
+    where: {
+      category: category,
+      isActive: true
+    },
+    orderBy: {
+      rating: 'desc'
+    }
+  });
+
+  // 转换为前端需要的格式
+  const categoryTools: Tool[] = dbTools.map(tool => ({
+    id: parseInt(tool.id),
+    name: tool.name,
+    description: tool.description,
+    category: tool.category as Tool['category'],
+    pricing: tool.pricing,
+    url: tool.url,
+    affiliate_link: getAffiliateLink(tool as unknown as Tool),
+    icon_url: tool.iconUrl || '',
+    needs_vpn: false,
+    languages: [],
+    rating: tool.rating,
+    rating_count: tool.reviewCount
+  }));
   const colors = colorMap[category];
   const description = categoryDescriptions[category];
   const categoryName = categoryNames[category];
