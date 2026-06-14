@@ -6,6 +6,21 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Help Center – Use AI Tools',
   description: 'Find answers to common questions about using Use AI Tools directory.',
+  openGraph: {
+    title: 'Help Center – Use AI Tools',
+    description: 'Find answers to common questions about using Use AI Tools directory.',
+    url: 'https://useaitools.me/help',
+    siteName: 'Use AI Tools',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Help Center – Use AI Tools',
+    description: 'Find answers to common questions about using Use AI Tools directory.',
+  },
+  alternates: {
+    canonical: 'https://useaitools.me/help',
+  },
 };
 
 const faqs = [

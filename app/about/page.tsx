@@ -10,6 +10,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About – Use AI Tools',
     description: 'Discover our story, built in public by an indie maker. 50+ AI tools curated for you.',
+    url: 'https://useaitools.me/about',
+    siteName: 'Use AI Tools',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About – Use AI Tools',
+    description: 'Discover our story, built in public by an indie maker. 50+ AI tools curated for you.',
+  },
+  alternates: {
+    canonical: 'https://useaitools.me/about',
   },
 };
 

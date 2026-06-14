@@ -5,6 +5,25 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Terms of Service – Use AI Tools',
   description: 'Terms and conditions for using Use AI Tools directory.',
+  robots: {
+    index: false,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Terms of Service – Use AI Tools',
+    description: 'Terms and conditions for using Use AI Tools directory.',
+    url: 'https://useaitools.me/terms',
+    siteName: 'Use AI Tools',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Terms of Service – Use AI Tools',
+    description: 'Terms and conditions for using Use AI Tools directory.',
+  },
+  alternates: {
+    canonical: 'https://useaitools.me/terms',
+  },
 };
 
 export default function TermsPage() {

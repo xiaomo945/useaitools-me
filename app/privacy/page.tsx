@@ -5,6 +5,25 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy – Use AI Tools',
   description: 'Learn how Use AI Tools handles your data and protects your privacy.',
+  robots: {
+    index: false,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Privacy Policy – Use AI Tools',
+    description: 'Learn how Use AI Tools handles your data and protects your privacy.',
+    url: 'https://useaitools.me/privacy',
+    siteName: 'Use AI Tools',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Privacy Policy – Use AI Tools',
+    description: 'Learn how Use AI Tools handles your data and protects your privacy.',
+  },
+  alternates: {
+    canonical: 'https://useaitools.me/privacy',
+  },
 };
 
 export default function PrivacyPage() {

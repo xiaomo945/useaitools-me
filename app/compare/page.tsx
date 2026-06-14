@@ -8,7 +8,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Compare AI Tools – Use AI Tools',
     description: 'Side-by-side comparison of the best AI tools. Compare pricing, features, and ratings to find the perfect match.',
+    url: 'https://useaitools.me/compare',
+    siteName: 'Use AI Tools',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Compare AI Tools – Use AI Tools',
+    description: 'Side-by-side comparison of the best AI tools. Compare pricing, features, and ratings to find the perfect match.',
   },
   alternates: {
     canonical: 'https://useaitools.me/compare',
