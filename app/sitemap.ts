@@ -63,6 +63,16 @@ function loadScenes(): string[] {
   return [];
 }
 
+// 生成工具 slug（与 app/tool/[slug]/page.tsx 保持一致）
+function generateSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const tools = loadTools();
   const blogPosts = loadBlogPosts();
@@ -75,6 +85,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages = [
     { url: baseUrl, lastModified: currentDate, changeFrequency: 'daily' as const, priority: 1 },
     { url: `${baseUrl}/about`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${baseUrl}/advertise`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
+    { url: `${baseUrl}/affiliate-disclosure`, lastModified: currentDate, changeFrequency: 'yearly' as const, priority: 0.2 },
     { url: `${baseUrl}/blog`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.8 },
     { url: `${baseUrl}/compare`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.7 },
     { url: `${baseUrl}/compare/video`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
@@ -84,8 +96,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/contact`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
     { url: `${baseUrl}/deals`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
     { url: `${baseUrl}/history`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.5 },
+    { url: `${baseUrl}/image`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
     { url: `${baseUrl}/leaderboard`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
     { url: `${baseUrl}/help`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${baseUrl}/mobile`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.5 },
     { url: `${baseUrl}/dashboard`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.5 },
     { url: `${baseUrl}/privacy`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
     { url: `${baseUrl}/saved`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.5 },
@@ -93,7 +107,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/search`, lastModified: currentDate, changeFrequency: 'daily' as const, priority: 0.7 },
     { url: `${baseUrl}/submit`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
+    { url: `${baseUrl}/tryaiwriter`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${baseUrl}/useaiimage`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${baseUrl}/useaipen`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${baseUrl}/waitlist`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
     { url: `${baseUrl}/workflows`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${baseUrl}/writer`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.5 },
   ];
 
   const categoryPages = categories.map((category) => ({
@@ -110,11 +129,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  const toolPages = tools.map((tool: { id: number }) => ({
-    url: `${baseUrl}/tools/${tool.id}`,
+  const toolPages = tools.map((tool: { id: number; name: string }) => ({
+    url: `${baseUrl}/tool/${generateSlug(tool.name)}`,
     lastModified: currentDate,
     changeFrequency: 'weekly' as const,
     priority: 0.7,
+  }));
+
+  // 保留旧的 /tools/[id] 路由以兼容
+  const legacyToolPages = tools.map((tool: { id: number }) => ({
+    url: `${baseUrl}/tools/${tool.id}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.5,
   }));
 
   const blogPostPages = blogPosts.map((post: { slug: string; date: string }) => ({
@@ -136,6 +163,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...categoryPages,
     ...scenePages,
     ...toolPages,
+    ...legacyToolPages,
     ...blogPostPages,
     ...workflowPages,
   ];

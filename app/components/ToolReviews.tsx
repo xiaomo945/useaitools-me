@@ -102,7 +102,7 @@ export default function ToolReviews({ tool }: ToolReviewsProps) {
     const stored = localStorage.getItem(REVIEWS_STORAGE_KEY);
     const allReviews = stored ? JSON.parse(stored) : {};
     const toolReviews = allReviews[tool.id] || [];
-    allReviews[tool.id] = toolReviews.map(r =>
+    allReviews[tool.id] = toolReviews.map((r: Review) =>
       r.id === reviewId ? { ...r, upvotes: r.upvotes + 1 } : r
     );
     localStorage.setItem(REVIEWS_STORAGE_KEY, JSON.stringify(allReviews));

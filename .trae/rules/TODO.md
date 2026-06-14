@@ -2,8 +2,8 @@
 
 | # | 类别 | 事项 | 状态 |
 |:---|:---|:---|:---|
-| 1 | 变现 | Synthesia 联盟审核跟进 — 查邮箱，发跟进邮件 | 📝 已准备跟进邮件草稿 |
-| 2 | 变现 | 申请新联盟：Descript、Notion AI、Grammarly | 📝 已准备申请邮件草稿 |
+| 1 | 变现 | Synthesia 联盟审核跟进 — 查邮箱，发跟进邮件 | ⏳ 待手动执行 |
+| 2 | 变现 | 申请新联盟：Descript、Notion AI、Grammarly | ⏳ 待手动执行 |
 | 3 | 变现 | 在网站上添加"Affiliate Disclosure"声明 | ✅ |
 | 4 | 推广 | Indie Hackers 继续养号评论 | 📝 已准备养号策略文档 |
 | 5 | 推广 | Reddit r/SideProject 发帖（账号养好后） | 📝 已准备发帖草稿 |
