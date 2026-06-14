@@ -26,26 +26,14 @@ export const metadata: Metadata = {
   },
 };
 
-interface ClientPost {
-  id: string;
-  title: string;
-  slug: string;
-  excerpt: string;
-  publishedAt: string;
-  category: {
-    name: string;
-    slug: string;
-  };
-}
-
 export default async function BlogPage() {
   const allPosts = blogPosts || [];
 
-  const posts: ClientPost[] = allPosts.slice(0, 200).map((post) => ({
-    id: String(post.id),
+  const posts = allPosts.map((post) => ({
+    id: String(post.id || Math.floor(Math.random() * 1_000_000)),
     title: post.title,
     slug: post.slug,
-    excerpt: post.description || post.content.slice(0, 160).replace(/<[^>]+>/g, '') + '...',
+    excerpt: post.description || post.content.replace(/<[^>]+>/g, '').slice(0, 160) + '...',
     publishedAt: post.date,
     category: {
       name: post.category,
