@@ -1596,14 +1596,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       <div className="py-6 sm:py-16 px-3 sm:px-8 relative z-10">
       <div className="max-w-7xl mx-auto px-3 sm:px-6">
         {/* Hero Section with Glow */}
-        <HeroSection
-          mysteryCount={mysteryCount}
-          openMysteryBox={openMysteryBox}
-          showDailyPick={showDailyPick}
-          dailyPick={dailyPick}
-          getCategoryColors={getCategoryColors}
-          setShowDailyPick={setShowDailyPick}
-        />
+        <HeroSection totalCount={totalCount} />
         
         {/* Search Box */}
         <SearchBar

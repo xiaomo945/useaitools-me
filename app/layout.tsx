@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
 import { Suspense } from "react";
 import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
+import Header from "./components/Header";
 import PageProgress from "./components/PageProgress";
 import BackToTop from "./components/BackToTop";
 import MobileNav from "./components/MobileNav";
@@ -143,6 +144,9 @@ export default function RootLayout({
         <a href="#main-content" className="skip-to-main">Skip to main content</a>
         <Suspense fallback={null}>
           <HolidayBanner />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Header />
         </Suspense>
         <ToastProvider>
           <Suspense fallback={null}>
