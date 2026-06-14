@@ -47,27 +47,67 @@ function getAffiliateLink(tool: any): string {
   return envLink || tool.affiliateUrl || '';
 }
 
+// 从 tools.json 构建 fallback 数据（server 组件直接 import JSON）
+function getFallbackTools(): Tool[] {
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const fallback = require('@/data/tools.json');
+    if (!Array.isArray(fallback)) return [];
+    return fallback.map((t: any, idx: number) => ({
+      id: idx,
+      name: t.name || `Tool ${idx + 1}`,
+      description: t.description || 'AI tool',
+      category: (t.category || 'Productivity') as Tool['category'],
+      pricing: t.pricing || 'free',
+      url: t.url || '',
+      affiliate_link: getAffiliateLink(t),
+      icon_url: t.icon_url || '',
+      needs_vpn: false,
+      languages: [],
+      rating: (typeof t.rating === 'number' ? t.rating : 4.0) as number,
+      rating_count: (typeof t.review_count === 'number' ? t.review_count : 10) as number,
+    }));
+  } catch (e) {
+    console.warn('[Home] tools.json fallback failed:', (e as Error).message);
+    return [];
+  }
+}
+
 export default async function Home() {
-  // 从数据库加载工具数据
-  const dbTools = await prisma.tool.findMany({
-    where: { isActive: true },
-    orderBy: { rating: 'desc' },
-  });
+  // 优先从数据库加载工具数据；数据库不可用时回退到 tools.json
+  let dbTools: any[] = [];
+  try {
+    dbTools = await prisma.tool.findMany({
+      where: { isActive: true },
+      orderBy: { rating: 'desc' },
+    });
+  } catch (err) {
+    console.warn('[Home] DB 查询失败，回退到 tools.json:', (err as Error).message);
+  }
+
+  // 如果数据库返回空数据，则使用 tools.json
+  if (!dbTools || dbTools.length === 0) {
+    const fallback = getFallbackTools();
+    if (fallback.length > 0) {
+      console.log(`[Home] 使用 tools.json fallback: ${fallback.length} tools`);
+      dbTools = fallback;
+    }
+  }
 
   // 转换为前端需要的格式
-  const tools: Tool[] = dbTools.map(tool => ({
-    id: parseInt(tool.id),
+  const tools: Tool[] = dbTools.map((tool: any) => ({
+    id: typeof tool.id === 'number' ? tool.id : Math.floor(Math.random() * 1_000_000),
     name: tool.name,
-    description: tool.description,
-    category: tool.category as Tool['category'],
-    pricing: tool.pricing,
-    url: tool.url,
+    description: tool.description || '',
+    category: (tool.category || 'Productivity') as Tool['category'],
+    pricing: tool.pricing || 'free',
+    url: tool.url || tool.affiliate_link || '',
     affiliate_link: getAffiliateLink(tool),
-    icon_url: tool.iconUrl || '',
-    needs_vpn: false, // 数据库中没有这个字段，默认为 false
-    languages: [], // 数据库中没有这个字段，默认为空数组
-    rating: tool.rating,
-    rating_count: tool.reviewCount,
+    icon_url: tool.iconUrl || tool.icon_url || '',
+    needs_vpn: false,
+    languages: [],
+    rating: typeof tool.rating === 'number' ? tool.rating : 4.0,
+    rating_count: typeof tool.reviewCount === 'number' ? tool.reviewCount : (tool.rating_count || 10),
   }));
 
   // Sort tools by rating + rating_count for featured selection

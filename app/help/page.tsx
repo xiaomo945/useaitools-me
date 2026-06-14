@@ -144,20 +144,25 @@ const categoryFaqs = [
 
 // ============ 页面渲染 ============
 export default async function HelpPage() {
-  // 实时统计
-  let totalTools = 0, categories: any[] = [], avgRating = 0;
+  // 实时统计 (有数据库用数据库，否则 fallback)
+  let totalTools = 0;
   try {
     totalTools = await prisma.tool.count();
-    const grouped = await (prisma.tool as any).groupBy({
+  } catch (e) {
+    console.warn('[help] prisma.tool.count() 失败');
+  }
+  let categories: any[] = [];
+  try {
+    const grouped = await (prisma as any).tool.groupBy({
       by: ['category'],
       _count: { id: true },
       _avg: { rating: true },
       orderBy: { _count: { id: 'desc' } },
     });
-    categories = grouped as any[];
-    const agg = await (prisma.tool as any).aggregate({ _avg: { rating: true } });
-    avgRating = Math.round((agg._avg.rating || 0) * 10) / 10;
-  } catch (e) { /* noop */ }
+    categories = grouped || [];
+  } catch (e) {
+    console.warn('[help] prisma.tool.groupBy() 失败');
+  }
 
   const colorClassMap: Record<string, string> = {
     emerald: 'from-emerald-500 to-teal-500',
