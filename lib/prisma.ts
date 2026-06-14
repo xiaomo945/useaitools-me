@@ -11,9 +11,11 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 function getDbUrl(): string {
-  // 优先用环境变量 DATABASE_URL，否则回退到本地 sqlite 相对路径
+  // 优先用环境变量 DATABASE_URL，否则回退到本地 sqlite 绝对路径
+  // 注意：必须使用绝对路径，因为 Prisma Client 运行时（尤其 Vercel/Serverless）
+  // 的 CWD 可能与项目根目录不同，相对路径会导致 "Unable to open the database file"
   if (process.env.DATABASE_URL) return process.env.DATABASE_URL;
-  return 'file:./prisma/dev.db';
+  return `file:${process.cwd()}/prisma/dev.db`;
 }
 
 function createClient(): PrismaClient {

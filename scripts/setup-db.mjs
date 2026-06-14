@@ -42,7 +42,8 @@ try {
     stdio: 'pipe',
     env: {
       ...process.env,
-      DATABASE_URL: `file:./prisma/dev.db`,
+      // 传给 prisma db push 的 DATABASE_URL 必须是绝对路径
+      DATABASE_URL: `file:${projectRoot}/prisma/dev.db`,
     },
   });
   console.log('✓ schema 已同步到 SQLite');
