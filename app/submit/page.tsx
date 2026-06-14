@@ -2,17 +2,18 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Share2, Copy, Check } from 'lucide-react';
+import { useSession } from 'next-auth/react';
+import { ArrowLeft, Share2, Check } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 
 export default function SubmitToolPage() {
+  const { data: session } = useSession();
   const [formData, setFormData] = useState({
     name: '',
     url: '',
     category: '',
     description: '',
-    pricing: '',
-    needs_vpn: false,
+    email: session?.user?.email || '',
   });
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -20,8 +21,8 @@ export default function SubmitToolPage() {
   const [error, setError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value, type } = e.target;
-    let processedValue = type === 'checkbox' && 'checked' in e.target ? (e.target as HTMLInputElement).checked : value;
+    const { name, value } = e.target;
+    let processedValue = value;
     
     // Auto-capitalize tool name
     if (name === 'name' && typeof processedValue === 'string' && processedValue.length > 0) {
@@ -60,9 +61,10 @@ export default function SubmitToolPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setError('');
     
     try {
-      const response = await fetch('/api/submit-tool', {
+      const response = await fetch('/api/submissions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -72,12 +74,14 @@ export default function SubmitToolPage() {
 
       const data = await response.json();
       
-      if (data.success) {
+      if (response.ok && data.success) {
         setSubmitted(true);
+      } else {
+        setError(data.error || '提交失败，请重试');
       }
     } catch (error) {
       console.error('Submission failed:', error);
-      setError('Submission failed. Please try again. Your data has been preserved.');
+      setError('提交失败，请重试。您的数据已保留。');
     } finally {
       setLoading(false);
     }
@@ -261,37 +265,22 @@ export default function SubmitToolPage() {
             </div>
 
             <div>
-              <label htmlFor="pricing" className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                Pricing Model
+              <label htmlFor="email" className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                Your Email <span className="text-rose-500">*</span>
               </label>
-              <select
-                id="pricing"
-                name="pricing"
-                value={formData.pricing}
-                onChange={handleInputChange}
-                className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 transition-all duration-300"
-              >
-                <option value="">Select pricing...</option>
-                <option value="Free">Free</option>
-                <option value="Freemium">Freemium</option>
-                <option value="Free Trial">Free Trial</option>
-                <option value="Paid">Paid</option>
-                <option value="Open Source">Open Source</option>
-              </select>
-            </div>
-
-            <div className="flex items-center gap-3">
               <input
-                id="needs_vpn"
-                name="needs_vpn"
-                type="checkbox"
-                checked={formData.needs_vpn}
+                id="email"
+                name="email"
+                type="email"
+                value={formData.email}
                 onChange={handleInputChange}
-                className="w-5 h-5 rounded border-slate-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-emerald-600 focus:ring-emerald-500/50"
+                required
+                className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 transition-all duration-300"
+                placeholder="your@email.com"
               />
-              <label htmlFor="needs_vpn" className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                Requires VPN to access
-              </label>
+              <p className="mt-1.5 text-xs text-gray-500 dark:text-gray-400">
+                We'll notify you when your submission is reviewed
+              </p>
             </div>
 
             {error && (
