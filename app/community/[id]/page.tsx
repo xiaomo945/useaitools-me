@@ -363,7 +363,7 @@ export default function DiscussionDetailPage() {
                   {session.user?.image ? (
                     <img
                       src={session.user.image}
-                      alt={session.user.name}
+                      alt={session.user.name || 'User'}
                       className="w-10 h-10 rounded-full flex-shrink-0"
                     />
                   ) : (

@@ -116,7 +116,7 @@ export default function BlogPostClient({ params }: Props) {
         <Breadcrumbs
           items={[
             { label: 'Blog', href: '/blog' },
-            { label: post.title },
+            { label: post.title, href: `/blog/${post.slug}`, current: true },
           ]}
         />
 
