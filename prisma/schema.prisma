@@ -30,6 +30,8 @@ model User {
   bookmarks     Bookmark[]
   submissions   Submission[]
   collections   Collection[]
+  discussions   Discussion[]
+  discussionComments DiscussionComment[]
 }
 
 // ============================================
@@ -122,6 +124,7 @@ model Tool {
   // 关联
   reviews         Review[]
   bookmarks       Bookmark[]
+  discussions     Discussion[]
   
   @@index([category])
   @@index([slug])
@@ -230,4 +233,60 @@ model Collection {
   
   @@index([userId])
   @@index([slug])
+}
+
+// ============================================
+// 社区讨论模型
+// ============================================
+model Discussion {
+  id          String    @id @default(cuid())
+  title       String
+  content     String
+  category    String    @default("general") // general, tool-review, feature-request, help
+  
+  // 统计
+  viewCount   Int       @default(0)
+  commentCount Int      @default(0)
+  likeCount   Int       @default(0)
+  
+  // 状态
+  isPinned    Boolean   @default(false)
+  isLocked    Boolean   @default(false)
+  
+  // 时间戳
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  // 关联
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  toolId      String?
+  tool        Tool?     @relation(fields: [toolId], references: [id], onDelete: Cascade)
+  comments    DiscussionComment[]
+  
+  @@index([userId])
+  @@index([toolId])
+  @@index([category])
+  @@index([isPinned])
+}
+
+// ============================================
+// 讨论评论模型
+// ============================================
+model DiscussionComment {
+  id          String    @id @default(cuid())
+  content     String
+  
+  // 时间戳
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  
+  // 关联
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  discussionId String
+  discussion  Discussion @relation(fields: [discussionId], references: [id], onDelete: Cascade)
+  
+  @@index([discussionId])
+  @@index([userId])
 }
