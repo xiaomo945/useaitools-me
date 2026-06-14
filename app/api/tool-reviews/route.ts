@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
-import { auth } from '@/lib/auth';
+import { auth } from '@/auth';
 
 // GET /api/tool-reviews - 获取工具评测列表
 export async function GET(request: NextRequest) {
