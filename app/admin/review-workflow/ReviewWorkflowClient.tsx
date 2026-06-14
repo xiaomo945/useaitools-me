@@ -57,12 +57,6 @@ export default function ReviewWorkflowClient() {
   const [selectedTool, setSelectedTool] = useState<string>('');
   const [selectedTemplate, setSelectedTemplate] = useState<string>('');
 
-  useEffect(() => {
-    fetchWorkflows();
-    fetchTools();
-    fetchTemplates();
-  }, []);
-
   const fetchWorkflows = async () => {
     try {
       const res = await fetch('/api/tool-review-workflow');
@@ -100,6 +94,12 @@ export default function ReviewWorkflowClient() {
       console.error('Failed to fetch templates:', error);
     }
   };
+
+  useEffect(() => {
+    fetchWorkflows();
+    fetchTools();
+    fetchTemplates();
+  }, []);
 
   const handleStartReview = async () => {
     if (!selectedTool) return;

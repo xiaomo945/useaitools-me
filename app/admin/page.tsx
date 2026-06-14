@@ -23,12 +23,6 @@ export default function AdminDashboardPage() {
     }
   }, [status, router])
 
-  useEffect(() => {
-    if (session?.user?.id) {
-      loadStats()
-    }
-  }, [session])
-
   const loadStats = async () => {
     try {
       // 获取工具总数
@@ -50,6 +44,12 @@ export default function AdminDashboardPage() {
       setLoading(false)
     }
   }
+
+  useEffect(() => {
+    if (session?.user?.id) {
+      loadStats()
+    }
+  }, [session])
 
   if (status === 'loading' || loading) {
     return (

@@ -40,14 +40,6 @@ export default function BlogClient() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  useEffect(() => {
-    fetchCategories();
-  }, []);
-
-  useEffect(() => {
-    fetchPosts();
-  }, [selectedCategory, page]);
-
   const fetchCategories = async () => {
     try {
       const res = await fetch('/api/blog-categories');
@@ -82,6 +74,14 @@ export default function BlogClient() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
+
+  useEffect(() => {
+    fetchPosts();
+  }, [selectedCategory, page]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {

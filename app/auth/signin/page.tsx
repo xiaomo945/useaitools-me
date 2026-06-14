@@ -3,6 +3,7 @@
 import { signIn } from 'next-auth/react'
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
+import Link from 'next/link'
 
 function SignInContent() {
   const searchParams = useSearchParams()
@@ -70,12 +71,12 @@ function SignInContent() {
           </div>
 
           <div className="mt-6">
-            <a
+            <Link
               href="/"
               className="w-full flex items-center justify-center px-4 py-3 border border-transparent rounded-lg shadow-sm text-sm font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-gray-800 hover:bg-slate-200 dark:hover:bg-gray-700 transition-colors"
             >
               返回首页
-            </a>
+            </Link>
           </div>
         </div>
 

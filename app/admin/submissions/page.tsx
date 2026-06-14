@@ -35,12 +35,6 @@ export default function AdminSubmissionsPage() {
     }
   }, [status, router])
 
-  useEffect(() => {
-    if (session?.user?.id) {
-      loadSubmissions()
-    }
-  }, [session, filter])
-
   const loadSubmissions = async () => {
     try {
       setLoading(true)
@@ -55,6 +49,12 @@ export default function AdminSubmissionsPage() {
       setLoading(false)
     }
   }
+
+  useEffect(() => {
+    if (session?.user?.id) {
+      loadSubmissions()
+    }
+  }, [session, filter])
 
   const handleReview = async (id: string, status: 'approved' | 'rejected', note?: string) => {
     try {

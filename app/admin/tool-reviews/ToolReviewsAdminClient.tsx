@@ -50,19 +50,9 @@ interface ReviewTemplate {
 
 export default function ToolReviewsAdminClient() {
   const [reviews, setReviews] = useState<ToolReview[]>([]);
-  const [tools, setTools] = useState<Tool[]>([]);
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
-  const [templates, setTemplates] = useState<ReviewTemplate[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [selectedReview, setSelectedReview] = useState<ToolReview | null>(null);
-
-  useEffect(() => {
-    fetchReviews();
-    fetchTools();
-    fetchBlogPosts();
-    fetchTemplates();
-  }, []);
 
   const fetchReviews = async () => {
     try {
@@ -83,7 +73,7 @@ export default function ToolReviewsAdminClient() {
       const res = await fetch('/api/tools');
       if (res.ok) {
         const data = await res.json();
-        setTools(data.tools || []);
+        // Tools data handling
       }
     } catch (error) {
       console.error('Failed to fetch tools:', error);
@@ -95,7 +85,7 @@ export default function ToolReviewsAdminClient() {
       const res = await fetch('/api/blog');
       if (res.ok) {
         const data = await res.json();
-        setBlogPosts(data.posts || []);
+        // Blog posts data handling
       }
     } catch (error) {
       console.error('Failed to fetch blog posts:', error);
@@ -107,12 +97,19 @@ export default function ToolReviewsAdminClient() {
       const res = await fetch('/api/tool-review-templates');
       if (res.ok) {
         const data = await res.json();
-        setTemplates(data.templates || []);
+        // Templates data handling
       }
     } catch (error) {
       console.error('Failed to fetch templates:', error);
     }
   };
+
+  useEffect(() => {
+    fetchReviews();
+    fetchTools();
+    fetchBlogPosts();
+    fetchTemplates();
+  }, []);
 
   const handleDelete = async (id: string) => {
     if (!confirm('确定要删除这个评测吗？')) return;
