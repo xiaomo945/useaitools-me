@@ -89,17 +89,14 @@ async function main() {
 
   // 更新分类的工具计数
   const allCategories = await prisma.category.findMany({
-    select: { id: true },
+    select: { id: true, name: true },
   });
 
   for (const cat of allCategories) {
     const count = await prisma.tool.count({
-      where: { categoryId: cat.id },
+      where: { category: cat.name },
     });
-    await prisma.category.update({
-      where: { id: cat.id },
-      data: { toolCount: count },
-    });
+    console.log(`  ${cat.name}: ${count} 个工具`);
   }
 
   console.log(`\n📊 分类工具计数已更新`);
