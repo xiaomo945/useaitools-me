@@ -7,6 +7,30 @@ export const metadata: Metadata = {
   title: 'Best AI Tools Blog 2026 – Reviews, Comparisons & Guides',
   description:
     'In-depth AI tool reviews, side-by-side comparisons, and practical guides. Updated weekly with expert insights.',
+  keywords: [
+    'AI tools blog',
+    'best AI tools 2026',
+    'AI writing tools review',
+    'AI image generator comparison',
+    'AI video tools guide',
+    'AI coding assistant review',
+    'AI productivity tools',
+    'AI audio tools comparison',
+    'text to speech tools',
+    'AI content creation tools',
+    'AI tool comparison',
+    'best AI tools for writing',
+    'AI tool reviews',
+    'AI tools guide',
+  ],
+  authors: [{ name: 'Use AI Tools', url: 'https://useaitools.me' }],
+  creator: 'Use AI Tools',
+  publisher: 'Use AI Tools',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
+  },
   openGraph: {
     title: 'Best AI Tools Blog 2026 – Reviews, Comparisons & Guides',
     description:
@@ -14,12 +38,15 @@ export const metadata: Metadata = {
     siteName: 'Use AI Tools',
     type: 'website',
     url: 'https://useaitools.me/blog',
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Best AI Tools Blog 2026 – Reviews, Comparisons & Guides',
     description:
       'In-depth AI tool reviews, side-by-side comparisons, and practical guides. Updated weekly with expert insights.',
+    site: '@useaitools',
+    creator: '@useaitools',
   },
   alternates: {
     canonical: 'https://useaitools.me/blog',

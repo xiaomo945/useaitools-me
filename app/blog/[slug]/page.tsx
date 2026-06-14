@@ -97,7 +97,7 @@ export async function generateMetadata({
   if (!post) {
     return {
       title: 'Blog Post Not Found',
-      robots: { noindex: true, nofollow: true },
+      robots: { index: false, follow: false },
     };
   }
 
@@ -284,21 +284,26 @@ export default async function BlogDetailPage({
 
   return (
     <>
+      {/* Breadcrumb Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      {/* Article Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      {/* FAQ Schema (if present) */}
       {faqLd && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
         />
       )}
+      {/* Article Content */}
       <BlogDetailV2 post={processedPost} slug={slug} relatedPosts={relatedPosts} relatedTools={relatedTools} />
+      {/* Sponsored Slot */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SponsoredSlot slotName="blog-bottom" />
       </div>
