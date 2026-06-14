@@ -19,6 +19,24 @@ type Tool = {
 
 const typedTools = toolsData as Tool[];
 
+// Generate reasonable keywords from title + category for SEO
+const generateKeywords = (post: { title: string; category: string; description?: string }): string[] => {
+  const base = [
+    `${post.category.toLowerCase()} ai tools`,
+    `best ${post.category.toLowerCase()} ai tools`,
+    `ai ${post.category.toLowerCase()}`,
+    `${post.category.toLowerCase()} tools comparison`,
+    `${post.category.toLowerCase()} tools 2026`,
+  ];
+  const titleWords = (post.title || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter((w: string) => w.length >= 5)
+    .slice(0, 6);
+  return [...base, ...titleWords].slice(0, 10);
+};
+
 // Extract tool IDs from blog content for recommendation
 const extractToolIds = (content: string): number[] => {
   const toolIdRegex = /\[\[link:\/tools\/(\d+)\|/g;
@@ -77,29 +95,48 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = blogPostBySlug(slug);
   if (!post) {
-    return { title: 'Blog Post Not Found' };
+    return {
+      title: 'Blog Post Not Found',
+      robots: { noindex: true, nofollow: true },
+    };
   }
+
+  const keywords = generateKeywords(post);
+  const cleanDescription = post.description || post.title;
+  const fullUrl = `https://useaitools.me/blog/${slug}`;
+
   return {
-    title: `${post.title} – Use AI Tools`,
-    description: post.description || post.title,
+    title: post.title,
+    description: cleanDescription,
+    keywords,
+    authors: [{ name: 'Use AI Tools', url: 'https://useaitools.me' }],
+    creator: 'Use AI Tools',
+    publisher: 'Use AI Tools',
+    category: post.category,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
+    },
+    alternates: { canonical: fullUrl },
     openGraph: {
-      title: post.title,
-      description: post.description || post.title,
-      siteName: 'Use AI Tools',
       type: 'article',
-      url: `https://useaitools.me/blog/${slug}`,
+      url: fullUrl,
+      siteName: 'Use AI Tools',
+      title: post.title,
+      description: cleanDescription,
+      locale: 'en_US',
       publishedTime: post.date,
       modifiedTime: post.date,
       authors: ['Use AI Tools'],
-      tags: [post.category],
+      tags: [post.category, ...keywords.slice(0, 3)],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
-      description: post.description || post.title,
-    },
-    alternates: {
-      canonical: `https://useaitools.me/blog/${slug}`,
+      description: cleanDescription,
+      site: '@useaitools',
+      creator: '@useaitools',
     },
   };
 }
