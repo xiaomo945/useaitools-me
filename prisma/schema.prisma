@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,35 +7,28 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// ============================================
-// 用户模型
-// ============================================
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  role          String    @default("user") // user, admin
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-  
-  // 关联
-  accounts      Account[]
-  sessions      Session[]
-  reviews       Review[]
-  bookmarks     Bookmark[]
-  submissions   Submission[]
-  collections   Collection[]
-  discussions   Discussion[]
+  id                 String              @id @default(cuid())
+  name               String?
+  email              String?             @unique
+  emailVerified      DateTime?
+  image              String?
+  role               String              @default("user")
+  createdAt          DateTime            @default(now())
+  updatedAt          DateTime            @updatedAt
+  accounts           Account[]
+  bookmarks          Bookmark[]
+  collections        Collection[]
+  discussions        Discussion[]
   discussionComments DiscussionComment[]
-  notifications Notification[]
-  emailSubscription EmailSubscription?
+  emailSubscription  EmailSubscription?
+  notifications      Notification[]
+  reviews            Review[]
+  sessions           Session[]
+  submissions        Submission[]
+  blogPosts          BlogPost[]
 }
 
-// ============================================
-// 认证账户模型 (NextAuth)
-// ============================================
 model Account {
   id                String  @id @default(cuid())
   userId            String
@@ -52,15 +42,11 @@ model Account {
   scope             String?
   id_token          String?
   session_state     String?
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
 }
 
-// ============================================
-// 会话模型 (NextAuth)
-// ============================================
 model Session {
   id           String   @id @default(cuid())
   sessionToken String   @unique
@@ -69,9 +55,6 @@ model Session {
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
-// ============================================
-// 验证令牌模型 (NextAuth)
-// ============================================
 model VerificationToken {
   identifier String
   token      String   @unique
@@ -80,13 +63,10 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
-// ============================================
-// 工具模型
-// ============================================
 model Tool {
-  id              String    @id @default(cuid())
+  id              String       @id @default(cuid())
   name            String
-  slug            String    @unique
+  slug            String       @unique
   description     String
   longDescription String?
   category        String
@@ -94,298 +74,304 @@ model Tool {
   url             String
   affiliateUrl    String?
   iconUrl         String?
-  screenshotUrls  String?   // JSON array
+  screenshotUrls  String?
   videoUrl        String?
-  
-  // 定价信息
-  pricing         String    @default("free") // free, freemium, paid
+  pricing         String       @default("free")
   priceMonthly    Float?
   priceYearly     Float?
-  
-  // 评分和统计
-  rating          Float     @default(0)
-  reviewCount     Int       @default(0)
-  viewCount       Int       @default(0)
-  clickCount      Int       @default(0)
-  
-  // 状态
-  isActive        Boolean   @default(true)
-  isFeatured      Boolean   @default(false)
-  isStaffPick     Boolean   @default(false)
-  
-  // 元数据
-  tags            String?   // JSON array
-  features        String?   // JSON array
-  pros            String?   // JSON array
-  cons            String?   // JSON array
-  
-  // 时间戳
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
-  
-  // 关联
-  reviews         Review[]
+  rating          Float        @default(0)
+  reviewCount     Int          @default(0)
+  viewCount       Int          @default(0)
+  clickCount      Int          @default(0)
+  isActive        Boolean      @default(true)
+  isFeatured      Boolean      @default(false)
+  isStaffPick     Boolean      @default(false)
+  tags            String?
+  features        String?
+  pros            String?
+  cons            String?
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
   bookmarks       Bookmark[]
   discussions     Discussion[]
+  reviews         Review[]
   updates         ToolUpdate[]
-  
+  toolReviews     ToolReview[]
+
   @@index([category])
   @@index([slug])
   @@index([rating])
 }
 
-// ============================================
-// 用户评价模型
-// ============================================
+model Category {
+  id          String     @id @default(cuid())
+  name        String     @unique
+  slug        String     @unique
+  description String?
+  icon        String?
+  sortOrder   Int        @default(0)
+  isActive    Boolean    @default(true)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  parentId    String?
+  parent      Category?  @relation("CategoryTree", fields: [parentId], references: [id])
+  children    Category[] @relation("CategoryTree")
+
+  @@index([slug])
+  @@index([parentId])
+  @@index([sortOrder])
+}
+
+model BlogCategory {
+  id          String     @id @default(cuid())
+  name        String     @unique
+  slug        String     @unique
+  description String?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  posts       BlogPost[]
+
+  @@index([slug])
+}
+
+model BlogPost {
+  id              String       @id @default(cuid())
+  title           String
+  slug            String       @unique
+  excerpt         String
+  content         String
+  metaTitle       String?
+  metaDescription String?
+  coverImage      String?
+  coverImageAlt   String?
+  tags            String?
+  relatedToolIds  String?
+  viewCount       Int          @default(0)
+  isPublished     Boolean      @default(false)
+  isFeatured      Boolean      @default(false)
+  publishedAt     DateTime?
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+  categoryId      String
+  category        BlogCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  authorId        String
+  author          User         @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  toolReview      ToolReview?
+
+  @@index([slug])
+  @@index([isPublished])
+  @@index([publishedAt])
+}
+
+model ToolReviewTemplate {
+  id               String   @id @default(cuid())
+  name             String
+  description      String?
+  sections         String   // JSON array
+  ratingDimensions String?  // JSON array
+  isActive         Boolean  @default(true)
+  isDefault        Boolean  @default(false)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  
+  reviews          ToolReview[]
+  
+  @@index([isActive])
+  @@index([isDefault])
+}
+
+model ToolReview {
+  id              String   @id @default(cuid())
+  overview        String
+  features        String?  // JSON array
+  pros            String?  // JSON array
+  cons            String?  // JSON array
+  ratings         String?  // JSON object
+  bestFor         String?  // JSON array
+  overallRating   Float    @default(0)
+  recommendation  String?
+  
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  blogPostId      String   @unique
+  blogPost        BlogPost @relation(fields: [blogPostId], references: [id], onDelete: Cascade)
+  
+  toolId          String
+  tool            Tool     @relation(fields: [toolId], references: [id], onDelete: Cascade)
+  
+  templateId      String?
+  template        ToolReviewTemplate? @relation(fields: [templateId], references: [id], onDelete: SetNull)
+  
+  @@index([toolId])
+  @@index([blogPostId])
+  @@index([overallRating])
+}
+
 model Review {
-  id        String    @id @default(cuid())
-  rating    Int       // 1-5 星
-  title     String?
-  content   String
-  pros      String?   // JSON array
-  cons      String?   // JSON array
-  
-  // 状态
-  isApproved  Boolean @default(false)
-  
-  // 时间戳
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  
-  // 关联
-  userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
-  toolId    String
-  tool      Tool     @relation(fields: [toolId], references: [id], onDelete: Cascade)
-  
-  @@unique([userId, toolId]) // 每个用户对每个工具只能评价一次
+  id         String   @id @default(cuid())
+  rating     Int
+  title      String?
+  content    String
+  pros       String?
+  cons       String?
+  isApproved Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  userId     String
+  toolId     String
+  tool       Tool     @relation(fields: [toolId], references: [id], onDelete: Cascade)
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, toolId])
   @@index([toolId])
   @@index([userId])
 }
 
-// ============================================
-// 收藏模型
-// ============================================
 model Bookmark {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
-  
-  // 关联
   userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
   toolId    String
   tool      Tool     @relation(fields: [toolId], references: [id], onDelete: Cascade)
-  
-  @@unique([userId, toolId]) // 每个用户对每个工具只能收藏一次
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, toolId])
   @@index([userId])
   @@index([toolId])
 }
 
-// ============================================
-// 工具提交模型
-// ============================================
 model Submission {
   id          String    @id @default(cuid())
-  
-  // 提交信息
   name        String
   url         String
   description String
   category    String
-  email       String    // 提交者邮箱
-  
-  // 状态
-  status      String    @default("pending") // pending, approved, rejected
-  
-  // 审核信息
+  email       String
+  status      String    @default("pending")
   reviewedBy  String?
   reviewedAt  DateTime?
   reviewNote  String?
-  
-  // 时间戳
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
-  
-  // 关联
   userId      String
   user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
+
   @@index([status])
   @@index([userId])
 }
 
-// ============================================
-// 收藏集合模型（用户可创建主题集合）
-// ============================================
 model Collection {
-  id          String    @id @default(cuid())
+  id          String   @id @default(cuid())
   name        String
   description String?
-  isPublic    Boolean   @default(false)
-  slug        String    @unique
-  
-  // 时间戳
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-  
-  // 关联
+  isPublic    Boolean  @default(false)
+  slug        String   @unique
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
   userId      String
-  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@index([userId])
   @@index([slug])
 }
 
-// ============================================
-// 社区讨论模型
-// ============================================
 model Discussion {
-  id          String    @id @default(cuid())
-  title       String
-  content     String
-  category    String    @default("general") // general, tool-review, feature-request, help
-  
-  // 统计
-  viewCount   Int       @default(0)
-  commentCount Int      @default(0)
-  likeCount   Int       @default(0)
-  
-  // 状态
-  isPinned    Boolean   @default(false)
-  isLocked    Boolean   @default(false)
-  
-  // 时间戳
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-  
-  // 关联
-  userId      String
-  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  toolId      String?
-  tool        Tool?     @relation(fields: [toolId], references: [id], onDelete: Cascade)
-  comments    DiscussionComment[]
-  
+  id           String              @id @default(cuid())
+  title        String
+  content      String
+  category     String              @default("general")
+  viewCount    Int                 @default(0)
+  commentCount Int                 @default(0)
+  likeCount    Int                 @default(0)
+  isPinned     Boolean             @default(false)
+  isLocked     Boolean             @default(false)
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+  userId       String
+  toolId       String?
+  tool         Tool?               @relation(fields: [toolId], references: [id], onDelete: Cascade)
+  user         User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  comments     DiscussionComment[]
+
   @@index([userId])
   @@index([toolId])
   @@index([category])
   @@index([isPinned])
 }
 
-// ============================================
-// 讨论评论模型
-// ============================================
 model DiscussionComment {
-  id          String    @id @default(cuid())
-  content     String
-  
-  // 时间戳
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-  
-  // 关联
-  userId      String
-  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id           String     @id @default(cuid())
+  content      String
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  userId       String
   discussionId String
-  discussion  Discussion @relation(fields: [discussionId], references: [id], onDelete: Cascade)
-  
+  discussion   Discussion @relation(fields: [discussionId], references: [id], onDelete: Cascade)
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@index([discussionId])
   @@index([userId])
 }
 
-// ============================================
-// 工具更新记录模型
-// ============================================
 model ToolUpdate {
-  id          String    @id @default(cuid())
-  toolId      String
-  tool        Tool      @relation(fields: [toolId], references: [id], onDelete: Cascade)
-  
-  // 更新内容
-  title       String    // 更新标题，如 "新增 AI 写作功能"
-  content     String    // 更新详情
-  type        String    @default("feature") // feature, pricing, bugfix, announcement
-  
-  // 时间戳
-  createdAt   DateTime  @default(now())
-  
+  id        String   @id @default(cuid())
+  toolId    String
+  title     String
+  content   String
+  type      String   @default("feature")
+  createdAt DateTime @default(now())
+  tool      Tool     @relation(fields: [toolId], references: [id], onDelete: Cascade)
+
   @@index([toolId])
   @@index([createdAt])
 }
 
-// ============================================
-// 用户通知模型
-// ============================================
 model Notification {
-  id          String    @id @default(cuid())
-  userId      String
-  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
-  // 通知内容
-  type        String    // tool_update, discussion_reply, system
-  title       String
-  content     String
-  link        String?   // 点击通知跳转的链接
-  
-  // 状态
-  isRead      Boolean   @default(false)
-  
-  // 时间戳
-  createdAt   DateTime  @default(now())
-  
+  id        String   @id @default(cuid())
+  userId    String
+  type      String
+  title     String
+  content   String
+  link      String?
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@index([userId])
   @@index([isRead])
 }
 
-// ============================================
-// 邮件订阅模型
-// ============================================
 model EmailSubscription {
-  id              String    @id @default(cuid())
-  userId          String    @unique
-  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
-  // 订阅偏好
-  categories      String?   // JSON array: 感兴趣的分类
-  frequency       String    @default("weekly") // daily, weekly, monthly
-  emailFormat     String    @default("html") // html, text
-  
-  // 状态
-  isActive        Boolean   @default(true)
+  id              String     @id @default(cuid())
+  userId          String     @unique
+  categories      String?
+  frequency       String     @default("weekly")
+  emailFormat     String     @default("html")
+  isActive        Boolean    @default(true)
   lastEmailSentAt DateTime?
-  
-  // 时间戳
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
-  
-  // 关联
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
   logs            EmailLog[]
-  
+  user            User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
   @@index([userId])
   @@index([isActive])
 }
 
-// ============================================
-// 邮件发送记录模型
-// ============================================
 model EmailLog {
-  id              String    @id @default(cuid())
-  subscriptionId  String
-  subscription    EmailSubscription @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
-  
-  // 邮件内容
-  subject         String
-  content         String    // HTML 内容
-  toolIds         String?   // JSON array: 推荐的工具 ID
-  
-  // 状态
-  status          String    @default("sent") // sent, delivered, bounced, opened, clicked
-  sentAt          DateTime  @default(now())
-  deliveredAt     DateTime?
-  openedAt        DateTime?
-  clickedAt       DateTime?
-  
+  id             String            @id @default(cuid())
+  subscriptionId String
+  subject        String
+  content        String
+  toolIds        String?
+  status         String            @default("sent")
+  sentAt         DateTime          @default(now())
+  deliveredAt    DateTime?
+  openedAt       DateTime?
+  clickedAt      DateTime?
+  subscription   EmailSubscription @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+
   @@index([subscriptionId])
   @@index([sentAt])
   @@index([status])

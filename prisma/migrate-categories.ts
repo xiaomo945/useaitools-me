@@ -7,7 +7,7 @@ async function main() {
 
   // 获取所有工具
   const tools = await prisma.tool.findMany({
-    select: { id: true, categoryName: true },
+    select: { id: true, category: true },
   });
 
   console.log(`找到 ${tools.length} 个工具`);
@@ -46,7 +46,7 @@ async function main() {
   let skipped = 0;
 
   for (const tool of tools) {
-    const categoryName = tool.categoryName?.trim();
+    const categoryName = tool.category?.trim();
     if (!categoryName) {
       skipped++;
       continue;
@@ -64,11 +64,19 @@ async function main() {
     }
 
     if (categoryId) {
-      await prisma.tool.update({
-        where: { id: tool.id },
-        data: { categoryId },
+      // 获取分类名称
+      const category = await prisma.category.findUnique({
+        where: { id: categoryId },
+        select: { name: true },
       });
-      updated++;
+
+      if (category) {
+        await prisma.tool.update({
+          where: { id: tool.id },
+          data: { category: category.name },
+        });
+        updated++;
+      }
     } else {
       console.log(`⚠️ 未找到分类: "${categoryName}" (工具: ${tool.id})`);
       skipped++;
