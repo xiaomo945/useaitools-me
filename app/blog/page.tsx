@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { prisma } from '@/lib/prisma';
+import { blogPosts } from '@/data/blog-posts';
 import BlogListClient from './BlogListClient';
 import EmailSubscribe from '@/app/components/EmailSubscribe';
 
@@ -39,27 +39,19 @@ interface ClientPost {
 }
 
 export default async function BlogPage() {
-  const rawPosts = await prisma.blogPost
-    .findMany({
-      where: { isPublished: true },
-      orderBy: { publishedAt: 'desc' },
-      include: { category: true },
-    })
-    .catch(() => []);
+  const allPosts = blogPosts || [];
 
-  const posts: ClientPost[] = rawPosts
-    .filter((post: any) => post.publishedAt)
-    .map((post: any) => ({
-      id: post.id,
-      title: post.title,
-      slug: post.slug,
-      excerpt: post.excerpt,
-      publishedAt: post.publishedAt!.toISOString(),
-      category: {
-        name: post.category.name,
-        slug: post.category.slug,
-      },
-    }));
+  const posts: ClientPost[] = allPosts.slice(0, 200).map((post) => ({
+    id: String(post.id),
+    title: post.title,
+    slug: post.slug,
+    excerpt: post.description || post.content.slice(0, 160).replace(/<[^>]+>/g, '') + '...',
+    publishedAt: post.date,
+    category: {
+      name: post.category,
+      slug: post.category.toLowerCase(),
+    },
+  }));
 
   const blogLd = {
     '@context': 'https://schema.org',
@@ -76,7 +68,7 @@ export default async function BlogPage() {
         url: 'https://useaitools.me/logo.png',
       },
     },
-    blogPost: posts.slice(0, 10).map((post: any) => ({
+    blogPost: posts.slice(0, 10).map((post) => ({
       '@type': 'BlogPosting',
       headline: post.title,
       description: post.excerpt,
