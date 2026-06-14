@@ -1,12 +1,9 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import type { Tool } from '@/types';
 import { Plus, X, Star, ArrowRight, Check } from 'lucide-react';
-import toolsData from '@/data/tools.json';
-
-const tools = toolsData as Tool[];
 
 const categoryColorMap: Record<string, { bg: string; text: string }> = {
   Writing: { bg: 'bg-blue-500/10', text: 'text-blue-600 dark:text-blue-400' },
@@ -20,20 +17,40 @@ const categoryColorMap: Record<string, { bg: string; text: string }> = {
 const MAX_TOOLS = 4;
 
 export default function ComparePage() {
+  const [tools, setTools] = useState<Tool[]>([]);
+  const [loading, setLoading] = useState(true);
   const [selectedIds, setSelectedIds] = useState<number[]>([1, 2]);
   const [showPicker, setShowPicker] = useState(false);
   const [pickerSearch, setPickerSearch] = useState('');
   const [pickerCategory, setPickerCategory] = useState<string>('All');
 
+  // 从数据库加载工具数据
+  useEffect(() => {
+    const loadTools = async () => {
+      try {
+        const res = await fetch('/api/tools?limit=100');
+        if (res.ok) {
+          const data = await res.json();
+          setTools(data.tools || []);
+        }
+      } catch (error) {
+        console.error('加载工具失败:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadTools();
+  }, []);
+
   const selectedTools = useMemo(() => {
     return selectedIds
       .map(id => tools.find(t => t.id === id))
       .filter(Boolean) as Tool[];
-  }, [selectedIds]);
+  }, [selectedIds, tools]);
 
   const availableTools = useMemo(() => {
     return tools.filter(t => !selectedIds.includes(t.id));
-  }, [selectedIds]);
+  }, [selectedIds, tools]);
 
   const filteredPickerTools = useMemo(() => {
     let result = availableTools;
