@@ -103,14 +103,20 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
-  const title = `${tool.name} Review ${new Date().getFullYear()} – Use AI Tools`;
-  const description = (tool.description_en || tool.description).slice(0, 160);
+  const title = `${tool.name} ${new Date().getFullYear()} – Review, Pricing & Features`;
+  const description = `${tool.description.slice(0, 160)}. Category: ${tool.category}. Pricing: ${tool.pricing}.`;
+  const keywords = [
+    `${tool.name} AI tool review`,
+    `best ${tool.category.toLowerCase()} AI tools`,
+    `${tool.pricing.toLowerCase()} ${tool.name}`,
+  ];
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: tool.name,
     description: tool.description,
+    image: tool.icon_url,
     applicationCategory: `https://schema.org/${tool.category}Application`,
     operatingSystem: 'Web',
     url: `https://useaitools.me/tool/${slug}`,
@@ -151,17 +157,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title,
     description,
+    keywords,
+    robots: { index: true, follow: true },
+    alternates: {
+      canonical: `/tool/${slug}`,
+    },
     openGraph: {
       title,
       description,
       url: `https://useaitools.me/tool/${slug}`,
       siteName: 'Use AI Tools',
       type: 'website',
+      images: tool.icon_url ? [tool.icon_url] : undefined,
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      creator: '@useaitools',
+      images: tool.icon_url ? [tool.icon_url] : undefined,
     },
     other: {
       'application/ld+json': JSON.stringify(jsonLd),

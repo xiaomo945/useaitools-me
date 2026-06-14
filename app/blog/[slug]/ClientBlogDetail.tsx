@@ -7,6 +7,7 @@ import { Home, Share2, Copy, ChevronRight, List } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ReadingProgress from '@/app/components/ReadingProgress';
+import NewsletterSignup from '@/app/components/NewsletterSignup';
 
 type BlogImage = {
   url: string;
@@ -801,6 +802,7 @@ export default function ClientBlogDetail({
           </div>
         )}
       </div>
+      <NewsletterSignup />
       <Footer />
     </div>
   );

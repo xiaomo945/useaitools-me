@@ -1,83 +1,159 @@
 'use client';
 
 import { useState } from 'react';
+import { Mail, Check, AlertCircle } from 'lucide-react';
 
 const NewsletterSignup = function NewsletterSignup() {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (status === 'loading' || !email.trim()) return;
 
-    setStatus('loading');
-    setMessage('');
+    setError(null);
+
+    if (!email.trim()) {
+      setError('Please enter your email address.');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (!emailRegex.test(email.trim())) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+
+    setLoading(true);
 
     try {
-      const response = await fetch('/api/subscribe', {
+      const response = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email.trim() }),
+        body: JSON.stringify({
+          email: email.trim(),
+          name: name.trim() || undefined,
+        }),
       });
 
-      const data = await response.json();
+      const data = await response.json().catch(() => ({}));
 
-      if (data.success) {
-        setStatus('success');
-        setMessage(data.message || 'Thanks for subscribing!');
+      if (response.ok && data.success) {
+        setSuccess(true);
         setEmail('');
-        setTimeout(() => setStatus('idle'), 3000);
+        setName('');
       } else {
-        setStatus('error');
-        setMessage(data.message || 'Something went wrong. Please try again.');
+        setError(data.error || 'Something went wrong. Please try again.');
       }
     } catch {
-      setStatus('error');
-      setMessage('Network error. Please try again.');
+      setError('Network error. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div className="mt-8 sm:mt-16 mb-6 sm:mb-10">
-      <div className="bg-gradient-to-br from-indigo-50/80 via-white to-purple-50/80 dark:from-indigo-950/60 dark:via-gray-900 dark:to-purple-950/60 backdrop-blur-xl border border-white/60 dark:border-indigo-500/10 shadow-xl shadow-indigo-500/5 dark:shadow-2xl dark:shadow-indigo-500/5 rounded-3xl p-4 sm:p-12 text-center">
-        <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2">
-          📬 Stay Updated
-        </h2>
-        <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-          Get the best new AI tools delivered weekly.
-        </p>
-        <form
-          className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-          onSubmit={handleSubmit}
-        >
-          <input
-            type="email"
-            placeholder="Your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            aria-label="Email address for newsletter"
-            className="flex-1 px-5 py-3 rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md border border-slate-200 dark:border-gray-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all duration-300 disabled:opacity-60"
-            required
-            disabled={status === 'loading' || status === 'success'}
-          />
-          <button
-            type="submit"
-            disabled={status === 'loading' || status === 'success'}
-            className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-full shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/30 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:hover:translate-y-0 disabled:cursor-not-allowed"
-          >
-            {status === 'loading' ? 'Subscribing...' : status === 'success' ? '✓ Subscribed!' : 'Subscribe'}
-          </button>
-        </form>
-        {message && (
-          <p
-            className={`mt-4 text-sm font-medium ${
-              status === 'success' ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-500 dark:text-red-400'
-            }`}
-          >
-            {message}
+    <div className="max-w-md mx-auto my-8 sm:my-12">
+      <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="text-center mb-6">
+          <div className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 shadow-lg shadow-emerald-500/25 mb-4">
+            <Mail className="w-6 h-6 text-white" />
+          </div>
+          <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">
+            Get Weekly AI Picks
+          </h2>
+          <p className="text-sm sm:text-base text-slate-600 dark:text-gray-400">
+            Join 1,000+ readers getting the best AI tools &amp; deals weekly
           </p>
+        </div>
+
+        {success ? (
+          <div className="bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 rounded-xl p-5 text-center">
+            <div className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-emerald-500 text-white mb-3">
+              <Check className="w-5 h-5" />
+            </div>
+            <p className="text-base font-semibold text-emerald-700 dark:text-emerald-300 mb-1">
+              Subscribed!
+            </p>
+            <p className="text-sm text-emerald-700/80 dark:text-emerald-300/80">
+              Check your inbox for confirmation.
+            </p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-3" noValidate>
+            <div>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Your name (optional)"
+                className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 disabled:opacity-60"
+                disabled={loading}
+                autoComplete="name"
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="your@email.com"
+                className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 disabled:opacity-60"
+                disabled={loading}
+                autoComplete="email"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+            >
+              {loading ? (
+                <>
+                  <svg
+                    className="w-4 h-4 animate-spin"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                    />
+                  </svg>
+                  Subscribing...
+                </>
+              ) : (
+                <>
+                  <Mail className="w-4 h-4" />
+                  Subscribe to Weekly Picks
+                </>
+              )}
+            </button>
+            {error && (
+              <div className="flex items-start gap-2 p-3 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-sm text-red-700 dark:text-red-300">
+                <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span>{error}</span>
+              </div>
+            )}
+          </form>
         )}
+
+        <p className="text-xs text-center text-slate-500 dark:text-gray-500 mt-5">
+          No spam. Unsubscribe anytime.
+        </p>
       </div>
     </div>
   );
