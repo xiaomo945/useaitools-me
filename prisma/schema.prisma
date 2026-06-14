@@ -129,6 +129,7 @@ model Tool {
   bookmarks       Bookmark[]
   discussions     Discussion[]
   updates         ToolUpdate[]
+  toolReviews     ToolReview[]
   
   @@index([category])
   @@index([slug])
@@ -450,6 +451,9 @@ model BlogPost {
   authorId        String
   author          User      @relation(fields: [authorId], references: [id])
   
+  // 工具评测关联
+  toolReview      ToolReview?
+  
   // 时间戳
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
@@ -458,5 +462,92 @@ model BlogPost {
   @@index([categoryId])
   @@index([isPublished])
   @@index([publishedAt])
+}
+
+// ============================================
+// 工具评测模板模型
+// ============================================
+model ToolReviewTemplate {
+  id              String    @id @default(cuid())
+  
+  // 基本信息
+  name            String    // 模板名称，如 "标准评测模板"、"快速评测模板"
+  description     String?   // 模板描述
+  
+  // 模板内容（JSON 格式）
+  sections        String    // JSON array: 评测章节配置
+  // 示例: [
+  //   { "id": "overview", "title": "工具概述", "type": "text", "required": true },
+  //   { "id": "features", "title": "核心功能", "type": "list", "required": true },
+  //   { "id": "pricing", "title": "定价分析", "type": "text", "required": true },
+  //   { "id": "pros-cons", "title": "优缺点", "type": "pros-cons", "required": true },
+  //   { "id": "verdict", "title": "总结评价", "type": "text", "required": true }
+  // ]
+  
+  // 评分维度配置
+  ratingDimensions String?  // JSON array: 评分维度
+  // 示例: [
+  //   { "id": "ease-of-use", "name": "易用性", "weight": 1.0 },
+  //   { "id": "features", "name": "功能丰富度", "weight": 1.0 },
+  //   { "id": "pricing", "name": "性价比", "weight": 0.8 },
+  //   { "id": "support", "name": "客户支持", "weight": 0.6 }
+  // ]
+  
+  // 状态
+  isActive        Boolean   @default(true)
+  isDefault       Boolean   @default(false) // 是否为默认模板
+  
+  // 时间戳
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  
+  // 关联
+  toolReviews     ToolReview[]
+  
+  @@index([isActive])
+  @@index([isDefault])
+}
+
+// ============================================
+// 工具评测文章模型（扩展 BlogPost）
+// ============================================
+model ToolReview {
+  id              String    @id @default(cuid())
+  
+  // 关联
+  blogPostId      String    @unique
+  blogPost        BlogPost  @relation(fields: [blogPostId], references: [id], onDelete: Cascade)
+  
+  toolId          String
+  tool            Tool      @relation(fields: [toolId], references: [id], onDelete: Cascade)
+  
+  templateId      String?
+  template        ToolReviewTemplate? @relation(fields: [templateId], references: [id])
+  
+  // 评测内容（结构化）
+  overview        String    // 工具概述
+  features        String?   // JSON array: 核心功能列表
+  pros            String?   // JSON array: 优点
+  cons            String?   // JSON array: 缺点
+  
+  // 评分
+  overallRating   Float?    // 总体评分 1-5
+  ratings         String?   // JSON object: 各维度评分
+  // 示例: { "ease-of-use": 4.5, "features": 4.0, "pricing": 3.5, "support": 4.0 }
+  
+  // 推荐等级
+  recommendation  String?   // highly-recommended, recommended, neutral, not-recommended
+  
+  // 适用场景
+  bestFor         String?   // JSON array: 最适合的使用场景
+  
+  // 时间戳
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  
+  @@index([toolId])
+  @@index([blogPostId])
+  @@index([overallRating])
+  @@index([recommendation])
 }
 
