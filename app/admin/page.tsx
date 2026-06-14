@@ -20,7 +20,7 @@ export default async function AdminDashboardPage() {
       _avg: { rating: true },
       _max: { rating: true },
       _count: { rating: true },
-    }).then(r => ({
+    }).then((r: any) => ({
       avg: Math.round((r._avg.rating || 0) * 10) / 10,
       high: r._max.rating || 0,
       count: r._count.rating || 0,

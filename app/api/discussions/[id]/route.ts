@@ -65,7 +65,7 @@ export async function GET(
         name: discussion.tool.name,
         slug: discussion.tool.slug,
       } : null,
-      comments: discussion.comments.map(c => ({
+      comments: discussion.comments.map((c: any) => ({
         id: c.id,
         content: c.content,
         createdAt: c.createdAt,

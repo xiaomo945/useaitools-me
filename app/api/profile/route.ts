@@ -50,13 +50,13 @@ export async function GET() {
     const categoryStats: Record<string, number> = {};
     
     // 从收藏中统计
-    user.bookmarks.forEach(bookmark => {
+    user.bookmarks.forEach((bookmark: any) => {
       const category = bookmark.tool.category;
       categoryStats[category] = (categoryStats[category] || 0) + 2; // 收藏权重更高
     });
 
     // 从评价中统计
-    user.reviews.forEach(review => {
+    user.reviews.forEach((review: any) => {
       const category = review.tool.category;
       categoryStats[category] = (categoryStats[category] || 0) + 1;
     });
@@ -71,8 +71,8 @@ export async function GET() {
 
     // 获取用户最喜欢的工具（基于评分）
     const favoriteTools = user.reviews
-      .filter(r => r.rating >= 4)
-      .map(r => ({
+      .filter((r: any) => r.rating >= 4)
+      .map((r: any) => ({
         id: parseInt(r.tool.id),
         name: r.tool.name,
         category: r.tool.category,
@@ -83,20 +83,20 @@ export async function GET() {
 
     // 获取用户最近的活动
     const recentActivity = [
-      ...user.reviews.map(r => ({
+      ...user.reviews.map((r: any) => ({
         type: 'review' as const,
         toolName: r.tool.name,
         toolId: parseInt(r.tool.id),
         date: r.createdAt,
         rating: r.rating
       })),
-      ...user.bookmarks.map(b => ({
+      ...user.bookmarks.map((b: any) => ({
         type: 'bookmark' as const,
         toolName: b.tool.name,
         toolId: parseInt(b.tool.id),
         date: b.createdAt
       })),
-      ...user.submissions.map(s => ({
+      ...user.submissions.map((s: any) => ({
         type: 'submission' as const,
         toolName: s.name,
         toolId: null,
@@ -125,14 +125,14 @@ export async function GET() {
       categoryPreferences: categoryStats,
       favoriteTools,
       recentActivity,
-      bookmarkedTools: user.bookmarks.map(b => ({
+      bookmarkedTools: user.bookmarks.map((b: any) => ({
         id: parseInt(b.tool.id),
         name: b.tool.name,
         category: b.tool.category,
         rating: b.tool.rating,
         bookmarkedAt: b.createdAt
       })),
-      reviewedTools: user.reviews.map(r => ({
+      reviewedTools: user.reviews.map((r: any) => ({
         id: parseInt(r.tool.id),
         name: r.tool.name,
         category: r.tool.category,

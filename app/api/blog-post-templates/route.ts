@@ -8,7 +8,7 @@ export async function GET() {
     });
 
     return NextResponse.json({
-      templates: templates.map(t => ({
+      templates: templates.map((t: any) => ({
         ...t,
         structure: JSON.parse(t.structure),
         guidelines: t.guidelines ? JSON.parse(t.guidelines) : null,

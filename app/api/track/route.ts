@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
             clickCount: { increment: 1 },
           },
         })
-        .catch((e) => {
+        .catch((e: any) => {
           console.error('Failed to update click count:', e);
         });
     }
@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
       redirectUrl: fallbackUrl,
       tracked: !!targetLink,
     });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Track API error:', error);
     return NextResponse.json(
       { error: 'Failed to process tracking', redirectUrl: '' },
@@ -133,7 +133,7 @@ export async function GET(request: NextRequest) {
     }
 
     return NextResponse.redirect(redirectUrl || '/', { status: 302 });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Track GET error:', error);
     return NextResponse.redirect(destination || '/', { status: 302 });
   }

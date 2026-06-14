@@ -61,7 +61,7 @@ export async function GET(request: NextRequest) {
     });
 
     // 转换为前端需要的格式
-    const formattedTools = tools.map(tool => ({
+    const formattedTools = tools.map((tool: any) => ({
       id: parseInt(tool.id),
       name: tool.name,
       description: tool.description,

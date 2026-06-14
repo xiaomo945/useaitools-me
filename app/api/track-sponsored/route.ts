@@ -34,12 +34,12 @@ export async function POST(request: NextRequest) {
         where: { id: sponsoredSlotId },
         data: { [updateField]: { increment: 1 } },
       })
-      .catch((e) => {
+      .catch((e: any) => {
         console.error('Failed to update sponsored slot count:', e);
       });
 
     return NextResponse.json({ success: true });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Track sponsored error:', error);
     return NextResponse.json(
       { error: 'Failed to process tracking' },

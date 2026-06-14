@@ -48,8 +48,8 @@ export default async function BlogPage() {
     .catch(() => []);
 
   const posts: ClientPost[] = rawPosts
-    .filter((post) => post.publishedAt)
-    .map((post) => ({
+    .filter((post: any) => post.publishedAt)
+    .map((post: any) => ({
       id: post.id,
       title: post.title,
       slug: post.slug,
@@ -76,7 +76,7 @@ export default async function BlogPage() {
         url: 'https://useaitools.me/logo.png',
       },
     },
-    blogPost: posts.slice(0, 10).map((post) => ({
+    blogPost: posts.slice(0, 10).map((post: any) => ({
       '@type': 'BlogPosting',
       headline: post.title,
       description: post.excerpt,

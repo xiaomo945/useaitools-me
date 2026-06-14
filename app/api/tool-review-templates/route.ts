@@ -15,7 +15,7 @@ export async function GET() {
     });
 
     return NextResponse.json({
-      templates: templates.map(template => ({
+      templates: templates.map((template: any) => ({
         ...template,
         sections: JSON.parse(template.sections),
         ratingDimensions: template.ratingDimensions ? JSON.parse(template.ratingDimensions) : [],

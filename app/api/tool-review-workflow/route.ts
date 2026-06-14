@@ -78,7 +78,7 @@ export async function GET(request: NextRequest) {
     });
 
     return NextResponse.json({
-      reviews: reviews.map(review => ({
+      reviews: reviews.map((review: any) => ({
         ...review,
         features: review.features ? JSON.parse(review.features) : [],
         pros: review.pros ? JSON.parse(review.pros) : [],

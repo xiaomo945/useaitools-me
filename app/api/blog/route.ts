@@ -54,7 +54,7 @@ export async function GET(request: NextRequest) {
     });
 
     return NextResponse.json({
-      posts: posts.map(post => ({
+      posts: posts.map((post: any) => ({
         ...post,
         tags: post.tags ? JSON.parse(post.tags) : [],
       })),

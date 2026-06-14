@@ -28,7 +28,7 @@ function slugify(name: string): string {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
 
-  const staticPages: MetadataRoute.Sitemap = staticPaths.map((path) => ({
+  const staticPages: MetadataRoute.Sitemap = staticPaths.map((path: any) => ({
     url: `${baseUrl}${path === '/' ? '' : path}`,
     lastModified: now,
     changeFrequency: 'weekly',
@@ -47,7 +47,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
     ]);
 
-    const toolPages: MetadataRoute.Sitemap = tools.map((tool) => {
+    const toolPages: MetadataRoute.Sitemap = tools.map((tool: any) => {
       const toolSlug = tool.slug || slugify(tool.name);
       return {
         url: `${baseUrl}/tool/${toolSlug}`,
@@ -57,7 +57,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       };
     });
 
-    const blogPostPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    const blogPostPages: MetadataRoute.Sitemap = blogPosts.map((post: any) => ({
       url: `${baseUrl}/blog/${post.slug}`,
       lastModified: post.updatedAt || now,
       changeFrequency: 'weekly',

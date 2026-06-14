@@ -85,7 +85,7 @@ export default async function AdminReportsPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reports.map((report) => {
+            {(reports as any[]).map((report: any) => {
               const label = typeLabels[report.reportType] || report.reportType
               const summaryText = report.summary ?? ''
               const trimmedSummary = summaryText.length > 200 ? summaryText.slice(0, 200) + '...' : summaryText

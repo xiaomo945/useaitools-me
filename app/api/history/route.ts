@@ -37,7 +37,7 @@ export async function GET() {
       accessType: string;
     }>();
 
-    bookmarkedTools.forEach(b => {
+    bookmarkedTools.forEach((b: any) => {
       historyMap.set(b.tool.id, {
         tool: b.tool,
         lastAccessed: b.createdAt,
@@ -45,7 +45,7 @@ export async function GET() {
       });
     });
 
-    reviewedTools.forEach(r => {
+    reviewedTools.forEach((r: any) => {
       const existing = historyMap.get(r.tool.id);
       if (!existing || r.createdAt > existing.lastAccessed) {
         historyMap.set(r.tool.id, {
@@ -59,7 +59,7 @@ export async function GET() {
     // 转换为数组并排序
     const history = Array.from(historyMap.values())
       .sort((a, b) => b.lastAccessed.getTime() - a.lastAccessed.getTime())
-      .map(item => ({
+      .map((item: any) => ({
         id: parseInt(item.tool.id),
         name: item.tool.name,
         category: item.tool.category,

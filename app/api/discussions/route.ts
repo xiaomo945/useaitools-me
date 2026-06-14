@@ -61,7 +61,7 @@ export async function GET(request: NextRequest) {
     });
 
     return NextResponse.json({
-      discussions: discussions.map(d => ({
+      discussions: discussions.map((d: any) => ({
         id: d.id,
         title: d.title,
         content: d.content,

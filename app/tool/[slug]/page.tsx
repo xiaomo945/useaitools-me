@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { prisma } from '@/lib/prisma';
+import { prisma, loadToolsJsonSafe } from '@/lib/prisma';
 import { blogPosts } from '@/data/blog-posts';
 import ToolSlugClient from './ToolSlugClient';
 
@@ -61,11 +61,36 @@ async function findToolBySlug(slug: string): Promise<{
   tool: Tool;
   affiliateLinkId?: string;
 } | null> {
+  // 1. 尝试从数据库查询
   const dbTool = await prisma.tool.findFirst({
     where: { slug, isActive: true },
   });
 
-  if (!dbTool) return null;
+  // 2. 数据库为空时 → 回退到 tools.json
+  if (!dbTool) {
+    const jsonTools = loadToolsJsonSafe();
+    const match = jsonTools.find((t: any) => generateSlugFromName(t.name || '') === slug);
+    if (match) {
+      return {
+        tool: {
+          id: Math.abs(Math.floor((match.name || '').length * 7919)),
+          name: match.name || '',
+          description: match.description || '',
+          category: (match.category || 'Productivity') as Tool['category'],
+          pricing: match.pricing || 'free',
+          url: match.url || '',
+          affiliate_link: getAffiliateLinkFromEnv(match) || '',
+          icon_url: match.icon_url || '',
+          needs_vpn: false,
+          languages: [],
+          rating: typeof match.rating === 'number' ? match.rating : 4.0,
+          rating_count: typeof match.review_count === 'number' ? match.review_count : 10,
+          use_cases: Array.isArray(match.use_cases) ? match.use_cases : [],
+        },
+      };
+    }
+    return null;
+  }
 
   let affiliateLinkId: string | undefined = undefined;
   let affiliateUrl = getAffiliateLinkFromEnv(dbTool) || dbTool.affiliateUrl || '';
@@ -90,7 +115,7 @@ async function findToolBySlug(slug: string): Promise<{
 
   return {
     tool: {
-      id: parseInt(dbTool.id),
+      id: parseInt(String(dbTool.id || 1)),
       name: dbTool.name,
       description: dbTool.description,
       category: dbTool.category as Tool['category'],
@@ -111,14 +136,21 @@ async function findToolBySlug(slug: string): Promise<{
 
 export async function generateStaticParams() {
   try {
-    const tools = await prisma.tool.findMany({
+    // 1. 优先数据库
+    const dbTools = await prisma.tool.findMany({
       where: { isActive: true },
       select: { name: true },
     });
-
-    return tools.map((tool) => ({
-      slug: generateSlugFromName(tool.name),
-    }));
+    if (dbTools && dbTools.length > 0) {
+      return dbTools.map((tool: any) => ({
+        slug: generateSlugFromName(tool.name),
+      }));
+    }
+    // 2. 数据库为空 → 回退到 tools.json
+    const jsonTools = loadToolsJsonSafe();
+    return jsonTools.slice(0, 100).map((t: any) => ({
+      slug: generateSlugFromName(t.name || ''),
+    })).filter((x: any) => x.slug);
   } catch {
     return [];
   }
@@ -185,7 +217,7 @@ export default async function ToolSlugPage({
     affiliate_link_id: result.affiliateLinkId,
   };
 
-  const dbRelatedTools = await prisma.tool.findMany({
+  let dbRelatedTools: any[] = await prisma.tool.findMany({
     where: {
       category: result.tool.category,
       isActive: true,
@@ -194,8 +226,27 @@ export default async function ToolSlugPage({
     take: 5,
   });
 
+  // 如果数据库返回空 → 从 tools.json 回退
+  if (!dbRelatedTools || dbRelatedTools.length === 0) {
+    const jsonTools = loadToolsJsonSafe();
+    dbRelatedTools = jsonTools
+      .filter((t: any) => (t.category || '') === result.tool.category)
+      .slice(0, 5)
+      .map((t: any, i: number) => ({
+        id: `json-${i}`,
+        name: t.name || '',
+        description: t.description || '',
+        category: t.category,
+        pricing: t.pricing,
+        url: t.url,
+        iconUrl: t.icon_url,
+        rating: t.rating,
+        reviewCount: t.review_count,
+      }));
+  }
+
   const relatedTools: Tool[] = await Promise.all(
-    dbRelatedTools.map(async (t) => {
+    dbRelatedTools.map(async (t: any) => {
       let relatedAffiliateId: string | undefined = undefined;
       let relatedAffiliateUrl =
         getAffiliateLinkFromEnv(t) || t.affiliateUrl || '';
@@ -213,19 +264,19 @@ export default async function ToolSlugPage({
         // 忽略
       }
       return {
-        id: parseInt(t.id),
+        id: typeof t.id === 'number' ? t.id : Math.floor(Math.random() * 1_000_000),
         name: t.name,
         description: t.description,
-        category: t.category as Tool['category'],
-        pricing: t.pricing,
-        url: t.url,
+        category: (t.category || 'Productivity') as Tool['category'],
+        pricing: t.pricing || 'free',
+        url: t.url || '',
         affiliate_link: relatedAffiliateUrl,
         affiliate_link_id: relatedAffiliateId,
-        icon_url: t.iconUrl || '',
+        icon_url: t.iconUrl || t.icon_url || '',
         needs_vpn: false,
         languages: [],
-        rating: t.rating,
-        rating_count: t.reviewCount,
+        rating: typeof t.rating === 'number' ? t.rating : 4.0,
+        rating_count: typeof t.reviewCount === 'number' ? t.reviewCount : (t.review_count || 5),
       };
     })
   );

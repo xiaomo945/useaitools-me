@@ -9,7 +9,7 @@ import CategoryStats from '@/app/components/CategoryStats';
 import GoldPicks from '@/app/components/GoldPicks';
 import SponsoredSlot from '@/app/components/SponsoredSlot';
 import type { Tool } from '@/types';
-import { prisma } from '@/lib/prisma';
+import { prisma, loadToolsJsonSafe } from '@/lib/prisma';
 type Category = Tool['category'];
 
 const categoryDescriptions: Record<Category, string> = {
@@ -136,8 +136,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  // 从数据库加载分类工具
-  const dbTools = await prisma.tool.findMany({
+  // 从数据库加载分类工具（有 tools.json 回退）
+  let dbTools: any[] = await prisma.tool.findMany({
     where: {
       category: category,
       isActive: true
@@ -146,6 +146,29 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       rating: 'desc'
     }
   });
+  if (!dbTools || dbTools.length === 0) {
+    const jsonTools = loadToolsJsonSafe();
+    dbTools = jsonTools
+      .filter((t: any) => (t.category || '') === category)
+      .map((t: any, i: number) => ({
+        id: `json-${i}`,
+        name: t.name || '',
+        description: t.description || '',
+        category: t.category,
+        pricing: t.pricing || 'free',
+        url: t.url || '',
+        affiliateUrl: '',
+        iconUrl: t.icon_url || '',
+        needsVpn: false,
+        languages: [],
+        rating: typeof t.rating === 'number' ? t.rating : 4.0,
+        reviewCount: typeof t.review_count === 'number' ? t.review_count : 10,
+        featured: false,
+        isActive: true,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      }));
+  }
 
   // 从数据库加载最新博客文章
   const latestPosts = await prisma.blogPost.findMany({
@@ -159,8 +182,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   const otherCategories = (Object.keys(categoryNames) as Category[]).filter(c => c !== category);
 
   // 转换为前端需要的格式
-  const categoryTools: Tool[] = dbTools.map(tool => ({
-    id: parseInt(tool.id),
+  const categoryTools: Tool[] = dbTools.map((tool: any, idx: number) => ({
+    id: typeof tool.id === 'number' ? tool.id : idx,
     name: tool.name,
     description: tool.description,
     category: tool.category as Tool['category'],
@@ -217,7 +240,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     'mainEntity': {
       '@type': 'ItemList',
       'numberOfItems': categoryTools.length,
-      'itemListElement': categoryTools.map((tool, index) => ({
+      'itemListElement': categoryTools.map((tool: any, index: any) => ({
         '@type': 'ListItem',
         'position': index + 1,
         'name': tool.name,
@@ -303,7 +326,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           <div className={`h-px bg-gradient-to-r from-transparent via-${categorySlug.toLowerCase()}-300 dark:via-${categorySlug.toLowerCase()}-500/20 to-transparent mb-10 mx-auto max-w-2xl`} />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
-            {categoryTools.map((tool, index) => {
+            {categoryTools.map((tool: any, index: any) => {
               const hasAffiliate = hasAffiliateLink(tool);
               const ctaText = hasAffiliate ? '🔗 Try It Free' : 'Visit Website';
               
@@ -420,7 +443,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
               </Link>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              {otherCategories.map((cat) => {
+              {otherCategories.map((cat: any) => {
                 const catColors = colorMap[cat];
                 const catName = categoryNames[cat];
                 return (
@@ -461,7 +484,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                 </Link>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                {latestPosts.map((post) => (
+                {latestPosts.map((post: any) => (
                   <Link
                     key={post.id}
                     href={`/blog/${post.slug}`}

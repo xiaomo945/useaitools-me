@@ -75,7 +75,7 @@ async function getPopular(limit: number): Promise<RecommendedTool[]> {
 
     const shuffled = [...tools].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, limit).map(mapToRecommended);
-  } catch (e) {
+  } catch (e: any) {
     console.error('recommendations.getPopular error:', e);
     return [];
   }
@@ -114,7 +114,7 @@ async function getSimilarCategory(toolId: string | undefined, category: string |
       },
     });
     return tools.map(mapToRecommended);
-  } catch (e) {
+  } catch (e: any) {
     console.error('recommendations.getSimilarCategory error:', e);
     return [];
   }
@@ -138,7 +138,7 @@ async function getNewest(limit: number): Promise<RecommendedTool[]> {
       },
     });
     return tools.map(mapToRecommended);
-  } catch (e) {
+  } catch (e: any) {
     console.error('recommendations.getNewest error:', e);
     return [];
   }
@@ -150,7 +150,7 @@ async function getRandom(limit: number): Promise<RecommendedTool[]> {
       by: ['category'],
       where: { isActive: true },
     });
-    const cats = categories.map((c) => c.category);
+    const cats = categories.map((c: any) => c.category);
     if (cats.length === 0) return [];
 
     const perCat = Math.ceil(limit / cats.length) + 1;
@@ -182,7 +182,7 @@ async function getRandom(limit: number): Promise<RecommendedTool[]> {
     }
 
     return all.sort(() => Math.random() - 0.5).slice(0, limit);
-  } catch (e) {
+  } catch (e: any) {
     console.error('recommendations.getRandom error:', e);
     return [];
   }
@@ -225,11 +225,11 @@ async function getWeighted(options: RecommendationOptions, limit: number): Promi
 
     const excludeId = options.currentToolId;
     return Array.from(scored.values())
-      .filter((item) => !excludeId || item.tool.id !== excludeId)
+      .filter((item: any) => !excludeId || item.tool.id !== excludeId)
       .sort((a, b) => b.score - a.score)
       .slice(0, limit)
-      .map((item) => item.tool);
-  } catch (e) {
+      .map((item: any) => item.tool);
+  } catch (e: any) {
     console.error('recommendations.getWeighted error:', e);
     return [];
   }
@@ -253,7 +253,7 @@ export async function getRecommendations(options: RecommendationOptions = {}): P
       default:
         return getPopular(safeLimit);
     }
-  } catch (e) {
+  } catch (e: any) {
     console.error('recommendations.getRecommendations error:', e);
     return [];
   }

@@ -124,7 +124,7 @@ export async function generateReport(input: ReportInput): Promise<ReportData> {
     _count: { id: true }
   })
   const blogByCategory: Record<string, number> = {}
-  const categoryIds = rawBlogByCategory.map((row) => row.categoryId)
+  const categoryIds = rawBlogByCategory.map((row: any) => row.categoryId)
   const blogCategories = await prisma.blogCategory.findMany({
     where: { id: { in: categoryIds } },
     select: { id: true, name: true }
@@ -305,7 +305,7 @@ async function main() {
 }
 
 if (require.main === module || process.argv[1]?.includes('generate-report')) {
-  main().catch((error) => {
+  main().catch((error: any) => {
     console.error('生成报告失败:', error)
     process.exit(1)
   })

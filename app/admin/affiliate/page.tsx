@@ -30,7 +30,7 @@ async function getAffiliateLinks(): Promise<{
       orderBy: { clickCount: 'desc' }
     });
 
-    const links: AffiliateLinkRow[] = tools.map((tool) => ({
+    const links: AffiliateLinkRow[] = (tools as any[]).map((tool) => ({
       id: tool.id,
       toolId: tool.id,
       toolName: tool.name,
