@@ -1,22 +1,25 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
 import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 import PageProgress from "./components/PageProgress";
-import BackToTop from "./components/BackToTop";
 import MobileNav from "./components/MobileNav";
 import ThemeToggle from "./components/ThemeToggle";
-import SoundToggle from "./components/SoundToggle";
 import { ToastProvider } from "./components/Toast";
 import PageTransition from "./components/PageTransition";
-import KeyboardNavigation from "./components/KeyboardNavigation";
-import GuidedTour from "./components/GuidedTour";
-import NetworkStatus from "./components/NetworkStatus";
-import ExternalLinkToast from "./components/ExternalLinkToast";
 import ErrorBoundary from "./components/ErrorBoundary";
-import HolidayBanner from "./components/HolidayBanner";
 import WebVitals from "./components/WebVitals";
+
+// 懒加载非首屏关键组件
+const BackToTop = dynamic(() => import("./components/BackToTop"), { ssr: false });
+const SoundToggle = dynamic(() => import("./components/SoundToggle"), { ssr: false });
+const KeyboardNavigation = dynamic(() => import("./components/KeyboardNavigation"), { ssr: false });
+const GuidedTour = dynamic(() => import("./components/GuidedTour"), { ssr: false });
+const NetworkStatus = dynamic(() => import("./components/NetworkStatus"), { ssr: false });
+const ExternalLinkToast = dynamic(() => import("./components/ExternalLinkToast"), { ssr: false });
+const HolidayBanner = dynamic(() => import("./components/HolidayBanner"), { ssr: false });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
