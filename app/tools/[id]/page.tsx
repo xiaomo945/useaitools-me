@@ -18,6 +18,8 @@ type Tool = {
   languages: string[];
   rating?: number;
   rating_count?: number;
+  best_for?: string[];
+  skill_level?: string;
 };
 
 // 类型断言确保数据符合我们的类型要求
@@ -188,46 +190,50 @@ export default async function ToolDetailPage({ params }: { params: Promise<{ id:
     affiliate_link: getAffiliateLink(tool)
   };
 
-  // Get related tools - smart recommendation algorithm
+  // Get related tools - enhanced smart recommendation algorithm
   const getRelatedTools = (): Tool[] => {
-    // 1. 首先从同分类中筛选，排除当前工具
     const candidates = typedTools.filter(t => t.id !== tool.id);
-    
-    // 2. 计算每个工具与当前工具的匹配分数
+
     const scoredTools = candidates.map(t => {
       let score = 0;
-      
-      // 同分类 +3 分（最高优先级）
-      if (t.category === tool.category) {
-        score += 3;
-      }
-      
-      // 相同定价模式 +2 分（第二优先级）
-      if (t.pricing === tool.pricing) {
-        score += 2;
-      }
-      
-      // 定价模式相似（比如都是免费或都是付费）+1 分
+
+      // 同分类 +5 分（最高优先级）
+      if (t.category === tool.category) score += 5;
+
+      // 相同定价模式 +3 分
+      if (t.pricing === tool.pricing) score += 3;
+
+      // 定价模式相似（免费类 vs 付费类）+1 分
       const isFree = (p: string) => ['Free', 'Freemium', 'Open Source'].includes(p);
       const isPaid = (p: string) => ['Paid', 'Free Trial'].includes(p);
-      if ((isFree(t.pricing) && isFree(tool.pricing)) || (isPaid(t.pricing) && isPaid(tool.pricing))) {
-        score += 1;
+      if ((isFree(t.pricing) && isFree(tool.pricing)) || (isPaid(t.pricing) && isPaid(tool.pricing))) score += 1;
+
+      // 相同技能等级 +2 分
+      if (t.skill_level && tool.skill_level && t.skill_level === tool.skill_level) score += 2;
+
+      // best_for 标签重叠 +4 分（每个重叠标签 +1，最多 +4）
+      if (t.best_for && tool.best_for) {
+        const overlap = t.best_for.filter(tag => tool.best_for!.includes(tag)).length;
+        score += Math.min(overlap * 2, 4);
       }
-      
+
+      // 高评分工具加权 +1 分（评分 >= 4.5）
+      if (t.rating && t.rating >= 4.5) score += 1;
+
+      // VPN 可访问性一致 +1 分
+      if (t.needs_vpn === tool.needs_vpn) score += 1;
+
       return { tool: t, score };
     });
-    
-    // 3. 按分数排序，分数相同则随机打乱
+
+    // 按分数排序，分数相同则随机打乱增加多样性
     scoredTools.sort((a, b) => {
-      if (b.score !== a.score) {
-        return b.score - a.score;
-      }
-      // 分数相同时随机排序，增加推荐多样性
+      if (b.score !== a.score) return b.score - a.score;
       return Math.random() - 0.5;
     });
-    
-    // 4. 取前3个工具
-    return scoredTools.slice(0, 3).map(st => st.tool);
+
+    // 返回前 6 个工具，增加内链数量
+    return scoredTools.slice(0, 6).map(st => st.tool);
   };
   
   const relatedTools = getRelatedTools().map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
