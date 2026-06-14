@@ -184,7 +184,7 @@ export default async function ToolSlugPage({ params }: { params: Promise<{ slug:
   // 从数据库加载同分类的相关工具
   const dbRelatedTools = await prisma.tool.findMany({
     where: {
-      category: tool.category,
+      categoryName: tool.category,
       isActive: true,
       slug: { not: slug },
     },
