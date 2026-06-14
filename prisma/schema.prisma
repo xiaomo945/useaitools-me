@@ -453,3 +453,42 @@ model AffiliateLink {
   @@index([status])
   @@index([network])
 }
+
+model UserInteraction {
+  id            String   @id @default(cuid())
+  sessionId     String
+  actionType    String   // view, bookmark, compare, click, search
+  toolId        String?
+  toolName      String?
+  category      String?
+  searchQuery   String?
+  metadata      String?  // JSON 元数据
+  createdAt     DateTime @default(now())
+  @@index([sessionId])
+  @@index([actionType])
+  @@index([toolId])
+}
+
+model SponsoredSlot {
+  id            String   @id @default(cuid())
+  slotName      String
+  title         String
+  description   String?
+  url           String
+  imageUrl      String?
+  price         Float    @default(0)
+  currency      String   @default("USD")
+  advertiser    String?
+  status        String   @default("active")
+  startDate     DateTime?
+  endDate       DateTime?
+  clickCount    Int      @default(0)
+  viewCount     Int      @default(0)
+  priority      Int      @default(0)
+  category      String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([slotName, status])
+  @@index([status])
+}

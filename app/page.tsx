@@ -4,6 +4,8 @@ import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
 import SceneExplorer from '@/app/components/SceneExplorer';
 import StoryCard from '@/app/components/StoryCard';
+import Recommendations from '@/app/components/Recommendations';
+import SponsoredSlot from '@/app/components/SponsoredSlot';
 import type { Tool } from '@/types';
 import type { Metadata } from 'next';
 
@@ -188,7 +190,11 @@ export default async function Home() {
       />
       <SceneExplorer />
       <StoryCard />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SponsoredSlot slotName="homepage-top" />
+      </div>
       <TopPicksSection />
+      <Recommendations variant="newest" title="最新加入" limit={6} />
       <Footer />
     </>
   );

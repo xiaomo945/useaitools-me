@@ -6,6 +6,7 @@ import toolsData from '@/data/tools.json';
 import { prisma } from '@/lib/prisma';
 import ClientBlogDetail from './ClientBlogDetail';
 import EmailSubscribe from '@/app/components/EmailSubscribe';
+import SponsoredSlot from '@/app/components/SponsoredSlot';
 
 type Tool = {
   id: number;
@@ -376,6 +377,9 @@ export default async function BlogDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <ClientBlogDetail post={processedPost} slug={slug} relatedPosts={relatedPosts} relatedTools={relatedTools} />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SponsoredSlot slotName="blog-bottom" />
+      </div>
       <EmailSubscribe source="blog-detail" />
     </>
   );

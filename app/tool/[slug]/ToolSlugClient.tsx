@@ -1,11 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { ArrowRight, Home, Copy, Check, ChevronDown } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, Home, Copy, Check } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ToolReviews from '@/app/components/ToolReviews';
+import Recommendations from '@/app/components/Recommendations';
 
 type Example = {
   prompt: string;
@@ -761,6 +762,18 @@ export default function ToolSlugClient({
 
         {/* User Reviews */}
         <ToolReviews tool={tool} />
+
+        {/* Similar Tools Recommendations */}
+        <Recommendations
+          variant="similar"
+          title="类似工具"
+          currentToolId={String(tool.id)}
+          currentCategory={tool.category}
+          limit={6}
+        />
+
+        {/* Popular Tools Recommendations */}
+        <Recommendations variant="popular" title="热门工具" limit={6} />
 
         {/* Back to Home */}
         <div className="text-center">

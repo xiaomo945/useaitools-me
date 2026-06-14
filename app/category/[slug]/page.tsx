@@ -7,6 +7,7 @@ import CategoryHero from './CategoryHero';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import CategoryStats from '@/app/components/CategoryStats';
 import GoldPicks from '@/app/components/GoldPicks';
+import SponsoredSlot from '@/app/components/SponsoredSlot';
 import type { Tool } from '@/types';
 import { prisma } from '@/lib/prisma';
 type Category = Tool['category'];
@@ -369,6 +370,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
               </div>
             );
             })}
+          </div>
+
+          <div className="mt-12">
+            <SponsoredSlot slotName="category-sidebar" toolCategory={categorySlug} />
           </div>
 
           {/* Promote Your Tool — Featured Listing */}
