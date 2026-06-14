@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import type { Tool } from '@/types';
 
@@ -18,94 +18,100 @@ interface UserBehavior {
 const BEHAVIOR_STORAGE_KEY = 'user-behavior';
 const MAX_VIEWED_TOOLS = 20;
 
-export default function SmartRecommendations({ tools, currentToolId }: SmartRecommendationsProps) {
-  const [recommendations, setRecommendations] = useState<Tool[]>([]);
-  const [behavior, setBehavior] = useState<UserBehavior>({
-    viewedCategories: {},
-    viewedTools: [],
-    lastUpdated: Date.now(),
-  });
+const DEFAULT_BEHAVIOR: UserBehavior = {
+  viewedCategories: {},
+  viewedTools: [],
+  lastUpdated: 0,
+};
 
-  // 加载用户行为数据
-  useEffect(() => {
+function loadBehavior(): UserBehavior {
+  if (typeof window === 'undefined') return DEFAULT_BEHAVIOR;
+  try {
     const stored = localStorage.getItem(BEHAVIOR_STORAGE_KEY);
     if (stored) {
-      try {
-        const parsed = JSON.parse(stored) as UserBehavior;
-        setBehavior(parsed);
-      } catch (e) {
-        console.error('Failed to parse user behavior:', e);
-      }
+      return JSON.parse(stored) as UserBehavior;
     }
-  }, []);
+  } catch (e) {
+    console.error('Failed to parse user behavior:', e);
+  }
+  return DEFAULT_BEHAVIOR;
+}
 
-  // 记录当前工具浏览
-  useEffect(() => {
-    if (currentToolId) {
-      const currentTool = tools.find(t => t.id === currentToolId);
-      if (currentTool) {
-        const newBehavior = { ...behavior };
-        
-        // 更新分类浏览次数
-        newBehavior.viewedCategories[currentTool.category] = 
+function saveBehavior(behavior: UserBehavior): void {
+  if (typeof window === 'undefined') return;
+  localStorage.setItem(BEHAVIOR_STORAGE_KEY, JSON.stringify(behavior));
+}
+
+export default function SmartRecommendations({ tools, currentToolId }: SmartRecommendationsProps) {
+  const [behavior, setBehavior] = useState<UserBehavior>(loadBehavior);
+  const lastTrackedToolRef = useRef<number | undefined>(undefined);
+
+  // Record current tool viewing during render (not in effect)
+  if (currentToolId && lastTrackedToolRef.current !== currentToolId) {
+    const currentTool = tools.find(t => t.id === currentToolId);
+    if (currentTool) {
+      lastTrackedToolRef.current = currentToolId;
+      setBehavior(prev => {
+        const newBehavior = { ...prev };
+
+        // Update category view count
+        newBehavior.viewedCategories[currentTool.category] =
           (newBehavior.viewedCategories[currentTool.category] || 0) + 1;
-        
-        // 更新浏览工具列表
+
+        // Update viewed tools list
         if (!newBehavior.viewedTools.includes(currentToolId)) {
           newBehavior.viewedTools = [currentToolId, ...newBehavior.viewedTools].slice(0, MAX_VIEWED_TOOLS);
         }
-        
+
         newBehavior.lastUpdated = Date.now();
-        setBehavior(newBehavior);
-        localStorage.setItem(BEHAVIOR_STORAGE_KEY, JSON.stringify(newBehavior));
-      }
+        saveBehavior(newBehavior);
+        return newBehavior;
+      });
     }
-  }, [currentToolId, tools]);
+  }
 
-  // 计算推荐工具
-  useEffect(() => {
-    if (tools.length === 0) return;
+  // Compute recommended tools
+  const recommendations = useMemo(() => {
+    if (tools.length === 0) return [];
 
-    // 获取用户最常浏览的分类
+    // Get user's most viewed categories
     const topCategories = Object.entries(behavior.viewedCategories)
       .sort((a, b) => b[1] - a[1])
       .slice(0, 3)
       .map(([category]) => category);
 
-    // 过滤工具：排除当前工具和已浏览工具
-    let candidates = tools.filter(t => 
-      t.id !== currentToolId && 
+    // Filter tools: exclude current tool and already viewed tools
+    const candidates = tools.filter(t =>
+      t.id !== currentToolId &&
       !behavior.viewedTools.includes(t.id)
     );
 
-    // 评分算法：分类匹配 + 评分权重
+    // Scoring algorithm: category match + rating weight
     const scoredTools = candidates.map(tool => {
       let score = 0;
-      
-      // 分类匹配加分（前3个分类各加10/8/6分）
+
+      // Category match bonus (top 3 categories get 10/8/6 points)
       const categoryIndex = topCategories.indexOf(tool.category);
       if (categoryIndex !== -1) {
         score += [10, 8, 6][categoryIndex];
       }
-      
-      // 评分加权
+
+      // Rating weight
       score += (tool.rating || 0) * 2;
-      
-      // 评分数量加权（越多越可信）
+
+      // Rating count weight (more reviews = more credible)
       if (tool.rating_count) {
         score += Math.min(Math.log10(tool.rating_count) * 2, 10);
       }
-      
+
       return { tool, score };
     });
 
-    // 按分数排序，取前6个
-    const topTools = scoredTools
+    // Sort by score and take top 6
+    return scoredTools
       .sort((a, b) => b.score - a.score)
       .slice(0, 6)
       .map(item => item.tool);
-
-    setRecommendations(topTools);
   }, [tools, currentToolId, behavior]);
 
   if (recommendations.length === 0) {

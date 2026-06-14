@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useSyncExternalStore, useCallback } from 'react';
 import type { Tool } from '@/types';
 
 interface Review {
@@ -19,26 +19,44 @@ interface ToolReviewsProps {
 
 const REVIEWS_STORAGE_KEY = 'tool-reviews';
 
+// useSyncExternalStore helpers for localStorage-backed reviews
+function getReviewsSnapshot(toolId: number): Review[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    const stored = localStorage.getItem(REVIEWS_STORAGE_KEY);
+    if (!stored) return [];
+    const allReviews = JSON.parse(stored) as Record<number, Review[]>;
+    return allReviews[toolId] || [];
+  } catch {
+    return [];
+  }
+}
+
+function subscribeToReviews(_toolId: number, onStoreChange: () => void): () => void {
+  // localStorage has no native event; we trigger sync manually via notifyReviewChange.
+  reviewListeners.add(onStoreChange);
+  return () => {
+    reviewListeners.delete(onStoreChange);
+  };
+}
+
+const reviewListeners = new Set<() => void>();
+function notifyReviewChange() {
+  reviewListeners.forEach((fn) => fn());
+}
+
 export default function ToolReviews({ tool }: ToolReviewsProps) {
-  const [reviews, setReviews] = useState<Review[]>([]);
+  const reviews = useSyncExternalStore(
+    (onStoreChange) => subscribeToReviews(tool.id, onStoreChange),
+    () => getReviewsSnapshot(tool.id),
+    () => [],
+  );
+
   const [showForm, setShowForm] = useState(false);
   const [userName, setUserName] = useState('');
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState('');
   const [hoveredRating, setHoveredRating] = useState(0);
-
-  // 加载评论数据
-  useEffect(() => {
-    const stored = localStorage.getItem(REVIEWS_STORAGE_KEY);
-    if (stored) {
-      try {
-        const allReviews = JSON.parse(stored) as Record<number, Review[]>;
-        setReviews(allReviews[tool.id] || []);
-      } catch (e) {
-        console.error('Failed to parse reviews:', e);
-      }
-    }
-  }, [tool.id]);
 
   // 计算平均评分
   const averageRating = reviews.length > 0
@@ -64,14 +82,13 @@ export default function ToolReviews({ tool }: ToolReviewsProps) {
       upvotes: 0,
     };
 
-    const updatedReviews = [newReview, ...reviews];
-    setReviews(updatedReviews);
-
     // 保存到 localStorage
     const stored = localStorage.getItem(REVIEWS_STORAGE_KEY);
     const allReviews = stored ? JSON.parse(stored) : {};
+    const updatedReviews = [newReview, ...(allReviews[tool.id] || [])];
     allReviews[tool.id] = updatedReviews;
     localStorage.setItem(REVIEWS_STORAGE_KEY, JSON.stringify(allReviews));
+    notifyReviewChange();
 
     // 重置表单
     setShowForm(false);
@@ -82,15 +99,14 @@ export default function ToolReviews({ tool }: ToolReviewsProps) {
 
   // 点赞评论
   const handleUpvote = (reviewId: string) => {
-    const updatedReviews = reviews.map(r =>
-      r.id === reviewId ? { ...r, upvotes: r.upvotes + 1 } : r
-    );
-    setReviews(updatedReviews);
-
     const stored = localStorage.getItem(REVIEWS_STORAGE_KEY);
     const allReviews = stored ? JSON.parse(stored) : {};
-    allReviews[tool.id] = updatedReviews;
+    const toolReviews = allReviews[tool.id] || [];
+    allReviews[tool.id] = toolReviews.map(r =>
+      r.id === reviewId ? { ...r, upvotes: r.upvotes + 1 } : r
+    );
     localStorage.setItem(REVIEWS_STORAGE_KEY, JSON.stringify(allReviews));
+    notifyReviewChange();
   };
 
   return (
