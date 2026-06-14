@@ -32,6 +32,7 @@ model User {
   collections   Collection[]
   discussions   Discussion[]
   discussionComments DiscussionComment[]
+  notifications Notification[]
 }
 
 // ============================================
@@ -125,6 +126,7 @@ model Tool {
   reviews         Review[]
   bookmarks       Bookmark[]
   discussions     Discussion[]
+  updates         ToolUpdate[]
   
   @@index([category])
   @@index([slug])
@@ -289,4 +291,48 @@ model DiscussionComment {
   
   @@index([discussionId])
   @@index([userId])
+}
+
+// ============================================
+// 工具更新记录模型
+// ============================================
+model ToolUpdate {
+  id          String    @id @default(cuid())
+  toolId      String
+  tool        Tool      @relation(fields: [toolId], references: [id], onDelete: Cascade)
+  
+  // 更新内容
+  title       String    // 更新标题，如 "新增 AI 写作功能"
+  content     String    // 更新详情
+  type        String    @default("feature") // feature, pricing, bugfix, announcement
+  
+  // 时间戳
+  createdAt   DateTime  @default(now())
+  
+  @@index([toolId])
+  @@index([createdAt])
+}
+
+// ============================================
+// 用户通知模型
+// ============================================
+model Notification {
+  id          String    @id @default(cuid())
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // 通知内容
+  type        String    // tool_update, discussion_reply, system
+  title       String
+  content     String
+  link        String?   // 点击通知跳转的链接
+  
+  // 状态
+  isRead      Boolean   @default(false)
+  
+  // 时间戳
+  createdAt   DateTime  @default(now())
+  
+  @@index([userId])
+  @@index([isRead])
 }
