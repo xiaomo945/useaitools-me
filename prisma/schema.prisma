@@ -33,6 +33,7 @@ model User {
   discussions   Discussion[]
   discussionComments DiscussionComment[]
   notifications Notification[]
+  emailSubscription EmailSubscription?
 }
 
 // ============================================
@@ -335,4 +336,57 @@ model Notification {
   
   @@index([userId])
   @@index([isRead])
+}
+
+// ============================================
+// 邮件订阅模型
+// ============================================
+model EmailSubscription {
+  id              String    @id @default(cuid())
+  userId          String    @unique
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  // 订阅偏好
+  categories      String?   // JSON array: 感兴趣的分类
+  frequency       String    @default("weekly") // daily, weekly, monthly
+  emailFormat     String    @default("html") // html, text
+  
+  // 状态
+  isActive        Boolean   @default(true)
+  lastEmailSentAt DateTime?
+  
+  // 时间戳
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  
+  // 关联
+  logs            EmailLog[]
+  
+  @@index([userId])
+  @@index([isActive])
+}
+
+// ============================================
+// 邮件发送记录模型
+// ============================================
+model EmailLog {
+  id              String    @id @default(cuid())
+  subscriptionId  String
+  subscription    EmailSubscription @relation(fields: [subscriptionId], references: [id], onDelete: Cascade)
+  
+  // 邮件内容
+  subject         String
+  content         String    // HTML 内容
+  toolIds         String?   // JSON array: 推荐的工具 ID
+  
+  // 状态
+  status          String    @default("sent") // sent, delivered, bounced, opened, clicked
+  sentAt          DateTime  @default(now())
+  deliveredAt     DateTime?
+  openedAt        DateTime?
+  clickedAt       DateTime?
+  
+  @@index([subscriptionId])
+  @@index([sentAt])
+  @@index([status])
 }
