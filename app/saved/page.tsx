@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 import toolsData from '@/data/tools.json';
 import { Home, Download, Check, Copy, Link2 } from 'lucide-react';
 import Footer from '@/app/components/Footer';
@@ -11,8 +12,9 @@ import type { Tool } from '@/types';
 
 const tools = toolsData as Tool[];
 
-// Load saved ids from localStorage on initialization
+// Load saved ids from localStorage on initialization (fallback for non-logged users)
 const getSavedIds = (): number[] => {
+  if (typeof window === 'undefined') return [];
   try {
     const saved = localStorage.getItem('savedTools');
     return saved ? JSON.parse(saved) : [];
@@ -53,11 +55,40 @@ const downloadCSV = (savedTools: Tool[]) => {
 };
 
 export default function SavedPage() {
+  const { data: session } = useSession();
   const [savedIds, setSavedIds] = useState<number[]>(getSavedIds());
   const [exporting, setExporting] = useState(false);
   const [exportSuccess, setExportSuccess] = useState(false);
   const [showExportMenu, setShowExportMenu] = useState(false);
   const [copySuccess, setCopySuccess] = useState<'text' | 'links' | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  // 从数据库加载收藏（如果已登录）
+  useEffect(() => {
+    const loadBookmarks = async () => {
+      if (!session?.user?.id) {
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/bookmarks');
+        if (res.ok) {
+          const data = await res.json();
+          const dbIds = data.bookmarks.map((b: any) => b.toolId);
+          setSavedIds(dbIds);
+          // 同步到 localStorage
+          localStorage.setItem('savedTools', JSON.stringify(dbIds));
+        }
+      } catch (error) {
+        console.error('加载收藏失败:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadBookmarks();
+  }, [session]);
   
   // Get saved tools
   const savedTools = tools.filter((tool) => savedIds.includes(tool.id));
@@ -192,12 +223,39 @@ export default function SavedPage() {
     }
   };
 
-  const toggleSave = (id: number) => {
-    const newSavedIds = savedIds.includes(id)
+  const toggleSave = async (id: number) => {
+    const isCurrentlySaved = savedIds.includes(id);
+    const newSavedIds = isCurrentlySaved
       ? savedIds.filter((savedId) => savedId !== id)
       : [...savedIds, id];
+    
+    // 立即更新 UI
     setSavedIds(newSavedIds);
     localStorage.setItem('savedTools', JSON.stringify(newSavedIds));
+    
+    // 如果用户已登录，同步到数据库
+    if (session?.user?.id) {
+      try {
+        if (isCurrentlySaved) {
+          // 取消收藏
+          await fetch(`/api/bookmarks?toolId=${id}`, {
+            method: 'DELETE'
+          });
+        } else {
+          // 添加收藏
+          await fetch('/api/bookmarks', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ toolId: id })
+          });
+        }
+      } catch (error) {
+        console.error('同步收藏失败:', error);
+        // 失败时回滚
+        setSavedIds(savedIds);
+        localStorage.setItem('savedTools', JSON.stringify(savedIds));
+      }
+    }
   };
 
   return (

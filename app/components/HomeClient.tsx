@@ -3,6 +3,7 @@
 import React, { useState, useMemo, useRef, useEffect, useCallback, memo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 import StarRating from './StarRating';
 import SkeletonCard from './Skeleton';
 import { useToast } from './Toast';
@@ -484,6 +485,7 @@ interface HomeClientProps {
 }
 
 export default function HomeClient({ initialTools, featuredTools, blogPosts, totalCount }: HomeClientProps) {
+  const { data: session } = useSession();
   const [displayedTools, setDisplayedTools] = useState<Tool[]>(initialTools);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
@@ -542,12 +544,6 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   
   // Load localStorage data after mount (SSR-safe)
   useEffect(() => {
-    // Load saved tools
-    try {
-      const saved = localStorage.getItem('savedTools');
-      if (saved) setTimeout(() => setSavedIds(JSON.parse(saved)), 0);
-    } catch { /* ignore */ }
-    
     // Load recently viewed
     try {
       const recent = localStorage.getItem('recentlyViewed');
@@ -599,6 +595,28 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       localStorage.setItem('lastVisitTimestamp', String(now));
     } catch { /* ignore */ }
   }, []);
+
+  // 从数据库加载收藏（如果已登录）
+  useEffect(() => {
+    const loadBookmarks = async () => {
+      if (!session?.user?.id) return;
+
+      try {
+        const res = await fetch('/api/bookmarks');
+        if (res.ok) {
+          const data = await res.json();
+          const dbIds = data.bookmarks.map((b: any) => b.toolId);
+          setSavedIds(dbIds);
+          // 同步到 localStorage
+          localStorage.setItem('savedTools', JSON.stringify(dbIds));
+        }
+      } catch (error) {
+        console.error('加载收藏失败:', error);
+      }
+    };
+
+    loadBookmarks();
+  }, [session]);
 
   // Save filter preferences to localStorage
   useEffect(() => {
@@ -927,7 +945,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   };
   
   // Save toggle function with heart burst effect
-  const toggleSave = (id: number) => {
+  const toggleSave = async (id: number) => {
     const wasSaved = savedIds.includes(id);
     debugLog('Save', wasSaved ? `Removing tool ${id}` : `Saving tool ${id}`);
     if (wasSaved) {
@@ -949,6 +967,30 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
       addToast('❤️ Added to favorites', 'success');
     } else {
       addToast('Removed from favorites', 'info');
+    }
+
+    // 如果用户已登录，同步到数据库
+    if (session?.user?.id) {
+      try {
+        if (wasSaved) {
+          // 取消收藏
+          await fetch(`/api/bookmarks?toolId=${id}`, {
+            method: 'DELETE'
+          });
+        } else {
+          // 添加收藏
+          await fetch('/api/bookmarks', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ toolId: id })
+          });
+        }
+      } catch (error) {
+        console.error('同步收藏失败:', error);
+        // 失败时回滚
+        setSavedIds(savedIds);
+        localStorage.setItem('savedTools', JSON.stringify(savedIds));
+      }
     }
   };
 

@@ -68,21 +68,21 @@
 **目标：建立真正的数据库和用户系统**
 
 #### 任务组 1.1（数据库基础）
-- [ ] 1.1.1 安装并配置 Prisma + PostgreSQL
-- [ ] 1.1.2 创建数据库 schema（Tool、User、Review、Bookmark、Submission）
-- [ ] 1.1.3 实现用户认证系统（NextAuth.js - GitHub、Google 登录）
+- [x] 1.1.1 安装并配置 Prisma + SQLite（已降级到 Prisma v6）
+- [x] 1.1.2 创建数据库 schema（Tool、User、Review、Bookmark、Submission、Collection）
+- [x] 1.1.3 实现用户认证系统（NextAuth.js - GitHub、Google 登录）
 
 #### 任务组 1.2（数据迁移）
-- [ ] 1.2.1 迁移 tools.json 数据到数据库
-- [ ] 1.2.2 实现工具 CRUD API
-- [ ] 1.2.3 实现用户评价系统（真实持久化）
+- [x] 1.2.1 迁移 tools.json 数据到数据库（1358个工具成功迁移）
+- [x] 1.2.2 实现工具 CRUD API（GET/POST/PUT/DELETE，管理员权限控制）
+- [x] 1.2.3 实现用户评价系统（真实持久化，自动计算平均评分）
 
 #### 任务组 1.3（用户功能）
-- [ ] 1.3.1 实现收藏功能（跨设备同步）
+- [x] 1.3.1 实现收藏功能（跨设备同步，数据库+localStorage 双写）
 - [ ] 1.3.2 实现工具提交页面
 - [ ] 1.3.3 创建后台管理系统（审核工具）
 
-**Phase 1 完成度**: 0%
+**Phase 1 完成度**: 75%（任务组 1.1、1.2、1.3.1 完成）
 
 ---
 

@@ -18,6 +18,7 @@ import ExternalLinkToast from "./components/ExternalLinkToast";
 import ErrorBoundary from "./components/ErrorBoundary";
 import HolidayBanner from "./components/HolidayBanner";
 import WebVitals from "./components/WebVitals";
+import AuthProvider from "./components/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -141,42 +142,44 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col pb-16 md:pb-0">
-        <a href="#main-content" className="skip-to-main">Skip to main content</a>
-        <Suspense fallback={null}>
-          <HolidayBanner />
-        </Suspense>
-        <Suspense fallback={null}>
-          <Header />
-        </Suspense>
-        <ToastProvider>
+        <AuthProvider>
+          <a href="#main-content" className="skip-to-main">Skip to main content</a>
           <Suspense fallback={null}>
-            <NetworkStatus />
+            <HolidayBanner />
           </Suspense>
           <Suspense fallback={null}>
-            <PageProgress />
+            <Header />
           </Suspense>
-          <ErrorBoundary>
-            <PageTransition>{children}</PageTransition>
-          </ErrorBoundary>
-          <div aria-live="polite" aria-atomic="true" className="sr-only" />
-          <Analytics />
-          <Suspense fallback={null}>
-            <BackToTop />
-          </Suspense>
-          <Suspense fallback={null}>
-            <MobileNav />
-          </Suspense>
-          <Suspense fallback={null}>
-            <ThemeToggle />
-            <div className="fixed bottom-20 left-4 md:bottom-4 md:left-4 z-40">
-              <SoundToggle />
-            </div>
-          </Suspense>
-          <KeyboardNavigation />
-          <GuidedTour />
-          <ExternalLinkToast />
-          <WebVitals />
-        </ToastProvider>
+          <ToastProvider>
+            <Suspense fallback={null}>
+              <NetworkStatus />
+            </Suspense>
+            <Suspense fallback={null}>
+              <PageProgress />
+            </Suspense>
+            <ErrorBoundary>
+              <PageTransition>{children}</PageTransition>
+            </ErrorBoundary>
+            <div aria-live="polite" aria-atomic="true" className="sr-only" />
+            <Analytics />
+            <Suspense fallback={null}>
+              <BackToTop />
+            </Suspense>
+            <Suspense fallback={null}>
+              <MobileNav />
+            </Suspense>
+            <Suspense fallback={null}>
+              <ThemeToggle />
+              <div className="fixed bottom-20 left-4 md:bottom-4 md:left-4 z-40">
+                <SoundToggle />
+              </div>
+            </Suspense>
+            <KeyboardNavigation />
+            <GuidedTour />
+            <ExternalLinkToast />
+            <WebVitals />
+          </ToastProvider>
+        </AuthProvider>
       </body>
     </html>
   );
