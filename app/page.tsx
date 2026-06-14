@@ -57,7 +57,7 @@ export default async function Home() {
     id: parseInt(tool.id),
     name: tool.name,
     description: tool.description,
-    category: tool.category as Tool['category'],
+    category: tool.categoryName as Tool['category'],
     pricing: tool.pricing,
     url: tool.url,
     affiliate_link: getAffiliateLink(tool),

@@ -62,7 +62,7 @@ export async function GET() {
       .map(item => ({
         id: parseInt(item.tool.id),
         name: item.tool.name,
-        category: item.tool.category,
+        category: item.tool.categoryName,
         description: item.tool.description,
         url: item.tool.url,
         affiliate_link: item.tool.affiliateUrl || '',

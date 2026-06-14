@@ -124,7 +124,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   // 从数据库加载分类工具
   const dbTools = await prisma.tool.findMany({
     where: {
-      category: category,
+      categoryName: category,
       isActive: true
     },
     orderBy: {
@@ -137,7 +137,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     id: parseInt(tool.id),
     name: tool.name,
     description: tool.description,
-    category: tool.category as Tool['category'],
+    category: tool.categoryName as Tool['category'],
     pricing: tool.pricing,
     url: tool.url,
     affiliate_link: getAffiliateLink(tool as unknown as Tool),

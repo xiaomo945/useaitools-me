@@ -51,13 +51,13 @@ export async function GET() {
     
     // 从收藏中统计
     user.bookmarks.forEach(bookmark => {
-      const category = bookmark.tool.category;
+      const category = bookmark.tool.categoryName;
       categoryStats[category] = (categoryStats[category] || 0) + 2; // 收藏权重更高
     });
 
     // 从评价中统计
     user.reviews.forEach(review => {
-      const category = review.tool.category;
+      const category = review.tool.categoryName;
       categoryStats[category] = (categoryStats[category] || 0) + 1;
     });
 
@@ -75,7 +75,7 @@ export async function GET() {
       .map(r => ({
         id: parseInt(r.tool.id),
         name: r.tool.name,
-        category: r.tool.category,
+        category: r.tool.categoryName,
         rating: r.rating,
         review: r.content
       }))
@@ -128,14 +128,14 @@ export async function GET() {
       bookmarkedTools: user.bookmarks.map(b => ({
         id: parseInt(b.tool.id),
         name: b.tool.name,
-        category: b.tool.category,
+        category: b.tool.categoryName,
         rating: b.tool.rating,
         bookmarkedAt: b.createdAt
       })),
       reviewedTools: user.reviews.map(r => ({
         id: parseInt(r.tool.id),
         name: r.tool.name,
-        category: r.tool.category,
+        category: r.tool.categoryName,
         rating: r.rating,
         review: r.content,
         reviewedAt: r.createdAt

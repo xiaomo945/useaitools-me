@@ -61,7 +61,7 @@ async function main() {
           slug,
           description: tool.description,
           longDescription: tool.description_en || tool.description,
-          category: tool.category,
+          categoryName: tool.category,
           url: tool.url,
           affiliateUrl: tool.affiliate_link || null,
           iconUrl: tool.icon_url || null,

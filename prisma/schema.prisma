@@ -82,6 +82,38 @@ model VerificationToken {
 }
 
 // ============================================
+// 分类模型
+// ============================================
+model Category {
+  id          String     @id @default(cuid())
+  name        String     @unique
+  slug        String     @unique
+  description String?
+  icon        String?    // 图标名称
+  parentId    String?    // 父分类ID，用于层级结构
+  parent      Category?  @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children    Category[] @relation("CategoryHierarchy")
+  
+  // 统计
+  toolCount   Int        @default(0)
+  
+  // 状态
+  isActive    Boolean    @default(true)
+  sortOrder   Int        @default(0)
+  
+  // 时间戳
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  
+  // 关联
+  tools       Tool[]
+  
+  @@index([slug])
+  @@index([parentId])
+  @@index([isActive])
+}
+
+// ============================================
 // 工具模型
 // ============================================
 model Tool {
@@ -90,8 +122,15 @@ model Tool {
   slug            String    @unique
   description     String
   longDescription String?
-  category        String
-  subcategory     String?
+  
+  // 分类关联（新增）
+  categoryId      String?
+  category        Category? @relation(fields: [categoryId], references: [id])
+  
+  // 保留原有字段以保证向后兼容
+  categoryName    String    @map("category") // 分类名称（缓存）
+  subcategory     String?   // 保留为字符串，用于更细粒度的标签
+  
   url             String
   affiliateUrl    String?
   iconUrl         String?
@@ -131,7 +170,7 @@ model Tool {
   updates         ToolUpdate[]
   toolReviews     ToolReview[]
   
-  @@index([category])
+  @@index([categoryId])
   @@index([slug])
   @@index([rating])
 }

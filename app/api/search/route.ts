@@ -65,7 +65,7 @@ export async function GET(request: NextRequest) {
       id: parseInt(tool.id),
       name: tool.name,
       description: tool.description,
-      category: tool.category,
+      category: tool.categoryName,
       pricing: tool.pricing,
       url: tool.url,
       affiliate_link: tool.affiliateUrl || '',

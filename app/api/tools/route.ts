@@ -121,7 +121,7 @@ export async function POST(request: NextRequest) {
         slug,
         description: body.description,
         longDescription: body.longDescription || body.description,
-        category: body.category,
+        categoryName: body.category,
         subcategory: body.subcategory,
         url: body.url,
         affiliateUrl: body.affiliateUrl,

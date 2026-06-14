@@ -46,11 +46,11 @@ export async function GET() {
     const categoryPreferences: Record<string, number> = {};
     
     recentViews.forEach(tool => {
-      categoryPreferences[tool.category] = (categoryPreferences[tool.category] || 0) + 1;
+      categoryPreferences[tool.categoryName] = (categoryPreferences[tool.categoryName] || 0) + 1;
     });
 
     bookmarkedTools.forEach(bookmark => {
-      const category = bookmark.tool.category;
+      const category = bookmark.tool.categoryName;
       categoryPreferences[category] = (categoryPreferences[category] || 0) + 2; // 收藏权重更高
     });
 
@@ -63,7 +63,7 @@ export async function GET() {
     const recommendedTools = await prisma.tool.findMany({
       where: {
         isActive: true,
-        category: {
+        categoryName: {
           in: topCategories
         },
         id: {
@@ -83,21 +83,21 @@ export async function GET() {
       recentViews: recentViews.map(tool => ({
         id: parseInt(tool.id),
         name: tool.name,
-        category: tool.category,
+        category: tool.categoryName,
         rating: tool.rating,
         rating_count: tool.reviewCount
       })),
       bookmarkedTools: bookmarkedTools.map(b => ({
         id: parseInt(b.tool.id),
         name: b.tool.name,
-        category: b.tool.category,
+        category: b.tool.categoryName,
         rating: b.tool.rating,
         rating_count: b.tool.reviewCount
       })),
       recommendedTools: recommendedTools.map(tool => ({
         id: parseInt(tool.id),
         name: tool.name,
-        category: tool.category,
+        category: tool.categoryName,
         rating: tool.rating,
         rating_count: tool.reviewCount
       })),

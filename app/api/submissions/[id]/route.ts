@@ -84,7 +84,7 @@ export async function PUT(
             name: submission.name,
             slug,
             description: submission.description,
-            category: submission.category,
+            categoryName: submission.category,
             url: submission.url,
             pricing: 'Free',
             isActive: true
