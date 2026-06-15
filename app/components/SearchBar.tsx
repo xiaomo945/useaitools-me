@@ -101,8 +101,14 @@ export default function SearchBar({
           autoComplete="off"
           autoCorrect="off"
           spellCheck="false"
-          className="w-full px-3 sm:px-5 py-2 sm:py-3 pl-9 sm:pl-14 pr-16 sm:pr-24 h-9 sm:h-11 text-sm sm:text-base rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
+          className="w-full px-3 sm:px-5 py-2 sm:py-3 pl-9 sm:pl-14 pr-20 sm:pr-28 h-9 sm:h-11 text-sm sm:text-base rounded-2xl bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-300 dark:focus:border-emerald-600 shadow-sm transition-all duration-300 ease-out"
         />
+        {/* Keyboard shortcut hint */}
+        <div className="absolute right-16 sm:right-20 top-1/2 transform -translate-y-1/2 hidden sm:flex items-center gap-1 pointer-events-none">
+          <kbd className="px-1.5 py-0.5 text-[10px] font-mono font-semibold bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 rounded border border-slate-200 dark:border-slate-700">
+            ⌘K
+          </kbd>
+        </div>
         <div className="absolute right-1.5 sm:right-3 top-1/2 transform -translate-y-1/2 flex items-center gap-0.5 sm:gap-1">
           {speechSupported && (
             <button
@@ -150,6 +156,62 @@ export default function SearchBar({
       {/* Search Suggestions Dropdown */}
       {showSuggestions && (search.trim() || recentSearches.length > 0) && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl shadow-xl z-50 overflow-hidden">
+          {/* Trending Searches - Show when no search term */}
+          {!search.trim() && (
+            <>
+              <div className="px-4 py-3 border-b border-slate-200 dark:border-gray-700">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                    🔥 Trending
+                  </span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {['ChatGPT', 'Midjourney', 'Claude', 'Stable Diffusion', 'DALL-E'].map((term) => (
+                    <button
+                      key={term}
+                      onClick={() => {
+                        if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
+                        setSearch(term);
+                        setShowSuggestions(false);
+                        setSelectedIndex(-1);
+                      }}
+                      className="px-3 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full hover:bg-emerald-100 dark:hover:bg-emerald-900/30 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
+                    >
+                      {term}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="px-4 py-3 border-b border-slate-200 dark:border-gray-700">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                    📂 Categories
+                  </span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { name: 'Writing', icon: '✍️', color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' },
+                    { name: 'Image', icon: '🎨', color: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300' },
+                    { name: 'Video', icon: '🎬', color: 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300' },
+                    { name: 'Audio', icon: '🎙️', color: 'bg-pink-100 text-pink-700 dark:bg-pink-900/30 dark:text-pink-300' },
+                    { name: 'Code', icon: '💻', color: 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' },
+                    { name: 'Productivity', icon: '📊', color: 'bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300' },
+                  ].map((cat) => (
+                    <Link
+                      key={cat.name}
+                      href={`/category/${cat.name.toLowerCase()}`}
+                      onClick={() => setShowSuggestions(false)}
+                      className={`inline-flex items-center gap-1 px-3 py-1 text-xs font-medium rounded-full transition-colors ${cat.color} hover:opacity-80`}
+                    >
+                      <span>{cat.icon}</span>
+                      <span>{cat.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
+
           {search.trim() ? (
             autocompleteItems.length > 0 ? (
               <div className="py-1">
