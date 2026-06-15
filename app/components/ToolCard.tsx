@@ -213,7 +213,7 @@ const ToolCard = memo(function ToolCard({
                 e.preventDefault();
                 toggleCompare(tool.id);
               }}
-              className={`group/compare w-7 h-7 rounded-lg border-2 transition-all duration-300 ease-out flex items-center justify-center relative ${
+              className={`group/compare min-h-[44px] min-w-[44px] rounded-lg border-2 transition-all duration-300 ease-out flex items-center justify-center relative ${
                 isSelectedForCompare
                   ? 'bg-emerald-500 border-emerald-500 text-white shadow-md shadow-emerald-500/25'
                   : 'border-slate-300 dark:border-slate-600 hover:border-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/20'
