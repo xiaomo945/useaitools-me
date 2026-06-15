@@ -526,3 +526,20 @@ model Competitor {
   @@index([domain])
   @@index([trafficRank])
 }
+
+model Report {
+  id          String   @id @default(cuid())
+  type        String   // weekly, monthly
+  title       String
+  period      String   // JSON: {start, end}
+  metrics     String   // JSON object
+  topPages    String   // JSON array
+  topKeywords String   // JSON array
+  insights    String   // JSON array
+  generatedAt DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([type])
+  @@index([generatedAt])
+}
