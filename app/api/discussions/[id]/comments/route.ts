@@ -10,7 +10,7 @@ export async function POST(
   try {
     const session = await auth();
 
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -52,7 +52,7 @@ export async function POST(
     const comment = await prisma.discussionComment.create({
       data: {
         content: content.trim(),
-        userId: session.user.id,
+        userId: (session as any).user.id,
         discussionId: id,
       },
       include: {

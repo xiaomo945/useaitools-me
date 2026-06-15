@@ -7,7 +7,7 @@ export async function POST(request: NextRequest) {
   try {
     const session = await auth()
     
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
         category,
         email,
         status: 'pending',
-        userId: session.user.id
+        userId: (session as any).user.id
       }
     })
 
@@ -90,7 +90,7 @@ export async function GET(request: NextRequest) {
   try {
     const session = await auth()
     
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -99,7 +99,7 @@ export async function GET(request: NextRequest) {
 
     // 检查是否为管理员
     const user = await prisma.user.findUnique({
-      where: { id: session.user.id }
+      where: { id: (session as any).user.id }
     })
 
     if (!user || user.role !== 'admin') {

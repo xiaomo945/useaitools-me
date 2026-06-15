@@ -66,7 +66,7 @@ export default function SavedClient() {
   // 从数据库加载收藏（如果已登录）
   useEffect(() => {
     const loadBookmarks = async () => {
-      if (!session?.user?.id) {
+      if (!(session?.user as any)?.id) {
         setLoading(false);
         return;
       }
@@ -234,7 +234,7 @@ export default function SavedClient() {
     localStorage.setItem('savedTools', JSON.stringify(newSavedIds));
     
     // 如果用户已登录，同步到数据库
-    if (session?.user?.id) {
+    if ((session?.user as any)?.id) {
       try {
         if (isCurrentlySaved) {
           // 取消收藏

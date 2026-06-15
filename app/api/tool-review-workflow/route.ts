@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   try {
     const session = await auth();
 
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -15,7 +15,7 @@ export async function GET(request: NextRequest) {
     }
 
     const user = await prisma.user.findUnique({
-      where: { id: session.user.id },
+      where: { id: (session as any).user.id },
     });
 
     if (user?.role !== 'admin') {
@@ -112,7 +112,7 @@ export async function POST(request: NextRequest) {
   try {
     const session = await auth();
 
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -120,7 +120,7 @@ export async function POST(request: NextRequest) {
     }
 
     const user = await prisma.user.findUnique({
-      where: { id: session.user.id },
+      where: { id: (session as any).user.id },
     });
 
     if (user?.role !== 'admin') {
@@ -189,7 +189,7 @@ export async function POST(request: NextRequest) {
         excerpt: tool.description || `${tool.name} 的详细评测`,
         content: '',
         categoryId: 'review', // 需要确保这个分类存在
-        authorId: session.user.id,
+        authorId: (session as any).user.id,
         isPublished: false,
         relatedToolIds: JSON.stringify([toolId]),
       },

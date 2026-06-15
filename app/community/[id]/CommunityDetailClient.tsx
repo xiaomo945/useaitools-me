@@ -333,7 +333,7 @@ export default function CommunityDetailClient() {
                         <span className="text-sm text-slate-500 dark:text-slate-400">
                           {formatDate(comment.createdAt)}
                         </span>
-                        {session?.user?.id === comment.user.id && (
+                        {(session?.user as any)?.id === comment.user.id && (
                           <button
                             onClick={() => handleDeleteComment(comment.id)}
                             className="ml-auto p-1 text-slate-400 hover:text-rose-500 transition-colors"

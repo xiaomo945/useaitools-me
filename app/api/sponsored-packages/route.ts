@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import type { SponsoredPackage } from '@prisma/client'
 
 // GET /api/sponsored-packages - 获取赞助位套餐列表
 export async function GET() {
@@ -15,7 +14,7 @@ export async function GET() {
     })
 
     // 解析 features JSON
-    const packagesWithFeatures = packages.map((pkg: SponsoredPackage) => ({
+    const packagesWithFeatures = packages.map((pkg: any) => ({
       ...pkg,
       features: JSON.parse(pkg.features)
     }))

@@ -6,7 +6,7 @@ import { auth } from '@/auth';
 export async function GET(request: Request) {
   const session = await auth();
   
-  if (!session?.user?.id) {
+  if (!(session?.user as any)?.id) {
     return NextResponse.json(
       { error: '未授权访问' },
       { status: 401 }
@@ -18,7 +18,7 @@ export async function GET(request: Request) {
   const unreadOnly = searchParams.get('unreadOnly') === 'true';
 
   try {
-    const where: any = { userId: session.user.id };
+    const where: any = { userId: (session as any).user.id };
     
     if (unreadOnly) {
       where.isRead = false;
@@ -32,7 +32,7 @@ export async function GET(request: Request) {
 
     const unreadCount = await prisma.notification.count({
       where: {
-        userId: session.user.id,
+        userId: (session as any).user.id,
         isRead: false,
       },
     });
@@ -51,7 +51,7 @@ export async function GET(request: Request) {
 export async function PATCH(request: Request) {
   const session = await auth();
   
-  if (!session?.user?.id) {
+  if (!(session?.user as any)?.id) {
     return NextResponse.json(
       { error: '未授权访问' },
       { status: 401 }
@@ -66,7 +66,7 @@ export async function PATCH(request: Request) {
       // 标记所有通知为已读
       await prisma.notification.updateMany({
         where: {
-          userId: session.user.id,
+          userId: (session as any).user.id,
           isRead: false,
         },
         data: {
@@ -78,7 +78,7 @@ export async function PATCH(request: Request) {
       await prisma.notification.updateMany({
         where: {
           id: { in: notificationIds },
-          userId: session.user.id,
+          userId: (session as any).user.id,
         },
         data: {
           isRead: true,
@@ -100,7 +100,7 @@ export async function PATCH(request: Request) {
 export async function DELETE(request: Request) {
   const session = await auth();
   
-  if (!session?.user?.id) {
+  if (!(session?.user as any)?.id) {
     return NextResponse.json(
       { error: '未授权访问' },
       { status: 401 }
@@ -115,7 +115,7 @@ export async function DELETE(request: Request) {
       // 删除所有已读通知
       await prisma.notification.deleteMany({
         where: {
-          userId: session.user.id,
+          userId: (session as any).user.id,
           isRead: true,
         },
       });
@@ -124,7 +124,7 @@ export async function DELETE(request: Request) {
       await prisma.notification.deleteMany({
         where: {
           id: { in: notificationIds },
-          userId: session.user.id,
+          userId: (session as any).user.id,
         },
       });
     }

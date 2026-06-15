@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/auth'
-import type { SponsoredOrder, SponsoredPackage } from '@prisma/client'
 
 // POST /api/sponsored-orders - 创建赞助订单
 export async function POST(request: Request) {
@@ -129,7 +128,7 @@ export async function GET() {
 
     return NextResponse.json({
       success: true,
-      orders: orders.map((order: SponsoredOrder & { package: SponsoredPackage }) => ({
+      orders: orders.map((order: any) => ({
         id: order.id,
         title: order.title,
         description: order.description,

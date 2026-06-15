@@ -10,7 +10,7 @@ export async function PUT(
   try {
     const session = await auth();
     
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -23,7 +23,7 @@ export async function PUT(
 
     // 检查集合是否存在且属于当前用户
     const existingCollection = await prisma.collection.findFirst({
-      where: { id, userId: session.user.id }
+      where: { id, userId: (session as any).user.id }
     });
 
     if (!existingCollection) {
@@ -60,7 +60,7 @@ export async function DELETE(
   try {
     const session = await auth();
     
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -71,7 +71,7 @@ export async function DELETE(
 
     // 检查集合是否存在且属于当前用户
     const existingCollection = await prisma.collection.findFirst({
-      where: { id, userId: session.user.id }
+      where: { id, userId: (session as any).user.id }
     });
 
     if (!existingCollection) {

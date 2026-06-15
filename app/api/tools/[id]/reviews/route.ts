@@ -48,7 +48,7 @@ export async function POST(
   try {
     const session = await auth()
     
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -78,7 +78,7 @@ export async function POST(
     const existingReview = await prisma.review.findUnique({
       where: {
         userId_toolId: {
-          userId: session.user.id,
+          userId: (session as any).user.id,
           toolId: id
         }
       }
@@ -100,7 +100,7 @@ export async function POST(
         pros: pros ? JSON.stringify(pros) : null,
         cons: cons ? JSON.stringify(cons) : null,
         isApproved: true, // 暂时自动通过，后续可改为需审核
-        userId: session.user.id,
+        userId: (session as any).user.id,
         toolId: id
       },
       include: {

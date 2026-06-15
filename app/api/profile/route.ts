@@ -7,7 +7,7 @@ export async function GET() {
   try {
     const session = await auth();
     
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -16,7 +16,7 @@ export async function GET() {
 
     // 获取用户信息
     const user = await prisma.user.findUnique({
-      where: { id: session.user.id },
+      where: { id: (session as any).user.id },
       include: {
         reviews: {
           include: {

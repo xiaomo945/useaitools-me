@@ -68,7 +68,7 @@ export async function PUT(
 
     // 检查是否为管理员
     const user = await prisma.user.findUnique({
-      where: { id: session.user.id }
+      where: { id: (session as any).user.id }
     })
 
     if (!user || user.role !== 'admin') {
@@ -171,7 +171,7 @@ export async function DELETE(
 
     // 检查是否为管理员
     const user = await prisma.user.findUnique({
-      where: { id: session.user.id }
+      where: { id: (session as any).user.id }
     })
 
     if (!user || user.role !== 'admin') {

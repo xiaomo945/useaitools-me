@@ -36,7 +36,7 @@ export default function AdminSubmissionsPage() {
   }, [status, router])
 
   useEffect(() => {
-    if (session?.user?.id) {
+    if ((session?.user as any)?.id) {
       loadSubmissions()
     }
   }, [session, filter])

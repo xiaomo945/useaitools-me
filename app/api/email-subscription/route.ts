@@ -7,7 +7,7 @@ export async function GET() {
   try {
     const session = await auth();
     
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -15,7 +15,7 @@ export async function GET() {
     }
 
     const subscription = await prisma.emailSubscription.findUnique({
-      where: { userId: session.user.id },
+      where: { userId: (session as any).user.id },
     });
 
     return NextResponse.json({ subscription });
@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
   try {
     const session = await auth();
     
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -63,9 +63,9 @@ export async function POST(request: NextRequest) {
 
     // 创建或更新订阅
     const subscription = await prisma.emailSubscription.upsert({
-      where: { userId: session.user.id },
+      where: { userId: (session as any).user.id },
       create: {
-        userId: session.user.id,
+        userId: (session as any).user.id,
         categories: JSON.stringify(categories || []),
         frequency: frequency || 'weekly',
         emailFormat: emailFormat || 'html',
@@ -94,7 +94,7 @@ export async function PUT(request: NextRequest) {
   try {
     const session = await auth();
     
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -105,7 +105,7 @@ export async function PUT(request: NextRequest) {
     const { categories, frequency, emailFormat } = body;
 
     const subscription = await prisma.emailSubscription.update({
-      where: { userId: session.user.id },
+      where: { userId: (session as any).user.id },
       data: {
         categories: categories ? JSON.stringify(categories) : undefined,
         frequency,
@@ -128,7 +128,7 @@ export async function DELETE() {
   try {
     const session = await auth();
     
-    if (!session?.user?.id) {
+    if (!(session?.user as any)?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -136,7 +136,7 @@ export async function DELETE() {
     }
 
     await prisma.emailSubscription.update({
-      where: { userId: session.user.id },
+      where: { userId: (session as any).user.id },
       data: { isActive: false },
     });
 

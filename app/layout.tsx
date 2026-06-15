@@ -16,6 +16,7 @@ import NetworkStatus from "./components/NetworkStatus";
 import ExternalLinkToast from "./components/ExternalLinkToast";
 import ErrorBoundary from "./components/ErrorBoundary";
 import HolidayBanner from "./components/HolidayBanner";
+import AuthProvider from "./components/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -150,7 +151,9 @@ export default function RootLayout({
             <PageProgress />
           </Suspense>
           <ErrorBoundary>
-            <PageTransition>{children}</PageTransition>
+            <AuthProvider>
+              <PageTransition>{children}</PageTransition>
+            </AuthProvider>
           </ErrorBoundary>
           <div aria-live="polite" aria-atomic="true" className="sr-only" />
           <Analytics />
