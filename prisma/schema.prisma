@@ -27,6 +27,7 @@ model User {
   sessions           Session[]
   submissions        Submission[]
   blogPosts          BlogPost[]
+  memberships        Membership[]
 }
 
 model Account {
@@ -569,4 +570,44 @@ model Advertisement {
   @@index([position, status])
   @@index([status])
   @@index([priority])
+}
+
+model MembershipPlan {
+  id            String   @id @default(cuid())
+  name          String   // 套餐名称：basic, pro, enterprise
+  displayName   String   // 显示名称
+  description   String?  // 套餐描述
+  price         Float    // 价格
+  currency      String   @default("USD")
+  interval      String   @default("monthly") // monthly, yearly
+  features      String   // JSON array of features
+  isPopular     Boolean  @default(false) // 是否推荐
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  memberships   Membership[]
+
+  @@index([name])
+  @@index([isActive])
+}
+
+model Membership {
+  id            String   @id @default(cuid())
+  userId        String
+  planId        String
+  status        String   @default("active") // active, cancelled, expired
+  startDate     DateTime @default(now())
+  endDate       DateTime?
+  cancelledAt   DateTime?
+  paymentMethod String?  // stripe, paypal, etc.
+  transactionId String?  // 支付交易 ID
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan          MembershipPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, planId])
+  @@index([userId])
+  @@index([status])
+  @@index([endDate])
 }
