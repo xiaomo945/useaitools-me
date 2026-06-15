@@ -1428,6 +1428,9 @@ const [hasReferrer] = useState(() => {
             </div>
           </div>
         )}
+          </>
+        )}
+        </div>
 
         {/* Footer */}
         <div className="text-center">
