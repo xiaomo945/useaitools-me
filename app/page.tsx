@@ -2,10 +2,21 @@ import tools from '@/data/tools.json';
 import { blogPosts } from '@/data/blog-posts';
 import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
-import SceneExplorer from '@/app/components/SceneExplorer';
-import StoryCard from '@/app/components/StoryCard';
+import FeaturedTools from '@/app/components/FeaturedTools';
+import TrendingTools from '@/app/components/TrendingTools';
+import StatsBanner from '@/app/components/StatsBanner';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import type { Tool } from '@/types';
 import type { Metadata } from 'next';
+
+const SceneExplorer = dynamic(() => import('@/app/components/SceneExplorer'), {
+  loading: () => <div className="h-64 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-2xl" />,
+});
+
+const StoryCard = dynamic(() => import('@/app/components/StoryCard'), {
+  loading: () => <div className="h-48 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-2xl" />,
+});
 
 export const metadata: Metadata = {
   title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
@@ -166,10 +177,34 @@ export default function Home() {
       />
       <HomeClient
         initialTools={initialTools}
-        featuredTools={selected}
         blogPosts={blogPosts}
         totalCount={enrichedTools.length}
       />
+      <FeaturedTools tools={selected} />
+      <TrendingTools tools={sortedTools} />
+      <StatsBanner />
+      {/* Blog Entry Card */}
+      <div className="mb-16">
+        <Link href="/blog" className="block">
+          <div className="bg-gradient-to-br from-emerald-50/90 via-white to-teal-50/90 dark:from-emerald-950/70 dark:via-gray-900 dark:to-teal-950/70 backdrop-blur-xl border border-emerald-200/60 dark:border-emerald-500/10 shadow-xl shadow-emerald-500/5 dark:shadow-2xl dark:shadow-emerald-500/5 rounded-3xl p-8 sm:p-10 hover:shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-1 transition-all duration-300 ease-out">
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl mb-3">📝</div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
+                AI Tool Comparisons & Guides
+              </h2>
+              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
+                In-depth reviews to help you choose the perfect tool
+              </p>
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300">
+                Explore Blog →
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </div>
       <SceneExplorer />
       <StoryCard />
       <Footer />
