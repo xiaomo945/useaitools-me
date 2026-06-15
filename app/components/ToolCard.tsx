@@ -131,6 +131,9 @@ const ToolCard = memo(function ToolCard({
   return (
     <div
       key={tool.id}
+      role="article"
+      aria-label={`${tool.name} - ${tool.category} tool`}
+      tabIndex={0}
       draggable
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}

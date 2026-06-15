@@ -145,6 +145,7 @@ export default function CategoryFilters({
               }
             }}
             className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors duration-200"
+            aria-label="Clear all filters"
           >
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -165,6 +166,7 @@ export default function CategoryFilters({
                 setSelectedCategories(newCats.length === 0 ? ['All'] : newCats);
               }}
               className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-rose-100 dark:hover:bg-rose-900/30 hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200"
+              aria-label={`Remove ${cat} filter`}
             >
               {cat}
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,6 +178,7 @@ export default function CategoryFilters({
             <button
               onClick={() => setSelectedPricing('All')}
               className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 hover:bg-rose-100 dark:hover:bg-rose-900/30 hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200"
+              aria-label={`Remove ${selectedPricing} pricing filter`}
             >
               💰 {selectedPricing}
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
