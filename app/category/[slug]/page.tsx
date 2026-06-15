@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import toolsData from '@/data/tools.json';
 import { ArrowRight } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
@@ -7,9 +8,9 @@ import CategoryHero from './CategoryHero';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import CategoryStats from '@/app/components/CategoryStats';
 import GoldPicks from '@/app/components/GoldPicks';
-import SponsoredSlot from '@/app/components/SponsoredSlot';
 import type { Tool } from '@/types';
-import { prisma, loadToolsJsonSafe } from '@/lib/prisma';
+
+const tools = toolsData as Tool[];
 type Category = Tool['category'];
 
 const categoryDescriptions: Record<Category, string> = {
@@ -77,15 +78,6 @@ function getAffiliateLink(tool: Tool): string {
   return envLink || tool.affiliate_link;
 }
 
-const categoryKeywordsMap: Record<Category, string[]> = {
-  Writing: ['AI writing tools', 'AI writer', 'content generation', 'AI copywriting', 'AI blog writer', 'writing AI'],
-  Image: ['AI image generator', 'AI art', 'image AI', 'AI photo editor', 'image generation AI', 'AI image tools'],
-  Productivity: ['AI productivity tools', 'AI assistant', 'workflow automation', 'productivity AI', 'AI office tools', 'AI productivity'],
-  Code: ['AI coding assistant', 'AI code generator', 'programming AI', 'AI developer tools', 'code AI', 'AI coding tools'],
-  Audio: ['AI voice generator', 'AI music generator', 'text to speech', 'AI audio tools', 'AI podcast tools', 'audio AI'],
-  Video: ['AI video generator', 'AI video editor', 'video AI', 'AI video tools', 'AI content creation', 'video generation AI']
-};
-
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const categorySlug = slug.charAt(0).toUpperCase() + slug.slice(1);
@@ -94,27 +86,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!Object.keys(categoryNames).includes(category)) {
     return {
       title: 'Not Found – Use AI Tools',
-      robots: { index: false, follow: false },
     };
   }
 
   const categoryName = categoryNames[category];
   const description = categoryDescriptions[category];
-  const title = `Best AI ${categoryName} Tools 2026 – Use AI Tools`;
-  const url = `https://useaitools.me/category/${slug}`;
-  const keywords = categoryKeywordsMap[category];
+  const title = `${categoryName} AI Tools - Use AI Tools`;
 
   return {
     title,
     description,
-    keywords,
-    robots: { index: true, follow: true },
     openGraph: {
       title,
       description,
       siteName: 'Use AI Tools',
       type: 'website',
-      url,
+      url: `https://useaitools.me/category/${slug}`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -122,7 +109,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description,
     },
     alternates: {
-      canonical: url,
+      canonical: `https://useaitools.me/category/${slug}`,
     },
   };
 }
@@ -136,66 +123,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  // 从数据库加载分类工具（有 tools.json 回退）
-  let dbTools: any[] = await prisma.tool.findMany({
-    where: {
-      category: category,
-      isActive: true
-    },
-    orderBy: {
-      rating: 'desc'
-    }
-  });
-  if (!dbTools || dbTools.length === 0) {
-    const jsonTools = loadToolsJsonSafe();
-    dbTools = jsonTools
-      .filter((t: any) => (t.category || '') === category)
-      .map((t: any, i: number) => ({
-        id: `json-${i}`,
-        name: t.name || '',
-        description: t.description || '',
-        category: t.category,
-        pricing: t.pricing || 'free',
-        url: t.url || '',
-        affiliateUrl: '',
-        iconUrl: t.icon_url || '',
-        needsVpn: false,
-        languages: [],
-        rating: typeof t.rating === 'number' ? t.rating : 4.0,
-        reviewCount: typeof t.review_count === 'number' ? t.review_count : 10,
-        featured: false,
-        isActive: true,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      }));
-  }
-
-  // 从数据库加载最新博客文章
-  const latestPosts = await prisma.blogPost.findMany({
-    take: 3,
-    where: { isPublished: true, publishedAt: { not: null } },
-    orderBy: { publishedAt: 'desc' },
-    select: { id: true, title: true, slug: true, excerpt: true, publishedAt: true }
-  });
-
-  // 构建"其他分类"列表（排除当前分类）
-  const otherCategories = (Object.keys(categoryNames) as Category[]).filter(c => c !== category);
-
-  // 转换为前端需要的格式
-  const categoryTools: Tool[] = dbTools.map((tool: any, idx: number) => ({
-    id: typeof tool.id === 'number' ? tool.id : idx,
-    name: tool.name,
-    description: tool.description,
-    category: tool.category as Tool['category'],
-    pricing: tool.pricing,
-    url: tool.url,
-    affiliate_link: getAffiliateLink(tool as unknown as Tool),
-    icon_url: tool.iconUrl || '',
-    needs_vpn: false,
-    languages: [],
-    rating: tool.rating,
-    rating_count: tool.reviewCount
-  }));
+  // Enrich tools with affiliate links from environment variables
+  const categoryTools = tools
+    .filter(t => t.category === category)
+    .map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
   const colors = colorMap[category];
   const description = categoryDescriptions[category];
   const categoryName = categoryNames[category];
@@ -240,7 +171,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     'mainEntity': {
       '@type': 'ItemList',
       'numberOfItems': categoryTools.length,
-      'itemListElement': categoryTools.map((tool: any, index: any) => ({
+      'itemListElement': categoryTools.map((tool, index) => ({
         '@type': 'ListItem',
         'position': index + 1,
         'name': tool.name,
@@ -326,7 +257,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           <div className={`h-px bg-gradient-to-r from-transparent via-${categorySlug.toLowerCase()}-300 dark:via-${categorySlug.toLowerCase()}-500/20 to-transparent mb-10 mx-auto max-w-2xl`} />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
-            {categoryTools.map((tool: any, index: any) => {
+            {categoryTools.map((tool, index) => {
               const hasAffiliate = hasAffiliateLink(tool);
               const ctaText = hasAffiliate ? '🔗 Try It Free' : 'Visit Website';
               
@@ -395,10 +326,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             })}
           </div>
 
-          <div className="mt-12">
-            <SponsoredSlot slotName="category-sidebar" toolCategory={categorySlug} />
-          </div>
-
           {/* Promote Your Tool — Featured Listing */}
           <div className="mt-12 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border border-emerald-200/60 dark:border-emerald-800/40 rounded-2xl p-6 sm:p-8">
             <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -428,86 +355,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
               Back to Home
             </Link>
           </div>
-
-          {/* Explore Other Categories */}
-          <section className="mt-16">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                Explore Other Categories
-              </h2>
-              <Link
-                href="/"
-                className="text-sm text-emerald-600 dark:text-emerald-400 font-semibold hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
-              >
-                View all →
-              </Link>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              {otherCategories.map((cat: any) => {
-                const catColors = colorMap[cat];
-                const catName = categoryNames[cat];
-                return (
-                  <Link
-                    key={cat}
-                    href={`/category/${cat.toLowerCase()}`}
-                    className={`group flex flex-col items-center gap-3 p-6 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-gray-900/50 transition-all duration-300`}
-                  >
-                    <div className={`w-14 h-14 rounded-2xl ${catColors.bgDark} ${catColors.textLight} dark:${catColors.text} flex items-center justify-center text-2xl font-bold group-hover:scale-110 transition-transform duration-300`}>
-                      {catName.charAt(0)}
-                    </div>
-                    <div className="text-center">
-                      <div className="font-semibold text-slate-900 dark:text-white">
-                        {catName}
-                      </div>
-                      <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                        AI Tools
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
-
-          {/* Latest AI Tool Reviews */}
-          {latestPosts.length > 0 && (
-            <section className="mt-16">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">
-                  Latest AI Tool Reviews
-                </h2>
-                <Link
-                  href="/blog"
-                  className="text-sm text-emerald-600 dark:text-emerald-400 font-semibold hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
-                >
-                  All reviews →
-                </Link>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                {latestPosts.map((post: any) => (
-                  <Link
-                    key={post.id}
-                    href={`/blog/${post.slug}`}
-                    className="group block p-6 rounded-2xl bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-gray-900/50 transition-all duration-300"
-                  >
-                    <div className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wide mb-3">
-                      {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : ''}
-                    </div>
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
-                      {post.excerpt}
-                    </p>
-                    <div className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 dark:text-emerald-400">
-                      Read review
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          )}
         </div>
       </div>
       <Footer />

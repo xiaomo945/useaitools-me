@@ -1,56 +1,33 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useState, useEffect, useMemo, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import type { Tool } from '@/types';
 import SearchFilters from '@/app/components/SearchFilters';
+import toolsData from '@/data/tools.json';
+
+const tools = toolsData as Tool[];
 
 function SearchPageInner() {
   const searchParams = useSearchParams();
-  const router = useRouter();
   const query = searchParams.get('q') || '';
   const [searchQuery, setSearchQuery] = useState(query);
-  const [tools, setTools] = useState<Tool[]>([]);
-  const [loading, setLoading] = useState(false);
 
-  // 从 URL 同步搜索词
   useEffect(() => {
-    setSearchQuery(query);
+    setTimeout(() => setSearchQuery(query), 0);
   }, [query]);
 
-  // 从 API 加载数据
-  useEffect(() => {
-    const loadTools = async () => {
-      setLoading(true);
-      try {
-        const params = new URLSearchParams();
-        if (searchQuery) params.set('q', searchQuery);
-        params.set('limit', '100'); // 加载更多用于客户端过滤
-        
-        const res = await fetch(`/api/search?${params.toString()}`);
-        if (res.ok) {
-          const data = await res.json();
-          setTools(data.tools);
-        }
-      } catch (error) {
-        console.error('加载工具失败:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadTools();
+  // Apply text search first, then hand off to filters
+  const textFiltered = useMemo(() => {
+    const q = searchQuery.toLowerCase().trim();
+    if (!q) return tools;
+    return tools.filter(t =>
+      t.name.toLowerCase().includes(q) ||
+      t.description.toLowerCase().includes(q) ||
+      t.category.toLowerCase().includes(q) ||
+      (t.best_for || []).some(b => b.toLowerCase().includes(q))
+    );
   }, [searchQuery]);
-
-  // 处理搜索提交
-  const handleSearch = (value: string) => {
-    setSearchQuery(value);
-    if (value.trim()) {
-      router.push(`/search?q=${encodeURIComponent(value.trim())}`);
-    } else {
-      router.push('/search');
-    }
-  };
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
@@ -77,31 +54,21 @@ function SearchPageInner() {
             <input
               type="text"
               value={searchQuery}
-              onChange={e => handleSearch(e.target.value)}
-              onKeyDown={e => {
-                if (e.key === 'Enter') {
-                  handleSearch(searchQuery);
-                }
-              }}
+              onChange={e => setSearchQuery(e.target.value)}
               placeholder="Search 1,300+ AI tools (try 'Rytr', 'blog writing', 'free video editor')..."
               className="w-full pl-12 pr-32 py-4 rounded-2xl border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-slate-900 dark:text-white placeholder:text-slate-400 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
               autoFocus
             />
-            {/* 实时结果计数 */}
+            {/* 实时结果计数 - 解决挑刺 #19 */}
             <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2">
-              {!loading && searchQuery && (
+              {searchQuery && (
                 <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hidden sm:inline">
-                  {tools.length} {tools.length === 1 ? 'result' : 'results'}
-                </span>
-              )}
-              {loading && (
-                <span className="text-xs font-semibold text-slate-400 hidden sm:inline">
-                  Loading...
+                  {textFiltered.length} {textFiltered.length === 1 ? 'result' : 'results'}
                 </span>
               )}
               {searchQuery && (
                 <button
-                  onClick={() => handleSearch('')}
+                  onClick={() => setSearchQuery('')}
                   className="text-xs font-semibold text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 px-2 py-1 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800"
                 >
                   Clear
@@ -110,15 +77,15 @@ function SearchPageInner() {
             </div>
           </div>
           {/* 移动端结果计数 */}
-          {!loading && searchQuery && (
+          {searchQuery && (
             <p className="sm:hidden text-center text-xs text-slate-500 dark:text-slate-400 mt-2">
-              {tools.length} {tools.length === 1 ? 'result' : 'results'} for &ldquo;{searchQuery}&rdquo;
+              {textFiltered.length} {textFiltered.length === 1 ? 'result' : 'results'} for &ldquo;{searchQuery}&rdquo;
             </p>
           )}
         </div>
 
         {/* Filters + Results */}
-        <SearchFilters tools={tools} initialQuery={searchQuery} />
+        <SearchFilters tools={textFiltered} initialQuery={searchQuery} />
       </div>
     </div>
   );

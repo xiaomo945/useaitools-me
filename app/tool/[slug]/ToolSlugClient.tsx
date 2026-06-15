@@ -1,13 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
-import { ArrowRight, Home, Copy, Check } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ArrowRight, Home, Copy, Check, ChevronDown } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
-import ToolReviews from '@/app/components/ToolReviews';
-import Recommendations from '@/app/components/Recommendations';
-import SocialShare from '@/app/components/SocialShare';
 
 type Example = {
   prompt: string;
@@ -33,12 +30,6 @@ type RatingBreakdown = {
   support: { score: number; note: string };
 };
 
-type PricingTier = {
-  name: string;
-  price: string;
-  features: string[];
-};
-
 type Tool = {
   id: number;
   name: string;
@@ -48,7 +39,6 @@ type Tool = {
   pricing: string;
   url: string;
   affiliate_link: string;
-  affiliate_link_id?: string;
   icon_url: string;
   examples?: Example[];
   needs_vpn: boolean;
@@ -58,10 +48,8 @@ type Tool = {
   rating?: number;
   rating_count?: number;
   rating_breakdown?: RatingBreakdown;
-  skill_level?: 'beginner' | 'intermediate' | 'advanced';
+  skill_level?: string;
   best_for?: string[];
-  video_url?: string;
-  pricing_tiers?: PricingTier[];
 };
 
 type BlogPost = {
@@ -89,26 +77,16 @@ const getAffiliateLinkWithUTM = (tool: Tool): string => {
   }
 };
 
-const trackAndOpen = async (tool: Tool) => {
-  const destination = getAffiliateLinkWithUTM(tool) || tool.url;
+const ctaVariants = {
+  A: 'Get Started for Free',
+  B: 'Get Started for Free',
+};
+
+const getCTAVariant = (): keyof typeof ctaVariants => {
   try {
-    await fetch('/api/track', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        affiliateLinkId: tool.affiliate_link_id || undefined,
-        toolId: String(tool.id),
-        toolName: tool.name,
-        destination,
-      }),
-      keepalive: true,
-    }).catch(() => undefined);
+    return (localStorage.getItem('ctaVariant') as keyof typeof ctaVariants) || 'A';
   } catch {
-    // 静默失败
-  } finally {
-    if (destination) {
-      window.open(destination, '_blank', 'noopener,noreferrer');
-    }
+    return 'A';
   }
 };
 
@@ -226,13 +204,8 @@ export default function ToolSlugClient({
   const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const hasAffiliate = hasAffiliateLink(tool);
-  const ctaText = hasAffiliate ? 'Try Free' : 'Visit Website';
+  const ctaText = hasAffiliate ? ctaVariants[getCTAVariant()] : 'Visit Website';
   const ctaUrl = hasAffiliate ? getAffiliateLinkWithUTM(tool) : tool.url;
-
-  const handleCTAClick = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    await trackAndOpen(tool);
-  };
 
   const copyToClipboard = async (text: string, index: number) => {
     try {
@@ -240,7 +213,7 @@ export default function ToolSlugClient({
       setCopiedIndex(index);
       setTimeout(() => setCopiedIndex(null), 2000);
     } catch (err) {
-      // 静默处理复制失败，用户界面已有反馈
+      console.error('Failed to copy:', err);
     }
   };
 
@@ -323,9 +296,9 @@ export default function ToolSlugClient({
             )}
 
             <div className="flex flex-wrap gap-3">
-              <button
-                type="button"
-                onClick={handleCTAClick}
+              <a
+                href={ctaUrl}
+                target="_blank" rel="noopener noreferrer"
                 className={`inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 font-semibold rounded-xl transition-all duration-300 ${
                   hasAffiliate
                     ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25 hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl hover:shadow-emerald-500/30'
@@ -335,7 +308,7 @@ export default function ToolSlugClient({
                 {ctaText}
                 {hasAffiliate && <span className="text-[10px] opacity-60 ml-1">via partner</span>}
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-              </button>
+              </a>
               <Link
                 href={`/compare?tool=${tool.id}`}
                 className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
@@ -358,97 +331,6 @@ export default function ToolSlugClient({
           </div>
         </div>
 
-        {/* Share Section */}
-        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 mb-8">
-          <SocialShare
-            title={`${tool.name} - ${tool.category} AI Tool`}
-            url={`https://useaitools.me/tool/${slug}`}
-            description={tool.description}
-          />
-        </div>
-
-        {/* Editor's Verdict */}
-        {tool.rating && tool.rating_breakdown && (
-          <div className="bg-gradient-to-br from-emerald-50/80 via-white to-teal-50/50 dark:from-emerald-950/30 dark:via-gray-900 dark:to-teal-950/20 border border-emerald-200/60 dark:border-emerald-800/40 rounded-3xl p-6 sm:p-8 mb-8 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
-            <div className="relative">
-              <div className="flex items-center gap-2 mb-5">
-                <span className="text-xl">🏆</span>
-                <h2 className="text-xl font-bold text-slate-900 dark:text-white">Editor&apos;s Verdict</h2>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-6 sm:gap-10">
-                {/* Overall Score */}
-                <div className="flex flex-col items-center justify-center flex-shrink-0">
-                  <div className="relative w-24 h-24 flex items-center justify-center">
-                    <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="42" fill="none" stroke="currentColor" strokeWidth="8" className="text-slate-200 dark:text-slate-700" />
-                      <circle
-                        cx="50" cy="50" r="42" fill="none" strokeWidth="8"
-                        stroke="url(#scoreGradient)"
-                        strokeLinecap="round"
-                        strokeDasharray={`${(tool.rating / 5) * 264} 264`}
-                      />
-                      <defs>
-                        <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#10b981" />
-                          <stop offset="100%" stopColor="#14b8a6" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                    <span className="text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">{tool.rating}</span>
-                  </div>
-                  <span className="text-xs text-slate-500 dark:text-slate-400 mt-2 font-medium">
-                    {tool.rating_count?.toLocaleString()} reviews
-                  </span>
-                </div>
-
-                {/* 6-Dimension Scores */}
-                <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
-                  {Object.entries(tool.rating_breakdown).map(([key, val]) => {
-                    const labels: Record<string, { label: string; icon: string }> = {
-                      ease_of_use: { label: 'Ease of Use', icon: '🎯' },
-                      output_quality: { label: 'Output Quality', icon: '✨' },
-                      features: { label: 'Features', icon: '🔧' },
-                      value_for_money: { label: 'Value', icon: '💰' },
-                      stability: { label: 'Stability', icon: '🛡️' },
-                      support: { label: 'Support', icon: '💬' },
-                    };
-                    const info = labels[key] || { label: key, icon: '📊' };
-                    const pct = (val.score / 5) * 100;
-                    return (
-                      <div key={key}>
-                        <div className="flex items-center justify-between mb-1">
-                          <span className="text-sm text-slate-600 dark:text-slate-300 font-medium">
-                            <span className="mr-1">{info.icon}</span>{info.label}
-                          </span>
-                          <span className="text-sm font-bold text-slate-900 dark:text-white">{val.score}</span>
-                        </div>
-                        <div className="h-1.5 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full transition-all duration-700 ease-out"
-                            style={{ width: `${pct}%` }}
-                          />
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {/* Best For */}
-              {tool.best_for && tool.best_for.length > 0 && (
-                <div className="mt-5 pt-5 border-t border-emerald-200/50 dark:border-emerald-800/30">
-                  <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Best for: </span>
-                  <span className="text-sm text-emerald-600 dark:text-emerald-400">
-                    {tool.best_for.join(' · ')}
-                  </span>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
         {/* Use Cases */}
         {tool.use_cases && tool.use_cases.length > 0 && (
           <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
@@ -465,74 +347,6 @@ export default function ToolSlugClient({
                       <p className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed">{useCase.detail}</p>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Video Demo */}
-        {tool.video_url && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">🎬 Video Demo</h2>
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
-              <iframe
-                src={tool.video_url}
-                className="absolute inset-0 w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        )}
-
-        {/* Pricing Comparison */}
-        {tool.pricing_tiers && tool.pricing_tiers.length > 0 && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">💰 Pricing Plans</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {tool.pricing_tiers.map((tier, index) => (
-                <div
-                  key={index}
-                  className={`relative rounded-2xl p-6 border-2 transition-all duration-300 hover:-translate-y-1 ${
-                    index === 1
-                      ? 'border-emerald-500 dark:border-emerald-400 shadow-xl shadow-emerald-500/10'
-                      : 'border-slate-200 dark:border-gray-700'
-                  }`}
-                >
-                  {index === 1 && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white shadow-md">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{tier.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-3xl font-extrabold text-slate-900 dark:text-white">{tier.price}</span>
-                  </div>
-                  <ul className="space-y-3 mb-6">
-                    {tier.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex items-start gap-2 text-sm text-slate-600 dark:text-gray-300">
-                        <svg className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <button
-                    type="button"
-                    onClick={handleCTAClick}
-                    className={`w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                      index === 1
-                        ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg hover:shadow-xl'
-                        : 'bg-slate-100 dark:bg-gray-800 text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-gray-700'
-                    }`}
-                  >
-                    Get Started
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
                 </div>
               ))}
             </div>
@@ -769,21 +583,6 @@ export default function ToolSlugClient({
             </div>
           </div>
         )}
-
-        {/* User Reviews */}
-        <ToolReviews tool={tool} />
-
-        {/* Similar Tools Recommendations */}
-        <Recommendations
-          variant="similar"
-          title="类似工具"
-          currentToolId={String(tool.id)}
-          currentCategory={tool.category}
-          limit={6}
-        />
-
-        {/* Popular Tools Recommendations */}
-        <Recommendations variant="popular" title="热门工具" limit={6} />
 
         {/* Back to Home */}
         <div className="text-center">

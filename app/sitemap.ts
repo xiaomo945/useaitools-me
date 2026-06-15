@@ -1,110 +1,134 @@
-import type { MetadataRoute } from 'next';
-import { prisma } from '@/lib/prisma';
-import { blogPosts } from '@/data/blog-posts';
-import toolsJson from '@/data/tools.json';
+import { MetadataRoute } from 'next';
+import fs from 'fs';
+import path from 'path';
 
-const baseUrl = 'https://useaitools.me';
+// 动态生成 sitemap
+export const dynamic = 'force-dynamic';
 
-const BLOG_CATEGORY_DESCRIPTIONS: Record<string, string> = {
-  writing: 'AI writing tool reviews, copywriting AI comparisons, and content generation guides.',
-  image: 'Hands-on reviews and comparisons of AI image generators and art tools.',
-  video: 'AI video generation, editing tools, and text-to-video platform comparisons.',
-  audio: 'Reviews of AI audio tools, voice cloning, text-to-speech, and podcast platforms.',
-  code: 'AI coding assistants, code generation tools, and developer AI workflows.',
-  productivity: 'AI productivity tools, task automation, and workspace optimization guides.',
-};
+// 分类名称映射
+const categories = ['Image', 'Writing', 'Code', 'Video', 'Productivity', 'Audio'];
+const categorySlugMap = (cat: string) => cat.toLowerCase();
 
-type ToolJsonItem = { id: number; name: string; category?: string };
+// 加载工具数据
+function loadTools() {
+  const toolsPath = path.join(process.cwd(), 'data', 'tools.json');
+  if (fs.existsSync(toolsPath)) {
+    const data = fs.readFileSync(toolsPath, 'utf8');
+    return JSON.parse(data);
+  }
+  return [];
+}
 
-function slugify(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-')
-    .replace(/^-|-$/g, '');
+// 加载博客文章数据
+function loadBlogPosts() {
+  const blogPostsPath = path.join(process.cwd(), 'data', 'blog-posts.json');
+  if (fs.existsSync(blogPostsPath)) {
+    const data = fs.readFileSync(blogPostsPath, 'utf8');
+    return JSON.parse(data);
+  }
+  return [];
+}
+
+// 加载工作流数据
+function loadWorkflows() {
+  const workflowsPath = path.join(process.cwd(), 'data', 'workflows.json');
+  if (fs.existsSync(workflowsPath)) {
+    const data = fs.readFileSync(workflowsPath, 'utf8');
+    return JSON.parse(data);
+  }
+  return [];
+}
+
+// 加载场景数据
+function loadScenes(): string[] {
+  const scenesPath = path.join(process.cwd(), 'data', 'scenes.ts');
+  if (fs.existsSync(scenesPath)) {
+    const content = fs.readFileSync(scenesPath, 'utf8');
+    const slugRegex = /slug:\s*'([^']+)'/g;
+    const slugs: string[] = [];
+    let match;
+    while ((match = slugRegex.exec(content)) !== null) {
+      slugs.push(match[1]);
+    }
+    return slugs;
+  }
+  return [];
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
-
-  // === 1) Core static pages ===
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: now, changeFrequency: 'daily', priority: 1.0 },
-    { url: `${baseUrl}/blog`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
-    { url: `${baseUrl}/tools`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/compare`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/category/writing`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/category/image`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/category/productivity`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/category/code`, lastModified: now, changeFrequency: 'weekly', priority: 0.6 },
-    { url: `${baseUrl}/category/audio`, lastModified: now, changeFrequency: 'weekly', priority: 0.6 },
-    { url: `${baseUrl}/category/video`, lastModified: now, changeFrequency: 'weekly', priority: 0.6 },
+  const tools = loadTools();
+  const blogPosts = loadBlogPosts();
+  const workflows = loadWorkflows();
+  const sceneSlugs = loadScenes();
+  const baseUrl = 'https://useaitools.me';
+  
+  const currentDate = new Date();
+  
+  const staticPages = [
+    { url: baseUrl, lastModified: currentDate, changeFrequency: 'daily' as const, priority: 1 },
+    { url: `${baseUrl}/about`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${baseUrl}/blog`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/compare`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${baseUrl}/compare/video`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
+    { url: `${baseUrl}/compare/writing`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
+    { url: `${baseUrl}/compare/audio`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
+    { url: `${baseUrl}/changelog`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${baseUrl}/contact`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${baseUrl}/deals`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
+    { url: `${baseUrl}/history`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.5 },
+    { url: `${baseUrl}/leaderboard`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
+    { url: `${baseUrl}/help`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
+    { url: `${baseUrl}/dashboard`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.5 },
+    { url: `${baseUrl}/privacy`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
+    { url: `${baseUrl}/saved`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.5 },
+    { url: `${baseUrl}/scenes`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${baseUrl}/search`, lastModified: currentDate, changeFrequency: 'daily' as const, priority: 0.7 },
+    { url: `${baseUrl}/submit`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
+    { url: `${baseUrl}/terms`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
+    { url: `${baseUrl}/workflows`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
   ];
 
-  // === 2) Blog category pages (dynamic: based on categories found in posts) ===
-  const categoriesSeen = new Set<string>();
-  (blogPosts || []).forEach((post: any) => {
-    const slug = (post.category || '').toLowerCase();
-    if (slug) categoriesSeen.add(slug);
-  });
+  const categoryPages = categories.map((category) => ({
+    url: `${baseUrl}/category/${categorySlugMap(category)}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
 
-  const blogCategoryPages: MetadataRoute.Sitemap = Array.from(categoriesSeen).map((slug) => ({
-    url: `${baseUrl}/blog/category/${slug}`,
-    lastModified: now,
-    changeFrequency: 'weekly',
+  const scenePages = sceneSlugs.map((slug) => ({
+    url: `${baseUrl}/scenes/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
     priority: 0.6,
   }));
 
-  // === 3) Blog posts (with recent priority boost) ===
-  const sortedBlogPosts = (blogPosts || [])
-    .slice()
-    .sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const toolPages = tools.map((tool: { id: number }) => ({
+    url: `${baseUrl}/tools/${tool.id}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }));
 
-  const blogPostPages: MetadataRoute.Sitemap = sortedBlogPosts.map((post: any, idx: number) => {
-    const isRecent = idx < 20;
-    return {
-      url: `${baseUrl}/blog/${post.slug}`,
-      lastModified: new Date(post.date) || now,
-      changeFrequency: isRecent ? 'weekly' : 'monthly',
-      priority: isRecent ? 0.8 : 0.6,
-    };
-  });
+  const blogPostPages = blogPosts.map((post: { slug: string; date: string }) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }));
 
-  // === 4) Tool pages ===
-  let toolPages: MetadataRoute.Sitemap = [];
-  try {
-    const tools = (await prisma.tool.findMany({
-      where: { isActive: true },
-      select: { name: true, updatedAt: true, slug: true, createdAt: true },
-      orderBy: [{ rating: 'desc' }, { reviewCount: 'desc' }],
-    })) as any[];
+  const workflowPages = workflows.map((wf: { slug: string }) => ({
+    url: `${baseUrl}/workflows/${wf.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }));
 
-    if (tools && tools.length > 0) {
-      toolPages = tools.map((tool: any, idx: number) => {
-        const toolSlug = tool.slug || slugify(tool.name);
-        return {
-          url: `${baseUrl}/tool/${toolSlug}`,
-          lastModified: tool.updatedAt || tool.createdAt || now,
-          changeFrequency: idx < 30 ? 'weekly' : 'monthly',
-          priority: idx < 30 ? 0.75 : 0.5,
-        };
-      });
-    }
-  } catch (_) {
-    // prisma unavailable, fallback below
-  }
-
-  // Fallback to tools.json
-  if (toolPages.length === 0) {
-    const toolsArr = (toolsJson as ToolJsonItem[]) || [];
-    toolPages = toolsArr.map((t, idx) => ({
-      url: `${baseUrl}/tool/${slugify(t.name)}`,
-      lastModified: now,
-      changeFrequency: idx < 30 ? 'weekly' : 'monthly',
-      priority: idx < 30 ? 0.75 : 0.5,
-    }));
-  }
-
-  return [...staticPages, ...blogCategoryPages, ...blogPostPages, ...toolPages];
+  return [
+    ...staticPages,
+    ...categoryPages,
+    ...scenePages,
+    ...toolPages,
+    ...blogPostPages,
+    ...workflowPages,
+  ];
 }

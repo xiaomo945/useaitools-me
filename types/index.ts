@@ -74,7 +74,7 @@ export interface Tool {
   url: string;
   affiliate_link: string;
   icon_url: string;
-  examples?: ToolExample[];
+  examples: ToolExample[];
   needs_vpn: boolean;
   languages: string[];
   description_en?: string;

@@ -56,16 +56,6 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   
   const title = `${tool.name} – Use AI Tools`;
   const description = tool.description.slice(0, 160);
-  const categorySlug = tool.category.toLowerCase();
-  const keywords = [
-    tool.name,
-    `${tool.name} AI tool`,
-    `${tool.category.toLowerCase()} AI tools`,
-    `best ${tool.category.toLowerCase()} AI tools`,
-    'AI tool review',
-    'AI software directory',
-    `${tool.category.toLowerCase()} tools`,
-  ];
 
   const categoryFaqs: Record<string, { question: string; answer: string }[]> = {
     'Writing': [
@@ -162,18 +152,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title,
     description,
-    keywords,
-    robots: {
-      index: true,
-      follow: true,
-    },
     openGraph: {
       title,
       description,
       siteName: 'Use AI Tools',
       type: 'website',
       url: `https://useaitools.me/tools/${tool.id}`,
-      locale: 'en_US',
     },
     twitter: {
       card: 'summary_large_image',

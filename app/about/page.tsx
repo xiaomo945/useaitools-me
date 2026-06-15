@@ -1,161 +1,302 @@
-import { Metadata } from 'next';
 import Link from 'next/link';
-import { Target, Users, Zap, Award, Globe, TrendingUp } from 'lucide-react';
+import Footer from '@/app/components/Footer';
+import { Metadata } from 'next';
+import Breadcrumbs from '@/app/components/Breadcrumbs';
+import tools from '@/data/tools.json';
 
 export const metadata: Metadata = {
-  title: '关于我们 - Use AI Tools',
-  description: '了解 Use AI Tools 的使命、愿景和团队。我们致力于帮助用户发现最佳 AI 工具，提升工作效率。',
-  keywords: ['关于我们', 'AI 工具导航', '使命愿景', '团队介绍'],
+  title: 'About – Use AI Tools',
+  description: 'Discover our story, built in public by an indie maker. 50+ AI tools curated for you.',
+  openGraph: {
+    title: 'About – Use AI Tools',
+    description: 'Discover our story, built in public by an indie maker. 50+ AI tools curated for you.',
+  },
 };
 
 export default function AboutPage() {
+  const toolCount = tools.length;
+  
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    'name': 'About Use AI Tools',
+    'description': 'Curated AI tools directory built in public by an indie maker.',
+    'url': 'https://useaitools.me/about',
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Use AI Tools',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': 'https://useaitools.me/logo.png'
+      }
+    },
+    'author': {
+      '@type': 'Person',
+      'name': 'Indie Maker'
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50 dark:from-gray-950 dark:to-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-slate-900 dark:text-white mb-6">
-            关于 <span className="text-emerald-600">Use AI Tools</span>
-          </h1>
-          <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            我们致力于成为最值得信赖的 AI 工具导航平台，帮助用户在 AI 时代保持竞争力
-          </p>
-        </section>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          {/* Breadcrumbs */}
+          <Breadcrumbs 
+            items={[
+              { label: 'Home', href: '/' },
+              { label: 'About', href: '/about', current: true }
+            ]} 
+          />
+          
+          <div className="mb-12" />
 
-        {/* Mission & Vision */}
-        <section className="grid md:grid-cols-2 gap-8 mb-16">
-          <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-gray-800">
-            <div className="flex items-center mb-4">
-              <Target className="w-10 h-10 text-emerald-600 mr-3" />
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">我们的使命</h2>
-            </div>
-            <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-              在 AI 技术快速发展的时代，帮助用户发现、比较和选择最适合的 AI 工具。我们通过专业的评测、详细的对比和真实的用户反馈，让每个用户都能做出明智的选择。
+          {/* Hero */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+              <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">
+                About Use AI Tools
+              </span>
+            </h1>
+            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+              Your trusted guide to discovering and comparing the best AI tools.
             </p>
           </div>
 
-          <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-gray-800">
-            <div className="flex items-center mb-4">
-              <Globe className="w-10 h-10 text-emerald-600 mr-3" />
-              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">我们的愿景</h2>
-            </div>
-            <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-              成为全球最权威的 AI 工具导航平台，建立 AI 工具行业的标准与信任。我们希望每个用户都能在这里找到提升效率的利器，每个开发者都能获得应有的曝光。
-            </p>
-          </div>
-        </section>
+          <div className="h-px bg-gradient-to-r from-transparent via-emerald-300 dark:via-emerald-700/40 to-transparent mb-12" />
 
-        {/* Values */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-slate-900 dark:text-white mb-12">
-            我们的核心价值观
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-emerald-100 dark:bg-emerald-900/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-emerald-600" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">专业权威</h3>
-              <p className="text-slate-600 dark:text-slate-300">
-                每个工具都经过严格筛选和评测，确保信息的准确性和时效性
+          {/* Introduction */}
+          <section className="mb-12">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-10 shadow-sm border border-slate-200 dark:border-gray-800">
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">What is Use AI Tools?</h2>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
+                Use AI Tools is a curated directory designed to help you discover, compare, and choose the perfect AI tools for your workflow. 
+                We carefully select and categorize the best AI tools available, making it easier than ever to find what you need.
               </p>
             </div>
+          </section>
 
-            <div className="text-center">
-              <div className="bg-emerald-100 dark:bg-emerald-900/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-emerald-600" />
+          {/* Built in Public Story */}
+          <section className="mb-12">
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-2xl p-8 sm:p-10 border border-emerald-200/50 dark:border-emerald-800/30">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center text-2xl">
+                    🚀
+                  </div>
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Built in Public</h2>
+                  <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium">From an internet café in Baoding, China</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">用户至上</h3>
-              <p className="text-slate-600 dark:text-slate-300">
-                始终从用户需求出发，提供客观、中立的评价，不受商业利益影响
+              <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-lg">
+                This project started with a simple idea—what if we could make AI tools accessible to everyone? 
+                Built from scratch by a taxi driver working out of an internet café in Baoding, China, 
+                with zero budget and a lot of passion. Every line of code, every tool added, and every design decision 
+                has been made with care and transparency.
+              </p>
+              <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-lg mt-4">
+                This isn&apos;t just another directory—it&apos;s a testament to what one person can build with determination, 
+                curiosity, and the power of AI. We&apos;re building in public, sharing our journey, and growing together with our community.
               </p>
             </div>
+          </section>
 
-            <div className="text-center">
-              <div className="bg-emerald-100 dark:bg-emerald-900/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-emerald-600" />
+          {/* Website Stats */}
+          <section className="mb-12">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-10 shadow-sm border border-slate-200 dark:border-gray-800">
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Our Directory at a Glance</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div className="text-center p-6 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                  <div className="text-4xl font-extrabold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-2">
+                    {toolCount}
+                  </div>
+                  <div className="text-slate-600 dark:text-slate-300 font-medium">AI Tools</div>
+                </div>
+                <div className="text-center p-6 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                  <div className="text-4xl font-extrabold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-2">
+                    6
+                  </div>
+                  <div className="text-slate-600 dark:text-slate-300 font-medium">Categories</div>
+                </div>
+                <div className="text-center p-6 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                  <div className="text-4xl font-extrabold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-2">
+                    100%
+                  </div>
+                  <div className="text-slate-600 dark:text-slate-300 font-medium">Curated</div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">持续创新</h3>
-              <p className="text-slate-600 dark:text-slate-300">
-                紧跟 AI 技术发展，不断优化产品功能，为用户提供最佳体验
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed mt-6">
+                Every tool in our directory includes detailed descriptions, pricing information, and honest reviews. 
+                We cover 6 key categories: Writing, Image, Productivity, Code, Audio, and Video.
               </p>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Statistics */}
-        <section className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12 mb-16">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            我们的成就
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">1361+</div>
-              <div className="text-emerald-100">收录工具</div>
+          {/* Trust Statement */}
+          <section className="mb-12">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-10 shadow-sm border border-slate-200 dark:border-gray-800">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center text-2xl">
+                    🛡️
+                  </div>
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Your Trust Matters</h2>
+              </div>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
+                We believe in transparency. Use AI Tools earns commission through affiliate links when you sign up for tools through our site. 
+                However, this never affects our recommendations or reviews—our independence is non-negotiable.
+              </p>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg mt-4">
+                Best of all, there&apos;s no extra cost to you. The price you pay is the same whether you use our links or go directly. 
+                Affiliate links simply help us keep the lights on and continue building this valuable resource for the community.
+              </p>
+              <div className="mt-6">
+                <Link
+                  href="/affiliate-disclosure"
+                  className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 font-medium transition-colors duration-300"
+                >
+                  Read our full affiliate disclosure →
+                </Link>
+              </div>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">6</div>
-              <div className="text-emerald-100">工具分类</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">766+</div>
-              <div className="text-emerald-100">评测文章</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">2</div>
-              <div className="text-emerald-100">语言支持</div>
-            </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Story */}
-        <section className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-gray-800 mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
-            我们的故事
-          </h2>
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-              Use AI Tools 诞生于 2026 年初，当时 AI 工具如雨后春笋般涌现，但用户却面临选择困难。我们发现，虽然有很多优秀的 AI 工具，但缺乏一个集中、可信的导航平台。
-            </p>
-            <p className="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-              作为一个独立开发者项目，我们从零开始，通过网吧的公共网络搭建了这个平台。没有投资，没有团队，只有对 AI 技术的热情和帮助用户的初心。
-            </p>
-            <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-              经过几个月的努力，我们已经收录了 1361 个 AI 工具，撰写了 766 篇评测文章，支持中英文双语，并实现了 PWA 离线访问。我们的目标是成为 AI 工具行业的权威参考，帮助用户在 AI 时代保持竞争力。
-            </p>
-          </div>
-        </section>
+          {/* Update Frequency */}
+          <section className="mb-12">
+            <div className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/30 rounded-2xl p-8 sm:p-10 border border-amber-200/50 dark:border-amber-800/30">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center text-2xl">
+                    🔄
+                  </div>
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Always Fresh</h2>
+              </div>
+              <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-lg">
+                The AI landscape moves fast—really fast. That&apos;s why we update our directory weekly, 
+                adding new tools, updating existing ones, and removing anything that&apos;s no longer relevant. 
+                You can trust that our recommendations are always current and useful.
+              </p>
+            </div>
+          </section>
 
-        {/* CTA */}
-        <section className="text-center">
-          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
-            加入我们
-          </h2>
-          <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-            无论你是想发现新工具，还是想推广你的 AI 产品，我们都欢迎你的参与
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link
-              href="/submit"
-              className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
-            >
-              提交工具
-            </Link>
-            <Link
-              href="/advertise"
-              className="px-8 py-4 bg-white dark:bg-gray-800 hover:bg-slate-50 dark:hover:bg-gray-700 text-slate-900 dark:text-white font-semibold rounded-xl border-2 border-slate-200 dark:border-gray-700 transition-all duration-300 transform hover:scale-105"
-            >
-              广告合作
-            </Link>
+          {/* How We Review */}
+          <section className="mb-12" id="how-we-review">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-10 shadow-sm border border-slate-200 dark:border-gray-800">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-500 rounded-xl flex items-center justify-center text-2xl">
+                    🔬
+                  </div>
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">How We Review &amp; Rate Tools</h2>
+              </div>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg mb-8">
+                Every tool in our directory is evaluated against a consistent set of criteria. Here&apos;s exactly how we do it:
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                {[
+                  { icon: '🎯', title: 'Ease of Use', desc: 'Can a beginner get productive results within 10 minutes? We test the onboarding flow, UI clarity, and learning curve.' },
+                  { icon: '⭐', title: 'Output Quality', desc: 'Does the tool deliver accurate, relevant, and professional results? We test real-world use cases, not just demos.' },
+                  { icon: '🧩', title: 'Features', desc: 'Breadth and depth of capabilities. Does it solve one problem well, or many problems adequately? We value focused excellence.' },
+                  { icon: '💰', title: 'Value for Money', desc: 'Pricing relative to competitors and actual usage. A $9 tool that replaces a $49 tool scores higher than an overpriced one.' },
+                  { icon: '🔒', title: 'Stability & Privacy', desc: 'Uptime, response speed, data handling practices. We flag tools with known privacy issues or frequent outages.' },
+                  { icon: '🤝', title: 'Support & Community', desc: 'Quality of documentation, customer support responsiveness, and whether there&apos;s an active user community.' },
+                ].map((item, i) => (
+                  <div key={i} className="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-xl">{item.icon}</span>
+                      <h3 className="font-semibold text-slate-900 dark:text-white">{item.title}</h3>
+                    </div>
+                    <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Rating Scale */}
+              <div className="p-6 bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800/50 rounded-xl">
+                <h3 className="font-semibold text-emerald-700 dark:text-emerald-300 mb-3">Our Rating Scale</h3>
+                <div className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+                  <div className="flex items-start gap-3">
+                    <span className="font-bold text-amber-500 flex-shrink-0">★★★★★ (4.5+)</span>
+                    <span>Exceptional — Best in class, highly recommended</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="font-bold text-amber-500 flex-shrink-0">★★★★ (4.0–4.4)</span>
+                    <span>Excellent — Strong choice, minor areas for improvement</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="font-bold text-slate-500 flex-shrink-0">★★★ (3.0–3.9)</span>
+                    <span>Good — Solid tool with notable limitations</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="font-bold text-slate-400 flex-shrink-0">★★ (2.0–2.9)</span>
+                    <span>Fair — Works but has significant drawbacks</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="font-bold text-slate-400 flex-shrink-0">★ (1.0–1.9)</span>
+                    <span>Poor — Not recommended, better alternatives exist</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 text-sm text-slate-500 dark:text-slate-400">
+                <p>
+                  Ratings are based on our hands-on testing combined with aggregated user feedback from platforms like Reddit, Trustpilot, and verified user reviews. 
+                  Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Contact */}
+          <section className="mb-12">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-10 shadow-sm border border-slate-200 dark:border-gray-800 text-center">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center text-2xl">
+                    💬
+                  </div>
+                </div>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Get in Touch</h2>
+              </div>
+              <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-lg mb-6">
+                Have a tool recommendation? Want to partner with us? Just want to say hello? We&apos;d love to hear from you!
+              </p>
+              <a
+                href="mailto:affiliate@useaitools.me"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300 text-lg"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                affiliate@useaitools.me
+              </a>
+            </div>
+          </section>
+
+          {/* Back Home */}
+          <div className="text-center">
             <Link
               href="/"
-              className="px-8 py-4 bg-white dark:bg-gray-800 hover:bg-slate-50 dark:hover:bg-gray-700 text-slate-900 dark:text-white font-semibold rounded-xl border-2 border-slate-200 dark:border-gray-700 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 font-medium transition-colors duration-300 text-lg"
             >
-              浏览工具
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              Back to Home
             </Link>
           </div>
-        </section>
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }

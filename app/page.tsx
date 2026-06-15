@@ -1,11 +1,9 @@
-import { prisma } from '@/lib/prisma';
+import tools from '@/data/tools.json';
 import { blogPosts } from '@/data/blog-posts';
 import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
 import SceneExplorer from '@/app/components/SceneExplorer';
 import StoryCard from '@/app/components/StoryCard';
-import Recommendations from '@/app/components/Recommendations';
-import SponsoredSlot from '@/app/components/SponsoredSlot';
 import type { Tool } from '@/types';
 import type { Metadata } from 'next';
 
@@ -44,74 +42,18 @@ function getAffiliateLink(tool: any): string {
     shortEnvVarName = 'AFFILIATE_GRAMMARLY';
   }
   const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return envLink || tool.affiliateUrl || '';
+  return envLink || tool.affiliate_link;
 }
 
-// 从 tools.json 构建 fallback 数据（server 组件直接 import JSON）
-function getFallbackTools(): Tool[] {
-  try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const fallback = require('@/data/tools.json');
-    if (!Array.isArray(fallback)) return [];
-    return fallback.map((t: any, idx: number) => ({
-      id: idx,
-      name: t.name || `Tool ${idx + 1}`,
-      description: t.description || 'AI tool',
-      category: (t.category || 'Productivity') as Tool['category'],
-      pricing: t.pricing || 'free',
-      url: t.url || '',
-      affiliate_link: getAffiliateLink(t),
-      icon_url: t.icon_url || '',
-      needs_vpn: false,
-      languages: [],
-      rating: (typeof t.rating === 'number' ? t.rating : 4.0) as number,
-      rating_count: (typeof t.review_count === 'number' ? t.review_count : 10) as number,
-    }));
-  } catch (e) {
-    console.warn('[Home] tools.json fallback failed:', (e as Error).message);
-    return [];
-  }
-}
-
-export default async function Home() {
-  // 优先从数据库加载工具数据；数据库不可用时回退到 tools.json
-  let dbTools: any[] = [];
-  try {
-    dbTools = await prisma.tool.findMany({
-      where: { isActive: true },
-      orderBy: { rating: 'desc' },
-    });
-  } catch (err) {
-    console.warn('[Home] DB 查询失败，回退到 tools.json:', (err as Error).message);
-  }
-
-  // 如果数据库返回空数据，则使用 tools.json
-  if (!dbTools || dbTools.length === 0) {
-    const fallback = getFallbackTools();
-    if (fallback.length > 0) {
-      console.log(`[Home] 使用 tools.json fallback: ${fallback.length} tools`);
-      dbTools = fallback;
-    }
-  }
-
-  // 转换为前端需要的格式
-  const tools: Tool[] = dbTools.map((tool: any) => ({
-    id: typeof tool.id === 'number' ? tool.id : Math.floor(Math.random() * 1_000_000),
-    name: tool.name,
-    description: tool.description || '',
-    category: (tool.category || 'Productivity') as Tool['category'],
-    pricing: tool.pricing || 'free',
-    url: tool.url || tool.affiliate_link || '',
-    affiliate_link: getAffiliateLink(tool),
-    icon_url: tool.iconUrl || tool.icon_url || '',
-    needs_vpn: false,
-    languages: [],
-    rating: typeof tool.rating === 'number' ? tool.rating : 4.0,
-    rating_count: typeof tool.reviewCount === 'number' ? tool.reviewCount : (tool.rating_count || 10),
-  }));
+export default function Home() {
+  // Enrich tools with affiliate links from environment variables
+  const enrichedTools = tools.map(tool => ({
+    ...tool,
+    affiliate_link: getAffiliateLink(tool)
+  })) as Tool[];
 
   // Sort tools by rating + rating_count for featured selection
-  const sortedTools = [...tools].sort((a, b) => {
+  const sortedTools = [...enrichedTools].sort((a, b) => {
     const scoreA = (a.rating || 4.0) * 100 + (a.rating_count || 0);
     const scoreB = (b.rating || 4.0) * 100 + (b.rating_count || 0);
     return scoreB - scoreA;
@@ -205,7 +147,7 @@ export default async function Home() {
       '@type': 'Thing',
       'name': 'Artificial Intelligence Tools',
     },
-    'numberOfItems': tools.length,
+    'numberOfItems': enrichedTools.length,
   };
 
   return (
@@ -226,200 +168,11 @@ export default async function Home() {
         initialTools={initialTools}
         featuredTools={selected}
         blogPosts={blogPosts}
-        totalCount={tools.length}
+        totalCount={enrichedTools.length}
       />
-      <BlogPreviewSection />
       <SceneExplorer />
       <StoryCard />
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SponsoredSlot slotName="homepage-top" />
-      </div>
-      <TopPicksSection />
-      <Recommendations variant="newest" title="最新加入" limit={6} />
       <Footer />
     </>
-  );
-}
-
-function TopPicksSection() {
-  return (
-    <section className="py-14 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-emerald-50/60 via-white to-teal-50/60 dark:from-gray-950 dark:via-gray-900 dark:to-emerald-950/20 border-t border-b border-emerald-100/60 dark:border-emerald-900/30">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-10">
-          <div className="inline-block px-4 py-1.5 rounded-full bg-emerald-100/70 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-sm font-semibold mb-4">
-            ⭐ Editor&apos;s Choice
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-emerald-600 via-teal-500 to-cyan-600 bg-clip-text text-transparent mb-3">
-            📊 Top 推荐工具
-          </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-2xl mx-auto">
-            根据评分和用户评价精选的最佳 AI 工具，帮助你快速找到合适的解决方案
-          </p>
-        </div>
-        <TopPicksGrid />
-      </div>
-    </section>
-  );
-}
-
-async function TopPicksGrid() {
-  try {
-    const picks = await prisma.tool.findMany({
-      where: { isActive: true },
-      orderBy: [
-        { rating: 'desc' },
-        { reviewCount: 'desc' },
-      ],
-      take: 6,
-    });
-
-    if (!picks || picks.length === 0) {
-      return null;
-    }
-
-    const getSlug = (name: string) =>
-      name
-        .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/-+/g, '-')
-        .replace(/^-|-$/g, '');
-
-    return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {picks.map((tool: any, idx: any) => {
-          const rating = tool.rating || 4.5;
-          const slug = getSlug(tool.name);
-          return (
-            <a
-              key={tool.id}
-              href={`/tool/${slug}`}
-              className="group relative block bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 p-5 sm:p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-teal-500 opacity-80" />
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-emerald-500/20">
-                    {tool.name.charAt(0)}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900 dark:text-white text-base leading-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                      {tool.name}
-                    </h3>
-                    <span className="inline-block text-xs text-teal-600 dark:text-teal-400 font-semibold mt-1">
-                      {tool.category}
-                    </span>
-                  </div>
-                </div>
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-100/70 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 text-xs font-bold">
-                  ⭐ {rating.toFixed(1)}
-                </span>
-              </div>
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 line-clamp-3">
-                {tool.description}
-              </p>
-              <div className="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-gray-800">
-                <span className="text-xs text-slate-500 dark:text-slate-500 font-medium">
-                  #{idx + 1} 推荐
-                </span>
-                <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400 group-hover:translate-x-1 transition-transform">
-                  查看详情 →
-                </span>
-              </div>
-            </a>
-          );
-        })}
-      </div>
-    );
-  } catch (err) {
-    console.error('Failed to load top picks:', err);
-    return null;
-  }
-}
-
-function BlogPreviewSection() {
-  const posts = blogPosts?.slice(0, 4) || [];
-
-  if (posts.length === 0) return null;
-
-  const categoryColors: Record<string, { bg: string; lightBg: string; text: string; glow: string }> = {
-    writing: { bg: 'from-blue-500 to-indigo-500', lightBg: 'bg-blue-50 dark:bg-blue-500/10', text: 'text-blue-600 dark:text-blue-400', glow: 'shadow-blue-500/20' },
-    image: { bg: 'from-violet-500 to-fuchsia-500', lightBg: 'bg-violet-50 dark:bg-violet-500/10', text: 'text-violet-600 dark:text-violet-400', glow: 'shadow-violet-500/20' },
-    video: { bg: 'from-indigo-500 to-blue-500', lightBg: 'bg-indigo-50 dark:bg-indigo-500/10', text: 'text-indigo-600 dark:text-indigo-400', glow: 'shadow-indigo-500/20' },
-    audio: { bg: 'from-pink-500 to-rose-500', lightBg: 'bg-pink-50 dark:bg-pink-500/10', text: 'text-pink-600 dark:text-pink-400', glow: 'shadow-pink-500/20' },
-    code: { bg: 'from-orange-500 to-amber-500', lightBg: 'bg-orange-50 dark:bg-orange-500/10', text: 'text-orange-600 dark:text-orange-400', glow: 'shadow-orange-500/20' },
-    productivity: { bg: 'from-teal-500 to-emerald-500', lightBg: 'bg-teal-50 dark:bg-teal-500/10', text: 'text-teal-600 dark:text-teal-400', glow: 'shadow-teal-500/20' },
-  };
-
-  const formatDate = (d: string) =>
-    new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-
-  return (
-    <section className="py-14 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-emerald-50/30 dark:from-gray-950 dark:via-gray-900 dark:to-emerald-950/10 border-t border-slate-200 dark:border-gray-800">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-          <div>
-            <div className="inline-block px-3 py-1 rounded-full bg-emerald-100/70 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-bold mb-3">
-              📚 Latest from our Blog
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 tracking-tight">
-              AI Guides &amp; Comparisons
-            </h2>
-            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
-              Expert reviews, side-by-side comparisons and practical how-to guides
-            </p>
-          </div>
-          <a
-            href="/blog"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:gap-2.5 transition-all"
-          >
-            View all articles →
-          </a>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {posts.map((post: any) => {
-            const cat = (post.category || '').toLowerCase();
-            const color = categoryColors[cat] || {
-              bg: 'from-slate-500 to-gray-500',
-              lightBg: 'bg-slate-50 dark:bg-slate-500/10',
-              text: 'text-slate-600 dark:text-slate-400',
-              glow: 'shadow-slate-500/20',
-            };
-
-            return (
-              <a
-                key={post.id || post.slug}
-                href={`/blog/${post.slug}`}
-                className={`group relative bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out ${color.glow}`}
-              >
-                <div className={`h-1.5 bg-gradient-to-r ${color.bg}`} />
-                <div className="p-5">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className={`inline-flex items-center text-[10px] font-bold px-2.5 py-1 rounded-full ${color.lightBg} ${color.text}`}>
-                      {post.category}
-                    </span>
-                    <span className="text-[11px] text-slate-400 dark:text-slate-500">
-                      {formatDate(post.date)}
-                    </span>
-                  </div>
-                  <h3 className="text-base font-bold text-slate-900 dark:text-white mb-3 leading-snug group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors line-clamp-3">
-                    {post.title}
-                  </h3>
-                  {post.description && (
-                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed line-clamp-2 mb-4">
-                      {post.description}
-                    </p>
-                  )}
-                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400 group-hover:gap-2.5 transition-all">
-                    Read article →
-                  </span>
-                </div>
-              </a>
-            );
-          })}
-        </div>
-      </div>
-    </section>
   );
 }

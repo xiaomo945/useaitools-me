@@ -22,17 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: scene.metaTitle,
     description: scene.metaDescription,
-    openGraph: { 
-      title: scene.metaTitle, 
-      description: scene.metaDescription, 
-      type: 'website',
-      url: `https://useaitools.me/scenes/${slug}`,
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: scene.metaTitle,
-      description: scene.metaDescription,
-    },
+    openGraph: { title: scene.metaTitle, description: scene.metaDescription, type: 'website' },
     alternates: { canonical: `https://useaitools.me/scenes/${slug}` },
   };
 }
@@ -105,33 +95,6 @@ function generateSchema(scene: SceneConfig, toolCount: number) {
   };
 }
 
-function generateBreadcrumbSchema(scene: SceneConfig) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://useaitools.me',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Scenes',
-        item: 'https://useaitools.me/scenes',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: scene.title,
-        item: `https://useaitools.me/scenes/${scene.slug}`,
-      },
-    ],
-  };
-}
-
 export default async function ScenePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const scene = getSceneBySlug(slug);
@@ -141,12 +104,10 @@ export default async function ScenePage({ params }: { params: Promise<{ slug: st
   const topPicks = getTopPicks(scene, sceneTools);
   const otherTools = sceneTools.filter(t => !topPicks.includes(t));
   const schemaOrg = generateSchema(scene, sceneTools.length);
-  const breadcrumbSchema = generateBreadcrumbSchema(scene);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-emerald-50/80 to-slate-50 dark:from-gray-900 dark:to-gray-950 border-b border-slate-200 dark:border-gray-800">

@@ -41,17 +41,17 @@ export default function CategoryFilters({
   return (
     <>
       {/* Category Buttons */}
-      <div className="relative" data-tour="categories" role="group" aria-label="Filter by category">
+      <div className="relative" data-tour="categories">
         {/* Left Gradient Fade */}
         <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-10 bg-gradient-to-r from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
         {/* Right Gradient Fade */}
         <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-10 bg-gradient-to-l from-slate-50 dark:from-gray-950 to-transparent pointer-events-none z-10" />
         
-        <div className="flex overflow-x-auto scrollbar-hide gap-1 sm:gap-2.5 sm:justify-center sm:flex-wrap px-2 sm:px-0 py-1" style={{ WebkitOverflowScrolling: 'touch' }}>
+        <div className="flex overflow-x-auto scrollbar-hide gap-1 sm:gap-2.5 sm:justify-center sm:flex-wrap px-2 sm:px-0 py-1">
           {categories.map((category, index) => {
             const isActive = category === 'All' ? selectedCategories.includes('All') : selectedCategories.includes(category);
             
-            const buttonStyle = `px-3 py-2 sm:px-4 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.98] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[44px] flex items-center justify-center ${
+            const buttonStyle = `px-2 py-1 sm:px-4 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.98] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[44px] flex items-center justify-center ${
               isActive
                 ? category === 'All'
                   ? 'bg-emerald-600 text-white'
@@ -89,12 +89,10 @@ export default function CategoryFilters({
                 onKeyDown={(e) => handleCategoryKeyDown(e, index)}
                 className={buttonStyle}
                 title={tooltipMap[category]}
-                aria-label={`${tooltipMap[category]}`}
-                aria-pressed={isActive}
               >
                 {category}
                 {category !== 'All' && selectedCategories.includes(category) && selectedCategories.length > 1 && (
-                  <span className="ml-1 w-4 h-4 rounded-full bg-white/30 text-[10px] flex items-center justify-center" aria-hidden="true">✓</span>
+                  <span className="ml-1 w-4 h-4 rounded-full bg-white/30 text-[10px] flex items-center justify-center">✓</span>
                 )}
               </button>
             );
@@ -144,8 +142,7 @@ export default function CategoryFilters({
                 toolsGridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }
             }}
-            className="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors duration-200 min-h-[44px]"
-            aria-label="Clear all filters"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors duration-200"
           >
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -165,8 +162,7 @@ export default function CategoryFilters({
                 const newCats = selectedCategories.filter(c => c !== cat);
                 setSelectedCategories(newCats.length === 0 ? ['All'] : newCats);
               }}
-              className="inline-flex items-center gap-1 px-3 py-2 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-rose-100 dark:hover:bg-rose-900/30 hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200 min-h-[44px]"
-              aria-label={`Remove ${cat} filter`}
+              className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-rose-100 dark:hover:bg-rose-900/30 hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200"
             >
               {cat}
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -177,8 +173,7 @@ export default function CategoryFilters({
           {selectedPricing !== 'All' && (
             <button
               onClick={() => setSelectedPricing('All')}
-              className="inline-flex items-center gap-1 px-3 py-2 rounded-full text-xs font-semibold bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 hover:bg-rose-100 dark:hover:bg-rose-900/30 hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200 min-h-[44px]"
-              aria-label={`Remove ${selectedPricing} pricing filter`}
+              className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 hover:bg-rose-100 dark:hover:bg-rose-900/30 hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200"
             >
               💰 {selectedPricing}
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -194,10 +194,10 @@ export default function WaitlistPage() {
             </p>
           </div>
           <Link
-            href="/blog"
+            href="/blog/why-building-use-ai-writer"
             className="mt-6 inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors"
           >
-            Read more on our blog
+            Read our full story
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

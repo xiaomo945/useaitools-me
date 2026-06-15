@@ -44,8 +44,6 @@ const CompareBar: React.FC<CompareBarProps> = ({
 
   return (
     <div
-      role="region"
-      aria-label="Compare tools"
       onDragOver={onDragOver}
       onDragLeave={onDragLeave}
       onDrop={onDrop}
@@ -76,20 +74,19 @@ const CompareBar: React.FC<CompareBarProps> = ({
           <div className="flex items-center gap-3">
             <button
               onClick={onClear}
-              className="min-h-[44px] min-w-[44px] px-3 py-2 text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors flex items-center justify-center"
-              aria-label="Clear comparison"
+              className="px-3 py-2 text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200 transition-colors"
             >
               Clear
             </button>
             {selectedForCompare.length >= 2 ? (
               <Link
                 href={`/compare?tool=${selectedForCompare[0]}&tool=${selectedForCompare[1]}`}
-                className="min-h-[44px] px-6 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center"
+                className="px-6 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
               >
                 Compare Now →
               </Link>
             ) : (
-              <span className="min-h-[44px] px-3 py-2 text-xs text-slate-400 dark:text-slate-500 font-medium flex items-center">
+              <span className="px-3 py-2 text-xs text-slate-400 dark:text-slate-500 font-medium">
                 + Select another tool
               </span>
             )}

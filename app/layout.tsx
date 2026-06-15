@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
 import { Suspense } from "react";
-import { Analytics as VercelAnalytics } from '@vercel/analytics/next';
-import Analytics from "./components/Analytics";
+import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
-import Header from "./components/Header";
 import PageProgress from "./components/PageProgress";
 import BackToTop from "./components/BackToTop";
 import MobileNav from "./components/MobileNav";
@@ -18,12 +16,6 @@ import NetworkStatus from "./components/NetworkStatus";
 import ExternalLinkToast from "./components/ExternalLinkToast";
 import ErrorBoundary from "./components/ErrorBoundary";
 import HolidayBanner from "./components/HolidayBanner";
-import WebVitals from "./components/WebVitals";
-import AuthProvider from "./components/AuthProvider";
-import { ABTestProvider } from "./components/ABTestProvider";
-import PlausibleScript from "./components/PlausibleScript";
-import ClarityScript from "./components/ClarityScript";
-import ServiceWorkerRegistration from "./components/ServiceWorkerRegistration";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -87,7 +79,6 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <head>
-        <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -147,49 +138,38 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col pb-16 md:pb-0">
-        <ServiceWorkerRegistration />
-        <ABTestProvider>
-          <AuthProvider>
-            <Analytics />
-            <PlausibleScript />
-            <a href="#main-content" className="skip-to-main">Skip to main content</a>
+        <a href="#main-content" className="skip-to-main">Skip to main content</a>
+        <Suspense fallback={null}>
+          <HolidayBanner />
+        </Suspense>
+        <ToastProvider>
           <Suspense fallback={null}>
-            <HolidayBanner />
+            <NetworkStatus />
           </Suspense>
           <Suspense fallback={null}>
-            <Header />
+            <PageProgress />
           </Suspense>
-          <ToastProvider>
-            <Suspense fallback={null}>
-              <NetworkStatus />
-            </Suspense>
-            <Suspense fallback={null}>
-              <PageProgress />
-            </Suspense>
-            <ErrorBoundary>
-              <PageTransition>{children}</PageTransition>
-            </ErrorBoundary>
-            <div aria-live="polite" aria-atomic="true" className="sr-only" />
-            <VercelAnalytics />
-            <Suspense fallback={null}>
-              <BackToTop />
-            </Suspense>
-            <Suspense fallback={null}>
-              <MobileNav />
-            </Suspense>
-            <Suspense fallback={null}>
-              <ThemeToggle />
-              <div className="fixed bottom-20 left-4 md:bottom-4 md:left-4 z-40">
-                <SoundToggle />
-              </div>
-            </Suspense>
-            <KeyboardNavigation />
-            <GuidedTour />
-            <ExternalLinkToast />
-            <WebVitals />
-          </ToastProvider>
-        </AuthProvider>
-        </ABTestProvider>
+          <ErrorBoundary>
+            <PageTransition>{children}</PageTransition>
+          </ErrorBoundary>
+          <div aria-live="polite" aria-atomic="true" className="sr-only" />
+          <Analytics />
+          <Suspense fallback={null}>
+            <BackToTop />
+          </Suspense>
+          <Suspense fallback={null}>
+            <MobileNav />
+          </Suspense>
+          <Suspense fallback={null}>
+            <ThemeToggle />
+            <div className="fixed bottom-20 left-4 md:bottom-4 md:left-4 z-40">
+              <SoundToggle />
+            </div>
+          </Suspense>
+          <KeyboardNavigation />
+          <GuidedTour />
+          <ExternalLinkToast />
+        </ToastProvider>
       </body>
     </html>
   );
