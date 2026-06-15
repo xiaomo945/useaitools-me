@@ -1,106 +1,107 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
-export const dynamic = 'force-dynamic';
-
-export async function GET() {
+// GET /api/affiliate - 获取所有联盟链接及分析数据
+export async function GET(request: NextRequest) {
   try {
-    const links = await prisma.affiliateLink.findMany({
-      orderBy: { clickCount: 'desc' },
+    const { searchParams } = new URL(request.url);
+    const status = searchParams.get('status');
+    const network = searchParams.get('network');
+    const sortBy = searchParams.get('sortBy') || 'clickCount';
+    const sortOrder = searchParams.get('sortOrder') || 'desc';
+
+    const where: any = {};
+    if (status) where.status = status;
+    if (network) where.network = network;
+
+    const orderBy: any = {};
+    orderBy[sortBy] = sortOrder;
+
+    const affiliateLinks = await prisma.affiliateLink.findMany({
+      where,
+      orderBy,
     });
-    return NextResponse.json({ links, success: true });
+
+    // 计算总体统计
+    const totalClicks = affiliateLinks.reduce((sum: number, link: any) => sum + link.clickCount, 0);
+    const totalConversions = affiliateLinks.reduce((sum: number, link: any) => sum + link.conversionCount, 0);
+    const totalRevenue = affiliateLinks.reduce((sum: number, link: any) => sum + link.revenue, 0);
+    const avgConversionRate = totalClicks > 0 ? (totalConversions / totalClicks) * 100 : 0;
+
+    // 按网络分组统计
+    const networkStats: Record<string, { clicks: number; conversions: number; revenue: number }> = {};
+    affiliateLinks.forEach((link: any) => {
+      const network = link.network || 'Unknown';
+      if (!networkStats[network]) {
+        networkStats[network] = { clicks: 0, conversions: 0, revenue: 0 };
+      }
+      networkStats[network].clicks += link.clickCount;
+      networkStats[network].conversions += link.conversionCount;
+      networkStats[network].revenue += link.revenue;
+    });
+
+    // 找出表现最好和最差的链接
+    const sortedByPerformance = [...affiliateLinks].sort((a, b) => {
+      const rateA = a.clickCount > 0 ? a.conversionCount / a.clickCount : 0;
+      const rateB = b.clickCount > 0 ? b.conversionCount / b.clickCount : 0;
+      return rateB - rateA;
+    });
+
+    const topPerformers = sortedByPerformance.slice(0, 5);
+    const underperformers = sortedByPerformance.slice(-5).reverse();
+
+    return NextResponse.json({
+      affiliateLinks,
+      stats: {
+        totalLinks: affiliateLinks.length,
+        totalClicks,
+        totalConversions,
+        totalRevenue,
+        avgConversionRate,
+      },
+      networkStats,
+      topPerformers,
+      underperformers,
+    });
   } catch (error) {
-    console.error('Affiliate GET error:', error);
+    console.error('Failed to fetch affiliate links:', error);
     return NextResponse.json(
-      { error: 'Failed to load links', links: [] },
+      { error: 'Failed to fetch affiliate links' },
       { status: 500 }
     );
   }
 }
 
+// POST /api/affiliate - 创建新的联盟链接
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json().catch(() => ({}));
+    const body = await request.json();
+    const { toolId, toolName, linkType, affiliateUrl, originalUrl, network, notes } = body;
 
-    const toolName = typeof body.toolName === 'string' ? body.toolName.trim() : '';
-    const affiliateUrl =
-      typeof body.affiliateUrl === 'string' ? body.affiliateUrl.trim() : '';
-
-    if (!toolName || !affiliateUrl) {
+    if (!toolName || !affiliateUrl || !linkType) {
       return NextResponse.json(
-        { error: 'toolName and affiliateUrl are required' },
+        { error: 'Missing required fields: toolName, affiliateUrl, linkType' },
         { status: 400 }
       );
     }
 
-    const link = await prisma.affiliateLink.create({
+    const affiliateLink = await prisma.affiliateLink.create({
       data: {
+        toolId,
         toolName,
-        toolId: body.toolId || null,
-        linkType: body.linkType || 'signup',
+        linkType,
         affiliateUrl,
-        originalUrl: body.originalUrl || null,
-        network: body.network || null,
-        status: body.status || 'active',
-        notes: body.notes || null,
+        originalUrl,
+        network,
+        notes,
       },
     });
 
-    return NextResponse.json({ success: true, link });
+    return NextResponse.json({ affiliateLink }, { status: 201 });
   } catch (error) {
-    console.error('Affiliate POST error:', error);
+    console.error('Failed to create affiliate link:', error);
     return NextResponse.json(
-      { error: 'Failed to create link' },
-      { status: 500 }
-    );
-  }
-}
-
-export async function PUT(request: NextRequest) {
-  try {
-    const body = await request.json().catch(() => ({}));
-    const id = body.id;
-
-    if (!id || typeof id !== 'string') {
-      return NextResponse.json(
-        { error: 'Link id is required' },
-        { status: 400 }
-      );
-    }
-
-    const updateData: Record<string, unknown> = {};
-    if (body.toolName && typeof body.toolName === 'string')
-      updateData.toolName = body.toolName.trim();
-    if (body.toolId && typeof body.toolId === 'string')
-      updateData.toolId = body.toolId.trim();
-    if (body.linkType && typeof body.linkType === 'string')
-      updateData.linkType = body.linkType;
-    if (body.affiliateUrl && typeof body.affiliateUrl === 'string')
-      updateData.affiliateUrl = body.affiliateUrl.trim();
-    if (body.originalUrl && typeof body.originalUrl === 'string')
-      updateData.originalUrl = body.originalUrl.trim();
-    if (body.network && typeof body.network === 'string')
-      updateData.network = body.network.trim();
-    if (body.status && typeof body.status === 'string')
-      updateData.status = body.status;
-    if (body.notes && typeof body.notes === 'string')
-      updateData.notes = body.notes.trim();
-    if (typeof body.clickCount === 'number')
-      updateData.clickCount = body.clickCount;
-    if (typeof body.conversionCount === 'number')
-      updateData.conversionCount = body.conversionCount;
-    if (typeof body.revenue === 'number') updateData.revenue = body.revenue;
-
-    const link = await prisma.affiliateLink.update({
-      where: { id },
-      data: updateData,
-    });
-
-    return NextResponse.json({ success: true, link });
-  } catch (error) {
-    console.error('Affiliate PUT error:', error);
-    return NextResponse.json(
-      { error: 'Failed to update link' },
+      { error: 'Failed to create affiliate link' },
       { status: 500 }
     );
   }
