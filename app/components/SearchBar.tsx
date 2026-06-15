@@ -29,6 +29,7 @@ interface SearchBarProps {
   setShowWelcomeTip: (value: boolean) => void;
   searchInputRef: React.RefObject<HTMLInputElement | null>;
   blurTimeoutRef: React.MutableRefObject<NodeJS.Timeout | null>;
+  spellingSuggestions?: string[];
 }
 
 export default function SearchBar({
@@ -56,6 +57,7 @@ export default function SearchBar({
   setShowWelcomeTip,
   searchInputRef,
   blurTimeoutRef,
+  spellingSuggestions = [],
 }: SearchBarProps) {
   return (
     <div className="search-container relative max-w-2xl mx-auto mb-4 sm:mb-8 px-3 sm:px-0">
@@ -254,7 +256,28 @@ export default function SearchBar({
               </div>
             ) : (
               <div className="px-4 py-6 text-center text-sm text-slate-500">
-                No results found
+                <div className="mb-2">No results found</div>
+                {spellingSuggestions.length > 0 && (
+                  <div className="mt-3 pt-3 border-t border-slate-200 dark:border-gray-700">
+                    <p className="text-xs text-slate-400 mb-2">Did you mean:</p>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      {spellingSuggestions.map((suggestion) => (
+                        <button
+                          key={suggestion}
+                          onClick={() => {
+                            if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
+                            setSearch(suggestion);
+                            setShowSuggestions(false);
+                            setSelectedIndex(-1);
+                          }}
+                          className="px-3 py-1 text-xs font-medium bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300 rounded-full hover:bg-emerald-100 dark:hover:bg-emerald-900/30 transition-colors"
+                        >
+                          {suggestion}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             )
           ) : (

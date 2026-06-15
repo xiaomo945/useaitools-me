@@ -12,6 +12,7 @@ import { playSaveSound, playUnsaveSound, playCompareSound, playSearchSound } fro
 import SearchBar from './SearchBar';
 import CategoryFilters from './CategoryFilters';
 import HeroSection from './HeroSection';
+import { fuzzyMatchScore, getSpellingSuggestions } from '../../lib/fuzzySearch';
 
 // Lazy load non-critical components for performance
 const NewsletterSignup = dynamic(() => import('./NewsletterSignup'), {
@@ -863,6 +864,13 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
     if (!q) return [];
     const query = q.toLowerCase();
     
+    // Track search analytics
+    try {
+      const searches = JSON.parse(localStorage.getItem('searchAnalytics') || '{}');
+      searches[query] = (searches[query] || 0) + 1;
+      localStorage.setItem('searchAnalytics', JSON.stringify(searches));
+    } catch { /* ignore */ }
+    
     const toolItems = displayedTools
       .filter(tool => {
         return tool.name.toLowerCase().includes(query) || tool.description.toLowerCase().includes(query);
@@ -899,6 +907,16 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       .sort((a, b) => b.score - a.score)
       .slice(0, 5);
   })();
+
+  // Spelling suggestions for no results
+  const spellingSuggestions = useMemo(() => {
+    if (!q || autocompleteItems.length > 0) return [];
+    const allTerms = [
+      ...displayedTools.map(t => t.name),
+      ...['writing', 'image', 'video', 'audio', 'code', 'productivity']
+    ];
+    return getSpellingSuggestions(q, allTerms);
+  }, [q, autocompleteItems, displayedTools]);
 
   // Handle suggestion click
   const handleSuggestionClick = (suggestion: { type: string; label: string; value: string; toolId?: number }) => {
@@ -1163,7 +1181,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
     'design': ['image', 'art', 'creative'],
   };
 
-  // Levenshtein distance for typo tolerance
+  // Levenshtein distance for typo tolerance (imported from lib/fuzzySearch)
   const levenshtein = (a: string, b: string): number => {
     const matrix: number[][] = [];
     for (let i = 0; i <= b.length; i++) matrix[i] = [i];
@@ -1178,10 +1196,13 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
     return matrix[b.length][a.length];
   };
 
-  // Enhanced search matching
+  // Enhanced search matching with fuzzy search
   const fuzzyMatch = (text: string, query: string): { match: boolean; score: number } => {
     const lowerText = text.toLowerCase();
     const lowerQuery = query.toLowerCase();
+    
+    // Use imported fuzzyMatchScore for better matching
+    const fuzzyScore = fuzzyMatchScore(lowerQuery, lowerText);
     
     // Exact substring match (highest score)
     if (lowerText.includes(lowerQuery)) {
@@ -1208,6 +1229,11 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
           return { match: true, score: 40 };
         }
       }
+    }
+    
+    // Use fuzzy score as fallback
+    if (fuzzyScore > 0.3) {
+      return { match: true, score: fuzzyScore * 50 };
     }
     
     return { match: false, score: 0 };
@@ -1643,6 +1669,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
           setShowWelcomeTip={setShowWelcomeTip}
           searchInputRef={searchInputRef}
           blurTimeoutRef={blurTimeoutRef}
+          spellingSuggestions={spellingSuggestions}
         />
         
         {/* Scene Guidance Cards */}

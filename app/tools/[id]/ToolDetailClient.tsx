@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import { ArrowRight, Home, Copy, Check, ChevronDown, Share2 } from 'lucide-react';
+import { ArrowRight, Home, Copy, Check, ChevronDown, Share2, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ToolVerdict from '@/app/components/ToolVerdict';
@@ -466,6 +466,138 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
   );
 };
 
+// Screenshot Gallery Component
+const ScreenshotGallery = ({ tool, colors }: { tool: Tool; colors: ReturnType<typeof getCategoryColors> }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  
+  // Generate placeholder screenshots if none exist
+  const screenshots = tool.examples?.map(ex => ex.image_url) || [];
+  
+  if (screenshots.length === 0) return null;
+  
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % screenshots.length);
+  };
+  
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + screenshots.length) % screenshots.length);
+  };
+  
+  return (
+    <>
+      <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">📸 Screenshots & Demos</h2>
+        
+        {/* Main Image */}
+        <div className="relative rounded-xl overflow-hidden mb-4 bg-gray-100 dark:bg-gray-800 aspect-video cursor-pointer group" onClick={() => setIsLightboxOpen(true)}>
+          <img
+            src={screenshots[currentImageIndex]}
+            alt={`${tool.name} screenshot ${currentImageIndex + 1}`}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
+            decoding="async"
+          />
+          
+          {/* Navigation Arrows */}
+          {screenshots.length > 1 && (
+            <>
+              <button
+                onClick={(e) => { e.stopPropagation(); prevImage(); }}
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 dark:bg-gray-900/90 hover:bg-white dark:hover:bg-gray-900 shadow-lg flex items-center justify-center transition-all duration-200 opacity-0 group-hover:opacity-100"
+                aria-label="Previous image"
+              >
+                <ChevronLeft className="w-6 h-6 text-slate-700 dark:text-slate-300" />
+              </button>
+              <button
+                onClick={(e) => { e.stopPropagation(); nextImage(); }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 dark:bg-gray-900/90 hover:bg-white dark:hover:bg-gray-900 shadow-lg flex items-center justify-center transition-all duration-200 opacity-0 group-hover:opacity-100"
+                aria-label="Next image"
+              >
+                <ChevronRight className="w-6 h-6 text-slate-700 dark:text-slate-300" />
+              </button>
+            </>
+          )}
+          
+          {/* Image Counter */}
+          <div className="absolute bottom-4 right-4 px-3 py-1.5 rounded-full bg-black/60 text-white text-sm font-medium">
+            {currentImageIndex + 1} / {screenshots.length}
+          </div>
+        </div>
+        
+        {/* Thumbnail Strip */}
+        {screenshots.length > 1 && (
+          <div className="flex gap-2 overflow-x-auto pb-2">
+            {screenshots.map((screenshot, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                  index === currentImageIndex
+                    ? 'border-emerald-500 ring-2 ring-emerald-500/30'
+                    : 'border-slate-200 dark:border-gray-700 hover:border-slate-300 dark:hover:border-gray-600'
+                }`}
+              >
+                <img
+                  src={screenshot}
+                  alt={`Thumbnail ${index + 1}`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+      
+      {/* Lightbox Modal */}
+      {isLightboxOpen && (
+        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4" onClick={() => setIsLightboxOpen(false)}>
+          <button
+            onClick={() => setIsLightboxOpen(false)}
+            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+            aria-label="Close lightbox"
+          >
+            <X className="w-6 h-6 text-white" />
+          </button>
+          
+          <div className="relative max-w-6xl w-full max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={screenshots[currentImageIndex]}
+              alt={`${tool.name} screenshot ${currentImageIndex + 1}`}
+              className="w-full h-full object-contain rounded-lg"
+            />
+            
+            {screenshots.length > 1 && (
+              <>
+                <button
+                  onClick={prevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="w-8 h-8 text-white" />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="w-8 h-8 text-white" />
+                </button>
+              </>
+            )}
+            
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-full bg-black/60 text-white text-sm font-medium">
+              {currentImageIndex + 1} / {screenshots.length}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
 // Export function
 type BlogPost = {
   id: number;
@@ -483,6 +615,7 @@ export default function ToolDetailClient({ tool, relatedTools, relatedArticles =
   const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [openFAQIndex, setOpenFAQIndex] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'reviews' | 'alternatives'>('overview');
   const hasAffiliate = hasAffiliateLink(tool);
   const ctaText = hasAffiliate ? ctaVariants[getCTAVariant()] : 'Visit Website';
   const ctaUrl = hasAffiliate ? getAffiliateLinkWithUTM(tool) : tool.url;
@@ -804,6 +937,9 @@ const [hasReferrer] = useState(() => {
           hasAffiliate={hasAffiliate}
           affiliateUrl={ctaUrl}
         />
+
+        {/* Screenshot Gallery */}
+        <ScreenshotGallery tool={tool} colors={colors} />
 
         {/* Use Cases Section */}
         {tool.use_cases && tool.use_cases.length > 0 && (
