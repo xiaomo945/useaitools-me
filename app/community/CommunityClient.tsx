@@ -253,6 +253,8 @@ export default function CommunityClient() {
                       src={discussion.user.image}
                       alt={discussion.user.name}
                       className="w-12 h-12 rounded-full flex-shrink-0"
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold flex-shrink-0">

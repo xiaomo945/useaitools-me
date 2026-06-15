@@ -210,6 +210,8 @@ export default function ProfilePage() {
                     src={profile.user.image}
                     alt={profile.user.name}
                     className="w-24 h-24 rounded-full border-4 border-white dark:border-gray-800 shadow-lg"
+                    loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <div className="w-24 h-24 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-3xl font-bold border-4 border-white dark:border-gray-800 shadow-lg">

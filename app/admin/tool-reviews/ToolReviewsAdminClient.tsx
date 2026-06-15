@@ -234,6 +234,8 @@ export default function ToolReviewsAdminClient() {
                       src={review.tool.iconUrl}
                       alt={review.tool.name}
                       className="w-12 h-12 rounded-lg"
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold">

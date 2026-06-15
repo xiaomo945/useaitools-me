@@ -252,6 +252,8 @@ export default function ReviewWorkflowClient() {
                       src={workflow.tool.iconUrl}
                       alt={workflow.tool.name}
                       className="w-12 h-12 rounded-lg"
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold">

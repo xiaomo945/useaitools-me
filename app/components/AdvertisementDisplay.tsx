@@ -129,6 +129,8 @@ export default function AdvertisementDisplay({ position, category }: Advertiseme
                 src={advertisement.imageUrl}
                 alt={advertisement.title}
                 className="w-20 h-20 rounded-lg object-cover flex-shrink-0"
+                loading="lazy"
+                decoding="async"
               />
             )}
             <div className="flex-1 min-w-0">

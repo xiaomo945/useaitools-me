@@ -94,6 +94,8 @@ export default function SponsoredSlot({ slotName, toolCategory }: SponsoredSlotP
               src={slot.imageUrl}
               alt={slot.title}
               className="w-full h-36 object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         )}

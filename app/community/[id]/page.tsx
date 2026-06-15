@@ -243,6 +243,8 @@ export default function DiscussionDetailPage() {
                     src={discussion.user.image}
                     alt={discussion.user.name}
                     className="w-10 h-10 rounded-full"
+                    loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold">
@@ -314,6 +316,8 @@ export default function DiscussionDetailPage() {
                         src={comment.user.image}
                         alt={comment.user.name}
                         className="w-10 h-10 rounded-full flex-shrink-0"
+                        loading="lazy"
+                        decoding="async"
                       />
                     ) : (
                       <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold flex-shrink-0">
@@ -365,6 +369,8 @@ export default function DiscussionDetailPage() {
                       src={session.user.image}
                       alt={session.user.name || 'User'}
                       className="w-10 h-10 rounded-full flex-shrink-0"
+                      loading="lazy"
+                      decoding="async"
                     />
                   ) : (
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold flex-shrink-0">

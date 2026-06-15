@@ -174,6 +174,8 @@ export default function BlogClient() {
                         src={post.coverImage}
                         alt={post.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   ) : (
@@ -206,6 +208,8 @@ export default function BlogClient() {
                             src={post.author.image}
                             alt={post.author.name}
                             className="w-6 h-6 rounded-full"
+                            loading="lazy"
+                            decoding="async"
                           />
                         ) : (
                           <div className="w-6 h-6 rounded-full bg-slate-200 dark:bg-gray-700 flex items-center justify-center">

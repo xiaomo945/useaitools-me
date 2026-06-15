@@ -135,6 +135,8 @@ export default function BlogPostClient({ params }: Props) {
                 src={post.coverImage}
                 alt={post.coverImageAlt || post.title}
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           )}
@@ -160,6 +162,8 @@ export default function BlogPostClient({ params }: Props) {
                     src={post.author.image}
                     alt={post.author.name}
                     className="w-8 h-8 rounded-full"
+                    loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-gray-700 flex items-center justify-center">

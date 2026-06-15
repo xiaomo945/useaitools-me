@@ -191,6 +191,8 @@ export default function AdvertisementAdmin() {
                               src={ad.imageUrl}
                               alt={ad.title}
                               className="w-10 h-10 rounded-lg object-cover mr-3"
+                              loading="lazy"
+                              decoding="async"
                             />
                           )}
                           <div>
