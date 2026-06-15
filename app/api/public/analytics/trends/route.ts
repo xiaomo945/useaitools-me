@@ -61,15 +61,15 @@ export async function GET(request: NextRequest) {
       take: 10
     })
 
-    const categoryTrends = categoryStats.map(stat => ({
+    const categoryTrends = categoryStats.map((stat: typeof categoryStats[number]) => ({
       category: stat.category,
       count: stat._count.category,
       percentage: 0 // 后续计算
     }))
 
     // 计算百分比
-    const totalTools = categoryTrends.reduce((sum, c) => sum + c.count, 0)
-    categoryTrends.forEach(c => {
+    const totalTools = categoryTrends.reduce((sum: number, c: typeof categoryTrends[number]) => sum + c.count, 0)
+    categoryTrends.forEach((c: typeof categoryTrends[number]) => {
       c.percentage = parseFloat(((c.count / totalTools) * 100).toFixed(2))
     })
 
@@ -93,7 +93,7 @@ export async function GET(request: NextRequest) {
     })
 
     const avgRatingTrend = highRatedTools.length > 0
-      ? highRatedTools.reduce((sum, t) => sum + t.rating, 0) / highRatedTools.length
+      ? highRatedTools.reduce((sum: number, t: typeof highRatedTools[number]) => sum + t.rating, 0) / highRatedTools.length
       : 0
 
     // 获取价格趋势
@@ -113,9 +113,9 @@ export async function GET(request: NextRequest) {
 
     const avgPriceMonthly = paidTools.length > 0
       ? paidTools
-          .map(t => t.priceMonthly || 0)
-          .filter(p => p > 0)
-          .reduce((sum, p) => sum + p, 0) / paidTools.length
+          .map((t: typeof paidTools[number]) => t.priceMonthly || 0)
+          .filter((p: number) => p > 0)
+          .reduce((sum: number, p: number) => sum + p, 0) / paidTools.length
       : 0
 
     // 获取用户互动趋势（评价数量）
@@ -134,7 +134,7 @@ export async function GET(request: NextRequest) {
     })
 
     const reviewsByDate = new Map<string, number>()
-    recentReviews.forEach(review => {
+    recentReviews.forEach((review: typeof recentReviews[number]) => {
       const date = new Date(review.createdAt).toISOString().split('T')[0]
       reviewsByDate.set(date, (reviewsByDate.get(date) || 0) + 1)
     })

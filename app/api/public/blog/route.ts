@@ -95,10 +95,10 @@ export async function GET(request: Request) {
     })
 
     const tagCounts = new Map<string, number>()
-    allPosts.forEach(post => {
+    allPosts.forEach((post: { tags: string | null }) => {
       if (post.tags) {
-        const tags = post.tags.split(',').map(t => t.trim()).filter(t => t)
-        tags.forEach(tag => {
+        const tags = post.tags.split(',').map((t: string) => t.trim()).filter((t: string) => t)
+        tags.forEach((tag: string) => {
           tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1)
         })
       }
@@ -111,9 +111,9 @@ export async function GET(request: Request) {
     return NextResponse.json({
       success: true,
       data: {
-        posts: posts.map(post => ({
+        posts: posts.map((post: any) => ({
           ...post,
-          tags: post.tags ? post.tags.split(',').map(t => t.trim()).filter(t => t) : []
+          tags: post.tags ? post.tags.split(',').map((t: string) => t.trim()).filter((t: string) => t) : []
         })),
         tags,
         pagination: {

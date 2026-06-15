@@ -95,16 +95,15 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       success: true,
       data: {
-        tools: tools.map(tool => ({
+        tools: tools.map((tool: typeof tools[number]) => ({
           ...tool,
-          // 解析 JSON 字段
           screenshotUrls: tool.screenshotUrls ? JSON.parse(tool.screenshotUrls) : [],
           tags: tool.tags ? JSON.parse(tool.tags) : [],
           features: tool.features ? JSON.parse(tool.features) : [],
           pros: tool.pros ? JSON.parse(tool.pros) : [],
           cons: tool.cons ? JSON.parse(tool.cons) : []
         })),
-        categories: categories.map(c => ({
+        categories: categories.map((c: typeof categories[number]) => ({
           name: c.category,
           count: c._count.category
         })),
