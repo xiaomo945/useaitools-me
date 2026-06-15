@@ -6,8 +6,9 @@ import ConversionFunnel from '@/app/components/ConversionFunnel';
 import KeywordTracker from '@/app/components/KeywordTracker';
 import CompetitorAnalysis from '@/app/components/CompetitorAnalysis';
 import AutomatedReports from '@/app/components/AutomatedReports';
+import ABTestingDashboard from '@/app/components/ABTestingDashboard';
 
-type TabType = 'traffic' | 'funnel' | 'keywords' | 'competitors' | 'reports';
+type TabType = 'traffic' | 'funnel' | 'keywords' | 'competitors' | 'reports' | 'ab-testing';
 
 export default function AnalyticsPage() {
   const [activeTab, setActiveTab] = useState<TabType>('traffic');
@@ -18,6 +19,7 @@ export default function AnalyticsPage() {
     { id: 'keywords' as TabType, label: '关键词追踪', icon: '🔍' },
     { id: 'competitors' as TabType, label: '竞品分析', icon: '🏆' },
     { id: 'reports' as TabType, label: '自动化报告', icon: '📈' },
+    { id: 'ab-testing' as TabType, label: 'A/B 测试', icon: '🧪' },
   ];
 
   return (
@@ -63,6 +65,7 @@ export default function AnalyticsPage() {
         {activeTab === 'keywords' && <KeywordTracker />}
         {activeTab === 'competitors' && <CompetitorAnalysis />}
         {activeTab === 'reports' && <AutomatedReports />}
+        {activeTab === 'ab-testing' && <ABTestingDashboard />}
       </div>
     </div>
   );

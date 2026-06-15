@@ -21,6 +21,8 @@ import HolidayBanner from "./components/HolidayBanner";
 import WebVitals from "./components/WebVitals";
 import AuthProvider from "./components/AuthProvider";
 import { ABTestProvider } from "./components/ABTestProvider";
+import PlausibleScript from "./components/PlausibleScript";
+import ClarityScript from "./components/ClarityScript";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -147,6 +149,7 @@ export default function RootLayout({
         <ABTestProvider>
           <AuthProvider>
             <Analytics />
+            <PlausibleScript />
             <a href="#main-content" className="skip-to-main">Skip to main content</a>
           <Suspense fallback={null}>
             <HolidayBanner />
