@@ -102,6 +102,14 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
         'applicationCategory': `https://schema.org/${tool.category}Application`,
         'operatingSystem': 'Web',
         'url': tool.url,
+        'image': tool.icon_url || 'https://useaitools.me/logo.png',
+        'screenshot': `https://useaitools.me/tools/${tool.id}/screenshot.png`,
+        'featureList': [
+          `${tool.category} AI tool`,
+          `${tool.pricing} pricing`,
+          tool.needs_vpn ? 'VPN required' : 'No VPN required',
+          `Supports: ${tool.languages.join(', ')}`,
+        ].join(', '),
         'offers': {
           '@type': 'Offer',
           'price': ['Free', 'Freemium', 'Open Source'].includes(tool.pricing) ? '0' : '9.99',
@@ -121,6 +129,20 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
           'bestRating': '5',
           'worstRating': '1'
         },
+        'review': [
+          {
+            '@type': 'Review',
+            'author': { '@type': 'Organization', 'name': 'Use AI Tools' },
+            'datePublished': '2026-01-15',
+            'reviewBody': `${tool.name} is a top-rated ${tool.category.toLowerCase()} AI tool with a ${tool.pricing.toLowerCase()} pricing model. ${tool.description.slice(0, 200)}`,
+            'reviewRating': {
+              '@type': 'Rating',
+              'ratingValue': tool.rating ? String(tool.rating) : '4.5',
+              'bestRating': '5',
+              'worstRating': '1'
+            }
+          }
+        ],
         'author': {
           '@type': 'Organization',
           'name': 'Use AI Tools',
@@ -158,6 +180,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       siteName: 'Use AI Tools',
       type: 'website',
       url: `https://useaitools.me/tools/${tool.id}`,
+      locale: 'en_US',
+      alternateLocale: 'zh_CN',
     },
     twitter: {
       card: 'summary_large_image',
@@ -166,6 +190,10 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     },
     alternates: {
       canonical: `https://useaitools.me/tools/${tool.id}`,
+      languages: {
+        'en': `/tools/${tool.id}`,
+        'zh': `/tools/${tool.id}?lang=zh`,
+      },
     },
     other: {
       'application/ld+json': JSON.stringify(jsonLd)

@@ -7,6 +7,7 @@ import TrendingTools from '@/app/components/TrendingTools';
 import StatsBanner from '@/app/components/StatsBanner';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import type { Tool } from '@/types';
 import type { Metadata } from 'next';
 
@@ -22,13 +23,21 @@ export const metadata: Metadata = {
   title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
   description: 'Curated directory of the best AI tools. Browse 1,300+ tools across Writing, Image, Video, Audio, Code & Productivity. Find your perfect AI tool in seconds.',
   metadataBase: new URL('https://useaitools.me'),
-  alternates: { canonical: '/' },
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en': '/',
+      'zh': '/?lang=zh',
+    },
+  },
   openGraph: {
     title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
     description: 'Curated directory of the best AI tools. Browse 1,300+ tools across 6 categories.',
     url: 'https://useaitools.me',
     siteName: 'Use AI Tools',
     type: 'website',
+    locale: 'en_US',
+    alternateLocale: 'zh_CN',
   },
   twitter: {
     card: 'summary_large_image',
@@ -183,6 +192,72 @@ export default function Home() {
       <FeaturedTools tools={selected} />
       <TrendingTools tools={sortedTools} />
       <StatsBanner />
+      
+      {/* Latest Blog Posts - Internal Linking */}
+      <div className="mb-16">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">📝</span>
+            <div>
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+                Latest AI Tool Guides
+              </h2>
+              <p className="text-sm text-slate-500 dark:text-slate-400">
+                In-depth reviews and comparisons to help you choose
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/blog"
+            className="text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors flex items-center gap-1"
+          >
+            View all
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {blogPosts.slice(0, 3).map((post) => (
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className="group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              {post.images && post.images.length > 0 && (
+                <div className="aspect-video overflow-hidden bg-slate-100 dark:bg-gray-800">
+                  <img
+                    src={post.images[0].url}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+              <div className="p-5">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                    {post.category}
+                  </span>
+                  <span className="text-xs text-slate-400 dark:text-slate-500">
+                    {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                  </span>
+                </div>
+                <h3 className="font-semibold text-base text-slate-900 dark:text-white mb-2 line-clamp-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                  {post.title}
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">
+                  {post.description}
+                </p>
+                <div className="mt-3 flex items-center gap-1 text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                  Read more
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+      
       {/* Blog Entry Card */}
       <div className="mb-16">
         <Link href="/blog" className="block">

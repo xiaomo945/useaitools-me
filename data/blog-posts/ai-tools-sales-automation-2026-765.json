@@ -10,5 +10,26 @@
   "author": "Use AI Tools Team",
   "reading_time": "14 min",
   "thumbnail": "",
-  "images": []
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+      "alt": "AI Tools for Sales Automation in 2026 - Header",
+      "caption": "AI Tools for Sales Automation in 2026",
+      "prompt": "sales automation dashboard interface with dark theme, professional UI, modern design, 8k, ultra detailed"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      "alt": "AI Tools for Sales Automation in 2026 - Workflow",
+      "caption": "AI Tools for Sales Automation in 2026 workflow visualization",
+      "prompt": "sales automation dashboard workflow visualization showing process, dark theme, cinematic lighting, vibrant colors"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=400&fit=crop",
+      "alt": "AI Tools for Sales Automation in 2026 - Results",
+      "caption": "AI Tools for Sales Automation in 2026 success metrics and results",
+      "prompt": "sales automation dashboard success metrics and results, dark theme, professional photography, inspiring"
+    }
+  ],
+  "tldr": "Automate your entire sales pipeline with AI — from lead generation to follow-up sequences. Built for sales teams wanting to close more deals with intelligent, data-driven workflows.",
+  "canonical_slug": "ai-tools-for-sales-automation-in-2026"
 }

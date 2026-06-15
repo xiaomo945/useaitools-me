@@ -10,5 +10,26 @@
   "author": "Use AI Tools Team",
   "reading_time": "10 min",
   "thumbnail": "",
-  "images": []
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&h=400&fit=crop",
+      "alt": "ElevenLabs vs Murf vs Play.ht: Best AI Voice Generator 2026 - Header",
+      "caption": "ElevenLabs vs Murf vs Play.ht: Best AI Voice Generator 2026",
+      "prompt": "AI voice synthesis interface with dark theme, professional UI, modern design, 8k, ultra detailed"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&h=400&fit=crop",
+      "alt": "ElevenLabs vs Murf vs Play.ht: Best AI Voice Generator 2026 - Workflow",
+      "caption": "ElevenLabs vs Murf vs Play.ht: Best AI Voice Generator 2026 workflow visualization",
+      "prompt": "AI voice synthesis interface workflow visualization showing process, dark theme, cinematic lighting, vibrant colors"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=400&fit=crop",
+      "alt": "ElevenLabs vs Murf vs Play.ht: Best AI Voice Generator 2026 - Results",
+      "caption": "ElevenLabs vs Murf vs Play.ht: Best AI Voice Generator 2026 success metrics and results",
+      "prompt": "AI voice synthesis interface success metrics and results, dark theme, professional photography, inspiring"
+    }
+  ],
+  "tldr": "Head-to-head comparison of ElevenLabs, Murf, and Play.ht across voice quality, cloning, languages, emotion, and pricing. Helps creators and businesses pick the right AI voice generator.",
+  "canonical_slug": "elevenlabs-vs-murf-vs-play-ht-best-ai-voice-generator-2026"
 }

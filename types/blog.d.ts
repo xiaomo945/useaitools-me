@@ -20,6 +20,7 @@ export interface BlogPost {
   featured?: boolean;
   images: BlogImage[];
   content: string;
+  canonical_slug?: string;
 }
 
 declare module '@/data/blog-posts.json' {

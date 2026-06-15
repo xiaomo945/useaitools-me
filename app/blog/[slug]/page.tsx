@@ -111,6 +111,9 @@ export async function generateMetadata({
     };
   }
 
+  // Use canonical_slug if it exists (for duplicate posts), otherwise use current slug
+  const canonicalSlug = post.canonical_slug || slug;
+  
   return {
     title: post.title,
     description: post.description,
@@ -123,6 +126,8 @@ export async function generateMetadata({
       publishedTime: post.date,
       modifiedTime: post.date,
       authors: ['Use AI Tools'],
+      locale: 'en_US',
+      alternateLocale: 'zh_CN',
     },
     twitter: {
       card: 'summary_large_image',
@@ -130,7 +135,11 @@ export async function generateMetadata({
       description: post.description,
     },
     alternates: {
-      canonical: `https://useaitools.me/blog/${slug}`,
+      canonical: `https://useaitools.me/blog/${canonicalSlug}`,
+      languages: {
+        'en': `/blog/${slug}`,
+        'zh': `/blog/${slug}?lang=zh`,
+      },
     },
   };
 }
@@ -216,11 +225,18 @@ export default async function BlogDetailPage({
     '@type': 'Article',
     headline: post.title,
     description: post.description,
+    image: post.images && post.images.length > 0 ? post.images[0] : 'https://useaitools.me/logo.png',
     datePublished: post.date,
     dateModified: post.date,
     author: {
-      '@type': 'Organization',
-      name: 'Use AI Tools',
+      '@type': 'Person',
+      name: post.author || 'xiaomo',
+      url: 'https://useaitools.me/about',
+      jobTitle: 'Indie Maker',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Use AI Tools'
+      }
     },
     publisher: {
       '@type': 'Organization',
@@ -228,9 +244,22 @@ export default async function BlogDetailPage({
       logo: {
         '@type': 'ImageObject',
         url: 'https://useaitools.me/logo.png',
-      },
+        width: 200,
+        height: 200
+      }
     },
     url: `https://useaitools.me/blog/${slug}`,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://useaitools.me/blog/${slug}`
+    },
+    keywords: `${post.category}, AI tools, ${post.category.toLowerCase()} tools, best AI tools 2026`,
+    inLanguage: 'en',
+    copyrightHolder: {
+      '@type': 'Organization',
+      name: 'Use AI Tools'
+    },
+    copyrightYear: new Date(post.date).getFullYear()
   };
 
   return (

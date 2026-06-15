@@ -10,5 +10,26 @@
   "author": "Use AI Tools Team",
   "reading_time": "13 min",
   "thumbnail": "",
-  "images": []
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&h=400&fit=crop",
+      "alt": "VEED.io vs CapCut vs Descript: Best AI Video Editor 2026 - Header",
+      "caption": "VEED.io vs CapCut vs Descript: Best AI Video Editor 2026",
+      "prompt": "video editing timeline interface with dark theme, professional UI, modern design, 8k, ultra detailed"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=400&fit=crop",
+      "alt": "VEED.io vs CapCut vs Descript: Best AI Video Editor 2026 - Workflow",
+      "caption": "VEED.io vs CapCut vs Descript: Best AI Video Editor 2026 workflow visualization",
+      "prompt": "video editing timeline interface workflow visualization showing process, dark theme, cinematic lighting, vibrant colors"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=800&h=400&fit=crop",
+      "alt": "VEED.io vs CapCut vs Descript: Best AI Video Editor 2026 - Results",
+      "caption": "VEED.io vs CapCut vs Descript: Best AI Video Editor 2026 success metrics and results",
+      "prompt": "video editing timeline interface success metrics and results, dark theme, professional photography, inspiring"
+    }
+  ],
+  "tldr": "In-depth comparison of VEED.io, CapCut, and Descript covering AI features, auto-captions, pricing, and export quality. Perfect for content creators choosing the right AI video editor.",
+  "canonical_slug": "veed-io-vs-capcut-vs-descript-best-ai-video-editor-2026-306"
 }

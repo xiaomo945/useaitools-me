@@ -95,9 +95,19 @@ interface CategoryHeroProps {
   category: string;
   categoryName: string;
   description: string;
+  toolCount?: number;
 }
 
-export default function CategoryHero({ category, categoryName, description }: CategoryHeroProps) {
+const categoryAISummaries: Record<Category, string> = {
+  Writing: '150+ AI writing tools for content creation, copywriting, SEO, and more. Top picks: Rytr, Jasper, Copy.ai. Price range: Free to $49/month.',
+  Image: '120+ AI image generators and editors. Top picks: Midjourney, DALL-E 3, Stable Diffusion. Price range: Free to $60/month.',
+  Productivity: '160+ AI productivity assistants and automation tools. Top picks: Notion AI, ChatGPT, Claude. Price range: Free to $30/month.',
+  Code: '90+ AI coding assistants and development tools. Top picks: GitHub Copilot, Cursor, Codeium. Price range: Free to $19/month.',
+  Audio: '80+ AI audio editors and voice generators. Top picks: ElevenLabs, Murf, Play.ht. Price range: Free to $49/month.',
+  Video: '100+ AI video editors and generators. Top picks: VEED.io, Synthesia, HeyGen. Price range: Free to $99/month.'
+};
+
+export default function CategoryHero({ category, categoryName, description, toolCount }: CategoryHeroProps) {
   const colors = colorMap[category as Category];
   const emoji = categoryEmojis[category as Category];
 
@@ -164,6 +174,17 @@ export default function CategoryHero({ category, categoryName, description }: Ca
               >
                 <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.57-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z" />
               </svg>
+            </div>
+          </div>
+
+          {/* AI Summary - Quick Facts for AI Search Engines */}
+          <div className="relative max-w-2xl mx-auto mt-6 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+            <div className="backdrop-blur-sm bg-emerald-50/60 dark:bg-emerald-900/20 rounded-xl p-4 border border-emerald-200/50 dark:border-emerald-700/30">
+              <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300 mb-1">Quick Summary</p>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                {categoryAISummaries[category as Category]}
+                {toolCount && ` Currently featuring ${toolCount} tools.`}
+              </p>
             </div>
           </div>
         </div>

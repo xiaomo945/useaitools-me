@@ -10,5 +10,26 @@
   "author": "Use AI Tools Team",
   "reading_time": "12 min",
   "thumbnail": "",
-  "images": []
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&h=400&fit=crop",
+      "alt": "How to Create AI-Generated Social Media Ads in 2026 - Header",
+      "caption": "How to Create AI-Generated Social Media Ads in 2026",
+      "prompt": "social media ads creation interface with dark theme, professional UI, modern design, 8k, ultra detailed"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop",
+      "alt": "How to Create AI-Generated Social Media Ads in 2026 - Workflow",
+      "caption": "How to Create AI-Generated Social Media Ads in 2026 workflow visualization",
+      "prompt": "social media ads creation workflow visualization showing process, dark theme, cinematic lighting, vibrant colors"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+      "alt": "How to Create AI-Generated Social Media Ads in 2026 - Results",
+      "caption": "How to Create AI-Generated Social Media Ads in 2026 success metrics and results",
+      "prompt": "social media ads creation success metrics and results, dark theme, professional photography, inspiring"
+    }
+  ],
+  "tldr": "End-to-end workflow for creating AI social media ads: audience research, copywriting, visuals, video, and A/B testing. Perfect for marketers wanting higher-performing ads in less time.",
+  "canonical_slug": "how-to-create-ai-generated-social-media-ads-2026"
 }

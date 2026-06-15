@@ -10,5 +10,26 @@
   "author": "Use AI Tools Team",
   "reading_time": "9 min",
   "thumbnail": "",
-  "images": []
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop",
+      "alt": "Best AI Code Tools for Mobile Apps in 2026 - Header",
+      "caption": "Best AI Code Tools for Mobile Apps in 2026",
+      "prompt": "mobile app development IDE interface with dark theme, professional UI, modern design, 8k, ultra detailed"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=400&fit=crop",
+      "alt": "Best AI Code Tools for Mobile Apps in 2026 - Workflow",
+      "caption": "Best AI Code Tools for Mobile Apps in 2026 workflow visualization",
+      "prompt": "mobile app development IDE workflow visualization showing process, dark theme, cinematic lighting, vibrant colors"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
+      "alt": "Best AI Code Tools for Mobile Apps in 2026 - Results",
+      "caption": "Best AI Code Tools for Mobile Apps in 2026 success metrics and results",
+      "prompt": "mobile app development IDE success metrics and results, dark theme, professional photography, inspiring"
+    }
+  ],
+  "tldr": "Seven AI-powered tools for mobile app development — AI-assisted coding, UI generation, automated testing, and deployment. Built for developers shipping production-quality apps faster.",
+  "canonical_slug": "best-ai-code-tools-for-mobile-apps-in-2026"
 }

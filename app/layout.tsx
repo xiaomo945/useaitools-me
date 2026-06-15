@@ -19,6 +19,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import HolidayBanner from "./components/HolidayBanner";
 import AuthProvider from "./components/AuthProvider";
 import WebVitals from "./components/WebVitals";
+import ServiceWorkerRegistration from "./components/ServiceWorkerRegistration";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -178,6 +179,7 @@ export default function RootLayout({
           <GuidedTour />
           <ExternalLinkToast />
           <WebVitals />
+          <ServiceWorkerRegistration />
         </ToastProvider>
       </body>
     </html>

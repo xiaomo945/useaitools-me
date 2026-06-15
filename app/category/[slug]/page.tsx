@@ -8,6 +8,7 @@ import CategoryHero from './CategoryHero';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import CategoryStats from '@/app/components/CategoryStats';
 import GoldPicks from '@/app/components/GoldPicks';
+import TopTools from '@/app/components/TopTools';
 import type { Tool } from '@/types';
 
 const tools = toolsData as Tool[];
@@ -102,6 +103,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       siteName: 'Use AI Tools',
       type: 'website',
       url: `https://useaitools.me/category/${slug}`,
+      locale: 'en_US',
+      alternateLocale: 'zh_CN',
     },
     twitter: {
       card: 'summary_large_image',
@@ -110,6 +113,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     alternates: {
       canonical: `https://useaitools.me/category/${slug}`,
+      languages: {
+        'en': `/category/${slug}`,
+        'zh': `/category/${slug}?lang=zh`,
+      },
     },
   };
 }
@@ -246,6 +253,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
             category={category}
             categoryName={categoryName}
             description={description}
+            toolCount={categoryTools.length}
           />
 
           {/* Stats Component */}
@@ -253,6 +261,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
           {/* Gold Picks: Top 3 Editor Recommendations */}
           <GoldPicks tools={categoryTools} categoryColors={colors} />
+
+          {/* Top 10 Tools by Rating */}
+          <TopTools tools={categoryTools} category={categoryName} categoryColors={colors} />
 
           <div className={`h-px bg-gradient-to-r from-transparent via-${categorySlug.toLowerCase()}-300 dark:via-${categorySlug.toLowerCase()}-500/20 to-transparent mb-10 mx-auto max-w-2xl`} />
 

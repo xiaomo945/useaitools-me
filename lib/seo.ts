@@ -45,6 +45,10 @@ export function buildMetadata(options: BuildMetadataOptions = {}): Metadata {
     robots: "index, follow",
     alternates: {
       canonical,
+      languages: {
+        'en': canonicalPath || '/',
+        'zh': `${canonicalPath || '/'}?lang=zh`,
+      },
     },
     openGraph: {
       title: fullTitle,
@@ -52,6 +56,8 @@ export function buildMetadata(options: BuildMetadataOptions = {}): Metadata {
       siteName: SITE_NAME,
       type: "website",
       url: canonical,
+      locale: 'en_US',
+      alternateLocale: 'zh_CN',
       images: [
         {
           url: ogImage,
