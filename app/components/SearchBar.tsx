@@ -20,6 +20,7 @@ interface SearchBarProps {
   blogPosts: { id: number; title: string; slug: string; date: string; description: string; category: string }[];
   router: ReturnType<typeof useRouter>;
   goToSearchPage: () => void;
+  triggerSearch: () => void;
   handleSearchKeyDown: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   speechSupported: boolean;
   isListening: boolean;
@@ -46,6 +47,7 @@ export default function SearchBar({
   blogPosts,
   router,
   goToSearchPage,
+  triggerSearch,
   handleSearchKeyDown,
   speechSupported,
   isListening,
@@ -129,7 +131,7 @@ export default function SearchBar({
             </button>
           )}
           <button
-            onClick={goToSearchPage}
+            onClick={triggerSearch}
             disabled={!search.trim()}
             className={`p-1.5 sm:p-2 rounded-full transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center ${
               search.trim()

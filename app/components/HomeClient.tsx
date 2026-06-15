@@ -487,6 +487,8 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   const [hasMore, setHasMore] = useState(true);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [search, setSearch] = useState('');
+  // Debounced search with 300ms delay — DISABLED: only filter on explicit trigger (Enter key or search button)
+  const [triggeredSearch, setTriggeredSearch] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<Category[]>(['All']);
   const [selectedPricing, setSelectedPricing] = useState<string>('All');
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -753,24 +755,32 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         }
       } else if (search.trim()) {
         saveRecentSearch(search.trim());
-        router.push(`/search?q=${encodeURIComponent(search.trim())}`);
+        triggerSearch();
       }
     }
   };
 
-  // Auto scroll to tools grid when search is entered
+  // Auto scroll to tools grid when search is triggered (not on every keystroke)
   useEffect(() => {
-    if (search.trim()) {
+    if (triggeredSearch.trim()) {
       toolsGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setTimeout(() => setShowWelcomeTip(false), 0);
     }
+  }, [triggeredSearch]);
+
+  // Navigate to search page or trigger in-place filtering
+  const triggerSearch = useCallback(() => {
+    if (search.trim()) {
+      debugLog('Search', `Triggering search: "${search.trim()}"`);
+      playSearchSound();
+      setTriggeredSearch(search.trim());
+      setShowSuggestions(false);
+    }
   }, [search]);
 
-  // Navigate to search page
   const goToSearchPage = () => {
     if (search.trim()) {
-      debugLog('Search', `Navigating to search page: "${search.trim()}"`);
-      playSearchSound();
+      saveRecentSearch(search.trim());
       router.push(`/search?q=${encodeURIComponent(search.trim())}`);
     }
   };
@@ -1123,18 +1133,6 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     setTimeout(() => setMysteryCount(getMysteryCount()), 0);
   }, []);
 
-  // Debounced search with 300ms delay
-  const [debouncedSearch, setDebouncedSearch] = useState('');
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setDebouncedSearch(search);
-      if (search.trim()) {
-        debugLog('Search', `Debounced search: "${search}"`);
-      }
-    }, 300);
-    return () => clearTimeout(timer);
-  }, [search]);
-
   // Synonym map for search enhancement
   const searchSynonyms: Record<string, string[]> = {
     'photo': ['image', 'picture', 'visual'],
@@ -1206,14 +1204,14 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
   // 智能排序：优先展示海外 AI 工具（needs_vpn: true），中文工具排在后面
   const filteredTools = useMemo(() => {
     const filtered = displayedTools.map((tool) => {
-      if (!debouncedSearch.trim()) {
+      if (!triggeredSearch.trim()) {
         const matchesCategory = selectedCategories.includes('All') || selectedCategories.includes(tool.category);
         const matchesPricing = selectedPricing === 'All' || tool.pricing === selectedPricing;
         return { tool, score: 0, matches: matchesCategory && matchesPricing };
       }
       
-      const nameMatch = fuzzyMatch(tool.name, debouncedSearch);
-      const descMatch = fuzzyMatch(tool.description, debouncedSearch);
+      const nameMatch = fuzzyMatch(tool.name, triggeredSearch);
+      const descMatch = fuzzyMatch(tool.description, triggeredSearch);
       const matchesSearch = nameMatch.match || descMatch.match;
       const searchScore = Math.max(nameMatch.score, descMatch.score * 0.7);
       
@@ -1226,7 +1224,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
     // Sort by relevance score (search), then Staff Pick, then VPN, then name
     return [...filtered].sort((a, b) => {
       // Search relevance first
-      if (debouncedSearch.trim()) {
+      if (triggeredSearch.trim()) {
         if (a.score !== b.score) return b.score - a.score;
       }
       
@@ -1240,15 +1238,15 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
 
       return a.tool.name.localeCompare(b.tool.name);
     }).map(item => item.tool);
-  }, [debouncedSearch, selectedCategories, selectedPricing, displayedTools]);
+  }, [triggeredSearch, selectedCategories, selectedPricing, displayedTools]);
 
   useEffect(() => {
-    if (!selectedCategories.includes('All') || selectedPricing !== 'All' || debouncedSearch) {
+    if (!selectedCategories.includes('All') || selectedPricing !== 'All' || triggeredSearch) {
       setTimeout(() => setIsFilterTransitioning(true), 0);
       const timer = setTimeout(() => setIsFilterTransitioning(false), 300);
       return () => clearTimeout(timer);
     }
-  }, [selectedCategories, selectedPricing, debouncedSearch]);
+  }, [selectedCategories, selectedPricing, triggeredSearch]);
 
   useEffect(() => {
     const handleOpenTool = (e: Event) => {
@@ -1605,10 +1603,6 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
         <HeroSection
           mysteryCount={mysteryCount}
           openMysteryBox={openMysteryBox}
-          showDailyPick={showDailyPick}
-          dailyPick={dailyPick}
-          getCategoryColors={getCategoryColors}
-          setShowDailyPick={setShowDailyPick}
         />
         
         {/* Search Box */}
@@ -1628,6 +1622,7 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           blogPosts={blogPosts}
           router={router}
           goToSearchPage={goToSearchPage}
+          triggerSearch={triggerSearch}
           handleSearchKeyDown={handleSearchKeyDown}
           speechSupported={speechSupported}
           isListening={isListening}
@@ -1637,6 +1632,131 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
           searchInputRef={searchInputRef}
           blurTimeoutRef={blurTimeoutRef}
         />
+        
+        {/* Scene Guidance Cards */}
+        <div className="max-w-2xl mx-auto mb-4 sm:mb-8 px-3 sm:px-0">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
+            {[
+              { icon: '✍️', label: 'Write a blog post', href: '/compare?category=Writing', desc: 'Find AI writing tools' },
+              { icon: '🎬', label: 'Edit a video', href: '/compare?category=Video', desc: 'Compare video editors' },
+              { icon: '🎨', label: 'Generate images', href: '/compare?category=Image', desc: 'Explore AI image tools' },
+              { icon: '📊', label: 'Boost productivity', href: '/compare?category=Productivity', desc: 'Top productivity AI' },
+            ].map((card) => (
+              <Link
+                key={card.label}
+                href={card.href}
+                className="group flex flex-col items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-2.5 sm:py-3 bg-emerald-50/60 dark:bg-emerald-950/20 border border-emerald-200/60 dark:border-emerald-800/40 rounded-xl hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/10 hover:border-emerald-300 dark:hover:border-emerald-600 transition-all duration-300 ease-out text-center"
+              >
+                <span className="text-lg sm:text-2xl">{card.icon}</span>
+                <span className="text-[11px] sm:text-xs font-semibold text-slate-700 dark:text-slate-200 leading-tight">{card.label}</span>
+                <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500 hidden sm:block">{card.desc}</span>
+                <svg className="w-3 h-3 text-emerald-400 dark:text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* 🎯 Discover: Daily Pick + Mystery Box */}
+        <div className="max-w-2xl mx-auto mb-4 sm:mb-8 px-3 sm:px-0">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-sm font-bold text-slate-700 dark:text-slate-200">🎯 Discover</span>
+            <span className="h-px flex-1 bg-slate-200 dark:bg-slate-800" />
+          </div>
+          <div className="space-y-3">
+            {/* Daily Pick */}
+            {showDailyPick && dailyPick && (() => {
+              const colors = getCategoryColors(dailyPick.category);
+              const reasons = [
+                'A hidden gem worth exploring',
+                'Highly rated but often overlooked',
+                'Users love this underrated tool',
+                'Try something new today',
+                'A fresh pick just for you',
+              ];
+              const today = new Date().toISOString().slice(0, 10);
+              let hash = 0;
+              for (let i = 0; i < today.length; i++) {
+                hash = ((hash << 5) - hash) + today.charCodeAt(i);
+                hash |= 0;
+              }
+              const reason = reasons[Math.abs(hash) % reasons.length];
+              return (
+                <div className="bg-gradient-to-r from-emerald-50 via-white to-teal-50 dark:from-emerald-950/30 dark:via-gray-900 dark:to-teal-950/30 border border-emerald-200/60 dark:border-emerald-800/40 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  <button
+                    onClick={() => {
+                      setShowDailyPick(false);
+                      try { localStorage.setItem('dailyPickDismissed', today); } catch {}
+                    }}
+                    className="absolute top-2 right-2 p-1 hover:bg-emerald-200 dark:hover:bg-emerald-800 rounded-full transition-colors z-10"
+                    aria-label="Dismiss daily pick"
+                  >
+                    <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm">
+                      💡 Daily Pick
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3 sm:gap-4">
+                    <Link
+                      href={`/tools/${dailyPick.id}`}
+                      className={`w-10 h-10 sm:w-14 sm:h-14 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-lg sm:text-2xl font-bold shrink-0 hover:scale-105 transition-transform duration-300`}
+                      style={{ fontFamily: 'Playfair Display, serif' }}
+                    >
+                      {dailyPick.name.charAt(0)}
+                    </Link>
+                    <div className="flex-1 min-w-0">
+                      <Link href={`/tools/${dailyPick.id}`} className="inline-block">
+                        <h3 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate">
+                          🌟 {dailyPick.name}
+                        </h3>
+                      </Link>
+                      <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5 truncate">{reason}</p>
+                    </div>
+                    <Link
+                      href={`/tools/${dailyPick.id}`}
+                      className="shrink-0 inline-flex items-center gap-1 px-3 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px]"
+                    >
+                      Try It →
+                    </Link>
+                  </div>
+                </div>
+              );
+            })()}
+
+            {/* Mystery Box */}
+            <div className="bg-gradient-to-r from-amber-50 via-white to-orange-50 dark:from-amber-950/20 dark:via-gray-900 dark:to-orange-950/20 border border-amber-200/60 dark:border-amber-800/40 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-amber-400 to-orange-400 flex items-center justify-center text-xl sm:text-2xl shrink-0">
+                  🎁
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white">
+                    Mystery Box
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
+                    {mysteryCount >= 3 ? 'Come back tomorrow for more!' : `Discover a random AI tool (${3 - mysteryCount} left today)`}
+                  </p>
+                </div>
+                <button
+                  onClick={openMysteryBox}
+                  disabled={mysteryCount >= 3}
+                  className={`shrink-0 inline-flex items-center gap-1 px-3 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px] ${
+                    mysteryCount >= 3
+                      ? 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed'
+                      : 'bg-gradient-to-r from-amber-500 to-orange-500 text-white'
+                  }`}
+                >
+                  {mysteryCount >= 3 ? 'Done' : 'Open Box'}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         
         {/* Recently Viewed Quick Access */}
           {recentlyViewedIds.length > 0 && (
@@ -2053,6 +2173,75 @@ export default function HomeClient({ initialTools, featuredTools, blogPosts, tot
                 </div>
               );
             })}
+          </div>
+        </div>
+
+        {/* Trending This Week */}
+        <div className="mb-8 sm:mb-16">
+          <div className="flex items-center gap-2 mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+              🔥 Trending This Week
+            </h2>
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-gradient-to-r from-rose-500 to-amber-500 text-white">HOT</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {(() => {
+              const trending = [...displayedTools]
+                .sort((a, b) => (b.rating_count || 0) - (a.rating_count || 0))
+                .slice(0, 4);
+              return trending.map((tool, index) => {
+                const colors = getCategoryColors(tool.category);
+                return (
+                  <Link
+                    key={tool.id}
+                    href={`/tools/${tool.id}`}
+                    className="group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-4 sm:p-5 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out relative overflow-hidden"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    {/* Trending Badge */}
+                    <div className="absolute top-3 right-3 z-10">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-gradient-to-r from-rose-500 to-amber-500 text-white shadow-sm">
+                        <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M17.66 11.2C17.43 10.9 17.15 10.64 16.89 10.38C16.22 9.78 15.46 9.35 14.82 8.72C13.33 7.26 13 4.85 13.95 3C13 3.23 12.17 3.75 11.46 4.32C8.87 6.4 7.85 10.07 9.07 13.22C9.11 13.32 9.15 13.42 9.15 13.55C9.15 13.77 9 13.97 8.8 14.05C8.57 14.15 8.33 14.09 8.14 13.93C8.08 13.88 8.04 13.83 8 13.76C6.87 12.33 6.69 10.28 7.45 8.64C5.78 10 4.87 12.3 5 14.47C5.06 14.97 5.12 15.47 5.29 15.97C5.43 16.57 5.7 17.17 6 17.7C7.08 19.43 8.95 20.67 10.96 20.92C13.1 21.19 15.39 20.8 16.92 19.32C18.39 17.85 19.09 15.8 18.94 13.82C18.85 12.64 18.45 11.5 17.66 11.2Z"/>
+                        </svg>
+                        #{index + 1} Trending
+                      </span>
+                    </div>
+                    
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className={`w-10 h-10 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-lg font-bold shrink-0`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                        {tool.name.charAt(0)}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="font-semibold text-sm text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors truncate pr-16">
+                          {tool.name}
+                        </h3>
+                        <div className="flex items-center gap-2 mt-0.5">
+                          <span className="text-xs text-amber-500 font-semibold">★ {(tool.rating || 0).toFixed(1)}</span>
+                          <span className="text-[10px] text-slate-400 dark:text-slate-500">{tool.rating_count || 0} reviews</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p className="text-xs text-slate-600 dark:text-gray-300 line-clamp-2 mb-3 leading-relaxed">
+                      {tool.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <span className={`px-2 py-0.5 rounded-full text-[10px] font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text}`}>
+                        {tool.category}
+                      </span>
+                      <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400 group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                        View
+                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </div>
+                  </Link>
+                );
+              });
+            })()}
           </div>
         </div>
 

@@ -58,70 +58,47 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* Our AI Tools Section */}
+            {/* Our Products & Brands */}
             <div className="mb-6">
               <h3 className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wide mb-3">
-                🚀 Our AI Tools
+                🚀 Our Products
               </h3>
-              <div className="flex justify-center gap-4 flex-wrap">
-                <Link
-                  href="/writer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-medium hover:bg-emerald-100 dark:hover:bg-emerald-500/20 transition-all duration-300 text-sm"
-                >
-                  <span className="text-base">✍️</span>
-                  Use AI Writer
-                  <span className="text-xs px-1.5 py-0.5 rounded-full bg-emerald-500 text-white font-semibold">Soon</span>
-                </Link>
-                <Link
-                  href="/image"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-violet-50 dark:bg-violet-500/10 border border-violet-200 dark:border-violet-500/20 text-violet-700 dark:text-violet-300 font-medium hover:bg-violet-100 dark:hover:bg-violet-500/20 transition-all duration-300 text-sm"
-                >
-                  <span className="text-base">🎨</span>
-                  Use AI Image
-                  <span className="text-xs px-1.5 py-0.5 rounded-full bg-violet-500 text-white font-semibold">Soon</span>
-                </Link>
-                <Link
-                  href="/mobile"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-600 dark:text-slate-400 font-medium hover:bg-slate-100 dark:hover:bg-gray-700 transition-all duration-300 text-sm"
-                >
-                  <span className="text-base">📱</span>
-                  Mobile App
-                  <span className="text-xs px-1.5 py-0.5 rounded-full bg-slate-400 text-white font-semibold">Soon</span>
-                </Link>
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-400 dark:text-gray-500 text-sm cursor-not-allowed">
-                  <span className="text-base">🎵</span>
-                  Use AI Audio
-                </span>
-              </div>
-            </div>
-
-            {/* Brand Matrix */}
-            <div className="mb-6">
-              <div className="flex justify-center gap-4 flex-wrap">
+              <div className="flex justify-center gap-3 flex-wrap">
                 <a
                   href="https://tryaiwriter.com"
                   target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 dark:bg-gray-800 border border-gray-700 text-xs text-gray-400 dark:text-gray-500 hover:border-emerald-500/40 hover:text-emerald-400 dark:hover:text-emerald-400 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 text-emerald-700 dark:text-emerald-300 text-xs font-medium hover:bg-emerald-100 dark:hover:bg-emerald-500/20 transition-all duration-300"
                 >
-                  🖋️ tryaiwriter.com
-                  <span className="text-gray-600 dark:text-gray-600">— AI Writing Tool</span>
+                  <span className="text-sm">🖋️</span>
+                  tryaiwriter.com
+                  <span className="text-[9px] px-1 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400">AI Writing</span>
                 </a>
                 <a
                   href="https://useaiimage.com"
                   target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 dark:bg-gray-800 border border-gray-700 text-xs text-gray-400 dark:text-gray-500 hover:border-violet-500/40 hover:text-violet-400 dark:hover:text-violet-400 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-violet-50 dark:bg-violet-500/10 border border-violet-200 dark:border-violet-500/20 text-violet-700 dark:text-violet-300 text-xs font-medium hover:bg-violet-100 dark:hover:bg-violet-500/20 transition-all duration-300"
                 >
-                  🎨 useaiimage.com
-                  <span className="text-gray-600 dark:text-gray-600">— AI Image Generator</span>
+                  <span className="text-sm">🎨</span>
+                  useaiimage.com
+                  <span className="text-[9px] px-1 py-0.5 rounded bg-violet-500/20 text-violet-600 dark:text-violet-400">AI Image</span>
                 </a>
                 <a
                   href="https://useaipen.com"
                   target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-900 dark:bg-gray-800 border border-gray-700 text-xs text-gray-400 dark:text-gray-500 hover:border-teal-500/40 hover:text-teal-400 dark:hover:text-teal-400 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/20 text-teal-700 dark:text-teal-300 text-xs font-medium hover:bg-teal-100 dark:hover:bg-teal-500/20 transition-all duration-300"
                 >
-                  🖊️ useaipen.com
-                  <span className="text-gray-600 dark:text-gray-600">— Lightweight AI Writer</span>
+                  <span className="text-sm">🖊️</span>
+                  useaipen.com
+                  <span className="text-[9px] px-1 py-0.5 rounded bg-teal-500/20 text-teal-600 dark:text-teal-400">AI Writer</span>
                 </a>
+                <Link
+                  href="/mobile"
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 text-slate-600 dark:text-slate-400 text-xs font-medium hover:bg-slate-100 dark:hover:bg-gray-700 transition-all duration-300"
+                >
+                  <span className="text-sm">📱</span>
+                  Mobile App
+                  <span className="text-[9px] px-1 py-0.5 rounded bg-slate-400/20 text-slate-500">Soon</span>
+                </Link>
               </div>
             </div>
 

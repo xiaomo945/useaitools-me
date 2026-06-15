@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Star, Filter, X } from 'lucide-react';
+import { ArrowRight, Star, Filter, X, CheckSquare, Square } from 'lucide-react';
 
 interface Tool {
   id: number;
@@ -47,6 +47,7 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
   const [minRating, setMinRating] = useState(0);
   const [sortBy, setSortBy] = useState('rating');
   const [showFilters, setShowFilters] = useState(false);
+  const [compareSelected, setCompareSelected] = useState<number[]>([]);
 
   const filteredAndSorted = useMemo(() => {
     let result = tools;
@@ -85,6 +86,14 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
     setSelectedPricing(prev =>
       prev.includes(price) ? prev.filter(p => p !== price) : [...prev, price]
     );
+  };
+
+  const toggleCompare = (id: number) => {
+    setCompareSelected(prev => {
+      if (prev.includes(id)) return prev.filter(i => i !== id);
+      if (prev.length >= 4) return prev; // Max 4 for comparison
+      return [...prev, id];
+    });
   };
 
   const clearAll = () => {
@@ -230,7 +239,25 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
             const colors = categoryColorMap[tool.category] || categoryColorMap.Productivity;
             const hasAffiliate = !!tool.affiliate_link;
             return (
-              <Link
+              <div key={tool.id} className="relative group">
+                {/* Compare Checkbox */}
+                <button
+                  onClick={(e) => { e.preventDefault(); toggleCompare(tool.id); }}
+                  className={`absolute top-2 left-2 z-10 p-1 rounded-lg transition-all duration-200 ${
+                    compareSelected.includes(tool.id)
+                      ? 'bg-emerald-500 text-white shadow-md'
+                      : 'bg-white/80 dark:bg-gray-800/80 text-slate-300 dark:text-slate-600 hover:text-emerald-500 dark:hover:text-emerald-400'
+                  }`}
+                  aria-label={compareSelected.includes(tool.id) ? `Remove ${tool.name} from compare` : `Add ${tool.name} to compare`}
+                >
+                  {compareSelected.includes(tool.id) ? (
+                    <CheckSquare className="w-4 h-4" />
+                  ) : (
+                    <Square className="w-4 h-4" />
+                  )}
+                </button>
+
+                <Link
                 key={tool.id}
                 href={`/tools/${tool.id}`}
                 className="group relative bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up"
@@ -296,8 +323,27 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
                   </div>
                 </div>
               </Link>
+              </div>
             );
           })}
+        </div>
+      )}
+
+      {/* Floating Compare Button */}
+      {compareSelected.length >= 2 && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 animate-fade-in-up">
+          <Link
+            href={`/compare?tools=${compareSelected.join(',')}`}
+            className="inline-flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-2xl shadow-2xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:-translate-y-1 transition-all duration-300"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12M8 12h12M8 17h12M4 7h.01M4 12h.01M4 17h.01" />
+            </svg>
+            Compare Selected ({compareSelected.length})
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       )}
     </div>
