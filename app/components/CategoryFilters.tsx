@@ -51,12 +51,10 @@ export default function CategoryFilters({
           {categories.map((category, index) => {
             const isActive = category === 'All' ? selectedCategories.includes('All') : selectedCategories.includes(category);
             
-            const buttonStyle = `px-2 py-1 sm:px-4 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.98] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[44px] flex items-center justify-center ${
+            const buttonStyle = `px-2 py-1 sm:px-4 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ease-out active:scale-[0.96] whitespace-nowrap focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none min-h-[44px] flex items-center justify-center ${
               isActive
-                ? category === 'All'
-                  ? 'bg-emerald-600 text-white'
-                  : 'bg-emerald-600 text-white dark:bg-emerald-600 dark:text-white'
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 active:bg-gray-200 dark:active:bg-gray-700'
+                ? 'bg-emerald-600 text-white shadow-md shadow-emerald-500/30 dark:bg-emerald-600 dark:text-white scale-105'
+                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 hover:scale-105 active:bg-gray-200 dark:active:bg-gray-700'
             }`;
             
             return (

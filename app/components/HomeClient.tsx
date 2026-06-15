@@ -150,7 +150,7 @@ const ToolCard = memo(function ToolCard({
       draggable
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
-      className={`group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 active:scale-[0.98] transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative select-none ${isDragging ? 'opacity-50 scale-[0.98]' : ''} ${hasAffiliate ? 'affiliate-card' : ''}`}
+      className={`group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-400 dark:hover:border-emerald-500 hover:shadow-2xl hover:shadow-emerald-500/10 hover:-translate-y-2 active:scale-[0.96] active:shadow-lg transition-all duration-300 ease-out animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 block relative select-none ${isDragging ? 'opacity-50 scale-[0.98]' : ''} ${hasAffiliate ? 'affiliate-card' : ''}`}
       style={{
         animationDelay: `${index * 50}ms`,
         willChange: 'transform',
@@ -200,7 +200,7 @@ const ToolCard = memo(function ToolCard({
           <div className="flex items-center gap-2 sm:gap-2.5">
             <Link
               href={`/tools/${tool.id}`}
-              className={`w-8 h-8 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xs sm:text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`}
+              className={`w-8 h-8 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xs sm:text-xl font-bold group-hover:scale-110 group-hover:rotate-3 group-active:scale-95 transition-all duration-300 ease-out`}
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               {tool.name.charAt(0)}
@@ -297,7 +297,7 @@ const ToolCard = memo(function ToolCard({
           <div className="flex items-center gap-1 sm:gap-2">
             <button
               onClick={() => router.push(`/compare?tool=${tool.id}`)}
-              className="inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[44px] min-w-[44px] border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
+              className="inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[44px] min-w-[44px] border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-semibold rounded-xl transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.95] active:translate-y-0 active:shadow-sm"
             >
               <svg
                 className="w-3.5 h-3.5 sm:w-4 sm:h-4"
@@ -325,10 +325,10 @@ const ToolCard = memo(function ToolCard({
                   window.dispatchEvent(new CustomEvent('useaitools:external-link', { detail: { domain } }));
                 } catch { /* ignore */ }
               }}
-              className={`inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[44px] min-w-[44px] text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98] ${
+              className={`inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[44px] min-w-[44px] text-xs sm:text-sm font-semibold rounded-xl transition-all duration-300 ease-out hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.95] active:translate-y-0 active:shadow-sm ${
                 hasAffiliate
-                  ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:from-emerald-600 hover:to-teal-600 hover:shadow-md hover:shadow-emerald-500/25 border border-transparent'
-                  : 'border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent'
+                  ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:from-emerald-600 hover:to-teal-600 hover:shadow-lg hover:shadow-emerald-500/30 border border-transparent'
+                  : 'border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent hover:shadow-lg hover:shadow-emerald-500/20'
               }`}
             >
               <svg
@@ -354,7 +354,7 @@ const ToolCard = memo(function ToolCard({
                 setTimeout(() => setSaveAnimating(false), 400);
                 toggleSave(tool.id);
               }}
-              className={`inline-flex items-center justify-center gap-0.5 px-1.5 min-h-[44px] min-w-[44px] rounded-lg text-xs sm:text-sm font-semibold transition-all duration-300 ease-out relative overflow-hidden whitespace-nowrap active:scale-[0.98] ${
+              className={`inline-flex items-center justify-center gap-0.5 px-1.5 min-h-[44px] min-w-[44px] rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 ease-out relative overflow-hidden whitespace-nowrap active:scale-[0.98] ${
                 isSaved
                   ? 'bg-rose-100 text-rose-700 dark:bg-rose-500/20 dark:text-rose-300 hover:bg-rose-200 dark:hover:bg-rose-500/30'
                   : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
@@ -665,12 +665,16 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       try {
         const nextPage = page + 1;
         const response = await fetch(`/api/tools?page=${nextPage}&limit=20`);
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
         const data = await response.json();
         setDisplayedTools(prev => [...prev, ...data.tools]);
         setPage(nextPage);
         setHasMore(data.hasMore);
       } catch (error) {
         console.error('Failed to load more tools:', error);
+        addToast('⚠️ Failed to load more tools. Please try again.', 'error');
       } finally {
         setIsLoadingMore(false);
       }
@@ -722,6 +726,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       setSearch('');
       setShowSuggestions(false);
       setSelectedIndex(-1);
+      searchInputRef.current?.blur();
     } else if (e.key === 'ArrowDown') {
       e.preventDefault();
       setSelectedIndex(prev => (prev < itemCount - 1 ? prev + 1 : 0));
@@ -758,6 +763,19 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       }
     }
   };
+
+  // Global Cmd/Ctrl+K shortcut to focus search
+  useEffect(() => {
+    const handleGlobalKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        searchInputRef.current?.focus();
+        searchInputRef.current?.select();
+      }
+    };
+    window.addEventListener('keydown', handleGlobalKeyDown);
+    return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+  }, []);
 
   // Auto scroll to tools grid when search is triggered (not on every keystroke)
   useEffect(() => {
