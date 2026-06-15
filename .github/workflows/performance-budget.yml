@@ -1,0 +1,59 @@
+name: Performance Budget Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  performance-budget:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build application
+        run: npm run build
+        env:
+          NODE_ENV: production
+      
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli@0.14.x
+      
+      - name: Run Lighthouse CI
+        run: |
+          lhci autorun \
+            --collect.staticDistDir=.next \
+            --assert.assertions.categories:performance=error \
+            --assert.assertions.categories.accessibility=error \
+            --assert.budgets[0].metric=interactive \
+            --assert.budgets[0].budget=3000 \
+            --assert.budgets[1].metric=first-contentful-paint \
+            --assert.budgets[1].budget=1800 \
+            --assert.budgets[2].metric=largest-contentful-paint \
+            --assert.budgets[2].budget=2500 \
+            --assert.budgets[3].metric=cumulative-layout-shift \
+            --assert.budgets[3].budget=0.1 \
+            --assert.budgets[4].metric=speed-index \
+            --assert.budgets[4].budget=3400
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      
+      - name: Upload Lighthouse results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-results
+          path: .lighthouseci/
+          retention-days: 30

@@ -3,6 +3,7 @@
 import React, { useState, useMemo, useRef, useEffect, useCallback, memo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import StarRating from './StarRating';
 import SkeletonCard from './Skeleton';
 import { useToast } from './Toast';
@@ -11,11 +12,23 @@ import { playSaveSound, playUnsaveSound, playCompareSound, playSearchSound } fro
 import SearchBar from './SearchBar';
 import CategoryFilters from './CategoryFilters';
 import HeroSection from './HeroSection';
-import NewsletterSignup from './NewsletterSignup';
-import RecentlyViewed from './RecentlyViewed';
-import CompareBar from './CompareBar';
-import LongPressMenu from './LongPressMenu';
-import MysteryBoxModal from './MysteryBoxModal';
+
+// Lazy load non-critical components for performance
+const NewsletterSignup = dynamic(() => import('./NewsletterSignup'), {
+  loading: () => <div className="h-32 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-2xl" />,
+});
+const RecentlyViewed = dynamic(() => import('./RecentlyViewed'), {
+  loading: () => <div className="h-24 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-2xl" />,
+});
+const CompareBar = dynamic(() => import('./CompareBar'), {
+  loading: () => null,
+});
+const LongPressMenu = dynamic(() => import('./LongPressMenu'), {
+  loading: () => null,
+});
+const MysteryBoxModal = dynamic(() => import('./MysteryBoxModal'), {
+  loading: () => null,
+});
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {

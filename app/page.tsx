@@ -70,8 +70,8 @@ export default function Home() {
     return scoreB - scoreA;
   });
 
-  // Only pass first 20 tools to client for initial load
-  const initialTools = sortedTools.slice(0, 20);
+  // Only pass first 12 tools to client for initial load (performance optimization)
+  const initialTools = sortedTools.slice(0, 12);
 
   // Select featured tools on server to prevent hydration mismatch
   const selected: Tool[] = initialTools

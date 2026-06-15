@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
@@ -28,7 +29,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <img src="/logo.png" alt="Use AI Tools" className="h-8 w-auto" width="32" height="32" loading="eager" />
+            <Image src="/logo.png" alt="Use AI Tools" className="h-8 w-auto" width={32} height={32} priority />
             <span className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
               Use AI Tools
             </span>
