@@ -126,8 +126,8 @@
 
 #### 任务组 3.2（反向链接）
 - [x] 3.2.1 反向链接建设（提交到导航站）
-- [ ] 3.2.2 Guest posting（在知名博客发文）
-- [ ] 3.2.3 社交媒体运营（Twitter、Reddit、Dev.to）
+- [x] 3.2.2 Guest posting（在知名博客发文）
+- [x] 3.2.3 社交媒体运营（Twitter、Reddit、Dev.to）
 
 #### 任务组 3.3（用户留存）
 - [x] 3.3.1 邮件订阅系统（Newsletter 订阅组件）

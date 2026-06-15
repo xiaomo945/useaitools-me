@@ -8,6 +8,7 @@ import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ReadingProgress from '@/app/components/ReadingProgress';
 import NewsletterSignup from '@/app/components/NewsletterSignup';
 import Footer from '@/app/components/Footer';
+import SocialShare from '@/app/components/SocialShare';
 
 type BlogPost = {
   id: number;
@@ -354,47 +355,11 @@ export default function BlogDetailV2({
 
             {/* Share section */}
             <div className="mt-8 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 sm:p-6 shadow-sm">
-              <div className="flex items-center gap-2 mb-4">
-                <Share2 className="w-4 h-4 text-slate-500" />
-                <h3 className="font-bold text-slate-900 dark:text-white">Share this article</h3>
-              </div>
-              <div className="flex flex-wrap gap-2.5">
-                <button
-                  onClick={handleNativeShare}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-semibold rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
-                >
-                  <Share2 className="w-3.5 h-3.5" />
-                  Share
-                </button>
-                <a
-                  href={`https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodeURIComponent(url)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-slate-900 dark:bg-black text-white text-sm font-semibold rounded-full hover:bg-slate-800 hover:-translate-y-0.5 transition-all"
-                >
-                  <span className="text-xs font-bold">X</span>
-                </a>
-                <a
-                  href={`https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodedTitle}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-orange-600 text-white text-sm font-semibold rounded-full hover:bg-orange-700 hover:-translate-y-0.5 transition-all"
-                >
-                  Reddit
-                </a>
-                <button
-                  onClick={handleCopyLink}
-                  className="relative inline-flex items-center gap-1.5 px-4 py-2 bg-slate-100 dark:bg-gray-800 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-full hover:bg-slate-200 dark:hover:bg-gray-700 transition-all"
-                >
-                  <Copy className="w-3.5 h-3.5" />
-                  Copy Link
-                  {copied && (
-                    <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-xs px-2 py-1 rounded-full whitespace-nowrap shadow-lg">
-                      Copied!
-                    </span>
-                  )}
-                </button>
-              </div>
+              <SocialShare
+                title={post.title}
+                url={url}
+                description={post.description}
+              />
             </div>
           </article>
 

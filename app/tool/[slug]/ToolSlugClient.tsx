@@ -7,6 +7,7 @@ import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ToolReviews from '@/app/components/ToolReviews';
 import Recommendations from '@/app/components/Recommendations';
+import SocialShare from '@/app/components/SocialShare';
 
 type Example = {
   prompt: string;
@@ -355,6 +356,15 @@ export default function ToolSlugClient({
               </div>
             )}
           </div>
+        </div>
+
+        {/* Share Section */}
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 mb-8">
+          <SocialShare
+            title={`${tool.name} - ${tool.category} AI Tool`}
+            url={`https://useaitools.me/tool/${slug}`}
+            description={tool.description}
+          />
         </div>
 
         {/* Editor's Verdict */}
