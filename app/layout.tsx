@@ -23,6 +23,7 @@ import AuthProvider from "./components/AuthProvider";
 import { ABTestProvider } from "./components/ABTestProvider";
 import PlausibleScript from "./components/PlausibleScript";
 import ClarityScript from "./components/ClarityScript";
+import ServiceWorkerRegistration from "./components/ServiceWorkerRegistration";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -146,6 +147,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col pb-16 md:pb-0">
+        <ServiceWorkerRegistration />
         <ABTestProvider>
           <AuthProvider>
             <Analytics />
