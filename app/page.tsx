@@ -2,10 +2,21 @@ import tools from '@/data/tools.json';
 import { blogPosts } from '@/data/blog-posts';
 import Footer from '@/app/components/Footer';
 import HomeClient from '@/app/components/HomeClient';
-import SceneExplorer from '@/app/components/SceneExplorer';
-import StoryCard from '@/app/components/StoryCard';
+import FeaturedTools from '@/app/components/FeaturedTools';
+import TrendingTools from '@/app/components/TrendingTools';
+import StatsBanner from '@/app/components/StatsBanner';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import type { Tool } from '@/types';
 import type { Metadata } from 'next';
+
+const SceneExplorer = dynamic(() => import('@/app/components/SceneExplorer'), {
+  loading: () => <div className="h-64 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-2xl" />,
+});
+
+const StoryCard = dynamic(() => import('@/app/components/StoryCard'), {
+  loading: () => <div className="h-48 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-2xl" />,
+});
 
 export const metadata: Metadata = {
   title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
@@ -59,8 +70,8 @@ export default function Home() {
     return scoreB - scoreA;
   });
 
-  // Only pass first 20 tools to client for initial load
-  const initialTools = sortedTools.slice(0, 20);
+  // Only pass first 12 tools to client for initial load (reduced from 20)
+  const initialTools = sortedTools.slice(0, 12);
 
   // Select featured tools on server to prevent hydration mismatch
   const selected: Tool[] = initialTools
@@ -166,10 +177,12 @@ export default function Home() {
       />
       <HomeClient
         initialTools={initialTools}
-        featuredTools={selected}
         blogPosts={blogPosts}
         totalCount={enrichedTools.length}
       />
+      <FeaturedTools tools={selected} />
+      <TrendingTools tools={sortedTools} />
+      <StatsBanner />
       <SceneExplorer />
       <StoryCard />
       <Footer />
