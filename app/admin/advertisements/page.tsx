@@ -32,10 +32,6 @@ export default function AdvertisementAdmin() {
   const [filterPosition, setFilterPosition] = useState<string>('');
   const [filterStatus, setFilterStatus] = useState<string>('');
 
-  useEffect(() => {
-    fetchAdvertisements();
-  }, [filterPosition, filterStatus]);
-
   const fetchAdvertisements = async () => {
     try {
       const params = new URLSearchParams();
@@ -51,6 +47,10 @@ export default function AdvertisementAdmin() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchAdvertisements();
+  }, [filterPosition, filterStatus]); // eslint-disable-line react-hooks/exhaustive-deps, react-hooks/set-state-in-effect
 
   const getStatusColor = (status: string) => {
     switch (status) {

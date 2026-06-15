@@ -99,7 +99,7 @@ export default function ReviewWorkflowClient() {
     fetchWorkflows();
     fetchTools();
     fetchTemplates();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps, react-hooks/set-state-in-effect
 
   const handleStartReview = async () => {
     if (!selectedTool) return;

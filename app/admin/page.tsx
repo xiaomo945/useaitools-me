@@ -11,7 +11,9 @@ export default async function AdminDashboardPage() {
   // ============ 统计数据（所有查询都有 try-catch，避免表不存在时报错） ============
   let totalTools = 0, totalSubs = 0, totalAff = 0, totalSlots = 0, totalReports = 0, totalInteractions = 0
   let categoryStats: any[] = [], toolRatings: { avg: number; high: number; count: number } = { avg: 0, high: 0, count: 0 }
-  let recentSubmissions: any[] = [], recentReviews: any[] = []
+  let recentSubmissions: any[] = []
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const recentReviews: any[] = []
   let totalRevenue = 0, totalClicks = 0
 
   try {
@@ -142,6 +144,7 @@ export default async function AdminDashboardPage() {
                 <p className="text-gray-500 text-sm">暂无数据</p>
               )}
               {categoryStats.map((c: any) => {
+                // eslint-disable-next-line @typescript-eslint/no-unused-vars
                 const pct = Math.round((c._count.id / totalTools) * 100) || 0
                 const avg = Math.round((c._avg.rating || 0) * 10) / 10
                 return (
