@@ -543,3 +543,30 @@ model Report {
   @@index([type])
   @@index([generatedAt])
 }
+
+model Advertisement {
+  id            String   @id @default(cuid())
+  name          String   // 广告位名称（内部标识）
+  title         String   // 广告标题
+  description   String?  // 广告描述
+  imageUrl      String?  // 广告图片
+  targetUrl     String   // 点击跳转链接
+  position      String   // 广告位置：header, sidebar, footer, inline
+  adType        String   // 广告类型：banner, native, sponsored
+  status        String   @default("active") // active, paused, expired
+  startDate     DateTime?
+  endDate       DateTime?
+  price         Float    @default(0) // 广告价格
+  currency      String   @default("USD")
+  advertiser    String?  // 广告主名称
+  clickCount    Int      @default(0)
+  viewCount     Int      @default(0)
+  priority      Int      @default(0) // 优先级，数字越大越优先
+  targetCategory String? // 目标分类（可选）
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([position, status])
+  @@index([status])
+  @@index([priority])
+}
