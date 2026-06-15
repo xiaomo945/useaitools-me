@@ -941,6 +941,38 @@ const [hasReferrer] = useState(() => {
         {/* Screenshot Gallery */}
         <ScreenshotGallery tool={tool} colors={colors} />
 
+        {/* Tab Navigation */}
+        <div className="sticky top-0 z-30 bg-slate-50/95 dark:bg-gray-950/95 backdrop-blur-md border-b border-slate-200 dark:border-gray-800 mb-8 -mx-3 sm:-mx-6 px-3 sm:px-6">
+          <nav className="flex gap-1 overflow-x-auto scrollbar-hide" role="tablist" aria-label="Tool information tabs">
+            {([
+              { key: 'overview' as const, label: 'Overview', icon: '📋' },
+              { key: 'features' as const, label: 'Features', icon: '⚡' },
+              { key: 'reviews' as const, label: 'Reviews', icon: '💬' },
+              { key: 'alternatives' as const, label: 'Alternatives', icon: '🔄' },
+            ]).map((tab) => (
+              <button
+                key={tab.key}
+                role="tab"
+                aria-selected={activeTab === tab.key}
+                aria-controls={`panel-${tab.key}`}
+                onClick={() => setActiveTab(tab.key)}
+                className={`flex items-center gap-1.5 px-4 py-3 text-sm font-semibold whitespace-nowrap border-b-2 transition-all duration-200 ${
+                  activeTab === tab.key
+                    ? 'border-emerald-500 text-emerald-600 dark:text-emerald-400'
+                    : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:border-slate-300 dark:hover:border-gray-600'
+                }`}
+              >
+                <span className="text-base">{tab.icon}</span>
+                {tab.label}
+              </button>
+            ))}
+          </nav>
+        </div>
+
+        {/* Tab Panels */}
+        <div role="tabpanel" id="panel-overview" aria-labelledby="tab-overview" hidden={activeTab !== 'overview'}>
+          {activeTab === 'overview' && (
+            <>
         {/* Use Cases Section */}
         {tool.use_cases && tool.use_cases.length > 0 && (
           <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
