@@ -104,6 +104,11 @@ model Tool {
   @@index([category])
   @@index([slug])
   @@index([rating])
+  @@index([isActive])
+  @@index([isFeatured])
+  @@index([clickCount])
+  @@index([createdAt])
+  @@index([pricing])
 }
 
 model Category {
@@ -166,6 +171,10 @@ model BlogPost {
   @@index([slug])
   @@index([isPublished])
   @@index([publishedAt])
+  @@index([categoryId])
+  @@index([isFeatured])
+  @@index([viewCount])
+  @@index([createdAt])
 }
 
 model BlogPostTemplate {
@@ -364,6 +373,7 @@ model Notification {
 
   @@index([userId])
   @@index([isRead])
+  @@index([createdAt])
 }
 
 model EmailSubscription {
@@ -469,6 +479,8 @@ model UserInteraction {
   @@index([sessionId])
   @@index([actionType])
   @@index([toolId])
+  @@index([createdAt])
+  @@index([category])
 }
 
 model SponsoredSlot {
