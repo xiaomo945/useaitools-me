@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "tools": "ツール",
+    "categories": "カテゴリー",
+    "blog": "ブログ",
+    "about": "について"
+  },
+  "hero": {
+    "title": "最高のAIツールを発見",
+    "subtitle": "1400以上のAIツールへの包括的なガイド",
+    "search": "AIツールを検索..."
+  },
+  "tools": {
+    "visitWebsite": "ウェブサイトにアクセス",
+    "tryFree": "無料で試す",
+    "startFreeTrial": "無料トライアルを開始",
+    "viewPricing": "料金を表示",
+    "sponsored": "スポンサー",
+    "free": "無料",
+    "freemium": "フリーミアム",
+    "paid": "有料"
+  },
+  "categories": {
+    "title": "カテゴリーで閲覧",
+    "writing": "ライティング",
+    "image": "画像",
+    "video": "動画",
+    "audio": "音声",
+    "code": "コード",
+    "productivity": "生産性"
+  },
+  "footer": {
+    "copyright": "© 2026 Use AI Tools. All rights reserved.",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "contact": "お問い合わせ"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "retry": "再試行",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "submit": "送信"
+  }
+}

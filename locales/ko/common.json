@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "홈",
+    "tools": "도구",
+    "categories": "카테고리",
+    "blog": "블로그",
+    "about": "소개"
+  },
+  "hero": {
+    "title": "최고의 AI 도구 발견",
+    "subtitle": "1400개 이상의 AI 도구에 대한 종합 가이드",
+    "search": "AI 도구 검색..."
+  },
+  "tools": {
+    "visitWebsite": "웹사이트 방문",
+    "tryFree": "무료로 시도",
+    "startFreeTrial": "무료 체험 시작",
+    "viewPricing": "가격 보기",
+    "sponsored": "스폰서",
+    "free": "무료",
+    "freemium": "프리미엄",
+    "paid": "유료"
+  },
+  "categories": {
+    "title": "카테고리별 탐색",
+    "writing": "작성",
+    "image": "이미지",
+    "video": "비디오",
+    "audio": "오디오",
+    "code": "코드",
+    "productivity": "생산성"
+  },
+  "footer": {
+    "copyright": "© 2026 Use AI Tools. All rights reserved.",
+    "privacy": "개인정보 보호정책",
+    "terms": "서비스 이용약관",
+    "contact": "문의하기"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류",
+    "retry": "재시도",
+    "save": "저장",
+    "cancel": "취소",
+    "submit": "제출"
+  }
+}

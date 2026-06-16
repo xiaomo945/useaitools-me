@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "tools": "Outils",
+    "categories": "Catégories",
+    "blog": "Blog",
+    "about": "À propos"
+  },
+  "hero": {
+    "title": "Découvrez les meilleurs outils IA",
+    "subtitle": "Votre guide complet de plus de 1400 outils IA",
+    "search": "Rechercher des outils IA..."
+  },
+  "tools": {
+    "visitWebsite": "Visiter le site",
+    "tryFree": "Essayer gratuitement",
+    "startFreeTrial": "Commencer l'essai gratuit",
+    "viewPricing": "Voir les tarifs",
+    "sponsored": "Sponsorisé",
+    "free": "Gratuit",
+    "freemium": "Freemium",
+    "paid": "Payant"
+  },
+  "categories": {
+    "title": "Parcourir par catégorie",
+    "writing": "Écriture",
+    "image": "Image",
+    "video": "Vidéo",
+    "audio": "Audio",
+    "code": "Code",
+    "productivity": "Productivité"
+  },
+  "footer": {
+    "copyright": "© 2026 Use AI Tools. Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "contact": "Contact"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "retry": "Réessayer",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "submit": "Soumettre"
+  }
+}

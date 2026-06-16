@@ -1,0 +1,47 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "tools": "Werkzeuge",
+    "categories": "Kategorien",
+    "blog": "Blog",
+    "about": "Über uns"
+  },
+  "hero": {
+    "title": "Entdecken Sie die besten KI-Tools",
+    "subtitle": "Ihr umfassender Leitfaden für über 1400 KI-Tools",
+    "search": "KI-Tools suchen..."
+  },
+  "tools": {
+    "visitWebsite": "Website besuchen",
+    "tryFree": "Kostenlos testen",
+    "startFreeTrial": "Kostenlose Testversion starten",
+    "viewPricing": "Preise anzeigen",
+    "sponsored": "Gesponsert",
+    "free": "Kostenlos",
+    "freemium": "Freemium",
+    "paid": "Kostenpflichtig"
+  },
+  "categories": {
+    "title": "Nach Kategorie durchsuchen",
+    "writing": "Schreiben",
+    "image": "Bild",
+    "video": "Video",
+    "audio": "Audio",
+    "code": "Code",
+    "productivity": "Produktivität"
+  },
+  "footer": {
+    "copyright": "© 2026 Use AI Tools. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "retry": "Wiederholen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "submit": "Absenden"
+  }
+}
