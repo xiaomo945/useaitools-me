@@ -331,6 +331,80 @@ export default function ToolSlugClient({
           </div>
         </div>
 
+        {/* Editor's Verdict Rating Card */}
+        {tool.rating && tool.rating_breakdown && (
+          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 border border-emerald-200 dark:border-emerald-800 rounded-3xl p-6 sm:p-8 mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+              <span>⭐</span> Editor's Verdict
+            </h2>
+            
+            <div className="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
+              {/* Overall Rating */}
+              <div className="text-center sm:text-left">
+                <div className="text-5xl sm:text-6xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">
+                  {tool.rating.toFixed(1)}
+                </div>
+                <div className="text-sm text-slate-600 dark:text-slate-400 font-medium">
+                  Overall Score
+                </div>
+                {tool.rating_count && (
+                  <div className="text-xs text-slate-500 dark:text-slate-500 mt-1">
+                    Based on {tool.rating_count.toLocaleString()} reviews
+                  </div>
+                )}
+              </div>
+
+              {/* Rating Breakdown */}
+              <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {Object.entries(tool.rating_breakdown).map(([key, value]) => (
+                  <div key={key} className="flex items-center gap-3">
+                    <div className="flex-1">
+                      <div className="flex justify-between items-center mb-1">
+                        <span className="text-sm font-medium text-slate-700 dark:text-slate-300 capitalize">
+                          {key.replace(/_/g, ' ')}
+                        </span>
+                        <span className="text-sm font-bold text-slate-900 dark:text-white">
+                          {value.score}/5
+                        </span>
+                      </div>
+                      <div className="h-2 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-500"
+                          style={{ width: `${(value.score / 5) * 100}%` }}
+                        />
+                      </div>
+                      {value.note && (
+                        <div className="text-xs text-slate-500 dark:text-slate-400 mt-1 italic">
+                          {value.note}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Best For Tags */}
+            {tool.best_for && tool.best_for.length > 0 && (
+              <div className="mt-6 pt-6 border-t border-emerald-200 dark:border-emerald-800">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                    Best for:
+                  </span>
+                  {tool.best_for.map((tag, i) => (
+                    <span
+                      key={i}
+                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
         {/* Use Cases */}
         {tool.use_cases && tool.use_cases.length > 0 && (
           <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">

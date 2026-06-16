@@ -315,7 +315,7 @@ const ToolCard = memo(function ToolCard({
               </svg>
               <span className="sm:hidden text-[10px]">Visit</span>
               <span className="hidden sm:inline">{ctaText}</span>
-              {hasAffiliate && <span className="hidden sm:inline text-[10px] opacity-60 ml-0.5">via partner</span>}
+              {hasAffiliate && <span className="hidden sm:inline text-[10px] opacity-60 ml-0.5">Sponsored</span>}
             </a>
             <button
               onClick={(e) => {

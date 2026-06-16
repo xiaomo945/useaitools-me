@@ -30,6 +30,9 @@ const LongPressMenu = dynamic(() => import('./LongPressMenu'), {
 const MysteryBoxModal = dynamic(() => import('./MysteryBoxModal'), {
   loading: () => null,
 });
+const QuickStart = dynamic(() => import('./QuickStart'), {
+  loading: () => <div className="h-64 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-3xl mb-8" />,
+});
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -461,6 +464,23 @@ const getAffiliateLink = (tool: Tool): string => {
   url.searchParams.set('utm_medium', 'referral');
   url.searchParams.set('utm_campaign', 'staff_pick');
   return url.toString();
+};
+
+// Dynamic CTA text based on pricing model
+const getDynamicCTA = (pricing: string, hasAffiliate: boolean): string => {
+  if (!hasAffiliate) return 'Visit Website';
+  
+  const pricingLower = pricing.toLowerCase();
+  if (pricingLower.includes('free') || pricingLower.includes('open source')) {
+    return 'Try Free';
+  }
+  if (pricingLower.includes('freemium')) {
+    return 'Start Free Trial';
+  }
+  if (pricingLower.includes('paid') || pricingLower.includes('$')) {
+    return 'View Pricing';
+  }
+  return 'Try It Free';
 };
 
 // CTA A/B test variants — track via Vercel Analytics
@@ -2162,7 +2182,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
             const isSaved = savedIds.includes(tool.id);
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
             const hasAffiliate = hasAffiliateLink(tool);
-            const ctaText = hasAffiliate ? ctaVariants[ctaVariant].text : 'Visit Website';
+            const ctaText = getDynamicCTA(tool.pricing, hasAffiliate);
             const ctaColor = hasAffiliate ? ctaVariants[ctaVariant].color : 'emerald';
             
             return (
