@@ -443,6 +443,21 @@ model ContentReport {
   @@index([createdAt])
 }
 
+model CTAClick {
+  id        String   @id @default(cuid())
+  toolId    Int
+  toolName  String
+  variant   String   // control, variant_a, variant_b, variant_c
+  color     String   // emerald, indigo, slate
+  position  String   // bottom, middle
+  clickedAt DateTime @default(now())
+
+  @@index([variant])
+  @@index([toolId])
+  @@index([clickedAt])
+  @@index([color])
+}
+
 model AffiliateLink {
   id              String   @id @default(cuid())
   toolId          String?

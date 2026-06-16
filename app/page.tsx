@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import type { Tool } from '@/types';
 import type { Metadata } from 'next';
+import { sortByCommissionPriority, getAffiliateLinkFromEnv } from '@/lib/commission-priority';
 
 const SceneExplorer = dynamic(() => import('@/app/components/SceneExplorer'), {
   loading: () => <div className="h-64 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-2xl" />,
@@ -69,15 +70,11 @@ export default function Home() {
   // Enrich tools with affiliate links from environment variables
   const enrichedTools = tools.map(tool => ({
     ...tool,
-    affiliate_link: getAffiliateLink(tool)
+    affiliate_link: getAffiliateLinkFromEnv(tool)
   })) as Tool[];
 
-  // Sort tools by rating + rating_count for featured selection
-  const sortedTools = [...enrichedTools].sort((a, b) => {
-    const scoreA = (a.rating || 4.0) * 100 + (a.rating_count || 0);
-    const scoreB = (b.rating || 4.0) * 100 + (b.rating_count || 0);
-    return scoreB - scoreA;
-  });
+  // Sort tools by commission priority (high commission first) + rating
+  const sortedTools = sortByCommissionPriority(enrichedTools);
 
   // Only pass first 12 tools to client for initial load (performance optimization)
   const initialTools = sortedTools.slice(0, 12);

@@ -39,17 +39,17 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    const variantStats = allVariants.reduce((acc, curr) => {
-      acc[curr.variant] = curr._count.variant;
-      return acc;
-    }, {} as Record<string, number>);
+    const variantStatsMap: Record<string, number> = {};
+    for (const v of allVariants) {
+      variantStatsMap[v.variant] = v._count.variant;
+    }
 
     return NextResponse.json({
       success: true,
       stats: {
         totalClicks,
         variantClicks,
-        variantStats,
+        variantStats: variantStatsMap,
       },
     });
   } catch (error) {
@@ -114,7 +114,7 @@ export async function GET() {
     });
 
     // Calculate conversion rates per variant
-    const variantData = variantStats.map((v) => ({
+    const variantData = variantStats.map((v: any) => ({
       variant: v.variant,
       clicks: v._count.variant,
       percentage: totalClicks > 0 ? (v._count.variant / totalClicks) * 100 : 0,
@@ -124,12 +124,12 @@ export async function GET() {
       totalClicks,
       recentClicks,
       variantStats: variantData,
-      colorStats: colorStats.map((c) => ({
+      colorStats: colorStats.map((c: any) => ({
         color: c.color,
         clicks: c._count.color,
         percentage: totalClicks > 0 ? (c._count.color / totalClicks) * 100 : 0,
       })),
-      positionStats: positionStats.map((p) => ({
+      positionStats: positionStats.map((p: any) => ({
         position: p.position,
         clicks: p._count.position,
         percentage: totalClicks > 0 ? (p._count.position / totalClicks) * 100 : 0,

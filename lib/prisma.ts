@@ -95,7 +95,7 @@ const modelNames = [
   'tool', 'category', 'collection', 'user', 'siteSubscription',
   'sponsoredSlot', 'affiliateLink', 'contentReport', 'userInteraction',
   'bookmark', 'blogPost', 'review', 'submission', 'discussion',
-  'notification', 'session', 'toolReview', 'toolUpdate',
+  'notification', 'session', 'toolReview', 'toolUpdate', 'ctaClick',
 ];
 
 const prismaInternal: any = {};

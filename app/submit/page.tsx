@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Share2, Copy, Check } from 'lucide-react';
+import { ArrowLeft, Share2, Copy, Check, Zap, Crown } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 
 export default function SubmitToolPage() {
@@ -13,6 +13,7 @@ export default function SubmitToolPage() {
     description: '',
     pricing: '',
     needs_vpn: false,
+    submission_type: 'free', // free, expedited, sponsored
   });
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -294,6 +295,68 @@ export default function SubmitToolPage() {
               </label>
             </div>
 
+            {/* Submission Type Selection */}
+            <div className="pt-4 border-t border-slate-200 dark:border-gray-800">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+                Submission Options
+              </h3>
+              <div className="space-y-3">
+                <label className="flex items-start gap-3 p-4 rounded-xl border border-slate-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-600 cursor-pointer transition-all">
+                  <input
+                    type="radio"
+                    name="submission_type"
+                    value="free"
+                    checked={formData.submission_type === 'free'}
+                    onChange={handleInputChange}
+                    className="mt-1 w-4 h-4 text-emerald-600"
+                  />
+                  <div className="flex-1">
+                    <div className="font-semibold text-gray-900 dark:text-white">Free Submission</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Review in 7-14 days</div>
+                  </div>
+                  <div className="text-2xl font-bold text-emerald-600">$0</div>
+                </label>
+
+                <label className="flex items-start gap-3 p-4 rounded-xl border border-slate-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-600 cursor-pointer transition-all">
+                  <input
+                    type="radio"
+                    name="submission_type"
+                    value="expedited"
+                    checked={formData.submission_type === 'expedited'}
+                    onChange={handleInputChange}
+                    className="mt-1 w-4 h-4 text-emerald-600"
+                  />
+                  <div className="flex-1">
+                    <div className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                      <Zap className="w-4 h-4 text-amber-500" />
+                      Expedited Review
+                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Reviewed within 24 hours</div>
+                  </div>
+                  <div className="text-2xl font-bold text-emerald-600">$29</div>
+                </label>
+
+                <label className="flex items-start gap-3 p-4 rounded-xl border border-slate-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-600 cursor-pointer transition-all">
+                  <input
+                    type="radio"
+                    name="submission_type"
+                    value="sponsored"
+                    checked={formData.submission_type === 'sponsored'}
+                    onChange={handleInputChange}
+                    className="mt-1 w-4 h-4 text-emerald-600"
+                  />
+                  <div className="flex-1">
+                    <div className="font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                      <Crown className="w-4 h-4 text-amber-500" />
+                      Sponsored Listing
+                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Featured on homepage + badge for 1 month</div>
+                  </div>
+                  <div className="text-2xl font-bold text-emerald-600">$99</div>
+                </label>
+              </div>
+            </div>
+
             {error && (
               <div className="p-4 rounded-xl bg-rose-50 dark:bg-rose-900/20 border border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300 text-sm font-medium">
                 {error}
@@ -315,7 +378,11 @@ export default function SubmitToolPage() {
                     Submitting...
                   </>
                 ) : (
-                  'Submit Tool'
+                  <>
+                    {formData.submission_type === 'free' && 'Submit Tool (Free)'}
+                    {formData.submission_type === 'expedited' && 'Submit & Pay $29'}
+                    {formData.submission_type === 'sponsored' && 'Submit & Pay $99'}
+                  </>
                 )}
               </button>
             </div>

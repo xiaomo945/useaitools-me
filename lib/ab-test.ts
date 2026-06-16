@@ -48,10 +48,10 @@ export function getCTAVariant(): CTAConfig {
 
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
+    const now = Date.now();
     
     if (stored) {
       const parsed = JSON.parse(stored);
-      const now = Date.now();
       
       // Check if assignment has expired
       if (parsed.expiry && parsed.expiry > now) {

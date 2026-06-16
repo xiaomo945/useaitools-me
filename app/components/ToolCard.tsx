@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useRef, memo } from 'react';
+import React, { useState, useRef, memo, useEffect } from 'react';
 import Link from 'next/link';
+import { getCTAVariant, trackCTAClick, type CTAConfig } from '@/lib/ab-test';
 
 // 高亮搜索关键词的辅助函数
 const highlightText = (text: string, searchTerm: string) => {
@@ -79,6 +80,12 @@ const ToolCard = memo(function ToolCard({
   const touchStartXRef = useRef<number>(0);
   const touchStartYRef = useRef<number>(0);
   const [swipeOffset, setSwipeOffset] = useState(0);
+  const [ctaVariant, setCtaVariant] = useState<CTAConfig | null>(null);
+
+  // 获取 A/B 测试 variant
+  useEffect(() => {
+    setCtaVariant(getCTAVariant());
+  }, []);
 
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
     e.dataTransfer.setData('text/plain', String(tool.id));
@@ -286,6 +293,10 @@ const ToolCard = memo(function ToolCard({
               href={getAffiliateLink(tool) || tool.url}
               target="_blank" rel="noopener noreferrer"
               onClick={(e) => {
+                // 追踪 A/B 测试点击
+                if (ctaVariant) {
+                  trackCTAClick(tool.id, tool.name, ctaVariant);
+                }
                 try {
                   const url = new URL(getAffiliateLink(tool) || tool.url);
                   const domain = url.hostname.replace('www.', '');
@@ -294,9 +305,11 @@ const ToolCard = memo(function ToolCard({
               }}
               className={`inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[44px] min-w-[44px] text-xs sm:text-sm font-semibold rounded-xl transition-all duration-300 ease-out hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98] ${
                 hasAffiliate
-                  ? (ctaText || '').includes('10,000')
+                  ? (ctaVariant?.color === 'indigo')
                     ? 'bg-gradient-to-r from-indigo-500 to-violet-500 text-white shadow-sm hover:from-indigo-600 hover:to-violet-600 hover:shadow-xl hover:shadow-indigo-500/25 border border-transparent'
-                    : 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl hover:shadow-emerald-500/25 border border-transparent'
+                    : (ctaVariant?.color === 'slate')
+                      ? 'bg-gradient-to-r from-slate-700 to-slate-800 text-white shadow-sm hover:from-slate-800 hover:to-slate-900 hover:shadow-xl hover:shadow-slate-500/25 border border-transparent'
+                      : 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl hover:shadow-emerald-500/25 border border-transparent'
                   : 'border border-emerald-300 dark:border-emerald-600/30 bg-white/10 backdrop-blur-md dark:bg-gray-800/30 text-emerald-600 dark:text-emerald-400 hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-500 hover:text-white hover:border-transparent'
               }`}
             >
@@ -314,7 +327,7 @@ const ToolCard = memo(function ToolCard({
                 />
               </svg>
               <span className="sm:hidden text-[10px]">Visit</span>
-              <span className="hidden sm:inline">{ctaText}</span>
+              <span className="hidden sm:inline">{ctaVariant?.text || ctaText}</span>
               {hasAffiliate && <span className="hidden sm:inline text-[10px] opacity-60 ml-0.5">via partner</span>}
             </a>
             <button
