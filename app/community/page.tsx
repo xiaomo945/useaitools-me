@@ -39,10 +39,6 @@ export default function CommunityPage() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  useEffect(() => {
-    loadDiscussions();
-  }, [category, sortBy, page]);
-
   const loadDiscussions = async () => {
     try {
       setLoading(true);
@@ -57,13 +53,17 @@ export default function CommunityPage() {
         const data = await res.json();
         setDiscussions(data.discussions || []);
         setTotalPages(data.pagination?.totalPages || 1);
-      }
-    } catch (error) {
-      console.error('加载讨论失败:', error);
-    } finally {
-      setLoading(false);
     }
-  };
+  } catch (error) {
+    console.error('加载讨论失败:', error);
+  } finally {
+    setLoading(false);
+  }
+};
+
+  useEffect(() => {
+    loadDiscussions();
+  }, [category, sortBy, page]);
 
   const getCategoryLabel = (cat: string) => {
     switch (cat) {

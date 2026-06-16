@@ -46,10 +46,6 @@ export default function EmailSubscriptionPage() {
   const [emailFormat, setEmailFormat] = useState('html');
   const [isActive, setIsActive] = useState(true);
 
-  useEffect(() => {
-    fetchSubscription();
-  }, []);
-
   const fetchSubscription = async () => {
     try {
       const response = await fetch('/api/email-subscription');
@@ -69,6 +65,10 @@ export default function EmailSubscriptionPage() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchSubscription();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleSave = async () => {
     if (!session) {

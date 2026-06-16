@@ -1,5 +1,5 @@
 // Seed script: 初始化联盟链接、赞助位、示例订阅
-const { PrismaClient } = require('@prisma/client');
+import { PrismaClient } from '@prisma/client';
 const p = new PrismaClient();
 
 (async () => {

@@ -102,8 +102,8 @@ export default async function BlogCategoryPage({
     (post) => post.category.toLowerCase() === slug,
   );
 
-  const clientPosts = filteredPosts.map((post) => ({
-    id: String(post.id || Math.floor(Math.random() * 1_000_000)),
+  const clientPosts = filteredPosts.map((post, index) => ({
+    id: String(post.id || `post-${index}`),
     title: post.title,
     slug: post.slug,
     excerpt:

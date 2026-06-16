@@ -25,10 +25,6 @@ export default function AdvertisementDisplay({ position, category }: Advertiseme
   const [advertisement, setAdvertisement] = useState<Advertisement | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchAdvertisement();
-  }, [position, category]);
-
   const fetchAdvertisement = async () => {
     try {
       const params = new URLSearchParams({
@@ -62,6 +58,10 @@ export default function AdvertisementDisplay({ position, category }: Advertiseme
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchAdvertisement();
+  }, [position, category]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleClick = async () => {
     if (!advertisement) return;

@@ -45,10 +45,6 @@ export default function SponsoredPage() {
   })
   const [submitting, setSubmitting] = useState(false)
 
-  useEffect(() => {
-    fetchData()
-  }, [])
-
   const fetchData = async () => {
     try {
       const [packagesRes, ordersRes] = await Promise.all([
@@ -69,6 +65,10 @@ export default function SponsoredPage() {
       setLoading(false)
     }
   }
+
+  useEffect(() => {
+    fetchData()
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()

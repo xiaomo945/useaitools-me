@@ -20,6 +20,7 @@ import HolidayBanner from "./components/HolidayBanner";
 import AuthProvider from "./components/AuthProvider";
 import WebVitals from "./components/WebVitals";
 import ServiceWorkerRegistration from "./components/ServiceWorkerRegistration";
+import WelcomePopup from "./components/WelcomePopup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -177,6 +178,7 @@ export default function RootLayout({
           </Suspense>
           <KeyboardNavigation />
           <GuidedTour />
+          <WelcomePopup />
           <ExternalLinkToast />
           <WebVitals />
           <ServiceWorkerRegistration />

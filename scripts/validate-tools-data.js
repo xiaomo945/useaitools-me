@@ -4,8 +4,12 @@
  * Checks required fields, URL formats, and data consistency
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const TOOLS_PATH = path.join(__dirname, '..', 'data', 'tools.json');
 const REPORT_PATH = path.join(__dirname, '..', '.tmp', 'tool-quality-report.md');

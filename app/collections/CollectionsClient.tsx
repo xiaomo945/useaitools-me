@@ -30,14 +30,6 @@ export default function CollectionsClient() {
   });
   const [submitting, setSubmitting] = useState(false);
 
-  useEffect(() => {
-    if (status === 'authenticated') {
-      loadCollections();
-    } else if (status === 'unauthenticated') {
-      setLoading(false);
-    }
-  }, [status]);
-
   const loadCollections = async () => {
     try {
       setLoading(true);
@@ -52,6 +44,14 @@ export default function CollectionsClient() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (status === 'authenticated') {
+      loadCollections();
+    } else if (status === 'unauthenticated') {
+      setLoading(false);
+    }
+  }, [status]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

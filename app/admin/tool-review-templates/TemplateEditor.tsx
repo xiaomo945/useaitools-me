@@ -51,12 +51,6 @@ export default function TemplateEditor({ templateId }: { templateId?: string }) 
     isDefault: false,
   });
 
-  useEffect(() => {
-    if (templateId) {
-      fetchTemplate();
-    }
-  }, [templateId]);
-
   const fetchTemplate = async () => {
     setLoading(true);
     try {
@@ -71,6 +65,12 @@ export default function TemplateEditor({ templateId }: { templateId?: string }) 
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (templateId) {
+      fetchTemplate();
+    }
+  }, [templateId]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleSave = async () => {
     setSaving(true);

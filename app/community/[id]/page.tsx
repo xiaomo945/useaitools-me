@@ -49,10 +49,6 @@ export default function DiscussionDetailPage() {
   const [newComment, setNewComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
-  useEffect(() => {
-    loadDiscussion();
-  }, [params.id]);
-
   const loadDiscussion = async () => {
     try {
       setLoading(true);
@@ -67,6 +63,10 @@ export default function DiscussionDetailPage() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    loadDiscussion();
+  }, [params.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleSubmitComment = async (e: React.FormEvent) => {
     e.preventDefault();

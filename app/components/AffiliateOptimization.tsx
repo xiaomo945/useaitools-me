@@ -49,10 +49,6 @@ export default function AffiliateOptimization() {
   const [sortBy, setSortBy] = useState<string>('clickCount');
   const [sortOrder, setSortOrder] = useState<string>('desc');
 
-  useEffect(() => {
-    fetchAffiliateData();
-  }, [filterNetwork, filterStatus, sortBy, sortOrder]);
-
   const fetchAffiliateData = async () => {
     try {
       const params = new URLSearchParams();
@@ -75,6 +71,10 @@ export default function AffiliateOptimization() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchAffiliateData();
+  }, [filterNetwork, filterStatus, sortBy, sortOrder]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getConversionRate = (clicks: number, conversions: number) => {
     if (clicks === 0) return 0;

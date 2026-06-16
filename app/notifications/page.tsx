@@ -20,10 +20,6 @@ export default function NotificationsPage() {
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<'all' | 'unread'>('all');
 
-  useEffect(() => {
-    fetchNotifications();
-  }, [filter]);
-
   const fetchNotifications = async () => {
     try {
       setLoading(true);
@@ -45,8 +41,13 @@ export default function NotificationsPage() {
     }
   };
 
-  const markAsRead = async (notificationIds: string[]) => {
+  useEffect(() => {
+    fetchNotifications();
+  }, [filter]);
+
+  const markAsRead = async (ids: string | string[]) => {
     try {
+      const notificationIds = Array.isArray(ids) ? ids : [ids];
       const res = await fetch('/api/notifications', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },

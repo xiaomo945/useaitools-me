@@ -27,8 +27,10 @@ function getDbUrl(): string {
 // ---- 懒加载 Prisma Client（任何错误都吞下）----
 function tryCreateClient(): any {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { PrismaClient } = require('@prisma/client');
+    // 使用动态 import 避免构建时 Prisma Client 未生成导致的错误
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const prismaModule = require('@prisma/client');
+    const { PrismaClient } = prismaModule;
     const client = new PrismaClient({
       datasources: { db: { url: getDbUrl() } },
       log: ['error'],

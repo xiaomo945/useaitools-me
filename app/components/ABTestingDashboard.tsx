@@ -23,10 +23,6 @@ export default function ABTestingDashboard() {
   const [loading, setLoading] = useState(true);
   const [selectedExperiment, setSelectedExperiment] = useState<string | null>(null);
 
-  useEffect(() => {
-    fetchExperiments();
-  }, []);
-
   const fetchExperiments = async () => {
     try {
       const response = await fetch('/api/ab-test');
@@ -61,6 +57,10 @@ export default function ABTestingDashboard() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchExperiments();
+  }, []);
 
   const recordVariant = async (experimentId: string, variant: string) => {
     try {

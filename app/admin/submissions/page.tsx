@@ -29,18 +29,6 @@ export default function AdminSubmissionsPage() {
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState<'pending' | 'approved' | 'rejected'>('pending')
 
-  useEffect(() => {
-    if (status === 'unauthenticated') {
-      router.push('/auth/signin')
-    }
-  }, [status, router])
-
-  useEffect(() => {
-    if ((session?.user as any)?.id) {
-      loadSubmissions()
-    }
-  }, [session, filter])
-
   const loadSubmissions = async () => {
     try {
       setLoading(true)
@@ -55,6 +43,18 @@ export default function AdminSubmissionsPage() {
       setLoading(false)
     }
   }
+
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.push('/auth/signin')
+    }
+  }, [status, router])
+
+  useEffect(() => {
+    if ((session?.user as any)?.id) {
+      loadSubmissions()
+    }
+  }, [session, filter]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleReview = async (id: string, status: 'approved' | 'rejected', note?: string) => {
     try {

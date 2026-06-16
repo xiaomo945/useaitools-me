@@ -27,14 +27,6 @@ export default function RecommendationsPage() {
   const [data, setData] = useState<RecommendationData | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (status === 'authenticated') {
-      loadRecommendations();
-    } else if (status === 'unauthenticated') {
-      setLoading(false);
-    }
-  }, [status]);
-
   const loadRecommendations = async () => {
     try {
       setLoading(true);
@@ -49,6 +41,14 @@ export default function RecommendationsPage() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (status === 'authenticated') {
+      loadRecommendations();
+    } else if (status === 'unauthenticated') {
+      setLoading(false);
+    }
+  }, [status]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getCategoryColors = (category: string) => {
     switch (category) {

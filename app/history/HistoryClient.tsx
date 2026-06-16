@@ -39,15 +39,6 @@ export default function HistoryClient() {
   const [loading, setLoading] = useState(true);
   const [deletingItem, setDeletingItem] = useState<number | null>(null);
 
-  // 从数据库加载历史记录
-  useEffect(() => {
-    if (status === 'authenticated') {
-      loadHistory();
-    } else if (status === 'unauthenticated') {
-      setLoading(false);
-    }
-  }, [status]);
-
   const loadHistory = async () => {
     try {
       setLoading(true);
@@ -62,6 +53,15 @@ export default function HistoryClient() {
       setLoading(false);
     }
   };
+
+  // 从数据库加载历史记录
+  useEffect(() => {
+    if (status === 'authenticated') {
+      loadHistory();
+    } else if (status === 'unauthenticated') {
+      setLoading(false);
+    }
+  }, [status]);
 
   // 获取分类颜色
   const getCategoryColors = (category: string) => {

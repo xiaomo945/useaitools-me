@@ -20,10 +20,6 @@ export default function NotificationsClient() {
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<'all' | 'unread'>('all');
 
-  useEffect(() => {
-    fetchNotifications();
-  }, [filter]);
-
   const fetchNotifications = async () => {
     try {
       setLoading(true);
@@ -44,6 +40,10 @@ export default function NotificationsClient() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchNotifications();
+  }, [filter]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const markAsRead = async (notificationIds: string[]) => {
     try {

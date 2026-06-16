@@ -31,10 +31,6 @@ export default function MembershipPage() {
   const [loading, setLoading] = useState(true)
   const [subscribing, setSubscribing] = useState(false)
 
-  useEffect(() => {
-    fetchMembership()
-  }, [])
-
   const fetchMembership = async () => {
     try {
       const res = await fetch('/api/membership')
@@ -47,6 +43,10 @@ export default function MembershipPage() {
       setLoading(false)
     }
   }
+
+  useEffect(() => {
+    fetchMembership()
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleSubscribe = async (planId: string) => {
     if (!session) {

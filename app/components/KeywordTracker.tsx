@@ -23,10 +23,6 @@ export default function KeywordTracker({ initialKeywords = [] }: KeywordTrackerP
   const [newKeyword, setNewKeyword] = useState('');
   const [filter, setFilter] = useState<'all' | 'improved' | 'declined' | 'stable'>('all');
 
-  useEffect(() => {
-    fetchKeywords();
-  }, []);
-
   const fetchKeywords = async () => {
     setLoading(true);
     try {
@@ -42,7 +38,11 @@ export default function KeywordTracker({ initialKeywords = [] }: KeywordTrackerP
     }
   };
 
-  const addKeyword = async () => {
+  useEffect(() => {
+    fetchKeywords();
+  }, []);
+
+  const handleAddKeyword = async () => {
     if (!newKeyword.trim()) return;
 
     setLoading(true);
@@ -147,12 +147,12 @@ export default function KeywordTracker({ initialKeywords = [] }: KeywordTrackerP
           type="text"
           value={newKeyword}
           onChange={(e) => setNewKeyword(e.target.value)}
-          onKeyPress={(e) => e.key === 'Enter' && addKeyword()}
+          onKeyPress={(e) => e.key === 'Enter' && handleAddKeyword()}
           placeholder="输入要追踪的关键词..."
           className="flex-1 px-4 py-2 bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         />
         <button
-          onClick={addKeyword}
+          onClick={handleAddKeyword}
           disabled={loading || !newKeyword.trim()}
           className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >

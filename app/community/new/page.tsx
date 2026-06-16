@@ -20,13 +20,6 @@ export default function NewDiscussionPage() {
   const [submitting, setSubmitting] = useState(false);
   const [tools, setTools] = useState<{ id: string; name: string; slug: string }[]>([]);
 
-  useEffect(() => {
-    if (status === 'unauthenticated') {
-      router.push('/community');
-    }
-    loadTools();
-  }, [status]);
-
   const loadTools = async () => {
     try {
       const res = await fetch('/api/tools?limit=100');
@@ -38,6 +31,13 @@ export default function NewDiscussionPage() {
       console.error('加载工具列表失败:', error);
     }
   };
+
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.push('/community');
+    }
+    loadTools();
+  }, [status]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

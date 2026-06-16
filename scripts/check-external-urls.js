@@ -9,10 +9,14 @@
  * Usage: node scripts/check-external-urls.js
  */
 
-const fs = require('fs');
-const path = require('path');
-const https = require('https');
-const http = require('http');
+import fs from 'fs';
+import path from 'path';
+import https from 'https';
+import http from 'http';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const TOOLS_FILE = path.join(__dirname, '..', 'data', 'tools.json');
 const REPORT_FILE = path.join(__dirname, '..', '.tmp', 'external-url-health-report.md');

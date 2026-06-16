@@ -20,10 +20,6 @@ export default function CompetitorAnalysis() {
   const [loading, setLoading] = useState(true);
   const [selectedCompetitor, setSelectedCompetitor] = useState<string | null>(null);
 
-  useEffect(() => {
-    fetchCompetitors();
-  }, []);
-
   const fetchCompetitors = async () => {
     try {
       const response = await fetch('/api/competitors');
@@ -35,6 +31,10 @@ export default function CompetitorAnalysis() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchCompetitors();
+  }, []);
 
   const getTrafficColor = (rank: number) => {
     if (rank <= 10000) return 'text-green-600 dark:text-green-400';

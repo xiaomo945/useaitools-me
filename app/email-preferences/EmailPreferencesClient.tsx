@@ -46,10 +46,6 @@ export default function EmailPreferencesClient() {
   const [emailFormat, setEmailFormat] = useState('html');
   const [isActive, setIsActive] = useState(true);
 
-  useEffect(() => {
-    fetchSubscription();
-  }, []);
-
   const fetchSubscription = async () => {
     try {
       const response = await fetch('/api/email-subscription');
@@ -69,6 +65,10 @@ export default function EmailPreferencesClient() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchSubscription();
+  }, []);
 
   const handleSave = async () => {
     if (!session) {

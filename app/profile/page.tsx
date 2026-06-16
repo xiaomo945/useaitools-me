@@ -54,14 +54,6 @@ export default function ProfilePage() {
   const [profile, setProfile] = useState<ProfileData | null>(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    if (status === 'authenticated') {
-      loadProfile();
-    } else if (status === 'unauthenticated') {
-      setLoading(false);
-    }
-  }, [status]);
-
   const loadProfile = async () => {
     try {
       setLoading(true);
@@ -76,6 +68,14 @@ export default function ProfilePage() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (status === 'authenticated') {
+      loadProfile();
+    } else if (status === 'unauthenticated') {
+      setLoading(false);
+    }
+  }, [status]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getCategoryColors = (category: string) => {
     switch (category) {

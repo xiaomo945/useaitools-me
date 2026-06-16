@@ -12,8 +12,12 @@
  * Usage: node scripts/check-internal-links.js
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const TOOLS_FILE = path.join(__dirname, '..', 'data', 'tools.json');
 const BLOG_FILE = path.join(__dirname, '..', 'data', 'blog-posts.json');

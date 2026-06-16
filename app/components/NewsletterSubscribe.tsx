@@ -74,6 +74,8 @@ export default function NewsletterSubscribe() {
                 }
               }}
               placeholder="your@email.com"
+              aria-label="Email address for newsletter subscription"
+              aria-required="true"
               className="flex-1 px-5 py-4 rounded-xl bg-white/90 backdrop-blur-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300"
               disabled={status === 'loading'}
             />

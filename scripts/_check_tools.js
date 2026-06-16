@@ -1,4 +1,4 @@
-const { PrismaClient } = require('@prisma/client');
+import { PrismaClient } from '@prisma/client';
 const p = new PrismaClient();
 
 const affiliateKeywords = ['rytr', 'jasper', 'veed', 'grammarly', 'notion', 'surfer', 'copy', 'synthesia', 'runway', 'pictory', 'descript', 'elevenlabs', 'midjourney', 'krisp', 'writesonic', 'wordtune', 'originality', 'adobe', 'canva', 'figma'];

@@ -40,10 +40,6 @@ export default function AutomatedReports() {
   const [loading, setLoading] = useState(true);
   const [selectedReport, setSelectedReport] = useState<Report | null>(null);
 
-  useEffect(() => {
-    fetchReports();
-  }, []);
-
   const fetchReports = async () => {
     try {
       const response = await fetch('/api/reports');
@@ -55,6 +51,10 @@ export default function AutomatedReports() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    fetchReports();
+  }, []);
 
   const generateReport = async (type: 'weekly' | 'monthly') => {
     try {

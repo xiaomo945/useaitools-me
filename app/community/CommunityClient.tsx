@@ -39,10 +39,6 @@ export default function CommunityClient() {
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
 
-  useEffect(() => {
-    loadDiscussions();
-  }, [category, sortBy, page]);
-
   const loadDiscussions = async () => {
     try {
       setLoading(true);
@@ -64,6 +60,10 @@ export default function CommunityClient() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    loadDiscussions();
+  }, [category, sortBy, page]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const getCategoryLabel = (cat: string) => {
     switch (cat) {

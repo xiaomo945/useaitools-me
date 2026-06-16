@@ -1,5 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // 读取当前数据
 const blogIndex = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'blog-index.json'), 'utf8'));
