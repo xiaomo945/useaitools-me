@@ -8,6 +8,7 @@ import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ToolVerdict from '@/app/components/ToolVerdict';
 import RelatedTools from '@/app/components/RelatedTools';
+import ShareButton from '@/app/components/ShareButton';
 import toolsData from '@/data/tools.json';
 
 // Save tool to browsing history
@@ -851,17 +852,13 @@ const [hasReferrer] = useState(() => {
                 </svg>
                 Compare
               </Link>
-              <button
-                onClick={handleShare}
-                className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
-              >
-                {copiedIndex === -1 ? (
-                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-500" />
-                ) : (
-                  <Share2 className="w-4 h-4 sm:w-5 sm:h-5" />
-                )}
-                {copiedIndex === -1 ? 'Copied!' : 'Share'}
-              </button>
+              <ShareButton
+                url={`/tools/${tool.id}`}
+                title={`${tool.name} - Use AI Tools`}
+                description={tool.description.slice(0, 100)}
+                targetType="tool"
+                targetId={tool.id}
+              />
             </div>
 
             {/* Trust Signal + Feedback */}

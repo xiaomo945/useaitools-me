@@ -86,4 +86,49 @@ export interface Tool {
   pros_cons?: ProsCons;
   skill_level?: 'beginner' | 'intermediate' | 'advanced';
   best_for?: string[];
+  commission_rate?: number; // Affiliate commission rate (0-100)
+  commission_type?: 'recurring' | 'one-time'; // Commission type
+  commission_duration?: number; // Duration in months for recurring (e.g., 12)
+}
+
+// Tool submission types
+export type SubmissionTier = 'free' | 'expedited' | 'sponsored';
+export type SubmissionStatus = 'pending' | 'reviewing' | 'approved' | 'rejected' | 'sponsored_active';
+
+export interface ToolSubmission {
+  id: number;
+  name: string;
+  url: string;
+  category: string;
+  description: string;
+  pricing: string;
+  needs_vpn: boolean;
+  submittedAt: string;
+  tier: SubmissionTier;
+  status: SubmissionStatus;
+  paymentId?: string; // Stripe/LemonSqueezy payment ID
+  sponsoredUntil?: string; // For sponsored tier, when it expires
+  contactEmail?: string; // For notifications
+}
+
+// Social sharing and points system
+export type ShareAction = 'tool' | 'blog' | 'referral';
+export type PointsAction = 'share_tool' | 'share_blog' | 'referral_signup';
+
+export interface PointsRecord {
+  id: number;
+  userId: string; // Anonymous user ID or email
+  action: PointsAction;
+  points: number;
+  createdAt: string;
+  targetType?: string; // 'tool' | 'blog'
+  targetId?: number;
+}
+
+export interface UserPoints {
+  userId: string;
+  totalPoints: number;
+  shareCount: number;
+  referralCount: number;
+  lastUpdated: string;
 }

@@ -8,6 +8,7 @@ import StarRating from './StarRating';
 import SkeletonCard from './Skeleton';
 import { useToast } from './Toast';
 import { debugLog } from '../utils/debug';
+import { track, trackCtaClick } from '@/lib/analytics';
 import { playSaveSound, playUnsaveSound, playCompareSound, playSearchSound } from '../utils/sound';
 import SearchBar from './SearchBar';
 import CategoryFilters from './CategoryFilters';
@@ -333,6 +334,7 @@ const ToolCard = memo(function ToolCard({
               target="_blank" rel="noopener noreferrer"
               onClick={(e) => {
                 debugLog('ToolClick', `CTA clicked: ${tool.name} (affiliate: ${hasAffiliate})`);
+                trackCtaClick(tool.name, ctaText, 'card', hasAffiliate);
                 try {
                   const url = new URL(getAffiliateLink(tool) || tool.url);
                   const domain = url.hostname.replace('www.', '');
@@ -788,6 +790,9 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       playSearchSound();
       setTriggeredSearch(search.trim());
       setShowSuggestions(false);
+      
+      // Track search analytics
+      track('search', { query: search.trim() });
     }
   }, [search]);
 

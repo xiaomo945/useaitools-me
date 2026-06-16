@@ -20,6 +20,7 @@ import HolidayBanner from "./components/HolidayBanner";
 import AuthProvider from "./components/AuthProvider";
 import WebVitals from "./components/WebVitals";
 import ServiceWorkerRegistration from "./components/ServiceWorkerRegistration";
+import AccessibilityAudit from "./components/AccessibilityAudit";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -180,6 +181,7 @@ export default function RootLayout({
           <ExternalLinkToast />
           <WebVitals />
           <ServiceWorkerRegistration />
+          <AccessibilityAudit />
         </ToastProvider>
       </body>
     </html>

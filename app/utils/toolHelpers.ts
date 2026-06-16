@@ -14,6 +14,9 @@ export type Tool = {
   rating_count?: number;
   skill_level?: 'beginner' | 'intermediate' | 'advanced';
   best_for?: string[];
+  commission_rate?: number;
+  commission_type?: 'recurring' | 'one-time';
+  commission_duration?: number;
 };
 
 // CTA A/B test variants
@@ -66,6 +69,37 @@ export const getAffiliateLink = (tool: Tool): string => {
   } catch {
     return baseLink;
   }
+};
+
+// Sort tools by commission value (high-commission first)
+export const sortByCommissionValue = (tools: Tool[]): Tool[] => {
+  return [...tools].sort((a, b) => {
+    const aHasAffiliate = hasAffiliateLink(a);
+    const bHasAffiliate = hasAffiliateLink(b);
+    
+    // If both have affiliate links, sort by commission rate
+    if (aHasAffiliate && bHasAffiliate) {
+      const aRate = a.commission_rate || 0;
+      const bRate = b.commission_rate || 0;
+      
+      // Calculate effective value: rate * duration (for recurring) or just rate (for one-time)
+      const aValue = a.commission_type === 'recurring' 
+        ? aRate * (a.commission_duration || 1)
+        : aRate;
+      const bValue = b.commission_type === 'recurring'
+        ? bRate * (b.commission_duration || 1)
+        : bRate;
+      
+      return bValue - aValue;
+    }
+    
+    // Affiliate tools come before non-affiliate tools
+    if (aHasAffiliate && !bHasAffiliate) return -1;
+    if (!aHasAffiliate && bHasAffiliate) return 1;
+    
+    // Neither has affiliate, maintain original order
+    return 0;
+  });
 };
 
 export const getCategoryColors = (category: string) => {

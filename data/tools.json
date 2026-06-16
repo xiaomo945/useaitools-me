@@ -1220,7 +1220,10 @@
       "Beginners",
       "Budget-Friendly",
       "Content Creation"
-    ]
+    ],
+    "commission_rate": 30,
+    "commission_type": "recurring",
+    "commission_duration": 12
   },
   {
     "id": 24,
@@ -1312,7 +1315,9 @@
       "Beginners",
       "Social Media",
       "Marketing"
-    ]
+    ],
+    "commission_rate": 40,
+    "commission_type": "one-time"
   },
   {
     "id": 52,
@@ -2307,7 +2312,10 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "commission_rate": 20,
+    "commission_type": "recurring",
+    "commission_duration": 6
   },
   {
     "id": 79,
@@ -3249,7 +3257,10 @@
       "Beginners",
       "Quick Results",
       "Content Creation"
-    ]
+    ],
+    "commission_rate": 30,
+    "commission_type": "recurring",
+    "commission_duration": 12
   },
   {
     "id": 202,

@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import type { Tool } from '@/types';
 import SearchFilters from '@/app/components/SearchFilters';
 import toolsData from '@/data/tools.json';
+import { track } from '@/lib/analytics';
 
 const tools = toolsData as Tool[];
 
@@ -16,6 +17,13 @@ function SearchPageInner() {
   useEffect(() => {
     setTimeout(() => setSearchQuery(query), 0);
   }, [query]);
+
+  // Track search queries
+  useEffect(() => {
+    if (searchQuery.trim()) {
+      track('search', { query: searchQuery });
+    }
+  }, [searchQuery]);
 
   // Apply text search first, then hand off to filters
   const textFiltered = useMemo(() => {

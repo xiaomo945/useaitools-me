@@ -278,6 +278,26 @@ export default function SearchBar({
                     </div>
                   </div>
                 )}
+                {/* Smart recommendations when no results */}
+                <div className="mt-4 pt-4 border-t border-slate-200 dark:border-gray-700">
+                  <p className="text-xs text-slate-400 mb-3">Try these popular tools:</p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {popularTools.slice(0, 3).map((tool) => (
+                      <button
+                        key={`rec-${tool.id}`}
+                        onClick={() => {
+                          if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
+                          router.push(`/tools/${tool.id}`);
+                          setShowSuggestions(false);
+                          setSelectedIndex(-1);
+                        }}
+                        className="px-3 py-1.5 text-xs font-medium bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
+                      >
+                        {tool.name}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
             )
           ) : (

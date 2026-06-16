@@ -141,8 +141,36 @@ export default function ComparePage() {
           </div>
         </div>
 
-        {/* Comparison Table */}
-        {selectedTools.length >= 2 && (
+        {/* Comparison Table or Empty State */}
+        {selectedTools.length < 2 ? (
+          <div className="text-center py-16">
+            <div className="mx-auto w-20 h-20 mb-6 flex items-center justify-center">
+              <div className="relative">
+                <svg className="w-16 h-16 text-slate-200 dark:text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                <div className="absolute -top-1 -right-1 w-7 h-7 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/30">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
+              Add at least 2 tools to compare
+            </h2>
+            <p className="text-slate-500 dark:text-slate-400 text-sm max-w-md mx-auto mb-6">
+              Select tools from the list above to start comparing their features side by side.
+            </p>
+            <button
+              onClick={() => setShowPicker(true)}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
+            >
+              <Plus className="w-5 h-5" />
+              Add Tool to Compare
+            </button>
+          </div>
+        ) : (
           <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl shadow-sm overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">

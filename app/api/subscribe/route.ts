@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
+import { sendWelcomeEmail } from '@/lib/email';
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
@@ -80,6 +81,8 @@ export async function POST(request: Request) {
     if (SUPABASE_URL && SUPABASE_ANON_KEY) {
       try {
         await saveToSupabase(email);
+        // Send welcome email asynchronously
+        sendWelcomeEmail(email).catch(err => console.error('[Email] Welcome email failed:', err));
         return NextResponse.json({ success: true, message: 'Thanks for subscribing!' });
       } catch (error: unknown) {
         if (error instanceof Error && error.message === 'DUPLICATE') {
@@ -91,6 +94,10 @@ export async function POST(request: Request) {
 
     // Fallback to local storage
     const result = saveToLocal(email);
+    if (result.success) {
+      // Send welcome email asynchronously
+      sendWelcomeEmail(email).catch(err => console.error('[Email] Welcome email failed:', err));
+    }
     return NextResponse.json(
       { success: result.success, message: result.message },
       { status: result.status || 200 }
