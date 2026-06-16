@@ -1442,6 +1442,9 @@ const [hasReferrer] = useState(() => {
 
         {/* Related Tools: Similar tools in same category */}
         <RelatedTools currentTool={tool} allTools={toolsData as { id: number; name: string; description: string; category: string; pricing: string; rating?: number; best_for?: string[] }[]} limit={4} />
+            </>
+          )}
+        </div>
       </div>
       <Footer />
     </div>
