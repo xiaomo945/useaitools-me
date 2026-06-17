@@ -22,6 +22,7 @@ export interface BlogPost {
   content: string;
   tldr?: string; // TL;DR summary shown at the top (conclusion-first format)
   canonical_slug?: string; // Canonical slug for duplicate posts (SEO)
+  tags?: string[];
 }
 
 export interface ToolExample {

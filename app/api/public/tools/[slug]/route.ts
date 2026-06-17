@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import fs from 'fs'
+import path from 'path'
 
 /**
  * 公开 API - 获取单个工具详情
@@ -15,12 +16,17 @@ export async function GET(
   try {
     const { slug } = await params
 
-    const tool = await prisma.tool.findFirst({
-      where: {
-        slug,
-        isActive: true
-      }
-    })
+    // 从 JSON 文件加载工具数据
+    const toolsPath = path.join(process.cwd(), 'data', 'tools.json')
+    let tools: any[] = []
+    
+    if (fs.existsSync(toolsPath)) {
+      const data = fs.readFileSync(toolsPath, 'utf-8')
+      tools = JSON.parse(data)
+    }
+
+    // 查找目标工具
+    const tool = tools.find(t => t.slug === slug && t.isActive !== false)
 
     if (!tool) {
       return NextResponse.json(
@@ -33,36 +39,35 @@ export async function GET(
       )
     }
 
-    // 获取相关推荐工具
-    const relatedTools = await prisma.tool.findMany({
-      where: {
-        category: tool.category,
-        isActive: true,
-        id: { not: tool.id }
-      },
-      take: 5,
-      select: {
-        id: true,
-        name: true,
-        slug: true,
-        description: true,
-        iconUrl: true,
-        rating: true,
-        pricing: true
-      }
-    })
+    // 获取相关推荐工具（同分类的其他工具）
+    const relatedTools = tools
+      .filter(t => 
+        t.category === tool.category && 
+        t.slug !== slug && 
+        t.isActive !== false
+      )
+      .slice(0, 5)
+      .map(t => ({
+        id: t.id,
+        name: t.name,
+        slug: t.slug,
+        description: t.description,
+        iconUrl: t.iconUrl || t.icon,
+        rating: t.rating,
+        pricing: t.pricing
+      }))
 
     return NextResponse.json({
       success: true,
       data: {
         tool: {
           ...tool,
-          screenshotUrls: tool.screenshotUrls ? JSON.parse(tool.screenshotUrls) : [],
-          tags: tool.tags ? JSON.parse(tool.tags) : [],
-          features: tool.features ? JSON.parse(tool.features) : [],
-          pros: tool.pros ? JSON.parse(tool.pros) : [],
-          cons: tool.cons ? JSON.parse(tool.cons) : [],
-          useCases: tool.useCases ? JSON.parse(tool.useCases) : []
+          screenshotUrls: Array.isArray(tool.screenshotUrls) ? tool.screenshotUrls : [],
+          tags: Array.isArray(tool.tags) ? tool.tags : [],
+          features: Array.isArray(tool.features) ? tool.features : [],
+          pros: Array.isArray(tool.pros) ? tool.pros : [],
+          cons: Array.isArray(tool.cons) ? tool.cons : [],
+          useCases: Array.isArray(tool.useCases) ? tool.useCases : []
         },
         relatedTools
       },

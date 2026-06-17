@@ -1,5 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import fs from 'fs'
+import path from 'path'
+
+interface Tool {
+  id: number
+  name: string
+  slug?: string
+  category: string
+  subcategory?: string
+  pricing?: string
+  rating?: number
+  reviewCount?: number
+  viewCount?: number
+  clickCount?: number
+  priceMonthly?: number
+  priceYearly?: number
+  createdAt?: string
+  updatedAt?: string
+  last_updated?: string
+  isActive?: boolean
+}
 
 /**
  * 公开 API - 工具数据分析
@@ -12,29 +32,22 @@ export async function GET(
   try {
     const { slug } = await params
 
-    // 获取工具基本信息
-    const tool = await prisma.tool.findFirst({
-      where: {
-        slug,
-        isActive: true
-      },
-      select: {
-        id: true,
-        name: true,
-        slug: true,
-        category: true,
-        subcategory: true,
-        pricing: true,
-        priceMonthly: true,
-        priceYearly: true,
-        rating: true,
-        reviewCount: true,
-        viewCount: true,
-        clickCount: true,
-        createdAt: true,
-        updatedAt: true
-      }
-    })
+    // 从 JSON 文件加载工具数据
+    const toolsPath = path.join(process.cwd(), 'data', 'tools.json')
+    if (!fs.existsSync(toolsPath)) {
+      return NextResponse.json(
+        { success: false, error: '工具数据文件未找到' },
+        { status: 500 }
+      )
+    }
+
+    const allTools: Tool[] = JSON.parse(fs.readFileSync(toolsPath, 'utf-8'))
+    const activeTools = allTools.filter(t => t.isActive !== false)
+
+    // 查找目标工具
+    const tool = activeTools.find(t =>
+      (t.slug || t.name.toLowerCase().replace(/\s+/g, '-')) === slug
+    )
 
     if (!tool) {
       return NextResponse.json(
@@ -47,77 +60,44 @@ export async function GET(
       )
     }
 
-    // 获取评价统计
-    const reviewStats = await prisma.review.groupBy({
-      by: ['rating'],
-      where: {
-        toolId: tool.id,
-        isApproved: true
-      },
-      _count: {
-        rating: true
-      }
-    })
-
-    const ratingDistribution = [5, 4, 3, 2, 1].map(star => {
-      const stat = reviewStats.find((s: typeof reviewStats[number]) => s.rating === star)
-      return {
-        rating: star,
-        count: stat?._count.rating || 0
-      }
-    })
+    // 评价数据不可用（无数据库），返回空分布
+    const ratingDistribution = [5, 4, 3, 2, 1].map(star => ({
+      rating: star,
+      count: 0
+    }))
 
     // 获取同类目排名
-    const categoryRanking = await prisma.tool.findMany({
-      where: {
-        category: tool.category,
-        isActive: true
-      },
-      orderBy: {
-        rating: 'desc'
-      },
-      select: {
-        id: true,
-        name: true,
-        slug: true,
-        rating: true,
-        reviewCount: true
-      },
-      take: 10
-    })
+    const categoryTools = activeTools
+      .filter(t => t.category === tool.category)
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
 
-    const rank = categoryRanking.findIndex((t: typeof categoryRanking[number]) => t.id === tool.id) + 1
+    const rank = categoryTools.findIndex(t => t.id === tool.id) + 1
 
     // 获取相关工具对比数据
-    const relatedTools = await prisma.tool.findMany({
-      where: {
-        category: tool.category,
-        isActive: true,
-        id: { not: tool.id }
-      },
-      take: 5,
-      select: {
-        id: true,
-        name: true,
-        slug: true,
-        rating: true,
-        reviewCount: true,
-        priceMonthly: true,
-        priceYearly: true,
-        pricing: true
-      }
-    })
+    const relatedTools = categoryTools
+      .filter(t => t.id !== tool.id)
+      .slice(0, 5)
+      .map(t => ({
+        name: t.name,
+        slug: t.slug || t.name.toLowerCase().replace(/\s+/g, '-'),
+        rating: t.rating || 0,
+        reviewCount: t.reviewCount || 0,
+        pricing: t.pricing || 'unknown'
+      }))
 
     // 计算流行度指标
-    const popularityScore = (tool.viewCount * 0.3 + tool.clickCount * 0.7) * (tool.rating / 5)
+    const viewCount = tool.viewCount || 0
+    const clickCount = tool.clickCount || 0
+    const rating = tool.rating || 0
+    const popularityScore = (viewCount * 0.3 + clickCount * 0.7) * (rating / 5)
 
     // 获取价格历史（如果有）
     const pricingInsights = {
-      currentPricing: tool.pricing,
-      priceMonthly: tool.priceMonthly,
-      priceYearly: tool.priceYearly,
-      pricePosition: 'mid-range', // 可以后续根据同类目工具计算
-      valueForMoney: tool.rating >= 4 ? 'excellent' : 'good'
+      currentPricing: tool.pricing || 'unknown',
+      priceMonthly: tool.priceMonthly || 0,
+      priceYearly: tool.priceYearly || 0,
+      pricePosition: 'mid-range',
+      valueForMoney: rating >= 4 ? 'excellent' : 'good'
     }
 
     return NextResponse.json({
@@ -126,41 +106,41 @@ export async function GET(
         tool: {
           id: tool.id,
           name: tool.name,
-          slug: tool.slug,
+          slug: tool.slug || tool.name.toLowerCase().replace(/\s+/g, '-'),
           category: tool.category,
-          subcategory: tool.subcategory
+          subcategory: tool.subcategory || null
         },
         metrics: {
-          views: tool.viewCount,
-          clicks: tool.clickCount,
-          clickThroughRate: tool.viewCount > 0 
-            ? ((tool.clickCount / tool.viewCount) * 100).toFixed(2) + '%'
+          views: viewCount,
+          clicks: clickCount,
+          clickThroughRate: viewCount > 0
+            ? ((clickCount / viewCount) * 100).toFixed(2) + '%'
             : '0%',
-          rating: tool.rating,
-          reviewCount: tool.reviewCount,
+          rating,
+          reviewCount: tool.reviewCount || 0,
           popularityScore: popularityScore.toFixed(2)
         },
         ratingDistribution,
         ranking: {
-          categoryRank: rank,
-          totalInCategory: categoryRanking.length,
-          topInCategory: categoryRanking.slice(0, 3)
+          categoryRank: rank || categoryTools.length,
+          totalInCategory: categoryTools.length,
+          topInCategory: categoryTools.slice(0, 3).map(t => ({
+            id: t.id,
+            name: t.name,
+            slug: t.slug || t.name.toLowerCase().replace(/\s+/g, '-'),
+            rating: t.rating || 0,
+            reviewCount: t.reviewCount || 0
+          }))
         },
         pricing: pricingInsights,
-        relatedTools: relatedTools.map((rt: typeof relatedTools[number]) => ({
-          name: rt.name,
-          slug: rt.slug,
-          rating: rt.rating,
-          reviewCount: rt.reviewCount,
-          pricing: rt.pricing
-        })),
+        relatedTools,
         insights: {
           strengths: [],
           weaknesses: [],
           recommendations: []
         },
         meta: {
-          lastUpdated: tool.updatedAt,
+          lastUpdated: tool.updatedAt || tool.last_updated || new Date().toISOString(),
           dataFreshness: 'real-time'
         }
       },
