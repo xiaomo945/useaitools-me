@@ -58,8 +58,15 @@ export const metadata: Metadata = {
     siteName: 'Use AI Tools',
     type: 'website',
     url: 'https://useaitools.me',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Use AI Tools - Best AI Tools Directory',
+      },
+    ],
   },
-  icons: [{ url: '/logo.png' }],
   twitter: {
     card: 'summary_large_image',
     title: 'Best AI Tools Directory 2026 – Discover & Compare 1200+ AI Tools',
@@ -70,6 +77,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://useaitools.me',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180' },
+    ],
+    other: [
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
