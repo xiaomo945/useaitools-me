@@ -14,6 +14,7 @@ import CategoryFilters from './CategoryFilters';
 import HeroSection from './HeroSection';
 import DailyPick from './DailyPick';
 import MysteryBox from './MysteryBox';
+import AISearchRecommend from './AISearchRecommend';
 import { fuzzyMatchScore, getSpellingSuggestions } from '../../lib/fuzzySearch';
 
 // Lazy load non-critical components for performance
@@ -1693,7 +1694,12 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
           blurTimeoutRef={blurTimeoutRef}
           spellingSuggestions={spellingSuggestions}
         />
-        
+
+        {/* AI Recommendation Assistant */}
+        <div className="max-w-2xl mx-auto mb-4 sm:mb-8 px-3 sm:px-0 flex justify-center">
+          <AISearchRecommend />
+        </div>
+
         {/* Scene Guidance Cards */}
         <div className="max-w-2xl mx-auto mb-4 sm:mb-8 px-3 sm:px-0">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">

@@ -35,16 +35,24 @@ export default function AISearchRecommend() {
   const [results, setResults] = useState<RecommendedTool[]>([]);
   const [isSearching, setIsSearching] = useState(false);
 
-  // Load tools from JSON (we use fetch to avoid import issues in client components)
+  // Load tools from API (handles paginated { tools: [...] } response)
   const loadTools = async (): Promise<Tool[]> => {
-    const response = await fetch('/api/tools');
-    if (response.ok) {
-      return response.json();
+    const allTools: Tool[] = [];
+    let page = 1;
+    const limit = 100;
+    // Fetch all pages to ensure full coverage for recommendation scoring
+    while (true) {
+      const response = await fetch(`/api/tools?page=${page}&limit=${limit}`);
+      if (!response.ok) break;
+      const data = await response.json();
+      const tools: Tool[] = data.tools || [];
+      allTools.push(...tools);
+      if (!data.hasMore || tools.length === 0) break;
+      page += 1;
+      // Safety guard: avoid infinite loops
+      if (page > 50) break;
     }
-    // Fallback: load from tools.json directly
-    const fallback = await fetch('/data/tools.json');
-    if (fallback.ok) return fallback.json();
-    return [];
+    return allTools;
   };
 
   const analyzeQuery = (query: string): { categories: string[]; priceRange: string; keywords: string[]; language: string } => {
