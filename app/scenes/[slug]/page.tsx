@@ -7,6 +7,7 @@ import { ArrowRight, Star } from 'lucide-react';
 import { scenes, getSceneBySlug, getSceneSlugs, type SceneConfig } from '@/data/scenes';
 import type { Tool } from '@/types';
 import { generateSlugFromName } from '@/app/tool/[slug]/page';
+import { hasAffiliateLink, getAffiliateLink } from '@/lib/affiliate';
 
 const tools = toolsData as Tool[];
 
@@ -31,31 +32,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     alternates: { canonical: `https://useaitools.me/scenes/${slug}` },
   };
-}
-
-// Affiliate link helpers (same pattern as other pages)
-function hasAffiliateLink(tool: Tool): boolean {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name.includes('Rytr')) shortEnvVarName = 'AFFILIATE_RYTR';
-  else if (tool.name.includes('VEED')) shortEnvVarName = 'AFFILIATE_VEED';
-  else if (tool.name.includes('Murf')) shortEnvVarName = 'AFFILIATE_MURF';
-  else if (tool.name.includes('Pictory')) shortEnvVarName = 'AFFILIATE_PICTORY';
-  else if (tool.name.includes('Grammarly')) shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return !!(envLink || tool.affiliate_link);
-}
-
-function getAffiliateLink(tool: Tool): string {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name.includes('Rytr')) shortEnvVarName = 'AFFILIATE_RYTR';
-  else if (tool.name.includes('VEED')) shortEnvVarName = 'AFFILIATE_VEED';
-  else if (tool.name.includes('Murf')) shortEnvVarName = 'AFFILIATE_MURF';
-  else if (tool.name.includes('Pictory')) shortEnvVarName = 'AFFILIATE_PICTORY';
-  else if (tool.name.includes('Grammarly')) shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return envLink || tool.affiliate_link || tool.url;
 }
 
 const categoryColorMap: Record<string, { bg: string; bgDark: string; text: string; textLight: string }> = {

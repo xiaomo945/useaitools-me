@@ -3,6 +3,7 @@ import Link from 'next/link';
 import tools from '@/data/tools.json';
 import Footer from '@/app/components/Footer';
 import StarRating from '@/app/components/StarRating';
+import { getAffiliateLink } from '@/lib/affiliate';
 
 export const metadata: Metadata = {
   title: 'AI Audio Tools Comparison - Use AI Tools',
@@ -46,24 +47,6 @@ const getPricingColors = (pricing: string) => {
       return { bg: 'bg-slate-100', text: 'text-slate-700' };
   }
 };
-
-function getAffiliateLink(tool: Tool): string {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name.includes('Rytr')) {
-    shortEnvVarName = 'AFFILIATE_RYTR';
-  } else if (tool.name.includes('VEED')) {
-    shortEnvVarName = 'AFFILIATE_VEED';
-  } else if (tool.name.includes('Murf')) {
-    shortEnvVarName = 'AFFILIATE_MURF';
-  } else if (tool.name.includes('Pictory')) {
-    shortEnvVarName = 'AFFILIATE_PICTORY';
-  } else if (tool.name.includes('Grammarly')) {
-    shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  }
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return envLink || tool.affiliate_link || tool.url;
-}
 
 export default function AudioComparePage() {
   const sortedTools = [...audioTools].sort((a, b) => (b.rating || 0) - (a.rating || 0));

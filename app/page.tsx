@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import type { Tool } from '@/types';
 import type { Metadata } from 'next';
+import { getAffiliateLink } from '@/lib/affiliate';
 
 const SceneExplorer = dynamic(() => import('@/app/components/SceneExplorer'), {
   loading: () => <div className="h-64 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-2xl" />,
@@ -22,7 +23,6 @@ const StoryCard = dynamic(() => import('@/app/components/StoryCard'), {
 export const metadata: Metadata = {
   title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
   description: 'Curated directory of the best AI tools. Browse 1,300+ tools across Writing, Image, Video, Audio, Code & Productivity. Find your perfect AI tool in seconds.',
-  metadataBase: new URL('https://useaitools.me'),
   alternates: {
     canonical: '/',
     languages: {
@@ -45,25 +45,6 @@ export const metadata: Metadata = {
     description: 'Curated directory of the best AI tools. Browse 1,300+ tools across 6 categories.',
   },
 };
-
-// Helper function to get affiliate link from environment variable or fallback to JSON
-function getAffiliateLink(tool: any): string {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name.includes('Rytr')) {
-    shortEnvVarName = 'AFFILIATE_RYTR';
-  } else if (tool.name.includes('VEED')) {
-    shortEnvVarName = 'AFFILIATE_VEED';
-  } else if (tool.name.includes('Murf')) {
-    shortEnvVarName = 'AFFILIATE_MURF';
-  } else if (tool.name.includes('Pictory')) {
-    shortEnvVarName = 'AFFILIATE_PICTORY';
-  } else if (tool.name.includes('Grammarly')) {
-    shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  }
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return envLink || tool.affiliate_link;
-}
 
 export default function Home() {
   // Enrich tools with affiliate links from environment variables

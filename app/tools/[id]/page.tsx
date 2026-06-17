@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import tools from '@/data/tools.json';
 import { blogPosts } from '@/data/blog-posts';
 import ToolDetailClient from './ToolDetailClient';
+import { getAffiliateLink } from '@/lib/affiliate';
 
 type Tool = {
   id: number;
@@ -22,25 +23,6 @@ type Tool = {
 
 // 类型断言确保数据符合我们的类型要求
 const typedTools = tools as Tool[];
-
-// Helper function to get affiliate link from environment variable or fallback to JSON
-function getAffiliateLink(tool: Tool): string {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name.includes('Rytr')) {
-    shortEnvVarName = 'AFFILIATE_RYTR';
-  } else if (tool.name.includes('VEED')) {
-    shortEnvVarName = 'AFFILIATE_VEED';
-  } else if (tool.name.includes('Murf')) {
-    shortEnvVarName = 'AFFILIATE_MURF';
-  } else if (tool.name.includes('Pictory')) {
-    shortEnvVarName = 'AFFILIATE_PICTORY';
-  } else if (tool.name.includes('Grammarly')) {
-    shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  }
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return envLink || tool.affiliate_link;
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
