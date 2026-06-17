@@ -65,12 +65,12 @@ export default function ToolReviews({ tool }: ToolReviewsProps) {
     e.preventDefault();
 
     if (!session?.user) {
-      alert('Please sign in to write a review');
+      alert('Please sign in with your account to share your review. Click "Sign In" in the top right corner to get started!');
       return;
     }
 
     if (!title.trim() || !content.trim() || rating < 1) {
-      alert('Please fill in all required fields');
+      alert('Please fill in all required fields (rating, title, and review content) before submitting.');
       return;
     }
 
@@ -100,11 +100,11 @@ export default function ToolReviews({ tool }: ToolReviewsProps) {
         setRating(5);
       } else {
         const error = await response.json();
-        alert(error.error || 'Failed to submit review');
+        alert(`Unable to submit your review right now. This might be due to a network issue or server maintenance. Please try again in a few minutes. (Error: ${error.error || 'Unknown error'})`);
       }
     } catch (error) {
       console.error('Failed to submit review:', error);
-      alert('Failed to submit review');
+      alert('Something went wrong while submitting your review. Please check your internet connection and try again.');
     } finally {
       setSubmitting(false);
     }

@@ -70,7 +70,7 @@ export default function EmptyState({ query, tools, onClearQuery, onClearFilters,
           {hasActiveFilters && ' with current filters'}
         </h3>
         <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 mb-6">
-          Try one of these popular categories, or explore our top-rated picks below.
+          We couldn&apos;t find any tools matching &ldquo;{query}&rdquo;. Try browsing popular categories below or check out our top-rated picks — you might discover something amazing!
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
