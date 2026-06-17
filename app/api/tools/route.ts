@@ -35,11 +35,16 @@ export async function GET(request: NextRequest) {
   const paginatedTools = enrichedTools.slice(startIndex, endIndex);
   const hasMore = endIndex < enrichedTools.length;
 
-  return NextResponse.json({
+  const response = NextResponse.json({
     tools: paginatedTools,
     page,
     limit,
     totalCount: enrichedTools.length,
     hasMore
   });
+
+  // Cache for 5 minutes, stale-while-revalidate for 10 minutes
+  response.headers.set('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=600');
+
+  return response;
 }

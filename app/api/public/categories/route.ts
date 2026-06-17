@@ -39,11 +39,13 @@ export async function GET(request: Request) {
         toolCount: c._count.tools
       }))
 
-      return NextResponse.json({
+      const response = NextResponse.json({
         success: true,
         data: { categories, total: categories.length },
         meta: { timestamp: new Date().toISOString(), version: '1.0' }
       })
+      response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=7200')
+      return response
     } else {
       const categories = await prisma.category.findMany({
         where: { isActive: true },
@@ -57,11 +59,13 @@ export async function GET(request: Request) {
         orderBy: { name: 'asc' }
       })
 
-      return NextResponse.json({
+      const response = NextResponse.json({
         success: true,
         data: { categories, total: categories.length },
         meta: { timestamp: new Date().toISOString(), version: '1.0' }
       })
+      response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=7200')
+      return response
     }
   } catch (error) {
     console.error('公开 API 获取分类列表失败:', error)

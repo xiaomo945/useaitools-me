@@ -35,7 +35,12 @@ export async function GET(request: NextRequest) {
           orderBy: { sortOrder: 'asc' },
         });
 
-    return NextResponse.json({ categories });
+    const response = NextResponse.json({ categories });
+
+    // Cache for 1 hour, stale-while-revalidate for 2 hours
+    response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=7200');
+
+    return response;
   } catch (error) {
     console.error('获取分类失败:', error);
     return NextResponse.json(
