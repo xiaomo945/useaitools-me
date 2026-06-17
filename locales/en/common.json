@@ -4,7 +4,13 @@
     "tools": "Tools",
     "categories": "Categories",
     "blog": "Blog",
-    "about": "About"
+    "about": "About",
+    "search": "Search",
+    "leaderboard": "Top Rated",
+    "saved": "Saved",
+    "compare": "Compare",
+    "submitTool": "Submit Tool",
+    "language": "Language"
   },
   "hero": {
     "title": "Discover the Best AI Tools",
@@ -34,7 +40,16 @@
     "copyright": "© 2026 Use AI Tools. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
-    "contact": "Contact"
+    "contact": "Contact",
+    "tagline": "Your comprehensive guide to AI tools",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "legal": "Legal",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Get the best AI tools delivered weekly",
+    "subscribe": "Subscribe",
+    "emailPlaceholder": "Enter your email",
+    "followUs": "Follow Us"
   },
   "common": {
     "loading": "Loading...",
@@ -45,3 +60,4 @@
     "submit": "Submit"
   }
 }
+

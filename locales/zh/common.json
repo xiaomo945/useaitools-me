@@ -4,7 +4,13 @@
     "tools": "工具",
     "categories": "分类",
     "blog": "博客",
-    "about": "关于"
+    "about": "关于",
+    "search": "搜索",
+    "leaderboard": "高分榜",
+    "saved": "已收藏",
+    "compare": "对比",
+    "submitTool": "提交工具",
+    "language": "语言"
   },
   "hero": {
     "title": "发现最佳 AI 工具",
@@ -34,7 +40,16 @@
     "copyright": "© 2026 Use AI Tools. 保留所有权利。",
     "privacy": "隐私政策",
     "terms": "服务条款",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "tagline": "您全面的 AI 工具指南",
+    "quickLinks": "快速链接",
+    "resources": "资源",
+    "legal": "法律",
+    "newsletter": "订阅",
+    "newsletterDesc": "每周获取最佳 AI 工具推荐",
+    "subscribe": "订阅",
+    "emailPlaceholder": "输入您的邮箱",
+    "followUs": "关注我们"
   },
   "common": {
     "loading": "加载中...",
@@ -45,3 +60,4 @@
     "submit": "提交"
   }
 }
+

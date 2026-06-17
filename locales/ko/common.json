@@ -4,7 +4,13 @@
     "tools": "도구",
     "categories": "카테고리",
     "blog": "블로그",
-    "about": "소개"
+    "about": "소개",
+    "search": "검색",
+    "leaderboard": "최고 평점",
+    "saved": "저장됨",
+    "compare": "비교",
+    "submitTool": "도구 제출",
+    "language": "언어"
   },
   "hero": {
     "title": "최고의 AI 도구 발견",
@@ -34,7 +40,16 @@
     "copyright": "© 2026 Use AI Tools. All rights reserved.",
     "privacy": "개인정보 보호정책",
     "terms": "서비스 이용약관",
-    "contact": "문의하기"
+    "contact": "문의하기",
+    "tagline": "AI 도구에 대한 종합 가이드",
+    "quickLinks": "빠른 링크",
+    "resources": "리소스",
+    "legal": "법적",
+    "newsletter": "뉴스레터",
+    "newsletterDesc": "매주 최고의 AI 도구를 받아보세요",
+    "subscribe": "구독",
+    "emailPlaceholder": "이메일 입력",
+    "followUs": "팔로우"
   },
   "common": {
     "loading": "로딩 중...",
@@ -45,3 +60,4 @@
     "submit": "제출"
   }
 }
+

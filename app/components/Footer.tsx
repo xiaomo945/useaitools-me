@@ -1,16 +1,36 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import NewsletterSubscribe from './NewsletterSubscribe';
 import LanguageSwitcher from './LanguageSwitcher';
+import { useLocale, useTranslations } from './LanguageSwitcher';
 
 export default function Footer() {
+  const { locale } = useLocale();
+  const translations = useTranslations(locale);
+
+  const t = (key: string): string => {
+    if (!translations) return key;
+    const keys = key.split('.');
+    let value: any = translations;
+    for (const k of keys) {
+      if (value && typeof value === 'object' && k in value) {
+        value = value[k];
+      } else {
+        return key;
+      }
+    }
+    return typeof value === 'string' ? value : key;
+  };
+
   return (
     <footer className="bg-slate-100 dark:bg-gray-900 border-t border-slate-200 dark:border-gray-800">
       {/* Newsletter Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
         <NewsletterSubscribe />
       </div>
-      
+
       <div className="py-10 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center">
@@ -20,9 +40,9 @@ export default function Footer() {
               </h2>
             </div>
             <p className="text-slate-600 dark:text-gray-400 mb-4">
-              Curated AI tools directory · 50+ tools · 6 categories
+              {t('footer.tagline')} · 50+ tools · 6 categories
             </p>
-            
+
             {/* Social Media Links */}
             <div className="flex justify-center gap-4 mb-6">
               <a
@@ -108,7 +128,7 @@ export default function Footer() {
                 href="/leaderboard"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >
-                Leaderboard
+                {t('nav.leaderboard')}
               </Link>
               <Link
                 href="/changelog"
@@ -138,7 +158,7 @@ export default function Footer() {
                 href="/about"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >
-                About
+                {t('nav.about')}
               </Link>
               <Link
                 href="/affiliate-disclosure"
@@ -150,29 +170,29 @@ export default function Footer() {
                 href="#"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >
-                Privacy Policy
+                {t('footer.privacy')}
               </Link>
               <Link
                 href="#"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >
-                Terms of Service
+                {t('footer.terms')}
               </Link>
               <a
                 href="mailto:affiliate@useaitools.me"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >
-                Contact
+                {t('footer.contact')}
               </a>
             </div>
-            
+
             {/* Language Switcher */}
             <div className="flex justify-center mb-6">
               <LanguageSwitcher />
             </div>
-            
+
             <p className="text-slate-500 dark:text-gray-500 text-sm">
-              © {new Date().getFullYear()} Use AI Tools. Built by an indie maker.
+              {t('footer.copyright')}
             </p>
           </div>
         </div>
@@ -180,3 +200,4 @@ export default function Footer() {
     </footer>
   );
 }
+

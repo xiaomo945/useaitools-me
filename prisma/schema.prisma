@@ -678,3 +678,21 @@ model SponsoredOrder {
   @@index([status])
   @@index([endDate])
 }
+
+// Core Web Vitals metrics collected from the client (WebVitals.tsx)
+model WebVital {
+  id        String   @id @default(cuid())
+  metric    String   // LCP | FID | INP | CLS | TTFB | FCP
+  value     Float    // metric value (ms for timing metrics, unitless for CLS)
+  rating    String   // good | needs-improvement | poor
+  url       String   // page URL where the metric was captured
+  sessionId String?  // optional session identifier
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@index([metric])
+  @@index([rating])
+  @@index([createdAt])
+  @@index([url])
+}
+

@@ -496,6 +496,65 @@ const ctaVariants = {
   C: { text: 'Join 10,000+ Users', color: 'indigo' },
 };
 
+type CtaVariantKey = keyof typeof ctaVariants;
+const CTA_VARIANT_COOKIE = 'ab_cta_variant';
+const CTA_VARIANT_STORAGE = 'useaitools_ab_cta_variant';
+
+// Stable hash for variant assignment (matches lib/ab-testing.ts algorithm)
+function hashVariant(userId: string, variantsCount: number): number {
+  let hash = 0;
+  for (let i = 0; i < userId.length; i++) {
+    hash = ((hash << 5) - hash) + userId.charCodeAt(i);
+    hash |= 0;
+  }
+  return Math.abs(hash) % variantsCount;
+}
+
+function getOrCreateAbUserId(): string {
+  if (typeof window === 'undefined') return '';
+  const existing = localStorage.getItem('useaitools_ab_user_id');
+  if (existing) return existing;
+  const newId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+  localStorage.setItem('useaitools_ab_user_id', newId);
+  return newId;
+}
+
+function pickCtaVariant(): CtaVariantKey {
+  if (typeof window === 'undefined') return 'A';
+  // Check localStorage first (persists across sessions)
+  const stored = localStorage.getItem(CTA_VARIANT_STORAGE) as CtaVariantKey | null;
+  if (stored && stored in ctaVariants) return stored;
+  // Also check cookie (set by server-side lib/ab-testing.ts if used)
+  const match = document.cookie.match(new RegExp(`(?:^|; )${CTA_VARIANT_COOKIE}=([^;]*)`));
+  if (match) {
+    const cookieVariant = decodeURIComponent(match[1]) as CtaVariantKey;
+    if (cookieVariant in ctaVariants) {
+      localStorage.setItem(CTA_VARIANT_STORAGE, cookieVariant);
+      return cookieVariant;
+    }
+  }
+  // Assign deterministically based on user id hash
+  const userId = getOrCreateAbUserId();
+  const variantKeys = Object.keys(ctaVariants) as CtaVariantKey[];
+  const idx = hashVariant(userId, variantKeys.length);
+  const chosen = variantKeys[idx];
+  localStorage.setItem(CTA_VARIANT_STORAGE, chosen);
+  return chosen;
+}
+
+function trackCtaExposure(variant: CtaVariantKey): void {
+  if (typeof window === 'undefined') return;
+  // Vercel Analytics custom event
+  const w = window as any;
+  if (typeof w.va === 'function') {
+    w.va('event', { name: 'cta_ab_exposure', data: { variant, experiment: 'cta_text_color' } });
+  }
+  // Plausible custom event
+  if (typeof (window as any).plausible === 'function') {
+    (window as any).plausible('CTA AB Exposure', { props: { variant } });
+  }
+}
+
 type Category = string;
 
 interface BlogPost {
@@ -591,17 +650,12 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       if (searches) setTimeout(() => setRecentSearches(JSON.parse(searches)), 0);
     } catch { /* ignore */ }
     
-    // Load CTA variant (A/B/C test)
+    // Load CTA variant (A/B/C test) — stable assignment via user id hash
     try {
-      const stored = localStorage.getItem('ctaVariant') as keyof typeof ctaVariants;
-      if (stored === 'A' || stored === 'B' || stored === 'C') {
-        setTimeout(() => setCtaVariant(stored), 0);
-      } else {
-        const variants: (keyof typeof ctaVariants)[] = ['A', 'B', 'C'];
-        const v = variants[Math.floor(Math.random() * variants.length)];
-        setTimeout(() => setCtaVariant(v), 0);
-        localStorage.setItem('ctaVariant', v);
-      }
+      const variant = pickCtaVariant();
+      setTimeout(() => setCtaVariant(variant), 0);
+      // Track exposure once per session for analytics
+      trackCtaExposure(variant);
     } catch { /* ignore */ }
 
     // Check if first visit
@@ -2112,7 +2166,9 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
             const isSaved = savedIds.includes(tool.id);
             const isSelectedForCompare = selectedForCompare.includes(tool.id);
             const hasAffiliate = hasAffiliateLink(tool);
-            const ctaText = getDynamicCTA(tool.pricing, hasAffiliate);
+            // A/B test: when affiliate present, override CTA text with variant text
+            const baseCtaText = getDynamicCTA(tool.pricing, hasAffiliate);
+            const ctaText = hasAffiliate ? ctaVariants[ctaVariant].text : baseCtaText;
             const ctaColor = hasAffiliate ? ctaVariants[ctaVariant].color : 'emerald';
             
             return (

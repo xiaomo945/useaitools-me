@@ -1,101 +1,95 @@
-import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { NextRequest, NextResponse } from 'next/server';
+import { prisma } from '@/lib/prisma';
+import { sendEmail, renderWelcomeEmail } from '@/lib/email';
 
-const SUPABASE_URL = process.env.SUPABASE_URL;
-const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-async function saveToSupabase(email: string): Promise<boolean> {
-  if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-    return false;
-  }
-
-  try {
-    const response = await fetch(`${SUPABASE_URL}/rest/v1/subscribers`, {
-      method: 'POST',
-      headers: {
-      'Content-Type': 'application/json',
-      apikey: SUPABASE_ANON_KEY,
-      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-      Prefer: 'return=minimal',
-    },
-      body: JSON.stringify({ email, subscribed_at: new Date().toISOString() }),
-  });
-
-    if (response.status === 409) {
-      throw new Error('DUPLICATE');
-    }
-
-    if (!response.ok) {
-      throw new Error(`Supabase error: ${response.status}`);
-    }
-    return true;
-  } catch (error: unknown) {
-    if (error instanceof Error && error.message === 'DUPLICATE') {
-      throw error;
-    }
-    console.error('Supabase save failed:', error);
-    return false;
-  }
+function getClientIp(request: NextRequest): string | null {
+  const forwarded = request.headers.get('x-forwarded-for');
+  if (forwarded) return forwarded.split(',')[0].trim();
+  const realIp = request.headers.get('x-real-ip');
+  return realIp || null;
 }
 
-function saveToLocal(email: string): { success: boolean; message: string; status?: number } {
-  const subscribersPath = path.join(process.cwd(), 'data', 'subscribers.json');
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json().catch(() => ({}));
+    const email = (body.email as string)?.trim().toLowerCase();
+    const name = (body.name as string)?.trim() || null;
+    const source = (body.source as string)?.trim() || 'website';
 
-  let subscribers: { email: string; subscribedAt: string }[] = [];
-
-  if (fs.existsSync(subscribersPath)) {
-    const data = fs.readFileSync(subscribersPath, 'utf-8');
-    subscribers = JSON.parse(data);
-  }
-
-  if (subscribers.some(sub => sub.email === email)) {
-      return { success: false, message: 'Email already subscribed', status: 409 };
+    if (!email) {
+      return NextResponse.json(
+        { success: false, message: 'Email is required.' },
+        { status: 400 }
+      );
     }
 
-  subscribers.push({
-      email,
-      subscribedAt: new Date().toISOString()
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { success: false, message: 'Please provide a valid email address.' },
+        { status: 400 }
+      );
+    }
+
+    const ipAddress = getClientIp(request);
+    const userAgent = request.headers.get('user-agent') || null;
+
+    // Upsert subscription: if email exists and is unsubscribed, reactivate.
+    const subscription = await prisma.siteSubscription.upsert({
+      where: { email },
+      update: {
+        status: 'active',
+        name: name || undefined,
+        source,
+        ipAddress,
+        userAgent,
+      },
+      create: {
+        email,
+        name,
+        source,
+        ipAddress,
+        userAgent,
+        status: 'active',
+      },
     });
 
-  fs.writeFileSync(subscribersPath, JSON.stringify(subscribers, null, 2));
-
-  console.warn(
-    '[Newsletter] Using local JSON storage — data will be lost on redeploy. ' +
-    'Set SUPABASE_URL and SUPABASE_ANON_KEY to enable persistent storage.'
-  );
-
-  return { success: true, message: 'Thanks for subscribing!' };
-}
-
-export async function POST(request: Request) {
-  try {
-    const { email } = await request.json();
-
-    if (!email || !email.includes('@')) {
-      return NextResponse.json({ success: false, message: 'Invalid email address' }, { status: 400 });
-    }
-
-    // Try Supabase first
-    if (SUPABASE_URL && SUPABASE_ANON_KEY) {
-      try {
-        await saveToSupabase(email);
-        return NextResponse.json({ success: true, message: 'Thanks for subscribing!' });
-      } catch (error: unknown) {
-        if (error instanceof Error && error.message === 'DUPLICATE') {
-          return NextResponse.json({ success: false, message: 'Email already subscribed' }, { status: 409 });
-        }
-        // Fall through to local storage
+    // Send welcome email (best-effort, never block subscription on email failure)
+    const wasReactivation = subscription.createdAt !== subscription.updatedAt && subscription.status === 'active';
+    if (!wasReactivation) {
+      const emailPayload = renderWelcomeEmail(email, name || undefined);
+      const result = await sendEmail(emailPayload);
+      if (!result.success && process.env.NODE_ENV === 'development') {
+        console.warn('[subscribe] Welcome email failed:', result.error);
       }
     }
 
-    // Fallback to local storage
-    const result = saveToLocal(email);
-    return NextResponse.json(
-      { success: result.success, message: result.message },
-      { status: result.status || 200 }
-    );
+    return NextResponse.json({
+      success: true,
+      message: 'Thanks for subscribing! Check your inbox for a welcome email.',
+    });
   } catch (error) {
-    return NextResponse.json({ success: false, message: 'Internal server error' }, { status: 500 });
+    console.error('Subscription failed:', error);
+    return NextResponse.json(
+      { success: false, message: 'Something went wrong. Please try again.' },
+      { status: 500 }
+    );
+  }
+}
+
+// GET: subscriber count (public, for social proof display)
+export async function GET() {
+  try {
+    const count = await prisma.siteSubscription.count({
+      where: { status: 'active' },
+    });
+    return NextResponse.json({ success: true, count });
+  } catch (error) {
+    console.error('Failed to fetch subscriber count:', error);
+    return NextResponse.json(
+      { success: false, count: 0 },
+      { status: 500 }
+    );
   }
 }

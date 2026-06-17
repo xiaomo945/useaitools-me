@@ -4,7 +4,13 @@
     "tools": "Werkzeuge",
     "categories": "Kategorien",
     "blog": "Blog",
-    "about": "Über uns"
+    "about": "Über uns",
+    "search": "Suche",
+    "leaderboard": "Top bewertet",
+    "saved": "Gespeichert",
+    "compare": "Vergleichen",
+    "submitTool": "Werkzeug einreichen",
+    "language": "Sprache"
   },
   "hero": {
     "title": "Entdecken Sie die besten KI-Tools",
@@ -34,7 +40,16 @@
     "copyright": "© 2026 Use AI Tools. Alle Rechte vorbehalten.",
     "privacy": "Datenschutzrichtlinie",
     "terms": "Nutzungsbedingungen",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "tagline": "Ihr umfassender Leitfaden für KI-Tools",
+    "quickLinks": "Schnelllinks",
+    "resources": "Ressourcen",
+    "legal": "Rechtliches",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Erhalten Sie wöchentlich die besten KI-Tools",
+    "subscribe": "Abonnieren",
+    "emailPlaceholder": "E-Mail eingeben",
+    "followUs": "Folgen Sie uns"
   },
   "common": {
     "loading": "Laden...",
@@ -45,3 +60,4 @@
     "submit": "Absenden"
   }
 }
+

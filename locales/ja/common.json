@@ -4,7 +4,13 @@
     "tools": "ツール",
     "categories": "カテゴリー",
     "blog": "ブログ",
-    "about": "について"
+    "about": "について",
+    "search": "検索",
+    "leaderboard": "高評価",
+    "saved": "保存済み",
+    "compare": "比較",
+    "submitTool": "ツールを投稿",
+    "language": "言語"
   },
   "hero": {
     "title": "最高のAIツールを発見",
@@ -34,7 +40,16 @@
     "copyright": "© 2026 Use AI Tools. All rights reserved.",
     "privacy": "プライバシーポリシー",
     "terms": "利用規約",
-    "contact": "お問い合わせ"
+    "contact": "お問い合わせ",
+    "tagline": "AIツールの包括的なガイド",
+    "quickLinks": "クイックリンク",
+    "resources": "リソース",
+    "legal": "法的",
+    "newsletter": "ニュースレター",
+    "newsletterDesc": "毎週最高のAIツールをお届け",
+    "subscribe": "購読",
+    "emailPlaceholder": "メールアドレスを入力",
+    "followUs": "フォロー"
   },
   "common": {
     "loading": "読み込み中...",
@@ -45,3 +60,4 @@
     "submit": "送信"
   }
 }
+

@@ -4,7 +4,13 @@
     "tools": "Outils",
     "categories": "Catégories",
     "blog": "Blog",
-    "about": "À propos"
+    "about": "À propos",
+    "search": "Rechercher",
+    "leaderboard": "Mieux notés",
+    "saved": "Enregistrés",
+    "compare": "Comparer",
+    "submitTool": "Proposer un outil",
+    "language": "Langue"
   },
   "hero": {
     "title": "Découvrez les meilleurs outils IA",
@@ -34,7 +40,16 @@
     "copyright": "© 2026 Use AI Tools. Tous droits réservés.",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
-    "contact": "Contact"
+    "contact": "Contact",
+    "tagline": "Votre guide complet des outils IA",
+    "quickLinks": "Liens rapides",
+    "resources": "Ressources",
+    "legal": "Mentions légales",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Recevez les meilleurs outils IA chaque semaine",
+    "subscribe": "S'abonner",
+    "emailPlaceholder": "Entrez votre email",
+    "followUs": "Suivez-nous"
   },
   "common": {
     "loading": "Chargement...",
@@ -45,3 +60,4 @@
     "submit": "Soumettre"
   }
 }
+
