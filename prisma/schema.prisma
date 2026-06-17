@@ -4,7 +4,6 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
 }
 
 model User {
@@ -88,6 +87,7 @@ model Tool {
   monthlyVisits   Int?         // 外部流量数据：月访问量
   trafficRank     Int?         // 外部流量数据：全球排名
   lastTrafficUpdate DateTime?  // 流量数据最后更新时间
+  lastVerified    DateTime?    // 工具信息最后验证时间
   isActive        Boolean      @default(true)
   isFeatured      Boolean      @default(false)
   isStaffPick     Boolean      @default(false)

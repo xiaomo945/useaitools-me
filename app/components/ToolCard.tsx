@@ -160,6 +160,18 @@ const ToolCard = memo(function ToolCard({
         </div>
       )}
       
+      {/* Verified Badge for Top Tools */}
+      {(tool.rating >= 4.5 || tool.reviewCount >= 100 || tool.monthlyVisits >= 100000) && (
+        <div className="absolute top-3 left-3 z-10">
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-700">
+            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.141.094.268.203.377.327.101.12.189.25.262.391a3.066 3.066 0 01-.723 1.745 3.066 3.066 0 010 3.976 3.066 3.066 0 01.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 01-.377.327c-.101.12-.189.25-.262.391a3.066 3.066 0 01-1.745-.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 01-1.745.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 01-.377-.327c-.101-.12-.189-.25-.262-.391a3.066 3.066 0 01.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 01-.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            Verified
+          </span>
+        </div>
+      )}
+      
       <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
       
       {shortcutNumber && (
@@ -243,6 +255,28 @@ const ToolCard = memo(function ToolCard({
           {tool.skill_level && (
             <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap ${getSkillLevelColors(tool.skill_level).bg} ${getSkillLevelColors(tool.skill_level).text}`}>
               {getSkillLevelColors(tool.skill_level).label}
+            </span>
+          )}
+          {tool.monthlyVisits && (
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              {tool.monthlyVisits >= 1000000
+                ? `${(tool.monthlyVisits / 1000000).toFixed(1)}M`
+                : tool.monthlyVisits >= 1000
+                  ? `${(tool.monthlyVisits / 1000).toFixed(1)}K`
+                  : tool.monthlyVisits}
+              /mo
+            </span>
+          )}
+          {tool.lastVerified && (
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold whitespace-nowrap bg-emerald-50 dark:bg-emerald-900/20 text-emerald-700 dark:text-emerald-300">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Verified {new Date(tool.lastVerified).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
             </span>
           )}
           <div className="flex flex-wrap gap-1.5">
