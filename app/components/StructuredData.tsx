@@ -40,6 +40,30 @@ export interface StructuredDataProps {
 }
 
 function buildHomeSchema(): object {
+  // FAQ data for structured data
+  const faqData = [
+    {
+      question: "What are the best AI tools in 2026?",
+      answer: "The best AI tools depend on your needs. For writing, Rytr and Jasper are top choices. For image generation, Midjourney and DALL-E 3 lead the market. For video editing, VEED.io offers excellent features. Browse our directory to find the perfect AI tool for your use case."
+    },
+    {
+      question: "Are there free AI tools available?",
+      answer: "Yes! Many AI tools offer free tiers or trials. Rytr has a free plan with monthly usage limits. Canva AI features are included in their free tier. VEED.io offers free video editing with AI features. Check individual tool pages for current pricing and free options."
+    },
+    {
+      question: "How do I compare AI tools?",
+      answer: "Use our Compare feature to select up to 3 tools and compare them side-by-side. We show features, pricing, ratings, and use cases to help you make an informed decision."
+    },
+    {
+      question: "Can I submit my AI tool to this directory?",
+      answer: "Yes! Click 'Submit a Tool' in the navigation to add your AI tool or one you recommend. We review all submissions and add quality tools to our directory."
+    },
+    {
+      question: "How often is this AI tools directory updated?",
+      answer: "We add new tools weekly and update existing tool information monthly. Our team researches and verifies all tools to ensure accurate information."
+    }
+  ];
+
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -54,6 +78,18 @@ function buildHomeSchema(): object {
           target: `${SITE_URL}/?search={search_term_string}`,
           "query-input": "required name=search_term_string",
         },
+      },
+      {
+        "@type": "FAQPage",
+        name: `${SITE_NAME} - Frequently Asked Questions`,
+        mainEntity: faqData.map(item => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer
+          }
+        }))
       },
       {
         "@type": "Organization",
