@@ -389,13 +389,34 @@ pre, code {
 /* Global Focus Styles for Accessibility */
 *:focus-visible {
   outline: 2px solid #059669;
-  outline-offset: 2px;
+  outline-offset: 3px;
   border-radius: 4px;
+  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.15);
+}
+
+/* Enhanced focus for dark mode */
+.dark *:focus-visible {
+  outline-color: #34d399;
+  box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.2);
 }
 
 /* Remove default focus for mouse users */
 *:focus:not(:focus-visible) {
   outline: none;
+}
+
+/* Focus indicator for links */
+a:focus-visible {
+  outline: 2px solid #059669;
+  outline-offset: 2px;
+}
+
+/* Focus indicator for buttons */
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid #059669;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.2);
 }
 
 /* Skip to main content link */
@@ -415,6 +436,8 @@ pre, code {
 
 .skip-to-main:focus {
   top: 0;
+  outline: 3px solid #fbbf24;
+  outline-offset: 2px;
 }
 
 /* Unified transition utility */
