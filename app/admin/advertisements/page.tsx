@@ -33,24 +33,25 @@ export default function AdvertisementAdmin() {
   const [filterStatus, setFilterStatus] = useState<string>('');
 
   useEffect(() => {
+    const fetchAdvertisements = async () => {
+      try {
+        setLoading(true);
+        const params = new URLSearchParams();
+        if (filterPosition) params.append('position', filterPosition);
+        if (filterStatus) params.append('status', filterStatus);
+
+        const response = await fetch(`/api/advertisements?${params.toString()}`);
+        const data = await response.json();
+        setAdvertisements(data.advertisements || []);
+      } catch (error) {
+        console.error('Failed to fetch advertisements:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
     fetchAdvertisements();
   }, [filterPosition, filterStatus]);
-
-  const fetchAdvertisements = async () => {
-    try {
-      const params = new URLSearchParams();
-      if (filterPosition) params.append('position', filterPosition);
-      if (filterStatus) params.append('status', filterStatus);
-
-      const response = await fetch(`/api/advertisements?${params.toString()}`);
-      const data = await response.json();
-      setAdvertisements(data.advertisements || []);
-    } catch (error) {
-      console.error('Failed to fetch advertisements:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const getStatusColor = (status: string) => {
     switch (status) {
