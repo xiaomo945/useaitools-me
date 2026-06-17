@@ -88,6 +88,15 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="preconnect" href="https://images.pexels.com" />
+        {/* DNS Prefetch for third-party resources */}
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://cdn.ampproject.org" />
+        {/* Preload critical fonts */}
+        <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        {/* Prerender for high-traffic pages */}
+        <link rel="prerender" href="/tools/1" />
+        <link rel="prerender" href="/search" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

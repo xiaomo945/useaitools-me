@@ -593,3 +593,76 @@ button:focus-visible,
 .dark .text-gray-600 {
   color: #cbd5e1;
 }
+
+/* ============================================
+   Mobile Touch Optimizations
+   ============================================ */
+
+/* Touch feedback for buttons and links */
+@media (hover: none) {
+  /* Remove hover effects on touch devices */
+  .hover\:bg-emerald-600:hover {
+    background-color: inherit;
+  }
+
+  /* Add active state feedback */
+  button:active,
+  a:active,
+  [role="button"]:active {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+}
+
+/* Touch-friendly tap highlight */
+* {
+  -webkit-tap-highlight-color: rgba(5, 150, 105, 0.1);
+}
+
+/* Touch target minimum size (44x44px) */
+.touch-target {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Improve scroll performance on iOS */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent text selection on interactive elements */
+.no-select {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Prevent zoom on input focus (iOS) */
+@media screen and (max-width: 768px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Swipe gesture support */
+.swipe-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+}
+
+.swipe-item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Pull to refresh indicator */
+.pull-indicator {
+  transform: translateY(-50px);
+  transition: transform 0.3s ease;
+}
+
+.pull-indicator.pulling {
+  transform: translateY(0);
+}
