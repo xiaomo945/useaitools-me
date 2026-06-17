@@ -1735,7 +1735,12 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
             <MysteryBox mysteryCount={mysteryCount} onOpen={openMysteryBox} />
           </div>
         </div>
-        
+
+        {/* Quick Start: Profile-based Recommendations */}
+        <div className="max-w-5xl mx-auto mb-4 sm:mb-8 px-3 sm:px-0">
+          <QuickStart />
+        </div>
+
         {/* Recently Viewed Quick Access */}
           {recentlyViewedIds.length > 0 && (
             <div className="mb-4 sm:mb-6">
