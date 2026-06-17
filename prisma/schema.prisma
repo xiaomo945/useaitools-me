@@ -85,6 +85,9 @@ model Tool {
   reviewCount     Int          @default(0)
   viewCount       Int          @default(0)
   clickCount      Int          @default(0)
+  monthlyVisits   Int?         // 外部流量数据：月访问量
+  trafficRank     Int?         // 外部流量数据：全球排名
+  lastTrafficUpdate DateTime?  // 流量数据最后更新时间
   isActive        Boolean      @default(true)
   isFeatured      Boolean      @default(false)
   isStaffPick     Boolean      @default(false)
@@ -109,6 +112,8 @@ model Tool {
   @@index([clickCount])
   @@index([createdAt])
   @@index([pricing])
+  @@index([monthlyVisits])
+  @@index([trafficRank])
 }
 
 model Category {
