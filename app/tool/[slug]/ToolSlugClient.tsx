@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { ArrowRight, Home, Copy, Check, ChevronDown } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import UserRating from '@/app/components/UserRating';
 
 type Example = {
   prompt: string;
@@ -405,6 +406,9 @@ export default function ToolSlugClient({
           </div>
         )}
 
+        {/* Community Rating (User-submitted, localStorage-based) */}
+        <UserRating toolId={tool.id} toolName={tool.name} />
+
         {/* Use Cases */}
         {tool.use_cases && tool.use_cases.length > 0 && (
           <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
@@ -549,7 +553,7 @@ export default function ToolSlugClient({
           </div>
         )}
 
-        {/* Similar Tools */}
+        {/* Alternatives */}
         {relatedTools.length > 0 && (
           <div className="bg-gradient-to-br from-slate-50 to-emerald-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
@@ -557,20 +561,20 @@ export default function ToolSlugClient({
                 <span className="text-white text-lg">✨</span>
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Similar Tools</h2>
-                <p className="text-sm text-slate-500 dark:text-gray-400">Based on category and user preferences</p>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Alternatives to {tool.name}</h2>
+                <p className="text-sm text-slate-500 dark:text-gray-400">Similar tools in the same category — compare side-by-side</p>
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {relatedTools.map((relatedTool) => {
                 const relatedColors = getCategoryColors(relatedTool.category);
+                const altSlug = relatedTool.name.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
                 return (
-                  <Link
+                  <div
                     key={relatedTool.id}
-                    href={`/tool/${relatedTool.name.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}`}
-                    className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out"
+                    className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col"
                   >
-                    <div className="flex items-center gap-3 mb-3">
+                    <Link href={`/tool/${altSlug}`} className="flex items-center gap-3 mb-3">
                       <div className={`w-9 h-9 rounded-lg ${relatedColors.bg}/10 flex items-center justify-center ${relatedColors.textLight} dark:${relatedColors.text} text-sm font-bold`}>
                         {relatedTool.name.charAt(0)}
                       </div>
@@ -582,17 +586,33 @@ export default function ToolSlugClient({
                           {relatedTool.category}
                         </span>
                       </div>
-                    </div>
-                    <p className="text-slate-600 dark:text-gray-300 text-xs leading-relaxed mb-3 line-clamp-2">
-                      {relatedTool.description.slice(0, 100)}...
-                    </p>
+                    </Link>
+                    <Link href={`/tool/${altSlug}`}>
+                      <p className="text-slate-600 dark:text-gray-300 text-xs leading-relaxed mb-3 line-clamp-2">
+                        {relatedTool.description.slice(0, 100)}...
+                      </p>
+                    </Link>
                     {relatedTool.rating && (
-                      <div className="flex items-center gap-1.5">
+                      <div className="flex items-center gap-1.5 mb-3">
                         <StarRating rating={Math.round(relatedTool.rating)} />
                         <span className="text-xs text-slate-500 dark:text-gray-400">{relatedTool.rating}</span>
                       </div>
                     )}
-                  </Link>
+                    <div className="mt-auto flex gap-2">
+                      <Link
+                        href={`/tool/${altSlug}`}
+                        className="flex-1 inline-flex items-center justify-center px-3 py-2 rounded-lg text-xs font-semibold border border-slate-200 dark:border-gray-700 text-slate-600 dark:text-slate-300 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all"
+                      >
+                        Details
+                      </Link>
+                      <Link
+                        href={`/compare?tool=${tool.id},${relatedTool.id}`}
+                        className="flex-1 inline-flex items-center justify-center gap-1 px-3 py-2 rounded-lg text-xs font-semibold bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/50 hover:bg-emerald-100 dark:hover:bg-emerald-500/20 transition-all"
+                      >
+                        Compare
+                      </Link>
+                    </div>
+                  </div>
                 );
               })}
             </div>

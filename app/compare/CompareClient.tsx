@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useSyncExternalStore, useCallback } from 'react';
 import Link from 'next/link';
 import type { Tool } from '@/types';
-import { Plus, X, Star, ArrowRight, Check } from 'lucide-react';
+import { Plus, X, Star, ArrowRight, Check, Trophy } from 'lucide-react';
 import toolsData from '@/data/tools.json';
 
 const tools = toolsData as Tool[];
@@ -18,12 +18,130 @@ const categoryColorMap: Record<string, { bg: string; text: string }> = {
 };
 
 const MAX_TOOLS = 4;
+const VOTE_STORAGE_KEY = 'useaitools_compare_votes';
+
+type VoteMap = { [toolsKey: string]: { [toolId: number]: number } };
+
+function loadVotes(): VoteMap {
+  if (typeof window === 'undefined') return {};
+  try {
+    const raw = localStorage.getItem(VOTE_STORAGE_KEY);
+    return raw ? (JSON.parse(raw) as VoteMap) : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveVotes(votes: VoteMap) {
+  if (typeof window === 'undefined') return;
+  try {
+    localStorage.setItem(VOTE_STORAGE_KEY, JSON.stringify(votes));
+    window.dispatchEvent(new Event('useaitools:votes-change'));
+  } catch {
+    // Ignore quota errors
+  }
+}
+
+type VoteState = {
+  userVotedFor: number | null;
+  voteCounts: Record<number, number>;
+};
+
+const initialVoteState: VoteState = {
+  userVotedFor: null,
+  voteCounts: {},
+};
+
+function makeVoteStateKey(selectedIds: number[]): string {
+  return [...selectedIds].sort().join('-');
+}
+
+function readVoteStateFromStorage(selectedIds: number[]): VoteState {
+  const votes = loadVotes();
+  const key = makeVoteStateKey(selectedIds);
+  const entry = votes[key] || {};
+  const counts: Record<number, number> = {};
+  selectedIds.forEach(id => {
+    counts[id] = entry[id] || 0;
+  });
+  const userVoteKey = `user_${key}`;
+  const userVoteRaw = typeof window !== 'undefined' ? localStorage.getItem(userVoteKey) : null;
+  return {
+    voteCounts: counts,
+    userVotedFor: userVoteRaw ? Number(userVoteRaw) : null,
+  };
+}
+
+function subscribeVotes(callback: () => void): () => void {
+  if (typeof window === 'undefined') return () => {};
+  const handler = () => callback();
+  window.addEventListener('storage', handler);
+  window.addEventListener('useaitools:votes-change', handler);
+  return () => {
+    window.removeEventListener('storage', handler);
+    window.removeEventListener('useaitools:votes-change', handler);
+  };
+}
 
 export default function ComparePage() {
   const [selectedIds, setSelectedIds] = useState<number[]>([1, 2]);
   const [showPicker, setShowPicker] = useState(false);
   const [pickerSearch, setPickerSearch] = useState('');
   const [pickerCategory, setPickerCategory] = useState<string>('All');
+
+  // useSyncExternalStore handles SSR-safe localStorage reads without
+  // calling setState inside an effect.
+  const voteState = useSyncExternalStore(
+    subscribeVotes,
+    () => readVoteStateFromStorage(selectedIds),
+    () => initialVoteState,
+  );
+
+  const { userVotedFor, voteCounts } = voteState;
+
+  const handleVote = useCallback((toolId: number) => {
+    const key = makeVoteStateKey(selectedIds);
+    const votes = loadVotes();
+    if (!votes[key]) votes[key] = {};
+    selectedIds.forEach(id => {
+      if (!votes[key][id]) votes[key][id] = 0;
+    });
+
+    const userVoteKey = `user_${key}`;
+    const previousVoteRaw = localStorage.getItem(userVoteKey);
+    const previousVote = previousVoteRaw ? Number(previousVoteRaw) : null;
+
+    // Remove previous vote if any
+    if (previousVote !== null && votes[key][previousVote] > 0) {
+      votes[key][previousVote] -= 1;
+    }
+
+    // Add new vote (toggle off if same)
+    if (previousVote === toolId) {
+      localStorage.removeItem(userVoteKey);
+    } else {
+      votes[key][toolId] = (votes[key][toolId] || 0) + 1;
+      localStorage.setItem(userVoteKey, String(toolId));
+    }
+
+    saveVotes(votes);
+  }, [selectedIds]);
+
+  const totalVotes = Object.values(voteCounts).reduce((sum, n) => sum + n, 0);
+  const leadingToolId = useMemo(() => {
+    if (totalVotes === 0) return null;
+    let max = 0;
+    let leader: number | null = null;
+    Object.entries(voteCounts).forEach(([id, count]) => {
+      if (count > max) {
+        max = count;
+        leader = Number(id);
+      }
+    });
+    return leader;
+  }, [voteCounts, totalVotes]);
+
+  const mounted = typeof window !== 'undefined';
 
   const selectedTools = useMemo(() => {
     return selectedIds
@@ -327,6 +445,99 @@ export default function ComparePage() {
                 </tbody>
               </table>
             </div>
+          </div>
+        )}
+
+        {/* Community Vote */}
+        {selectedTools.length >= 2 && mounted && (
+          <div className="mt-8 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 border border-emerald-200 dark:border-emerald-800/50 rounded-2xl p-6 sm:p-8">
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 mb-3">
+                <Trophy className="w-3.5 h-3.5" />
+                Community Vote
+              </div>
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-1">
+                Which tool do you prefer?
+              </h2>
+              <p className="text-sm text-slate-600 dark:text-slate-400">
+                {totalVotes > 0
+                  ? `${totalVotes} ${totalVotes === 1 ? 'vote' : 'votes'} so far`
+                  : 'Be the first to cast your vote'}
+              </p>
+            </div>
+
+            <div className={`grid gap-3 ${selectedTools.length === 2 ? 'grid-cols-2' : selectedTools.length === 3 ? 'grid-cols-1 sm:grid-cols-3' : 'grid-cols-2 sm:grid-cols-4'}`}>
+              {selectedTools.map(tool => {
+                const votes = voteCounts[tool.id] || 0;
+                const percentage = totalVotes > 0 ? Math.round((votes / totalVotes) * 100) : 0;
+                const isUserVote = userVotedFor === tool.id;
+                const isLeading = leadingToolId === tool.id && totalVotes > 0;
+                const colors = categoryColorMap[tool.category] || categoryColorMap.Productivity;
+
+                return (
+                  <button
+                    key={tool.id}
+                    onClick={() => handleVote(tool.id)}
+                    aria-pressed={isUserVote}
+                    className={`relative overflow-hidden p-4 rounded-xl border-2 transition-all duration-300 text-left group ${
+                      isUserVote
+                        ? 'border-emerald-500 bg-white dark:bg-gray-900 shadow-md'
+                        : 'border-slate-200 dark:border-gray-700 bg-white/60 dark:bg-gray-900/60 hover:border-emerald-400 dark:hover:border-emerald-600'
+                    }`}
+                  >
+                    {/* Progress bar background */}
+                    {totalVotes > 0 && (
+                      <div
+                        className="absolute inset-0 bg-emerald-500/10 dark:bg-emerald-500/15 transition-all duration-500"
+                        style={{ width: `${percentage}%` }}
+                        aria-hidden="true"
+                      />
+                    )}
+
+                    <div className="relative flex items-center gap-3 mb-2">
+                      <div className={`w-9 h-9 rounded-lg ${colors.bg} ${colors.text} flex items-center justify-center text-base font-bold flex-shrink-0`}>
+                        {tool.name.charAt(0)}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <h3 className="font-semibold text-sm text-slate-900 dark:text-white truncate">
+                          {tool.name}
+                        </h3>
+                        {isLeading && (
+                          <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 dark:text-emerald-400">
+                            <Trophy className="w-3 h-3" />
+                            Leading
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="relative flex items-center justify-between">
+                      <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                        {votes} {votes === 1 ? 'vote' : 'votes'}
+                      </span>
+                      {totalVotes > 0 && (
+                        <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                          {percentage}%
+                        </span>
+                      )}
+                    </div>
+
+                    {isUserVote && (
+                      <div className="relative mt-2 flex items-center gap-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+                        <Check className="w-3.5 h-3.5" />
+                        Your pick
+                      </div>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
+
+            {userVotedFor && (
+              <p className="mt-4 text-center text-xs text-slate-500 dark:text-slate-400">
+                Tap your choice again to remove your vote. Votes are stored locally on your device.
+              </p>
+            )}
           </div>
         )}
 
