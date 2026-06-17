@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft, Calendar, User, Eye, Tag, ExternalLink } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
@@ -130,13 +131,14 @@ export default function BlogPostClient({ params }: Props) {
 
         <article className="bg-white dark:bg-gray-900 rounded-xl shadow-sm overflow-hidden">
           {post.coverImage && (
-            <div className="aspect-video overflow-hidden">
-              <img
+            <div className="aspect-video overflow-hidden relative">
+              <Image
                 src={post.coverImage}
                 alt={post.coverImageAlt || post.title}
-                className="w-full h-full object-cover"
-                loading="lazy"
-                decoding="async"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1200px) 100vw, 1200px"
+                priority
               />
             </div>
           )}
@@ -158,13 +160,15 @@ export default function BlogPostClient({ params }: Props) {
             <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 dark:text-slate-400 mb-8 pb-8 border-b border-slate-200 dark:border-gray-800">
               <div className="flex items-center gap-2">
                 {post.author.image ? (
-                  <img
-                    src={post.author.image}
-                    alt={post.author.name}
-                    className="w-8 h-8 rounded-full"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <div className="relative w-8 h-8 rounded-full overflow-hidden">
+                    <Image
+                      src={post.author.image}
+                      alt={post.author.name}
+                      fill
+                      className="object-cover"
+                      sizes="32px"
+                    />
+                  </div>
                 ) : (
                   <div className="w-8 h-8 rounded-full bg-slate-200 dark:bg-gray-700 flex items-center justify-center">
                     <User className="w-4 h-4" />

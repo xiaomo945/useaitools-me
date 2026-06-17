@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 import { User, Award, Star, Bookmark, MessageSquare, Calendar, LogIn, TrendingUp } from 'lucide-react';
 import Footer from '@/app/components/Footer';
@@ -206,13 +207,15 @@ export default function ProfileClient() {
             <div className="bg-gradient-to-br from-emerald-50/80 via-white to-teal-50/80 dark:from-emerald-950/60 dark:via-gray-900 dark:to-teal-950/60 backdrop-blur-xl border border-white/60 dark:border-emerald-500/10 shadow-xl shadow-emerald-500/5 dark:shadow-2xl dark:shadow-emerald-500/5 rounded-3xl p-8 sm:p-12 animate-fade-in-up">
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                 {profile.user.image ? (
-                  <img
-                    src={profile.user.image}
-                    alt={profile.user.name}
-                    className="w-24 h-24 rounded-full border-4 border-white dark:border-gray-800 shadow-lg"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <div className="relative w-24 h-24 rounded-full border-4 border-white dark:border-gray-800 shadow-lg overflow-hidden">
+                    <Image
+                      src={profile.user.image}
+                      alt={profile.user.name}
+                      fill
+                      className="object-cover"
+                      sizes="96px"
+                    />
+                  </div>
                 ) : (
                   <div className="w-24 h-24 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-3xl font-bold border-4 border-white dark:border-gray-800 shadow-lg">
                     {profile.user.name?.charAt(0) || 'U'}

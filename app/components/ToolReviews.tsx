@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 import type { Tool } from '@/types';
 
@@ -274,11 +275,15 @@ export default function ToolReviews({ tool }: ToolReviewsProps) {
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-3">
                   {review.user.image ? (
-                    <img
-                      src={review.user.image}
-                      alt={review.user.name || 'User'}
-                      className="w-10 h-10 rounded-full"
-                    />
+                    <div className="relative w-10 h-10 rounded-full overflow-hidden">
+                      <Image
+                        src={review.user.image}
+                        alt={review.user.name || 'User'}
+                        fill
+                        className="object-cover"
+                        sizes="40px"
+                      />
+                    </div>
                   ) : (
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white font-semibold">
                       {(review.user.name || 'U').charAt(0).toUpperCase()}

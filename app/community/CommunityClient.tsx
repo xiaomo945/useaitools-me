@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 import { MessageSquare, Plus, Eye, Pin, Lock, TrendingUp, Clock, Filter } from 'lucide-react';
 import Footer from '@/app/components/Footer';
@@ -249,13 +250,15 @@ export default function CommunityClient() {
               >
                 <div className="flex items-start gap-4">
                   {discussion.user.image ? (
-                    <img
-                      src={discussion.user.image}
-                      alt={discussion.user.name}
-                      className="w-12 h-12 rounded-full flex-shrink-0"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                      <Image
+                        src={discussion.user.image}
+                        alt={discussion.user.name}
+                        fill
+                        className="object-cover"
+                        sizes="48px"
+                      />
+                    </div>
                   ) : (
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold flex-shrink-0">
                       {discussion.user.name?.charAt(0) || 'U'}

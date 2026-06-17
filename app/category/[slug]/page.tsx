@@ -33,13 +33,13 @@ const categoryNames: Record<Category, string> = {
   Video: 'Video'
 };
 
-const colorMap: Record<Category, { bg: string; bgDark: string; text: string; textLight: string; border: string; ring: string }> = {
-  Writing:    { bg: 'bg-blue-500',    bgDark: 'bg-blue-500/20',    text: 'text-blue-300',    textLight: 'text-blue-600',    border: 'border-blue-300',    ring: 'hover:shadow-blue-500/20' },
-  Image:      { bg: 'bg-violet-500', bgDark: 'bg-violet-500/20', text: 'text-violet-300', textLight: 'text-violet-600', border: 'border-violet-300', ring: 'hover:shadow-violet-500/20' },
-  Productivity: { bg: 'bg-teal-500',  bgDark: 'bg-teal-500/20',  text: 'text-teal-300',  textLight: 'text-teal-600',  border: 'border-teal-300',  ring: 'hover:shadow-teal-500/20' },
-  Code:       { bg: 'bg-orange-500', bgDark: 'bg-orange-500/20', text: 'text-orange-300', textLight: 'text-orange-600', border: 'border-orange-300', ring: 'hover:shadow-orange-500/20' },
-  Audio:      { bg: 'bg-pink-500',   bgDark: 'bg-pink-500/20',   text: 'text-pink-300',   textLight: 'text-pink-600',   border: 'border-pink-300',   ring: 'hover:shadow-pink-500/20' },
-  Video:      { bg: 'bg-indigo-500', bgDark: 'bg-indigo-500/20', text: 'text-indigo-300', textLight: 'text-indigo-600', border: 'border-indigo-300', ring: 'hover:shadow-indigo-500/20' }
+const colorMap: Record<Category, { bg: string; bgDark: string; text: string; textLight: string; border: string; ring: string; darkText: string; darkBg: string; hoverBg: string; dividerLight: string; dividerDark: string }> = {
+  Writing:    { bg: 'bg-blue-500',    bgDark: 'bg-blue-500/20',    text: 'text-blue-300',    textLight: 'text-blue-600',    border: 'border-blue-300',    ring: 'hover:shadow-blue-500/20', darkText: 'dark:text-blue-300', darkBg: 'dark:bg-blue-500/20', hoverBg: 'hover:bg-blue-500', dividerLight: 'via-blue-300', dividerDark: 'dark:via-blue-500/20' },
+  Image:      { bg: 'bg-violet-500', bgDark: 'bg-violet-500/20', text: 'text-violet-300', textLight: 'text-violet-600', border: 'border-violet-300', ring: 'hover:shadow-violet-500/20', darkText: 'dark:text-violet-300', darkBg: 'dark:bg-violet-500/20', hoverBg: 'hover:bg-violet-500', dividerLight: 'via-violet-300', dividerDark: 'dark:via-violet-500/20' },
+  Productivity: { bg: 'bg-teal-500',  bgDark: 'bg-teal-500/20',  text: 'text-teal-300',  textLight: 'text-teal-600',  border: 'border-teal-300',  ring: 'hover:shadow-teal-500/20', darkText: 'dark:text-teal-300', darkBg: 'dark:bg-teal-500/20', hoverBg: 'hover:bg-teal-500', dividerLight: 'via-teal-300', dividerDark: 'dark:via-teal-500/20' },
+  Code:       { bg: 'bg-orange-500', bgDark: 'bg-orange-500/20', text: 'text-orange-300', textLight: 'text-orange-600', border: 'border-orange-300', ring: 'hover:shadow-orange-500/20', darkText: 'dark:text-orange-300', darkBg: 'dark:bg-orange-500/20', hoverBg: 'hover:bg-orange-500', dividerLight: 'via-orange-300', dividerDark: 'dark:via-orange-500/20' },
+  Audio:      { bg: 'bg-pink-500',   bgDark: 'bg-pink-500/20',   text: 'text-pink-300',   textLight: 'text-pink-600',   border: 'border-pink-300',   ring: 'hover:shadow-pink-500/20', darkText: 'dark:text-pink-300', darkBg: 'dark:bg-pink-500/20', hoverBg: 'hover:bg-pink-500', dividerLight: 'via-pink-300', dividerDark: 'dark:via-pink-500/20' },
+  Video:      { bg: 'bg-indigo-500', bgDark: 'bg-indigo-500/20', text: 'text-indigo-300', textLight: 'text-indigo-600', border: 'border-indigo-300', ring: 'hover:shadow-indigo-500/20', darkText: 'dark:text-indigo-300', darkBg: 'dark:bg-indigo-500/20', hoverBg: 'hover:bg-indigo-500', dividerLight: 'via-indigo-300', dividerDark: 'dark:via-indigo-500/20' }
 };
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -228,7 +228,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           {/* Top 10 Tools by Rating */}
           <TopTools tools={categoryTools} category={categoryName} categoryColors={colors} />
 
-          <div className={`h-px bg-gradient-to-r from-transparent via-${categorySlug.toLowerCase()}-300 dark:via-${categorySlug.toLowerCase()}-500/20 to-transparent mb-10 mx-auto max-w-2xl`} />
+          <div className={`h-px bg-gradient-to-r from-transparent ${colors.dividerLight} ${colors.dividerDark} to-transparent mb-10 mx-auto max-w-2xl`} />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
             {categoryTools.map((tool, index) => {
@@ -254,7 +254,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                 <div className="p-7">
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-start gap-3">
-                      <div className={`w-11 h-11 rounded-xl ${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold group-hover:scale-105 transition-transform duration-300`}>
+                      <div className={`w-11 h-11 rounded-xl ${colors.bgDark} ${colors.textLight} ${colors.darkText} flex items-center justify-center text-xl font-bold group-hover:scale-105 transition-transform duration-300`}>
                         {tool.name.charAt(0)}
                       </div>
                       <div>
@@ -282,13 +282,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                     {tool.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text}`}>
+                    <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${colors.bg} text-white ${colors.darkBg} ${colors.darkText}`}>
                       {tool.category}
                     </span>
                     <a
                       href={getAffiliateLink(tool) || tool.url}
                       target="_blank" rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-2 px-4 py-2 border ${colors.border} dark:${colors.bgDark} dark:border-transparent ${colors.textLight} dark:${colors.text} text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:${colors.bg} hover:text-white hover:border-transparent`}
+                      className={`inline-flex items-center gap-2 px-4 py-2 border ${colors.border} ${colors.darkBg} dark:border-transparent ${colors.textLight} ${colors.darkText} text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 ${colors.hoverBg} hover:text-white hover:border-transparent`}
                     >
                       {ctaText}
                       <ArrowRight className="w-4 h-4" />

@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo, useRef, useEffect, useCallback, memo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import StarRating from './StarRating';
@@ -1981,13 +1982,15 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                     }}
                   >
                     {post.images?.[0] && (
-                      <img
-                        src={post.images[0].url}
-                        alt={post.images[0].alt}
-                        className="w-full h-40 object-cover rounded-xl mb-4"
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      <div className="relative w-full h-40 mb-4 overflow-hidden rounded-xl">
+                        <Image
+                          src={post.images[0].url}
+                          alt={post.images[0].alt}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </div>
                     )}
                     <div className="flex items-center gap-2 mb-3">
                       <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">

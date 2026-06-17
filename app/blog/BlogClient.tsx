@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Calendar, User, Tag, Eye } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
@@ -169,13 +170,13 @@ export default function BlogClient() {
                   className="group bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
                 >
                   {post.coverImage ? (
-                    <div className="h-48 overflow-hidden">
-                      <img
+                    <div className="h-48 overflow-hidden relative">
+                      <Image
                         src={post.coverImage}
                         alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                        decoding="async"
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
                   ) : (
@@ -204,13 +205,15 @@ export default function BlogClient() {
                     <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400">
                       <div className="flex items-center gap-2">
                         {post.author.image ? (
-                          <img
-                            src={post.author.image}
-                            alt={post.author.name}
-                            className="w-6 h-6 rounded-full"
-                            loading="lazy"
-                            decoding="async"
-                          />
+                          <div className="relative w-6 h-6 rounded-full overflow-hidden">
+                            <Image
+                              src={post.author.image}
+                              alt={post.author.name}
+                              fill
+                              className="object-cover"
+                              sizes="24px"
+                            />
+                          </div>
                         ) : (
                           <div className="w-6 h-6 rounded-full bg-slate-200 dark:bg-gray-700 flex items-center justify-center">
                             <User className="w-3 h-3" />

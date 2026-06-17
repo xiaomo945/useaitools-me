@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface Advertisement {
@@ -188,13 +189,15 @@ export default function AdvertisementAdmin() {
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
                           {ad.imageUrl && (
-                            <img
-                              src={ad.imageUrl}
-                              alt={ad.title}
-                              className="w-10 h-10 rounded-lg object-cover mr-3"
-                              loading="lazy"
-                              decoding="async"
-                            />
+                            <div className="relative w-10 h-10 rounded-lg overflow-hidden mr-3">
+                              <Image
+                                src={ad.imageUrl}
+                                alt={ad.title}
+                                fill
+                                className="object-cover"
+                                sizes="40px"
+                              />
+                            </div>
                           )}
                           <div>
                             <div className="text-sm font-medium text-slate-900 dark:text-slate-100">

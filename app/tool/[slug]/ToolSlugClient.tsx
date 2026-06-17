@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { ArrowRight, Home, Copy, Check, ChevronDown } from 'lucide-react';
 import Footer from '@/app/components/Footer';
@@ -510,16 +511,13 @@ export default function ToolSlugClient({
                     </span>
                   </div>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <div className="relative rounded-xl overflow-hidden shadow-md bg-gray-200 dark:bg-gray-700">
-                      <img
+                    <div className="relative rounded-xl overflow-hidden shadow-md bg-gray-200 dark:bg-gray-700 aspect-video">
+                      <Image
                         src={example.image_url}
                         alt={`${tool.name} Example ${index + 1}`}
-                        className="w-full h-auto object-cover max-w-full aspect-video"
-                        style={{ aspectRatio: '16/9' }}
-                        width="600"
-                        height="400"
-                        loading="lazy"
-                        decoding="async"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
                       />
                     </div>
                     <div className="bg-gray-50 dark:bg-gray-800/60 rounded-lg p-4 flex flex-col">
@@ -631,13 +629,15 @@ export default function ToolSlugClient({
                     className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out"
                   >
                     {article.images?.[0] && (
-                      <img
-                        src={article.images[0].url}
-                        alt={article.images[0].alt}
-                        className="w-full h-32 object-cover rounded-lg mb-3"
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      <div className="relative w-full h-32 mb-3 overflow-hidden rounded-lg">
+                        <Image
+                          src={article.images[0].url}
+                          alt={article.images[0].alt}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </div>
                     )}
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-xs font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-500/20 px-2 py-0.5 rounded-full">

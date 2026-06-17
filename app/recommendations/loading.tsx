@@ -4,13 +4,13 @@ export default function Loading() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header Skeleton */}
         <div className="text-center mb-12">
-          <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded animate-pulse w-64 mx-auto mb-4" />
+          <div className="h-10 bg-gray-200 dark:bg-gray-700 rounded animate-pulse w-72 mx-auto mb-4" />
           <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse w-96 mx-auto" />
         </div>
 
-        {/* Tools Grid Skeleton */}
+        {/* Recommendations Grid Skeleton */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {Array.from({ length: 8 }).map((_, i) => (
+          {Array.from({ length: 6 }).map((_, i) => (
             <div key={i} className="bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-slate-200/60 dark:border-gray-800/80 p-5">
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 bg-gray-200 dark:bg-gray-700 rounded-xl animate-pulse" />

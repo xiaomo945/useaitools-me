@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import { ArrowLeft, Eye, MessageSquare, Pin, Lock, Send, Edit2, Trash2 } from 'lucide-react';
@@ -239,13 +240,15 @@ export default function DiscussionDetailPage() {
             <div className="flex items-center gap-4 mb-6">
               <div className="flex items-center gap-3">
                 {discussion.user.image ? (
-                  <img
-                    src={discussion.user.image}
-                    alt={discussion.user.name}
-                    className="w-10 h-10 rounded-full"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <div className="relative w-10 h-10 rounded-full overflow-hidden">
+                    <Image
+                      src={discussion.user.image}
+                      alt={discussion.user.name}
+                      fill
+                      className="object-cover"
+                      sizes="40px"
+                    />
+                  </div>
                 ) : (
                   <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold">
                     {discussion.user.name?.charAt(0) || 'U'}
@@ -312,13 +315,15 @@ export default function DiscussionDetailPage() {
                 >
                   <div className="flex items-start gap-4">
                     {comment.user.image ? (
-                      <img
-                        src={comment.user.image}
-                        alt={comment.user.name}
-                        className="w-10 h-10 rounded-full flex-shrink-0"
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                        <Image
+                          src={comment.user.image}
+                          alt={comment.user.name}
+                          fill
+                          className="object-cover"
+                          sizes="40px"
+                        />
+                      </div>
                     ) : (
                       <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white font-bold flex-shrink-0">
                         {comment.user.name?.charAt(0) || 'U'}
@@ -365,13 +370,15 @@ export default function DiscussionDetailPage() {
               <form onSubmit={handleSubmitComment} className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-6">
                 <div className="flex items-start gap-4">
                   {session.user?.image ? (
-                    <img
-                      src={session.user.image}
-                      alt={session.user.name || 'User'}
-                      className="w-10 h-10 rounded-full flex-shrink-0"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                      <Image
+                        src={session.user.image}
+                        alt={session.user.name || 'User'}
+                        fill
+                        className="object-cover"
+                        sizes="40px"
+                      />
+                    </div>
                   ) : (
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold flex-shrink-0">
                       {session.user?.name?.charAt(0) || 'U'}

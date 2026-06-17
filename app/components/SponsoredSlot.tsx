@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 type SponsoredSlotData = {
   id: string;
@@ -89,13 +90,13 @@ export default function SponsoredSlot({ slotName, toolCategory }: SponsoredSlotP
           )}
         </div>
         {slot.imageUrl && (
-          <div className="mb-4 overflow-hidden rounded-xl">
-            <img
+          <div className="mb-4 overflow-hidden rounded-xl relative h-36">
+            <Image
               src={slot.imageUrl}
               alt={slot.title}
-              className="w-full h-36 object-cover"
-              loading="lazy"
-              decoding="async"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           </div>
         )}

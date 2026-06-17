@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Advertisement {
   id: string;
@@ -125,13 +126,15 @@ export default function AdvertisementDisplay({ position, category }: Advertiseme
         <div className="p-4">
           <div className="flex items-start gap-4">
             {advertisement.imageUrl && (
-              <img
-                src={advertisement.imageUrl}
-                alt={advertisement.title}
-                className="w-20 h-20 rounded-lg object-cover flex-shrink-0"
-                loading="lazy"
-                decoding="async"
-              />
+              <div className="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+                <Image
+                  src={advertisement.imageUrl}
+                  alt={advertisement.title}
+                  fill
+                  className="object-cover"
+                  sizes="80px"
+                />
+              </div>
             )}
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">

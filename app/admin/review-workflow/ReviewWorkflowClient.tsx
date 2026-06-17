@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Plus, Edit, Eye, CheckCircle, Clock, FileText, AlertCircle } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '@/app/components/Footer';
@@ -248,13 +249,15 @@ export default function ReviewWorkflowClient() {
               >
                 <div className="flex items-start gap-4">
                   {workflow.tool.iconUrl ? (
-                    <img
-                      src={workflow.tool.iconUrl}
-                      alt={workflow.tool.name}
-                      className="w-12 h-12 rounded-lg"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <div className="relative w-12 h-12 rounded-lg overflow-hidden">
+                      <Image
+                        src={workflow.tool.iconUrl}
+                        alt={workflow.tool.name}
+                        fill
+                        className="object-cover"
+                        sizes="48px"
+                      />
+                    </div>
                   ) : (
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold">
                       {workflow.tool.name.charAt(0)}

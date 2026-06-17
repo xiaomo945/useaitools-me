@@ -225,7 +225,7 @@ export default async function BlogDetailPage({
     '@type': 'Article',
     headline: post.title,
     description: post.description,
-    image: post.images && post.images.length > 0 ? post.images[0] : 'https://useaitools.me/logo.png',
+    image: post.images && post.images.length > 0 ? post.images[0].url : 'https://useaitools.me/logo.png',
     datePublished: post.date,
     dateModified: post.date,
     author: {

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import toolsData from '@/data/tools.json';
 import { Home, Share2, Copy, ChevronRight, List } from 'lucide-react';
 import Footer from '@/app/components/Footer';
@@ -774,13 +775,15 @@ export default function ClientBlogDetail({
                     className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out"
                   >
                     {relatedPost.images?.[0] && (
-                      <img
-                        src={relatedPost.images[0].url}
-                        alt={relatedPost.images[0].alt}
-                        className="w-full h-32 object-cover rounded-lg mb-3"
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      <div className="relative w-full h-32 mb-3 overflow-hidden rounded-lg">
+                        <Image
+                          src={relatedPost.images[0].url}
+                          alt={relatedPost.images[0].alt}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </div>
                     )}
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-xs font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-500/20 px-2 py-0.5 rounded-full">

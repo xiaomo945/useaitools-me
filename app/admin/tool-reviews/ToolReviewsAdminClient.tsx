@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Star, Plus, Edit, Trash2, Eye, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '@/app/components/Footer';
@@ -230,13 +231,15 @@ export default function ToolReviewsAdminClient() {
               >
                 <div className="flex items-start gap-4">
                   {review.tool.iconUrl ? (
-                    <img
-                      src={review.tool.iconUrl}
-                      alt={review.tool.name}
-                      className="w-12 h-12 rounded-lg"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    <div className="relative w-12 h-12 rounded-lg overflow-hidden">
+                      <Image
+                        src={review.tool.iconUrl}
+                        alt={review.tool.name}
+                        fill
+                        className="object-cover"
+                        sizes="48px"
+                      />
+                    </div>
                   ) : (
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white font-bold">
                       {review.tool.name.charAt(0)}

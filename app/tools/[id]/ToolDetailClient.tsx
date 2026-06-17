@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { ArrowRight, Home, Copy, Check, ChevronDown, Share2, X, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -491,12 +492,12 @@ const ScreenshotGallery = ({ tool, colors }: { tool: Tool; colors: ReturnType<ty
         
         {/* Main Image */}
         <div className="relative rounded-xl overflow-hidden mb-4 bg-gray-100 dark:bg-gray-800 aspect-video cursor-pointer group" onClick={() => setIsLightboxOpen(true)}>
-          <img
+          <Image
             src={screenshots[currentImageIndex]}
             alt={`${tool.name} screenshot ${currentImageIndex + 1}`}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
-            decoding="async"
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 1024px) 100vw, 66vw"
           />
           
           {/* Navigation Arrows */}
@@ -538,13 +539,15 @@ const ScreenshotGallery = ({ tool, colors }: { tool: Tool; colors: ReturnType<ty
                     : 'border-slate-200 dark:border-gray-700 hover:border-slate-300 dark:hover:border-gray-600'
                 }`}
               >
-                <img
-                  src={screenshot}
-                  alt={`Thumbnail ${index + 1}`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div className="relative w-full h-full overflow-hidden">
+                  <Image
+                    src={screenshot}
+                    alt={`Thumbnail ${index + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="80px"
+                  />
+                </div>
               </button>
             ))}
           </div>
@@ -563,10 +566,13 @@ const ScreenshotGallery = ({ tool, colors }: { tool: Tool; colors: ReturnType<ty
           </button>
           
           <div className="relative max-w-6xl w-full max-h-[90vh]" onClick={(e) => e.stopPropagation()}>
-            <img
+            <Image
               src={screenshots[currentImageIndex]}
               alt={`${tool.name} screenshot ${currentImageIndex + 1}`}
+              width={1200}
+              height={800}
               className="w-full h-full object-contain rounded-lg"
+              priority
             />
             
             {screenshots.length > 1 && (
@@ -1155,21 +1161,18 @@ const [hasReferrer] = useState(() => {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     {/* Image */}
                     <div 
-                      className="relative rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ease-out group bg-gray-200 dark:bg-gray-700"
+                      className="relative rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ease-out group bg-gray-200 dark:bg-gray-700 aspect-video"
                       style={{ 
                         willChange: 'transform',
                         transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)' 
                       }}
                     >
-                      <img
+                      <Image
                         src={example.image_url}
                         alt={`${tool.name} Example ${index + 1} - AI tool demo`}
-                        className="w-full h-auto object-cover opacity-0 animate-fade-in max-w-full aspect-video"
-                        style={{ aspectRatio: '16/9' }}
-                        width="600"
-                        height="400"
-                        loading="lazy"
-                        decoding="async"
+                        fill
+                        className="object-cover opacity-0 animate-fade-in"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
                         onLoad={(e) => {
                           (e.currentTarget as HTMLImageElement).classList.remove('opacity-0');
                           (e.currentTarget as HTMLImageElement).classList.add('opacity-100');
@@ -1402,13 +1405,15 @@ const [hasReferrer] = useState(() => {
                     className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out"
                   >
                     {article.images?.[0] && (
-                      <img
-                        src={article.images[0].url}
-                        alt={article.images[0].alt}
-                        className="w-full h-32 object-cover rounded-lg mb-3"
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      <div className="relative w-full h-32 mb-3 overflow-hidden rounded-lg">
+                        <Image
+                          src={article.images[0].url}
+                          alt={article.images[0].alt}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        />
+                      </div>
                     )}
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-xs font-medium text-indigo-600 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-500/20 px-2 py-0.5 rounded-full">

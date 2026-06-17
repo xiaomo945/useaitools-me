@@ -19,6 +19,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import HolidayBanner from "./components/HolidayBanner";
 import AuthProvider from "./components/AuthProvider";
 import WebVitals from "./components/WebVitals";
+import ErrorTracker from "./components/ErrorTracker";
 import ServiceWorkerRegistration from "./components/ServiceWorkerRegistration";
 
 const geistSans = Geist({
@@ -179,6 +180,7 @@ export default function RootLayout({
           <GuidedTour />
           <ExternalLinkToast />
           <WebVitals />
+          <ErrorTracker />
           <ServiceWorkerRegistration />
         </ToastProvider>
       </body>

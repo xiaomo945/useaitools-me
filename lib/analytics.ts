@@ -19,7 +19,15 @@ export type TrackEvent =
   | 'blog_read'
   | 'cta_click'
   | 'ab_variant_view'
-  | 'gold_picks_click';
+  | 'gold_picks_click'
+  | 'newsletter_signup'
+  | 'share'
+  | 'scroll_depth'
+  | 'time_on_page'
+  | 'page_view'
+  | 'tool_view'
+  | 'category_view'
+  | 'blog_view';
 
 interface TrackOptions {
   tool_name?: string;
@@ -85,5 +93,63 @@ export function trackGoldPicksClick(toolName: string, rank: number): void {
 export function trackAbVariantView(experimentId: string, variant: string): void {
   track('ab_variant_view', {
     ab_variant: `${experimentId}:${variant}`,
+  });
+}
+
+/**
+ * 追踪 Newsletter 注册
+ */
+export function trackNewsletterSignup(source: string): void {
+  track('newsletter_signup', {
+    source,
+  });
+}
+
+/**
+ * 追踪分享行为
+ */
+export function trackShare(platform: string, toolName?: string): void {
+  track('share', {
+    platform,
+    tool_name: toolName,
+  });
+}
+
+/**
+ * 追踪页面浏览
+ */
+export function trackPageView(path: string, title?: string): void {
+  track('page_view', {
+    path,
+    title,
+  });
+}
+
+/**
+ * 追踪工具查看
+ */
+export function trackToolView(toolName: string, toolId: number): void {
+  track('tool_view', {
+    tool_name: toolName,
+    tool_id: toolId,
+  });
+}
+
+/**
+ * 追踪分类查看
+ */
+export function trackCategoryView(category: string): void {
+  track('category_view', {
+    category,
+  });
+}
+
+/**
+ * 追踪博客查看
+ */
+export function trackBlogView(slug: string, title: string): void {
+  track('blog_view', {
+    slug,
+    title,
   });
 }

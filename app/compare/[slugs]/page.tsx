@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import ToolComparison from '@/app/components/ToolComparison';
 import toolsData from '@/data/tools.json';
 import type { Tool } from '@/types';
+import { generateSlugFromName } from '@/app/tool/[slug]/page';
 
 const tools = toolsData as Tool[];
 
@@ -34,8 +35,8 @@ export async function generateMetadata({ params }: ComparePageProps): Promise<Me
   const { slugs } = await params;
   const [slug1, slug2] = slugs.split('-vs-');
 
-  const tool1 = tools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === slug1);
-  const tool2 = tools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === slug2);
+  const tool1 = tools.find(t => generateSlugFromName(t.name) === slug1);
+  const tool2 = tools.find(t => generateSlugFromName(t.name) === slug2);
 
   if (!tool1 || !tool2) {
     return {
@@ -65,8 +66,8 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
   const { slugs } = await params;
   const [slug1, slug2] = slugs.split('-vs-');
 
-  const tool1 = tools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === slug1);
-  const tool2 = tools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === slug2);
+  const tool1 = tools.find(t => generateSlugFromName(t.name) === slug1);
+  const tool2 = tools.find(t => generateSlugFromName(t.name) === slug2);
 
   if (!tool1 || !tool2) {
     notFound();
