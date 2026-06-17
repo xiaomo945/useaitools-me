@@ -47,6 +47,33 @@ body {
   animation: fadeInUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+/* Page Transition Animation */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageExit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.page-transition {
+  animation: pageEnter 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 /* Shimmer Effect */
 .shimmer-card {
   position: relative;
@@ -491,16 +518,55 @@ pre, code {
 
 /* 暗色模式边框增强可见性 */
 .dark .border-slate-200 {
-  border-color: rgba(148, 163, 184, 0.18); /* 提升可见性 */
+  border-color: rgba(148, 163, 184, 0.3); /* 提升可见性 */
 }
 
 .dark .border-gray-800 {
-  border-color: rgba(148, 163, 184, 0.18);
+  border-color: rgba(148, 163, 184, 0.3);
+}
+
+.dark .border-slate-300 {
+  border-color: rgba(203, 213, 225, 0.3);
+}
+
+.dark .border-gray-700 {
+  border-color: rgba(203, 213, 225, 0.3);
 }
 
 /* 暗色模式 placeholder 增强 */
 .dark input::placeholder,
 .dark textarea::placeholder {
   color: #94a3b8;
-  opacity: 0.7;
+  opacity: 0.8;
+}
+
+/* 暗色模式背景色增强 - 确保卡片与背景有区分 */
+.dark .bg-slate-50 {
+  background-color: rgba(30, 41, 59, 0.5); /* slate-800 半透明 */
+}
+
+.dark .bg-slate-100 {
+  background-color: rgba(30, 41, 59, 0.7);
+}
+
+/* 暗色模式悬停状态增强 */
+.dark .hover\:bg-slate-100:hover {
+  background-color: rgba(51, 65, 85, 0.8);
+}
+
+.dark .hover\:bg-gray-800:hover {
+  background-color: rgba(38, 38, 38, 1);
+}
+
+/* 暗色模式文字链接增强 */
+.dark .text-slate-600 {
+  color: #cbd5e1;
+}
+
+.dark .text-slate-500 {
+  color: #94a3b8;
+}
+
+.dark .text-gray-600 {
+  color: #cbd5e1;
 }
