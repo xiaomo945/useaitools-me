@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import fs from 'fs'
+import path from 'path'
 
 /**
  * 公开 API - 获取博客文章列表
@@ -24,82 +25,60 @@ export async function GET(request: Request) {
     const tag = searchParams.get('tag')
     const search = searchParams.get('search')
 
-    const skip = (page - 1) * limit
-
-    // 构建查询条件
-    const where: any = {
-      isPublished: true
+    // 从 JSON 文件加载博客文章
+    const blogPostsPath = path.join(process.cwd(), 'data', 'blog-posts.json')
+    let allPosts: any[] = []
+    
+    if (fs.existsSync(blogPostsPath)) {
+      const data = fs.readFileSync(blogPostsPath, 'utf-8')
+      allPosts = JSON.parse(data)
     }
 
+    // 过滤已发布的文章
+    let filteredPosts = allPosts.filter(post => post.isPublished !== false)
+
+    // 分类筛选
     if (category) {
-      where.category = {
-        slug: category
-      }
+      filteredPosts = filteredPosts.filter(post => 
+        post.category?.toLowerCase() === category.toLowerCase()
+      )
     }
 
+    // 标签筛选
     if (tag) {
-      where.tags = {
-        contains: tag
-      }
+      filteredPosts = filteredPosts.filter(post => 
+        post.tags?.some((t: string) => t.toLowerCase() === tag.toLowerCase())
+      )
     }
 
+    // 搜索
     if (search) {
-      where.OR = [
-        { title: { contains: search } },
-        { excerpt: { contains: search } },
-        { content: { contains: search } }
-      ]
+      const searchLower = search.toLowerCase()
+      filteredPosts = filteredPosts.filter(post =>
+        post.title?.toLowerCase().includes(searchLower) ||
+        post.excerpt?.toLowerCase().includes(searchLower) ||
+        post.content?.toLowerCase().includes(searchLower)
+      )
     }
 
-    // 获取博客文章列表
-    const posts = await prisma.blogPost.findMany({
-      where,
-      skip,
-      take: limit,
-      orderBy: {
-        publishedAt: 'desc'
-      },
-      select: {
-        id: true,
-        title: true,
-        slug: true,
-        excerpt: true,
-        coverImage: true,
-        coverImageAlt: true,
-        publishedAt: true,
-        readingTime: true,
-        viewCount: true,
-        tags: true,
-        category: {
-          select: {
-            name: true,
-            slug: true
-          }
-        },
-        author: {
-          select: {
-            name: true,
-            image: true
-          }
-        }
-      }
+    // 按发布日期排序（最新优先）
+    filteredPosts.sort((a, b) => {
+      const dateA = new Date(a.publishedAt || a.date || 0).getTime()
+      const dateB = new Date(b.publishedAt || b.date || 0).getTime()
+      return dateB - dateA
     })
 
-    // 获取总数
-    const total = await prisma.blogPost.count({ where })
+    // 分页
+    const total = filteredPosts.length
+    const skip = (page - 1) * limit
+    const posts = filteredPosts.slice(skip, skip + limit)
 
-    // 获取所有标签（用于筛选）
-    const allPosts = await prisma.blogPost.findMany({
-      where: { isPublished: true },
-      select: { tags: true }
-    })
-
+    // 提取所有标签
     const tagCounts = new Map<string, number>()
-    allPosts.forEach((post: { tags: string | null }) => {
-      if (post.tags) {
-        const tags = post.tags.split(',').map((t: string) => t.trim()).filter((t: string) => t)
-        tags.forEach((tag: string) => {
-          tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1)
+    allPosts.forEach(post => {
+      if (post.tags && Array.isArray(post.tags)) {
+        post.tags.forEach((t: string) => {
+          tagCounts.set(t, (tagCounts.get(t) || 0) + 1)
         })
       }
     })
@@ -111,10 +90,7 @@ export async function GET(request: Request) {
     return NextResponse.json({
       success: true,
       data: {
-        posts: posts.map((post: any) => ({
-          ...post,
-          tags: post.tags ? post.tags.split(',').map((t: string) => t.trim()).filter((t: string) => t) : []
-        })),
+        posts,
         tags,
         pagination: {
           page,

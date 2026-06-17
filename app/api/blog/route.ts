@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
-import { auth } from '@/auth';
+import { blogPosts } from '@/data/blog-posts';
 
 // GET /api/blog - 获取博客列表
 export async function GET(request: NextRequest) {
@@ -12,52 +11,41 @@ export async function GET(request: NextRequest) {
     const limit = parseInt(searchParams.get('limit') || '12');
     const featured = searchParams.get('featured') === 'true';
 
-    const where: any = {
-      isPublished: true,
-    };
+    let posts = [...blogPosts];
 
+    // 按分类过滤
     if (category) {
-      where.category = {
-        slug: category,
-      };
+      posts = posts.filter(post =>
+        post.category?.toLowerCase() === category.toLowerCase()
+      );
     }
 
+    // 按标签过滤
     if (tag) {
-      where.tags = {
-        contains: tag,
-      };
+      posts = posts.filter(post =>
+        post.tags?.some(t => t.toLowerCase() === tag.toLowerCase())
+      );
     }
 
+    // 精选文章
     if (featured) {
-      where.isFeatured = true;
+      posts = posts.filter(post => post.featured === true);
     }
 
-    const total = await prisma.blogPost.count({ where });
-
-    const posts = await prisma.blogPost.findMany({
-      where,
-      include: {
-        category: true,
-        author: {
-          select: {
-            id: true,
-            name: true,
-            image: true,
-          },
-        },
-      },
-      orderBy: {
-        publishedAt: 'desc',
-      },
-      skip: (page - 1) * limit,
-      take: limit,
+    // 按发布日期排序
+    posts.sort((a, b) => {
+      const dateA = a.date ? new Date(a.date).getTime() : 0;
+      const dateB = b.date ? new Date(b.date).getTime() : 0;
+      return dateB - dateA;
     });
 
+    // 分页
+    const total = posts.length;
+    const startIndex = (page - 1) * limit;
+    const paginatedPosts = posts.slice(startIndex, startIndex + limit);
+
     return NextResponse.json({
-      posts: posts.map((post: any) => ({
-        ...post,
-        tags: post.tags ? JSON.parse(post.tags) : [],
-      })),
+      posts: paginatedPosts,
       pagination: {
         page,
         limit,
@@ -69,106 +57,6 @@ export async function GET(request: NextRequest) {
     console.error('获取博客列表失败:', error);
     return NextResponse.json(
       { error: '获取博客列表失败' },
-      { status: 500 }
-    );
-  }
-}
-
-// POST /api/blog - 创建新博客文章（需要管理员权限）
-export async function POST(request: NextRequest) {
-  try {
-    const session = await auth();
-
-    if (!(session?.user as any)?.id) {
-      return NextResponse.json(
-        { error: '请先登录' },
-        { status: 401 }
-      );
-    }
-
-    // 检查是否是管理员
-    const user = await prisma.user.findUnique({
-      where: { id: (session as any).user.id },
-    });
-
-    if (user?.role !== 'admin') {
-      return NextResponse.json(
-        { error: '需要管理员权限' },
-        { status: 403 }
-      );
-    }
-
-    const body = await request.json();
-    const {
-      title,
-      slug,
-      excerpt,
-      content,
-      metaTitle,
-      metaDescription,
-      coverImage,
-      coverImageAlt,
-      categoryId,
-      tags,
-      relatedToolIds,
-      isPublished,
-      isFeatured,
-    } = body;
-
-    if (!title || !slug || !excerpt || !content || !categoryId) {
-      return NextResponse.json(
-        { error: '缺少必填字段' },
-        { status: 400 }
-      );
-    }
-
-    // 检查 slug 是否已存在
-    const existingPost = await prisma.blogPost.findUnique({
-      where: { slug },
-    });
-
-    if (existingPost) {
-      return NextResponse.json(
-        { error: '文章 slug 已存在' },
-        { status: 400 }
-      );
-    }
-
-    const post = await prisma.blogPost.create({
-      data: {
-        title,
-        slug,
-        excerpt,
-        content,
-        metaTitle,
-        metaDescription,
-        coverImage,
-        coverImageAlt,
-        categoryId,
-        tags: tags ? JSON.stringify(tags) : null,
-        relatedToolIds: relatedToolIds ? JSON.stringify(relatedToolIds) : null,
-        isPublished: isPublished || false,
-        isFeatured: isFeatured || false,
-        publishedAt: isPublished ? new Date() : null,
-        authorId: (session as any).user.id,
-      },
-      include: {
-        category: true,
-        author: {
-          select: {
-            id: true,
-            name: true,
-            image: true,
-          },
-        },
-      },
-    });
-
-    return NextResponse.json(post, { status: 201 });
-  } catch (error) {
-    console.error('创建博客文章失败:', error);
-    return NextResponse.json(
-      { error: '创建博客文章失败' },
       { status: 500 }
     );
   }
