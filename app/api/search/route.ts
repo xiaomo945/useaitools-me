@@ -1,5 +1,20 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
+import toolsData from '@/data/tools.json';
+
+interface Tool {
+  id: number;
+  name: string;
+  description: string;
+  category: string;
+  pricing?: string;
+  url: string;
+  affiliate_link?: string;
+  icon_url?: string;
+  rating?: number;
+  rating_count?: number;
+  best_for?: string[];
+  [key: string]: any;
+}
 
 export async function GET(request: NextRequest) {
   try {
@@ -12,71 +27,48 @@ export async function GET(request: NextRequest) {
     const page = parseInt(searchParams.get('page') || '1');
     const limit = parseInt(searchParams.get('limit') || '50');
 
-    // 构建查询条件
-    const where: any = {
-      isActive: true
-    };
+    const tools = toolsData as Tool[];
 
-    // 文本搜索
-    if (query.trim()) {
-      where.OR = [
-        { name: { contains: query } },
-        { description: { contains: query } },
-        { category: { contains: query } },
-      ];
-    }
+    // 过滤
+    let filtered = tools.filter(tool => {
+      // 文本搜索
+      if (query.trim()) {
+        const q = query.toLowerCase();
+        const matchesQuery =
+          tool.name.toLowerCase().includes(q) ||
+          tool.description.toLowerCase().includes(q) ||
+          tool.category.toLowerCase().includes(q);
+        if (!matchesQuery) return false;
+      }
 
-    // 分类过滤
-    if (category) {
-      where.category = category;
-    }
+      // 分类过滤
+      if (category && tool.category !== category) return false;
 
-    // 定价过滤
-    if (pricing) {
-      where.pricing = pricing;
-    }
+      // 定价过滤
+      if (pricing && tool.pricing !== pricing) return false;
 
-    // 最低评分
-    if (minRating > 0) {
-      where.rating = { gte: minRating };
-    }
+      // 最低评分
+      if (minRating > 0 && (!tool.rating || tool.rating < minRating)) return false;
 
-    // 排序
-    let orderBy: any = { rating: 'desc' };
-    if (sortBy === 'name') {
-      orderBy = { name: 'asc' };
-    } else if (sortBy === 'reviews') {
-      orderBy = { reviewCount: 'desc' };
-    }
-
-    // 获取总数
-    const total = await prisma.tool.count({ where });
-
-    // 获取工具列表
-    const tools = await prisma.tool.findMany({
-      where,
-      orderBy,
-      skip: (page - 1) * limit,
-      take: limit
+      return true;
     });
 
-    // 转换为前端需要的格式
-    const formattedTools = tools.map((tool: any) => ({
-      id: parseInt(tool.id),
-      name: tool.name,
-      description: tool.description,
-      category: tool.category,
-      pricing: tool.pricing,
-      url: tool.url,
-      affiliate_link: tool.affiliateUrl || '',
-      icon_url: tool.iconUrl || '',
-      rating: tool.rating,
-      rating_count: tool.reviewCount,
-      best_for: tool.features ? JSON.parse(tool.features) : []
-    }));
+    // 排序
+    if (sortBy === 'name') {
+      filtered.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortBy === 'reviews') {
+      filtered.sort((a, b) => (b.rating_count || 0) - (a.rating_count || 0));
+    } else {
+      filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+    }
+
+    // 分页
+    const total = filtered.length;
+    const startIndex = (page - 1) * limit;
+    const paginatedTools = filtered.slice(startIndex, startIndex + limit);
 
     return NextResponse.json({
-      tools: formattedTools,
+      tools: paginatedTools,
       pagination: {
         page,
         limit,

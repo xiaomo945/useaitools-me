@@ -23,23 +23,45 @@ export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const page = parseInt(searchParams.get('page') || '1', 10);
   const limit = parseInt(searchParams.get('limit') || '20', 10);
-
-  const startIndex = (page - 1) * limit;
-  const endIndex = startIndex + limit;
+  const category = searchParams.get('category');
+  const search = searchParams.get('search');
 
   const enrichedTools = tools.map(tool => ({
     ...tool,
     affiliate_link: getAffiliateLink(tool)
   }));
 
-  const paginatedTools = enrichedTools.slice(startIndex, endIndex);
-  const hasMore = endIndex < enrichedTools.length;
+  // Filter by category
+  let filteredTools = enrichedTools;
+  if (category) {
+    filteredTools = filteredTools.filter(t =>
+      t.category.toLowerCase() === category.toLowerCase()
+    );
+  }
 
-  return NextResponse.json({
+  // Filter by search term
+  if (search) {
+    const term = search.toLowerCase();
+    filteredTools = filteredTools.filter(t =>
+      t.name.toLowerCase().includes(term) ||
+      t.description.toLowerCase().includes(term) ||
+      t.category.toLowerCase().includes(term)
+    );
+  }
+
+  const totalCount = filteredTools.length;
+  const startIndex = (page - 1) * limit;
+  const endIndex = startIndex + limit;
+  const paginatedTools = filteredTools.slice(startIndex, endIndex);
+  const hasMore = endIndex < filteredTools.length;
+
+  const response = NextResponse.json({
     tools: paginatedTools,
     page,
     limit,
-    totalCount: enrichedTools.length,
+    totalCount,
     hasMore
   });
+  response.headers.set('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=600');
+  return response;
 }

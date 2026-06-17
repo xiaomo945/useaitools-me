@@ -1,5 +1,19 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import toolsData from '@/data/tools.json'
+
+interface Tool {
+  id: number
+  name: string
+  category: string
+  description: string
+  url: string
+  affiliate_link?: string
+  icon_url?: string
+  pricing?: string
+  rating?: number
+  rating_count?: number
+  [key: string]: any
+}
 
 /**
  * 公开 API - 获取所有分类
@@ -10,59 +24,36 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
     const includeCount = searchParams.get('includeCount') !== 'false'
 
-    if (includeCount) {
-      const rawCategories = await prisma.category.findMany({
-        where: { isActive: true },
-        include: {
-          _count: {
-            select: {
-              tools: { where: { isActive: true } }
-            }
-          }
-        },
-        orderBy: { name: 'asc' }
-      })
+    // 从工具数据中提取分类
+    const tools = toolsData as Tool[]
+    const categoryMap = new Map<string, { name: string; count: number }>()
 
-      const categories = rawCategories.map((c: {
-        id: string
-        name: string
-        slug: string
-        description: string | null
-        icon: string | null
-        _count: { tools: number }
-      }) => ({
-        id: c.id,
-        name: c.name,
-        slug: c.slug,
-        description: c.description,
-        icon: c.icon,
-        toolCount: c._count.tools
-      }))
+    tools.forEach(tool => {
+      const category = tool.category
+      if (category) {
+        const existing = categoryMap.get(category)
+        if (existing) {
+          existing.count++
+        } else {
+          categoryMap.set(category, { name: category, count: 1 })
+        }
+      }
+    })
 
-      return NextResponse.json({
-        success: true,
-        data: { categories, total: categories.length },
-        meta: { timestamp: new Date().toISOString(), version: '1.0' }
-      })
-    } else {
-      const categories = await prisma.category.findMany({
-        where: { isActive: true },
-        select: {
-          id: true,
-          name: true,
-          slug: true,
-          description: true,
-          icon: true
-        },
-        orderBy: { name: 'asc' }
-      })
+    const categories = Array.from(categoryMap.entries()).map(([slug, data]) => ({
+      id: slug.toLowerCase(),
+      name: data.name,
+      slug: slug.toLowerCase(),
+      description: `${data.name} AI tools`,
+      icon: getCategoryIcon(data.name),
+      toolCount: includeCount ? data.count : undefined
+    }))
 
-      return NextResponse.json({
-        success: true,
-        data: { categories, total: categories.length },
-        meta: { timestamp: new Date().toISOString(), version: '1.0' }
-      })
-    }
+    return NextResponse.json({
+      success: true,
+      data: { categories, total: categories.length },
+      meta: { timestamp: new Date().toISOString(), version: '1.0' }
+    })
   } catch (error) {
     console.error('公开 API 获取分类列表失败:', error)
     return NextResponse.json(
@@ -74,4 +65,16 @@ export async function GET(request: Request) {
       { status: 500 }
     )
   }
+}
+
+function getCategoryIcon(category: string): string {
+  const iconMap: Record<string, string> = {
+    'Writing': '✍️',
+    'Image': '🖼️',
+    'Video': '🎥',
+    'Audio': '🎵',
+    'Productivity': '⚡',
+    'Code': '💻'
+  }
+  return iconMap[category] || '🔧'
 }

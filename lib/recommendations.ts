@@ -1,4 +1,4 @@
-import { prisma } from '@/lib/prisma';
+import toolsData from '@/data/tools.json';
 
 export type RecommendationStrategy = 'popular' | 'similar_category' | 'newest' | 'random' | 'weighted';
 
@@ -22,217 +22,147 @@ export interface RecommendedTool {
   description: string | null;
 }
 
-function mapToRecommended(tool: {
-  id: string;
+interface JsonTool {
+  id: number;
   name: string;
   category: string;
   slug?: string;
-  iconUrl?: string | null;
-  rating?: number | null;
-  reviewCount?: number | null;
-  description?: string | null;
-}): RecommendedTool {
-  const slug =
-    tool.slug ||
-    tool.name
-      .toLowerCase()
-      .replace(/[^a-z0-9\s-]/g, '')
-      .replace(/\s+/g, '-')
-      .replace(/-+/g, '-')
-      .replace(/^-|-$/g, '');
+  icon_url?: string;
+  rating?: number;
+  rating_count?: number;
+  description?: string;
+  last_updated?: string;
+  [key: string]: any;
+}
+
+const tools = toolsData as JsonTool[];
+
+function toSlug(tool: JsonTool): string {
+  return tool.slug || tool.name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+function mapTool(tool: JsonTool): RecommendedTool {
   return {
-    id: tool.id,
+    id: String(tool.id),
     name: tool.name,
     category: tool.category,
-    slug,
-    iconUrl: tool.iconUrl ?? null,
+    slug: toSlug(tool),
+    iconUrl: tool.icon_url || null,
     rating: tool.rating ?? null,
-    reviewCount: tool.reviewCount ?? null,
+    reviewCount: tool.rating_count ?? null,
     description: tool.description ?? null,
   };
 }
 
-async function getPopular(limit: number): Promise<RecommendedTool[]> {
-  try {
-    const tools = await prisma.tool.findMany({
-      where: { isActive: true },
-      orderBy: [
-        { rating: 'desc' },
-        { reviewCount: 'desc' },
-      ],
-      take: Math.max(limit * 3, 20),
-      select: {
-        id: true,
-        name: true,
-        category: true,
-        slug: true,
-        iconUrl: true,
-        rating: true,
-        reviewCount: true,
-        description: true,
-      },
-    });
-
-    const shuffled = [...tools].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, limit).map(mapToRecommended);
-  } catch (e: any) {
-    console.error('recommendations.getPopular error:', e);
-    return [];
-  }
+function getPopular(limit: number): RecommendedTool[] {
+  return [...tools]
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+    .slice(0, Math.max(limit * 3, 20))
+    .sort(() => Math.random() - 0.5)
+    .slice(0, limit)
+    .map(mapTool);
 }
 
-async function getSimilarCategory(toolId: string | undefined, category: string | undefined, limit: number): Promise<RecommendedTool[]> {
-  try {
-    const whereClause: any = { isActive: true };
-    if (category) {
-      whereClause.category = category;
-    } else if (toolId) {
-      const ref = await prisma.tool.findUnique({
-        where: { id: toolId },
-        select: { category: true },
-      });
-      if (ref?.category) whereClause.category = ref.category;
-    }
-    if (toolId) whereClause.id = { not: toolId };
-
-    const tools = await prisma.tool.findMany({
-      where: whereClause,
-      orderBy: [
-        { rating: 'desc' },
-        { reviewCount: 'desc' },
-      ],
-      take: limit,
-      select: {
-        id: true,
-        name: true,
-        category: true,
-        slug: true,
-        iconUrl: true,
-        rating: true,
-        reviewCount: true,
-        description: true,
-      },
-    });
-    return tools.map(mapToRecommended);
-  } catch (e: any) {
-    console.error('recommendations.getSimilarCategory error:', e);
-    return [];
+function getSimilarCategory(toolId: string | undefined, category: string | undefined, limit: number): RecommendedTool[] {
+  let targetCategory = category;
+  if (!targetCategory && toolId) {
+    const ref = tools.find(t => String(t.id) === toolId);
+    if (ref) targetCategory = ref.category;
   }
+
+  let filtered = tools;
+  if (targetCategory) {
+    filtered = tools.filter(t => t.category === targetCategory);
+  }
+  if (toolId) {
+    filtered = filtered.filter(t => String(t.id) !== toolId);
+  }
+
+  return filtered
+    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+    .slice(0, limit)
+    .map(mapTool);
 }
 
-async function getNewest(limit: number): Promise<RecommendedTool[]> {
-  try {
-    const tools = await prisma.tool.findMany({
-      where: { isActive: true },
-      orderBy: { createdAt: 'desc' },
-      take: limit,
-      select: {
-        id: true,
-        name: true,
-        category: true,
-        slug: true,
-        iconUrl: true,
-        rating: true,
-        reviewCount: true,
-        description: true,
-      },
-    });
-    return tools.map(mapToRecommended);
-  } catch (e: any) {
-    console.error('recommendations.getNewest error:', e);
-    return [];
-  }
+function getNewest(limit: number): RecommendedTool[] {
+  return [...tools]
+    .sort((a, b) => {
+      const dateA = a.last_updated ? new Date(a.last_updated).getTime() : 0;
+      const dateB = b.last_updated ? new Date(b.last_updated).getTime() : 0;
+      return dateB - dateA;
+    })
+    .slice(0, limit)
+    .map(mapTool);
 }
 
-async function getRandom(limit: number): Promise<RecommendedTool[]> {
-  try {
-    const categories = await prisma.tool.groupBy({
-      by: ['category'],
-      where: { isActive: true },
-    });
-    const cats = categories.map((c: any) => c.category);
-    if (cats.length === 0) return [];
+function getRandom(limit: number): RecommendedTool[] {
+  const categories = [...new Set(tools.map(t => t.category))];
+  if (categories.length === 0) return [];
 
-    const perCat = Math.ceil(limit / cats.length) + 1;
-    const all: RecommendedTool[] = [];
-    const seen = new Set<string>();
+  const perCat = Math.ceil(limit / categories.length) + 1;
+  const all: RecommendedTool[] = [];
+  const seen = new Set<string>();
 
-    for (const cat of cats) {
-      const tools = await prisma.tool.findMany({
-        where: { isActive: true, category: cat },
-        take: perCat,
-        orderBy: { rating: 'desc' },
-        select: {
-          id: true,
-          name: true,
-          category: true,
-          slug: true,
-          iconUrl: true,
-          rating: true,
-          reviewCount: true,
-          description: true,
-        },
-      });
-      for (const t of tools) {
-        if (!seen.has(t.id)) {
-          seen.add(t.id);
-          all.push(mapToRecommended(t));
-        }
+  for (const cat of categories) {
+    const catTools = tools
+      .filter(t => t.category === cat)
+      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+      .slice(0, perCat);
+    for (const t of catTools) {
+      const id = String(t.id);
+      if (!seen.has(id)) {
+        seen.add(id);
+        all.push(mapTool(t));
       }
     }
-
-    return all.sort(() => Math.random() - 0.5).slice(0, limit);
-  } catch (e: any) {
-    console.error('recommendations.getRandom error:', e);
-    return [];
   }
+
+  return all.sort(() => Math.random() - 0.5).slice(0, limit);
 }
 
-async function getWeighted(options: RecommendationOptions, limit: number): Promise<RecommendedTool[]> {
-  try {
-    const weights: Record<string, number> = {
-      popular: options.weights?.popular ?? 0.4,
-      similar_category: options.weights?.similar_category ?? (options.currentToolId || options.category ? 0.5 : 0),
-      newest: options.weights?.newest ?? 0.2,
-      random: options.weights?.random ?? 0.1,
-    };
+function getWeighted(options: RecommendationOptions, limit: number): RecommendedTool[] {
+  const weights: Record<string, number> = {
+    popular: options.weights?.popular ?? 0.4,
+    similar_category: options.weights?.similar_category ?? (options.currentToolId || options.category ? 0.5 : 0),
+    newest: options.weights?.newest ?? 0.2,
+    random: options.weights?.random ?? 0.1,
+  };
 
-    const [popularList, similarList, newestList, randomList] = await Promise.all([
-      getPopular(limit * 2),
-      getSimilarCategory(options.currentToolId, options.category, limit * 2),
-      getNewest(limit * 2),
-      getRandom(limit),
-    ]);
+  const popularList = getPopular(limit * 2);
+  const similarList = getSimilarCategory(options.currentToolId, options.category, limit * 2);
+  const newestList = getNewest(limit * 2);
+  const randomList = getRandom(limit);
 
-    const scored: Map<string, { tool: RecommendedTool; score: number }> = new Map();
-    const addScore = (list: RecommendedTool[], weight: number) => {
-      list.forEach((tool, idx) => {
-        const rankBonus = Math.max(0, 1 - idx / Math.max(list.length, 1));
-        const current = scored.get(tool.id);
-        const add = weight * (0.5 + rankBonus * 0.5);
-        if (current) {
-          current.score += add;
-        } else {
-          scored.set(tool.id, { tool, score: add });
-        }
-      });
-    };
+  const scored: Map<string, { tool: RecommendedTool; score: number }> = new Map();
+  const addScore = (list: RecommendedTool[], weight: number) => {
+    list.forEach((tool, idx) => {
+      const rankBonus = Math.max(0, 1 - idx / Math.max(list.length, 1));
+      const current = scored.get(tool.id);
+      const add = weight * (0.5 + rankBonus * 0.5);
+      if (current) {
+        current.score += add;
+      } else {
+        scored.set(tool.id, { tool, score: add });
+      }
+    });
+  };
 
-    addScore(popularList, weights.popular);
-    addScore(similarList, weights.similar_category);
-    addScore(newestList, weights.newest);
-    addScore(randomList, weights.random);
+  addScore(popularList, weights.popular);
+  addScore(similarList, weights.similar_category);
+  addScore(newestList, weights.newest);
+  addScore(randomList, weights.random);
 
-    const excludeId = options.currentToolId;
-    return Array.from(scored.values())
-      .filter((item: any) => !excludeId || item.tool.id !== excludeId)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, limit)
-      .map((item: any) => item.tool);
-  } catch (e: any) {
-    console.error('recommendations.getWeighted error:', e);
-    return [];
-  }
+  const excludeId = options.currentToolId;
+  return Array.from(scored.values())
+    .filter(item => !excludeId || item.tool.id !== excludeId)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(item => item.tool);
 }
 
 export async function getRecommendations(options: RecommendationOptions = {}): Promise<RecommendedTool[]> {
@@ -253,7 +183,7 @@ export async function getRecommendations(options: RecommendationOptions = {}): P
       default:
         return getPopular(safeLimit);
     }
-  } catch (e: any) {
+  } catch (e) {
     console.error('recommendations.getRecommendations error:', e);
     return [];
   }
