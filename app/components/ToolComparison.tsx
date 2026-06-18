@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowRight, Check, X, Star } from 'lucide-react';
+import SocialShare from '@/app/components/SocialShare';
 
 interface ComparisonTool {
   id: number;
@@ -360,6 +361,17 @@ export default function ToolComparison({ tool1, tool2 }: ToolComparisonProps) {
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
+        </div>
+      </div>
+
+      {/* Social Share */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 flex items-center justify-center">
+          <SocialShare
+            title={`${tool1.name} vs ${tool2.name}: Which is Best?`}
+            url={`https://useaitools.me/compare/${tool1.slug}-vs-${tool2.slug}`}
+            description={`Compare ${tool1.name} and ${tool2.name} side-by-side. Features, pricing, pros & cons.`}
+          />
         </div>
       </div>
     </div>

@@ -262,6 +262,38 @@ export default async function BlogDetailPage({
     copyrightYear: new Date(post.date).getFullYear()
   };
 
+  // FAQPage schema — 基于文章标题和分类生成常见问题
+  const faqLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `What are the best ${post.category} AI tools in 2026?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${post.title} covers the top ${post.category} AI tools available in 2026. ${post.description} Read the full article for detailed comparisons and recommendations.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Are ${post.category} AI tools free to use?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Many ${post.category} AI tools offer free plans or freemium pricing models. Check our comprehensive ${post.category} tools comparison for pricing details and find the best option for your budget.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `How do I choose the right ${post.category} AI tool?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `When choosing a ${post.category} AI tool, consider factors like features, pricing, ease of use, and your specific use case. Our article "${post.title}" provides detailed guidance to help you make the right choice.`,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -271,6 +303,10 @@ export default async function BlogDetailPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
       <ClientBlogDetail post={processedPost} slug={slug} relatedPosts={relatedPosts} relatedTools={relatedTools} />
     </>

@@ -422,69 +422,9 @@ type Tool = {
   best_for?: string[];
 };
 
-// Helper function to check if a tool has affiliate link (environment variable or JSON field)
-const hasAffiliateLink = (tool: Tool): boolean => {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name.includes('Rytr')) {
-    shortEnvVarName = 'AFFILIATE_RYTR';
-  } else if (tool.name.includes('VEED')) {
-    shortEnvVarName = 'AFFILIATE_VEED';
-  } else if (tool.name.includes('Murf')) {
-    shortEnvVarName = 'AFFILIATE_MURF';
-  } else if (tool.name.includes('Pictory')) {
-    shortEnvVarName = 'AFFILIATE_PICTORY';
-  } else if (tool.name.includes('Grammarly')) {
-    shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  }
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return !!(envLink || tool.affiliate_link);
-};
-
-// Helper function to get affiliate link for a tool with UTM parameters
-const getAffiliateLink = (tool: Tool): string => {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name.includes('Rytr')) {
-    shortEnvVarName = 'AFFILIATE_RYTR';
-  } else if (tool.name.includes('VEED')) {
-    shortEnvVarName = 'AFFILIATE_VEED';
-  } else if (tool.name.includes('Murf')) {
-    shortEnvVarName = 'AFFILIATE_MURF';
-  } else if (tool.name.includes('Pictory')) {
-    shortEnvVarName = 'AFFILIATE_PICTORY';
-  } else if (tool.name.includes('Grammarly')) {
-    shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  }
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  const baseLink = envLink || tool.affiliate_link;
-  
-  if (!baseLink) return '';
-  
-  // Add UTM parameters for tracking
-  const url = new URL(baseLink);
-  url.searchParams.set('utm_source', 'useaitools');
-  url.searchParams.set('utm_medium', 'referral');
-  url.searchParams.set('utm_campaign', 'staff_pick');
-  return url.toString();
-};
-
-// Dynamic CTA text based on pricing model
-const getDynamicCTA = (pricing: string, hasAffiliate: boolean): string => {
-  if (!hasAffiliate) return 'Visit Website';
-  
-  const pricingLower = pricing.toLowerCase();
-  if (pricingLower.includes('free') || pricingLower.includes('open source')) {
-    return 'Try Free';
-  }
-  if (pricingLower.includes('freemium')) {
-    return 'Start Free Trial';
-  }
-  if (pricingLower.includes('paid') || pricingLower.includes('$')) {
-    return 'View Pricing';
-  }
-  return 'Try It Free';
-};
+// Affiliate link helpers — unified in lib/affiliate.ts (single source of truth)
+import { hasAffiliateLink, getAffiliateLink, getDynamicCTA } from '@/lib/affiliate';
+import { track } from '@/lib/analytics';
 
 // CTA A/B test variants — track via Vercel Analytics
 // Variant A: direct action-oriented ("Try It Free")
@@ -863,6 +803,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
     if (search.trim()) {
       debugLog('Search', `Triggering search: "${search.trim()}"`);
       playSearchSound();
+      track('search', { query: search.trim() });
       setTriggeredSearch(search.trim());
       setShowSuggestions(false);
     }
@@ -1045,6 +986,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       playUnsaveSound();
     } else {
       playSaveSound();
+      track('save', { tool_id: id });
     }
     const newSavedIds = wasSaved
       ? savedIds.filter((savedId) => savedId !== id)

@@ -48,10 +48,14 @@ export async function generateMetadata({ params }: ComparePageProps): Promise<Me
     title: `${tool1.name} vs ${tool2.name}: Which is Best in 2026? – Use AI Tools`,
     description: `Compare ${tool1.name} and ${tool2.name} side-by-side. Features, pricing, pros & cons. Find the right ${tool1.category.toLowerCase()} AI tool for your needs.`,
     keywords: [`${tool1.name} vs ${tool2.name}`, `compare ${tool1.name} ${tool2.name}`, `${tool1.category} AI tools comparison`],
+    alternates: {
+      canonical: `https://useaitools.me/compare/${slugs}`,
+    },
     openGraph: {
       title: `${tool1.name} vs ${tool2.name}: Comprehensive Comparison`,
       description: `Compare ${tool1.name} and ${tool2.name} side-by-side. Features, pricing, pros & cons.`,
       type: 'article',
+      url: `https://useaitools.me/compare/${slugs}`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -107,15 +111,20 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
     features: tool2.use_cases?.map(uc => uc.title),
   };
 
-  // JSON-LD 结构化数据
-  const jsonLd = {
+  // 稳定的发布日期（避免每次构建都变，利于 SEO）
+  const publishedDate = '2026-01-01T00:00:00.000Z';
+  const modifiedDate = '2026-06-01T00:00:00.000Z';
+  const pageUrl = `https://useaitools.me/compare/${slugs}`;
+
+  // JSON-LD: Article + BreadcrumbList + FAQPage
+  const articleLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: `${tool1.name} vs ${tool2.name}: Comprehensive Comparison`,
     description: `Compare ${tool1.name} and ${tool2.name} side-by-side. Features, pricing, pros & cons.`,
     articleBody: `Detailed comparison between ${tool1.name} and ${tool2.name} including features, pricing, user ratings, and expert recommendations.`,
-    publishedTime: new Date().toISOString(),
-    modifiedTime: new Date().toISOString(),
+    datePublished: publishedDate,
+    dateModified: modifiedDate,
     author: {
       '@type': 'Organization',
       name: 'Use AI Tools',
@@ -130,15 +139,72 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://useaitools.me/compare/${slugs}`,
+      '@id': pageUrl,
     },
+  };
+
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://useaitools.me' },
+      { '@type': 'ListItem', position: 2, name: 'Compare', item: 'https://useaitools.me/compare' },
+      { '@type': 'ListItem', position: 3, name: `${tool1.name} vs ${tool2.name}`, item: pageUrl },
+    ],
+  };
+
+  const faqLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `What is the difference between ${tool1.name} and ${tool2.name}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${tool1.name} and ${tool2.name} are both ${tool1.category} AI tools, but they differ in features, pricing, and target users. ${tool1.name} ${tool1.description} ${tool2.name} ${tool2.description}`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Which is better: ${tool1.name} or ${tool2.name}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `The better choice depends on your needs. ${tool1.name} has a rating of ${tool1.rating || 'N/A'}/5, while ${tool2.name} has a rating of ${tool2.rating || 'N/A'}/5. Compare their features, pricing (${tool1.pricing} vs ${tool2.pricing}), and use cases to decide.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Is ${tool1.name} free to use?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${tool1.name} pricing model: ${tool1.pricing}. Check the official website for the latest pricing details.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Is ${tool2.name} free to use?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `${tool2.name} pricing model: ${tool2.pricing}. Check the official website for the latest pricing details.`,
+        },
+      },
+    ],
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
       <ToolComparison tool1={comparisonTool1} tool2={comparisonTool2} />
     </>

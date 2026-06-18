@@ -22,51 +22,8 @@ export const ctaVariants = {
   B: 'Get Started for Free',
 };
 
-// Helper function to check if a tool has affiliate link (environment variable or JSON field)
-export const hasAffiliateLink = (tool: Tool): boolean => {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name === 'Rytr') {
-    shortEnvVarName = 'AFFILIATE_RYTR';
-  } else if (tool.name === 'VEED.io') {
-    shortEnvVarName = 'AFFILIATE_VEED';
-  } else if (tool.name === 'Murf AI') {
-    shortEnvVarName = 'AFFILIATE_MURF';
-  } else if (tool.name === 'Pictory') {
-    shortEnvVarName = 'AFFILIATE_PICTORY';
-  }
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return !!(envLink || tool.affiliate_link);
-};
-
-// Helper function to get affiliate link for a tool with UTM parameters
-export const getAffiliateLink = (tool: Tool): string => {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name === 'Rytr') {
-    shortEnvVarName = 'AFFILIATE_RYTR';
-  } else if (tool.name === 'VEED.io') {
-    shortEnvVarName = 'AFFILIATE_VEED';
-  } else if (tool.name === 'Murf AI') {
-    shortEnvVarName = 'AFFILIATE_MURF';
-  } else if (tool.name === 'Pictory') {
-    shortEnvVarName = 'AFFILIATE_PICTORY';
-  }
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  const baseLink = envLink || tool.affiliate_link;
-  
-  if (!baseLink) return '';
-  
-  try {
-    const url = new URL(baseLink);
-    url.searchParams.set('utm_source', 'useaitools');
-    url.searchParams.set('utm_medium', 'referral');
-    url.searchParams.set('utm_campaign', 'staff_pick');
-    return url.toString();
-  } catch {
-    return baseLink;
-  }
-};
+// Affiliate link helpers — re-exported from lib/affiliate.ts (single source of truth)
+export { hasAffiliateLink, getAffiliateLink } from '@/lib/affiliate';
 
 export const getCategoryColors = (category: string) => {
   switch (category) {

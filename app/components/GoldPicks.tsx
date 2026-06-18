@@ -1,6 +1,7 @@
 import type { Tool } from '@/types';
 import Link from 'next/link';
 import { ArrowRight, Star } from 'lucide-react';
+import { hasAffiliateLink, getAffiliateLink } from '@/lib/affiliate';
 
 interface GoldPicksProps {
   tools: Tool[];
@@ -11,44 +12,6 @@ interface GoldPicksProps {
     textLight: string;
     border: string;
   };
-}
-
-// Helper function to check if a tool has affiliate link
-function hasAffiliateLink(tool: Tool): boolean {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name.includes('Rytr')) {
-    shortEnvVarName = 'AFFILIATE_RYTR';
-  } else if (tool.name.includes('VEED')) {
-    shortEnvVarName = 'AFFILIATE_VEED';
-  } else if (tool.name.includes('Murf')) {
-    shortEnvVarName = 'AFFILIATE_MURF';
-  } else if (tool.name.includes('Pictory')) {
-    shortEnvVarName = 'AFFILIATE_PICTORY';
-  } else if (tool.name.includes('Grammarly')) {
-    shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  }
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return !!(envLink || tool.affiliate_link);
-}
-
-// Helper function to get affiliate link
-function getAffiliateLink(tool: Tool): string {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name.includes('Rytr')) {
-    shortEnvVarName = 'AFFILIATE_RYTR';
-  } else if (tool.name.includes('VEED')) {
-    shortEnvVarName = 'AFFILIATE_VEED';
-  } else if (tool.name.includes('Murf')) {
-    shortEnvVarName = 'AFFILIATE_MURF';
-  } else if (tool.name.includes('Pictory')) {
-    shortEnvVarName = 'AFFILIATE_PICTORY';
-  } else if (tool.name.includes('Grammarly')) {
-    shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  }
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return envLink || tool.affiliate_link || tool.url;
 }
 
 export default function GoldPicks({ tools, categoryColors }: GoldPicksProps) {

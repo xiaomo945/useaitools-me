@@ -150,21 +150,8 @@ type Tool = {
   description_en?: string;
 };
 
-// Helper function to check if a tool has affiliate link
-const hasAffiliateLink = (tool: Tool): boolean => {
-  return !!(tool.affiliate_link);
-};
-
-// Helper function to get affiliate link with UTM parameters
-const getAffiliateLinkWithUTM = (tool: Tool): string => {
-  if (!tool.affiliate_link) return tool.url;
-  
-  const url = new URL(tool.affiliate_link);
-  url.searchParams.set('utm_source', 'useaitools');
-  url.searchParams.set('utm_medium', 'referral');
-  url.searchParams.set('utm_campaign', 'staff_pick');
-  return url.toString();
-};
+// Affiliate link helpers — unified in lib/affiliate.ts
+import { hasAffiliateLink, getAffiliateLink as getAffiliateLinkWithUTM } from '@/lib/affiliate';
 
 // CTA A/B test variants
 const ctaVariants = {

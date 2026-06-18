@@ -19,7 +19,8 @@ export type TrackEvent =
   | 'blog_read'
   | 'cta_click'
   | 'ab_variant_view'
-  | 'gold_picks_click';
+  | 'gold_picks_click'
+  | 'share';
 
 interface TrackOptions {
   tool_name?: string;

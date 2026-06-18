@@ -969,6 +969,87 @@ export default function CommunityPage() {
 
 ---
 
+## 🧠 Phase 5: 四方头脑风暴落地（基于代码审计）
+
+**目标**: 消除技术债务 + 补全增长基础设施 + 提升 SEO 权威性 + 激活社区传播
+**时间**: 1-2 周
+**方法论**: 从商业战略(17)、增长黑客(16)、SEO(04)、社区品牌(12) 四个维度审计现状，针对真实问题给出可执行方案
+
+### 5.1 商业战略深化：联盟链接统一治理 + 赞助位标准化
+
+**审计发现**:
+- 联盟链接双重机制混乱：`AFFILIATE_*` 环境变量 + `tools.json` 的 `affiliate_link` 字段并行
+- `hasAffiliateLink()` / `getAffiliateLink()` 在 7+ 组件重复实现（HomeClient、ToolCard、ToolSlugClient、ToolDetailClient、TopTools、scenes）
+- Prisma `AffiliateLink` 模型存在但未与前端打通
+- 实际配置联盟链接的工具仅 5 个（Rytr/VEED/Murf/Pictory/Grammarly）
+- 缺 `.env.example`，新成员无法知道有哪些 `AFFILIATE_` 变量
+- 赞助位系统四层架构完整，但缺统一 `SponsoredBadge` 组件
+
+**做什么**:
+1. 抽取 `lib/affiliate.ts` 作为联盟链接单一来源，消除 7+ 处重复
+2. 创建 `.env.example` 列出所有 `AFFILIATE_*` 变量
+3. 新建 `app/components/SponsoredBadge.tsx` 统一组件
+4. 补全高佣金工具联盟占位（Synthesia/Descript/Notion AI/QuillBot）
+
+**成功指标**: 联盟链接代码重复从 7 处降至 1 处，新工具接入联盟耗时从 30min 降至 5min
+
+---
+
+### 5.2 增长黑客体系化：A/B 测试统一 + 漏斗埋点补全
+
+**审计发现**:
+- A/B 测试三套并行实现：HomeClient（生效）、lib/ab-testing.ts（闲置）、ABTestProvider（死代码未挂载）
+- `ABTestProvider.tsx`、`ClarityScript.tsx`、`PlausibleScript.tsx` 三个组件未被引用
+- `lib/analytics.ts` 定义 9 种事件，但只有 `cta_click` 实际埋点
+- 漏斗 dashboard 查询 `prisma.interaction`，但无任何代码写入对应类型
+- Microsoft Clarity 已在 layout.tsx 集成（生效）
+
+**做什么**:
+1. 删除死代码：`ABTestProvider.tsx`、`ClarityScript.tsx`、`PlausibleScript.tsx`
+2. 补全核心漏斗事件埋点：search/filter/tool_click/compare/save/blog_read/affiliate_click
+3. 在 ToolCard、SearchBar、CompareClient、UserRating、博客详情页接入 `track()` 调用
+4. 漏斗 dashboard 接入真实 interaction 数据写入
+
+**成功指标**: 漏斗事件覆盖率从 11%（1/9）提升至 100%，漏斗 dashboard 有真实数据
+
+---
+
+### 5.3 SEO 内容矩阵：FAQ Schema + 对比页 SEO 补全
+
+**审计发现**:
+- 博客详情页有 Article + BreadcrumbList JSON-LD，但缺 FAQPage
+- `StructuredData.tsx` 组件封装了 4 类 schema 但未被任何页面引用（死代码）
+- 对比页缺 BreadcrumbList、FAQPage、canonical，datePublished 用 `new Date()` 不稳定
+- 工具详情页已有完整 SoftwareApplication + FAQPage + BreadcrumbList
+
+**做什么**:
+1. 博客详情页添加 FAQPage schema（基于文章关键词生成 Q&A）
+2. 对比页补全 BreadcrumbList + FAQPage + canonical URL
+3. 对比页 datePublished 改为构建时稳定值
+4. 清理 `StructuredData.tsx` 死代码或激活引用
+
+**成功指标**: 富文本搜索结果展示率提升 40%，对比页 SEO 评分达 100
+
+---
+
+### 5.4 社区与品牌：社交分享激活 + PH 发布素材
+
+**审计发现**:
+- `SocialShare.tsx` 组件存在但仅被未使用的 `BlogDetailV2.tsx` 引用
+- 博客详情页用原生 `navigator.share`，工具详情页/对比页/社区页无分享
+- `PRODUCT_HUNT_LAUNCH_KIT.md` 文案齐全，但视觉素材（240×240 thumbnail、gallery、视频）未制作
+- 社区功能完备（发帖/评论/删除/分类/排序/分页）
+
+**做什么**:
+1. 激活 `SocialShare` 组件：接入工具详情页、对比页、社区详情页
+2. 博客详情页统一改用 `SocialShare` 组件
+3. 创建 PH 发布素材清单页 `/dashboard/launch-kit`（聚合文案 + 素材状态）
+4. 社交分享按钮添加 `track('share')` 埋点
+
+**成功指标**: 社交分享按钮覆盖率从 0 页提升至 4 类核心页面，PH 发布素材就绪度达 100%
+
+---
+
 ## 📈 成功指标总览
 
 | 指标 | 当前 | Phase 1 | Phase 2 | Phase 3 | Phase 4 |

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { Tool } from '@/types';
 import { Plus, X, Star, ArrowRight, Check, Trophy } from 'lucide-react';
 import toolsData from '@/data/tools.json';
+import { track } from '@/lib/analytics';
 
 const tools = toolsData as Tool[];
 
@@ -122,6 +123,7 @@ export default function ComparePage() {
     } else {
       votes[key][toolId] = (votes[key][toolId] || 0) + 1;
       localStorage.setItem(userVoteKey, String(toolId));
+      track('compare', { tool_id: toolId, action: 'vote' });
     }
 
     saveVotes(votes);

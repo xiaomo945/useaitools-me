@@ -2,6 +2,7 @@
 
 import { Share2, MessageCircle, Link as LinkIcon, Check, Globe } from 'lucide-react';
 import { useState } from 'react';
+import { track } from '@/lib/analytics';
 
 interface SocialShareProps {
   title: string;
@@ -38,10 +39,15 @@ export default function SocialShare({ title, url, description, className = '' }:
     }
   ];
 
+  const handleShare = (platform: string) => {
+    track('share', { platform, title });
+  };
+
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
+      handleShare('copy');
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error('Failed to copy:', err);
@@ -50,7 +56,7 @@ export default function SocialShare({ title, url, description, className = '' }:
 
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      <span className="text-sm text-slate-600 dark:text-slate-400 mr-2">分享：</span>
+      <span className="text-sm text-slate-600 dark:text-slate-400 mr-2">Share:</span>
       {shareLinks.map((link) => {
         const Icon = link.icon;
         return (
@@ -59,7 +65,8 @@ export default function SocialShare({ title, url, description, className = '' }:
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`分享到 ${link.name}`}
+            aria-label={`Share to ${link.name}`}
+            onClick={() => handleShare(link.name.toLowerCase())}
             className={`w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 ${link.color}`}
           >
             <Icon className="w-4 h-4" />
@@ -68,7 +75,7 @@ export default function SocialShare({ title, url, description, className = '' }:
       })}
       <button
         onClick={copyToClipboard}
-        aria-label="复制链接"
+        aria-label="Copy link"
         className="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-400"
       >
         {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <LinkIcon className="w-4 h-4" />}

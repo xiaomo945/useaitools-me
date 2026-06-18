@@ -6,6 +6,7 @@ import { ArrowRight, Home, Copy, Check, ChevronDown } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import UserRating from '@/app/components/UserRating';
+import SocialShare from '@/app/components/SocialShare';
 
 type Example = {
   prompt: string;
@@ -63,20 +64,8 @@ type BlogPost = {
   images?: { url: string; alt: string }[];
 };
 
-const hasAffiliateLink = (tool: Tool): boolean => !!(tool.affiliate_link);
-
-const getAffiliateLinkWithUTM = (tool: Tool): string => {
-  if (!tool.affiliate_link) return tool.url;
-  try {
-    const url = new URL(tool.affiliate_link);
-    url.searchParams.set('utm_source', 'useaitools');
-    url.searchParams.set('utm_medium', 'referral');
-    url.searchParams.set('utm_campaign', 'staff_pick');
-    return url.toString();
-  } catch {
-    return tool.affiliate_link;
-  }
-};
+// Affiliate link helpers — unified in lib/affiliate.ts
+import { hasAffiliateLink, getAffiliateLink as getAffiliateLinkWithUTM } from '@/lib/affiliate';
 
 const ctaVariants = {
   A: 'Get Started for Free',
@@ -408,6 +397,15 @@ export default function ToolSlugClient({
 
         {/* Community Rating (User-submitted, localStorage-based) */}
         <UserRating toolId={tool.id} toolName={tool.name} />
+
+        {/* Social Share */}
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 mb-8">
+          <SocialShare
+            title={`${tool.name} – AI Tool Review & Guide`}
+            url={`https://useaitools.me/tool/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+            description={tool.description}
+          />
+        </div>
 
         {/* Use Cases */}
         {tool.use_cases && tool.use_cases.length > 0 && (

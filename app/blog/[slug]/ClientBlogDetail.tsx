@@ -5,6 +5,7 @@ import Link from 'next/link';
 import toolsData from '@/data/tools.json';
 import { Home, Share2, Copy, ChevronRight, List } from 'lucide-react';
 import Footer from '@/app/components/Footer';
+import { track } from '@/lib/analytics';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ReadingProgress from '@/app/components/ReadingProgress';
 
@@ -272,6 +273,9 @@ export default function ClientBlogDetail({
 
   // Read highlight query param and scroll to first match
   useEffect(() => {
+    // Track blog read event
+    track('blog_read', { slug, title: post.title });
+
     const params = new URLSearchParams(window.location.search);
     const term = params.get('highlight');
     if (term) {
@@ -283,7 +287,7 @@ export default function ClientBlogDetail({
         }
       }, 500);
     }
-  }, []);
+  }, [slug, post.title]);
 
   // Initialize code copy buttons
   useEffect(() => {
