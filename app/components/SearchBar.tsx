@@ -3,6 +3,7 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { t } from '@/app/i18n';
 
 interface SearchBarProps {
   search: string;
@@ -79,7 +80,7 @@ export default function SearchBar({
         <input
           ref={searchInputRef}
           type="text"
-          placeholder="Search AI tools..."
+          placeholder={t('search.placeholder')}
           value={search}
           onChange={(e) => {
             setSearch(e.target.value);
@@ -99,7 +100,7 @@ export default function SearchBar({
             }, 200);
           }}
           onKeyDown={handleSearchKeyDown}
-          aria-label="Search AI tools"
+          aria-label={t('search.ariaLabel')}
           autoComplete="off"
           autoCorrect="off"
           spellCheck="false"
@@ -120,7 +121,7 @@ export default function SearchBar({
                   ? 'bg-red-500 text-white animate-pulse'
                   : 'hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-500 dark:text-slate-400'
               }`}
-              aria-label={isListening ? 'Listening...' : 'Voice search'}
+              aria-label={isListening ? t('search.listening') : t('search.voiceSearch')}
             >
               <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
@@ -285,7 +286,7 @@ export default function SearchBar({
               {/* Popular Tools Section */}
               <div>
                 <div className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                  🔥 Popular Tools
+                  🔥 {t('search.popularTools')}
                 </div>
                 {popularTools.map((tool, i) => (
                   <button
@@ -321,7 +322,7 @@ export default function SearchBar({
               <div className="border-t border-slate-200 dark:border-gray-700">
                 <div className="flex items-center justify-between px-4 py-2">
                   <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                    Recent Searches
+                    {t('search.recentSearches')}
                   </span>
                   {recentSearches.length > 0 && (
                     <button

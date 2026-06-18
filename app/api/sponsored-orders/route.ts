@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/auth'
+import { checkRateLimit, getClientIp, isValidUrl, isValidLength } from '@/lib/rate-limit'
 
 // POST /api/sponsored-orders - 创建赞助订单
 export async function POST(request: Request) {
@@ -13,6 +14,16 @@ export async function POST(request: Request) {
       )
     }
 
+    // 速率限制：每 IP 每分钟 5 次
+    const ip = getClientIp(request)
+    const { allowed } = checkRateLimit(ip, { max: 5 })
+    if (!allowed) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      )
+    }
+
     const body = await request.json()
     const { packageId, title, description, targetUrl, imageUrl } = body
 
@@ -20,6 +31,34 @@ export async function POST(request: Request) {
     if (!packageId || !title || !targetUrl) {
       return NextResponse.json(
         { success: false, error: 'Missing required fields' },
+        { status: 400 }
+      )
+    }
+
+    // 字段长度校验
+    if (!isValidLength(title, 1, 100)) {
+      return NextResponse.json(
+        { success: false, error: 'Title must be 1-100 characters' },
+        { status: 400 }
+      )
+    }
+    if (description && !isValidLength(description, 0, 500)) {
+      return NextResponse.json(
+        { success: false, error: 'Description must be 0-500 characters' },
+        { status: 400 }
+      )
+    }
+
+    // URL 格式校验
+    if (!isValidUrl(targetUrl)) {
+      return NextResponse.json(
+        { success: false, error: 'Please provide a valid target URL (http or https)' },
+        { status: 400 }
+      )
+    }
+    if (imageUrl && !isValidUrl(imageUrl)) {
+      return NextResponse.json(
+        { success: false, error: 'Please provide a valid image URL' },
         { status: 400 }
       )
     }

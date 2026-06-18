@@ -58,6 +58,17 @@
     "save": "Enregistrer",
     "cancel": "Annuler",
     "submit": "Soumettre"
+  },
+  "search": {
+    "placeholder": "Rechercher des outils IA...",
+    "ariaLabel": "Rechercher des outils IA",
+    "recentSearches": "Recherches récentes",
+    "popularTools": "Outils populaires",
+    "clearSearch": "Effacer la recherche",
+    "voiceSearch": "Recherche vocale",
+    "listening": "Écoute...",
+    "noResults": "Aucun résultat trouvé",
+    "clearRecent": "Effacer"
   }
 }
 

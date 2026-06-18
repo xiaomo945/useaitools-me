@@ -1050,6 +1050,86 @@ export default function CommunityPage() {
 
 ---
 
+## 🛡️ Phase 6: 四方头脑风暴落地（性能/安全/测试/i18n）
+
+**目标**: 补全性能基础设施 + 消除安全缺口 + 建立测试体系 + 统一 i18n 架构
+**时间**: 1-2 周
+**方法论**: 从性能(07)、安全(08)、测试(14)、i18n(15) 四个维度审计现状，针对真实问题给出可执行方案
+
+### 6.1 性能优化：next/image 迁移 + 冗余字体清理 + 配置加固
+
+**审计发现**:
+- 31 处 `<img>` 标签散落在 tsx 中，应迁移至 `next/image`（影响 LCP）
+- `layout.tsx` 手动 preload Inter woff2 + preconnect Google Fonts，与 next/font 自动 self-host 重复
+- `next.config.ts` 未设置 `poweredByHeader: false` 和 `reactStrictMode: true`
+- `ToolCard.tsx` 独立文件未被引用（死代码）
+
+**做什么**:
+1. 将 ToolDetailClient.tsx 和博客详情页的 `<img>` 迁移至 `next/image`
+2. 删除 layout.tsx 中冗余的 Inter preload 和 Google Fonts preconnect
+3. next.config.ts 添加 `poweredByHeader: false`、`reactStrictMode: true`
+4. 删除死代码 `app/components/ToolCard.tsx`
+
+**成功指标**: LCP 降低 15-25%，死代码减少
+
+---
+
+### 6.2 安全加固：CSP 头 + API 输入验证补全 + Rate Limiting 扩展
+
+**审计发现**:
+- 未配置 Content-Security-Policy 头（XSS 防御缺口）
+- `submit-tool` API 无 URL 格式校验、无字段长度限制、无鉴权
+- `sponsored-orders` API 的 targetUrl 无格式校验、title/description 无长度限制
+- 仅 contact 端点有 rate limiting，其余 POST 端点全部缺失
+- 外部链接 `rel="noopener noreferrer"` 全部合规（无需改动）
+
+**做什么**:
+1. next.config.ts 添加 Content-Security-Policy 头
+2. 补全 submit-tool 和 sponsored-orders 的输入验证
+3. 抽取通用 rate limiting 工具函数，应用到 subscribe/submit-tool/sponsored-orders
+4. 关闭 `poweredByHeader` 减少框架暴露
+
+**成功指标**: CSP 评分达 A，API 输入验证覆盖率 100%，POST 端点限流覆盖率 100%
+
+---
+
+### 6.3 测试体系：Vitest 搭建 + 核心纯函数单测
+
+**审计发现**:
+- 项目零测试基础设施（无 vitest/jest/playwright 依赖，无 test 脚本）
+- `lib/` 下 4 个高可测纯函数文件：affiliate.ts、fuzzySearch.ts、seo.ts、subcategory-mapping.ts
+- `.trae/rules/14-testing.md` 已规划 Vitest + RTL + Playwright，但未落地
+
+**做什么**:
+1. 安装 vitest + @testing-library/react，添加 test 脚本
+2. 为 lib/affiliate.ts 写单测（resolveAffiliateLink、hasAffiliateLink、getDynamicCTA）
+3. 为 lib/fuzzySearch.ts 写单测（levenshteinDistance、fuzzyMatchScore、highlightSearchTerm）
+4. 为 lib/subcategory-mapping.ts 写单测（matchSubcategory、getSubcategories）
+5. 添加 vitest.config.ts 配置
+
+**成功指标**: 核心纯函数测试覆盖率 100%，CI 可运行 `npm test`
+
+---
+
+### 6.4 i18n 深化：翻译方案统一 + 核心组件接入
+
+**审计发现**:
+- 7 语言 common.json 已建，但 i18n.config.ts 只加载 en/zh（其余 5 种运行时不生效）
+- 存在两套翻译方案混用：自定义 useTranslations（Header/Footer）vs next-intl（SponsoredBadge）
+- ToolCard、SearchBar、BlogListClient 等核心组件硬编码英文
+- 工具名/分类名无翻译键，category 页用硬编码英文对象
+- common.json 中已定义的 categories.* 翻译键无页面消费
+
+**做什么**:
+1. 统一为 next-intl 方案，i18n.config.ts 加载全部 7 语言
+2. SearchBar 接入 i18n（placeholder、aria-label）
+3. 分类页 app/category/[slug]/ 接入 categories.* 翻译键
+4. ToolCard CTA 文案接入 i18n（getDynamicCTA 返回翻译键而非硬编码）
+
+**成功指标**: i18n 运行时支持 7 语言，核心组件 i18n 覆盖率提升至 60%+
+
+---
+
 ## 📈 成功指标总览
 
 | 指标 | 当前 | Phase 1 | Phase 2 | Phase 3 | Phase 4 |

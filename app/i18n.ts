@@ -1,10 +1,23 @@
 import en from '@/locales/en/common.json';
 import zh from '@/locales/zh/common.json';
+import ja from '@/locales/ja/common.json';
+import ko from '@/locales/ko/common.json';
+import es from '@/locales/es/common.json';
+import fr from '@/locales/fr/common.json';
+import de from '@/locales/de/common.json';
 
-export type Locale = 'en' | 'zh';
+export type Locale = 'en' | 'zh' | 'ja' | 'ko' | 'es' | 'fr' | 'de';
 
 type TranslationValue = string | { [key: string]: TranslationValue };
-const translations: Record<Locale, Record<string, TranslationValue>> = { en, zh };
+const translations: Record<Locale, Record<string, TranslationValue>> = {
+  en,
+  zh,
+  ja,
+  ko,
+  es,
+  fr,
+  de,
+};
 
 const DEFAULT_LOCALE: Locale = 'en';
 
@@ -18,6 +31,11 @@ export function getLocale(): Locale {
   // Check browser language
   const browserLang = navigator.language.toLowerCase();
   if (browserLang.startsWith('zh')) return 'zh';
+  if (browserLang.startsWith('ja')) return 'ja';
+  if (browserLang.startsWith('ko')) return 'ko';
+  if (browserLang.startsWith('es')) return 'es';
+  if (browserLang.startsWith('fr')) return 'fr';
+  if (browserLang.startsWith('de')) return 'de';
 
   return DEFAULT_LOCALE;
 }

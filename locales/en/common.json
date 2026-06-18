@@ -58,6 +58,17 @@
     "save": "Save",
     "cancel": "Cancel",
     "submit": "Submit"
+  },
+  "search": {
+    "placeholder": "Search AI tools...",
+    "ariaLabel": "Search AI tools",
+    "recentSearches": "Recent Searches",
+    "popularTools": "Popular Tools",
+    "clearSearch": "Clear search",
+    "voiceSearch": "Voice search",
+    "listening": "Listening...",
+    "noResults": "No results found",
+    "clearRecent": "Clear"
   }
 }
 

@@ -29,11 +29,35 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()',
   },
+  {
+    // Content Security Policy — XSS 防御核心
+    // 允许 self、内联脚本/样式（Next.js 需要）、unsafe-eval（开发模式）、Google Fonts、分析服务
+    key: 'Content-Security-Policy',
+    value: [
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://plausible.io https://www.clarity.ms",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' data: https://fonts.gstatic.com",
+      "img-src 'self' data: blob: https: http:",
+      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://plausible.io https://www.clarity.ms https://vitals.vercel-insights.com",
+      "media-src 'self' https:",
+      "frame-src 'self' https://www.youtube.com https://player.vimeo.com",
+      "object-src 'none'",
+      "base-uri 'self'",
+      "form-action 'self'",
+    ].join('; '),
+  },
 ];
 
 const nextConfig: NextConfig = {
   trailingSlash: false,
   skipTrailingSlashRedirect: true,
+
+  // Security: 关闭 X-Powered-By 头，减少框架暴露
+  poweredByHeader: false,
+
+  // Quality: 开启 React 严格模式，及早发现潜在问题
+  reactStrictMode: true,
 
   // Performance: Image optimization
   images: {

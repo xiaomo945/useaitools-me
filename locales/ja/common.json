@@ -58,6 +58,17 @@
     "save": "保存",
     "cancel": "キャンセル",
     "submit": "送信"
+  },
+  "search": {
+    "placeholder": "AIツールを検索...",
+    "ariaLabel": "AIツールを検索",
+    "recentSearches": "最近の検索",
+    "popularTools": "人気ツール",
+    "clearSearch": "検索をクリア",
+    "voiceSearch": "音声検索",
+    "listening": "聞いています...",
+    "noResults": "結果が見つかりません",
+    "clearRecent": "クリア"
   }
 }
 

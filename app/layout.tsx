@@ -104,8 +104,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${playfairDisplay.variable} h-full antialiased`}
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* next/font 已自动 self-host 并 preload 字体，无需手动 preconnect Google Fonts */}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="preconnect" href="https://images.pexels.com" />
@@ -113,8 +112,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://cdn.ampproject.org" />
-        {/* Preload critical fonts */}
-        <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         {/* Prerender for high-traffic pages */}
         <link rel="prerender" href="/tools/1" />
         <link rel="prerender" href="/search" />

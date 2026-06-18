@@ -58,6 +58,17 @@
     "save": "保存",
     "cancel": "取消",
     "submit": "提交"
+  },
+  "search": {
+    "placeholder": "搜索 AI 工具...",
+    "ariaLabel": "搜索 AI 工具",
+    "recentSearches": "最近搜索",
+    "popularTools": "热门工具",
+    "clearSearch": "清除搜索",
+    "voiceSearch": "语音搜索",
+    "listening": "正在聆听...",
+    "noResults": "未找到结果",
+    "clearRecent": "清除"
   }
 }
 

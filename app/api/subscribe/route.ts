@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { sendEmail, renderWelcomeEmail } from '@/lib/email';
+import { checkRateLimit } from '@/lib/rate-limit';
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -13,6 +14,16 @@ function getClientIp(request: NextRequest): string | null {
 
 export async function POST(request: NextRequest) {
   try {
+    // 速率限制：每 IP 每分钟 5 次
+    const ip = getClientIp(request) || 'unknown';
+    const { allowed } = checkRateLimit(ip, { max: 5 });
+    if (!allowed) {
+      return NextResponse.json(
+        { success: false, message: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      );
+    }
+
     const body = await request.json().catch(() => ({}));
     const email = (body.email as string)?.trim().toLowerCase();
     const name = (body.name as string)?.trim() || null;
@@ -28,6 +39,14 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { success: false, message: 'Please provide a valid email address.' },
+        { status: 400 }
+      );
+    }
+
+    // name 字段长度限制
+    if (name && name.length > 100) {
+      return NextResponse.json(
+        { success: false, message: 'Name is too long.' },
         { status: 400 }
       );
     }

@@ -58,6 +58,17 @@
     "save": "Speichern",
     "cancel": "Abbrechen",
     "submit": "Absenden"
+  },
+  "search": {
+    "placeholder": "KI-Tools suchen...",
+    "ariaLabel": "KI-Tools suchen",
+    "recentSearches": "Letzte Suchen",
+    "popularTools": "Beliebte Tools",
+    "clearSearch": "Suche löschen",
+    "voiceSearch": "Sprachsuche",
+    "listening": "Zuhören...",
+    "noResults": "Keine Ergebnisse gefunden",
+    "clearRecent": "Löschen"
   }
 }
 
