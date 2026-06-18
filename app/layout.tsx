@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, JetBrains_Mono } from "next/font/google";
 import { Suspense } from "react";
 import Script from "next/script";
 import { Analytics } from '@vercel/analytics/next';
@@ -21,18 +21,6 @@ import AuthProvider from "./components/AuthProvider";
 import WebVitals from "./components/WebVitals";
 import ServiceWorkerRegistration from "./components/ServiceWorkerRegistration";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -44,6 +32,13 @@ const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
   subsets: ["latin"],
   weight: ["700", "900"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
   display: "swap",
 });
 
@@ -101,7 +96,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${playfairDisplay.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfairDisplay.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <head>
         {/* next/font 已自动 self-host 并 preload 字体，无需手动 preconnect Google Fonts */}
@@ -185,7 +180,9 @@ export default function RootLayout({
           </Suspense>
           <ErrorBoundary>
             <AuthProvider>
-              <PageTransition>{children}</PageTransition>
+              <main id="main-content">
+                <PageTransition>{children}</PageTransition>
+              </main>
             </AuthProvider>
           </ErrorBoundary>
           <div aria-live="polite" aria-atomic="true" className="sr-only" />

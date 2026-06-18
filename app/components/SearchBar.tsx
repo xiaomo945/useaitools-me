@@ -357,6 +357,7 @@ export default function SearchBar({
                           e.stopPropagation();
                           removeRecentSearch(term);
                         }}
+                        aria-label={`Remove ${term} from recent searches`}
                         className="p-1 rounded-full hover:bg-slate-200 dark:hover:bg-gray-700 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 opacity-0 group-hover:opacity-100 transition-all"
                       >
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

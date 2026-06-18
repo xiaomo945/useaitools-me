@@ -219,7 +219,7 @@ export default function ToolSlugClient({
         />
 
         {/* Tool Header */}
-        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl shadow-xl overflow-hidden mb-8 relative">
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl shadow-xl overflow-hidden mb-8 relative">
           {hasAffiliate && (
             <div className="absolute top-3 right-3 z-10">
               <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25 animate-pulse-glow">
@@ -323,7 +323,7 @@ export default function ToolSlugClient({
 
         {/* Editor's Verdict Rating Card */}
         {tool.rating && tool.rating_breakdown && (
-          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 border border-emerald-200 dark:border-emerald-800 rounded-3xl p-6 sm:p-8 mb-8">
+          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 border border-emerald-200 dark:border-emerald-800 rounded-2xl p-6 sm:p-8 mb-8">
             <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
               <span>⭐</span> Editor's Verdict
             </h2>
@@ -409,7 +409,7 @@ export default function ToolSlugClient({
 
         {/* Use Cases */}
         {tool.use_cases && tool.use_cases.length > 0 && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">🎯 Real-World Use Cases</h2>
             <div className="space-y-6">
               {tool.use_cases.map((useCase, index) => (
@@ -431,7 +431,7 @@ export default function ToolSlugClient({
 
         {/* Pros & Cons */}
         {tool.pros_cons && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">⚖️ Honest Review</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
@@ -469,7 +469,7 @@ export default function ToolSlugClient({
         )}
 
         {/* Features */}
-        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Features</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {features.map((feature, index) => (
@@ -490,7 +490,7 @@ export default function ToolSlugClient({
 
         {/* Examples */}
         {tool.examples && tool.examples.length > 0 && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">🎨 Examples & Prompts</h2>
             <div className="space-y-6">
               {tool.examples.map((example, index) => (
@@ -553,7 +553,7 @@ export default function ToolSlugClient({
 
         {/* Alternatives */}
         {relatedTools.length > 0 && (
-          <div className="bg-gradient-to-br from-slate-50 to-emerald-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-gradient-to-br from-slate-50 to-emerald-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/25">
                 <span className="text-white text-lg">✨</span>
@@ -628,7 +628,7 @@ export default function ToolSlugClient({
 
         {/* Related Articles */}
         {relatedArticles.length > 0 && (
-          <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-900/10 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
                 <span className="text-white text-lg">📚</span>

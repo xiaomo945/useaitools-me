@@ -106,7 +106,7 @@ export default function SubmitClient() {
 
   if (submitted) {
     return (
-      <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 shadow-lg text-center">
+      <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 shadow-lg text-center">
         <div className="text-5xl mb-4">🎉</div>
         <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
           Thanks for your submission!
@@ -163,7 +163,7 @@ export default function SubmitClient() {
   }
 
   return (
-    <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 shadow-lg">
+    <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 shadow-lg">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label htmlFor="name" className="block text-sm font-semibold text-gray-900 dark:text-white mb-2">

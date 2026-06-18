@@ -570,6 +570,7 @@ export default function ComparePage() {
                   placeholder="Search tools by name, description, or use case..."
                   value={pickerSearch}
                   onChange={e => setPickerSearch(e.target.value)}
+                  aria-label="Search tools to compare"
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-gray-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
                   autoFocus
                 />

@@ -93,7 +93,7 @@ export async function PUT(
   try {
     const session = await auth();
 
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -116,7 +116,7 @@ export async function PUT(
       );
     }
 
-    if (existing.userId !== (session as any).user.id) {
+    if (existing.userId !== session?.user?.id) {
       return NextResponse.json(
         { error: '无权修改此讨论' },
         { status: 403 }
@@ -150,7 +150,7 @@ export async function DELETE(
   try {
     const session = await auth();
 
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -171,7 +171,7 @@ export async function DELETE(
       );
     }
 
-    if (existing.userId !== (session as any).user.id) {
+    if (existing.userId !== session?.user?.id) {
       return NextResponse.json(
         { error: '无权删除此讨论' },
         { status: 403 }

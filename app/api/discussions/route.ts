@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
   try {
     const session = await auth();
 
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -136,7 +136,7 @@ export async function POST(request: NextRequest) {
         content: content.trim(),
         category: category || 'general',
         toolId: toolId || null,
-        userId: (session as any).user.id,
+        userId: session?.user?.id,
       },
       include: {
         user: {

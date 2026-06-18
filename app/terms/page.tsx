@@ -12,7 +12,7 @@ export default function TermsPage() {
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Terms of Service', href: '/terms', current: true }]} />
-        <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>Terms of Service</h1>
+        <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-2 font-serif">Terms of Service</h1>
         <p className="text-sm text-slate-500 dark:text-slate-400 mb-10">Last updated: June 2, 2026</p>
         <div className="prose prose-slate dark:prose-invert max-w-none space-y-8">
           <section>

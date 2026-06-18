@@ -9,6 +9,7 @@ import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ToolVerdict from '@/app/components/ToolVerdict';
 import RelatedTools from '@/app/components/RelatedTools';
 import toolsData from '@/data/tools.json';
+import { track, trackCtaClick } from '@/lib/analytics';
 
 // Save tool to browsing history
 const saveToHistory = (toolId: number) => {
@@ -473,7 +474,7 @@ const ScreenshotGallery = ({ tool, colors }: { tool: Tool; colors: ReturnType<ty
   
   return (
     <>
-      <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+      <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
         <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">📸 Screenshots & Demos</h2>
         
         {/* Main Image */}
@@ -632,6 +633,7 @@ export default function ToolDetailClient({ tool, relatedTools, relatedArticles =
   
   useEffect(() => {
     saveToHistory(tool.id);
+    track('tool_detail_view', { tool_id: tool.id, tool_name: tool.name });
     
     const compute = () => {
       try {
@@ -743,7 +745,7 @@ const [hasReferrer] = useState(() => {
         />
 
         {/* Tool Header */}
-        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl shadow-xl overflow-hidden mb-8 relative">
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl shadow-xl overflow-hidden mb-8 relative">
           {/* Staff Pick Badge for affiliate tools */}
           {hasAffiliate && (
             <div className="absolute top-3 right-3 z-10">
@@ -819,6 +821,7 @@ const [hasReferrer] = useState(() => {
               <a
                 href={ctaUrl}
                 target="_blank" rel="noopener noreferrer"
+                onClick={() => trackCtaClick(tool.name, ctaText, 'detail_page', hasAffiliate)}
                 className={`inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 font-semibold rounded-xl transition-all duration-300 ${
                   hasAffiliate
                     ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25 hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl hover:shadow-emerald-500/30'
@@ -962,7 +965,7 @@ const [hasReferrer] = useState(() => {
             <>
         {/* Use Cases Section */}
         {tool.use_cases && tool.use_cases.length > 0 && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">🎯 Real-World Use Cases</h2>
             <div className="space-y-6">
               {tool.use_cases.map((useCase, index) => (
@@ -984,7 +987,7 @@ const [hasReferrer] = useState(() => {
 
         {/* Pros & Cons Section */}
         {tool.pros_cons && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">⚖️ Honest Review</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Pros */}
@@ -1025,7 +1028,7 @@ const [hasReferrer] = useState(() => {
 
         {/* User Reviews Section */}
         {toolReviews[tool.id] && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">💬 What Users Are Saying</h2>
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Real feedback from Reddit, Trustpilot, and verified users</p>
             <div className="space-y-5">
@@ -1049,7 +1052,7 @@ const [hasReferrer] = useState(() => {
 
         {/* FAQ Section */}
         {processedFAQs && processedFAQs.length > 0 && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">❓ Frequently Asked Questions</h2>
             <div className="space-y-3">
               {processedFAQs.map((faq, index) => (
@@ -1095,7 +1098,7 @@ const [hasReferrer] = useState(() => {
         )}
 
         {/* Features Section */}
-        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Features</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {features.map((feature, index) => (
@@ -1116,7 +1119,7 @@ const [hasReferrer] = useState(() => {
 
         {/* Examples Section */}
         {tool.examples && tool.examples.length > 0 && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">🎨 Examples & Prompts</h2>
             <div className="space-y-6">
               {tool.examples.map((example, index) => (
@@ -1195,7 +1198,7 @@ const [hasReferrer] = useState(() => {
 
         {/* People Also Viewed */}
         {peopleAlsoViewed.length > 0 && (
-          <div className="bg-gradient-to-br from-sky-50/50 to-cyan-50/30 dark:from-gray-900 dark:to-sky-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-gradient-to-br from-sky-50/50 to-cyan-50/30 dark:from-gray-900 dark:to-sky-900/10 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-sky-500/25">
                 <span className="text-white text-lg">👀</span>
@@ -1235,7 +1238,7 @@ const [hasReferrer] = useState(() => {
         )}
 
         {bestAlternatives.length > 0 && (
-          <div className="bg-gradient-to-br from-amber-50/50 to-orange-50/30 dark:from-gray-900 dark:to-amber-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-gradient-to-br from-amber-50/50 to-orange-50/30 dark:from-gray-900 dark:to-amber-900/10 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-lg shadow-amber-500/25">
                 <span className="text-white text-lg">🔄</span>
@@ -1293,7 +1296,7 @@ const [hasReferrer] = useState(() => {
           
           if (complementTools.length === 0) return null;
           return (
-            <div className="bg-gradient-to-br from-amber-50/60 to-orange-50/40 dark:from-amber-950/20 dark:via-gray-900 dark:to-orange-950/20 border border-amber-200/60 dark:border-amber-800/30 rounded-3xl p-6 sm:p-8 mb-8">
+            <div className="bg-gradient-to-br from-amber-50/60 to-orange-50/40 dark:from-amber-950/20 dark:via-gray-900 dark:to-orange-950/20 border border-amber-200/60 dark:border-amber-800/30 rounded-2xl p-6 sm:p-8 mb-8">
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-lg shadow-amber-500/25">
                   <span className="text-white text-lg">🔄</span>
@@ -1339,7 +1342,7 @@ const [hasReferrer] = useState(() => {
 
         {/* Similar Tools Section - Enhanced with Smart Recommendations */}
         {relatedTools.length > 0 && (
-          <div className="bg-gradient-to-br from-slate-50 to-emerald-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-gradient-to-br from-slate-50 to-emerald-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/25">
                 <span className="text-white text-lg">✨</span>
@@ -1368,7 +1371,7 @@ const [hasReferrer] = useState(() => {
 
         {/* Related Articles */}
         {relatedArticles.length > 0 && (
-          <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 mb-8">
+          <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-900/10 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
                 <span className="text-white text-lg">📚</span>

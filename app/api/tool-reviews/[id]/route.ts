@@ -102,7 +102,7 @@ export async function PUT(
   try {
     const session = await auth();
 
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -110,7 +110,7 @@ export async function PUT(
     }
 
     const user = await prisma.user.findUnique({
-      where: { id: (session as any).user.id },
+      where: { id: session?.user?.id },
     });
 
     if (user?.role !== 'admin') {
@@ -183,7 +183,7 @@ export async function DELETE(
   try {
     const session = await auth();
 
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -191,7 +191,7 @@ export async function DELETE(
     }
 
     const user = await prisma.user.findUnique({
-      where: { id: (session as any).user.id },
+      where: { id: session?.user?.id },
     });
 
     if (user?.role !== 'admin') {

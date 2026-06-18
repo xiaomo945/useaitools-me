@@ -49,7 +49,7 @@ export default function MobilePage() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 mb-6">
             <span className="animate-pulse">📱</span> Coming Soon
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white mb-4 font-serif">
             Use AI Tools
           </h1>
           <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-4">
@@ -89,7 +89,7 @@ export default function MobilePage() {
 
         {/* Features */}
         <section className="py-12">
-          <h2 className="text-3xl font-bold text-center mb-10 text-slate-900 dark:text-white" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-3xl font-bold text-center mb-10 text-slate-900 dark:text-white font-serif">
             What&apos;s Coming
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -110,7 +110,7 @@ export default function MobilePage() {
 
         {/* Bottom CTA */}
         <section className="py-16 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-4 font-serif">
             Want Early Access?
           </h2>
           <p className="text-slate-600 dark:text-gray-300 mb-8 max-w-lg mx-auto">

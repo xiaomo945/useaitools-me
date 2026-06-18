@@ -206,6 +206,7 @@ export default function AISearchRecommend() {
             {/* Close Button */}
             <button
               onClick={() => { setIsOpen(false); setQuery(''); setResults([]); }}
+              aria-label="Close AI recommender"
               className="absolute top-4 right-4 p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-gray-800 transition-colors"
             >
               <X className="w-5 h-5 text-slate-500" />
@@ -229,6 +230,7 @@ export default function AISearchRecommend() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={handleKeyDown}
+                aria-label="Describe the tool you need"
                 placeholder="e.g., I need a writing tool under $20/month that supports Chinese"
                 className="w-full px-4 py-3 bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
               />

@@ -76,7 +76,7 @@ export default function RecommendationsPage() {
         href={`/tools/${tool.id}`}
         className="group flex items-center gap-4 p-4 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl hover:border-emerald-300 dark:hover:border-emerald-700 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300"
       >
-        <div className={`w-12 h-12 rounded-xl ${colors.bg}/10 flex items-center justify-center text-xl font-bold ${colors.text}`} style={{ fontFamily: 'Playfair Display, serif' }}>
+        <div className={`w-12 h-12 rounded-xl ${colors.bg}/10 flex items-center justify-center text-xl font-bold ${colors.text} font-serif`}>
           {tool.name.charAt(0)}
         </div>
         <div className="flex-1 min-w-0">

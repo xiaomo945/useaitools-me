@@ -10,6 +10,7 @@ import CategoryStats from '@/app/components/CategoryStats';
 import GoldPicks from '@/app/components/GoldPicks';
 import TopTools from '@/app/components/TopTools';
 import type { Tool } from '@/types';
+import { getAffiliateLink, hasAffiliateLink } from '@/lib/affiliate';
 
 const tools = toolsData as Tool[];
 type Category = Tool['category'];
@@ -40,44 +41,6 @@ const colorMap: Record<Category, { bg: string; bgDark: string; text: string; tex
   Audio:      { bg: 'bg-pink-500',   bgDark: 'bg-pink-500/20',   text: 'text-pink-300',   textLight: 'text-pink-600',   border: 'border-pink-300',   ring: 'hover:shadow-pink-500/20' },
   Video:      { bg: 'bg-indigo-500', bgDark: 'bg-indigo-500/20', text: 'text-indigo-300', textLight: 'text-indigo-600', border: 'border-indigo-300', ring: 'hover:shadow-indigo-500/20' }
 };
-
-// Helper function to check if a tool has affiliate link (environment variable or JSON field)
-function hasAffiliateLink(tool: Tool): boolean {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name.includes('Rytr')) {
-    shortEnvVarName = 'AFFILIATE_RYTR';
-  } else if (tool.name.includes('VEED')) {
-    shortEnvVarName = 'AFFILIATE_VEED';
-  } else if (tool.name.includes('Murf')) {
-    shortEnvVarName = 'AFFILIATE_MURF';
-  } else if (tool.name.includes('Pictory')) {
-    shortEnvVarName = 'AFFILIATE_PICTORY';
-  } else if (tool.name.includes('Grammarly')) {
-    shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  }
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return !!(envLink || tool.affiliate_link);
-}
-
-// Helper function to get affiliate link from environment variable or fallback to JSON
-function getAffiliateLink(tool: Tool): string {
-  const envVarName = `AFFILIATE_${tool.name.toUpperCase().replace(/\s+/g, '_')}`;
-  let shortEnvVarName = '';
-  if (tool.name.includes('Rytr')) {
-    shortEnvVarName = 'AFFILIATE_RYTR';
-  } else if (tool.name.includes('VEED')) {
-    shortEnvVarName = 'AFFILIATE_VEED';
-  } else if (tool.name.includes('Murf')) {
-    shortEnvVarName = 'AFFILIATE_MURF';
-  } else if (tool.name.includes('Pictory')) {
-    shortEnvVarName = 'AFFILIATE_PICTORY';
-  } else if (tool.name.includes('Grammarly')) {
-    shortEnvVarName = 'AFFILIATE_GRAMMARLY';
-  }
-  const envLink = (shortEnvVarName && process.env[shortEnvVarName]) || process.env[envVarName];
-  return envLink || tool.affiliate_link;
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -239,7 +202,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                       href="/writer"
                       className="flex-shrink-0 inline-flex items-center justify-center gap-2 px-8 py-4 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-300 font-semibold rounded-xl hover:bg-emerald-100/50 dark:hover:bg-emerald-500/10 transition-all duration-300"
                     >
-                      Learn More
+                      Explore Tools
                       <ArrowRight className="w-5 h-5" />
                     </Link>
                   </div>

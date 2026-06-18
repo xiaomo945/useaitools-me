@@ -133,6 +133,7 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value)}
+              aria-label="Sort tools"
               className="text-xs px-3 py-1.5 rounded-lg border border-slate-200 dark:border-gray-700 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
             >
               {SORT_OPTIONS.map(opt => (

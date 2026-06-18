@@ -119,10 +119,11 @@ export default function NewDiscussionClient() {
         <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 sm:p-8 space-y-6">
           {/* Title */}
           <div>
-            <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+            <label htmlFor="discussion-title" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
               Title *
             </label>
             <input
+              id="discussion-title"
               type="text"
               value={formData.title}
               onChange={(e) => setFormData({ ...formData, title: e.target.value })}
@@ -134,10 +135,11 @@ export default function NewDiscussionClient() {
 
           {/* Category */}
           <div>
-            <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+            <label htmlFor="discussion-category" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
               Category
             </label>
             <select
+              id="discussion-category"
               value={formData.category}
               onChange={(e) => setFormData({ ...formData, category: e.target.value })}
               className="w-full px-4 py-3 bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-900 dark:text-white"
@@ -151,10 +153,11 @@ export default function NewDiscussionClient() {
 
           {/* Related Tool (Optional) */}
           <div>
-            <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+            <label htmlFor="discussion-related-tool" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
               Related Tool (Optional)
             </label>
             <select
+              id="discussion-related-tool"
               value={formData.toolId}
               onChange={(e) => setFormData({ ...formData, toolId: e.target.value })}
               className="w-full px-4 py-3 bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-900 dark:text-white"
@@ -170,10 +173,11 @@ export default function NewDiscussionClient() {
 
           {/* Content */}
           <div>
-            <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+            <label htmlFor="discussion-content" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
               Content *
             </label>
             <textarea
+              id="discussion-content"
               value={formData.content}
               onChange={(e) => setFormData({ ...formData, content: e.target.value })}
               className="w-full px-4 py-3 bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 text-slate-900 dark:text-white resize-none"

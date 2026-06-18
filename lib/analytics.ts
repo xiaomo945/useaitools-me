@@ -17,7 +17,7 @@ export type TrackEvent =
   | 'compare'
   | 'save'
   | 'blog_read'
-  | 'cta_click'
+  | 'tool_detail_view'
   | 'ab_variant_view'
   | 'gold_picks_click'
   | 'share';
@@ -59,10 +59,10 @@ export function track(event: TrackEvent, props?: TrackOptions): void {
 }
 
 /**
- * 追踪 CTA 按钮点击
+ * 追踪 CTA 按钮点击（规范事件名：tool_click）
  */
 export function trackCtaClick(toolName: string, ctaText: string, position: string, isAffiliate: boolean): void {
-  track('cta_click', {
+  track('tool_click', {
     tool_name: toolName,
     cta_text: ctaText,
     position,

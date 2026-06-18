@@ -106,7 +106,7 @@ export default function WriterPage() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 mb-6">
                 <span className="animate-pulse">🚀</span> Coming Soon
               </div>
-              <h1 className="text-4xl sm:text-5xl font-extrabold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 font-serif">
                 Meet Use AI Writer
               </h1>
               <p className="text-lg sm:text-xl text-gray-400 mb-8 leading-relaxed">
@@ -128,7 +128,7 @@ export default function WriterPage() {
 
         {/* Features */}
         <section className="py-12">
-          <h2 className="text-3xl font-bold text-center mb-10" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-3xl font-bold text-center mb-10 font-serif">
             Why Choose Use AI Writer?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -149,7 +149,7 @@ export default function WriterPage() {
 
         {/* Comparison Table */}
         <section className="py-16">
-          <h2 className="text-3xl font-bold text-center mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-3xl font-bold text-center mb-4 font-serif">
             The Numbers Speak for Themselves
           </h2>
           <p className="text-gray-400 text-center mb-10 max-w-lg mx-auto">
@@ -221,7 +221,7 @@ export default function WriterPage() {
 
         {/* Bottom CTA */}
         <section className="py-16 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 font-serif">
             Ready to Write Smarter?
           </h2>
           <p className="text-gray-400 mb-8 max-w-lg mx-auto">

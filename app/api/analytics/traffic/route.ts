@@ -9,7 +9,7 @@ export async function GET() {
     startDate.setDate(startDate.getDate() - 30);
 
     // Fetch interactions grouped by date
-    const interactions = await prisma.interaction.findMany({
+    const interactions = await prisma.userInteraction.findMany({
       where: {
         createdAt: {
           gte: startDate,
@@ -32,7 +32,7 @@ export async function GET() {
       const dateStr = i.createdAt.toISOString().split('T')[0];
       if (dataByDate[dateStr]) {
         dataByDate[dateStr].visits.add(i.sessionId);
-        if (i.type === 'page_view') {
+        if (i.actionType === 'page_view') {
           dataByDate[dateStr].pageViews++;
         }
       }

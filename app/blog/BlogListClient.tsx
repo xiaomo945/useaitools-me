@@ -4,6 +4,7 @@ import { useMemo, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ArrowRight, Calendar, Tag, Rss, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
+import { formatDate } from '@/lib/format';
 
 interface BlogListPost {
   id: string;
@@ -40,14 +41,6 @@ function getCategoryColor(slug: string) {
     border: 'border-slate-200 dark:border-slate-800',
     glow: 'shadow-slate-500/20',
   };
-}
-
-function formatDate(dateString: string): string {
-  return new Date(dateString).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  });
 }
 
 function Pagination({

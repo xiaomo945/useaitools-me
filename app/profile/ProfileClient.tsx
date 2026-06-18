@@ -6,6 +6,7 @@ import { useSession } from 'next-auth/react';
 import { User, Award, Star, Bookmark, MessageSquare, Calendar, LogIn, TrendingUp } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import { formatDate } from '@/lib/format';
 
 interface UserStats {
   totalReviews: number;
@@ -94,14 +95,6 @@ export default function ProfileClient() {
       default:
         return { bg: 'bg-slate-500', text: 'text-slate-600' };
     }
-  };
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric'
-    });
   };
 
   const getActivityIcon = (type: string) => {

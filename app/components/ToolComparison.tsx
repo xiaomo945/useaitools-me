@@ -334,7 +334,7 @@ export default function ToolComparison({ tool1, tool2 }: ToolComparisonProps) {
         </div>
 
         {/* Recommendation Section */}
-        <div className="mt-12 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 border border-emerald-200/60 dark:border-emerald-800/40 rounded-3xl p-8 text-center">
+        <div className="mt-12 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 border border-emerald-200/60 dark:border-emerald-800/40 rounded-2xl p-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-4">
             Which One Should You Choose?
           </h2>

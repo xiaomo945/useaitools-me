@@ -171,10 +171,11 @@ export default function UserToolList({ savedTools }: UserToolListProps) {
             </h3>
             
             <div className="mb-4">
-              <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
+              <label htmlFor="list-name" className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2">
                 List Name
               </label>
               <input
+                id="list-name"
                 type="text"
                 value={newListName}
                 onChange={(e) => setNewListName(e.target.value)}

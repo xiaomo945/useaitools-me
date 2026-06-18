@@ -55,7 +55,7 @@ function ToastContainer() {
   const { toasts, removeToast } = useToast();
 
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-[9999] flex flex-col gap-2 sm:bottom-8 sm:left-auto sm:right-6 sm:translate-x-0">
+    <div aria-live="polite" aria-atomic="false" className="fixed bottom-4 left-1/2 -translate-x-1/2 z-[9999] flex flex-col gap-2 sm:bottom-8 sm:left-auto sm:right-6 sm:translate-x-0">
       {toasts.map(toast => (
         <ToastItem key={toast.id} toast={toast} onRemove={() => removeToast(toast.id)} />
       ))}
@@ -104,6 +104,7 @@ function ToastItem({ toast, onRemove }: { toast: Toast; onRemove: () => void }) 
       <span className="text-sm font-medium flex-1">{message}</span>
       <button
         onClick={onRemove}
+        aria-label="Close notification"
         className="p-1 rounded-full hover:bg-white/20 transition-colors"
       >
         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

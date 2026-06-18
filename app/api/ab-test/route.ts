@@ -14,9 +14,9 @@ export async function POST(request: Request) {
     }
 
     // Record the experiment interaction
-    const interaction = await prisma.interaction.create({
+    const interaction = await prisma.userInteraction.create({
       data: {
-        type: `ab_test_${type}`,
+        actionType: `ab_test_${type}`,
         sessionId,
         metadata: JSON.stringify({
           variant,
@@ -42,14 +42,14 @@ export async function GET(request: Request) {
 
     const where: any = {};
     if (type) {
-      where.type = `ab_test_${type}`;
+      where.actionType = `ab_test_${type}`;
     } else {
-      where.type = {
+      where.actionType = {
         startsWith: 'ab_test_',
       };
     }
 
-    const interactions = await prisma.interaction.findMany({
+    const interactions = await prisma.userInteraction.findMany({
       where,
       orderBy: {
         createdAt: 'desc',
@@ -71,7 +71,7 @@ export async function GET(request: Request) {
       variantStats[variant].count++;
 
       // Check if this is a conversion event
-      if (interaction.type.includes('conversion') || interaction.type.includes('click')) {
+      if (interaction.actionType.includes('conversion') || interaction.actionType.includes('click')) {
         variantStats[variant].conversions++;
       }
     });

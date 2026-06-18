@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Eye, Tag, ExternalLink } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import { formatDate } from '@/lib/format';
 
 interface BlogPost {
   id: string;
@@ -59,14 +60,6 @@ export default function BlogPostClient({ params }: Props) {
 
     fetchPost();
   }, [params]);
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-  };
 
   if (loading) {
     return (

@@ -25,7 +25,7 @@ export default function FeaturedPage() {
         />
 
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4 font-serif">
             Get Your AI Tool Featured
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
@@ -35,7 +35,7 @@ export default function FeaturedPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Basic Listing */}
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8">
+          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8">
             <div className="mb-6">
               <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Basic Listing</h2>
               <div className="flex items-baseline gap-1">
@@ -69,7 +69,7 @@ export default function FeaturedPage() {
           </div>
 
           {/* Featured Listing */}
-          <div className="relative bg-white dark:bg-gray-900 border-2 border-emerald-500 dark:border-emerald-400 rounded-3xl p-8 shadow-xl shadow-emerald-500/10">
+          <div className="relative bg-white dark:bg-gray-900 border-2 border-emerald-500 dark:border-emerald-400 rounded-2xl p-8 shadow-xl shadow-emerald-500/10">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
               <span className="px-4 py-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-bold rounded-full shadow-lg">
                 RECOMMENDED
@@ -117,7 +117,7 @@ export default function FeaturedPage() {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-8 text-center">
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 text-center">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Have Questions?</h2>
           <p className="text-slate-600 dark:text-slate-400 mb-4">
             We&apos;re happy to help you choose the right plan for your tool.

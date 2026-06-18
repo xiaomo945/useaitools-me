@@ -6,6 +6,7 @@ import { useSession } from 'next-auth/react';
 import { FolderPlus, Folder, Edit2, Trash2, Lock, Globe, LogIn, Plus, X } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import { formatDate } from '@/lib/format';
 
 interface Collection {
   id: string;
@@ -115,14 +116,6 @@ export default function CollectionsClient() {
       console.error('删除失败:', error);
       alert('删除失败，请重试');
     }
-  };
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric'
-    });
   };
 
   if (status === 'unauthenticated') {

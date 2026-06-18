@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { Calendar, User, Tag, Eye } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import { formatDate } from '@/lib/format';
+import { track } from '@/lib/analytics';
 
 interface BlogPost {
   id: string;
@@ -83,14 +85,6 @@ export default function BlogClient() {
     fetchPosts();
   }, [selectedCategory, page]);
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
-  };
-
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -111,6 +105,7 @@ export default function BlogClient() {
             onClick={() => {
               setSelectedCategory('all');
               setPage(1);
+              track('filter', { category: 'all' });
             }}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               selectedCategory === 'all'
@@ -126,6 +121,7 @@ export default function BlogClient() {
               onClick={() => {
                 setSelectedCategory(category.slug);
                 setPage(1);
+                track('filter', { category: category.slug });
               }}
               className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                 selectedCategory === category.slug

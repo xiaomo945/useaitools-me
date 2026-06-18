@@ -7,7 +7,7 @@ export async function GET() {
   try {
     const session = await auth();
     
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -15,7 +15,7 @@ export async function GET() {
     }
 
     const collections = await prisma.collection.findMany({
-      where: { userId: (session as any).user.id },
+      where: { userId: session?.user?.id },
       orderBy: { updatedAt: 'desc' }
     });
 
@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
   try {
     const session = await auth();
     
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
 
     // 检查 slug 是否已存在
     const existingCollection = await prisma.collection.findFirst({
-      where: { slug, userId: (session as any).user.id }
+      where: { slug, userId: session?.user?.id }
     });
 
     if (existingCollection) {
@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
         description,
         isPublic: isPublic || false,
         slug,
-        userId: (session as any).user.id
+        userId: session?.user?.id
       }
     });
 

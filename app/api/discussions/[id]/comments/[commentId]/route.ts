@@ -10,7 +10,7 @@ export async function DELETE(
   try {
     const session = await auth();
 
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -31,7 +31,7 @@ export async function DELETE(
       );
     }
 
-    if (comment.userId !== (session as any).user.id) {
+    if (comment.userId !== session?.user?.id) {
       return NextResponse.json(
         { error: '无权删除此评论' },
         { status: 403 }

@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { debugLog } from '../utils/debug';
+import { track } from '@/lib/analytics';
 
 interface CategoryFiltersProps {
   selectedCategories: string[];
@@ -72,6 +73,7 @@ export default function CategoryFilters({
                 }}
                 onClick={() => {
                   debugLog('Filter', `Category toggled: ${category}`);
+                  track('filter', { category });
                   if (category === 'All') {
                     setSelectedCategories(['All']);
                   } else {

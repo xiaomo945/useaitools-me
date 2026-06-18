@@ -205,7 +205,7 @@ export default function HistoryPage() {
                         style={{ animationDelay: `${index * 30}ms` }}
                       >
                         {/* Tool Icon */}
-                        <div className={`w-12 h-12 rounded-xl ${colors.bg}/10 flex items-center justify-center text-xl font-bold ${colors.textLight} dark:${colors.text}`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                        <div className={`w-12 h-12 rounded-xl ${colors.bg}/10 flex items-center justify-center text-xl font-bold ${colors.textLight} dark:${colors.text} font-serif`}>
                           {item.tool.name.charAt(0)}
                         </div>
                         

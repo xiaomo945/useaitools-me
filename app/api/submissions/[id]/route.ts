@@ -12,7 +12,7 @@ export async function PUT(
   try {
     const session = await auth()
     
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -21,7 +21,7 @@ export async function PUT(
 
     // 检查是否为管理员
     const user = await prisma.user.findUnique({
-      where: { id: (session as any).user.id }
+      where: { id: session?.user?.id }
     })
 
     if (!user || user.role !== 'admin') {
@@ -60,7 +60,7 @@ export async function PUT(
       data: {
         status,
         reviewNote,
-        reviewedBy: (session as any).user.id,
+        reviewedBy: session?.user?.id,
         reviewedAt: new Date()
       }
     })

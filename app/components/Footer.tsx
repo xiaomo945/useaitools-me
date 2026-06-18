@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="text-center">
             <div className="mb-3">
               <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-                <span style={{ fontFamily: 'Playfair Display, serif' }}>Use AI Tools</span>
+                <span className="font-serif">Use AI Tools</span>
               </h2>
             </div>
             <p className="text-slate-600 dark:text-gray-400 mb-4">

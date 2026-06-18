@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   try {
     const session = await auth()
     
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -21,7 +21,7 @@ export async function GET(request: NextRequest) {
 
     const bookmarks = await prisma.bookmark.findMany({
       where: {
-        userId: (session as any).user.id
+        userId: session?.user?.id
       },
       include: {
         tool: {
@@ -46,7 +46,7 @@ export async function GET(request: NextRequest) {
 
     const total = await prisma.bookmark.count({
       where: {
-        userId: (session as any).user.id
+        userId: session?.user?.id
       }
     })
 
@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
   try {
     const session = await auth()
     
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -94,7 +94,7 @@ export async function POST(request: NextRequest) {
     const existing = await prisma.bookmark.findUnique({
       where: {
         userId_toolId: {
-          userId: (session as any).user.id,
+          userId: session?.user?.id,
           toolId
         }
       }
@@ -122,7 +122,7 @@ export async function POST(request: NextRequest) {
     // 创建收藏
     const bookmark = await prisma.bookmark.create({
       data: {
-        userId: (session as any).user.id,
+        userId: session?.user?.id,
         toolId
       },
       include: {
@@ -156,7 +156,7 @@ export async function DELETE(request: NextRequest) {
   try {
     const session = await auth()
     
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -177,7 +177,7 @@ export async function DELETE(request: NextRequest) {
     const existing = await prisma.bookmark.findUnique({
       where: {
         userId_toolId: {
-          userId: (session as any).user.id,
+          userId: session?.user?.id,
           toolId
         }
       }
@@ -194,7 +194,7 @@ export async function DELETE(request: NextRequest) {
     await prisma.bookmark.delete({
       where: {
         userId_toolId: {
-          userId: (session as any).user.id,
+          userId: session?.user?.id,
           toolId
         }
       }

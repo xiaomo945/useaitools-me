@@ -7,7 +7,7 @@ export async function GET() {
   try {
     const session = await auth();
     
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }
@@ -16,7 +16,7 @@ export async function GET() {
 
     // 获取用户最近浏览的工具（通过 viewCount 和书签推断）
     const bookmarkedTools = await prisma.bookmark.findMany({
-      where: { userId: (session as any).user.id },
+      where: { userId: session?.user?.id },
       include: { tool: true },
       orderBy: { createdAt: 'desc' },
       take: 50
@@ -24,7 +24,7 @@ export async function GET() {
 
     // 获取用户评价过的工具
     const reviewedTools = await prisma.review.findMany({
-      where: { userId: (session as any).user.id },
+      where: { userId: session?.user?.id },
       include: { tool: true },
       orderBy: { createdAt: 'desc' },
       take: 50
@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
   try {
     const session = await auth();
     
-    if (!(session?.user as any)?.id) {
+    if (!session?.user?.id) {
       return NextResponse.json(
         { error: '请先登录' },
         { status: 401 }

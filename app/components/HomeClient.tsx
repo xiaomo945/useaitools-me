@@ -34,7 +34,7 @@ const MysteryBoxModal = dynamic(() => import('./MysteryBoxModal'), {
   loading: () => null,
 });
 const QuickStart = dynamic(() => import('./QuickStart'), {
-  loading: () => <div className="h-64 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-3xl mb-8" />,
+  loading: () => <div className="h-64 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-2xl mb-8" />,
 });
 
 // 高亮搜索关键词的辅助函数
@@ -220,8 +220,7 @@ const ToolCard = memo(function ToolCard({
           <div className="flex items-center gap-2 sm:gap-2.5">
             <Link
               href={`/tools/${tool.id}`}
-              className={`w-8 h-8 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xs sm:text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out`}
-              style={{ fontFamily: 'Playfair Display, serif' }}
+              className={`w-8 h-8 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xs sm:text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out font-serif`}
             >
               {tool.name.charAt(0)}
             </Link>
@@ -986,7 +985,8 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       playUnsaveSound();
     } else {
       playSaveSound();
-      track('save', { tool_id: id });
+      const tool = displayedTools.find(t => t.id === id);
+      track('save', { tool_id: id, tool_name: tool?.name });
     }
     const newSavedIds = wasSaved
       ? savedIds.filter((savedId) => savedId !== id)
@@ -1760,7 +1760,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                       href={`/tools/${tool.id}`}
                       className="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-full whitespace-nowrap hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-md transition-all duration-300 ease-out shrink-0"
                     >
-                      <span className={`w-5 h-5 rounded-md ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-[10px] font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                      <span className={`w-5 h-5 rounded-md ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-[10px] font-bold font-serif`}>
                         {tool.name.charAt(0)}
                       </span>
                       <span className="text-xs font-medium text-slate-700 dark:text-slate-300 truncate max-w-[100px]">{tool.name}</span>
@@ -1807,7 +1807,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                         href={`/tools/${tool.id}`}
                         className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-emerald-50 to-white dark:from-emerald-950/20 dark:to-gray-900 border border-emerald-200/60 dark:border-emerald-800/40 rounded-full whitespace-nowrap hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-md transition-all duration-300 ease-out shrink-0"
                       >
-                        <span className={`w-5 h-5 rounded-md ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-[10px] font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                        <span className={`w-5 h-5 rounded-md ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-[10px] font-bold font-serif`}>
                           {tool.name.charAt(0)}
                         </span>
                         <span className="text-xs font-medium text-slate-700 dark:text-slate-300 truncate max-w-[100px]">{tool.name}</span>
@@ -1914,9 +1914,9 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
               </div>
               <Link
                 href="/image"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 sm:py-3 h-9 sm:h-11 text-sm sm:text-base bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px] whitespace-nowrap"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 sm:py-3 h-9 sm:h-11 text-sm sm:text-base bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px] whitespace-nowrap"
               >
-                Learn More →
+                Explore Image Tools →
               </Link>
             </div>
 
@@ -1936,7 +1936,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
               </div>
               <Link
                 href="/mobile"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 sm:py-3 h-9 sm:h-11 text-sm sm:text-base bg-slate-800 dark:bg-slate-700 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 opacity-70 min-h-[44px] whitespace-nowrap"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-2 sm:py-3 h-9 sm:h-11 text-sm sm:text-base bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 opacity-70 min-h-[44px] whitespace-nowrap"
               >
                 Join Waitlist →
               </Link>
@@ -2011,7 +2011,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                       {post.description}
                     </p>
                     <div className="flex items-center gap-1 font-semibold text-sm text-emerald-600 dark:text-emerald-400">
-                      Read More →
+                      Read Article →
                     </div>
                   </Link>
                 );
@@ -2137,9 +2137,13 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                 onSwipeCategory={(direction) => {
                   const catIndex = categories.indexOf(selectedCategories.filter(c => c !== 'All')[0] || 'All');
                   if (direction === 'left' && catIndex > 0) {
-                    setSelectedCategories([categories[catIndex - 1]]);
+                    const newCat = categories[catIndex - 1];
+                    setSelectedCategories([newCat]);
+                    track('filter', { category: newCat });
                   } else if (direction === 'right' && catIndex < categories.length - 1) {
-                    setSelectedCategories([categories[catIndex + 1]]);
+                    const newCat = categories[catIndex + 1];
+                    setSelectedCategories([newCat]);
+                    track('filter', { category: newCat });
                   }
                 }}
               />
@@ -2232,7 +2236,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                         >
                           <span className="absolute top-2 right-2 px-1.5 py-0.5 rounded-full text-[9px] font-bold bg-gradient-to-r from-emerald-500 to-teal-500 text-white">Recommended</span>
                           <div className="flex items-center gap-2 mb-2">
-                            <span className={`w-7 h-7 rounded-lg ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-sm font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                            <span className={`w-7 h-7 rounded-lg ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-sm font-bold font-serif`}>
                               {tool.name.charAt(0)}
                             </span>
                             <h4 className="font-semibold text-sm text-slate-900 dark:text-white truncate">{tool.name}</h4>
@@ -2334,7 +2338,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                   </div>
                   <button
                     onClick={() => setMysteryRevealed(true)}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-amber-400 to-orange-400 dark:from-amber-500 dark:to-orange-500 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 text-lg"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 text-lg"
                   >
                     🎁 Reveal!
                   </button>

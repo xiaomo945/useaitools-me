@@ -1130,6 +1130,92 @@ export default function CommunityPage() {
 
 ---
 
+## 🔧 Phase 7: 工程化质量与品牌一致性（四方头脑风暴第 3 轮）
+
+**维度**: 01-programming（编程工程化）+ 06-accessibility（可访问性）+ 09-analytics（分析数据）+ 13-brand（品牌一致性）
+**目标**: 消除系统性技术债，补全 WCAG AA 缺口，修复分析追踪链路断裂，统一品牌视觉系统
+
+### 7.1 编程工程化：Session 类型扩展 + 重复代码消除 + API 错误处理
+
+**审计发现**:
+- `auth.ts:30` 用 `(session.user as any).id = token.sub` 绕过类型，导致 25+ 个 API 路由被迫用 `(session?.user as any)?.id` 连锁绕过
+- `getAffiliateLink` 在 9 个文件中重复实现（page.tsx、tool/[slug]、tools/[id]、scenes、compare/*、category、api/tools），且实现不一致（部分缺短名映射、不带 UTM）
+- `formatDate` 在 12+ 个文件中重复，且实现不一致（绝对时间 vs 相对时间混用）
+- `app/api/tools/route.ts` GET 函数完全无 try-catch，任何异常直接 500
+- `lib/prisma.ts` 全文件 any，丧失 TypeScript 核心价值
+
+**做什么**:
+1. 新建 `types/next-auth.d.ts` 扩展 Session 类型，移除 `auth.ts` 的 `as any`，批量替换 API 路由中的 `(session?.user as any)?.id` → `session?.user?.id`
+2. 新建 `lib/format.ts` 统一 `formatDate` 和 `formatRelativeDate`，替换 12+ 处重复
+3. 替换 9 个文件中的本地 `getAffiliateLink` 为 `import { getAffiliateLink } from '@/lib/affiliate'`
+4. `app/api/tools/route.ts` 补 try-catch，统一错误响应
+
+**成功指标**: `as any` 在 API 路由中清零；`getAffiliateLink` 重复实现清零；`formatDate` 重复实现清零
+
+---
+
+### 7.2 可访问性：WCAG AA 关键缺口修复
+
+**审计发现**:
+- `app/layout.tsx:159` 有 skip-to-main 链接，但全代码库无 `id="main-content"` 目标，链接完全失效
+- `Toast.tsx` 容器和 ToastItem 无 `aria-live`，屏幕阅读器无法播报通知
+- 3 个纯图标关闭按钮（SearchBar 删除记录、Toast 关闭、AISearchRecommend 关闭）无 `aria-label`
+- 6 个表单输入框（EmailSubscribe 姓名/邮箱、SearchFilters 排序、KeywordTracker、AISearchRecommend、CompareClient 搜索）无 label 或 aria-label
+- 5 个表单字段（UserToolList、NewDiscussionClient 4 个）有 label 但未通过 htmlFor/id 关联
+
+**做什么**:
+1. 在 `app/layout.tsx` 的 PageTransition 外层或 HomeClient 根容器添加 `<main id="main-content">`
+2. `Toast.tsx` 容器添加 `aria-live="polite" aria-atomic="true"`
+3. 3 个纯图标按钮添加 `aria-label`
+4. 6 个无 label 输入框添加 `aria-label`
+5. 5 个未关联的 label/input 添加 `id` + `htmlFor` 关联
+
+**成功指标**: skip link 可用；所有通知可被屏幕阅读器播报；所有图标按钮有 aria-label；所有表单控件有可编程名称
+
+---
+
+### 7.3 分析数据：Prisma 模型名修复 + 漏斗埋点补全
+
+**审计发现**:
+- 5 个分析 API 路由（funnel、dashboard、traffic、reports/generate、ab-test）查询 `prisma.interaction`，但 schema 中模型名是 `UserInteraction`，字段是 `actionType` 而非 `type`，导致运行时 500
+- `filter` 事件从未追踪（HomeClient/BlogClient/CommunityClient 分类切换均无埋点）
+- `trackCtaClick` 发送 `cta_click` 事件，但 09-analytics 规范要求事件名 `tool_click`，且 TrackEvent 类型中 `tool_click` 从未被触发
+- 工具详情页 `ToolDetailClient.tsx` 零追踪，漏斗"详情页 → 联盟点击"环节完全断档
+- `save` 事件只传 `tool_id` 无 `tool_name`，不符规范
+
+**做什么**:
+1. 修复 5 个 API 路由：`prisma.interaction` → `prisma.userInteraction`，`i.type` → `i.actionType`
+2. `trackCtaClick` 事件名 `cta_click` → `tool_click`，同步更新 TrackEvent 类型
+3. HomeClient/BlogClient/CommunityClient 分类切换处补 `track('filter', { category })`
+4. ToolDetailClient mount 时补 `track('tool_detail_view', {...})`，CTA 点击补 `trackCtaClick`
+5. HomeClient `save` 事件补 `tool_name` 参数
+
+**成功指标**: 分析 API 不再 500；`filter`/`tool_click`/`tool_detail_view` 事件全部触发；漏斗 4 环节全部有埋点
+
+---
+
+### 7.4 品牌一致性：CTA 配色 + 字体系统 + 圆角统一
+
+**审计发现**:
+- 3 个 CTA 按钮使用非品牌色：HomeClient:1917 紫色渐变、1939 深灰、2337 琥珀橙
+- `app/layout.tsx` 引入 Geist + Geist_Mono 字体，品牌规范只允许 Inter/Playfair Display/JetBrains Mono
+- 20+ 个文件用内联 `style={{ fontFamily: 'Playfair Display, serif' }}` 而非 `font-serif` 类
+- 30+ 处卡片使用 `rounded-3xl`（24px），品牌规范要求卡片 `rounded-2xl`（16px）
+- 4 处 CTA 文案使用禁用词 "Learn More"/"Read More"
+- SearchBar 类别列表缺少 Productivity（Teal）
+
+**做什么**:
+1. 3 个 CTA 按钮改为 `bg-gradient-to-r from-emerald-500 to-teal-500`
+2. `app/layout.tsx` 移除 Geist/Geist_Mono，`globals.css` 的 `--font-mono` 改用 JetBrains Mono
+3. 20+ 处内联 Playfair 样式替换为 `font-serif` 类
+4. 30+ 处 `rounded-3xl` → `rounded-2xl`（卡片场景）
+5. 4 处 "Learn More"/"Read More" 改为行动词优先文案
+6. SearchBar 补充 Productivity 类别
+
+**成功指标**: CTA 按钮全部使用品牌色；字体系统仅含 Inter/Playfair Display/JetBrains Mono；卡片圆角统一为 rounded-2xl
+
+---
+
 ## 📈 成功指标总览
 
 | 指标 | 当前 | Phase 1 | Phase 2 | Phase 3 | Phase 4 |

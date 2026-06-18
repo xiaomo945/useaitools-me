@@ -6,6 +6,7 @@ import toolsData from '@/data/tools.json';
 import { Home, Share2, Copy, ChevronRight, List } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import { track } from '@/lib/analytics';
+import { formatRelativeDate } from '@/lib/format';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ReadingProgress from '@/app/components/ReadingProgress';
 
@@ -62,30 +63,6 @@ const calculateReadTime = (content: string): { minutes: number; display: string 
     minutes: readTime,
     display: `⏱️ ${readTime} min read`
   };
-};
-
-// Format relative date
-const formatRelativeDate = (dateStr: string): string => {
-  const date = new Date(dateStr);
-  const now = new Date();
-  const diffTime = Math.abs(now.getTime() - date.getTime());
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  
-  if (diffDays === 1) {
-    return 'yesterday';
-  } else if (diffDays < 7) {
-    return `${diffDays} days ago`;
-  } else if (diffDays < 14) {
-    return 'last week';
-  } else if (diffDays < 30) {
-    const weeks = Math.floor(diffDays / 7);
-    return `${weeks} weeks ago`;
-  } else if (diffDays < 60) {
-    return 'last month';
-  } else {
-    const months = Math.floor(diffDays / 30);
-    return `${months} months ago`;
-  }
 };
 
 // Helper function to render a single blog image
@@ -403,7 +380,7 @@ export default function ClientBlogDetail({
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-10">
           {/* Post Content - First on mobile, side by side on desktop */}
           <div className="order-2 lg:order-1">
-            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-5 sm:p-8 lg:p-10 shadow-xl mb-8 max-w-3xl mx-auto">
+            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 sm:p-8 lg:p-10 shadow-xl mb-8 max-w-3xl mx-auto">
               <article
                 className="prose prose-slate dark:prose-invert max-w-none"
                 dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images, highlightTerm) }}
@@ -494,7 +471,7 @@ export default function ClientBlogDetail({
             .slice(0, 8);
 
           return (
-            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-5 shadow-lg mb-6">
+            <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg mb-6">
               <details className="lg:hidden" open>
                 <summary className="flex items-center gap-2 cursor-pointer text-sm font-semibold text-slate-900 dark:text-white mb-3">
                   <span>🛠️</span>
@@ -536,7 +513,7 @@ export default function ClientBlogDetail({
         })()}
 
         {/* Article Feedback */}
-        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 shadow-lg mb-6">
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 shadow-lg mb-6">
           <div className="text-center">
             <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Was this guide helpful?</h3>
             <div className="flex items-center justify-center gap-3 mb-3">
@@ -578,7 +555,7 @@ export default function ClientBlogDetail({
         </div>
 
         {/* Share Buttons */}
-        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 shadow-lg">
+        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 shadow-lg">
           <div className="flex items-center gap-4 mb-4">
             <Share2 className="w-5 h-5 text-slate-500 dark:text-gray-400" />
             <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Share this article</h3>
@@ -644,7 +621,7 @@ export default function ClientBlogDetail({
 
           if (mentionedTools.length > 0) {
             return (
-              <div className="mt-12 bg-gradient-to-br from-slate-50 to-blue-50/30 dark:from-gray-900 dark:to-blue-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-6 sm:p-8">
+              <div className="mt-12 bg-gradient-to-br from-slate-50 to-blue-50/30 dark:from-gray-900 dark:to-blue-900/10 border border-slate-200 dark:border-gray-800 rounded-2xl p-6 sm:p-8">
                 <div className="flex items-center gap-3 mb-5">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/25">
                     <span className="text-white text-lg">🛠️</span>
@@ -701,7 +678,7 @@ export default function ClientBlogDetail({
 
         {/* Related Tools Recommendation */}
         {relatedTools.length > 0 && (
-          <div className="mt-12 bg-gradient-to-br from-emerald-50/50 to-teal-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8">
+          <div className="mt-12 bg-gradient-to-br from-emerald-50/50 to-teal-50/30 dark:from-gray-900 dark:to-emerald-900/10 border border-slate-200 dark:border-gray-800 rounded-2xl p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center shadow-lg shadow-emerald-500/25">
                 <span className="text-white text-lg">🛠️</span>
@@ -757,7 +734,7 @@ export default function ClientBlogDetail({
 
         {/* Related Articles - Next Read Recommendations */}
         {relatedPosts.length > 0 && (
-          <div className="mt-12 bg-gradient-to-br from-slate-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-900/10 border border-slate-200 dark:border-gray-800 rounded-3xl p-8">
+          <div className="mt-12 bg-gradient-to-br from-slate-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-900/10 border border-slate-200 dark:border-gray-800 rounded-2xl p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/25">
                 <span className="text-white text-lg">📚</span>

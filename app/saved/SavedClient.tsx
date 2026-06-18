@@ -66,7 +66,7 @@ export default function SavedClient() {
   // 从数据库加载收藏（如果已登录）
   useEffect(() => {
     const loadBookmarks = async () => {
-      if (!(session?.user as any)?.id) {
+      if (!session?.user?.id) {
         setLoading(false);
         return;
       }
@@ -234,7 +234,7 @@ export default function SavedClient() {
     localStorage.setItem('savedTools', JSON.stringify(newSavedIds));
     
     // 如果用户已登录，同步到数据库
-    if ((session?.user as any)?.id) {
+    if (session?.user?.id) {
       try {
         if (isCurrentlySaved) {
           // 取消收藏
@@ -271,7 +271,7 @@ export default function SavedClient() {
 
         {/* Page Header */}
         <div className="mb-10">
-          <div className="bg-gradient-to-br from-rose-50/80 via-white to-pink-50/80 dark:from-rose-950/60 dark:via-gray-900 dark:to-pink-950/60 backdrop-blur-xl border border-white/60 dark:border-rose-500/10 shadow-xl shadow-rose-500/5 dark:shadow-2xl dark:shadow-rose-500/5 rounded-3xl p-8 sm:p-12">
+          <div className="bg-gradient-to-br from-rose-50/80 via-white to-pink-50/80 dark:from-rose-950/60 dark:via-gray-900 dark:to-pink-950/60 backdrop-blur-xl border border-white/60 dark:border-rose-500/10 shadow-xl shadow-rose-500/5 dark:shadow-2xl dark:shadow-rose-500/5 rounded-2xl p-8 sm:p-12">
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
                 ❤️ Saved Tools

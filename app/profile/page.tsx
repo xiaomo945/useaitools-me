@@ -6,6 +6,7 @@ import { useSession } from 'next-auth/react';
 import { User, Award, Star, Bookmark, MessageSquare, Calendar, LogIn, TrendingUp } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import { formatDate } from '@/lib/format';
 
 interface UserStats {
   totalReviews: number;
@@ -94,14 +95,6 @@ export default function ProfilePage() {
       default:
         return { bg: 'bg-slate-500', text: 'text-slate-600' };
     }
-  };
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric'
-    });
   };
 
   const getActivityIcon = (type: string) => {
@@ -354,7 +347,7 @@ export default function ProfilePage() {
                         className="group p-4 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl hover:border-emerald-300 dark:hover:border-emerald-700 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300"
                       >
                         <div className="flex items-start gap-4">
-                          <div className={`w-12 h-12 rounded-xl ${colors.bg}/10 flex items-center justify-center text-xl font-bold ${colors.text} flex-shrink-0`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                          <div className={`w-12 h-12 rounded-xl ${colors.bg}/10 flex items-center justify-center text-xl font-bold ${colors.text} flex-shrink-0 font-serif`}>
                             {tool.name.charAt(0)}
                           </div>
                           <div className="flex-1 min-w-0">

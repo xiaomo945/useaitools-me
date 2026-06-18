@@ -12,24 +12,24 @@ export async function GET(request: NextRequest) {
     startDate.setDate(startDate.getDate() - days);
 
     // Fetch interaction data
-    const interactions = await prisma.interaction.findMany({
+    const interactions = await prisma.userInteraction.findMany({
       where: {
         createdAt: {
           gte: startDate,
         },
       },
       select: {
-        type: true,
+        actionType: true,
         toolId: true,
         createdAt: true,
       },
     });
 
     // Calculate funnel stages
-    const pageViews = interactions.filter((i: any) => i.type === 'page_view').length;
-    const toolClicks = interactions.filter((i: any) => i.type === 'tool_click').length;
-    const affiliateClicks = interactions.filter((i: any) => i.type === 'affiliate_click').length;
-    const toolDetailViews = interactions.filter((i: any) => i.type === 'tool_detail').length;
+    const pageViews = interactions.filter((i: any) => i.actionType === 'page_view').length;
+    const toolClicks = interactions.filter((i: any) => i.actionType === 'tool_click').length;
+    const affiliateClicks = interactions.filter((i: any) => i.actionType === 'affiliate_click').length;
+    const toolDetailViews = interactions.filter((i: any) => i.actionType === 'tool_detail').length;
 
     // Calculate conversion rates
     const homepageToToolRate = pageViews > 0 ? (toolDetailViews / pageViews) * 100 : 0;

@@ -126,6 +126,7 @@ export default function EmailSubscribe({
                         setMessage('');
                       }
                     }}
+                    aria-label="Your name"
                     placeholder="您的称呼（可选）"
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 disabled:opacity-60"
                     disabled={status === 'loading'}
@@ -144,6 +145,7 @@ export default function EmailSubscribe({
                       setMessage('');
                     }
                   }}
+                  aria-label="Email address"
                   placeholder="your@email.com"
                   className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 disabled:opacity-60"
                   disabled={status === 'loading'}

@@ -108,7 +108,7 @@ export default function ImagePage() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-violet-500/20 text-violet-400 border border-violet-500/30 mb-8">
             <span className="animate-pulse">🎨</span> Coming Soon
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 font-serif">
             Use AI Image —{' '}
             <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
               Your Imagination, Visualized
@@ -128,7 +128,7 @@ export default function ImagePage() {
 
         {/* Demo Section */}
         <section className="py-12">
-          <h2 className="text-3xl font-bold text-center mb-10" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-3xl font-bold text-center mb-10 font-serif">
             See How It Works
           </h2>
           <DemoIllustration />
@@ -141,7 +141,7 @@ export default function ImagePage() {
 
         {/* Features */}
         <section className="py-12">
-          <h2 className="text-3xl font-bold text-center mb-10" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-3xl font-bold text-center mb-10 font-serif">
             Why Choose Use AI Image?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -189,7 +189,7 @@ export default function ImagePage() {
 
         {/* Bottom CTA */}
         <section className="py-16 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 font-serif">
             Ready to Create Without Limits?
           </h2>
           <p className="text-gray-400 mb-8 max-w-lg mx-auto">

@@ -6,6 +6,8 @@ import { useSession } from 'next-auth/react';
 import { MessageSquare, Plus, Eye, Pin, Lock, TrendingUp, Clock, Filter } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import { formatRelativeDate as formatDate } from '@/lib/format';
+import { track } from '@/lib/analytics';
 
 interface Discussion {
   id: string;
@@ -95,18 +97,6 @@ export default function CommunityClient() {
     }
   };
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    const now = new Date();
-    const diff = now.getTime() - date.getTime();
-    
-    if (diff < 60000) return 'Just now';
-    if (diff < 3600000) return `${Math.floor(diff / 60000)}m ago`;
-    if (diff < 86400000) return `${Math.floor(diff / 3600000)}h ago`;
-    if (diff < 604800000) return `${Math.floor(diff / 86400000)}d ago`;
-    return date.toLocaleDateString();
-  };
-
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -157,6 +147,7 @@ export default function CommunityClient() {
                 onClick={() => {
                   setCategory(cat);
                   setPage(1);
+                  track('filter', { category: cat });
                 }}
                 className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
                   category === cat

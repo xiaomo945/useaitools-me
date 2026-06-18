@@ -65,7 +65,7 @@ export default function FeaturedTools({ tools }: { tools: Tool[] }) {
                 href={`/tools/${tool.id}`}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
               >
-                Learn More →
+                View Details →
               </Link>
             </div>
           );

@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Fetch analytics data
-    const interactions = await prisma.interaction.findMany({
+    const interactions = await prisma.userInteraction.findMany({
       where: {
         createdAt: {
           gte: startDate,
@@ -29,15 +29,15 @@ export async function POST(request: NextRequest) {
     });
 
     // Calculate metrics
-    const pageViews = interactions.filter((i: any) => i.type === 'page_view').length;
+    const pageViews = interactions.filter((i: any) => i.actionType === 'page_view').length;
     const uniqueVisitors = new Set(interactions.map((i: any) => i.sessionId)).size;
-    const affiliateClicks = interactions.filter((i: any) => i.type === 'affiliate_click').length;
+    const affiliateClicks = interactions.filter((i: any) => i.actionType === 'affiliate_click').length;
     const conversionRate = pageViews > 0 ? (affiliateClicks / pageViews) * 100 : 0;
 
     // Get top pages
     const pageViewCounts = new Map<string, number>();
     interactions
-      .filter((i: any) => i.type === 'page_view' && i.metadata)
+      .filter((i: any) => i.actionType === 'page_view' && i.metadata)
       .forEach((i: any) => {
         try {
           const meta = JSON.parse(i.metadata!);

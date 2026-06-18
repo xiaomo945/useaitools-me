@@ -9,6 +9,7 @@ import ReadingProgress from '@/app/components/ReadingProgress';
 import NewsletterSignup from '@/app/components/NewsletterSignup';
 import Footer from '@/app/components/Footer';
 import SocialShare from '@/app/components/SocialShare';
+import { formatDate } from '@/lib/format';
 
 type BlogPost = {
   id: number;
@@ -63,10 +64,6 @@ function calculateReadTime(content: string): number {
   const plainText = content.replace(/<[^>]*>/g, '').replace(/\*\*(.*?)\*\*/g, '$1');
   const wordCount = plainText.trim().split(/\s+/).length;
   return Math.max(1, Math.ceil(wordCount / 200));
-}
-
-function formatDate(dateStr: string): string {
-  return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
 function renderContentWithImages(content: string, images?: { url: string; alt: string }[], highlightTerm?: string | null): string {

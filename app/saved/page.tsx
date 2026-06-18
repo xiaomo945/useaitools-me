@@ -213,7 +213,7 @@ export default function SavedPage() {
 
         {/* Page Header */}
         <div className="mb-10">
-          <div className="bg-gradient-to-br from-rose-50/80 via-white to-pink-50/80 dark:from-rose-950/60 dark:via-gray-900 dark:to-pink-950/60 backdrop-blur-xl border border-white/60 dark:border-rose-500/10 shadow-xl shadow-rose-500/5 dark:shadow-2xl dark:shadow-rose-500/5 rounded-3xl p-8 sm:p-12">
+          <div className="bg-gradient-to-br from-rose-50/80 via-white to-pink-50/80 dark:from-rose-950/60 dark:via-gray-900 dark:to-pink-950/60 backdrop-blur-xl border border-white/60 dark:border-rose-500/10 shadow-xl shadow-rose-500/5 dark:shadow-2xl dark:shadow-rose-500/5 rounded-2xl p-8 sm:p-12">
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
                 ❤️ Saved Tools
@@ -352,7 +352,7 @@ export default function SavedPage() {
                     {/* Tool Header */}
                     <div className="flex items-start justify-between gap-4 mb-4">
                       <div className="flex items-start gap-3">
-                        <div className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold group-hover:scale-105 transition-transform duration-300 ease-out`} style={{ fontFamily: 'Playfair Display, serif' }}>
+                        <div className={`w-11 h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold group-hover:scale-105 transition-transform duration-300 ease-out font-serif`}>
                           {tool.name.charAt(0)}
                         </div>
                         <div>
