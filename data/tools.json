@@ -21248,11 +21248,11 @@
       "Content Creators",
       "Marketers"
     ],
-    "rating": 4.0,
+    "rating": 4,
     "rating_count": 1200,
     "rating_breakdown": {
       "ease_of_use": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "value_for_money": {
@@ -21264,7 +21264,7 @@
         "description": ""
       },
       "features": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       }
     }
@@ -21330,11 +21330,11 @@
         "description": ""
       },
       "value_for_money": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "customer_support": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "features": {
@@ -21470,11 +21470,11 @@
       "Print Designers",
       "Home Decor"
     ],
-    "rating": 4.0,
+    "rating": 4,
     "rating_count": 1800,
     "rating_breakdown": {
       "ease_of_use": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "value_for_money": {
@@ -21486,7 +21486,7 @@
         "description": ""
       },
       "features": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       }
     }
@@ -21552,11 +21552,11 @@
         "description": ""
       },
       "value_for_money": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "customer_support": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "features": {
@@ -21922,11 +21922,11 @@
         "description": ""
       },
       "value_for_money": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "customer_support": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "features": {
@@ -22210,11 +22210,11 @@
       "Retailers",
       "Distributors"
     ],
-    "rating": 4.0,
+    "rating": 4,
     "rating_count": 900,
     "rating_breakdown": {
       "ease_of_use": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "value_for_money": {
@@ -22226,7 +22226,7 @@
         "description": ""
       },
       "features": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       }
     }
@@ -23032,11 +23032,11 @@
         "description": ""
       },
       "value_for_money": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "customer_support": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "features": {
@@ -23106,11 +23106,11 @@
         "description": ""
       },
       "value_for_money": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "customer_support": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "features": {
@@ -23624,11 +23624,11 @@
         "description": ""
       },
       "value_for_money": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "customer_support": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "features": {
@@ -24208,11 +24208,11 @@
       "Filmmakers",
       "Advertisers"
     ],
-    "rating": 4.0,
+    "rating": 4,
     "rating_count": 1800,
     "rating_breakdown": {
       "ease_of_use": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       },
       "value_for_money": {
@@ -24224,7 +24224,7 @@
         "description": ""
       },
       "features": {
-        "score": 4.0,
+        "score": 4,
         "description": ""
       }
     }
@@ -68902,6 +68902,1146 @@
     "rating_count": 178,
     "best_for": [
       "Artists who want AI to generate music-synced animated video artworks"
+    ]
+  },
+  {
+    "id": 1467,
+    "name": "PixVerse",
+    "description": "Community-driven AI video creation platform offering text-to-video, image-to-video, and character-to-video tools. PixVerse emphasizes anime and fantasy styles with active creator templates.",
+    "description_en": "Community-driven AI video creation platform with anime and fantasy style templates.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://pixverse.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for PixVerse",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Anime",
+      "Community",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 1468,
+    "name": "Stable Audio 2.0",
+    "description": "Stability AI's text-to-audio model for generating music, sound effects, and stems. Stable Audio 2.0 supports longer durations and higher audio fidelity for professional production.",
+    "description_en": "Stability AI text-to-audio model for music, sound effects, and stems.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://stability.ai/stable-audio",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Stable Audio 2.0",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Sound Design",
+      "Music Production",
+      "High Fidelity"
+    ]
+  },
+  {
+    "id": 1469,
+    "name": "Devin",
+    "description": "Autonomous AI software engineer capable of planning, coding, debugging, and deploying complete projects. Devin handles end-to-end development workflows from natural language specifications.",
+    "description_en": "Autonomous AI software engineer that plans, codes, debugs, and deploys projects end to end.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://devin.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Devin",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "advanced",
+    "best_for": [
+      "Engineering Teams",
+      "Autonomous Coding",
+      "Complex Projects"
+    ]
+  },
+  {
+    "id": 1470,
+    "name": "Microsoft Copilot Pro",
+    "description": "Premium AI assistant integrated across Microsoft 365 apps, Windows, and Edge. Copilot Pro offers advanced GPT-4 Turbo access, custom GPTs, and enhanced productivity features for office workflows.",
+    "description_en": "Premium AI assistant integrated across Microsoft 365, Windows, and Edge.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://copilot.microsoft.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Microsoft Copilot Pro",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "Chinese",
+      "Spanish",
+      "French",
+      "German"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Office Workers",
+      "Microsoft 365",
+      "Teams"
+    ]
+  },
+  {
+    "id": 1471,
+    "name": "Kimi AI",
+    "description": "Long-context AI assistant from Moonshot AI supporting up to 2 million tokens. Kimi AI excels at document analysis, coding assistance, and extended conversation in Chinese and English.",
+    "description_en": "Long-context AI assistant from Moonshot AI supporting up to 2 million tokens.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://kimi.moonshot.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Kimi AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Long Documents",
+      "Chinese Users",
+      "Research"
+    ]
+  },
+  {
+    "id": 1472,
+    "name": "Doubao",
+    "description": "ByteDance AI assistant with chat, writing, learning, and image generation features. Doubao offers voice conversation and integrates with ByteDance content ecosystem for Chinese users.",
+    "description_en": "ByteDance AI assistant with chat, writing, learning, and image generation features.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://doubao.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Doubao",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Chinese Users",
+      "Students",
+      "Voice Chat"
+    ]
+  },
+  {
+    "id": 1473,
+    "name": "Hunyuan",
+    "description": "Tencent's foundation model for text, image, and code generation. Hunyuan is integrated into Tencent Cloud services, WeChat, and enterprise applications for Chinese businesses.",
+    "description_en": "Tencent foundation model for text, image, and code generation in enterprise apps.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://hunyuan.tencent.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Hunyuan",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Enterprise",
+      "Chinese Users",
+      "Developers"
+    ]
+  },
+  {
+    "id": 1474,
+    "name": "Kapwing",
+    "description": "Browser-based video editor with AI-powered captioning, translation, and content repurposing. Kapwing is popular for creating social media clips and collaborative video projects without downloads.",
+    "description_en": "Browser-based video editor with AI captioning, translation, and content repurposing.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.kapwing.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Kapwing",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Social Media",
+      "Collaboration",
+      "Subtitles"
+    ]
+  },
+  {
+    "id": 1475,
+    "name": "Wondershare Filmora AI",
+    "description": "Consumer video editor with integrated AI tools for masking, audio enhancement, text-to-video effects, and smart cutout. Filmora targets creators who want pro results on desktop and mobile.",
+    "description_en": "Consumer video editor with AI masking, audio enhancement, and text-to-video effects.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://filmora.wondershare.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Wondershare Filmora AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "Chinese",
+      "Spanish",
+      "French"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Desktop Editing",
+      "Mobile",
+      "Beginners"
+    ]
+  },
+  {
+    "id": 1476,
+    "name": "Captions AI",
+    "description": "Mobile-first AI video app that automatically adds animated captions, edits silences, and translates speech. Captions AI is designed for short-form creators posting to TikTok, Reels, and Shorts.",
+    "description_en": "Mobile-first AI video app for automatic animated captions and silence removal.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://captions.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Captions AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Mobile Creators",
+      "Short Form",
+      "Captions"
+    ]
+  },
+  {
+    "id": 1477,
+    "name": "Syllaby",
+    "description": "AI video workflow tool that generates scripts, avatars, and social clips from topic ideas. Syllaby helps marketers produce consistent short-form video content at scale.",
+    "description_en": "AI video workflow tool for scripts, avatars, and social clips from topic ideas.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://syllaby.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Syllaby",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Marketers",
+      "Script Writing",
+      "Avatars"
+    ]
+  },
+  {
+    "id": 1478,
+    "name": "InShot AI",
+    "description": "Mobile video editor with AI effects, auto-captions, and smart templates. InShot AI simplifies vertical video production for creators focused on Instagram Reels and TikTok.",
+    "description_en": "Mobile video editor with AI effects, auto-captions, and smart templates.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.inshot.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for InShot AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "Chinese",
+      "Spanish"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Mobile",
+      "Reels",
+      "TikTok"
+    ]
+  },
+  {
+    "id": 1479,
+    "name": "Submagic",
+    "description": "AI subtitle generator that creates dynamic, animated captions for short videos in multiple languages. Submagic focuses on engagement and retention for social media content.",
+    "description_en": "AI subtitle generator with dynamic animated captions for short videos.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://submagic.co",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Submagic",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "French",
+      "Spanish",
+      "German"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Subtitles",
+      "Short Videos",
+      "Global Audiences"
+    ]
+  },
+  {
+    "id": 1480,
+    "name": "Kits AI",
+    "description": "AI voice platform for singers and producers offering voice cloning, instrument models, and royalty-free AI vocals. Kits AI is used for demos, remixes, and vocal production.",
+    "description_en": "AI voice platform for voice cloning, instrument models, and royalty-free AI vocals.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://kits.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Kits AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Vocalists",
+      "Producers",
+      "Voice Cloning"
+    ]
+  },
+  {
+    "id": 1481,
+    "name": "Lalal.ai",
+    "description": "AI-powered stem splitter that isolates vocals, drums, bass, and instruments from any audio file. Lalal.ai supports batch processing and high-quality extraction for producers and DJs.",
+    "description_en": "AI stem splitter for isolating vocals, drums, bass, and instruments.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.lalal.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Lalal.ai",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Producers",
+      "DJs",
+      "Stem Separation"
+    ]
+  },
+  {
+    "id": 1482,
+    "name": "Spark Desk",
+    "description": "iFlytek's large language model and AI assistant with strong Chinese speech recognition and document understanding. Spark Desk targets education, office, and enterprise use cases.",
+    "description_en": "iFlytek large language model with strong Chinese speech and document capabilities.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://xinghuo.xfyun.cn",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Spark Desk",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Chinese Users",
+      "Education",
+      "Speech"
+    ]
+  },
+  {
+    "id": 1483,
+    "name": "Baichuan",
+    "description": "Baichuan Intelligence's large language model optimized for Chinese enterprise applications. Baichuan offers strong reasoning, coding, and domain-specific knowledge for business workflows.",
+    "description_en": "Baichuan large language model optimized for Chinese enterprise applications.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://www.baichuan-ai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Baichuan",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "Chinese",
+      "English"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Enterprise",
+      "Chinese Users",
+      "Coding"
+    ]
+  },
+  {
+    "id": 1484,
+    "name": "Tencent Yuanbao",
+    "description": "Tencent's AI assistant powered by Hunyuan model, offering chat, search, document analysis, and image generation. Yuanbao integrates with Tencent's ecosystem for Chinese users.",
+    "description_en": "Tencent AI assistant with chat, search, documents, and image generation.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://yuanbao.tencent.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Tencent Yuanbao",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Chinese Users",
+      "Search",
+      "Documents"
+    ]
+  },
+  {
+    "id": 1485,
+    "name": "BlueLM",
+    "description": "vivo's large language model for mobile and productivity scenarios. BlueLM powers AI features in vivo and iQOO devices with on-device and cloud capabilities for Chinese users.",
+    "description_en": "vivo large language model powering AI features on mobile devices.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://ai.vivo.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for BlueLM",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "Chinese"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Mobile Users",
+      "Chinese Users",
+      "On-Device AI"
+    ]
+  },
+  {
+    "id": 1486,
+    "name": "Meta AI",
+    "description": "Meta's general-purpose AI assistant integrated across Facebook, Instagram, WhatsApp, and Ray-Ban smart glasses. Meta AI offers real-time image generation and conversational search.",
+    "description_en": "Meta AI assistant integrated across social apps and smart glasses.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://www.meta.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Example use case for Meta AI",
+        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+      }
+    ],
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "Spanish",
+      "French",
+      "German"
+    ],
+    "rating": 4.3,
+    "rating_count": 150,
+    "rating_breakdown": {
+      "ease_of_use": {
+        "score": 4.2,
+        "note": "Clean interface with a short learning curve"
+      },
+      "output_quality": {
+        "score": 4.4,
+        "note": "High-quality results competitive with leading tools"
+      },
+      "features": {
+        "score": 4.3,
+        "note": "Rich feature set covering most professional workflows"
+      },
+      "value_for_money": {
+        "score": 4,
+        "note": "Flexible pricing tiers for individuals and teams"
+      },
+      "stability": {
+        "score": 4.3,
+        "note": "Reliable uptime and consistent performance"
+      },
+      "support": {
+        "score": 3.9,
+        "note": "Documentation and community support available"
+      }
+    },
+    "last_updated": "2026-07-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Social Media",
+      "General Users",
+      "Image Generation"
     ]
   }
 ]
