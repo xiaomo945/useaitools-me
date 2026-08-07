@@ -11,11 +11,11 @@
     "examples": [
       {
         "prompt": "A majestic dragon flying over a misty mountain at sunset, fantasy art style, highly detailed",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Cyberpunk cityscape with neon lights, rainy streets, cinematic lighting",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -71,11 +71,11 @@
     "examples": [
       {
         "prompt": "A cozy cabin in the woods during a snowstorm, warm lights glowing through windows",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1501854140884-074bf8968a5d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "An astronaut riding a horse on Mars, wearing a space suit, realistic photography",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -131,11 +131,11 @@
     "examples": [
       {
         "prompt": "Japanese garden in spring, cherry blossoms, traditional architecture, peaceful atmosphere",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Steampunk mechanical owl with intricate gears, Victorian style, studio photography",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1454165205744-3b78555e5572?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -191,11 +191,11 @@
     "examples": [
       {
         "prompt": "Modern coffee shop social media post design, warm colors, friendly vibe",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Professional business presentation template with clean design and blue accents",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -251,11 +251,11 @@
     "examples": [
       {
         "prompt": "Summarize this 30-minute team meeting transcript into key action items and decisions",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1537432376149-e84978be6b28?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Organize and structure these scattered project notes into a clear, actionable plan",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -311,11 +311,11 @@
     "examples": [
       {
         "prompt": "Write a professional email to request a meeting with a potential client for a product demo",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Draft a comprehensive blog post about the benefits of remote work for modern companies",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -371,11 +371,11 @@
     "examples": [
       {
         "prompt": "Write a function to validate email addresses with regex in TypeScript",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Refactor this messy Python script for better readability and performance",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -431,11 +431,11 @@
     "examples": [
       {
         "prompt": "Create a deep, authoritative voiceover for a nature documentary about African wildlife",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1534150034764-046bf225d3fa?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate a warm, friendly podcast intro with subtle background music",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1519892338195-f95e6a39cfae?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -491,11 +491,11 @@
     "examples": [
       {
         "prompt": "Remove the background from this video clip and replace with a futuristic cityscape",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Transform this footage into a cinematic slow-motion sequence with color grading",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1533158326339-7f3cf2404354?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -551,11 +551,11 @@
     "examples": [
       {
         "prompt": "Research and summarize the latest trends in AI-powered productivity tools for 2026",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Compare the features and pricing of top project management software with citations",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -611,11 +611,11 @@
     "examples": [
       {
         "prompt": "Transcribe this 2-hour podcast episode into text with timestamps and speaker identification",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Convert this Japanese audio file to English text with high accuracy",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -671,11 +671,11 @@
     "examples": [
       {
         "prompt": "Generate a cartoon video of a cute robot dancing in a cyberpunk city",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create an animated scene of a cozy coffee shop with steam rising from cups",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -731,11 +731,11 @@
     "examples": [
       {
         "prompt": "Debug this React component that's throwing a useState hook error",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Explain this complex algorithm and suggest optimizations",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -791,11 +791,11 @@
     "examples": [
       {
         "prompt": "Connect and summarize related notes about machine learning from my vault",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Extract key insights and create a mind map outline from this research paper",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -851,11 +851,11 @@
     "examples": [
       {
         "prompt": "Create an upbeat pop song about summer vacation with catchy chorus and guitar melody",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate a mellow jazz instrumental piece with piano and saxophone solo",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1537432376149-e84978be6b28?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -911,11 +911,11 @@
     "examples": [
       {
         "prompt": "Generate a video of a majestic whale swimming through bioluminescent deep ocean",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a cinematic scene of a futuristic Tokyo street with flying cars and neon lights",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -945,11 +945,11 @@
     "examples": [
       {
         "prompt": "Complete this C# async method for reading data from a database",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Suggest test cases for this user authentication function",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -979,11 +979,11 @@
     "examples": [
       {
         "prompt": "Generate a compelling product description for a new smartwatch with health monitoring features",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create engaging social media posts for a coffee brand launch campaign",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1039,11 +1039,11 @@
     "examples": [
       {
         "prompt": "Watercolor painting of a sunset over the ocean, soft brush strokes, warm colors",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "3D text effect \"DREAM\" floating in clouds, golden hour lighting, magical atmosphere",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1073,11 +1073,11 @@
     "examples": [
       {
         "prompt": "Write a thoughtful analysis of the ethical implications of artificial intelligence in healthcare",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Draft a creative short story about a time traveler who accidentally changes history",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1107,11 +1107,11 @@
     "examples": [
       {
         "prompt": "Write a research summary comparing renewable energy sources for a sustainability report",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1519682577862-22b62b24e493?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a detailed travel itinerary for a 7-day trip to Japan with cultural recommendations",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1141,11 +1141,11 @@
     "examples": [
       {
         "prompt": "Generate an SEO-optimized blog post about digital marketing strategies for small businesses",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Write compelling meta descriptions and headlines for an e-commerce website selling organic skincare products",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1175,11 +1175,11 @@
     "examples": [
       {
         "prompt": "Write a persuasive landing page copy for a SaaS project management tool",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1504198266287-1659872e6590?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create engaging video script ideas for a YouTube channel about personal finance",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1234,11 +1234,11 @@
     "examples": [
       {
         "prompt": "Paraphrase this academic paragraph about climate change into a more casual and engaging tone",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Expand and elaborate this brief bullet point summary into a comprehensive paragraph",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1268,11 +1268,11 @@
     "examples": [
       {
         "prompt": "Add automatic subtitles in English to this 5-minute product demo video and style them for social media",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Remove the background from this interview footage and replace it with a professional office background",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1326,11 +1326,11 @@
     "examples": [
       {
         "prompt": "Create a 12-week project plan for launching a new mobile app with tasks, milestones, and team assignments",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Take these 15 messy meeting notes and organize them into actionable tasks with priorities and due dates",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1386,11 +1386,11 @@
     "examples": [
       {
         "prompt": "I need to plan a wedding. Break this down into manageable tasks with priorities and suggested due dates",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Categorize and prioritize these 20 random tasks and suggest which ones I should do first today",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1499914485622-a88fac536970?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1446,11 +1446,11 @@
     "examples": [
       {
         "prompt": "Research the best cities to start a tech company in 2026, create a comparison table, and draft a business plan outline",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Plan a 3-week vacation to Europe with budget estimates, booking suggestions, and daily itinerary",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1480,11 +1480,11 @@
     "examples": [
       {
         "prompt": "Create an agent to research and summarize the latest developments in quantum computing for a tech blog",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1500964757637-c85e8a162699?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Deploy an agent to monitor competitor pricing and send weekly summary reports",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1514,11 +1514,11 @@
     "examples": [
       {
         "prompt": "Assemble a crew of AI agents to research, write, and edit a comprehensive e-book on sustainable living",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1484981038155-dba8c4a8a238?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a product development team with separate agents for market research, design, and technical specification",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1548,11 +1548,11 @@
     "examples": [
       {
         "prompt": "Optimize this blog post about \"remote work best practices\" for top Google rankings with keyword recommendations",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Analyze top-ranking competitors for \"AI project management tools\" and create a content strategy to outrank them",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1582,11 +1582,11 @@
     "examples": [
       {
         "prompt": "Create a comprehensive content brief for a guide to 'starting an online business in 2026' with all key sections",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Answer these 15 common questions about 'sustainable fashion' to create an FAQ section that ranks well",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1616,11 +1616,11 @@
     "examples": [
       {
         "prompt": "Conduct a content audit of my website and identify gaps that are preventing me from ranking for key terms",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a content cluster strategy for 'machine learning for beginners' to establish topical authority",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1650,11 +1650,11 @@
     "examples": [
       {
         "prompt": "Review this commercial lease agreement and flag potential issues and areas for negotiation",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Research precedent cases about intellectual property disputes in the software industry",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1684,11 +1684,11 @@
     "examples": [
       {
         "prompt": "Draft an employment contract for a senior software engineer position with standard clauses and protections",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Compare these two NDA agreements and highlight the key differences and their implications",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1718,11 +1718,11 @@
     "examples": [
       {
         "prompt": "Analyze my investment portfolio and suggest asset allocation adjustments based on my risk tolerance",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a 5-year financial plan for saving for a house down payment with monthly savings targets",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1752,11 +1752,11 @@
     "examples": [
       {
         "prompt": "Walk me through solving this calculus problem step by step and make sure I understand each concept",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a 2-week study plan for my upcoming chemistry exam on organic chemistry reactions",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1786,11 +1786,11 @@
     "examples": [
       {
         "prompt": "Practice a conversation in Spanish about ordering food at a restaurant with interactive feedback",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Explain why I made this grammar mistake in French and give me similar examples to practice",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1519337265831-281ec6cc8514?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1820,11 +1820,11 @@
     "examples": [
       {
         "prompt": "Turn my biology textbook chapter on cell division into interactive flashcards with diagrams",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate a practice test for my history exam on World War II with essay and multiple choice questions",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1495567720989-cebdbdd97913?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1854,11 +1854,11 @@
     "examples": [
       {
         "prompt": "Create a 3D model of a futuristic electric vehicle with smooth curves and metallic finish",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Design an animated 3D logo for a tech startup that rotates and has a glowing effect",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1888,11 +1888,11 @@
     "examples": [
       {
         "prompt": "Generate a 3D model of a cute fantasy creature with big eyes and fluffy tail, ready for game development",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Turn this 2D concept art of a castle into a fully textured 3D model",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1922,11 +1922,11 @@
     "examples": [
       {
         "prompt": "Create concept art for a medieval fantasy RPG character with detailed armor and weapon design",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate seamless texture maps for a sci-fi corridor wall with panel details and neon lights",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1956,11 +1956,11 @@
     "examples": [
       {
         "prompt": "Create an upbeat electronic track for a YouTube tech review video, 2 minutes long",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate a calm ambient background track for meditation app with nature sounds",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -1990,11 +1990,11 @@
     "examples": [
       {
         "prompt": "Compose an emotional orchestral piece for a dramatic movie scene, 3 minutes duration",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1550439062-609e1531270e?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a suspenseful thriller theme with building tension and mysterious atmosphere",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2024,11 +2024,11 @@
     "examples": [
       {
         "prompt": "Create a high-energy intro track for a gaming YouTube channel that builds excitement",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate background music for a cooking tutorial that's upbeat but not distracting",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2058,11 +2058,11 @@
     "examples": [
       {
         "prompt": "Have a conversation with Albert Einstein about the implications of AI on science and society",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1501854140884-074bf8968a5d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Role-play as a fantasy adventurer seeking advice from a wise wizard character",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2092,11 +2092,11 @@
     "examples": [
       {
         "prompt": "Get perspectives from different AI models on the future of renewable energy",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Use multiple AI assistants to help write, edit, and refine this research paper",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2126,11 +2126,11 @@
     "examples": [
       {
         "prompt": "Write 5 different cold email templates for B2B SaaS sales outreach with personalization",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create compelling LinkedIn carousel content about productivity tips for remote workers",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1526378787940-576a539ba69d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2160,11 +2160,11 @@
     "examples": [
       {
         "prompt": "Find high-quality images of \"minimalist workspace design\" for inspiration and generate variations",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Search for reference images and generate new concept art for a cyberpunk game character",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1537432376149-e84978be6b28?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2194,11 +2194,11 @@
     "examples": [
       {
         "prompt": "Create a product mockup of a smart speaker on a modern desk with clean aesthetic",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Edit this photo to change the background to a beautiful sunset over mountains",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2228,11 +2228,11 @@
     "examples": [
       {
         "prompt": "Create a motivational poster with the text \"DREAM BIG\" in bold, elegant typography with inspirational background",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Design a t-shirt graphic with \"AI 2026\" in futuristic lettering with tech-themed illustration",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2262,11 +2262,11 @@
     "examples": [
       {
         "prompt": "Create a professional voiceover for this corporate training video with clear, authoritative tone",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate an engaging audiobook narrator voice for children's story with warm, expressive delivery",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2321,11 +2321,11 @@
     "examples": [
       {
         "prompt": "Edit this podcast episode by removing filler words and improving the flow by editing the transcript",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Clone my voice to create a new recording of this script without me having to re-record",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2355,11 +2355,11 @@
     "examples": [
       {
         "prompt": "Use AI to automatically edit this 3-hour footage down to a 2-minute highlight reel with music matching",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Enhance this old footage by upscaling resolution and improving color and lighting automatically",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2389,11 +2389,11 @@
     "examples": [
       {
         "prompt": "Create a product demo video with an AI presenter explaining features and benefits",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1527953117672-8594b60c3ea0?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate training videos in 5 different languages using the same avatar and script",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1489370203487-0e5c6fd17f6a?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2423,11 +2423,11 @@
     "examples": [
       {
         "prompt": "Animate this photo of our CEO to deliver our company's holiday greeting message",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1502691876148-a84978e59af8?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a customer testimonial video with realistic AI-generated presenters",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2457,11 +2457,11 @@
     "examples": [
       {
         "prompt": "Generate comprehensive unit tests for this Python function to ensure 100% code coverage",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1484981038155-dba8c4a8a238?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Review this code and identify potential bugs, security issues, and performance bottlenecks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2491,11 +2491,11 @@
     "examples": [
       {
         "prompt": "Generate Python code to interact with AWS S3 bucket for file upload and download operations",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a Lambda function to process images uploaded to S3 and generate thumbnails automatically",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2525,11 +2525,11 @@
     "examples": [
       {
         "prompt": "Help me build a simple web application from scratch with HTML, CSS, and JavaScript",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Explain how this React hook works and walk me through implementing similar functionality",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2559,11 +2559,11 @@
     "examples": [
       {
         "prompt": "Turn these photos of my apartment into a 3D model for virtual staging and interior design",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1502691876148-a84978e59af8?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a 3D product showcase for our e-commerce site from multiple product photos",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2593,11 +2593,11 @@
     "examples": [
       {
         "prompt": "Create a 15-slide pitch deck for our AI startup with professional design and data visualization",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1537432376149-e84978be6b28?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Turn this research paper into an engaging presentation suitable for academic conferences",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2653,11 +2653,11 @@
     "examples": [
       {
         "prompt": "Tell the story of our company's journey with interactive visuals and embedded media",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create an interactive lesson plan for teaching climate change with engaging multimedia",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2713,11 +2713,11 @@
     "examples": [
       {
         "prompt": "Rewrite this work email to be more professional while maintaining a friendly tone",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Help me brainstorm and draft social media captions for our product launch campaign",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1519682577862-22b62b24e493?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2747,11 +2747,11 @@
     "examples": [
       {
         "prompt": "Research current events and summarize the latest developments in AI regulation",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Help me plan a trip to Tokyo with current flight prices and hotel recommendations",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2781,11 +2781,11 @@
     "examples": [
       {
         "prompt": "Find and deploy a pre-trained sentiment analysis model for customer reviews",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Fine-tune a language model on our company's documentation for internal chatbot",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2815,11 +2815,11 @@
     "examples": [
       {
         "prompt": "Build a RAG system that answers questions about our company's internal documentation",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1501612780327-45045538702b?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create an AI agent that can browse the web, research topics, and write comprehensive reports",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2849,11 +2849,11 @@
     "examples": [
       {
         "prompt": "Generate multiple design variations for this mobile app screen based on current trends",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497015289639-54688650d173?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a complete design system with consistent components and styling for our startup",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2883,11 +2883,11 @@
     "examples": [
       {
         "prompt": "Create templates for common customer support responses that I can personalize quickly",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1554080353-a576cf803bda?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Automate my recruiting outreach by personalizing messages based on candidate profiles",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2917,11 +2917,11 @@
     "examples": [
       {
         "prompt": "Create a training video for employee onboarding with a professional AI presenter",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate product demonstration videos in 10 different languages for global audience",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -2976,11 +2976,11 @@
     "examples": [
       {
         "prompt": "Create a TikTok-style short videos from longer content with AI-powered editing",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate social media videos with automatic captions and trendy effects",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -3010,11 +3010,11 @@
     "examples": [
       {
         "prompt": "Improve the clarity and tone of this business email while preserving the original message",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Translate this document from English to Chinese with natural, fluent translation",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -3044,11 +3044,11 @@
     "examples": [
       {
         "prompt": "Automate repetitive tasks on Mac with custom AI workflows",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Get quick answers to questions without leaving your workflow",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -3078,11 +3078,11 @@
     "examples": [
       {
         "prompt": "Chat with AI about my codebase to understand and refactor",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Get explanations of complex code and debug issues",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -3117,7 +3117,7 @@
     "examples": [
       {
         "prompt": "写一篇关于人工智能发展的文章",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "description_en": "智谱AI开发的多模态对话助手，支持文本、图像、代码等多种能力 This versatile tool offers advanced features for professionals and beginners alike.",
@@ -3148,7 +3148,7 @@
     "examples": [
       {
         "prompt": "帮我生成一段产品文案",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "description_en": "百度开发的AI大语言模型，支持文本生成、代码、图像等能力 This versatile tool offers advanced features for professionals and beginners alike.",
@@ -3179,7 +3179,7 @@
     "examples": [
       {
         "prompt": "帮我分析一下这个数据",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1526312426976-f4d754fa9bd6?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "description_en": "阿里云开发的AI大模型，支持文本、代码、图像等多种能力 This versatile tool offers advanced features for professionals and beginners alike.",
@@ -3209,11 +3209,11 @@
     "examples": [
       {
         "prompt": "Turn my blog article into a short video with automatic captions",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create engaging social media videos from my long-form content",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1521110258879-a18a08258744?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "rating": 4.5,
@@ -3263,11 +3263,11 @@
     "examples": [
       {
         "prompt": "Write a compelling blog post about the future of AI-assisted content creation",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Writer+Coming+Soon"
+        "image_url": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate a professional email campaign for a SaaS product launch",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Writer+Coming+Soon"
+        "image_url": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -20689,11 +20689,11 @@
     "examples": [
       {
         "prompt": "Draft a polite response declining a meeting request",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Summarize this thread of 20+ emails",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -20763,11 +20763,11 @@
     "examples": [
       {
         "prompt": "Write 10 variations of a Facebook ad headline for fitness gear",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a complete email marketing sequence for product launch",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -20837,11 +20837,11 @@
     "examples": [
       {
         "prompt": "Cyberpunk cityscape at night with neon lights and rain-soaked streets",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Photorealistic portrait in natural golden hour lighting",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -20911,11 +20911,11 @@
     "examples": [
       {
         "prompt": "Dragon flying over a fantasy castle at sunset, cinematic 4K",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Animate this static image into a smooth looping video",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -20985,11 +20985,11 @@
     "examples": [
       {
         "prompt": "Upbeat pop song about summer vacation, 80's style",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Epic orchestral film score with dramatic buildups",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21059,11 +21059,11 @@
     "examples": [
       {
         "prompt": "Build a complete REST API with authentication and database",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Fix the bugs in this code and add proper error handling",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21133,11 +21133,11 @@
     "examples": [
       {
         "prompt": "Create 5 Instagram captions for a coffee shop launch",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate hashtag suggestions for fitness content",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21207,11 +21207,11 @@
     "examples": [
       {
         "prompt": "Create a week of Instagram posts for a fashion brand",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate AI captions for product photography",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21281,11 +21281,11 @@
     "examples": [
       {
         "prompt": "Generate SEO-optimized title for tech review video",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create YouTube description with timestamps",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21355,11 +21355,11 @@
     "examples": [
       {
         "prompt": "Find trending keywords in tech niche",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Analyze competitor video strategy",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21429,11 +21429,11 @@
     "examples": [
       {
         "prompt": "Create abstract landscape painting for office wall art",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate minimalist poster design in 300 DPI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21503,11 +21503,11 @@
     "examples": [
       {
         "prompt": "Convert this 20-page document to audiobook",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate audiobook chapter with emotional narration",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21577,11 +21577,11 @@
     "examples": [
       {
         "prompt": "Write Terraform module for AWS VPC setup",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate GitHub Actions workflow for deployment",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21651,11 +21651,11 @@
     "examples": [
       {
         "prompt": "Show me all running Docker containers",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Find and kill process on port 3000",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1554080353-a576cf803bda?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21725,11 +21725,11 @@
     "examples": [
       {
         "prompt": "Create onboarding video with AI presenter",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1521110258879-a18a08258744?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate compliance training video in 5 languages",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21799,11 +21799,11 @@
     "examples": [
       {
         "prompt": "Optimize this cold outreach email for higher response",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Write follow-up email after demo call",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21873,11 +21873,11 @@
     "examples": [
       {
         "prompt": "Create 5-touch email sequence for SaaS demo",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Write cold call script for enterprise software",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -21947,11 +21947,11 @@
     "examples": [
       {
         "prompt": "Auto-schedule my week with 3 client projects",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Prioritize tasks for deadline-driven sprint",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22021,11 +22021,11 @@
     "examples": [
       {
         "prompt": "Generate proposal for website redesign project",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create invoice for completed milestone",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22095,11 +22095,11 @@
     "examples": [
       {
         "prompt": "Forecast Q1 inventory needs for retail store",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506104489822-562ca2419138?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate reorder recommendations based on trends",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22169,11 +22169,11 @@
     "examples": [
       {
         "prompt": "Generate purchase order for next month",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Identify slow-moving inventory items",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22243,11 +22243,11 @@
     "examples": [
       {
         "prompt": "Transcribe and summarize client meeting",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Extract action items from sprint planning",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22317,11 +22317,11 @@
     "examples": [
       {
         "prompt": "Create investor pitch deck from outline",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Design marketing strategy presentation",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22391,11 +22391,11 @@
     "examples": [
       {
         "prompt": "Create project proposal document from notes",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate interactive product demo page",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22465,11 +22465,11 @@
     "examples": [
       {
         "prompt": "Generate cinematic product commercial",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Animate still image with camera movement",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22539,11 +22539,11 @@
     "examples": [
       {
         "prompt": "Remove background noise during Zoom call",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Clean up recorded podcast audio",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22613,11 +22613,11 @@
     "examples": [
       {
         "prompt": "Rewrite this email to sound more professional",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Simplify this technical paragraph for general audience",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22687,11 +22687,11 @@
     "examples": [
       {
         "prompt": "Remove background from product photo",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1512499617640-c2f9990e8405?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Upscale low-res image to 4K quality",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22761,11 +22761,11 @@
     "examples": [
       {
         "prompt": "Create product photo with white background",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate lifestyle scene for jewelry product",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22835,11 +22835,11 @@
     "examples": [
       {
         "prompt": "Extract 10 viral clips from 1-hour podcast",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create Shorts from tech review video",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22909,11 +22909,11 @@
     "examples": [
       {
         "prompt": "Enhance this phone recording to studio quality",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Remove echo from conference room recording",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -22983,11 +22983,11 @@
     "examples": [
       {
         "prompt": "Explain how this React hook works",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1484981038155-dba8c4a8a238?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate unit tests for this API endpoint",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23057,11 +23057,11 @@
     "examples": [
       {
         "prompt": "Organize my research notes by topic",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Find all notes related to project X",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23131,11 +23131,11 @@
     "examples": [
       {
         "prompt": "Transcribe and summarize sales meeting",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Extract action items from team standup",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23205,11 +23205,11 @@
     "examples": [
       {
         "prompt": "Generate project plan from description",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create mind map for marketing campaign",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23279,11 +23279,11 @@
     "examples": [
       {
         "prompt": "Write literature review section with citations",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate abstract for research paper",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23353,11 +23353,11 @@
     "examples": [
       {
         "prompt": "Write LinkedIn post about AI trends",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Rewrite this paragraph for clarity",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1534150034764-046bf225d3fa?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23427,11 +23427,11 @@
     "examples": [
       {
         "prompt": "Convert blog post to YouTube video",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create TikTok video from product description",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23501,11 +23501,11 @@
     "examples": [
       {
         "prompt": "Generate social media post from prompt",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Edit photo with AI Magic Edit",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23575,11 +23575,11 @@
     "examples": [
       {
         "prompt": "Generate logo for tech startup",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create complete brand identity kit",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23649,11 +23649,11 @@
     "examples": [
       {
         "prompt": "Generate a dashboard with charts and sidebar",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1502691876148-a84978e59af8?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Create a pricing page with three tiers",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23723,11 +23723,11 @@
     "examples": [
       {
         "prompt": "Fix null pointer exception in user service",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Add input validation to login form",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23797,11 +23797,11 @@
     "examples": [
       {
         "prompt": "Clone voice for video narration",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate audiobook chapter with emotion",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23871,11 +23871,11 @@
     "examples": [
       {
         "prompt": "Create upbeat background music for vlog",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate cinematic score for short film",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -23945,11 +23945,11 @@
     "examples": [
       {
         "prompt": "Transcribe lecture and create study guide",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate flashcards from meeting notes",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1519337265831-281ec6cc8514?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -24019,11 +24019,11 @@
     "examples": [
       {
         "prompt": "Find that website I visited last week",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1534150034764-046bf225d3fa?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "What did I discuss about pricing last month?",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -24093,11 +24093,11 @@
     "examples": [
       {
         "prompt": "Generate cinematic drone shot over mountains",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Animate product photo into 3D showcase",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -24167,11 +24167,11 @@
     "examples": [
       {
         "prompt": "Create 30-second product commercial",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Generate nature scene with flowing water",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "ratings": {
@@ -29075,7 +29075,7 @@
     "examples": [
       {
         "prompt": "Example usage of GroupGrowth AI for Productivity tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29131,7 +29131,7 @@
     "examples": [
       {
         "prompt": "Example usage of GroupAnalytics Pro for Productivity tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29187,7 +29187,7 @@
     "examples": [
       {
         "prompt": "Example usage of PinAI Creator for Video tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29243,7 +29243,7 @@
     "examples": [
       {
         "prompt": "Example usage of PinOptimizer AI for Video tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29299,7 +29299,7 @@
     "examples": [
       {
         "prompt": "Example usage of BookCover AI for Image tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29355,7 +29355,7 @@
     "examples": [
       {
         "prompt": "Example usage of CoverGenius Pro for Image tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29411,7 +29411,7 @@
     "examples": [
       {
         "prompt": "Example usage of MeditationVoice AI for Audio tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29467,7 +29467,7 @@
     "examples": [
       {
         "prompt": "Example usage of ZenSoundscapes AI for Audio tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29523,7 +29523,7 @@
     "examples": [
       {
         "prompt": "Example usage of ChainCode AI for Code tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1534150034764-046bf225d3fa?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29579,7 +29579,7 @@
     "examples": [
       {
         "prompt": "Example usage of Web3 Builder AI for Code tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29635,7 +29635,7 @@
     "examples": [
       {
         "prompt": "Example usage of SEOContent AI for Writing tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29691,7 +29691,7 @@
     "examples": [
       {
         "prompt": "Example usage of RankMaster AI for Writing tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29747,7 +29747,7 @@
     "examples": [
       {
         "prompt": "Example usage of WebinarAI Creator for Productivity tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29803,7 +29803,7 @@
     "examples": [
       {
         "prompt": "Example usage of WebinarEngage AI for Productivity tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29859,7 +29859,7 @@
     "examples": [
       {
         "prompt": "Example usage of TeamFlow Free for Productivity tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1512499617640-c2f9990e8405?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29915,7 +29915,7 @@
     "examples": [
       {
         "prompt": "Example usage of StartupSuite AI for Productivity tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -29971,7 +29971,7 @@
     "examples": [
       {
         "prompt": "Example usage of SocialInsight AI for Productivity tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30027,7 +30027,7 @@
     "examples": [
       {
         "prompt": "Example usage of SocialPredict AI for Productivity tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30083,7 +30083,7 @@
     "examples": [
       {
         "prompt": "Example usage of VideoScript AI for Video tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1518676590629-3dcba9c5a550?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30139,7 +30139,7 @@
     "examples": [
       {
         "prompt": "Example usage of ThumbnailMaster AI for Image tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30195,7 +30195,7 @@
     "examples": [
       {
         "prompt": "Example usage of CodeReview AI for Code tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30251,7 +30251,7 @@
     "examples": [
       {
         "prompt": "Example usage of PodcastGuest AI for Audio tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30307,7 +30307,7 @@
     "examples": [
       {
         "prompt": "Example usage of EmailCopy AI for Writing tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30363,7 +30363,7 @@
     "examples": [
       {
         "prompt": "Example usage of ContentCalendar AI for Productivity tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30419,7 +30419,7 @@
     "examples": [
       {
         "prompt": "Example usage of AIContract Reviewer for Writing tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30475,7 +30475,7 @@
     "examples": [
       {
         "prompt": "Example usage of MobileDev AI for Code tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30531,7 +30531,7 @@
     "examples": [
       {
         "prompt": "Example usage of CaptionGenius AI for Writing tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30587,7 +30587,7 @@
     "examples": [
       {
         "prompt": "Example usage of AdCopyMaster AI for Writing tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30643,7 +30643,7 @@
     "examples": [
       {
         "prompt": "Example usage of CourseCreator AI for Productivity tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30699,7 +30699,7 @@
     "examples": [
       {
         "prompt": "Example usage of ProductPhoto AI for Image tasks",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30754,7 +30754,7 @@
     "examples": [
       {
         "prompt": "Example usage of VideoEditor Pro AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30809,7 +30809,7 @@
     "examples": [
       {
         "prompt": "Example usage of GrammarChecker Pro",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30864,7 +30864,7 @@
     "examples": [
       {
         "prompt": "Example usage of AvatarVideo AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30919,7 +30919,7 @@
     "examples": [
       {
         "prompt": "Example usage of CourseBuilder AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1506104489822-562ca2419138?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -30974,7 +30974,7 @@
     "examples": [
       {
         "prompt": "Example usage of RemoteTeam AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31029,7 +31029,7 @@
     "examples": [
       {
         "prompt": "Example usage of FeedbackAnalyze AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31084,7 +31084,7 @@
     "examples": [
       {
         "prompt": "Example usage of LinkedInAd AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31139,7 +31139,7 @@
     "examples": [
       {
         "prompt": "Example usage of LogoDesign AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1526312426976-f4d754fa9bd6?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31194,7 +31194,7 @@
     "examples": [
       {
         "prompt": "Example usage of VoiceClone AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31250,7 +31250,7 @@
     "examples": [
       {
         "prompt": "Example usage of MobileDev Assistant",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31305,7 +31305,7 @@
     "examples": [
       {
         "prompt": "Example usage of NewsletterWriter AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1552581234-26160f608093?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31360,7 +31360,7 @@
     "examples": [
       {
         "prompt": "Example usage of SynthesiaPro AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31415,7 +31415,7 @@
     "examples": [
       {
         "prompt": "Example usage of HeyGen Video AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1501854140884-074bf8968a5d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31470,7 +31470,7 @@
     "examples": [
       {
         "prompt": "Example usage of ElaiStudio AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1489370203487-0e5c6fd17f6a?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31525,7 +31525,7 @@
     "examples": [
       {
         "prompt": "Example usage of TrainingCourse AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31580,7 +31580,7 @@
     "examples": [
       {
         "prompt": "Example usage of CoverGenius AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31635,7 +31635,7 @@
     "examples": [
       {
         "prompt": "Example usage of Web3Builder AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Generated+Image"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ]
   },
@@ -31651,11 +31651,11 @@
     "examples": [
       {
         "prompt": "Use DeepWrite AI to create content",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of DeepWrite AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -31685,11 +31685,11 @@
     "examples": [
       {
         "prompt": "Use PixelForge Pro to generate visuals",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of PixelForge Pro for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -31719,11 +31719,11 @@
     "examples": [
       {
         "prompt": "Use TaskFlow AI to boost productivity",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of TaskFlow AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -31753,11 +31753,11 @@
     "examples": [
       {
         "prompt": "Use CodeGenius X to write code",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506104489822-562ca2419138?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of CodeGenius X for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -31787,11 +31787,11 @@
     "examples": [
       {
         "prompt": "Use SoundCraft AI to produce audio",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of SoundCraft AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -31821,11 +31821,11 @@
     "examples": [
       {
         "prompt": "Use VideoFlow Studio to edit videos",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of VideoFlow Studio for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -31855,11 +31855,11 @@
     "examples": [
       {
         "prompt": "Use MindWrite AI to create content",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of MindWrite AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -31889,11 +31889,11 @@
     "examples": [
       {
         "prompt": "Use ArtVerse Creator to generate visuals",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of ArtVerse Creator for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -31923,11 +31923,11 @@
     "examples": [
       {
         "prompt": "Use FocusPilot AI to boost productivity",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of FocusPilot AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -31957,11 +31957,11 @@
     "examples": [
       {
         "prompt": "Use DevFlow AI to write code",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of DevFlow AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -31991,11 +31991,11 @@
     "examples": [
       {
         "prompt": "Use VoiceMaster Pro to produce audio",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1521110258879-a18a08258744?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of VoiceMaster Pro for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32025,11 +32025,11 @@
     "examples": [
       {
         "prompt": "Use CineAI Creator to edit videos",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of CineAI Creator for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -32059,11 +32059,11 @@
     "examples": [
       {
         "prompt": "Use CopyFlow AI to create content",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of CopyFlow AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32093,11 +32093,11 @@
     "examples": [
       {
         "prompt": "Use DesignForge AI to generate visuals",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of DesignForge AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -32127,11 +32127,11 @@
     "examples": [
       {
         "prompt": "Use MeetAI Assistant to boost productivity",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of MeetAI Assistant for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1519892338195-f95e6a39cfae?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32161,11 +32161,11 @@
     "examples": [
       {
         "prompt": "Use APIForge AI to write code",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1500916434205-0c77489c6cf7?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of APIForge AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1519120944692-1a8d8cfc107f?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -32195,11 +32195,11 @@
     "examples": [
       {
         "prompt": "Use PodcastAI Pro to produce audio",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497015289639-54688650d173?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of PodcastAI Pro for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -32229,11 +32229,11 @@
     "examples": [
       {
         "prompt": "Use ReelForge AI to edit videos",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of ReelForge AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32263,11 +32263,11 @@
     "examples": [
       {
         "prompt": "Use ResearchWrite AI to create content",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of ResearchWrite AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32297,11 +32297,11 @@
     "examples": [
       {
         "prompt": "Use GameArt AI to generate visuals",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1513077409594-482060876355?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of GameArt AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32331,11 +32331,11 @@
     "examples": [
       {
         "prompt": "Use CalendarAI Pro to boost productivity",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of CalendarAI Pro for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32365,11 +32365,11 @@
     "examples": [
       {
         "prompt": "Use SecurityAI Coder to write code",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of SecurityAI Coder for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32399,11 +32399,11 @@
     "examples": [
       {
         "prompt": "Use MusicForge AI to produce audio",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of MusicForge AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32433,11 +32433,11 @@
     "examples": [
       {
         "prompt": "Use DocumentaryAI to edit videos",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of DocumentaryAI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32467,11 +32467,11 @@
     "examples": [
       {
         "prompt": "Use EmailFlow AI to create content",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of EmailFlow AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -32501,11 +32501,11 @@
     "examples": [
       {
         "prompt": "Use FashionAI Design to generate visuals",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of FashionAI Design for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -32535,11 +32535,11 @@
     "examples": [
       {
         "prompt": "Use HealthTrack AI to boost productivity",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of HealthTrack AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32569,11 +32569,11 @@
     "examples": [
       {
         "prompt": "Use DataForge AI to write code",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of DataForge AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -32603,11 +32603,11 @@
     "examples": [
       {
         "prompt": "Use VoiceOver AI to produce audio",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of VoiceOver AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32637,11 +32637,11 @@
     "examples": [
       {
         "prompt": "Use AdVideo AI to edit videos",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of AdVideo AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1512499617640-c2f9990e8405?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32671,11 +32671,11 @@
     "examples": [
       {
         "prompt": "Use ResumeAI Pro to create content",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of ResumeAI Pro for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32705,11 +32705,11 @@
     "examples": [
       {
         "prompt": "Use UIForge AI to generate visuals",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518773553398-650c184e0bb3?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of UIForge AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32739,11 +32739,11 @@
     "examples": [
       {
         "prompt": "Use LearningAI Coach to boost productivity",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of LearningAI Coach for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32773,11 +32773,11 @@
     "examples": [
       {
         "prompt": "Use TestAI Pro to write code",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of TestAI Pro for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -32807,11 +32807,11 @@
     "examples": [
       {
         "prompt": "Use AudioBook AI to produce audio",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1550439062-609e1531270e?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of AudioBook AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -32841,11 +32841,11 @@
     "examples": [
       {
         "prompt": "Use FilmForge AI to edit videos",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of FilmForge AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1495567720989-cebdbdd97913?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -32875,11 +32875,11 @@
     "examples": [
       {
         "prompt": "Use ContentAI Writer to create content",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of ContentAI Writer for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32909,11 +32909,11 @@
     "examples": [
       {
         "prompt": "Use ArchitectureAI to generate visuals",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of ArchitectureAI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1501854140884-074bf8968a5d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -32943,11 +32943,11 @@
     "examples": [
       {
         "prompt": "Use FinanceAI Pro to boost productivity",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of FinanceAI Pro for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -32977,11 +32977,11 @@
     "examples": [
       {
         "prompt": "Use CloudForge AI to write code",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       },
       {
         "prompt": "Advanced usage of CloudForge AI for professional results",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Demo"
+        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": true,
@@ -68917,7 +68917,7 @@
     "examples": [
       {
         "prompt": "Example use case for PixVerse",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1481207801830-97f0f9a03aee?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -68973,7 +68973,7 @@
     "examples": [
       {
         "prompt": "Example use case for Stable Audio 2.0",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69029,7 +69029,7 @@
     "examples": [
       {
         "prompt": "Example use case for Devin",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69085,7 +69085,7 @@
     "examples": [
       {
         "prompt": "Example use case for Microsoft Copilot Pro",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69145,7 +69145,7 @@
     "examples": [
       {
         "prompt": "Example use case for Kimi AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69202,7 +69202,7 @@
     "examples": [
       {
         "prompt": "Example use case for Doubao",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69259,7 +69259,7 @@
     "examples": [
       {
         "prompt": "Example use case for Hunyuan",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69316,7 +69316,7 @@
     "examples": [
       {
         "prompt": "Example use case for Kapwing",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69372,7 +69372,7 @@
     "examples": [
       {
         "prompt": "Example use case for Wondershare Filmora AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69431,7 +69431,7 @@
     "examples": [
       {
         "prompt": "Example use case for Captions AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69487,7 +69487,7 @@
     "examples": [
       {
         "prompt": "Example use case for Syllaby",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69543,7 +69543,7 @@
     "examples": [
       {
         "prompt": "Example use case for InShot AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1533158326339-7f3cf2404354?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69601,7 +69601,7 @@
     "examples": [
       {
         "prompt": "Example use case for Submagic",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69660,7 +69660,7 @@
     "examples": [
       {
         "prompt": "Example use case for Kits AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1512790182412-b19e6d62bc39?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69716,7 +69716,7 @@
     "examples": [
       {
         "prompt": "Example use case for Lalal.ai",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69772,7 +69772,7 @@
     "examples": [
       {
         "prompt": "Example use case for Spark Desk",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69829,7 +69829,7 @@
     "examples": [
       {
         "prompt": "Example use case for Baichuan",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69886,7 +69886,7 @@
     "examples": [
       {
         "prompt": "Example use case for Tencent Yuanbao",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69942,7 +69942,7 @@
     "examples": [
       {
         "prompt": "Example use case for BlueLM",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,
@@ -69998,7 +69998,7 @@
     "examples": [
       {
         "prompt": "Example use case for Meta AI",
-        "image_url": "https://placehold.co/600x400/1a1a2e/eee?text=AI+Tool"
+        "image_url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
     "needs_vpn": false,

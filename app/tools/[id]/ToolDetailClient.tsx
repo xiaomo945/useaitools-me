@@ -485,6 +485,13 @@ const ScreenshotGallery = ({ tool, colors }: { tool: Tool; colors: ReturnType<ty
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
             loading="lazy"
             decoding="async"
+            referrerPolicy="no-referrer"
+            onError={(e) => {
+              const el = e.currentTarget;
+              if (el.dataset.fb === '1') return;
+              el.dataset.fb = '1';
+              el.src = 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&h=900&fit=crop';
+            }}
           />
           
           {/* Navigation Arrows */}
@@ -532,6 +539,13 @@ const ScreenshotGallery = ({ tool, colors }: { tool: Tool; colors: ReturnType<ty
                   className="w-full h-full object-cover"
                   loading="lazy"
                   decoding="async"
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    const el = e.currentTarget;
+                    if (el.dataset.fb === '1') return;
+                    el.dataset.fb = '1';
+                    el.src = 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=400&fit=crop';
+                  }}
                 />
               </button>
             ))}
@@ -555,6 +569,13 @@ const ScreenshotGallery = ({ tool, colors }: { tool: Tool; colors: ReturnType<ty
               src={screenshots[currentImageIndex]}
               alt={`${tool.name} screenshot ${currentImageIndex + 1}`}
               className="w-full h-full object-contain rounded-lg"
+              referrerPolicy="no-referrer"
+              onError={(e) => {
+                const el = e.currentTarget;
+                if (el.dataset.fb === '1') return;
+                el.dataset.fb = '1';
+                el.src = 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&h=900&fit=crop';
+              }}
             />
             
             {screenshots.length > 1 && (
