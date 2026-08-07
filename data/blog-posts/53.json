@@ -11,16 +11,18 @@
   "featured": true,
   "images": [
     {
-      "url": "/blog-images/blog-53-header.webp",
+      "url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=630&fit=crop",
       "alt": "Person struggling with blank screen while writing content, contrasted with AI writing assistant",
       "caption": "Sound familiar? You're not alone.",
-      "position": "header"
+      "position": "header",
+      "image_url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=630&fit=crop"
     },
     {
-      "url": "/blog-images/blog-53-mid.webp",
+      "url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&h=630&fit=crop",
       "alt": "5 signs checklist showing when it's time to adopt an AI writing tool",
       "caption": "If 3+ of these apply to you, it's time to make the switch.",
-      "position": "mid"
+      "position": "mid",
+      "image_url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&h=630&fit=crop"
     },
     {
       "url": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=400&fit=crop&article=53&hash=zi15fzc7y8",

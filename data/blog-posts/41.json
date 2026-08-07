@@ -11,16 +11,18 @@
   "featured": true,
   "images": [
     {
-      "url": "/blog-images/blog-41-header.webp",
+      "url": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&h=630&fit=crop",
       "alt": "AI video editing tools comparison banner showing modern editing interface with timeline and AI features",
       "caption": "Transform your video workflow with AI in 2026",
-      "position": "header"
+      "position": "header",
+      "image_url": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&h=630&fit=crop"
     },
     {
-      "url": "/blog-images/blog-41-mid.webp",
+      "url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=630&fit=crop",
       "alt": "Video editing timeline comparison showing manual vs AI-assisted workflow",
       "caption": "AI editing saves 80% of traditional editing time",
-      "position": "mid"
+      "position": "mid",
+      "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=630&fit=crop"
     },
     {
       "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop&article=41&hash=0f76dzcqngur",

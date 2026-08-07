@@ -11,16 +11,18 @@
   "featured": true,
   "images": [
     {
-      "url": "/blog-images/blog-44-header.webp",
+      "url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&fit=crop",
       "alt": "AI productivity workflow dashboard showing multiple connected apps and time-saving metrics",
       "caption": "Automate your workflow and reclaim 10+ hours per week",
-      "position": "header"
+      "position": "header",
+      "image_url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&fit=crop"
     },
     {
-      "url": "/blog-images/blog-44-mid.webp",
+      "url": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1200&h=630&fit=crop",
       "alt": "Productivity comparison chart showing hours saved per week with AI tools vs manual workflows",
       "caption": "Real data: AI tools save an average of 12 hours per week",
-      "position": "mid"
+      "position": "mid",
+      "image_url": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1200&h=630&fit=crop"
     },
     {
       "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&article=44&hash=10duc798qs2p",

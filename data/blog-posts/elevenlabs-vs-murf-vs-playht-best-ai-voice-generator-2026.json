@@ -10,6 +10,25 @@
   "author": "Use AI Tools Team",
   "reading_time": "10 min",
   "thumbnail": "",
-  "images": [],
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1200&h=630&fit=crop",
+      "alt": "ElevenLabs vs Murf vs Play.ht: Best AI Voice Generator 2026 header banner – Audio category",
+      "caption": "Illustration for ElevenLabs vs Murf vs Play.ht: Best AI Voice Generator 2026",
+      "position": "header"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1200&h=630&fit=crop",
+      "alt": "ElevenLabs vs Murf vs Play.ht: Best AI Voice Generator 2026 section illustration – Audio category",
+      "caption": "Mid-article visual supporting key points",
+      "position": "mid"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&h=630&fit=crop",
+      "alt": "ElevenLabs vs Murf vs Play.ht: Best AI Voice Generator 2026 call-to-action visual – Audio category",
+      "caption": "Call to action section image",
+      "position": "cta"
+    }
+  ],
   "canonical_slug": "elevenlabs-vs-murf-vs-play-ht-best-ai-voice-generator-2026"
 }

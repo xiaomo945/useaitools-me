@@ -10,5 +10,24 @@
   "author": "Use AI Tools Team",
   "reading_time": "9 min",
   "thumbnail": "",
-  "images": []
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200&h=630&fit=crop",
+      "alt": "Best AI Video Tools for Twitter Live in 2026 header banner – Video category",
+      "caption": "Illustration for Best AI Video Tools for Twitter Live in 2026",
+      "position": "header"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&h=630&fit=crop",
+      "alt": "Best AI Video Tools for Twitter Live in 2026 section illustration – Video category",
+      "caption": "Mid-article visual supporting key points",
+      "position": "mid"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=630&fit=crop",
+      "alt": "Best AI Video Tools for Twitter Live in 2026 call-to-action visual – Video category",
+      "caption": "Call to action section image",
+      "position": "cta"
+    }
+  ]
 }

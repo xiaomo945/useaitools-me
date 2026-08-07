@@ -10,5 +10,24 @@
   "author": "Use AI Tools Team",
   "reading_time": "14 min",
   "thumbnail": "",
-  "images": []
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&h=630&fit=crop",
+      "alt": "Best AI Code Tools for DevOps Engineers in 2026 header banner – Code category",
+      "caption": "Illustration for Best AI Code Tools for DevOps Engineers in 2026",
+      "position": "header"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=630&fit=crop",
+      "alt": "Best AI Code Tools for DevOps Engineers in 2026 section illustration – Code category",
+      "caption": "Mid-article visual supporting key points",
+      "position": "mid"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=630&fit=crop",
+      "alt": "Best AI Code Tools for DevOps Engineers in 2026 call-to-action visual – Code category",
+      "caption": "Call to action section image",
+      "position": "cta"
+    }
+  ]
 }

@@ -9,6 +9,7 @@ import { track } from '@/lib/analytics';
 import { formatRelativeDate } from '@/lib/format';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ReadingProgress from '@/app/components/ReadingProgress';
+import ImageFallbackHandler from './ImageFallbackHandler';
 
 type BlogImage = {
   url: string;
@@ -65,15 +66,21 @@ const calculateReadTime = (content: string): { minutes: number; display: string 
   };
 };
 
+const FALLBACK_BLOG_IMAGE = 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&h=630&fit=crop';
+
 // Helper function to render a single blog image
 const renderBlogImage = (image: BlogImage, index: number) => {
+  const src = image.url || FALLBACK_BLOG_IMAGE;
+  const fallbackOnError = `this.onerror=null;this.src='${FALLBACK_BLOG_IMAGE}';this.removeAttribute('onerror');`;
   return `<figure class="relative my-8">
     <img
-      src="${image.url}"
-      alt="${image.alt}"
-      class="w-full max-w-full h-auto rounded-xl shadow-lg"
+      src="${src}"
+      alt="${image.alt || 'Blog illustration'}"
+      class="w-full max-w-full h-auto rounded-xl shadow-lg bg-slate-100 dark:bg-gray-800"
       loading="lazy"
       decoding="async"
+      referrerpolicy="no-referrer"
+      onerror="if(window.__blogImgFallback)return;window.__blogImgFallback=true;${fallbackOnError}"
     />
     ${image.caption ? `<figcaption class="mt-3 text-center text-sm text-slate-500 dark:text-gray-400 italic">${image.caption}</figcaption>` : ''}
   </figure>`;
@@ -330,6 +337,7 @@ export default function ClientBlogDetail({
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-10 sm:py-16 grid-background">
+      <ImageFallbackHandler />
       <ReadingProgress />
       <div className="max-w-6xl mx-auto px-3 sm:px-6">
         {/* Breadcrumbs */}

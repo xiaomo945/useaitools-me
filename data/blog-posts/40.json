@@ -11,16 +11,18 @@
   "featured": true,
   "images": [
     {
-      "url": "/blog-images/blog-40-header.webp",
+      "url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop",
       "alt": "10 Best AI Writing Tools comparison banner for 2026 with modern interface screenshots",
       "caption": "The complete lineup of 2026's top AI writing tools",
-      "position": "header"
+      "position": "header",
+      "image_url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop"
     },
     {
-      "url": "/blog-images/blog-40-mid.webp",
+      "url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=630&fit=crop",
       "alt": "Feature comparison table showing pricing and capabilities of AI writing tools",
       "caption": "Side-by-side comparison across all budget tiers",
-      "position": "mid"
+      "position": "mid",
+      "image_url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=630&fit=crop"
     },
     {
       "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop&article=40&hash=s4555cl7fjf",

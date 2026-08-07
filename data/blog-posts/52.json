@@ -11,16 +11,18 @@
   "featured": true,
   "images": [
     {
-      "url": "/blog-images/blog-52-header.webp",
+      "url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop",
       "alt": "Use AI Writer product preview showing AI writing interface with clean modern design and multilingual support",
       "caption": "Our journey from AI tool directory to building our own tool",
-      "position": "header"
+      "position": "header",
+      "image_url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop"
     },
     {
-      "url": "/blog-images/blog-52-mid.webp",
+      "url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=630&fit=crop",
       "alt": "Comparison chart showing Use AI Writer pricing and features vs established AI writing tools",
       "caption": "Where the current market falls short",
-      "position": "mid"
+      "position": "mid",
+      "image_url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=630&fit=crop"
     },
     {
       "url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=400&fit=crop&article=52&hash=dlfemr6ukq",

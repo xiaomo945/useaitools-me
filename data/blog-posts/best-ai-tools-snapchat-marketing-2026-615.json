@@ -10,6 +10,25 @@
   "author": "Use AI Tools Team",
   "reading_time": "10 min",
   "thumbnail": "",
-  "images": [],
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1200&h=630&fit=crop",
+      "alt": "Best AI Tools for Snapchat Marketing in 2026 header banner – Productivity category",
+      "caption": "Illustration for Best AI Tools for Snapchat Marketing in 2026",
+      "position": "header"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop",
+      "alt": "Best AI Tools for Snapchat Marketing in 2026 section illustration – Productivity category",
+      "caption": "Mid-article visual supporting key points",
+      "position": "mid"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=630&fit=crop",
+      "alt": "Best AI Tools for Snapchat Marketing in 2026 call-to-action visual – Productivity category",
+      "caption": "Call to action section image",
+      "position": "cta"
+    }
+  ],
   "canonical_slug": "best-ai-tools-snapchat-marketing-2026"
 }

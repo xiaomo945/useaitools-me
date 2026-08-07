@@ -10,6 +10,25 @@
   "author": "Use AI Tools Team",
   "reading_time": "10 min",
   "thumbnail": "",
-  "images": [],
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?w=1200&h=630&fit=crop",
+      "alt": "Best AI Image Generators for Logo Design in 2026 header banner – Image category",
+      "caption": "Illustration for Best AI Image Generators for Logo Design in 2026",
+      "position": "header"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1200&h=630&fit=crop",
+      "alt": "Best AI Image Generators for Logo Design in 2026 section illustration – Image category",
+      "caption": "Mid-article visual supporting key points",
+      "position": "mid"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1200&h=630&fit=crop",
+      "alt": "Best AI Image Generators for Logo Design in 2026 call-to-action visual – Image category",
+      "caption": "Call to action section image",
+      "position": "cta"
+    }
+  ],
   "canonical_slug": "best-ai-image-generators-for-logo-design-2026"
 }

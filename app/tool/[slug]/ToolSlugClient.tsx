@@ -522,6 +522,13 @@ export default function ToolSlugClient({
                         height="400"
                         loading="lazy"
                         decoding="async"
+                        referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          const el = e.currentTarget;
+                          if (el.dataset.fb === '1') return;
+                          el.dataset.fb = '1';
+                          el.src = 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&h=900&fit=crop';
+                        }}
                       />
                     </div>
                     <div className="bg-gray-50 dark:bg-gray-800/60 rounded-lg p-4 flex flex-col">

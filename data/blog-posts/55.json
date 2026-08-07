@@ -11,16 +11,18 @@
   "featured": true,
   "images": [
     {
-      "url": "/blog-images/blog-55-header.webp",
+      "url": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200&h=630&fit=crop",
       "alt": "Beginner creating professional video with AI tools on laptop",
       "caption": "Create studio-quality videos without years of training",
-      "position": "header"
+      "position": "header",
+      "image_url": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200&h=630&fit=crop"
     },
     {
-      "url": "/blog-images/blog-55-mid.webp",
+      "url": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&h=630&fit=crop",
       "alt": "AI video editing interface showing automated features",
       "caption": "AI handles the technical complexity — you focus on creativity",
-      "position": "mid"
+      "position": "mid",
+      "image_url": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&h=630&fit=crop"
     },
     {
       "url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=400&fit=crop&article=55&hash=f97rr9gnk3",

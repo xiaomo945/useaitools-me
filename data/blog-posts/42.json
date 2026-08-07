@@ -11,16 +11,18 @@
   "featured": true,
   "images": [
     {
-      "url": "/blog-images/blog-42-header.webp",
+      "url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&h=630&fit=crop",
       "alt": "AI voice generators comparison banner with waveform visualization and voice profile icons",
       "caption": "Studio-quality AI voices at a fraction of the cost",
-      "position": "header"
+      "position": "header",
+      "image_url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&h=630&fit=crop"
     },
     {
-      "url": "/blog-images/blog-42-mid.webp",
+      "url": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1200&h=630&fit=crop",
       "alt": "Voice quality comparison chart showing naturalness scores across AI voice platforms",
       "caption": "Voice quality comparison across all platforms",
-      "position": "mid"
+      "position": "mid",
+      "image_url": "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=1200&h=630&fit=crop"
     },
     {
       "url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=400&fit=crop&article=42&hash=2c5mht1xtj",

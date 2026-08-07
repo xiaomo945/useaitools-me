@@ -11,16 +11,18 @@
   "featured": true,
   "images": [
     {
-      "url": "/blog-images/blog-47-header.webp",
+      "url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=630&fit=crop",
       "alt": "Best AI tools for students 2026 illustration showing student using laptop with AI assistant, books, and graduation cap",
       "caption": "Your AI study toolkit for 2026! 📚✨",
-      "position": "header"
+      "position": "header",
+      "image_url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=630&fit=crop"
     },
     {
-      "url": "/blog-images/blog-47-mid.webp",
+      "url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&h=630&fit=crop",
       "alt": "Student using AI writing tools for essay workflow from research to proofreading",
       "caption": "AI can help at every step of your writing process",
-      "position": "mid"
+      "position": "mid",
+      "image_url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&h=630&fit=crop"
     },
     {
       "url": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&h=400&fit=crop&article=47&hash=0tufmfnm14v",

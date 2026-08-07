@@ -11,16 +11,18 @@
   "featured": true,
   "images": [
     {
-      "url": "/blog-images/blog-54-header.webp",
+      "url": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1200&h=630&fit=crop",
       "alt": "Small team collaborating with AI productivity tools on modern workspace",
       "caption": "Streamline your team workflow with AI-powered tools",
-      "position": "header"
+      "position": "header",
+      "image_url": "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=1200&h=630&fit=crop"
     },
     {
-      "url": "/blog-images/blog-54-mid.webp",
+      "url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop",
       "alt": "Comparison chart of AI productivity tools for teams",
       "caption": "Feature comparison across top productivity platforms",
-      "position": "mid"
+      "position": "mid",
+      "image_url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop"
     },
     {
       "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop&article=54&hash=tkogb6py8x",

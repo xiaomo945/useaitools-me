@@ -11,16 +11,18 @@
   "featured": true,
   "images": [
     {
-      "url": "/blog-images/blog-46-header.webp",
+      "url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop",
       "alt": "Copy.ai 2026 review banner showing Copy.ai interface with AI writing workspace and document editor",
       "caption": "After 30 days of hands-on testing, here's my honest verdict",
-      "position": "header"
+      "position": "header",
+      "image_url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=630&fit=crop"
     },
     {
-      "url": "/blog-images/blog-46-mid.webp",
+      "url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=630&fit=crop",
       "alt": "Copy.ai vs Rytr comparison chart showing pricing, template count, and output quality scores",
       "caption": "Copy.ai vs Rytr: the complete comparison",
-      "position": "mid"
+      "position": "mid",
+      "image_url": "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=1200&h=630&fit=crop"
     },
     {
       "url": "https://images.unsplash.com/photo-1487014679447-ebefba5ddcab?w=800&h=400&fit=crop&article=46&hash=hkux5q7zo7",

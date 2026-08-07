@@ -11,16 +11,18 @@
   "featured": true,
   "images": [
     {
-      "url": "/blog-images/blog-48-header.webp",
+      "url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=630&fit=crop",
       "alt": "Synthesia AI avatar video review 2026 banner showing realistic AI presenter alongside video production equipment",
       "caption": "After 30 days of testing AI avatars vs real presenters, here's my verdict",
-      "position": "header"
+      "position": "header",
+      "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=630&fit=crop"
     },
     {
-      "url": "/blog-images/blog-48-mid.webp",
+      "url": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200&h=630&fit=crop",
       "alt": "Synthesia comparison chart showing AI avatar quality, language support, and pricing vs traditional video production",
       "caption": "AI avatars vs real presenters: the complete breakdown",
-      "position": "mid"
+      "position": "mid",
+      "image_url": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=1200&h=630&fit=crop"
     },
     {
       "url": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=800&h=400&fit=crop&article=48&hash=ywzid2n00vo",
