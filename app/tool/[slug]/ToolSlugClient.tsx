@@ -332,7 +332,7 @@ export default function ToolSlugClient({
               {/* Overall Rating */}
               <div className="text-center sm:text-left">
                 <div className="text-5xl sm:text-6xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">
-                  {tool.rating.toFixed(1)}
+                  {tool.rating != null ? tool.rating.toFixed(1) : '—'}
                 </div>
                 <div className="text-sm text-slate-600 dark:text-slate-400 font-medium">
                   Overall Score
