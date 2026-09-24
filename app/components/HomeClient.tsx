@@ -1640,7 +1640,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
           <div className="max-w-7xl mx-auto flex items-center justify-center gap-3">
             <span className="text-lg">🚀</span>
             <p className="text-center text-sm sm:text-base font-medium">
-              Now featuring 50+ AI tools across 6 categories. New tools added weekly!
+              Now featuring 500+ AI tools across 6 categories. New tools added weekly!
             </p>
             <button
               onClick={() => setShowBanner(false)}
