@@ -22,7 +22,7 @@ const StoryCard = dynamic(() => import('@/app/components/StoryCard'), {
 
 export const metadata: Metadata = {
   title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
-  description: 'Curated directory of the best AI tools. Browse 1,300+ tools across Writing, Image, Video, Audio, Code & Productivity. Find your perfect AI tool in seconds.',
+  description: 'Curated directory of the best AI tools. Browse 500+ tools across Writing, Image, Video, Audio, Code & Productivity. Find your perfect AI tool in seconds.',
   metadataBase: new URL('https://useaitools.me'),
   alternates: {
     canonical: '/',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
-    description: 'Curated directory of the best AI tools. Browse 1,300+ tools across 6 categories.',
+    description: 'Curated directory of the best AI tools. Browse 500+ tools across 6 categories.',
     url: 'https://useaitools.me',
     siteName: 'Use AI Tools',
     type: 'website',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Use AI Tools — Discover the Best AI Tools',
-    description: 'Curated directory of the best AI tools. Browse 1,300+ tools across 6 categories.',
+    description: 'Curated directory of the best AI tools. Browse 500+ tools across 6 categories.',
   },
 };
 
