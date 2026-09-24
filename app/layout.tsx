@@ -43,12 +43,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Best AI Tools Directory 2026 – Discover & Compare 1200+ AI Tools",
+  title: "Best AI Tools Directory 2026 – Discover & Compare 500+ AI Tools",
   description: "Find the best AI tools for writing, image generation, video creation, coding, and more. Compare features, pricing, and alternatives side by side. Updated weekly.",
   keywords: ["AI tools", "AI directory", "AI writing tools", "AI image generators", "AI coding assistants", "AI video tools", "AI audio tools", "AI productivity tools", "best AI tools", "AI tools comparison", "free AI tools", "AI tools 2026"],
   robots: 'index, follow',
   openGraph: {
-    title: "Best AI Tools Directory 2026 – Discover & Compare 1200+ AI Tools",
+    title: "Best AI Tools Directory 2026 – Discover & Compare 500+ AI Tools",
     description: "Find the best AI tools for writing, image generation, video creation, coding, and more. Compare features, pricing, and alternatives side by side. Updated weekly.",
     siteName: 'Use AI Tools',
     type: 'website',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best AI Tools Directory 2026 – Discover & Compare 1200+ AI Tools',
+    title: 'Best AI Tools Directory 2026 – Discover & Compare 500+ AI Tools',
     description: 'Find the best AI tools for writing, image generation, video creation, coding, and more. Compare features, pricing, and alternatives side by side. Updated weekly.',
     site: '@jiongxiaomo',
     creator: '@jiongxiaomo',
@@ -118,7 +118,7 @@ export default function RootLayout({
               "@type": ["Organization", "WebSite"],
               "name": "Use AI Tools",
               "url": "https://useaitools.me",
-              "description": "Handpicked directory of 1200+ AI tools across Writing, Image, Productivity, Code, Audio, and Video. Compare features, pricing, and alternatives side by side.",
+              "description": "Handpicked directory of 500+ AI tools across Writing, Image, Productivity, Code, Audio, and Video. Compare features, pricing, and alternatives side by side.",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://useaitools.me/logo.png",
