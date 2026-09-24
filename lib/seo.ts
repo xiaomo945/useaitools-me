@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const SITE_NAME = "Use AI Tools";
 export const SITE_URL = "https://useaitools.me";
-export const DEFAULT_DESC = "精选 1300+ AI 工具，覆盖写作、图像、视频、音频、编程和生产力。按分类浏览，对比评测，发现最适合你的 AI 工具。";
+export const DEFAULT_DESC = "A handpicked directory of 500+ AI tools for writing, image, video, audio, code and productivity. Compare features, pricing and alternatives side by side.";
 
 const DEFAULT_KEYWORDS = [
   "AI tools",
@@ -24,12 +24,13 @@ export interface BuildMetadataOptions {
   description?: string;
   canonicalPath?: string;
   image?: string;
+  noindex?: boolean;
 }
 
 export function buildMetadata(options: BuildMetadataOptions = {}): Metadata {
-  const { title, description, canonicalPath, image } = options;
+  const { title, description, canonicalPath, image, noindex } = options;
 
-  const fullTitle = title ? `${title} – ${SITE_NAME}` : `Best AI Tools Directory 2026 – Discover & Compare 1300+ AI Tools`;
+  const fullTitle = title ? `${title} – ${SITE_NAME}` : `Best AI Tools Directory 2026 – Discover & Compare 500+ AI Tools`;
   const desc = description || DEFAULT_DESC;
   const canonical = canonicalPath
     ? `${SITE_URL}${canonicalPath.startsWith("/") ? canonicalPath : `/${canonicalPath}`}`
@@ -42,7 +43,7 @@ export function buildMetadata(options: BuildMetadataOptions = {}): Metadata {
     title: fullTitle,
     description: desc,
     keywords: DEFAULT_KEYWORDS,
-    robots: "index, follow",
+    robots: noindex ? "noindex, follow" : "index, follow",
     alternates: {
       canonical,
       languages: {

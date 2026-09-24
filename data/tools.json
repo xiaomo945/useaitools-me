@@ -34,7 +34,7 @@
   {
     "id": 2,
     "name": "DALL-E 3",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "OpenAI's text-to-image model, available inside ChatGPT, the OpenAI API and Bing Image Creator. It follows long, detailed prompts closely and renders legible text inside images.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://openai.com/dall-e-3",
@@ -55,7 +55,7 @@
       "English"
     ],
     "description_en": "OpenAI开发的强大图像生成工具，通过文字描述生成图片。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Beginners",
@@ -66,7 +66,7 @@
   {
     "id": 3,
     "name": "Stable Diffusion",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "The open-weights image model behind much of the generative art ecosystem. Runs on your own GPU or through hosted services, with fine-tunes, LoRAs and full control over sampling.",
     "category": "Image",
     "pricing": "Open Source",
     "url": "https://stability.ai",
@@ -87,7 +87,7 @@
       "English"
     ],
     "description_en": "开源的AI图像生成工具，可以本地部署，高度可定制。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "advanced",
     "best_for": [
       "Professionals",
@@ -98,7 +98,7 @@
   {
     "id": 5,
     "name": "Notion AI",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "AI built directly into Notion workspaces: drafts and summarizes docs, answers questions across your wiki and databases, and fills database properties with AI autofill.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://www.notion.com/product/ai",
@@ -130,7 +130,7 @@
   {
     "id": 6,
     "name": "ChatGPT",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "OpenAI's conversational assistant for writing, analysis, coding, data and image work, with voice mode, file and document upload, and web search on paid plans.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://chatgpt.com",
@@ -226,7 +226,7 @@
   {
     "id": 9,
     "name": "Runway ML",
-    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "A browser suite for AI video generation and editing: text-to-video, image-to-video, motion brush, inpainting and rotoscoping on a single timeline.",
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://runway.com",
@@ -290,7 +290,7 @@
   {
     "id": 11,
     "name": "Whisper",
-    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "OpenAI's open-source speech-to-text model. Runs locally or through an API, transcribes 90+ languages, and produces punctuation and timestamps for captions.",
     "category": "Audio",
     "pricing": "Open Source",
     "url": "https://openai.com/research/whisper",
@@ -311,7 +311,7 @@
       "English"
     ],
     "description_en": "OpenAI的语音转文字工具，支持多种语言。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -354,7 +354,7 @@
   {
     "id": 14,
     "name": "Obsidian Copilot",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "An Obsidian community plugin that brings chat, embeddings and command-based AI actions into your vault, so answers come from your own notes.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://obsidian.md",
@@ -375,7 +375,7 @@
       "English"
     ],
     "description_en": "Obsidian笔记软件的AI插件，增强知识管理。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Productivity",
@@ -386,7 +386,7 @@
   {
     "id": 16,
     "name": "Sora",
-    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "OpenAI's video generation model. Creates short clips from text with scene continuity and camera movement, and is available inside the Sora app and ChatGPT.",
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://openai.com/sora",
@@ -407,7 +407,7 @@
       "English"
     ],
     "description_en": "OpenAI的最新视频生成模型，能创建高质量视频。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -418,7 +418,7 @@
   {
     "id": 17,
     "name": "Tabnine",
-    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "An AI coding assistant with autocomplete and chat that can run fully local or self-hosted, with team-level policy controls over what code the model sees.",
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://tabnine.com",
@@ -439,7 +439,7 @@
       "English"
     ],
     "description_en": "AI代码补全工具，支持多种编程语言和IDE。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Developers",
@@ -482,7 +482,7 @@
   {
     "id": 19,
     "name": "Adobe Firefly",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Adobe's generative image and video models, wired into Photoshop, Illustrator and Express. Generative fill, text-to-image and commercially safe training data.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://firefly.adobe.com",
@@ -503,7 +503,7 @@
       "English"
     ],
     "description_en": "Adobe的创意AI工具，用于生成图像、文字效果等。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Creative Projects",
@@ -514,7 +514,7 @@
   {
     "id": 20,
     "name": "Claude",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Anthropic's assistant for long documents, writing and analysis, with a large context window, Projects for grouped work, and Artifacts for live code and documents.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://claude.ai",
@@ -535,7 +535,7 @@
       "English"
     ],
     "description_en": "Anthropic的先进AI助手，擅长推理、写作、分析和编程任务。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
       "Professionals",
@@ -546,7 +546,7 @@
   {
     "id": 21,
     "name": "Gemini",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Google's multimodal assistant, connected to Search, Workspace and Android. Reads images, files and video, and works across Gmail, Docs and Sheets.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://gemini.google.com",
@@ -567,7 +567,7 @@
       "English"
     ],
     "description_en": "Google的多模态AI助手，能理解文本、图像、音频等。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -578,7 +578,7 @@
   {
     "id": 22,
     "name": "Writesonic",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "A content marketing platform for AI article drafting, SEO-optimized copy and brand-voice chat, with integrations for publishing workflows.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://writesonic.com",
@@ -599,7 +599,7 @@
       "English"
     ],
     "description_en": "AI写作平台，用于创建SEO优化的文章、博客和营销文案。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -667,7 +667,7 @@
   {
     "id": 24,
     "name": "QuillBot",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Paraphrasing, grammar checking, summarization and citation tools aimed at students and editors, with a browser extension and Word add-in.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://quillbot.com",
@@ -688,7 +688,7 @@
       "English"
     ],
     "description_en": "AI驱动的改写和写作工具，帮助提高词汇量和风格。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -750,7 +750,8 @@
       "Beginners",
       "Social Media",
       "Marketing"
-    ]
+    ],
+    "description_en": "Browser-based AI video editor used by 50M+ creators, with 100,000+ 5-star reviews. Auto-generate subtitles in 100+ languages, remove backgrounds, add AI voiceovers, and create polished videos — all in"
   },
   {
     "id": 52,
@@ -787,7 +788,7 @@
   {
     "id": 54,
     "name": "AutoGPT",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "One of the first open-source autonomous agent experiments. It chains model calls to pursue a goal with tools and memory; maintained by the community as a research project.",
     "category": "Productivity",
     "pricing": "Open Source",
     "url": "https://github.com/Significant-Gravitas/AutoGPT",
@@ -808,7 +809,7 @@
       "English"
     ],
     "description_en": "自主AI代理，能够自动完成复杂任务而无需人工提示。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Productivity",
@@ -819,7 +820,7 @@
   {
     "id": 55,
     "name": "AgentGPT",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "A browser-based autonomous agent: give it a goal and it plans, runs steps and reports results without you driving each turn.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://agentgpt.reworkd.ai",
@@ -840,7 +841,7 @@
       "English"
     ],
     "description_en": "Web-based AI agent platform，让用户配置和部署自主AI代理。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Productivity",
@@ -851,7 +852,7 @@
   {
     "id": 56,
     "name": "CrewAI",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "An open-source Python framework for orchestrating role-based multi-agent teams, with Flows for deterministic automation and tracing for debugging.",
     "category": "Productivity",
     "pricing": "Open Source",
     "url": "https://www.crewai.com",
@@ -872,7 +873,7 @@
       "English"
     ],
     "description_en": "AI代理协作框架，让多个AI代理协同工作完成任务。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Productivity",
@@ -883,7 +884,7 @@
   {
     "id": 57,
     "name": "SurferSEO",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "SEO content tooling that scores drafts against currently ranking pages and gives keyword, structure and internal-link guidance while you write.",
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://surferseo.com",
@@ -904,7 +905,7 @@
       "English"
     ],
     "description_en": "AI驱动的SEO优化平台，帮助内容在搜索引擎中获得更好排名。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -915,7 +916,7 @@
   {
     "id": 58,
     "name": "Frase",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Researches a query, extracts the questions and headings competitors cover, then drafts briefs and content around the gaps.",
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://frase.io",
@@ -936,7 +937,7 @@
       "English"
     ],
     "description_en": "AI内容优化和研究平台，帮助创建SEO友好的高质量内容。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -947,7 +948,7 @@
   {
     "id": 59,
     "name": "MarketMuse",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "A content strategy platform that uses topic models to plan content clusters, audit existing pages and prioritize by competitive gap and authority.",
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://www.marketmuse.com",
@@ -968,7 +969,7 @@
       "English"
     ],
     "description_en": "AI内容智能平台，通过内容策略和优化提升有机搜索流量。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -979,7 +980,7 @@
   {
     "id": 60,
     "name": "Harvey",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "An AI assistant for law firms and tax teams, grounded in legal research with domain-tuned models and citations back to source material.",
     "category": "Productivity",
     "pricing": "Paid",
     "url": "https://harvey.ai",
@@ -1000,7 +1001,7 @@
       "English"
     ],
     "description_en": "AI法律助手，帮助律师进行法律研究、合同审查和案例分析。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Productivity",
@@ -1010,8 +1011,8 @@
   },
   {
     "id": 62,
-    "name": "Kick",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "name": "Kickresume",
+    "description": "An AI resume and cover letter builder with ATS-oriented templates, bullet rewriting and a job-specific tailoring flow.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://www.kickresume.com",
@@ -1032,7 +1033,7 @@
       "English"
     ],
     "description_en": "AI金融助手，帮助分析投资、优化投资组合和财务规划。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Productivity",
@@ -1043,7 +1044,7 @@
   {
     "id": 63,
     "name": "Khanmigo",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Khan Academy's AI tutor: Socratic-style guidance for students across subjects, plus lesson planning and grading helpers for teachers.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://www.khanacademy.org/khanmigo",
@@ -1064,7 +1065,7 @@
       "English"
     ],
     "description_en": "Khan Academy的AI学习助手，提供个性化辅导和教育支持。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Productivity",
@@ -1075,7 +1076,7 @@
   {
     "id": 64,
     "name": "Duolingo Max",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Duolingo's top tier, adding roleplay conversations with characters and Explain My Answer on top of the standard lesson path.",
     "category": "Productivity",
     "pricing": "Paid",
     "url": "https://www.duolingo.com/max",
@@ -1096,7 +1097,7 @@
       "English"
     ],
     "description_en": "AI驱动的语言学习平台，提供个性化课程和AI辅导。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Productivity",
@@ -1107,7 +1108,7 @@
   {
     "id": 65,
     "name": "Quizlet AI",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Generates flashcards, practice tests and explanations from your own notes or textbooks, with adaptive study modes.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://quizlet.com",
@@ -1128,7 +1129,7 @@
       "English"
     ],
     "description_en": "AI增强的学习平台，智能生成抽认卡、测验和学习计划。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Productivity",
@@ -1139,7 +1140,7 @@
   {
     "id": 66,
     "name": "Spline AI",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "A 3D design tool with prompt-to-3D generation, materials and animation, exporting interactive scenes for the web.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://spline.design",
@@ -1160,7 +1161,7 @@
       "English"
     ],
     "description_en": "基于浏览器的3D设计工具，AI辅助创建3D模型和动画。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Creative Projects",
@@ -1171,7 +1172,7 @@
   {
     "id": 67,
     "name": "Meshy",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Generates 3D models from text or reference images, with texturing, rigging and exports sized for game engines and 3D printing.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://www.meshy.ai",
@@ -1192,7 +1193,7 @@
       "English"
     ],
     "description_en": "AI 3D内容创作平台，从文本或图像生成3D模型。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Creative Projects",
@@ -1203,7 +1204,7 @@
   {
     "id": 68,
     "name": "Leonardo AI",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "An image generation platform with fine-tuned models, canvas editing, upscaling and asset pipelines aimed at game and product designers.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://leonardo.ai",
@@ -1224,7 +1225,7 @@
       "English"
     ],
     "description_en": "AI图像生成平台，专注于游戏资产、概念艺术和3D纹理。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Creative Projects",
@@ -1235,7 +1236,7 @@
   {
     "id": 69,
     "name": "Soundraw",
-    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Generates royalty-free instrumental music by mood, genre and length, with section and stem-level editing for video and podcast beds.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://soundraw.io",
@@ -1256,7 +1257,7 @@
       "English"
     ],
     "description_en": "AI音乐生成器，为视频、播客和游戏创建免版税音乐。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -1267,7 +1268,7 @@
   {
     "id": 70,
     "name": "AIVA",
-    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "An AI composer for classical and cinematic scores, with style presets, MIDI export and rights registration for the tracks it generates.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://www.aiva.ai",
@@ -1288,7 +1289,7 @@
       "English"
     ],
     "description_en": "AI作曲家，创作古典、电影配乐和电子风格的原创音乐。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -1299,7 +1300,7 @@
   {
     "id": 71,
     "name": "Beatoven",
-    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Generates background music matched to a video's mood and scene length, with per-scene control and simple licensing for creators.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://www.beatoven.ai",
@@ -1320,7 +1321,7 @@
       "English"
     ],
     "description_en": "AI音乐创作平台，为内容创作者提供自适应的背景音乐。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -1331,7 +1332,7 @@
   {
     "id": 72,
     "name": "Character.AI",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "A chat platform for roleplaying with user-created characters, with long-running memory, group chats and voice calls on paid tiers.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://character.ai",
@@ -1352,7 +1353,7 @@
       "English"
     ],
     "description_en": "AI角色聊天平台，可以与历史人物、虚构角色和自定义角色对话。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -1363,7 +1364,7 @@
   {
     "id": 73,
     "name": "Poe",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Quora's chat aggregator: run many models side by side, compare answers, and build and monetize custom bots on top of them.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://poe.com",
@@ -1384,7 +1385,7 @@
       "English"
     ],
     "description_en": "Quora的AI聊天平台，集成多个AI模型，提供统一访问体验。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -1395,7 +1396,7 @@
   {
     "id": 74,
     "name": "Copy.ai",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "A marketing content platform with templates plus workflow automations for sales and content teams, including CRM data enrichment.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.copy.ai",
@@ -1416,7 +1417,7 @@
       "English"
     ],
     "description_en": "AI写作和营销工具，帮助创建各种类型的营销文案。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Beginners",
@@ -1427,7 +1428,7 @@
   {
     "id": 75,
     "name": "Lexica",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "A search engine and gallery for Stable Diffusion prompts and images, with its own generation model and API access.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://lexica.art",
@@ -1448,7 +1449,7 @@
       "English"
     ],
     "description_en": "AI图像搜索引擎和生成平台，寻找和创建完美的图像。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Creative Projects",
@@ -1459,7 +1460,7 @@
   {
     "id": 76,
     "name": "Playground AI",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "An image editor that combines generation, inpainting, filters and canvas layout with generous free daily generations.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://playgroundai.com",
@@ -1480,7 +1481,7 @@
       "English"
     ],
     "description_en": "在线AI图像生成和编辑平台，支持多种模型和风格。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Creative Projects",
@@ -1491,7 +1492,7 @@
   {
     "id": 77,
     "name": "Ideogram",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "An image model known for reliable text rendering inside generated images, which makes it practical for logos, posters and typography.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://ideogram.ai",
@@ -1512,7 +1513,7 @@
       "English"
     ],
     "description_en": "AI图像生成工具，擅长文字渲染和排版设计。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Creative Projects",
@@ -1580,7 +1581,7 @@
   {
     "id": 79,
     "name": "Descript",
-    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Edit audio and video by editing the transcript: remove filler words, overdub your own cloned voice, record screens and publish clips.",
     "category": "Audio",
     "pricing": "Freemium",
     "url": "https://www.descript.com",
@@ -1601,7 +1602,7 @@
       "English"
     ],
     "description_en": "AI音频和视频编辑平台，像编辑文档一样编辑媒体。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
       "Teams",
@@ -1612,7 +1613,7 @@
   {
     "id": 80,
     "name": "Adobe Premiere Pro AI",
-    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Premiere Pro's AI features: text-based editing, auto reframe, scene edit detection, and generative extend for filling clip gaps.",
     "category": "Video",
     "pricing": "Paid",
     "url": "https://www.adobe.com/products/premiere.html",
@@ -1633,7 +1634,7 @@
       "English"
     ],
     "description_en": "Adobe Premiere Pro中的AI功能，增强视频编辑工作流程。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -1644,7 +1645,7 @@
   {
     "id": 81,
     "name": "HeyGen",
-    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Avatar video generation with lip sync, voice cloning and video translation into many languages, aimed at marketing and training video.",
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://www.heygen.com",
@@ -1665,7 +1666,7 @@
       "English"
     ],
     "description_en": "AI视频生成平台，创建具有数字人主播的专业视频。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -1676,7 +1677,7 @@
   {
     "id": 82,
     "name": "D-ID",
-    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Creates talking-head videos from a single photo plus a script or audio track, with a streaming avatar API for live interactions.",
     "category": "Video",
     "pricing": "Freemium",
     "url": "https://d-id.com",
@@ -1697,7 +1698,7 @@
       "English"
     ],
     "description_en": "AI视频生成技术，创建会说话的头像和数字人视频。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -1708,7 +1709,7 @@
   {
     "id": 83,
     "name": "Codium AI",
-    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "Now Qodo: AI for code review, test generation and pull-request quality gating, running in your IDE and in CI.",
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://www.qodo.ai",
@@ -1740,7 +1741,7 @@
   {
     "id": 85,
     "name": "Replit AI",
-    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "An AI pair programmer inside Replit's cloud IDE that scaffolds apps, explains code and deploys them without local setup.",
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://replit.com",
@@ -1761,7 +1762,7 @@
       "English"
     ],
     "description_en": "Replit平台的AI编程助手，协作编码和学习。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Developers",
@@ -1772,8 +1773,8 @@
   {
     "id": 86,
     "name": "Luma AI",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
-    "category": "Image",
+    "description": "Luma's Dream Machine turns text and images into video clips, and captures real-world objects into 3D from phone footage.",
+    "category": "Video",
     "pricing": "Freemium",
     "url": "https://lumalabs.ai",
     "affiliate_link": "",
@@ -1793,7 +1794,7 @@
       "English"
     ],
     "description_en": "AI 3D捕捉和重建工具，从照片创建3D模型。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Creative Projects",
@@ -1867,8 +1868,8 @@
   },
   {
     "id": 90,
-    "name": "GrammarlyGO",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "name": "Grammarly",
+    "description": "Generative writing assistance layered on Grammarly's grammar and tone checks: drafting, rewriting and tone shifts inside any text box.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.grammarly.com",
@@ -1889,7 +1890,7 @@
       "English"
     ],
     "description_en": "Grammarly的AI写作助手，增强写作、沟通和创意。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -1899,8 +1900,8 @@
   },
   {
     "id": 91,
-    "name": "Bing Chat",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "name": "Microsoft Copilot",
+    "description": "Microsoft's assistant built into Windows, Edge and Microsoft 365, grounded in web search results with source citations.",
     "category": "Writing",
     "pricing": "Free",
     "url": "https://copilot.microsoft.com",
@@ -1932,7 +1933,7 @@
   {
     "id": 92,
     "name": "Hugging Face",
-    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "The hub for open models and datasets: host and fine-tune models, run inference through an API, and publish demos as Spaces.",
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://huggingface.co",
@@ -1953,7 +1954,7 @@
       "English"
     ],
     "description_en": "AI模型平台，提供数千个预训练模型和协作工具。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Developers",
@@ -1964,7 +1965,7 @@
   {
     "id": 93,
     "name": "LangChain",
-    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "A framework for building LLM applications — retrieval, tool calling and agent graphs, with LangSmith for tracing and evaluation.",
     "category": "Code",
     "pricing": "Open Source",
     "url": "https://www.langchain.com",
@@ -1985,7 +1986,7 @@
       "English"
     ],
     "description_en": "AI应用开发框架，构建由语言模型驱动的应用。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Developers",
@@ -1996,7 +1997,7 @@
   {
     "id": 94,
     "name": "Figma AI",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "AI features inside Figma: generated layers and prototypes, instant placeholder content, visual search and design-to-code helpers.",
     "category": "Image",
     "pricing": "Freemium",
     "url": "https://www.figma.com",
@@ -2017,7 +2018,7 @@
       "English"
     ],
     "description_en": "Figma中的AI设计助手，加速UI/UX设计工作流程。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Creative Projects",
@@ -2028,7 +2029,7 @@
   {
     "id": 95,
     "name": "Magical",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "A browser autofill and text-expansion assistant that fills forms and writes routine messages from short snippets and saved data.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.magical.so",
@@ -2049,7 +2050,7 @@
       "English"
     ],
     "description_en": "AI文本扩展和自动化工具，加速重复性写作任务。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -2117,8 +2118,8 @@
   {
     "id": 98,
     "name": "Lovable",
-    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
-    "category": "Video",
+    "description": "Generates full-stack web applications from a prompt — frontend, database and auth — with code you can export and own.",
+    "category": "Code",
     "pricing": "Freemium",
     "url": "https://lovable.dev",
     "affiliate_link": "",
@@ -2138,7 +2139,7 @@
       "English"
     ],
     "description_en": "AI视频编辑工具，快速生成和编辑视频，简单易用的界面。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -2149,7 +2150,7 @@
   {
     "id": 99,
     "name": "DeepL Write",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "DeepL's writing assistant: rewrites and polishes text with tone, style and formality controls, separate from DeepL Translate.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://www.deepl.com/write",
@@ -2170,7 +2171,7 @@
       "English"
     ],
     "description_en": "AI写作和翻译助手，提升写作质量和多语言沟通。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -2181,7 +2182,7 @@
   {
     "id": 101,
     "name": "Raycast AI",
-    "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "description": "AI inside the Raycast launcher: quick AI commands, chat and extensions reachable from a single hotkey on macOS.",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://www.raycast.com",
@@ -2202,7 +2203,7 @@
       "English"
     ],
     "description_en": "AI驱动的启动器和生产力工具，提升工作效率。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Productivity",
@@ -2212,8 +2213,8 @@
   },
   {
     "id": 105,
-    "name": "智谱清言",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "name": "ChatGLM",
+    "description": "Zhipu AI's ChatGLM assistant for Chinese-language chat, document reading, image generation and coding help, with open-weight GLM models.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://chatglm.cn",
@@ -2231,7 +2232,7 @@
       }
     ],
     "description_en": "智谱AI开发的多模态对话助手，支持文本、图像、代码等多种能力 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -2241,8 +2242,8 @@
   },
   {
     "id": 107,
-    "name": "文心一言",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "name": "Ernie Bot",
+    "description": "Baidu's Ernie assistant (Wenxin Yiyan) for Chinese-language conversation, writing, search-grounded answers and image generation.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://yiyan.baidu.com",
@@ -2260,7 +2261,7 @@
       }
     ],
     "description_en": "百度开发的AI大语言模型，支持文本生成、代码、图像等能力 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -2270,8 +2271,8 @@
   },
   {
     "id": 108,
-    "name": "通义千问",
-    "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
+    "name": "Qwen",
+    "description": "Alibaba's Qwen assistant for chat, document and image understanding, with open-weight Qwen models available to developers.",
     "category": "Writing",
     "pricing": "Freemium",
     "url": "https://tongyi.aliyun.com",
@@ -2289,7 +2290,7 @@
       }
     ],
     "description_en": "阿里云开发的AI大模型，支持文本、代码、图像等多种能力 This versatile tool offers advanced features for professionals and beginners alike.",
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -2351,7 +2352,8 @@
       "Beginners",
       "Quick Results",
       "Content Creation"
-    ]
+    ],
+    "description_en": "AI video repurposing tool that transforms long-form content — blog posts, webinars, podcasts — into viral short-form videos for social media in minutes. Used by 500,000+ marketers and content creators"
   },
   {
     "id": 205,
@@ -4682,7 +4684,8 @@
       "Professionals",
       "Executives",
       "Entrepreneurs"
-    ]
+    ],
+    "description_en": "AI-powered email client that learns your preferences and helps you reach inbox zero 3x faster. Features include AI email drafting, intelligent summarization, and smart reply suggestions."
   },
   {
     "id": 444,
@@ -4736,7 +4739,8 @@
       "Social Media Managers",
       "Brands",
       "Influencers"
-    ]
+    ],
+    "description_en": "AI-powered social media scheduler and content creator for Instagram. Generates captions, hashtag suggestions, and optimal posting times to maximize engagement."
   },
   {
     "id": 445,
@@ -4790,7 +4794,8 @@
       "Small Businesses",
       "Content Creators",
       "Marketers"
-    ]
+    ],
+    "description_en": "AI content creation and social media automation platform that generates posts, graphics, and scheduling across Instagram, Facebook, Twitter, and LinkedIn."
   },
   {
     "id": 446,
@@ -4844,10 +4849,11 @@
       "YouTubers",
       "Content Creators",
       "Video Marketers"
-    ]
+    ],
+    "description_en": "AI-powered YouTube optimization tool that generates titles, descriptions, tags, and thumbnail suggestions to boost video discoverability."
   },
   {
-    "id": 447,
+    "id": 1526,
     "name": "VidIQ AI",
     "description": "AI YouTube analytics and optimization platform that provides keyword research, competitor analysis, and content suggestions to grow your channel faster.",
     "category": "Video",
@@ -4898,10 +4904,11 @@
       "YouTubers",
       "Channel Managers",
       "Video Marketers"
-    ]
+    ],
+    "description_en": "AI YouTube analytics and optimization platform that provides keyword research, competitor analysis, and content suggestions to grow your channel faster."
   },
   {
-    "id": 448,
+    "id": 1527,
     "name": "NightCafe Creator",
     "description": "AI art generator with multiple algorithms (Stable Diffusion, DALL-E, etc.) optimized for creating high-resolution prints and wall art. Features community challenges and style transfer.",
     "category": "Image",
@@ -4952,7 +4959,8 @@
       "Artists",
       "Print Designers",
       "Home Decor"
-    ]
+    ],
+    "description_en": "AI art generator with multiple algorithms (Stable Diffusion, DALL-E, etc.) optimized for creating high-resolution prints and wall art. Features community challenges and style transfer."
   },
   {
     "id": 458,
@@ -5006,10 +5014,11 @@
       "L&D Teams",
       "Corporate Training",
       "HR"
-    ]
+    ],
+    "description_en": "AI video creation platform with realistic avatars for learning and development content. Features automatic translations and collaborative editing."
   },
   {
-    "id": 459,
+    "id": 1528,
     "name": "Lavender",
     "description": "AI email coach for sales teams that analyzes and optimizes cold emails in real-time. Provides response rate predictions and improvement suggestions.",
     "category": "Productivity",
@@ -5060,7 +5069,8 @@
       "Sales Teams",
       "SDRs",
       "Founders"
-    ]
+    ],
+    "description_en": "AI email coach for sales teams that analyzes and optimizes cold emails in real-time. Provides response rate predictions and improvement suggestions."
   },
   {
     "id": 460,
@@ -5114,7 +5124,8 @@
       "Sales Teams",
       "Revenue Teams",
       "SDRs"
-    ]
+    ],
+    "description_en": "AI sales content platform that generates sales scripts, email sequences, call scripts, and LinkedIn outreach messages with CRM integration."
   },
   {
     "id": 461,
@@ -5168,10 +5179,11 @@
       "Freelancers",
       "Project Managers",
       "Solopreneurs"
-    ]
+    ],
+    "description_en": "AI-powered calendar and task manager that auto-schedules your day, prioritizes tasks, and adjusts plans when priorities change. Perfect for freelancers managing multiple clients."
   },
   {
-    "id": 462,
+    "id": 1529,
     "name": "Lago Fast",
     "description": "AI freelance business assistant that handles invoicing, time tracking, proposal writing, and client communication. All-in-one platform for independent workers.",
     "category": "Productivity",
@@ -5222,7 +5234,8 @@
       "Freelancers",
       "Consultants",
       "Contractors"
-    ]
+    ],
+    "description_en": "AI freelance business assistant that handles invoicing, time tracking, proposal writing, and client communication. All-in-one platform for independent workers."
   },
   {
     "id": 463,
@@ -5276,10 +5289,11 @@
       "Retail",
       "E-commerce",
       "Warehouses"
-    ]
+    ],
+    "description_en": "AI inventory management and demand forecasting tool that predicts stock levels, automates reordering, and optimizes warehouse operations for small to medium businesses."
   },
   {
-    "id": 464,
+    "id": 1530,
     "name": "Inventory Planner",
     "description": "AI-powered inventory planning and purchasing tool that integrates with Shopify, Amazon, and WooCommerce. Generates smart purchase orders and demand forecasts.",
     "category": "Productivity",
@@ -5330,7 +5344,8 @@
       "E-commerce",
       "Retailers",
       "Distributors"
-    ]
+    ],
+    "description_en": "AI-powered inventory planning and purchasing tool that integrates with Shopify, Amazon, and WooCommerce. Generates smart purchase orders and demand forecasts."
   },
   {
     "id": 467,
@@ -5384,10 +5399,11 @@
       "Presenters",
       "Marketers",
       "Consultants"
-    ]
+    ],
+    "description_en": "AI presentation designer that creates professional slideshows from outlines or content. Auto-adjusts layouts, suggests visuals, and maintains design consistency."
   },
   {
-    "id": 474,
+    "id": 1531,
     "name": "Wordtune",
     "description": "AI-powered writing companion that rewrites your sentences for clarity, tone, and style. Helps you express your thoughts precisely and write more efficiently across platforms.",
     "category": "Writing",
@@ -5438,10 +5454,11 @@
       "Writers",
       "Professionals",
       "Students"
-    ]
+    ],
+    "description_en": "AI-powered writing companion that rewrites your sentences for clarity, tone, and style. Helps you express your thoughts precisely and write more efficiently across platforms."
   },
   {
-    "id": 476,
+    "id": 1532,
     "name": "Clipdrop",
     "description": "AI-powered image editing suite with background removal, relighting, cleanup, and upscaling tools. Part of Stability AI ecosystem with professional-grade outputs.",
     "category": "Image",
@@ -5492,10 +5509,11 @@
       "Designers",
       "Photographers",
       "E-commerce"
-    ]
+    ],
+    "description_en": "AI-powered image editing suite with background removal, relighting, cleanup, and upscaling tools. Part of Stability AI ecosystem with professional-grade outputs."
   },
   {
-    "id": 477,
+    "id": 1533,
     "name": "Photoroom",
     "description": "AI background removal and product photography tool that creates studio-quality images from simple smartphone photos. Perfect for e-commerce and social media.",
     "category": "Image",
@@ -5546,10 +5564,11 @@
       "E-commerce",
       "Sellers",
       "Social Media"
-    ]
+    ],
+    "description_en": "AI background removal and product photography tool that creates studio-quality images from simple smartphone photos. Perfect for e-commerce and social media."
   },
   {
-    "id": 479,
+    "id": 1534,
     "name": "Opus Clip",
     "description": "AI video repurposing tool that automatically extracts viral short clips from long-form videos. Perfect for creating TikTok, Reels, and Shorts content from podcasts and YouTube videos.",
     "category": "Video",
@@ -5600,10 +5619,11 @@
       "Content Creators",
       "Podcasters",
       "YouTubers"
-    ]
+    ],
+    "description_en": "AI video repurposing tool that automatically extracts viral short clips from long-form videos. Perfect for creating TikTok, Reels, and Shorts content from podcasts and YouTube videos."
   },
   {
-    "id": 480,
+    "id": 1535,
     "name": "Adobe Podcast AI",
     "description": "AI-powered audio enhancement tool that removes background noise, improves voice quality, and creates studio-grade recordings from any microphone. Includes transcription and editing.",
     "category": "Audio",
@@ -5654,7 +5674,8 @@
       "Podcasters",
       "YouTubers",
       "Interviewers"
-    ]
+    ],
+    "description_en": "AI-powered audio enhancement tool that removes background noise, improves voice quality, and creates studio-grade recordings from any microphone. Includes transcription and editing."
   },
   {
     "id": 482,
@@ -5708,7 +5729,8 @@
       "Developers",
       "Open Source Fans",
       "Teams"
-    ]
+    ],
+    "description_en": "Open-source AI code assistant that integrates with VS Code and JetBrains. Provides code completion, chat-based assistance, and custom prompt templates for any coding workflow."
   },
   {
     "id": 484,
@@ -5762,7 +5784,8 @@
       "Knowledge Workers",
       "Researchers",
       "Writers"
-    ]
+    ],
+    "description_en": "AI-powered workspace that organizes notes, documents, and knowledge automatically. Uses AI to connect ideas, surface relevant information, and create a personal knowledge base."
   },
   {
     "id": 485,
@@ -5816,10 +5839,11 @@
       "Teams",
       "Students",
       "Journalists"
-    ]
+    ],
+    "description_en": "AI meeting transcription and note-taking tool that converts audio to text in 104 languages. Features speaker identification, summaries, and action item extraction."
   },
   {
-    "id": 488,
+    "id": 1536,
     "name": "Jenni AI",
     "description": "AI writing assistant for academics and researchers with citation management, literature review assistance, and plagiarism detection. Helps write papers and research articles faster.",
     "category": "Writing",
@@ -5870,7 +5894,8 @@
       "Researchers",
       "Students",
       "Academics"
-    ]
+    ],
+    "description_en": "AI writing assistant for academics and researchers with citation management, literature review assistance, and plagiarism detection. Helps write papers and research articles faster."
   },
   {
     "id": 489,
@@ -5924,7 +5949,8 @@
       "Writers",
       "Social Media Managers",
       "Bloggers"
-    ]
+    ],
+    "description_en": "AI writing assistant browser extension that helps you write anywhere on the web. Generates content, rewrites text, and provides suggestions in any text field."
   },
   {
     "id": 491,
@@ -5978,7 +6004,8 @@
       "Content Creators",
       "Social Media",
       "Marketers"
-    ]
+    ],
+    "description_en": "AI video creation tool that converts text, blog posts, and scripts into engaging videos with AI voiceover and stock media. Perfect for social media content at scale."
   },
   {
     "id": 492,
@@ -6032,7 +6059,8 @@
       "Designers",
       "Marketers",
       "Small Businesses"
-    ]
+    ],
+    "description_en": "AI-enhanced design platform with Magic Write, Magic Edit, background removal, and AI image generation. All-in-one design tool for non-designers and professionals."
   },
   {
     "id": 494,
@@ -6086,7 +6114,8 @@
       "Frontend Developers",
       "Designers",
       "Startups"
-    ]
+    ],
+    "description_en": "AI-powered UI generation tool from Vercel that creates React components from text descriptions. Integrates with Tailwind CSS and shadcn/ui for production-ready code."
   },
   {
     "id": 499,
@@ -6140,7 +6169,8 @@
       "Knowledge Workers",
       "Executives",
       "Researchers"
-    ]
+    ],
+    "description_en": "Personal AI search engine that indexes everything you do on your computer - apps, websites, meetings, documents - and lets you search your entire digital life with natural language."
   },
   {
     "id": 502,
@@ -6194,7 +6224,8 @@
       "Filmmakers",
       "Creatives",
       "Marketers"
-    ]
+    ],
+    "description_en": "AI video generation model that creates realistic, high-quality videos from text and images. Features temporal consistency, camera control, and cinematic quality outputs."
   },
   {
     "id": 503,
@@ -6248,7 +6279,8 @@
       "Video Creators",
       "Filmmakers",
       "Advertisers"
-    ]
+    ],
+    "description_en": "Advanced AI video generation platform that produces high-quality, temporally consistent videos from text prompts. Supports up to 5-minute videos with realistic motion and detail."
   },
   {
     "id": 555,
@@ -10772,29 +10804,6 @@
     ]
   },
   {
-    "id": 1108,
-    "name": "PlayHT",
-    "description": "Realistic AI voice generation with emotional expression. Create natural-sounding voiceovers for videos, podcasts, and e-learning.",
-    "category": "Audio",
-    "pricing": "Freemium",
-    "url": "https://playht.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Realistic AI voice generation with emotions.",
-    "last_updated": "2026-06-01",
-    "skill_level": "beginner",
-    "best_for": [
-      "Voiceover",
-      "TTS",
-      "Audio"
-    ]
-  },
-  {
     "id": 1110,
     "name": "Cohere",
     "description": "Enterprise AI platform for building LLM-powered applications. Embeddings, classification, and semantic search.",
@@ -12465,7 +12474,8 @@
     ],
     "best_for": [
       "Teams that need AI text expansion and keyboard shortcuts for repetitive writing"
-    ]
+    ],
+    "description_en": "Text expansion and automation tool with AI-powered templates that eliminates repetitive typing and boosts productivity across any web application."
   },
   {
     "id": 1350,
@@ -12482,7 +12492,8 @@
     ],
     "best_for": [
       "E-commerce brands needing AI product descriptions and marketing copy at scale"
-    ]
+    ],
+    "description_en": "AI writing assistant specialized in e-commerce product descriptions, generating SEO-optimized content at scale for online stores and catalogs."
   },
   {
     "id": 1351,
@@ -12499,7 +12510,8 @@
     ],
     "best_for": [
       "Content marketers who need AI to research and write fact-checked long-form articles"
-    ]
+    ],
+    "description_en": "AI content generator with built-in fact-checking and SEO optimization, ensuring accurate and search-engine-friendly long-form articles and blogs."
   },
   {
     "id": 1353,
@@ -12516,7 +12528,8 @@
     ],
     "best_for": [
       "Artists who want Stable Diffusion with an intuitive web interface and fine controls"
-    ]
+    ],
+    "description_en": "Official Stable Diffusion web interface for professional image generation, offering fine-grained control over parameters and high-quality visual output."
   },
   {
     "id": 1359,
@@ -12533,7 +12546,8 @@
     ],
     "best_for": [
       "Remote teams that need AI-powered task management and real-time collaboration"
-    ]
+    ],
+    "description_en": "AI productivity workspace combining tasks, notes, and team collaboration with AI agents that automate workflows and generate project outlines."
   },
   {
     "id": 1365,
@@ -12550,7 +12564,8 @@
     ],
     "best_for": [
       "AWS developers who want AI code suggestions optimized for cloud services"
-    ]
+    ],
+    "description_en": "AWS AI coding companion for cloud development, providing code suggestions, security scans, and AWS best practices directly within your IDE."
   },
   {
     "id": 1369,
@@ -12567,7 +12582,8 @@
     ],
     "best_for": [
       "Remote workers needing AI background noise removal during calls and recordings"
-    ]
+    ],
+    "description_en": "AI noise cancellation tool for meetings and audio recordings, removing background noise and echo in real time for crystal-clear communication."
   },
   {
     "id": 1375,
@@ -12584,7 +12600,8 @@
     ],
     "best_for": [
       "Corporate trainers creating AI presenter videos with digital avatars"
-    ]
+    ],
+    "description_en": "AI video generation from text with digital presenters, enabling scalable personalized video content without cameras, studios, or production crews."
   },
   {
     "id": 1376,
@@ -12601,7 +12618,8 @@
     ],
     "best_for": [
       "Sales teams using AI to create personalized video messages for prospects"
-    ]
+    ],
+    "description_en": "AI video platform for sales outreach and marketing campaigns, combining video recording, hosting, and analytics to drive engagement and conversions."
   },
   {
     "id": 1381,
@@ -12618,7 +12636,8 @@
     ],
     "best_for": [
       "Enterprise teams needing AI writing with brand governance and style guides"
-    ]
+    ],
+    "description_en": "Enterprise AI writing platform with style guide enforcement, terminology management, and team collaboration features."
   },
   {
     "id": 1383,
@@ -12635,7 +12654,8 @@
     ],
     "best_for": [
       "Anyone needing quick AI background removal from photos"
-    ]
+    ],
+    "description_en": "AI background removal tool that instantly creates transparent backgrounds from any photo with a single click."
   },
   {
     "id": 1384,
@@ -12652,7 +12672,8 @@
     ],
     "best_for": [
       "Photographers and designers who need AI image upscaling without quality loss"
-    ]
+    ],
+    "description_en": "AI image upscaling and enhancement tool that transforms low-resolution photos into print-quality visuals effortlessly."
   },
   {
     "id": 1385,
@@ -12669,7 +12690,8 @@
     ],
     "best_for": [
       "Artists who want to create surreal and dreamlike AI-generated artwork"
-    ]
+    ],
+    "description_en": "AI art platform that uses neural network visualization to transform photos into surreal and psychedelic artworks."
   },
   {
     "id": 1386,
@@ -12686,7 +12708,8 @@
     ],
     "best_for": [
       "Creatives who want to breed and evolve AI-generated images through genetic mixing"
-    ]
+    ],
+    "description_en": "AI collaborative art tool for mixing and evolving images through generative adversarial networks and community creativity."
   },
   {
     "id": 1387,
@@ -12703,7 +12726,8 @@
     ],
     "best_for": [
       "Meeting-heavy professionals who want AI transcription and searchable notes"
-    ]
+    ],
+    "description_en": "AI meeting transcription and note-taking tool with speaker identification and real-time collaboration for productive meetings."
   },
   {
     "id": 1388,
@@ -12720,7 +12744,8 @@
     ],
     "best_for": [
       "Sales and customer success teams that need AI meeting analysis and insights"
-    ]
+    ],
+    "description_en": "AI meeting assistant that automates transcription, conversation intelligence, and action item extraction across platforms."
   },
   {
     "id": 1390,
@@ -12737,7 +12762,8 @@
     ],
     "best_for": [
       "Teams that need AI to record, transcribe, and highlight key moments in meetings"
-    ]
+    ],
+    "description_en": "AI meeting recorder with automatic transcription, timestamped summaries, and clip sharing for async team collaboration."
   },
   {
     "id": 1393,
@@ -12754,7 +12780,8 @@
     ],
     "best_for": [
       "Developers who want an AI-enhanced terminal with modern features and smart completions"
-    ]
+    ],
+    "description_en": "AI-powered terminal with intelligent command suggestions, workflow automation, and collaborative features for developers."
   },
   {
     "id": 1396,
@@ -12771,7 +12798,8 @@
     ],
     "best_for": [
       "Dev teams wanting AI code review that catches bugs before merging PRs"
-    ]
+    ],
+    "description_en": "AI code review tool that provides automated pull request analysis with actionable suggestions and context-aware feedback."
   },
   {
     "id": 1397,
@@ -12788,7 +12816,8 @@
     ],
     "best_for": [
       "Musicians and creators who want AI to generate original songs from text prompts"
-    ]
+    ],
+    "description_en": "AI music generation platform for creating full songs with vocals and instruments from simple text prompts in seconds."
   },
   {
     "id": 1398,
@@ -12805,7 +12834,8 @@
     ],
     "best_for": [
       "Music enthusiasts wanting AI music generation with high-quality instrumentation"
-    ]
+    ],
+    "description_en": "AI music creation tool for generating high-quality songs and compositions across genres from descriptive text prompts."
   },
   {
     "id": 1399,
@@ -12822,7 +12852,8 @@
     ],
     "best_for": [
       "Content creators needing AI-generated royalty-free background music"
-    ]
+    ],
+    "description_en": "AI music generator for creating royalty-free tracks tailored for content creators, streamers, and brand videos."
   },
   {
     "id": 1400,
@@ -12839,7 +12870,8 @@
     ],
     "best_for": [
       "Video creators who need AI to find and license the perfect soundtrack"
-    ]
+    ],
+    "description_en": "AI-powered music licensing platform offering a vast library of royalty-free tracks and sound effects for creators."
   },
   {
     "id": 1401,
@@ -12856,7 +12888,8 @@
     ],
     "best_for": [
       "Content creators who want AI to compose original background music instantly"
-    ]
+    ],
+    "description_en": "AI music composition tool for creating custom soundtracks and background music for videos, podcasts, and games."
   },
   {
     "id": 1403,
@@ -12873,7 +12906,8 @@
     ],
     "best_for": [
       "Social media managers who need AI to repurpose long videos into short clips"
-    ]
+    ],
+    "description_en": "AI video editing platform for creating social media clips from long recordings with automatic captioning and layout."
   },
   {
     "id": 1404,
@@ -12891,7 +12925,8 @@
     "best_for": [
       "Content marketers who need AI to extract the most engaging moments from videos"
     ],
-    "last_updated": "2026-09-24"
+    "last_updated": "2026-09-24",
+    "description_en": "AI video editing tool that extracts viral-worthy clips from long-form content using trend analysis and engagement scoring."
   },
   {
     "id": 1405,
@@ -12908,7 +12943,8 @@
     ],
     "best_for": [
       "Gaming streamers who want AI to automatically create highlight clips from streams"
-    ]
+    ],
+    "description_en": "AI clip generator that automatically captures highlights from gaming streams and podcast recordings for social sharing."
   },
   {
     "id": 1406,
@@ -12925,7 +12961,8 @@
     ],
     "best_for": [
       "Video editors who want AI to auto-remove silences and create smooth jump cuts"
-    ]
+    ],
+    "description_en": "AI video editor that automatically generates cuts, storyboards, and captions to streamline post-production workflows."
   },
   {
     "id": 1408,
@@ -12942,7 +12979,8 @@
     ],
     "best_for": [
       "Startups who need AI to generate marketing copy for multiple channels quickly"
-    ]
+    ],
+    "description_en": "AI writing assistant for creating landing page copy, product descriptions, and ad content with GPT-powered generation."
   },
   {
     "id": 1411,
@@ -12959,7 +12997,8 @@
     ],
     "best_for": [
       "Content teams needing an all-in-one AI design and writing platform"
-    ]
+    ],
+    "description_en": "All-in-one AI writing and design tool for marketing teams to create copy, graphics, and videos from one workspace."
   },
   {
     "id": 1412,
@@ -12976,7 +13015,8 @@
     ],
     "best_for": [
       "Photographers who need AI to sharpen, denoise, and upscale images to pro quality"
-    ]
+    ],
+    "description_en": "AI image enhancement tool for upscaling, denoising, and sharpening photos with industry-leading quality and detail recovery."
   },
   {
     "id": 1415,
@@ -12993,7 +13033,8 @@
     ],
     "best_for": [
       "E-commerce sellers needing batch AI photo enhancement and background processing"
-    ]
+    ],
+    "description_en": "AI image processing tool for upscaling, enhancing, and converting photos with batch processing and workflow automation."
   },
   {
     "id": 1416,
@@ -13010,7 +13051,8 @@
     ],
     "best_for": [
       "Non-designers who want AI to create social graphics, icons, and mockups"
-    ]
+    ],
+    "description_en": "AI art and design tool for creating graphics, art, and marketing visuals from templates with easy customization options."
   },
   {
     "id": 1418,
@@ -13027,7 +13069,8 @@
     ],
     "best_for": [
       "Power users who want to build AI-automated workflows without coding"
-    ]
+    ],
+    "description_en": "Visual automation platform with AI-powered scenario building and data processing for complex multi-app workflows."
   },
   {
     "id": 1419,
@@ -13044,7 +13087,8 @@
     ],
     "best_for": [
       "Professionals wanting AI browser automation to eliminate repetitive tasks"
-    ]
+    ],
+    "description_en": "AI workflow automation tool for browser-based repetitive tasks, scraping, and app integration without coding."
   },
   {
     "id": 1420,
@@ -13061,7 +13105,8 @@
     ],
     "best_for": [
       "Teams that need AI to build custom classification and automation models without code"
-    ]
+    ],
+    "description_en": "AI automation tool for document processing, email classification, and data extraction without writing any code."
   },
   {
     "id": 1422,
@@ -13078,7 +13123,8 @@
     ],
     "best_for": [
       "GitLab users who want AI code suggestions and vulnerability explanations"
-    ]
+    ],
+    "description_en": "AI-powered DevSecOps platform with code suggestions, security scanning, and chat-based assistance for developers."
   },
   {
     "id": 1423,
@@ -13095,7 +13141,8 @@
     ],
     "best_for": [
       "JetBrains IDE users wanting AI code completion and refactoring assistance"
-    ]
+    ],
+    "description_en": "AI assistant integrated into JetBrains IDEs for intelligent code completion, refactoring, and in-editor documentation."
   },
   {
     "id": 1425,
@@ -13112,7 +13159,8 @@
     ],
     "best_for": [
       "Developers exploring OpenAI's code generation and natural language programming"
-    ]
+    ],
+    "description_en": "AI code generation model powering various developer tools with natural language to code translation capabilities."
   },
   {
     "id": 1426,
@@ -13129,7 +13177,8 @@
     ],
     "best_for": [
       "Startup teams wanting AI to auto-generate full-stack boilerplate from prompts"
-    ]
+    ],
+    "description_en": "AI developer assistant for code generation, debugging, and documentation with context-aware suggestions and explanations."
   },
   {
     "id": 1427,
@@ -13146,7 +13195,8 @@
     ],
     "best_for": [
       "Musicians who need AI-powered audio mastering to make tracks sound professional"
-    ]
+    ],
+    "description_en": "AI-powered music mastering and distribution platform for musicians to achieve professional sound quality instantly."
   },
   {
     "id": 1428,
@@ -13163,7 +13213,8 @@
     ],
     "best_for": [
       "Mobile creators wanting pro-quality AI audio recording and noise reduction"
-    ]
+    ],
+    "description_en": "AI audio recording app with noise reduction and studio-quality enhancement for musicians and podcasters on the go."
   },
   {
     "id": 1429,
@@ -13180,7 +13231,8 @@
     ],
     "best_for": [
       "Beginner musicians wanting AI-assisted music creation and collaboration tools"
-    ]
+    ],
+    "description_en": "AI music creation and collaboration platform for musicians and producers with cloud-based mixing and sharing tools."
   },
   {
     "id": 1430,
@@ -13197,7 +13249,8 @@
     ],
     "best_for": [
       "Music producers who need AI to discover and match samples and sounds"
-    ]
+    ],
+    "description_en": "AI-powered music production platform with curated samples, preset management, and intelligent creative suggestions."
   },
   {
     "id": 1431,
@@ -13214,7 +13267,8 @@
     ],
     "best_for": [
       "Podcasters wanting open-source AI audio editing with noise reduction plugins"
-    ]
+    ],
+    "description_en": "AI-enhanced audio editor with noise removal, auto-leveling, and speech-to-text transcription for podcast production."
   },
   {
     "id": 1434,
@@ -13231,7 +13285,8 @@
     ],
     "best_for": [
       "Marketers creating AI-powered promotional and social media videos quickly"
-    ]
+    ],
+    "description_en": "AI video creation tool for social media marketing and advertising with premium footage and customizable templates."
   },
   {
     "id": 1435,
@@ -13248,7 +13303,8 @@
     ],
     "best_for": [
       "Businesses needing AI video creation with templates for logos, intros, and explainers"
-    ]
+    ],
+    "description_en": "AI video and animation maker for branding and marketing content with logo animation and explainer video templates."
   },
   {
     "id": 1436,
@@ -13265,7 +13321,8 @@
     ],
     "best_for": [
       "Small teams wanting to create simple AI-animated explainer videos"
-    ]
+    ],
+    "description_en": "AI video creation platform for making professional videos quickly with customizable templates and brand kit integration."
   },
   {
     "id": 1439,
@@ -13285,7 +13342,8 @@
     ],
     "best_for": [
       "Writers who need AI-powered grammar checking with multilingual support"
-    ]
+    ],
+    "description_en": "AI-powered writing assistant for grammar and style checking supporting over 30 languages with context-aware suggestions."
   },
   {
     "id": 1440,
@@ -13302,7 +13360,8 @@
     ],
     "best_for": [
       "Small business owners wanting AI website copy and product descriptions"
-    ]
+    ],
+    "description_en": "AI content generator for website copy and e-commerce product descriptions that creates SEO-optimized text instantly."
   },
   {
     "id": 1441,
@@ -13319,7 +13378,8 @@
     ],
     "best_for": [
       "Side hustlers who need AI to generate niche business and marketing ideas"
-    ]
+    ],
+    "description_en": "AI content generation tool for discovering profitable niches and creating targeted marketing content at scale."
   },
   {
     "id": 1442,
@@ -13337,7 +13397,8 @@
     "best_for": [
       "Selfie enthusiasts wanting AI portrait enhancement and artistic style filters"
     ],
-    "last_updated": "2026-09-24"
+    "last_updated": "2026-09-24",
+    "description_en": "AI photo editor with magic retouching and avatar generation features for creating stunning social media portraits."
   },
   {
     "id": 1444,
@@ -13354,7 +13415,8 @@
     ],
     "best_for": [
       "Users who want AI face aging, gender swap, and fun photo transformations"
-    ]
+    ],
+    "description_en": "AI face editing tool for realistic photo transformations including age progression, gender swap, and style enhancements."
   },
   {
     "id": 1445,
@@ -13371,7 +13433,8 @@
     ],
     "best_for": [
       "Photographers who need AI to relight portraits with studio-quality lighting effects"
-    ]
+    ],
+    "description_en": "AI photo relighting tool for adjusting light direction and intensity after the photo is taken for perfect illumination."
   },
   {
     "id": 1446,
@@ -13388,7 +13451,8 @@
     ],
     "best_for": [
       "Anyone who needs AI to instantly remove unwanted objects from photos"
-    ]
+    ],
+    "description_en": "AI object removal tool for seamlessly cleaning up photos by erasing unwanted people, text, and blemishes instantly."
   },
   {
     "id": 1452,
@@ -13405,7 +13469,8 @@
     ],
     "best_for": [
       "Mistral users who want an optimized AI code assistant for fast completions"
-    ]
+    ],
+    "description_en": "AI code generation model specialized for software development tasks with deep understanding of codebase context."
   },
   {
     "id": 1453,
@@ -13422,7 +13487,8 @@
     ],
     "best_for": [
       "Chinese-speaking developers wanting open-source AI code generation and completion"
-    ]
+    ],
+    "description_en": "AI coding model for code generation and understanding across multiple programming languages with strong reasoning."
   },
   {
     "id": 1454,
@@ -13439,7 +13505,8 @@
     ],
     "best_for": [
       "QA engineers who want AI to auto-generate comprehensive test suites"
-    ]
+    ],
+    "description_en": "AI code quality tool for generating meaningful tests and documentation that improve codebase reliability and coverage."
   },
   {
     "id": 1457,
@@ -13456,7 +13523,8 @@
     ],
     "best_for": [
       "Sound designers who want AI to generate custom audio samples from text descriptions"
-    ]
+    ],
+    "description_en": "AI music and sound effect generation tool for content creators producing royalty-free audio from text descriptions."
   },
   {
     "id": 1459,
@@ -13473,7 +13541,8 @@
     ],
     "best_for": [
       "Musicians who want AI to separate vocals, drums, and instruments from any song"
-    ]
+    ],
+    "description_en": "AI music practice app with stem separation, pitch detection, and tempo control for musicians to learn any song."
   },
   {
     "id": 1460,
@@ -13490,7 +13559,8 @@
     ],
     "best_for": [
       "Karaoke creators who need AI to remove vocals and create backing tracks"
-    ]
+    ],
+    "description_en": "AI tool for separating vocals from music tracks enabling remixing, karaoke creation, and sample extraction instantly."
   },
   {
     "id": 1465,
@@ -13507,7 +13577,8 @@
     ],
     "best_for": [
       "Creators who want AI to generate whimsical and artistic short video clips"
-    ]
+    ],
+    "description_en": "AI video generation platform for creating and editing videos from text prompts with creative style control and effects."
   },
   {
     "id": 1466,
@@ -13524,7 +13595,8 @@
     ],
     "best_for": [
       "Artists who want AI to generate music-synced animated video artworks"
-    ]
+    ],
+    "description_en": "AI video generation tool for creating mesmerizing music videos and visual art with animation from images and audio."
   },
   {
     "id": 1467,
@@ -14974,5 +15046,422 @@
       "Task Management",
       "Personal Assistant"
     ]
+  },
+  {
+    "id": 1537,
+    "name": "Genspark",
+    "description": "An AI agent workspace that researches a topic and returns a structured \"sparkpage\" instead of a chat thread, with agents that also produce slide decks, spreadsheets and call summaries from one prompt.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.genspark.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An AI agent workspace that researches a topic and returns a structured \"sparkpage\" instead of a chat thread, with agents that also produce slide decks, spreadsheets and call summaries from one prompt.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "research reports",
+      "slide decks",
+      "meeting summaries"
+    ],
+    "skill_level": "beginner"
+  },
+  {
+    "id": 1538,
+    "name": "Paperpal",
+    "description": "An academic writing assistant from Cactus Communications that checks manuscripts for language, structure and journal fit, with pre-submission checks used by researchers and publishers.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://paperpal.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An academic writing assistant from Cactus Communications that checks manuscripts for language, structure and journal fit, with pre-submission checks used by researchers and publishers.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "journal manuscripts",
+      "grant proposals",
+      "academic editing"
+    ],
+    "skill_level": "intermediate"
+  },
+  {
+    "id": 1539,
+    "name": "Monica",
+    "description": "An all-in-one AI assistant available as a browser extension, desktop and mobile app. Bundles chat across several models, page and video summarization, translation, writing help and image tools in one sidebar.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://monica.im",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "Multilingual"
+    ],
+    "description_en": "An all-in-one AI assistant available as a browser extension, desktop and mobile app. Bundles chat across several models, page and video summarization, translation, writing help and image tools in one sidebar.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "summarizing web pages",
+      "translation",
+      "quick writing help"
+    ],
+    "skill_level": "beginner"
+  },
+  {
+    "id": 1540,
+    "name": "Trae",
+    "description": "ByteDance's AI-native IDE for macOS and Windows. Builder mode plans and writes multi-file features, the agent runs terminal commands and debugging, and mainstream models are available at no cost.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.trae.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ByteDance's AI-native IDE for macOS and Windows. Builder mode plans and writes multi-file features, the agent runs terminal commands and debugging, and mainstream models are available at no cost.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "agentic coding",
+      "multi-file features",
+      "daily development"
+    ],
+    "skill_level": "intermediate"
+  },
+  {
+    "id": 1541,
+    "name": "Jules",
+    "description": "Google's asynchronous coding agent. Point it at a GitHub repository, describe the task, and it clones the repo into a cloud VM, writes a plan, produces a diff and opens a pull request for you to review.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://jules.google",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Google's asynchronous coding agent. Point it at a GitHub repository, describe the task, and it clones the repo into a cloud VM, writes a plan, produces a diff and opens a pull request for you to review.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "bug fixes",
+      "version bumps",
+      "writing tests",
+      "pull requests"
+    ],
+    "skill_level": "intermediate"
+  },
+  {
+    "id": 1542,
+    "name": "OpenHands",
+    "description": "An open-source platform for AI software engineering agents. Run it locally, in CI or hosted, and let the agent edit files, run commands, browse the web and open pull requests.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/OpenHands/OpenHands",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An open-source platform for AI software engineering agents. Run it locally, in CI or hosted, and let the agent edit files, run commands, browse the web and open pull requests.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "self-hosted agents",
+      "CI automation",
+      "research on coding agents"
+    ],
+    "skill_level": "advanced"
+  },
+  {
+    "id": 1543,
+    "name": "Google Flow",
+    "description": "Google's AI filmmaking tool built on Veo and Imagen. Generate scenes from text or images, control camera moves, keep characters consistent between shots and assemble everything on a scenebuilder timeline.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://labs.google/flow",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Google's AI filmmaking tool built on Veo and Imagen. Generate scenes from text or images, control camera moves, keep characters consistent between shots and assemble everything on a scenebuilder timeline.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "AI short films",
+      "storyboarding",
+      "marketing video"
+    ],
+    "skill_level": "beginner"
+  },
+  {
+    "id": 1544,
+    "name": "Google Veo",
+    "description": "Google DeepMind video generation models that produce clips with native audio, camera control and reference-image conditioning. Reachable through Gemini, Flow and the Gemini API.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://deepmind.google/models/veo/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Google DeepMind video generation models that produce clips with native audio, camera control and reference-image conditioning. Reachable through Gemini, Flow and the Gemini API.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "cinematic clips",
+      "product video",
+      "API video generation"
+    ],
+    "skill_level": "intermediate"
+  },
+  {
+    "id": 1545,
+    "name": "LTX Studio",
+    "description": "Lightricks' AI storyboarding and video studio. Build a story from script to shot list, keep characters and camera consistent per scene, then render and export for further editing.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://ltx.io/studio",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Lightricks' AI storyboarding and video studio. Build a story from script to shot list, keep characters and camera consistent per scene, then render and export for further editing.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "storyboards",
+      "ad concepts",
+      "pre-visualization"
+    ],
+    "skill_level": "beginner"
+  },
+  {
+    "id": 1546,
+    "name": "Magnific",
+    "description": "An AI upscaler and image enhancer that reimagines texture and lighting rather than just sharpening pixels, with sliders for resemblance, creativity and detail.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://magnific.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An AI upscaler and image enhancer that reimagines texture and lighting rather than just sharpening pixels, with sliders for resemblance, creativity and detail.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "upscaling artwork",
+      "texture detail",
+      "print preparation"
+    ],
+    "skill_level": "intermediate"
+  },
+  {
+    "id": 1547,
+    "name": "FLUX",
+    "description": "Black Forest Labs image models (FLUX.2) plus video generation and editing, offered through the BFL playground, an API and third-party model hosts.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://bfl.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Black Forest Labs image models (FLUX.2) plus video generation and editing, offered through the BFL playground, an API and third-party model hosts.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "photorealistic images",
+      "API generation",
+      "custom pipelines"
+    ],
+    "skill_level": "intermediate"
+  },
+  {
+    "id": 1548,
+    "name": "Resemble AI",
+    "description": "A voice AI platform for custom voice cloning, speech-to-speech conversion, real-time synthesis and dubbing, used in games, film localization and contact-center products.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://www.resemble.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "Multilingual"
+    ],
+    "description_en": "A voice AI platform for custom voice cloning, speech-to-speech conversion, real-time synthesis and dubbing, used in games, film localization and contact-center products.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "voice cloning",
+      "dubbing",
+      "game dialogue"
+    ],
+    "skill_level": "advanced"
+  },
+  {
+    "id": 1549,
+    "name": "Riverside",
+    "description": "A remote recording studio that captures separate local audio and video tracks per guest, then transcribes the session and turns it into shareable clips.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://riverside.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A remote recording studio that captures separate local audio and video tracks per guest, then transcribes the session and turns it into shareable clips.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "podcast recording",
+      "remote interviews",
+      "clip repurposing"
+    ],
+    "skill_level": "beginner"
+  },
+  {
+    "id": 1550,
+    "name": "Fyxer",
+    "description": "An AI assistant for email that drafts replies in your own voice, triages the inbox, takes meeting notes and files messages, working on top of Gmail and Outlook.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://www.fyxer.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An AI assistant for email that drafts replies in your own voice, triages the inbox, takes meeting notes and files messages, working on top of Gmail and Outlook.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "inbox triage",
+      "drafting replies",
+      "executive support"
+    ],
+    "skill_level": "beginner"
+  },
+  {
+    "id": 1551,
+    "name": "Shortwave",
+    "description": "An AI email client with thread summarization, natural-language search across your whole mailbox and an assistant that drafts replies using your own email history.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.shortwave.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An AI email client with thread summarization, natural-language search across your whole mailbox and an assistant that drafts replies using your own email history.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "email search",
+      "thread summaries",
+      "fast triage"
+    ],
+    "skill_level": "beginner"
+  },
+  {
+    "id": 1552,
+    "name": "Dust",
+    "description": "A platform for building AI agents connected to company data such as Slack, Notion, Drive and GitHub, with configurable assistants, tool use and shared team workspaces.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://dust.tt",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A platform for building AI agents connected to company data such as Slack, Notion, Drive and GitHub, with configurable assistants, tool use and shared team workspaces.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "internal assistants",
+      "knowledge search",
+      "team automation"
+    ],
+    "skill_level": "intermediate"
+  },
+  {
+    "id": 1553,
+    "name": "Relevance AI",
+    "description": "A no-code platform for building and deploying teams of AI agents, with a visual workflow builder, a tool library and integrations for sales, support and operations work.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://relevanceai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A no-code platform for building and deploying teams of AI agents, with a visual workflow builder, a tool library and integrations for sales, support and operations work.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "agent workflows",
+      "sales automation",
+      "support triage"
+    ],
+    "skill_level": "intermediate"
+  },
+  {
+    "id": 1554,
+    "name": "Clay",
+    "description": "A data enrichment and outbound platform that pulls from 100+ data sources and runs AI research agents over each row to build and personalize go-to-market lists.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.clay.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A data enrichment and outbound platform that pulls from 100+ data sources and runs AI research agents over each row to build and personalize go-to-market lists.",
+    "last_updated": "2026-09-24",
+    "best_for": [
+      "lead research",
+      "list enrichment",
+      "outbound personalization"
+    ],
+    "skill_level": "intermediate"
   }
 ]
