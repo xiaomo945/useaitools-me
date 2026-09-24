@@ -36,7 +36,7 @@ const DEFAULT_TITLES: Record<string, string> = {
   personalized: '为你推荐',
 };
 
-function renderRating(rating: number | null): string {
+function renderRating(rating: number | null | undefined): string {
   if (rating === null || rating === undefined) return '—';
   return Number(rating).toFixed(1);
 }
