@@ -54,20 +54,18 @@ export default function Home() {
     affiliate_link: getAffiliateLink(tool)
   })) as Tool[];
 
-  // Sort tools by rating + rating_count for featured selection
-  const sortedTools = [...enrichedTools].sort((a, b) => {
-    const scoreA = (a.rating || 4.0) * 100 + (a.rating_count || 0);
-    const scoreB = (b.rating || 4.0) * 100 + (b.rating_count || 0);
-    return scoreB - scoreA;
-  });
+  // Sort by most recently updated.
+  // NOTE: ratings in the dataset were fabricated and have been removed. Ordering
+  // now uses last_updated until real user ratings exist (see UserRating.tsx).
+  const sortedTools = [...enrichedTools].sort((a, b) =>
+    (b.last_updated || '').localeCompare(a.last_updated || '')
+  );
 
   // Only pass first 12 tools to client for initial load (performance optimization)
   const initialTools = sortedTools.slice(0, 12);
 
   // Select featured tools on server to prevent hydration mismatch
-  const selected: Tool[] = initialTools
-    .filter(t => t.rating && t.rating >= 4.5)
-    .slice(0, 3);
+  const selected: Tool[] = initialTools.slice(0, 3);
 
   // WebSite Schema with SearchAction
   const webSiteSchema = {

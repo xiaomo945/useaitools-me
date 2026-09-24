@@ -82,7 +82,6 @@ const MysteryBoxModal = memo(function MysteryBoxModal({
                 <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${colors.bg} text-white`}>
                   {tool.category}
                 </span>
-                <span className="text-amber-500 font-semibold text-sm">★ {tool.rating || '4.5'}</span>
               </div>
               <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">{tool.description}</p>
               <div className="flex flex-col gap-3">

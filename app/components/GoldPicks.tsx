@@ -15,10 +15,10 @@ interface GoldPicksProps {
 }
 
 export default function GoldPicks({ tools, categoryColors }: GoldPicksProps) {
-  // Select top 3 tools by rating (minimum 4.5, must have best_for)
-  const topTools = tools
-    .filter(t => t.rating && t.rating >= 4.0 && t.best_for && t.best_for.length > 0)
-    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+  // Select the 3 most recently updated tools that carry best_for tags
+  const topTools = [...tools]
+    .filter(t => t.best_for && t.best_for.length > 0)
+    .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
     .slice(0, 3);
 
   if (topTools.length === 0) return null;
@@ -34,7 +34,7 @@ export default function GoldPicks({ tools, categoryColors }: GoldPicksProps) {
               Editor&apos;s Picks
             </h2>
             <p className="text-sm text-slate-500 dark:text-slate-400">
-              Our top 3 recommendations based on rating and use case fit
+              Our top 3 recommendations based on use case fit
             </p>
           </div>
         </div>
@@ -93,12 +93,9 @@ export default function GoldPicks({ tools, categoryColors }: GoldPicksProps) {
                       {tool.name}
                     </h3>
                     <div className="flex items-center gap-2 mt-0.5">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                        <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
-                          {(tool.rating || 0).toFixed(1)}
-                        </span>
-                      </div>
+                      <span className="text-sm font-medium text-slate-500 dark:text-slate-400">
+                        {tool.pricing}
+                      </span>
                       <span className="text-xs text-slate-400 dark:text-slate-500">
                         {tool.pricing}
                       </span>

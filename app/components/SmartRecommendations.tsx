@@ -86,7 +86,7 @@ export default function SmartRecommendations({ tools, currentToolId }: SmartReco
       !behavior.viewedTools.includes(t.id)
     );
 
-    // Scoring algorithm: category match + rating weight
+    // Scoring algorithm: category match + use-case fit
     const scoredTools = candidates.map(tool => {
       let score = 0;
 
@@ -97,7 +97,7 @@ export default function SmartRecommendations({ tools, currentToolId }: SmartReco
       }
 
       // Rating weight
-      score += (tool.rating || 0) * 2;
+      score += tool.best_for && tool.best_for.length > 0 ? 2 : 0;
 
       // Rating count weight (more reviews = more credible)
       if (tool.rating_count) {

@@ -279,15 +279,6 @@ const ToolCard = memo(function ToolCard({
           </p>
         </Link>
 
-        {/* Star Rating */}
-        <div className="flex items-center gap-2 mb-3">
-          <StarRating
-            rating={tool.rating || 4.0}
-            count={tool.rating_count || 0}
-            size="sm"
-          />
-        </div>
-
         {/* Skill Level & Best For Tags */}
         <div className="mb-3 space-y-1.5">
           {tool.skill_level && (
@@ -825,10 +816,10 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
     { type: 'category', label: 'AI Productivity Tools', value: 'productivity' },
   ];
 
-  // Get popular tools by rating count
+  // Get most recently updated tools
   const popularTools = useMemo(() => {
     return [...displayedTools]
-      .sort((a, b) => (b.rating_count || 0) - (a.rating_count || 0))
+      .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
       .slice(0, 3);
   }, [displayedTools]);
 
@@ -840,8 +831,8 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       // Add categories first
       suggestions.push(...popularSearches);
       
-      // Add popular tools sorted by rating_count descending
-      const sortedTools = [...displayedTools].sort((a, b) => (b.rating_count || 0) - (a.rating_count || 0));
+      // Add most recently updated tools first
+      const sortedTools = [...displayedTools].sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''));
       const topTools = sortedTools.slice(0, 8);
       topTools.forEach(tool => {
         suggestions.push({
@@ -900,7 +891,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
           name: tool.name,
           category: tool.category,
           id: tool.id,
-          score: nameMatch ? (tool.rating || 4) * 10 : (tool.rating || 4)
+          score: nameMatch ? 100 : 10
         };
       });
     
@@ -1111,10 +1102,8 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       hash |= 0;
     }
     
-    // Filter high-rated but less popular tools (hidden gems)
-    const candidates = displayedTools.filter(t => 
-      (t.rating || 0) >= 4.0 && !savedIds.includes(t.id)
-    );
+    // Pick a tool the visitor has not saved yet
+    const candidates = displayedTools.filter(t => !savedIds.includes(t.id));
     if (candidates.length === 0) return null;
     
     return candidates[Math.abs(hash) % candidates.length];
@@ -1169,8 +1158,9 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       hints.push('Premium quality experience');
     }
     
-    const ratingHint = (random.rating || 4.0) >= 4.5 ? 'Loved by users worldwide' : 'Highly rated by the community';
-    hints.push(ratingHint);
+    if (random.best_for && random.best_for.length > 0) {
+      hints.push(`Great for ${random.best_for[0]}`);
+    }
     
     setMysteryHints(hints);
     setShowMysteryBox(true);
@@ -1783,9 +1773,10 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
             });
             const topCategory = Object.entries(viewedCategories).sort((a, b) => b[1] - a[1])[0]?.[0];
             const unviewed = displayedTools.filter(t => !recentlyViewedIds.includes(t.id));
+            const byRecency = (a: Tool, b: Tool) => (b.last_updated || '').localeCompare(a.last_updated || '');
             const forYouTools = topCategory
-              ? unviewed.filter(t => t.category === topCategory).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3)
-              : unviewed.sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
+              ? unviewed.filter(t => t.category === topCategory).sort(byRecency).slice(0, 3)
+              : unviewed.sort(byRecency).slice(0, 3);
             
             if (forYouTools.length === 0) return null;
             return (
@@ -1811,7 +1802,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                           {tool.name.charAt(0)}
                         </span>
                         <span className="text-xs font-medium text-slate-700 dark:text-slate-300 truncate max-w-[100px]">{tool.name}</span>
-                        <span className="text-[10px] text-amber-500 font-semibold">★ {tool.rating || '4.5'}</span>
+                        <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">{tool.pricing}</span>
                       </Link>
                     );
                   })}
@@ -2219,12 +2210,12 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
             {/* Top 3 Recommended Tools */}
             {(() => {
               const topRated = [...displayedTools]
-                .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+                .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
                 .slice(0, 3);
               if (topRated.length === 0) return null;
               return (
                 <div className="mt-10 max-w-2xl mx-auto">
-                  <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">⭐ Popular picks you might like</p>
+                  <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">🆕 Recently updated picks</p>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {topRated.map((tool) => {
                       const colors = getCategoryColors(tool.category);
@@ -2244,7 +2235,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                           <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mb-2">{tool.description}</p>
                           <div className="flex items-center gap-1.5">
                             <span className={`px-1.5 py-0.5 rounded-full text-[9px] font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text}`}>{tool.category}</span>
-                            <span className="text-[10px] text-amber-500 font-semibold">★ {tool.rating || '4.5'}</span>
+                            <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">{tool.pricing}</span>
                           </div>
                         </Link>
                       );
@@ -2352,7 +2343,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                     <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${getCategoryColors(mysteryTool.category).bg} text-white`}>
                       {mysteryTool.category}
                     </span>
-                    <span className="text-amber-500 font-semibold text-sm">★ {mysteryTool.rating || '4.5'}</span>
+                    <span className="text-slate-500 dark:text-slate-400 text-sm">{mysteryTool.pricing}</span>
                   </div>
                   <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">{mysteryTool.description}</p>
                   <div className="flex flex-col gap-3">

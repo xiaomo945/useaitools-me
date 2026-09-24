@@ -47,48 +47,6 @@ type ProsCons = {
   cons: string[];
 };
 
-type Review = {
-  username: string;
-  rating: number;
-  text: string;
-};
-
-const toolReviews: Record<number, Review[]> = {
-  23: [
-    {
-      username: 'Sarah M.',
-      rating: 5,
-      text: "Rytr completely changed my content workflow. I went from spending 3 hours per blog post to under 30 minutes. The SEO optimizer alone is worth the price."
-    },
-    {
-      username: 'James K.',
-      rating: 4,
-      text: "Great value for money. The templates cover almost every use case I have. Only wish the long-form editor had more customization options like Jasper."
-    },
-    {
-      username: 'Priya D.',
-      rating: 5,
-      text: "As a non-native English speaker, the 30+ language support is a game-changer. I create content in both English and Hindi with excellent quality."
-    },
-  ],
-  51: [
-    {
-      username: 'Alex T.',
-      rating: 5,
-      text: "VEED.io replaced my entire video editing pipeline. The auto-subtitles feature is insanely accurate and saves me hours every week. Best browser-based editor I've used."
-    },
-    {
-      username: 'Maria L.',
-      rating: 4,
-      text: "The AI voiceover and background removal features are incredibly polished. Performance does depend on internet speed, but for quick social media videos, it's unbeatable."
-    },
-    {
-      username: 'Chen W.',
-      rating: 5,
-      text: "I use VEED to translate my YouTube videos into 5 languages. The AI dubbing quality is shockingly good. My international views went up 300% in two months."
-    },
-  ],
-};
 
 const toolFAQs: Record<number, { question: string; answer: string }[]> = {
   23: [
@@ -644,7 +602,7 @@ export default function ToolDetailClient({ tool, relatedTools, relatedArticles =
       : [];
     const pool = sameCategoryAndSkill.length > 0 ? sameCategoryAndSkill : sameCategory;
     return [...pool]
-      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+      .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
       .slice(0, 3);
   };
   const bestAlternatives = getBestAlternatives();
@@ -672,7 +630,7 @@ export default function ToolDetailClient({ tool, relatedTools, relatedArticles =
               t.category === tool.category && 
               !excludeIds.has(t.id) && 
               !historyToolIds.includes(t.id)
-            ).sort((a, b) => (b.rating || 0) - (a.rating || 0));
+            ).sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''));
             setPeopleAlsoViewed([...historyTools, ...popularOthers].slice(0, 3));
           }
         } else {
@@ -680,7 +638,7 @@ export default function ToolDetailClient({ tool, relatedTools, relatedArticles =
             t.category === tool.category && 
             t.id !== tool.id && 
             !relatedToolIds.has(t.id)
-          ).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
+          ).sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || '')).slice(0, 3);
           setPeopleAlsoViewed(popular);
         }
       } catch {
@@ -688,7 +646,7 @@ export default function ToolDetailClient({ tool, relatedTools, relatedArticles =
           t.category === tool.category && 
           t.id !== tool.id && 
           !relatedToolIds.has(t.id)
-        ).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
+        ).sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || '')).slice(0, 3);
         setPeopleAlsoViewed(popular);
       }
     };
@@ -1047,29 +1005,6 @@ const [hasReferrer] = useState(() => {
           </div>
         )}
 
-        {/* User Reviews Section */}
-        {toolReviews[tool.id] && (
-          <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
-            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">💬 What Users Are Saying</h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">Real feedback from Reddit, Trustpilot, and verified users</p>
-            <div className="space-y-5">
-              {toolReviews[tool.id].map((review, index) => (
-                <div key={index} className="flex gap-4 p-5 rounded-xl bg-slate-50 dark:bg-gray-800/60 border border-slate-100 dark:border-gray-700/50">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 dark:from-gray-600 dark:to-gray-700 flex items-center justify-center text-slate-600 dark:text-slate-300 font-semibold text-sm">
-                    {review.username.charAt(0)}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="font-semibold text-sm text-slate-900 dark:text-white">{review.username}</span>
-                      <StarRating rating={review.rating} />
-                    </div>
-                    <p className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed">{review.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
         {/* FAQ Section */}
         {processedFAQs && processedFAQs.length > 0 && (
@@ -1246,7 +1181,7 @@ const [hasReferrer] = useState(() => {
                         <h4 className="font-semibold text-sm text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors truncate">{viewedTool.name}</h4>
                         <div className="flex items-center gap-1">
                           <span className="text-xs text-amber-500">★</span>
-                          <span className="text-xs text-slate-500">{viewedTool.rating || 4.0}</span>
+                          <span className="text-xs text-slate-500">{viewedTool.pricing}</span>
                         </div>
                       </div>
                     </div>
