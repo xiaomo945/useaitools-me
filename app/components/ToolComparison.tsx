@@ -11,8 +11,8 @@ interface ComparisonTool {
   description: string;
   category: string;
   pricing: string;
-  rating?: number;
-  rating_count?: number;
+  rating?: number | null;
+  rating_count?: number | null;
   icon_url: string;
   affiliate_link?: string;
   url: string;
