@@ -8,6 +8,7 @@ interface Tool {
   name: string;
   category: string;
   rating?: number;
+  last_updated?: string;
 }
 
 interface ForYouRecommendationsProps {

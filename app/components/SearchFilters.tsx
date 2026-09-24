@@ -16,6 +16,7 @@ interface Tool {
   rating?: number;
   best_for?: string[];
   rating_count?: number;
+  last_updated?: string;
 }
 
 interface SearchFiltersProps {

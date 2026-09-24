@@ -410,6 +410,7 @@ type Tool = {
   rating_count?: number;
   skill_level?: 'beginner' | 'intermediate' | 'advanced';
   best_for?: string[];
+  last_updated?: string;
 };
 
 // Affiliate link helpers — unified in lib/affiliate.ts (single source of truth)

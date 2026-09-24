@@ -86,4 +86,5 @@ export interface Tool {
   pros_cons?: ProsCons;
   skill_level?: 'beginner' | 'intermediate' | 'advanced';
   best_for?: string[];
+  last_updated?: string;
 }

@@ -58,6 +58,7 @@ export interface Tool {
   rating_breakdown?: RatingBreakdown;
   use_cases?: UseCase[];
   pros_cons?: ProsCons;
+  last_updated?: string;
 }
 
 declare module '@/data/tools.json' {
