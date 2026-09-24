@@ -4989,33 +4989,6 @@
         "image_url": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.7,
-      "ease_of_use": {
-        "score": 4.5,
-        "note": "Clean interface with minimal learning curve"
-      },
-      "output_quality": {
-        "score": 4.8,
-        "note": "Email drafts sound incredibly natural"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "AI writing, summarization, smart replies, and scheduling"
-      },
-      "value_for_money": {
-        "score": 4.1,
-        "note": "Premium pricing for premium experience"
-      },
-      "stability": {
-        "score": 4.9,
-        "note": "Exceptional reliability and performance"
-      },
-      "support": {
-        "score": 4.7,
-        "note": "High-quality support team"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5025,7 +4998,9 @@
     ],
     "description_en": "AI-powered email client that learns your preferences and helps you reach inbox zero 3x faster. Features include AI email drafting, intelligent summarization, and smart reply suggestions.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 444,
@@ -5046,33 +5021,6 @@
         "image_url": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.5,
-      "ease_of_use": {
-        "score": 4.7,
-        "note": "Intuitive drag-and-drop calendar"
-      },
-      "output_quality": {
-        "score": 4.4,
-        "note": "Good caption suggestions"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Scheduling, analytics, and AI content"
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "note": "Great value for social media managers"
-      },
-      "stability": {
-        "score": 4.8,
-        "note": "Reliable platform"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Good documentation"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5082,7 +5030,9 @@
     ],
     "description_en": "AI-powered social media scheduler and content creator for Instagram. Generates captions, hashtag suggestions, and optimal posting times to maximize engagement.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 445,
@@ -5103,33 +5053,6 @@
         "image_url": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.4,
-      "ease_of_use": {
-        "score": 4.5,
-        "note": "Simple interface"
-      },
-      "output_quality": {
-        "score": 4.4,
-        "note": "Quality social media content"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "AI generation + scheduling + analytics"
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "note": "Competitive pricing"
-      },
-      "stability": {
-        "score": 4.5,
-        "note": "Stable platform"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Adequate support"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5139,7 +5062,9 @@
     ],
     "description_en": "AI content creation and social media automation platform that generates posts, graphics, and scheduling across Instagram, Facebook, Twitter, and LinkedIn.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 446,
@@ -5160,33 +5085,6 @@
         "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.6,
-      "ease_of_use": {
-        "score": 4.8,
-        "note": "Browser extension makes it seamless"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Good SEO suggestions"
-      },
-      "features": {
-        "score": 4.7,
-        "note": "Tags, titles, A/B testing, analytics"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Worth the investment"
-      },
-      "stability": {
-        "score": 4.7,
-        "note": "Very reliable"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Helpful community"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5196,7 +5094,9 @@
     ],
     "description_en": "AI-powered YouTube optimization tool that generates titles, descriptions, tags, and thumbnail suggestions to boost video discoverability.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 1526,
@@ -5217,33 +5117,6 @@
         "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.7,
-      "ease_of_use": {
-        "score": 4.6,
-        "note": "Chrome extension integration"
-      },
-      "output_quality": {
-        "score": 4.7,
-        "note": "Accurate analytics"
-      },
-      "features": {
-        "score": 4.8,
-        "note": "Keyword research, scorecard, daily ideas"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Good free tier, premium worth it"
-      },
-      "stability": {
-        "score": 4.8,
-        "note": "Excellent uptime"
-      },
-      "support": {
-        "score": 4.5,
-        "note": "Responsive support"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -5253,7 +5126,9 @@
     ],
     "description_en": "AI YouTube analytics and optimization platform that provides keyword research, competitor analysis, and content suggestions to grow your channel faster.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 1527,
@@ -5274,33 +5149,6 @@
         "image_url": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.5,
-      "ease_of_use": {
-        "score": 4.6,
-        "note": "User-friendly web interface"
-      },
-      "output_quality": {
-        "score": 4.7,
-        "note": "Print-quality resolution"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Multiple algorithms, style transfer"
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "note": "Free daily credits"
-      },
-      "stability": {
-        "score": 4.4,
-        "note": "Generally reliable"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Active Discord community"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5310,7 +5158,9 @@
     ],
     "description_en": "AI art generator with multiple algorithms (Stable Diffusion, DALL-E, etc.) optimized for creating high-resolution prints and wall art. Features community challenges and style transfer.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 458,
@@ -5331,33 +5181,6 @@
         "image_url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.4,
-      "ease_of_use": {
-        "score": 4.6,
-        "note": "User-friendly"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Professional quality"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Auto-translation, collaboration"
-      },
-      "value_for_money": {
-        "score": 4.1,
-        "note": "Enterprise pricing"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Stable"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Good support"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5367,7 +5190,9 @@
     ],
     "description_en": "AI video creation platform with realistic avatars for learning and development content. Features automatic translations and collaborative editing.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 1528,
@@ -5388,33 +5213,6 @@
         "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.6,
-      "ease_of_use": {
-        "score": 4.8,
-        "note": "Gmail/Outlook extension"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Data-driven suggestions"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Email scoring, coaching"
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "note": "Sales team pricing"
-      },
-      "stability": {
-        "score": 4.7,
-        "note": "Reliable"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Good onboarding"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5424,7 +5222,9 @@
     ],
     "description_en": "AI email coach for sales teams that analyzes and optimizes cold emails in real-time. Provides response rate predictions and improvement suggestions.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 460,
@@ -5445,33 +5245,6 @@
         "image_url": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.5,
-      "ease_of_use": {
-        "score": 4.4,
-        "note": "CRM integration required"
-      },
-      "output_quality": {
-        "score": 4.6,
-        "note": "Sales-focused AI"
-      },
-      "features": {
-        "score": 4.7,
-        "note": "Full sales content suite"
-      },
-      "value_for_money": {
-        "score": 4.2,
-        "note": "Enterprise pricing"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Stable"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Good onboarding"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -5481,7 +5254,9 @@
     ],
     "description_en": "AI sales content platform that generates sales scripts, email sequences, call scripts, and LinkedIn outreach messages with CRM integration.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 461,
@@ -5502,33 +5277,6 @@
         "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.5,
-      "ease_of_use": {
-        "score": 4.6,
-        "note": "Calendar integration"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Smart scheduling"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "Auto-scheduling, project mgmt"
-      },
-      "value_for_money": {
-        "score": 4.2,
-        "note": "Premium pricing"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Reliable"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Good support"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5538,7 +5286,9 @@
     ],
     "description_en": "AI-powered calendar and task manager that auto-schedules your day, prioritizes tasks, and adjusts plans when priorities change. Perfect for freelancers managing multiple clients.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 1529,
@@ -5559,33 +5309,6 @@
         "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.3,
-      "ease_of_use": {
-        "score": 4.5,
-        "note": "Simple interface"
-      },
-      "output_quality": {
-        "score": 4.3,
-        "note": "Good templates"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Invoicing, proposals, tracking"
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "note": "Free tier available"
-      },
-      "stability": {
-        "score": 4.4,
-        "note": "Reliable"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Basic support"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5595,7 +5318,9 @@
     ],
     "description_en": "AI freelance business assistant that handles invoicing, time tracking, proposal writing, and client communication. All-in-one platform for independent workers.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 463,
@@ -5616,33 +5341,6 @@
         "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.4,
-      "ease_of_use": {
-        "score": 4.3,
-        "note": "Requires initial setup"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Accurate forecasts"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "Demand planning, auto-reorder"
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "note": "Mid-range pricing"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Reliable"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Good onboarding"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -5652,7 +5350,9 @@
     ],
     "description_en": "AI inventory management and demand forecasting tool that predicts stock levels, automates reordering, and optimizes warehouse operations for small to medium businesses.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 1530,
@@ -5673,33 +5373,6 @@
         "image_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.5,
-      "ease_of_use": {
-        "score": 4.4,
-        "note": "E-commerce integration"
-      },
-      "output_quality": {
-        "score": 4.6,
-        "note": "Accurate planning"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "Multi-platform support"
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "note": "Worth it for volume sellers"
-      },
-      "stability": {
-        "score": 4.7,
-        "note": "Very stable"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Good support"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -5709,7 +5382,9 @@
     ],
     "description_en": "AI-powered inventory planning and purchasing tool that integrates with Shopify, Amazon, and WooCommerce. Generates smart purchase orders and demand forecasts.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 467,
@@ -5730,33 +5405,6 @@
         "image_url": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.4,
-      "ease_of_use": {
-        "score": 4.7,
-        "note": "Drag-and-drop"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Professional slides"
-      },
-      "features": {
-        "score": 4.4,
-        "note": "Auto-layout, templates"
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "note": "Reasonable pricing"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Stable"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Good templates"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5766,7 +5414,9 @@
     ],
     "description_en": "AI presentation designer that creates professional slideshows from outlines or content. Auto-adjusts layouts, suggests visuals, and maintains design consistency.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 1531,
@@ -5787,33 +5437,6 @@
         "image_url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.5,
-      "ease_of_use": {
-        "score": 4.8,
-        "note": "Browser extension works everywhere"
-      },
-      "output_quality": {
-        "score": 4.6,
-        "note": "Excellent tone adaptation"
-      },
-      "features": {
-        "score": 4.4,
-        "note": "Rewrite, summarize, and suggest"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Good free tier"
-      },
-      "stability": {
-        "score": 4.7,
-        "note": "Very reliable"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Helpful documentation"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5823,7 +5446,9 @@
     ],
     "description_en": "AI-powered writing companion that rewrites your sentences for clarity, tone, and style. Helps you express your thoughts precisely and write more efficiently across platforms.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 1532,
@@ -5844,33 +5469,6 @@
         "image_url": "https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.6,
-      "ease_of_use": {
-        "score": 4.7,
-        "note": "Intuitive drag-and-drop"
-      },
-      "output_quality": {
-        "score": 4.8,
-        "note": "Professional results"
-      },
-      "features": {
-        "score": 4.7,
-        "note": "Cleanup, relight, upscale, remove bg"
-      },
-      "value_for_money": {
-        "score": 4.4,
-        "note": "Free tier limited but useful"
-      },
-      "stability": {
-        "score": 4.7,
-        "note": "Stability AI powered"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Good documentation"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5880,7 +5478,9 @@
     ],
     "description_en": "AI-powered image editing suite with background removal, relighting, cleanup, and upscaling tools. Part of Stability AI ecosystem with professional-grade outputs.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 1533,
@@ -5901,33 +5501,6 @@
         "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.5,
-      "ease_of_use": {
-        "score": 4.9,
-        "note": "One-tap background removal"
-      },
-      "output_quality": {
-        "score": 4.6,
-        "note": "Studio-quality results"
-      },
-      "features": {
-        "score": 4.4,
-        "note": "Background removal, AI scenes, batch"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Good for sellers"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Very reliable"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Good help center"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5937,7 +5510,9 @@
     ],
     "description_en": "AI background removal and product photography tool that creates studio-quality images from simple smartphone photos. Perfect for e-commerce and social media.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 1534,
@@ -5958,33 +5533,6 @@
         "image_url": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.6,
-      "ease_of_use": {
-        "score": 4.8,
-        "note": "Upload and get clips automatically"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Good clip selection"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "AI curation, captions, virality score"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Time-saving value"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Stable"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Good docs"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -5994,7 +5542,9 @@
     ],
     "description_en": "AI video repurposing tool that automatically extracts viral short clips from long-form videos. Perfect for creating TikTok, Reels, and Shorts content from podcasts and YouTube videos.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 1535,
@@ -6015,33 +5565,6 @@
         "image_url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.7,
-      "ease_of_use": {
-        "score": 4.8,
-        "note": "Simple upload and enhance"
-      },
-      "output_quality": {
-        "score": 4.8,
-        "note": "Remarkable audio improvement"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Enhance speech, mic check, transcript"
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "note": "Free tier generous"
-      },
-      "stability": {
-        "score": 4.7,
-        "note": "Adobe infrastructure"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Adobe support"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -6051,7 +5574,9 @@
     ],
     "description_en": "AI-powered audio enhancement tool that removes background noise, improves voice quality, and creates studio-grade recordings from any microphone. Includes transcription and editing.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 482,
@@ -6072,33 +5597,6 @@
         "image_url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.6,
-      "ease_of_use": {
-        "score": 4.5,
-        "note": "IDE plugin install"
-      },
-      "output_quality": {
-        "score": 4.7,
-        "note": "Good code understanding"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "Open source, customizable, any LLM"
-      },
-      "value_for_money": {
-        "score": 4.9,
-        "note": "Completely free"
-      },
-      "stability": {
-        "score": 4.4,
-        "note": "Active development"
-      },
-      "support": {
-        "score": 4.5,
-        "note": "Active GitHub community"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -6108,7 +5606,9 @@
     ],
     "description_en": "Open-source AI code assistant that integrates with VS Code and JetBrains. Provides code completion, chat-based assistance, and custom prompt templates for any coding workflow.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 484,
@@ -6129,33 +5629,6 @@
         "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.4,
-      "ease_of_use": {
-        "score": 4.5,
-        "note": "Clean, minimal interface"
-      },
-      "output_quality": {
-        "score": 4.4,
-        "note": "Good AI connections"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Auto-organize, AI search, spaces"
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "note": "Competitive pricing"
-      },
-      "stability": {
-        "score": 4.5,
-        "note": "Reliable"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Active community"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -6165,7 +5638,9 @@
     ],
     "description_en": "AI-powered workspace that organizes notes, documents, and knowledge automatically. Uses AI to connect ideas, surface relevant information, and create a personal knowledge base.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 485,
@@ -6186,33 +5661,6 @@
         "image_url": "https://images.unsplash.com/photo-1470058869958-2a77ade41c02?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.4,
-      "ease_of_use": {
-        "score": 4.6,
-        "note": "Simple upload or record"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Good transcription accuracy"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "104 languages, summaries, action items"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Good free tier"
-      },
-      "stability": {
-        "score": 4.5,
-        "note": "Reliable"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Good help center"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -6222,7 +5670,9 @@
     ],
     "description_en": "AI meeting transcription and note-taking tool that converts audio to text in 104 languages. Features speaker identification, summaries, and action item extraction.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 1536,
@@ -6243,33 +5693,6 @@
         "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.5,
-      "ease_of_use": {
-        "score": 4.5,
-        "note": "Academic-focused interface"
-      },
-      "output_quality": {
-        "score": 4.6,
-        "note": "Good academic writing"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "Citations, literature review, AI autocomplete"
-      },
-      "value_for_money": {
-        "score": 4.4,
-        "note": "Priced for students"
-      },
-      "stability": {
-        "score": 4.5,
-        "note": "Reliable"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Good tutorials"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -6279,7 +5702,9 @@
     ],
     "description_en": "AI writing assistant for academics and researchers with citation management, literature review assistance, and plagiarism detection. Helps write papers and research articles faster.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 489,
@@ -6300,33 +5725,6 @@
         "image_url": "https://images.unsplash.com/photo-1534150034764-046bf225d3fa?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.3,
-      "ease_of_use": {
-        "score": 4.8,
-        "note": "Works everywhere via extension"
-      },
-      "output_quality": {
-        "score": 4.3,
-        "note": "Good general writing"
-      },
-      "features": {
-        "score": 4.3,
-        "note": "Auto-write, rewrite, templates"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Free tier useful"
-      },
-      "stability": {
-        "score": 4.4,
-        "note": "Generally stable"
-      },
-      "support": {
-        "score": 4.1,
-        "note": "Growing support"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -6336,7 +5734,9 @@
     ],
     "description_en": "AI writing assistant browser extension that helps you write anywhere on the web. Generates content, rewrites text, and provides suggestions in any text field.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 491,
@@ -6357,33 +5757,6 @@
         "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.4,
-      "ease_of_use": {
-        "score": 4.7,
-        "note": "Simple text-to-video workflow"
-      },
-      "output_quality": {
-        "score": 4.4,
-        "note": "Good for social media"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "75+ languages, 1100+ voices"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Affordable"
-      },
-      "stability": {
-        "score": 4.4,
-        "note": "Generally stable"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Good tutorials"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -6393,7 +5766,9 @@
     ],
     "description_en": "AI video creation tool that converts text, blog posts, and scripts into engaging videos with AI voiceover and stock media. Perfect for social media content at scale.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 492,
@@ -6414,33 +5789,6 @@
         "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.7,
-      "ease_of_use": {
-        "score": 4.9,
-        "note": "Drag-and-drop simplicity"
-      },
-      "output_quality": {
-        "score": 4.6,
-        "note": "Professional designs"
-      },
-      "features": {
-        "score": 4.8,
-        "note": "Templates, AI tools, collaboration"
-      },
-      "value_for_money": {
-        "score": 4.7,
-        "note": "Great free tier"
-      },
-      "stability": {
-        "score": 4.9,
-        "note": "Highly reliable"
-      },
-      "support": {
-        "score": 4.6,
-        "note": "Excellent support"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -6450,7 +5798,9 @@
     ],
     "description_en": "AI-enhanced design platform with Magic Write, Magic Edit, background removal, and AI image generation. All-in-one design tool for non-designers and professionals.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 494,
@@ -6471,33 +5821,6 @@
         "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.6,
-      "ease_of_use": {
-        "score": 4.7,
-        "note": "Simple text prompt interface"
-      },
-      "output_quality": {
-        "score": 4.7,
-        "note": "Production-ready components"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Text-to-UI, iterative refinement"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Good free tier"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Vercel powered"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Growing docs"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -6507,7 +5830,9 @@
     ],
     "description_en": "AI-powered UI generation tool from Vercel that creates React components from text descriptions. Integrates with Tailwind CSS and shadcn/ui for production-ready code.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 499,
@@ -6528,33 +5853,6 @@
         "image_url": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.5,
-      "ease_of_use": {
-        "score": 4.4,
-        "note": "Background recording"
-      },
-      "output_quality": {
-        "score": 4.6,
-        "note": "Accurate search results"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Records everything, AI search"
-      },
-      "value_for_money": {
-        "score": 4.1,
-        "note": "Premium pricing"
-      },
-      "stability": {
-        "score": 4.5,
-        "note": "Mac optimized"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Good support"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -6564,7 +5862,9 @@
     ],
     "description_en": "Personal AI search engine that indexes everything you do on your computer - apps, websites, meetings, documents - and lets you search your entire digital life with natural language.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 502,
@@ -6585,33 +5885,6 @@
         "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.6,
-      "ease_of_use": {
-        "score": 4.5,
-        "note": "Simple text-to-video interface"
-      },
-      "output_quality": {
-        "score": 4.8,
-        "note": "Cinematic quality"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Text/image to video, camera control"
-      },
-      "value_for_money": {
-        "score": 4.4,
-        "note": "Limited free credits"
-      },
-      "stability": {
-        "score": 4.4,
-        "note": "New but improving"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Growing community"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -6621,7 +5894,9 @@
     ],
     "description_en": "AI video generation model that creates realistic, high-quality videos from text and images. Features temporal consistency, camera control, and cinematic quality outputs.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 503,
@@ -6642,33 +5917,6 @@
         "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "ratings": {
-      "overall": 4.5,
-      "ease_of_use": {
-        "score": 4.5,
-        "note": "Prompt-based generation"
-      },
-      "output_quality": {
-        "score": 4.7,
-        "note": "High-quality, consistent"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Up to 5-min videos, multiple styles"
-      },
-      "value_for_money": {
-        "score": 4.4,
-        "note": "Competitive pricing"
-      },
-      "stability": {
-        "score": 4.3,
-        "note": "Growing platform"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Documentation improving"
-      }
-    },
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -6678,7 +5926,9 @@
     ],
     "description_en": "Advanced AI video generation platform that produces high-quality, temporally consistent videos from text prompts. Supports up to 5-minute videos with realistic motion and detail.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "languages": [],
+    "needs_vpn": false
   },
   {
     "id": 555,
@@ -13235,7 +12485,8 @@
     ],
     "description_en": "Text expansion and automation tool with AI-powered templates that eliminates repetitive typing and boosts productivity across any web application.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1350,
@@ -13255,7 +12506,8 @@
     ],
     "description_en": "AI writing assistant specialized in e-commerce product descriptions, generating SEO-optimized content at scale for online stores and catalogs.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1351,
@@ -13275,7 +12527,8 @@
     ],
     "description_en": "AI content generator with built-in fact-checking and SEO optimization, ensuring accurate and search-engine-friendly long-form articles and blogs.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1353,
@@ -13295,7 +12548,8 @@
     ],
     "description_en": "Official Stable Diffusion web interface for professional image generation, offering fine-grained control over parameters and high-quality visual output.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1359,
@@ -13315,7 +12569,8 @@
     ],
     "description_en": "AI productivity workspace combining tasks, notes, and team collaboration with AI agents that automate workflows and generate project outlines.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1365,
@@ -13335,7 +12590,8 @@
     ],
     "description_en": "AWS AI coding companion for cloud development, providing code suggestions, security scans, and AWS best practices directly within your IDE.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1369,
@@ -13355,7 +12611,8 @@
     ],
     "description_en": "AI noise cancellation tool for meetings and audio recordings, removing background noise and echo in real time for crystal-clear communication.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1375,
@@ -13375,7 +12632,8 @@
     ],
     "description_en": "AI video generation from text with digital presenters, enabling scalable personalized video content without cameras, studios, or production crews.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1376,
@@ -13395,7 +12653,8 @@
     ],
     "description_en": "AI video platform for sales outreach and marketing campaigns, combining video recording, hosting, and analytics to drive engagement and conversions.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1381,
@@ -13415,7 +12674,8 @@
     ],
     "description_en": "Enterprise AI writing platform with style guide enforcement, terminology management, and team collaboration features.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1383,
@@ -13435,7 +12695,8 @@
     ],
     "description_en": "AI background removal tool that instantly creates transparent backgrounds from any photo with a single click.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1384,
@@ -13455,7 +12716,8 @@
     ],
     "description_en": "AI image upscaling and enhancement tool that transforms low-resolution photos into print-quality visuals effortlessly.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1385,
@@ -13475,7 +12737,8 @@
     ],
     "description_en": "AI art platform that uses neural network visualization to transform photos into surreal and psychedelic artworks.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1386,
@@ -13495,7 +12758,8 @@
     ],
     "description_en": "AI collaborative art tool for mixing and evolving images through generative adversarial networks and community creativity.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1387,
@@ -13515,7 +12779,8 @@
     ],
     "description_en": "AI meeting transcription and note-taking tool with speaker identification and real-time collaboration for productive meetings.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1388,
@@ -13535,7 +12800,8 @@
     ],
     "description_en": "AI meeting assistant that automates transcription, conversation intelligence, and action item extraction across platforms.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1390,
@@ -13555,7 +12821,8 @@
     ],
     "description_en": "AI meeting recorder with automatic transcription, timestamped summaries, and clip sharing for async team collaboration.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1393,
@@ -13575,7 +12842,8 @@
     ],
     "description_en": "AI-powered terminal with intelligent command suggestions, workflow automation, and collaborative features for developers.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1396,
@@ -13595,7 +12863,8 @@
     ],
     "description_en": "AI code review tool that provides automated pull request analysis with actionable suggestions and context-aware feedback.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1397,
@@ -13615,7 +12884,8 @@
     ],
     "description_en": "AI music generation platform for creating full songs with vocals and instruments from simple text prompts in seconds.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1398,
@@ -13635,7 +12905,8 @@
     ],
     "description_en": "AI music creation tool for generating high-quality songs and compositions across genres from descriptive text prompts.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1399,
@@ -13655,7 +12926,8 @@
     ],
     "description_en": "AI music generator for creating royalty-free tracks tailored for content creators, streamers, and brand videos.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1400,
@@ -13675,7 +12947,8 @@
     ],
     "description_en": "AI-powered music licensing platform offering a vast library of royalty-free tracks and sound effects for creators.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1401,
@@ -13695,7 +12968,8 @@
     ],
     "description_en": "AI music composition tool for creating custom soundtracks and background music for videos, podcasts, and games.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1403,
@@ -13715,7 +12989,8 @@
     ],
     "description_en": "AI video editing platform for creating social media clips from long recordings with automatic captioning and layout.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1404,
@@ -13736,7 +13011,8 @@
     "last_updated": "2026-09-24",
     "description_en": "AI video editing tool that extracts viral-worthy clips from long-form content using trend analysis and engagement scoring.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1405,
@@ -13756,7 +13032,8 @@
     ],
     "description_en": "AI clip generator that automatically captures highlights from gaming streams and podcast recordings for social sharing.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1406,
@@ -13776,7 +13053,8 @@
     ],
     "description_en": "AI video editor that automatically generates cuts, storyboards, and captions to streamline post-production workflows.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1408,
@@ -13796,7 +13074,8 @@
     ],
     "description_en": "AI writing assistant for creating landing page copy, product descriptions, and ad content with GPT-powered generation.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1411,
@@ -13816,7 +13095,8 @@
     ],
     "description_en": "All-in-one AI writing and design tool for marketing teams to create copy, graphics, and videos from one workspace.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1412,
@@ -13836,7 +13116,8 @@
     ],
     "description_en": "AI image enhancement tool for upscaling, denoising, and sharpening photos with industry-leading quality and detail recovery.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1415,
@@ -13856,7 +13137,8 @@
     ],
     "description_en": "AI image processing tool for upscaling, enhancing, and converting photos with batch processing and workflow automation.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1416,
@@ -13876,7 +13158,8 @@
     ],
     "description_en": "AI art and design tool for creating graphics, art, and marketing visuals from templates with easy customization options.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1418,
@@ -13896,7 +13179,8 @@
     ],
     "description_en": "Visual automation platform with AI-powered scenario building and data processing for complex multi-app workflows.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1419,
@@ -13916,7 +13200,8 @@
     ],
     "description_en": "AI workflow automation tool for browser-based repetitive tasks, scraping, and app integration without coding.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1420,
@@ -13936,7 +13221,8 @@
     ],
     "description_en": "AI automation tool for document processing, email classification, and data extraction without writing any code.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1422,
@@ -13956,7 +13242,8 @@
     ],
     "description_en": "AI-powered DevSecOps platform with code suggestions, security scanning, and chat-based assistance for developers.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1423,
@@ -13976,7 +13263,8 @@
     ],
     "description_en": "AI assistant integrated into JetBrains IDEs for intelligent code completion, refactoring, and in-editor documentation.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1425,
@@ -13996,7 +13284,8 @@
     ],
     "description_en": "AI code generation model powering various developer tools with natural language to code translation capabilities.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1426,
@@ -14016,7 +13305,8 @@
     ],
     "description_en": "AI developer assistant for code generation, debugging, and documentation with context-aware suggestions and explanations.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1427,
@@ -14036,7 +13326,8 @@
     ],
     "description_en": "AI-powered music mastering and distribution platform for musicians to achieve professional sound quality instantly.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1428,
@@ -14056,7 +13347,8 @@
     ],
     "description_en": "AI audio recording app with noise reduction and studio-quality enhancement for musicians and podcasters on the go.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1429,
@@ -14076,7 +13368,8 @@
     ],
     "description_en": "AI music creation and collaboration platform for musicians and producers with cloud-based mixing and sharing tools.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1430,
@@ -14096,7 +13389,8 @@
     ],
     "description_en": "AI-powered music production platform with curated samples, preset management, and intelligent creative suggestions.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1431,
@@ -14116,7 +13410,8 @@
     ],
     "description_en": "AI-enhanced audio editor with noise removal, auto-leveling, and speech-to-text transcription for podcast production.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1434,
@@ -14136,7 +13431,8 @@
     ],
     "description_en": "AI video creation tool for social media marketing and advertising with premium footage and customizable templates.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1435,
@@ -14156,7 +13452,8 @@
     ],
     "description_en": "AI video and animation maker for branding and marketing content with logo animation and explainer video templates.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1436,
@@ -14176,7 +13473,8 @@
     ],
     "description_en": "AI video creation platform for making professional videos quickly with customizable templates and brand kit integration.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1439,
@@ -14199,7 +13497,8 @@
     ],
     "description_en": "AI-powered writing assistant for grammar and style checking supporting over 30 languages with context-aware suggestions.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1440,
@@ -14219,7 +13518,8 @@
     ],
     "description_en": "AI content generator for website copy and e-commerce product descriptions that creates SEO-optimized text instantly.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1441,
@@ -14239,7 +13539,8 @@
     ],
     "description_en": "AI content generation tool for discovering profitable niches and creating targeted marketing content at scale.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1442,
@@ -14260,7 +13561,8 @@
     "last_updated": "2026-09-24",
     "description_en": "AI photo editor with magic retouching and avatar generation features for creating stunning social media portraits.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1444,
@@ -14280,7 +13582,8 @@
     ],
     "description_en": "AI face editing tool for realistic photo transformations including age progression, gender swap, and style enhancements.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1445,
@@ -14300,7 +13603,8 @@
     ],
     "description_en": "AI photo relighting tool for adjusting light direction and intensity after the photo is taken for perfect illumination.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1446,
@@ -14320,7 +13624,8 @@
     ],
     "description_en": "AI object removal tool for seamlessly cleaning up photos by erasing unwanted people, text, and blemishes instantly.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1452,
@@ -14340,7 +13645,8 @@
     ],
     "description_en": "AI code generation model specialized for software development tasks with deep understanding of codebase context.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1453,
@@ -14360,7 +13666,8 @@
     ],
     "description_en": "AI coding model for code generation and understanding across multiple programming languages with strong reasoning.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1454,
@@ -14380,7 +13687,8 @@
     ],
     "description_en": "AI code quality tool for generating meaningful tests and documentation that improve codebase reliability and coverage.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1457,
@@ -14400,7 +13708,8 @@
     ],
     "description_en": "AI music and sound effect generation tool for content creators producing royalty-free audio from text descriptions.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1459,
@@ -14420,7 +13729,8 @@
     ],
     "description_en": "AI music practice app with stem separation, pitch detection, and tempo control for musicians to learn any song.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1460,
@@ -14440,7 +13750,8 @@
     ],
     "description_en": "AI tool for separating vocals from music tracks enabling remixing, karaoke creation, and sample extraction instantly.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1465,
@@ -14460,7 +13771,8 @@
     ],
     "description_en": "AI video generation platform for creating and editing videos from text prompts with creative style control and effects.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1466,
@@ -14480,7 +13792,8 @@
     ],
     "description_en": "AI video generation tool for creating mesmerizing music videos and visual art with animation from images and audio.",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "examples": []
   },
   {
     "id": 1467,
