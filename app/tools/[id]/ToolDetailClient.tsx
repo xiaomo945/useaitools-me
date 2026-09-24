@@ -101,8 +101,8 @@ type Tool = {
   languages: string[];
   use_cases?: UseCase[];
   pros_cons?: ProsCons;
-  rating?: number;
-  rating_count?: number;
+  rating?: number | null;
+  rating_count?: number | null;
   last_updated?: string;
   skill_level?: string;
   best_for?: string[];
@@ -265,7 +265,7 @@ const getCategoryColors = (category: Tool['category']) => {
   };
 
 // StarRating component
-const StarRating = ({ rating }: { rating: number }) => (
+const StarRating = ({ rating }: { rating?: number | null }) => (
   <div className="flex items-center gap-0.5">
     {[1, 2, 3, 4, 5].map((star) => (
       <svg
@@ -1390,7 +1390,7 @@ const [hasReferrer] = useState(() => {
         </div>
 
         {/* Related Tools: Similar tools in same category */}
-        <RelatedTools currentTool={tool} allTools={toolsData as { id: number; name: string; description: string; category: string; pricing: string; rating?: number; best_for?: string[] }[]} limit={4} />
+        <RelatedTools currentTool={tool} allTools={toolsData as { id: number; name: string; description: string; category: string; pricing: string; rating?: number | null; best_for?: string[] }[]} limit={4} />
       </div>
       <Footer />
     </div>

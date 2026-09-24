@@ -11,8 +11,8 @@ interface Tool {
   id: number;
   name: string;
   category: string;
-  rating: number;
-  rating_count: number;
+  rating?: number | null;
+  rating_count?: number | null;
 }
 
 interface RecommendationData {

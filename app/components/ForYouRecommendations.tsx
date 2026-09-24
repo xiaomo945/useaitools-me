@@ -7,7 +7,7 @@ interface Tool {
   id: number;
   name: string;
   category: string;
-  rating?: number;
+  rating?: number | null;
   last_updated?: string;
 }
 

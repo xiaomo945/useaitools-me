@@ -42,8 +42,8 @@ export interface Tool {
   examples: any[];
   needs_vpn: boolean;
   languages: string[];
-  rating: number;
-  rating_count: number;
+  rating?: number | null;
+  rating_count?: number | null;
   rating_breakdown: any;
   last_updated: string;
   skill_level: string;

@@ -8,7 +8,7 @@ interface Tool {
   name: string;
   category: string;
   description: string;
-  rating?: number;
+  rating?: number | null;
 }
 
 interface ColorScheme {

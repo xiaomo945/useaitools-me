@@ -13,9 +13,9 @@ interface Tool {
   url: string;
   affiliate_link: string;
   icon_url?: string;
-  rating?: number;
+  rating?: number | null;
   best_for?: string[];
-  rating_count?: number;
+  rating_count?: number | null;
   last_updated?: string;
 }
 

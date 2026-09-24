@@ -10,7 +10,7 @@ type Tool = {
   description: string;
   category: string;
   pricing: string;
-  rating?: number;
+  rating?: number | null;
   affiliate_link?: string;
   url: string;
 };

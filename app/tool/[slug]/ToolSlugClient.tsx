@@ -47,8 +47,8 @@ type Tool = {
   languages: string[];
   use_cases?: UseCase[];
   pros_cons?: ProsCons;
-  rating?: number;
-  rating_count?: number;
+  rating?: number | null;
+  rating_count?: number | null;
   rating_breakdown?: RatingBreakdown;
   skill_level?: string;
   best_for?: string[];
@@ -164,7 +164,7 @@ const categoryFeatures: Record<string, string[]> = {
 };
 
 // StarRating component
-const StarRating = ({ rating }: { rating: number }) => (
+const StarRating = ({ rating }: { rating?: number | null }) => (
   <div className="flex items-center gap-0.5">
     {[1, 2, 3, 4, 5].map((star) => (
       <svg
