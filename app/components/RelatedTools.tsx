@@ -7,7 +7,7 @@ interface RelatedTool {
   description: string;
   category: string;
   pricing: string;
-  rating?: number;
+  rating?: number | null;
   best_for?: string[];
 }
 

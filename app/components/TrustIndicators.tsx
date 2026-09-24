@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 interface TrustIndicatorsProps {
   toolName: string;
-  rating?: number;
-  ratingCount?: number;
+  rating?: number | null;
+  ratingCount?: number | null;
   pricing: string;
 }
 

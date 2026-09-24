@@ -1,7 +1,7 @@
 'use client';
 
 interface StarRatingProps {
-  rating: number;
+  rating?: number | null;
   showCount?: boolean;
   count?: number;
   size?: 'sm' | 'md' | 'lg';
@@ -16,8 +16,8 @@ export default function StarRating({ rating, showCount = false, count = 0, size 
 
   const renderStar = (index: number) => {
     const starValue = index + 1;
-    const isFull = rating >= starValue;
-    const isHalf = !isFull && rating >= starValue - 0.5;
+    const isFull = (rating ?? 0) >= starValue;
+    const isHalf = !isFull && (rating ?? 0) >= starValue - 0.5;
 
     return (
       <svg

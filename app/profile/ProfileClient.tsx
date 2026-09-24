@@ -20,7 +20,7 @@ interface FavoriteTool {
   id: number;
   name: string;
   category: string;
-  rating: number;
+  rating?: number | null;
   review: string;
 }
 
@@ -29,7 +29,7 @@ interface Activity {
   toolName: string;
   toolId: number | null;
   date: string;
-  rating?: number;
+  rating?: number | null;
   status?: string;
 }
 
