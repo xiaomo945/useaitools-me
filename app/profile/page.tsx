@@ -404,7 +404,7 @@ export default function ProfilePage() {
                           </span>
                           {activity.rating && (
                             <span className="text-xs text-amber-500">
-                              {'⭐'.repeat(activity.rating)}
+                              {'⭐'.repeat(activity.rating || 0)}
                             </span>
                           )}
                           {activity.status && (
