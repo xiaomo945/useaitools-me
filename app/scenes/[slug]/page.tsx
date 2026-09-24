@@ -8,7 +8,7 @@ import { scenes, getSceneBySlug, getSceneSlugs, type SceneConfig } from '@/data/
 import type { Tool } from '@/types';
 import { getAffiliateLink, hasAffiliateLink } from '@/lib/affiliate';
 
-const tools = toolsData as Tool[];
+const tools = toolsData as unknown as Tool[];
 
 export async function generateStaticParams() {
   return getSceneSlugs().map(slug => ({ slug }));
@@ -62,7 +62,7 @@ function getSceneTools(scene: SceneConfig): Tool[] {
 function getTopPicks(scene: SceneConfig, sceneTools: Tool[]): Tool[] {
   return scene.topPicks
     .map(name => sceneTools.find(t => t.name.toLowerCase() === name.toLowerCase()))
-    .filter(Boolean) as Tool[];
+    .filter(Boolean) as unknown as Tool[];
 }
 
 function generateSchema(scene: SceneConfig, toolCount: number) {

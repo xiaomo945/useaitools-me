@@ -15,7 +15,7 @@ type Tool = {
   affiliate_link: string;
 };
 
-const typedTools = toolsData as Tool[];
+const typedTools = toolsData as unknown as Tool[];
 
 function generateSlugFromName(name: string): string {
   return name

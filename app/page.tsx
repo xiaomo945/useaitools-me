@@ -53,7 +53,7 @@ export default function Home() {
   const enrichedTools = tools.map(tool => ({
     ...tool,
     affiliate_link: getAffiliateLink(tool)
-  })) as Tool[];
+  })) as unknown as Tool[];
 
   // Sort by most recently updated.
   // NOTE: ratings in the dataset were fabricated and have been removed. Ordering

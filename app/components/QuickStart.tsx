@@ -15,7 +15,7 @@ type Tool = {
   url: string;
 };
 
-const tools = toolsData as Tool[];
+const tools = toolsData as unknown as Tool[];
 
 type UserProfile = {
   label: string;
@@ -77,7 +77,7 @@ export default function QuickStart() {
   const recommendedTools = profile
     ? profile.toolIds
         .map(id => tools.find(t => t.id === id))
-        .filter(Boolean) as Tool[]
+        .filter(Boolean) as unknown as Tool[]
     : [];
 
   return (

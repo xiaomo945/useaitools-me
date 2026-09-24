@@ -10,7 +10,7 @@ import Breadcrumbs from '@/app/components/Breadcrumbs';
 import UserToolList from '@/app/components/UserToolList';
 import type { Tool } from '@/types';
 
-const tools = toolsData as Tool[];
+const tools = toolsData as unknown as Tool[];
 
 // Load saved ids from localStorage on initialization (fallback for non-logged users)
 const getSavedIds = (): number[] => {

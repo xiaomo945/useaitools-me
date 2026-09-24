@@ -592,7 +592,7 @@ export default function ToolDetailClient({ tool, relatedTools, relatedArticles =
     answer: faq.answer.replace(/\{CTA_URL\}/g, ctaUrl)
   }));
 
-  const allTools = toolsData as Tool[];
+  const allTools = toolsData as unknown as Tool[];
   const relatedToolIds = new Set(relatedTools.map(t => t.id));
   const getBestAlternatives = (): Tool[] => {
     const excludeIds = new Set([tool.id, ...relatedToolIds]);

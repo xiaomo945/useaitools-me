@@ -2,7 +2,7 @@ import Link from 'next/link';
 import toolsData from '@/data/tools.json';
 import type { Tool } from '@/types';
 
-const tools = toolsData as Tool[];
+const tools = toolsData as unknown as Tool[];
 
 // Pick 5 recently updated tools for recommendation
 const popularTools = [...tools]

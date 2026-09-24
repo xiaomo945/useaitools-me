@@ -1,4 +1,4 @@
 import type { Tool } from '@/types';
 import toolsData from '@/data/tools.json';
 
-export const tools: Tool[] = toolsData as Tool[];
+export const tools: Tool[] = toolsData as unknown as Tool[];
