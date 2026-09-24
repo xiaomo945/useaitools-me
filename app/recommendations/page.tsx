@@ -88,7 +88,7 @@ export default function RecommendationsPage() {
               {tool.category}
             </span>
             <span className="text-xs text-slate-400 dark:text-slate-500">
-              ⭐ {tool.rating.toFixed(1)} ({tool.rating_count})
+              ⭐ {(tool.rating ?? 0).toFixed(1)} ({tool.rating_count ?? 0})
             </span>
           </div>
         </div>
