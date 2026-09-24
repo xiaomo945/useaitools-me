@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { Suspense } from "react";
 import Script from "next/script";
 import { Analytics } from '@vercel/analytics/next';
@@ -21,24 +21,31 @@ import AuthProvider from "./components/AuthProvider";
 import WebVitals from "./components/WebVitals";
 import ServiceWorkerRegistration from "./components/ServiceWorkerRegistration";
 
-const inter = Inter({
+const inter = localFont({
   variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  src: [
+    { path: "./fonts/Inter-400.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/Inter-500.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/Inter-600.woff2", weight: "600", style: "normal" },
+  ],
   display: "swap",
 });
 
-const playfairDisplay = Playfair_Display({
+const playfairDisplay = localFont({
   variable: "--font-playfair-display",
-  subsets: ["latin"],
-  weight: ["700", "900"],
+  src: [
+    { path: "./fonts/PlayfairDisplay-700.woff2", weight: "700", style: "normal" },
+    { path: "./fonts/PlayfairDisplay-900.woff2", weight: "900", style: "normal" },
+  ],
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const jetbrainsMono = localFont({
   variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
+  src: [
+    { path: "./fonts/JetBrainsMono-400.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/JetBrainsMono-500.woff2", weight: "500", style: "normal" },
+  ],
   display: "swap",
 });
 
@@ -99,7 +106,7 @@ export default function RootLayout({
       className={`${inter.variable} ${playfairDisplay.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <head>
-        {/* next/font 已自动 self-host 并 preload 字体，无需手动 preconnect Google Fonts */}
+        {/* 字体已通过 next/font/local 自托管于 app/fonts，无需连接 Google Fonts */}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="preconnect" href="https://images.pexels.com" />
