@@ -7,6 +7,7 @@ import TrendingTools from '@/app/components/TrendingTools';
 import StatsBanner from '@/app/components/StatsBanner';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import type { Tool } from '@/types';
 import type { Metadata } from 'next';
@@ -63,6 +64,17 @@ export default function Home() {
 
   // Only pass first 12 tools to client for initial load (performance optimization)
   const initialTools = sortedTools.slice(0, 12);
+
+  // Only hand the client the blog fields it actually renders.
+  // Post bodies average ~7KB and are never used client-side, so passing all 786
+  // of them serialized ~5.3MB into the RSC payload. Keep the newest 120 for
+  // search suggestions, and images only for the 5 cards that are displayed.
+  const clientBlogPosts = blogPosts.slice(0, 120).map((post, index) => ({
+    ...post,
+    content: '',
+    tldr: undefined,
+    images: index < 5 ? post.images : [],
+  }));
 
   // Select featured tools on server to prevent hydration mismatch
   const selected: Tool[] = initialTools.slice(0, 3);
@@ -166,7 +178,7 @@ export default function Home() {
       />
       <HomeClient
         initialTools={initialTools}
-        blogPosts={blogPosts}
+        blogPosts={clientBlogPosts}
         totalCount={enrichedTools.length}
       />
       <FeaturedTools tools={selected} />
@@ -204,12 +216,13 @@ export default function Home() {
               className="group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               {post.images && post.images.length > 0 && (
-                <div className="aspect-video overflow-hidden bg-slate-100 dark:bg-gray-800">
-                  <img
+                <div className="relative aspect-video overflow-hidden bg-slate-100 dark:bg-gray-800">
+                  <Image
                     src={post.images[0].url}
                     alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               )}
