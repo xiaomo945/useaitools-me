@@ -359,7 +359,7 @@ export default function ProfilePage() {
                                 {tool.category}
                               </span>
                               <span className="text-xs text-amber-500">
-                                {'⭐'.repeat(tool.rating)}
+                                {'⭐'.repeat(tool.rating || 0)}
                               </span>
                             </div>
                             {tool.review && (
