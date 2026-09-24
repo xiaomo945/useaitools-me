@@ -17,7 +17,7 @@ interface SearchBarProps {
   removeRecentSearch: (term: string) => void;
   saveRecentSearch: (term: string) => void;
   autocompleteItems: { type: 'tool' | 'blog'; name: string; category: string; id: number; score: number }[];
-  popularTools: { id: number; name: string; category: string; rating?: number }[];
+  popularTools: { id: number; name: string; category: string; rating?: number | null }[];
   blogPosts: { id: number; title: string; slug: string; date: string; description: string; category: string }[];
   router: ReturnType<typeof useRouter>;
   goToSearchPage: () => void;
