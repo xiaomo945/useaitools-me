@@ -23731,5 +23731,1019 @@
       "General Users",
       "Image Generation"
     ]
+  },
+  {
+    "id": 1487,
+    "name": "Claude Code",
+    "description": "Anthropic's terminal-native coding agent. It reads your repository, executes shell commands, runs test suites and commits changes, operating as an interactive CLI inside your existing terminal rather than a separate editor. Repository conventions can be encoded in CLAUDE.md files and enforced with hooks and permission rules, and MCP servers connect it to external databases, issue trackers and APIs.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://claude.com/claude-code",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Anthropic's terminal-native coding agent. It reads your repository, executes shell commands, runs test suites and commits changes, operating as an interactive CLI inside your existing terminal rather than a separate editor. Repository conventions can be encoded in CLAUDE.md files and enforced with hooks and permission rules, and MCP servers connect it to external databases, issue trackers and APIs.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agentic Coding",
+      "Refactoring",
+      "Terminal Workflows"
+    ]
+  },
+  {
+    "id": 1488,
+    "name": "Cline",
+    "description": "Open-source coding agent for VS Code that asks for approval before every file edit and terminal command, so you can see exactly what it is doing. Model-agnostic — bring your own API key for Claude, GPT or a local model — and supports the MCP tool ecosystem for extending what the agent can reach.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://cline.bot",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Open-source coding agent for VS Code that asks for approval before every file edit and terminal command, so you can see exactly what it is doing. Model-agnostic — bring your own API key for Claude, GPT or a local model — and supports the MCP tool ecosystem for extending what the agent can reach.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Open Source",
+      "VS Code",
+      "Autonomous Coding"
+    ]
+  },
+  {
+    "id": 1489,
+    "name": "OpenCode",
+    "description": "MIT-licensed terminal coding agent that works with 75+ model providers, so you are never locked to one vendor or subscription. Runs entirely in your terminal with a TUI interface, and is popular with developers who want full control over which model handles which task.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://opencode.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "MIT-licensed terminal coding agent that works with 75+ model providers, so you are never locked to one vendor or subscription. Runs entirely in your terminal with a TUI interface, and is popular with developers who want full control over which model handles which task.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "advanced",
+    "best_for": [
+      "Open Source",
+      "Terminal",
+      "Model Agnostic"
+    ]
+  },
+  {
+    "id": 1490,
+    "name": "Aider",
+    "description": "Git-native AI pair programming tool that runs in your terminal and writes changes straight into your repository. Every edit is committed with a descriptive message, which means the entire AI contribution stays reviewable and revertible through ordinary git history. Works with Claude, GPT and locally hosted models.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://aider.chat",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Git-native AI pair programming tool that runs in your terminal and writes changes straight into your repository. Every edit is committed with a descriptive message, which means the entire AI contribution stays reviewable and revertible through ordinary git history. Works with Claude, GPT and locally hosted models.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Git Workflow",
+      "Pair Programming",
+      "Terminal"
+    ]
+  },
+  {
+    "id": 1491,
+    "name": "Augment Code",
+    "description": "AI coding platform aimed at large enterprise codebases, built around a context engine that indexes millions of lines of code so answers reflect your whole repository rather than one open file. Integrates with VS Code and JetBrains, and targets team-wide code understanding more than single-file autocomplete.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://www.augmentcode.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI coding platform aimed at large enterprise codebases, built around a context engine that indexes millions of lines of code so answers reflect your whole repository rather than one open file. Integrates with VS Code and JetBrains, and targets team-wide code understanding more than single-file autocomplete.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "advanced",
+    "best_for": [
+      "Enterprise",
+      "Large Codebases",
+      "Code Search"
+    ]
+  },
+  {
+    "id": 1492,
+    "name": "Zed",
+    "description": "Native code editor written in Rust, with built-in AI agent support, real-time collaborative editing and vim mode. It is best known for performance — fast startup and a small memory footprint compared to Electron-based editors — while still offering modern agentic coding features.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://zed.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Native code editor written in Rust, with built-in AI agent support, real-time collaborative editing and vim mode. It is best known for performance — fast startup and a small memory footprint compared to Electron-based editors — while still offering modern agentic coding features.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Performance",
+      "Collaboration",
+      "Editors"
+    ]
+  },
+  {
+    "id": 1493,
+    "name": "Bolt.new",
+    "description": "Browser-based AI app builder from StackBlitz that generates, runs and deploys full-stack web applications from a single prompt. Everything happens in an in-browser development environment, so there is no local toolchain to install — you get a live preview and can deploy without leaving the tab.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://bolt.new",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Browser-based AI app builder from StackBlitz that generates, runs and deploys full-stack web applications from a single prompt. Everything happens in an in-browser development environment, so there is no local toolchain to install — you get a live preview and can deploy without leaving the tab.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Prototyping",
+      "Full-Stack Apps",
+      "No Setup"
+    ]
+  },
+  {
+    "id": 1494,
+    "name": "v0",
+    "description": "Vercel's AI app builder that converts text prompts and screenshots into production-ready React components using shadcn/ui and Tailwind CSS. Output is either copied into your own project or deployed straight to Vercel, which makes it a common starting point for internal tools and landing pages.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://v0.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Vercel's AI app builder that converts text prompts and screenshots into production-ready React components using shadcn/ui and Tailwind CSS. Output is either copied into your own project or deployed straight to Vercel, which makes it a common starting point for internal tools and landing pages.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "UI Generation",
+      "React",
+      "Frontend"
+    ]
+  },
+  {
+    "id": 1495,
+    "name": "Grok",
+    "description": "xAI's conversational assistant, distinguished by real-time access to X (Twitter) data and a deliberately permissive content policy. Includes a DeepSearch mode that runs multi-step research with cited sources, plus built-in image generation.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://grok.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "xAI's conversational assistant, distinguished by real-time access to X (Twitter) data and a deliberately permissive content policy. Includes a DeepSearch mode that runs multi-step research with cited sources, plus built-in image generation.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Real-Time Data",
+      "Research",
+      "Chatbots"
+    ]
+  },
+  {
+    "id": 1496,
+    "name": "Mistral Le Chat",
+    "description": "Mistral AI's chat assistant, with notably strong multilingual performance and fast response times. Bundles web search with citations, document analysis, code execution in the browser, and canvas-style editing for iterating on written output.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://chat.mistral.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Mistral AI's chat assistant, with notably strong multilingual performance and fast response times. Bundles web search with citations, document analysis, code execution in the browser, and canvas-style editing for iterating on written output.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Multilingual",
+      "Chatbots",
+      "European Models"
+    ]
+  },
+  {
+    "id": 1497,
+    "name": "DeepSeek",
+    "description": "Chat assistant built on DeepSeek's open-weight reasoning models. It attracted attention for delivering frontier-level performance on mathematics and coding benchmarks at a fraction of the usual inference cost, and the web app remains free to use.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://chat.deepseek.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Chat assistant built on DeepSeek's open-weight reasoning models. It attracted attention for delivering frontier-level performance on mathematics and coding benchmarks at a fraction of the usual inference cost, and the web app remains free to use.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Reasoning",
+      "Free Tier",
+      "Coding"
+    ]
+  },
+  {
+    "id": 1498,
+    "name": "Qwen Chat",
+    "description": "Alibaba's chat assistant based on the Qwen model family, with strong Chinese and English capability. The free web interface handles document and image understanding, web search, and code generation without a subscription.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://chat.qwen.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Alibaba's chat assistant based on the Qwen model family, with strong Chinese and English capability. The free web interface handles document and image understanding, web search, and code generation without a subscription.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Multilingual",
+      "Free Tier",
+      "Document Analysis"
+    ]
+  },
+  {
+    "id": 1499,
+    "name": "Google AI Studio",
+    "description": "Google's browser playground for building with Gemini models. You can test prompts, compare model variants side by side, tune sampling parameters and export working code — a practical way to validate an idea before paying for API usage.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://aistudio.google.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Google's browser playground for building with Gemini models. You can test prompts, compare model variants side by side, tune sampling parameters and export working code — a practical way to validate an idea before paying for API usage.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Prototyping",
+      "Developers",
+      "Model Testing"
+    ]
+  },
+  {
+    "id": 1500,
+    "name": "NotebookLM",
+    "description": "Google's source-grounded research assistant. You upload PDFs, documents, slides and web pages, then ask questions that are answered only from your own material with inline citations pointing back to the passage used. Can also generate audio overviews, mind maps and slide decks from your sources.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://notebooklm.google",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Google's source-grounded research assistant. You upload PDFs, documents, slides and web pages, then ask questions that are answered only from your own material with inline citations pointing back to the passage used. Can also generate audio overviews, mind maps and slide decks from your sources.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Research",
+      "Document Q&A",
+      "Citations"
+    ]
+  },
+  {
+    "id": 1501,
+    "name": "You.com",
+    "description": "AI search engine that pairs cited, synthesised answers with conventional web results. Its agentic mode runs multi-step research across sources, and the platform is built around a privacy-first posture with customisable search and chat modes.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://you.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI search engine that pairs cited, synthesised answers with conventional web results. Its agentic mode runs multi-step research across sources, and the platform is built around a privacy-first posture with customisable search and chat modes.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "AI Search",
+      "Privacy",
+      "Cited Answers"
+    ]
+  },
+  {
+    "id": 1502,
+    "name": "Elicit",
+    "description": "Research assistant built for literature reviews. It searches academic papers, then extracts structured fields — sample size, methods, key findings — into a comparison table, and summarises results across studies with citations attached to each claim.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://elicit.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Research assistant built for literature reviews. It searches academic papers, then extracts structured fields — sample size, methods, key findings — into a comparison table, and summarises results across studies with citations attached to each claim.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Academic Research",
+      "Literature Review",
+      "Data Extraction"
+    ]
+  },
+  {
+    "id": 1503,
+    "name": "SciSpace",
+    "description": "Academic platform that explains papers in plain language and lets you ask questions about a PDF with answers grounded in the text. Also covers citation management and literature review drafting, aimed at researchers working across many papers at once.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://scispace.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Academic platform that explains papers in plain language and lets you ask questions about a PDF with answers grounded in the text. Also covers citation management and literature review drafting, aimed at researchers working across many papers at once.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Academic Research",
+      "Paper Explanations",
+      "Citations"
+    ]
+  },
+  {
+    "id": 1504,
+    "name": "Manus",
+    "description": "General-purpose AI agent that carries multi-step tasks through to completion in a sandboxed cloud environment — research, coding, spreadsheet work and file production — instead of only answering questions. You hand over an objective and review the artefacts it returns.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://manus.im",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "General-purpose AI agent that carries multi-step tasks through to completion in a sandboxed cloud environment — research, coding, spreadsheet work and file production — instead of only answering questions. You hand over an objective and review the artefacts it returns.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "AI Agents",
+      "Automation",
+      "Task Execution"
+    ]
+  },
+  {
+    "id": 1505,
+    "name": "n8n",
+    "description": "Source-available workflow automation platform with 400+ integrations and first-class AI and LLM nodes for building agentic automations. Because it can be self-hosted, credentials and data stay on your own infrastructure — a common requirement for teams with compliance constraints.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://n8n.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Source-available workflow automation platform with 400+ integrations and first-class AI and LLM nodes for building agentic automations. Because it can be self-hosted, credentials and data stay on your own infrastructure — a common requirement for teams with compliance constraints.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Automation",
+      "Workflows",
+      "Self-Hosting"
+    ]
+  },
+  {
+    "id": 1506,
+    "name": "Dify",
+    "description": "Open-source platform for shipping production AI applications, combining a visual workflow builder, RAG pipeline, prompt management and agent tooling with built-in observability. Lets teams move from prototype to deployed service without rebuilding the surrounding infrastructure.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://dify.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Open-source platform for shipping production AI applications, combining a visual workflow builder, RAG pipeline, prompt management and agent tooling with built-in observability. Lets teams move from prototype to deployed service without rebuilding the surrounding infrastructure.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "AI Apps",
+      "RAG",
+      "Open Source"
+    ]
+  },
+  {
+    "id": 1507,
+    "name": "Lindy",
+    "description": "Platform for building AI agents that take over recurring business work — triaging email, scheduling meetings, updating CRM records, drafting support replies — connected to 300+ third-party apps without writing code.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://lindy.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Platform for building AI agents that take over recurring business work — triaging email, scheduling meetings, updating CRM records, drafting support replies — connected to 300+ third-party apps without writing code.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "AI Agents",
+      "Business Tasks",
+      "Integrations"
+    ]
+  },
+  {
+    "id": 1508,
+    "name": "Gumloop",
+    "description": "No-code platform for assembling AI workflows and agents through a node-based editor. Aimed at non-technical teams that want to chain LLM steps with everyday business tools such as spreadsheets, CRMs and email.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.gumloop.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "No-code platform for assembling AI workflows and agents through a node-based editor. Aimed at non-technical teams that want to chain LLM steps with everyday business tools such as spreadsheets, CRMs and email.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "No-Code",
+      "Automation",
+      "AI Workflows"
+    ]
+  },
+  {
+    "id": 1509,
+    "name": "Zapier",
+    "description": "Automation platform connecting thousands of business apps, extended with AI agents and natural-language workflow building. Its value is breadth of integration — useful when the task involves moving data between tools that have no native connection.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://zapier.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Automation platform connecting thousands of business apps, extended with AI agents and natural-language workflow building. Its value is breadth of integration — useful when the task involves moving data between tools that have no native connection.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Automation",
+      "Integrations",
+      "No-Code"
+    ]
+  },
+  {
+    "id": 1510,
+    "name": "ComfyUI",
+    "description": "Node-based open-source interface for Stable Diffusion and other diffusion models. It exposes the entire generation pipeline as an editable graph, giving precise control over sampling, conditioning, upscaling and LoRA stacking. Runs locally, so no usage fees and no data leaves your machine.",
+    "category": "Image",
+    "pricing": "Open Source",
+    "url": "https://www.comfy.org",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Node-based open-source interface for Stable Diffusion and other diffusion models. It exposes the entire generation pipeline as an editable graph, giving precise control over sampling, conditioning, upscaling and LoRA stacking. Runs locally, so no usage fees and no data leaves your machine.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "advanced",
+    "best_for": [
+      "Open Source",
+      "Local Models",
+      "Full Control"
+    ]
+  },
+  {
+    "id": 1511,
+    "name": "Freepik AI",
+    "description": "AI image and video generation suite built on top of Freepik's stock library. Includes a text-to-image generator, AI upscaler, background remover and retouching tools, which makes it practical for quickly producing commercial-ready marketing visuals with licensing already handled.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://www.freepik.com/ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI image and video generation suite built on top of Freepik's stock library. Includes a text-to-image generator, AI upscaler, background remover and retouching tools, which makes it practical for quickly producing commercial-ready marketing visuals with licensing already handled.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Stock Assets",
+      "Image Generation",
+      "Upscaling"
+    ]
+  },
+  {
+    "id": 1512,
+    "name": "CapCut",
+    "description": "ByteDance's video editor, widely used for TikTok, Reels and Shorts production. Its AI features cover auto-captions with translation, background removal, text-to-speech, and template-driven short-form editing, available free on desktop and mobile.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.capcut.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ByteDance's video editor, widely used for TikTok, Reels and Shorts production. Its AI features cover auto-captions with translation, background removal, text-to-speech, and template-driven short-form editing, available free on desktop and mobile.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Short-Form Video",
+      "Auto Captions",
+      "Social Media"
+    ]
+  },
+  {
+    "id": 1513,
+    "name": "Vidu",
+    "description": "Text- and image-to-video model from ShengShu Technology, with emphasis on keeping subjects consistent across shots and giving explicit camera-motion control. Aimed at short narrative clips and concept visualisation rather than long-form production.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.vidu.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Text- and image-to-video model from ShengShu Technology, with emphasis on keeping subjects consistent across shots and giving explicit camera-motion control. Aimed at short narrative clips and concept visualisation rather than long-form production.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Video Generation",
+      "Character Consistency",
+      "Camera Control"
+    ]
+  },
+  {
+    "id": 1514,
+    "name": "Hedra",
+    "description": "AI video tool for generating expressive talking-character clips from a single portrait image and an audio track. Focuses on lip-sync accuracy and facial performance, which makes it a common choice for character-led explainer and social content.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://hedra.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video tool for generating expressive talking-character clips from a single portrait image and an audio track. Focuses on lip-sync accuracy and facial performance, which makes it a common choice for character-led explainer and social content.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Talking Avatars",
+      "Lip Sync",
+      "Character Video"
+    ]
+  },
+  {
+    "id": 1515,
+    "name": "Argil",
+    "description": "AI video platform for producing avatar-led marketing and training videos, with voice cloning and multi-language translation built in. Lets a single script be republished across markets without re-recording.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.argil.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI video platform for producing avatar-led marketing and training videos, with voice cloning and multi-language translation built in. Lets a single script be republished across markets without re-recording.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Avatars",
+      "Marketing Video",
+      "Translation"
+    ]
+  },
+  {
+    "id": 1516,
+    "name": "Higgsfield",
+    "description": "AI-native creative suite for cinematic image and video generation, offering a library of preset camera moves and motion controls. Geared toward short-form and advertising work where a specific shot feel matters more than raw generation speed.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://higgsfield.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-native creative suite for cinematic image and video generation, offering a library of preset camera moves and motion controls. Geared toward short-form and advertising work where a specific shot feel matters more than raw generation speed.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Cinematic Video",
+      "Camera Moves",
+      "Advertising"
+    ]
+  },
+  {
+    "id": 1517,
+    "name": "Wispr Flow",
+    "description": "Voice dictation app that converts speech into clean, formatted prose in any Mac or Windows application. Handles punctuation automatically and strips filler words, so dictation arrives as finished text rather than a raw transcript.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://wisprflow.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Voice dictation app that converts speech into clean, formatted prose in any Mac or Windows application. Handles punctuation automatically and strips filler words, so dictation arrives as finished text rather than a raw transcript.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Dictation",
+      "Voice to Text",
+      "Writing"
+    ]
+  },
+  {
+    "id": 1518,
+    "name": "Superwhisper",
+    "description": "Voice-to-text for macOS, Windows and iOS that runs models on-device, so audio never leaves your machine. Supports custom vocabulary and formatting presets, and is often chosen where confidentiality rules out cloud transcription.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://superwhisper.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Voice-to-text for macOS, Windows and iOS that runs models on-device, so audio never leaves your machine. Supports custom vocabulary and formatting presets, and is often chosen where confidentiality rules out cloud transcription.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Dictation",
+      "Offline",
+      "Privacy"
+    ]
+  },
+  {
+    "id": 1519,
+    "name": "Granola",
+    "description": "AI notepad for meetings that transcribes in the background and merges the transcript with your own typed notes into a structured summary. No bot joins the call, which avoids the awkwardness of a visible participant and works with in-person meetings.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.granola.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI notepad for meetings that transcribes in the background and merges the transcript with your own typed notes into a structured summary. No bot joins the call, which avoids the awkwardness of a visible participant and works with in-person meetings.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Meeting Notes",
+      "Transcription",
+      "Summaries"
+    ]
+  },
+  {
+    "id": 1520,
+    "name": "Fathom",
+    "description": "Meeting notetaker that records, transcribes and summarises Zoom, Google Meet and Teams calls, then drafts follow-up emails. The free tier is unusually generous, and paid plans add CRM sync so notes land on the right record automatically.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://fathom.video",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Meeting notetaker that records, transcribes and summarises Zoom, Google Meet and Teams calls, then drafts follow-up emails. The free tier is unusually generous, and paid plans add CRM sync so notes land on the right record automatically.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Meeting Notes",
+      "Zoom",
+      "CRM Sync"
+    ]
+  },
+  {
+    "id": 1521,
+    "name": "AssemblyAI",
+    "description": "Speech-to-text API for developers, covering speaker diarisation, sentiment and topic detection, sentiment analysis and PII redaction. Built for production pipelines that need reliable transcription plus structured metadata extracted from the audio.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.assemblyai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Speech-to-text API for developers, covering speaker diarisation, sentiment and topic detection, sentiment analysis and PII redaction. Built for production pipelines that need reliable transcription plus structured metadata extracted from the audio.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "advanced",
+    "best_for": [
+      "Speech API",
+      "Transcription",
+      "Developers"
+    ]
+  },
+  {
+    "id": 1522,
+    "name": "Deepgram",
+    "description": "Voice AI API provider offering real-time and batch speech recognition plus text-to-speech. Known for low-latency streaming and domain-tuned language models, it is commonly used for live captioning and contact-centre analytics.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://deepgram.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Voice AI API provider offering real-time and batch speech recognition plus text-to-speech. Known for low-latency streaming and domain-tuned language models, it is commonly used for live captioning and contact-centre analytics.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "advanced",
+    "best_for": [
+      "Speech API",
+      "Real-Time",
+      "Voice AI"
+    ]
+  },
+  {
+    "id": 1523,
+    "name": "Typeface",
+    "description": "Enterprise content platform that produces on-brand marketing assets at scale. Brand kits, approved templates and campaign workflows keep generated copy and imagery within guidelines, which is the main reason large teams choose it over general-purpose writing tools.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://www.typeface.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Enterprise content platform that produces on-brand marketing assets at scale. Brand kits, approved templates and campaign workflows keep generated copy and imagery within guidelines, which is the main reason large teams choose it over general-purpose writing tools.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Enterprise",
+      "Brand Consistency",
+      "Marketing"
+    ]
+  },
+  {
+    "id": 1524,
+    "name": "SlidesAI",
+    "description": "Google Slides add-on that turns a text outline or document into a formatted slide deck, including speaker notes and suggested imagery. Useful when the content already exists and only the slide layout is missing.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://www.slidesai.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Google Slides add-on that turns a text outline or document into a formatted slide deck, including speaker notes and suggested imagery. Useful when the content already exists and only the slide layout is missing.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Presentations",
+      "Google Slides",
+      "Summaries"
+    ]
+  },
+  {
+    "id": 1525,
+    "name": "Saner.ai",
+    "description": "AI personal assistant that folds notes, tasks and calendar into one workspace, designed with ADHD-friendly workflows: fast capture, automatic prioritisation, and chat over your own notes rather than a separate knowledge base.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://www.saner.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI personal assistant that folds notes, tasks and calendar into one workspace, designed with ADHD-friendly workflows: fast capture, automatic prioritisation, and chat over your own notes rather than a separate knowledge base.",
+    "rating": 0,
+    "rating_count": 0,
+    "rating_breakdown": {},
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Notes",
+      "Task Management",
+      "Personal Assistant"
+    ]
   }
 ]
