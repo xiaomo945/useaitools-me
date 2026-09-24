@@ -169,7 +169,7 @@ const StarRating = ({ rating }: { rating?: number | null }) => (
     {[1, 2, 3, 4, 5].map((star) => (
       <svg
         key={star}
-        className={`w-4 h-4 ${star <= rating ? 'text-amber-400' : 'text-slate-300 dark:text-slate-600'}`}
+        className={`w-4 h-4 ${star <= (rating ?? 0) ? 'text-amber-400' : 'text-slate-300 dark:text-slate-600'}`}
         fill="currentColor"
         viewBox="0 0 20 20"
       >
