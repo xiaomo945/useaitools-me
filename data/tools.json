@@ -29,7 +29,9 @@
       "High Quality",
       "Artists",
       "Creative Projects"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 2,
@@ -61,7 +63,9 @@
       "Beginners",
       "Quick Results",
       "Social Media"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 3,
@@ -93,7 +97,9 @@
       "Professionals",
       "Control",
       "Custom Models"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 5,
@@ -125,7 +131,9 @@
       "Teams",
       "Productivity",
       "Knowledge Management"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 6,
@@ -157,7 +165,9 @@
       "Beginners",
       "Quick Results",
       "Content Creation"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 7,
@@ -189,7 +199,9 @@
       "Professionals",
       "Developers",
       "Teams"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 8,
@@ -221,7 +233,9 @@
       "Professionals",
       "High Quality",
       "Content Creation"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 9,
@@ -253,7 +267,9 @@
       "Professionals",
       "High Quality",
       "Video Editing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 10,
@@ -285,7 +301,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 11,
@@ -317,7 +335,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 13,
@@ -349,7 +369,9 @@
       "Professionals",
       "Developers",
       "Control"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 14,
@@ -381,7 +403,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 16,
@@ -413,7 +437,9 @@
       "Content Creation",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 17,
@@ -445,7 +471,9 @@
       "Developers",
       "Professionals",
       "Teams"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 18,
@@ -477,7 +505,9 @@
       "Teams",
       "Marketing",
       "High Quality"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 19,
@@ -509,7 +539,9 @@
       "Creative Projects",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 20,
@@ -541,7 +573,9 @@
       "Professionals",
       "High Quality",
       "Long-Form Content"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 21,
@@ -573,7 +607,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 22,
@@ -605,7 +641,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 23,
@@ -662,7 +700,9 @@
       "Beginners",
       "Budget-Friendly",
       "Content Creation"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 24,
@@ -694,7 +734,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 51,
@@ -751,7 +793,9 @@
       "Social Media",
       "Marketing"
     ],
-    "description_en": "Browser-based AI video editor used by 50M+ creators, with 100,000+ 5-star reviews. Auto-generate subtitles in 100+ languages, remove backgrounds, add AI voiceovers, and create polished videos — all in"
+    "description_en": "Browser-based AI video editor used by 50M+ creators, with 100,000+ 5-star reviews. Auto-generate subtitles in 100+ languages, remove backgrounds, add AI voiceovers, and create polished videos — all in",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 52,
@@ -783,7 +827,9 @@
       "Teams",
       "Productivity",
       "Project Management"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 54,
@@ -815,7 +861,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 55,
@@ -847,7 +895,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 56,
@@ -879,7 +929,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 57,
@@ -911,7 +963,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 58,
@@ -943,7 +997,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 59,
@@ -975,7 +1031,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 60,
@@ -1007,7 +1065,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 62,
@@ -1039,7 +1099,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 63,
@@ -1071,7 +1133,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 64,
@@ -1103,7 +1167,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 65,
@@ -1135,7 +1201,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 66,
@@ -1167,7 +1235,9 @@
       "Creative Projects",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 67,
@@ -1199,7 +1269,9 @@
       "Creative Projects",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 68,
@@ -1231,7 +1303,9 @@
       "Creative Projects",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 69,
@@ -1263,7 +1337,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 70,
@@ -1295,7 +1371,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 71,
@@ -1327,7 +1405,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 72,
@@ -1359,7 +1439,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 73,
@@ -1391,7 +1473,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 74,
@@ -1423,7 +1507,9 @@
       "Beginners",
       "Quick Results",
       "Social Media"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 75,
@@ -1455,7 +1541,9 @@
       "Creative Projects",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 76,
@@ -1487,7 +1575,9 @@
       "Creative Projects",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 77,
@@ -1519,7 +1609,9 @@
       "Creative Projects",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 78,
@@ -1576,7 +1668,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 79,
@@ -1608,7 +1702,9 @@
       "Teams",
       "Podcasts",
       "Editing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 80,
@@ -1640,7 +1736,9 @@
       "Content Creation",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 81,
@@ -1672,7 +1770,9 @@
       "Content Creation",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 82,
@@ -1704,7 +1804,9 @@
       "Content Creation",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 83,
@@ -1736,7 +1838,9 @@
       "Developers",
       "Professionals",
       "Teams"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 85,
@@ -1768,7 +1872,9 @@
       "Developers",
       "Professionals",
       "Teams"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 86,
@@ -1800,7 +1906,9 @@
       "Creative Projects",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 87,
@@ -1832,7 +1940,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 88,
@@ -1864,7 +1974,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 90,
@@ -1896,7 +2008,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 91,
@@ -1928,7 +2042,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 92,
@@ -1960,7 +2076,9 @@
       "Developers",
       "Professionals",
       "Teams"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 93,
@@ -1992,7 +2110,9 @@
       "Developers",
       "Professionals",
       "Teams"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 94,
@@ -2024,7 +2144,9 @@
       "Creative Projects",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 95,
@@ -2056,7 +2178,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 96,
@@ -2113,7 +2237,9 @@
       "Teams",
       "Marketing",
       "Training"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 98,
@@ -2145,7 +2271,9 @@
       "Content Creation",
       "Social Media",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 99,
@@ -2177,7 +2305,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 101,
@@ -2209,7 +2339,9 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 105,
@@ -2238,7 +2370,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 107,
@@ -2267,7 +2401,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 108,
@@ -2296,7 +2432,9 @@
       "Content Creation",
       "Beginners",
       "Quick Results"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 201,
@@ -2353,7 +2491,9 @@
       "Quick Results",
       "Content Creation"
     ],
-    "description_en": "AI video repurposing tool that transforms long-form content — blog posts, webinars, podcasts — into viral short-form videos for social media in minutes. Used by 500,000+ marketers and content creators"
+    "description_en": "AI video repurposing tool that transforms long-form content — blog posts, webinars, podcasts — into viral short-form videos for social media in minutes. Used by 500,000+ marketers and content creators",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 205,
@@ -2376,7 +2516,9 @@
       "Editing",
       "Authors",
       "Readability"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 208,
@@ -2399,7 +2541,9 @@
       "Fiction",
       "Character Development",
       "Plot"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 210,
@@ -2422,7 +2566,9 @@
       "Free",
       "Quick Sketches",
       "Concept"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 212,
@@ -2445,7 +2591,9 @@
       "Artistic",
       "Creative",
       "Stylized"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 220,
@@ -2468,7 +2616,9 @@
       "Mac",
       "Professional",
       "Screen Recorder"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 222,
@@ -2491,7 +2641,9 @@
       "Social Media",
       "Slideshows",
       "Marketing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 223,
@@ -2514,7 +2666,9 @@
       "Cloud Editing",
       "Collaboration",
       "Teams"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 224,
@@ -2537,7 +2691,9 @@
       "Free",
       "Windows",
       "Basic Editing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 225,
@@ -2560,7 +2716,9 @@
       "Podcasting",
       "Audio Post",
       "Noise Reduction"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 228,
@@ -2583,7 +2741,9 @@
       "Podcasting",
       "Remote Recording",
       "Production"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 229,
@@ -2606,7 +2766,9 @@
       "Podcasting",
       "Automation",
       "Publishing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 230,
@@ -2629,7 +2791,9 @@
       "Gaming",
       "Streaming",
       "Voice Effects"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 233,
@@ -2652,7 +2816,9 @@
       "AWS",
       "Code Completion",
       "IDE Integration"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 235,
@@ -2675,7 +2841,9 @@
       "Refactoring",
       "Code Quality",
       "Review"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 237,
@@ -2698,7 +2866,9 @@
       "Open Source",
       "Multilingual",
       "Research"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 238,
@@ -2721,7 +2891,9 @@
       "Open Source",
       "Hugging Face",
       "Research"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 240,
@@ -2744,7 +2916,9 @@
       "Meetings",
       "Minutes",
       "Action Items"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 241,
@@ -2767,7 +2941,9 @@
       "Meeting Management",
       "Agendas",
       "Team"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 242,
@@ -2790,7 +2966,9 @@
       "Data Analysis",
       "Notebooks",
       "Code"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 243,
@@ -2813,7 +2991,9 @@
       "Note-taking",
       "Knowledge Base",
       "AI Assist"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 245,
@@ -2836,7 +3016,9 @@
       "Note-taking",
       "Local",
       "Plugins"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 246,
@@ -2859,7 +3041,9 @@
       "Learning",
       "Students",
       "Spaced Repetition"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 248,
@@ -2882,7 +3066,9 @@
       "Google Workspace",
       "Collaboration",
       "Enterprise"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 249,
@@ -2905,7 +3091,9 @@
       "Marketing",
       "Copywriting",
       "Optimization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 250,
@@ -2928,7 +3116,9 @@
       "SEO",
       "Content Analysis",
       "Competitors"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 253,
@@ -2951,7 +3141,9 @@
       "PDF",
       "Document Analysis",
       "Research"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 255,
@@ -2974,7 +3166,9 @@
       "Research",
       "Science",
       "Academic"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 256,
@@ -2997,7 +3191,9 @@
       "Academic",
       "Research",
       "Summaries"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 257,
@@ -3020,7 +3216,9 @@
       "Highlighting",
       "Research",
       "Sharing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 258,
@@ -3043,7 +3241,9 @@
       "Reading",
       "Highlights",
       "Knowledge"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 261,
@@ -3066,7 +3266,9 @@
       "Browser",
       "AI Assistant",
       "Productivity"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 262,
@@ -3089,7 +3291,9 @@
       "Personal Assistant",
       "Productivity",
       "AI"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 265,
@@ -3112,7 +3316,9 @@
       "Companion",
       "Emotional Support",
       "Chat"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 266,
@@ -3135,7 +3341,9 @@
       "Chatbot",
       "Conversational",
       "AI"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 268,
@@ -3158,7 +3366,9 @@
       "Content Platform",
       "Writing",
       "Publishing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 269,
@@ -3181,7 +3391,9 @@
       "Naming",
       "Business",
       "Domains"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 271,
@@ -3204,7 +3416,9 @@
       "Email Marketing",
       "Subject Lines",
       "Optimization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 272,
@@ -3227,7 +3441,9 @@
       "Enterprise",
       "Marketing",
       "Optimization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 273,
@@ -3250,7 +3466,9 @@
       "Artists",
       "Creative",
       "Experimental"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 274,
@@ -3273,7 +3491,9 @@
       "Open Source",
       "Video",
       "Effects"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 277,
@@ -3296,7 +3516,9 @@
       "Text-to-Video",
       "Automation",
       "Content"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 278,
@@ -3319,7 +3541,9 @@
       "Text-to-Video",
       "AI Voices",
       "Marketing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 279,
@@ -3342,7 +3566,9 @@
       "Templates",
       "Quick Videos",
       "Marketing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 280,
@@ -3365,7 +3591,9 @@
       "Text-to-Video",
       "Stock Footage",
       "Marketing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 283,
@@ -3388,7 +3616,9 @@
       "Voice Cloning",
       "Custom Voices",
       "TTS"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 284,
@@ -3411,7 +3641,9 @@
       "Reading",
       "TTS",
       "Accessibility"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 285,
@@ -3434,7 +3666,9 @@
       "E-learning",
       "TTS",
       "Accessibility"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 286,
@@ -3457,7 +3691,9 @@
       "Documentation",
       "Code Docs",
       "Developer"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 287,
@@ -3480,7 +3716,9 @@
       "Code Review",
       "Refactoring",
       "Quality"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 288,
@@ -3503,7 +3741,9 @@
       "Code Review",
       "Security",
       "Bugs"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 289,
@@ -3526,7 +3766,9 @@
       "Code Exploration",
       "Understanding",
       "Developer"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 294,
@@ -3549,7 +3791,9 @@
       "Design",
       "Templates",
       "Social Media"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 298,
@@ -3572,7 +3816,9 @@
       "Deployment",
       "AI Models",
       "Serverless"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 299,
@@ -3595,7 +3841,9 @@
       "GPU",
       "Cloud",
       "AI Training"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 300,
@@ -3618,7 +3866,9 @@
       "AI Detection",
       "Content Verification",
       "Education"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 301,
@@ -3641,7 +3891,9 @@
       "AI Detection",
       "Plagiarism",
       "Education"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 302,
@@ -3664,7 +3916,9 @@
       "AI Detection",
       "Education",
       "Content"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 303,
@@ -3687,7 +3941,9 @@
       "Plagiarism",
       "Content Protection",
       "SEO"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 305,
@@ -3710,7 +3966,9 @@
       "Storytelling",
       "Kids",
       "Creative"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 307,
@@ -3733,7 +3991,9 @@
       "Character Creation",
       "Fiction",
       "Writers"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 308,
@@ -3756,7 +4016,9 @@
       "Logo Design",
       "Branding",
       "Business"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 310,
@@ -3779,7 +4041,9 @@
       "Brand Design",
       "Logo",
       "Business"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 314,
@@ -3802,7 +4066,9 @@
       "Calendar",
       "Scheduling",
       "Productivity"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 316,
@@ -3825,7 +4091,9 @@
       "Task Management",
       "Calendar",
       "Productivity"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 317,
@@ -3848,7 +4116,9 @@
       "Email",
       "Productivity",
       "AI"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 318,
@@ -3871,7 +4141,9 @@
       "Email Organization",
       "Productivity",
       "Inbox"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 328,
@@ -3894,7 +4166,9 @@
       "Interior Design",
       "Visualization",
       "Home"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 329,
@@ -3917,7 +4191,9 @@
       "Room Design",
       "Interior",
       "Visualization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 342,
@@ -3940,7 +4216,9 @@
       "Avatars",
       "AI Video",
       "Training"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 355,
@@ -3963,7 +4241,9 @@
       "Python",
       "JavaScript",
       "Completion"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 356,
@@ -3986,7 +4266,9 @@
       "Free",
       "Completion",
       "Search"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 357,
@@ -4009,7 +4291,9 @@
       "Open Source",
       "Code Gen",
       "Research"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 359,
@@ -4032,7 +4316,9 @@
       "Social Media",
       "Scheduling",
       "Management"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 431,
@@ -4055,7 +4341,9 @@
       "Soundscapes",
       "Custom",
       "Design"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 441,
@@ -4078,7 +4366,9 @@
       "Interview",
       "Prep",
       "Technical"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 447,
@@ -4101,7 +4391,9 @@
       "Communication",
       "Team Chat",
       "Automation"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 448,
@@ -4124,7 +4416,9 @@
       "Video Conferencing",
       "Meetings",
       "Collaboration"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 453,
@@ -4147,7 +4441,9 @@
       "Writing",
       "Focus",
       "Distraction-free"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 454,
@@ -4170,7 +4466,9 @@
       "Articles",
       "Niche Content",
       "SEO"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 455,
@@ -4193,7 +4491,9 @@
       "Automation",
       "Marketing",
       "Landing Pages"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 459,
@@ -4216,7 +4516,9 @@
       "Vector",
       "Illustrations",
       "Graphics"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 462,
@@ -4239,7 +4541,9 @@
       "Text to Video",
       "Social Media",
       "Quick"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 464,
@@ -4262,7 +4566,9 @@
       "Blog to Video",
       "Content Repurpose",
       "Marketing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 465,
@@ -4285,7 +4591,9 @@
       "Avatars",
       "Presentations",
       "Professional"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 466,
@@ -4308,7 +4616,9 @@
       "Personalization",
       "Scale",
       "Enterprise"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 468,
@@ -4331,7 +4641,9 @@
       "Voice Generation",
       "Expressive",
       "Natural"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 470,
@@ -4354,7 +4666,9 @@
       "Podcast",
       "TTS",
       "Hosting"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 473,
@@ -4377,7 +4691,9 @@
       "Enterprise",
       "Monetization",
       "Voice Cloning"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 474,
@@ -4400,7 +4716,9 @@
       "Python",
       "JavaScript",
       "Free"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 475,
@@ -4423,7 +4741,9 @@
       "Documentation",
       "Testing",
       "Completion"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 476,
@@ -4446,7 +4766,9 @@
       "Code Generation",
       "Debugging",
       "Explanation"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 477,
@@ -4469,7 +4791,9 @@
       "Free",
       "Codebase",
       "Sourcegraph"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 478,
@@ -4492,7 +4816,9 @@
       "Web Builder",
       "No Code",
       "Prototyping"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 479,
@@ -4515,7 +4841,9 @@
       "Website Builder",
       "No Code",
       "Fast"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 480,
@@ -4538,7 +4866,9 @@
       "Design",
       "Prototyping",
       "Modern"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 481,
@@ -4561,7 +4891,9 @@
       "Bootstrap",
       "Responsive",
       "UI"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 488,
@@ -4584,7 +4916,9 @@
       "Note-taking",
       "Knowledge management",
       "Information organization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 493,
@@ -4607,7 +4941,9 @@
       "Writing",
       "Focus mode",
       "Professional content"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 501,
@@ -4630,7 +4966,9 @@
       "Mac design",
       "UI/UX",
       "Professional design"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 425,
@@ -4685,7 +5023,9 @@
       "Executives",
       "Entrepreneurs"
     ],
-    "description_en": "AI-powered email client that learns your preferences and helps you reach inbox zero 3x faster. Features include AI email drafting, intelligent summarization, and smart reply suggestions."
+    "description_en": "AI-powered email client that learns your preferences and helps you reach inbox zero 3x faster. Features include AI email drafting, intelligent summarization, and smart reply suggestions.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 444,
@@ -4740,7 +5080,9 @@
       "Brands",
       "Influencers"
     ],
-    "description_en": "AI-powered social media scheduler and content creator for Instagram. Generates captions, hashtag suggestions, and optimal posting times to maximize engagement."
+    "description_en": "AI-powered social media scheduler and content creator for Instagram. Generates captions, hashtag suggestions, and optimal posting times to maximize engagement.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 445,
@@ -4795,7 +5137,9 @@
       "Content Creators",
       "Marketers"
     ],
-    "description_en": "AI content creation and social media automation platform that generates posts, graphics, and scheduling across Instagram, Facebook, Twitter, and LinkedIn."
+    "description_en": "AI content creation and social media automation platform that generates posts, graphics, and scheduling across Instagram, Facebook, Twitter, and LinkedIn.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 446,
@@ -4850,7 +5194,9 @@
       "Content Creators",
       "Video Marketers"
     ],
-    "description_en": "AI-powered YouTube optimization tool that generates titles, descriptions, tags, and thumbnail suggestions to boost video discoverability."
+    "description_en": "AI-powered YouTube optimization tool that generates titles, descriptions, tags, and thumbnail suggestions to boost video discoverability.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1526,
@@ -4905,7 +5251,9 @@
       "Channel Managers",
       "Video Marketers"
     ],
-    "description_en": "AI YouTube analytics and optimization platform that provides keyword research, competitor analysis, and content suggestions to grow your channel faster."
+    "description_en": "AI YouTube analytics and optimization platform that provides keyword research, competitor analysis, and content suggestions to grow your channel faster.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1527,
@@ -4960,7 +5308,9 @@
       "Print Designers",
       "Home Decor"
     ],
-    "description_en": "AI art generator with multiple algorithms (Stable Diffusion, DALL-E, etc.) optimized for creating high-resolution prints and wall art. Features community challenges and style transfer."
+    "description_en": "AI art generator with multiple algorithms (Stable Diffusion, DALL-E, etc.) optimized for creating high-resolution prints and wall art. Features community challenges and style transfer.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 458,
@@ -5015,7 +5365,9 @@
       "Corporate Training",
       "HR"
     ],
-    "description_en": "AI video creation platform with realistic avatars for learning and development content. Features automatic translations and collaborative editing."
+    "description_en": "AI video creation platform with realistic avatars for learning and development content. Features automatic translations and collaborative editing.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1528,
@@ -5070,7 +5422,9 @@
       "SDRs",
       "Founders"
     ],
-    "description_en": "AI email coach for sales teams that analyzes and optimizes cold emails in real-time. Provides response rate predictions and improvement suggestions."
+    "description_en": "AI email coach for sales teams that analyzes and optimizes cold emails in real-time. Provides response rate predictions and improvement suggestions.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 460,
@@ -5125,7 +5479,9 @@
       "Revenue Teams",
       "SDRs"
     ],
-    "description_en": "AI sales content platform that generates sales scripts, email sequences, call scripts, and LinkedIn outreach messages with CRM integration."
+    "description_en": "AI sales content platform that generates sales scripts, email sequences, call scripts, and LinkedIn outreach messages with CRM integration.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 461,
@@ -5180,7 +5536,9 @@
       "Project Managers",
       "Solopreneurs"
     ],
-    "description_en": "AI-powered calendar and task manager that auto-schedules your day, prioritizes tasks, and adjusts plans when priorities change. Perfect for freelancers managing multiple clients."
+    "description_en": "AI-powered calendar and task manager that auto-schedules your day, prioritizes tasks, and adjusts plans when priorities change. Perfect for freelancers managing multiple clients.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1529,
@@ -5235,7 +5593,9 @@
       "Consultants",
       "Contractors"
     ],
-    "description_en": "AI freelance business assistant that handles invoicing, time tracking, proposal writing, and client communication. All-in-one platform for independent workers."
+    "description_en": "AI freelance business assistant that handles invoicing, time tracking, proposal writing, and client communication. All-in-one platform for independent workers.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 463,
@@ -5290,7 +5650,9 @@
       "E-commerce",
       "Warehouses"
     ],
-    "description_en": "AI inventory management and demand forecasting tool that predicts stock levels, automates reordering, and optimizes warehouse operations for small to medium businesses."
+    "description_en": "AI inventory management and demand forecasting tool that predicts stock levels, automates reordering, and optimizes warehouse operations for small to medium businesses.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1530,
@@ -5345,7 +5707,9 @@
       "Retailers",
       "Distributors"
     ],
-    "description_en": "AI-powered inventory planning and purchasing tool that integrates with Shopify, Amazon, and WooCommerce. Generates smart purchase orders and demand forecasts."
+    "description_en": "AI-powered inventory planning and purchasing tool that integrates with Shopify, Amazon, and WooCommerce. Generates smart purchase orders and demand forecasts.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 467,
@@ -5400,7 +5764,9 @@
       "Marketers",
       "Consultants"
     ],
-    "description_en": "AI presentation designer that creates professional slideshows from outlines or content. Auto-adjusts layouts, suggests visuals, and maintains design consistency."
+    "description_en": "AI presentation designer that creates professional slideshows from outlines or content. Auto-adjusts layouts, suggests visuals, and maintains design consistency.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1531,
@@ -5455,7 +5821,9 @@
       "Professionals",
       "Students"
     ],
-    "description_en": "AI-powered writing companion that rewrites your sentences for clarity, tone, and style. Helps you express your thoughts precisely and write more efficiently across platforms."
+    "description_en": "AI-powered writing companion that rewrites your sentences for clarity, tone, and style. Helps you express your thoughts precisely and write more efficiently across platforms.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1532,
@@ -5510,7 +5878,9 @@
       "Photographers",
       "E-commerce"
     ],
-    "description_en": "AI-powered image editing suite with background removal, relighting, cleanup, and upscaling tools. Part of Stability AI ecosystem with professional-grade outputs."
+    "description_en": "AI-powered image editing suite with background removal, relighting, cleanup, and upscaling tools. Part of Stability AI ecosystem with professional-grade outputs.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1533,
@@ -5565,7 +5935,9 @@
       "Sellers",
       "Social Media"
     ],
-    "description_en": "AI background removal and product photography tool that creates studio-quality images from simple smartphone photos. Perfect for e-commerce and social media."
+    "description_en": "AI background removal and product photography tool that creates studio-quality images from simple smartphone photos. Perfect for e-commerce and social media.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1534,
@@ -5620,7 +5992,9 @@
       "Podcasters",
       "YouTubers"
     ],
-    "description_en": "AI video repurposing tool that automatically extracts viral short clips from long-form videos. Perfect for creating TikTok, Reels, and Shorts content from podcasts and YouTube videos."
+    "description_en": "AI video repurposing tool that automatically extracts viral short clips from long-form videos. Perfect for creating TikTok, Reels, and Shorts content from podcasts and YouTube videos.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1535,
@@ -5675,7 +6049,9 @@
       "YouTubers",
       "Interviewers"
     ],
-    "description_en": "AI-powered audio enhancement tool that removes background noise, improves voice quality, and creates studio-grade recordings from any microphone. Includes transcription and editing."
+    "description_en": "AI-powered audio enhancement tool that removes background noise, improves voice quality, and creates studio-grade recordings from any microphone. Includes transcription and editing.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 482,
@@ -5730,7 +6106,9 @@
       "Open Source Fans",
       "Teams"
     ],
-    "description_en": "Open-source AI code assistant that integrates with VS Code and JetBrains. Provides code completion, chat-based assistance, and custom prompt templates for any coding workflow."
+    "description_en": "Open-source AI code assistant that integrates with VS Code and JetBrains. Provides code completion, chat-based assistance, and custom prompt templates for any coding workflow.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 484,
@@ -5785,7 +6163,9 @@
       "Researchers",
       "Writers"
     ],
-    "description_en": "AI-powered workspace that organizes notes, documents, and knowledge automatically. Uses AI to connect ideas, surface relevant information, and create a personal knowledge base."
+    "description_en": "AI-powered workspace that organizes notes, documents, and knowledge automatically. Uses AI to connect ideas, surface relevant information, and create a personal knowledge base.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 485,
@@ -5840,7 +6220,9 @@
       "Students",
       "Journalists"
     ],
-    "description_en": "AI meeting transcription and note-taking tool that converts audio to text in 104 languages. Features speaker identification, summaries, and action item extraction."
+    "description_en": "AI meeting transcription and note-taking tool that converts audio to text in 104 languages. Features speaker identification, summaries, and action item extraction.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1536,
@@ -5895,7 +6277,9 @@
       "Students",
       "Academics"
     ],
-    "description_en": "AI writing assistant for academics and researchers with citation management, literature review assistance, and plagiarism detection. Helps write papers and research articles faster."
+    "description_en": "AI writing assistant for academics and researchers with citation management, literature review assistance, and plagiarism detection. Helps write papers and research articles faster.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 489,
@@ -5950,7 +6334,9 @@
       "Social Media Managers",
       "Bloggers"
     ],
-    "description_en": "AI writing assistant browser extension that helps you write anywhere on the web. Generates content, rewrites text, and provides suggestions in any text field."
+    "description_en": "AI writing assistant browser extension that helps you write anywhere on the web. Generates content, rewrites text, and provides suggestions in any text field.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 491,
@@ -6005,7 +6391,9 @@
       "Social Media",
       "Marketers"
     ],
-    "description_en": "AI video creation tool that converts text, blog posts, and scripts into engaging videos with AI voiceover and stock media. Perfect for social media content at scale."
+    "description_en": "AI video creation tool that converts text, blog posts, and scripts into engaging videos with AI voiceover and stock media. Perfect for social media content at scale.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 492,
@@ -6060,7 +6448,9 @@
       "Marketers",
       "Small Businesses"
     ],
-    "description_en": "AI-enhanced design platform with Magic Write, Magic Edit, background removal, and AI image generation. All-in-one design tool for non-designers and professionals."
+    "description_en": "AI-enhanced design platform with Magic Write, Magic Edit, background removal, and AI image generation. All-in-one design tool for non-designers and professionals.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 494,
@@ -6115,7 +6505,9 @@
       "Designers",
       "Startups"
     ],
-    "description_en": "AI-powered UI generation tool from Vercel that creates React components from text descriptions. Integrates with Tailwind CSS and shadcn/ui for production-ready code."
+    "description_en": "AI-powered UI generation tool from Vercel that creates React components from text descriptions. Integrates with Tailwind CSS and shadcn/ui for production-ready code.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 499,
@@ -6170,7 +6562,9 @@
       "Executives",
       "Researchers"
     ],
-    "description_en": "Personal AI search engine that indexes everything you do on your computer - apps, websites, meetings, documents - and lets you search your entire digital life with natural language."
+    "description_en": "Personal AI search engine that indexes everything you do on your computer - apps, websites, meetings, documents - and lets you search your entire digital life with natural language.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 502,
@@ -6225,7 +6619,9 @@
       "Creatives",
       "Marketers"
     ],
-    "description_en": "AI video generation model that creates realistic, high-quality videos from text and images. Features temporal consistency, camera control, and cinematic quality outputs."
+    "description_en": "AI video generation model that creates realistic, high-quality videos from text and images. Features temporal consistency, camera control, and cinematic quality outputs.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 503,
@@ -6280,7 +6676,9 @@
       "Filmmakers",
       "Advertisers"
     ],
-    "description_en": "Advanced AI video generation platform that produces high-quality, temporally consistent videos from text prompts. Supports up to 5-minute videos with realistic motion and detail."
+    "description_en": "Advanced AI video generation platform that produces high-quality, temporally consistent videos from text prompts. Supports up to 5-minute videos with realistic motion and detail.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 555,
@@ -6303,7 +6701,9 @@
       "SecOps",
       "Threat Detection",
       "Enterprise"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 558,
@@ -6326,7 +6726,9 @@
       "SEO Content",
       "Research",
       "Optimization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 561,
@@ -6349,7 +6751,9 @@
       "Video Scripts",
       "Writing",
       "Content"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 587,
@@ -6372,7 +6776,9 @@
       "React Native",
       "Mobile development",
       "Cross-platform"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 612,
@@ -6395,7 +6801,9 @@
       "Video Editing",
       "Content Creation",
       "YouTube"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 616,
@@ -6418,7 +6826,9 @@
       "E-commerce",
       "Product Photography",
       "Background Removal"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 635,
@@ -6441,7 +6851,9 @@
       "Note Taking",
       "Organization",
       "Search"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 760,
@@ -6464,7 +6876,9 @@
       "Social Media",
       "Content Planning",
       "Marketing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 860,
@@ -6508,7 +6922,9 @@
         "Free plan limits the number of pins you can optimize per month",
         "Analytics features lag behind dedicated Pinterest analytics tools"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 861,
@@ -6552,7 +6968,9 @@
         "No free plan available, minimum subscription starts at $19/month",
         "Custom branding options are limited on lower-tier plans"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 864,
@@ -6596,7 +7014,9 @@
         "No free tier — pricing starts at $49/month per team",
         "Setup requires significant pipeline configuration changes for full benefit"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 866,
@@ -6640,7 +7060,9 @@
         "Premium pricing starts at $29/month with limited generation minutes",
         "Voice cloning requires a minimum of 10 minutes of reference audio"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 868,
@@ -6684,7 +7106,9 @@
         "Limited subject coverage outside core academic areas like STEM and humanities",
         "No LMS integration — content must be manually exported to Google Classroom or Canvas"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 870,
@@ -6728,7 +7152,9 @@
         "Automated messaging can feel impersonal if not carefully customized",
         "Free plan restricts post generation to 5 per week"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 871,
@@ -6772,7 +7198,9 @@
         "Requires VPN access in regions where TikTok is restricted",
         "Some real-time effects can cause latency on lower-end devices"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 876,
@@ -6816,7 +7244,9 @@
         "No free plan — pricing starts at $24/month with limited video minutes",
         "Custom avatar training requires high-quality reference photos and takes 24 hours"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 878,
@@ -6860,7 +7290,9 @@
         "Financial projections are estimates and should be validated with real market data",
         "Pitch deck templates are good but less polished than premium alternatives"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 879,
@@ -6904,7 +7336,9 @@
         "Free plan limits to 500 subscribers and 3 campaigns per month",
         "Template customization options are less flexible than dedicated email builders"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 881,
@@ -6948,7 +7382,9 @@
         "Auto-cropping occasionally loses important visual context in multi-person scenes",
         "Free plan adds watermark and limits to 3 Shorts per day"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 887,
@@ -6992,7 +7428,9 @@
         "Limited integrations with accounting software beyond basic CSV export",
         "No mobile app — currently web-only which limits on-the-go invoicing"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 889,
@@ -7036,7 +7474,9 @@
         "No free plan — pay-per-render pricing starts at $0.50 per minute of output",
         "Upload times for large source files can be slow depending on internet speed"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 892,
@@ -7080,7 +7520,9 @@
         "Free plan limits to 4 hours of streaming optimization per day",
         "Chat moderation AI occasionally misidentifies gaming slang as inappropriate"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 893,
@@ -7124,7 +7566,9 @@
         "Free plan limits sprite generation to 16x16 and 32x32 resolutions",
         "Complex multi-character scene generation can produce inconsistent lighting"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 894,
@@ -7168,7 +7612,9 @@
         "Free plan limits to 128 kbps MP3 exports with watermarks",
         "Complex time signature changes and polyrhythms are not well supported"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 895,
@@ -7212,7 +7658,9 @@
         "No free plan — pricing starts at $79/month per team",
         "Requires significant infrastructure access permissions for full functionality"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 896,
@@ -7256,7 +7704,9 @@
         "Free plan limits to 10 copy generations per day with 500-word cap",
         "Long-form sales page copy sometimes lacks persuasive depth of expert copywriters"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 900,
@@ -7300,7 +7750,9 @@
         "Requires GPS-enabled camera or phone for full location intelligence features",
         "Free plan limits to 5 exports per month with 720p resolution"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 901,
@@ -7344,7 +7796,9 @@
         "Financial projections are template-based and need professional validation",
         "Limited industry-specific depth for highly specialized or regulated sectors"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 904,
@@ -7388,7 +7842,9 @@
         "AI-generated visuals sometimes lack the authenticity of real footage",
         "Free plan limits to 5 Reels per week with watermarked exports"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 905,
@@ -7432,7 +7888,9 @@
         "No free plan — subscription starts at $19/month for limited collections",
         "Valuation estimates are approximations and should not replace professional appraisals"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 915,
@@ -7476,7 +7934,9 @@
         "Free plan limits completions to 2,000 per month",
         "Large repository indexing can take 10-15 minutes on initial setup"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 917,
@@ -7520,7 +7980,9 @@
         "No free plan — pricing starts at $29/month with limited generation minutes",
         "Synthesized vocals still lack the emotional nuance of professional singers"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 919,
@@ -7564,7 +8026,9 @@
         "Free plan limits to 3 video enhancements per month at 720p output",
         "Processing times can be lengthy for 4K upscaling of long videos"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 920,
@@ -7608,7 +8072,9 @@
         "Free plan limits to 10 sketch conversions per day",
         "Very rough or ambiguous sketches can produce unexpected interpretations"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 921,
@@ -7652,7 +8118,9 @@
         "Requires VPN access in regions where Twitter/X is restricted",
         "Free plan limits analytics to 7-day history and 5 content suggestions per day"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 922,
@@ -7696,7 +8164,9 @@
         "Free plan limits to 5 Shorts per day with trend analysis for 3 categories only",
         "Trend-based content can feel formulaic without creative customization"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 923,
@@ -7740,7 +8210,9 @@
         "Free plan limits to 5 design prototypes per day",
         "Fabric simulation is approximate and less accurate than physical sampling"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 926,
@@ -7784,7 +8256,9 @@
         "No free plan — pricing starts at $29/month for limited keyword tracking",
         "Requires ongoing subscription to maintain rank tracking data and history"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 933,
@@ -7828,7 +8302,9 @@
         "Requires VPN access in regions where Twitter/X is restricted",
         "Free plan limits to 3 threads per week with basic analytics"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 935,
@@ -7872,7 +8348,9 @@
         "No free plan — pricing starts at $39/month for limited lookbook generation",
         "Generated backgrounds and settings can sometimes feel generic without customization"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 936,
@@ -7916,7 +8394,9 @@
         "No free plan — pricing starts at $19/month with limited editing hours",
         "Learning curve for multi-track features compared to simpler podcast editors"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 937,
@@ -7960,7 +8440,9 @@
         "Pages Router patterns are supported but not as thoroughly as App Router",
         "Free plan limits to 40 generations per day"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 938,
@@ -8004,7 +8486,9 @@
         "Free plan limits to 2,000 words per generation with 3 generations per day",
         "Very long pieces over 5,000 words may need manual coherence adjustments"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 939,
@@ -8048,7 +8532,9 @@
         "No free plan — team pricing starts at $79/month for 3 seats",
         "Template creation requires initial setup investment of 2-3 hours"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 941,
@@ -8092,7 +8578,9 @@
         "Revenue projections are estimates and actual results vary significantly",
         "Limited depth for highly specialized or regulated side-hustle categories"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 942,
@@ -8136,7 +8624,9 @@
         "Free plan limits to 2 active sprints and 5 team members",
         "Story point estimation requires 3-4 completed sprints for accuracy calibration"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 943,
@@ -8180,7 +8670,9 @@
         "Free plan limits to 50 commit suggestions per day",
         "Complex merge conflicts with significant architectural changes need manual resolution"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 945,
@@ -8224,7 +8716,9 @@
         "Free plan limits to 3 mixes per month with 128 kbps MP3 export",
         "Complex orchestral and jazz arrangements benefit from manual mixing adjustments"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 946,
@@ -8268,7 +8762,9 @@
         "Free plan limits to 3 blog posts per month with 1,500-word cap",
         "Generated content sometimes lacks the unique perspective of experienced writers"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 947,
@@ -8312,7 +8808,9 @@
         "Free plan limits animations to 10 seconds with watermarked output",
         "Complex character animations require more detailed prompts and manual refinement"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 949,
@@ -8356,7 +8854,9 @@
         "No free plan — pricing starts at $59/month per team",
         "Initial setup requires significant infrastructure access and configuration"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 950,
@@ -8400,7 +8900,9 @@
         "Free plan limits to 10 tone analyses and 5 adjustments per day",
         "Subtle cultural tone nuances may not be captured in all contexts"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 953,
@@ -8444,7 +8946,9 @@
         "No free plan; single cover starts at $4.99",
         "Limited ability to fine-tune specific elements after generation"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 956,
@@ -8488,7 +8992,9 @@
         "Free plan limited to 20 ad copies per month",
         "Occasionally generates generic headlines for highly technical B2B products"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 957,
@@ -8532,7 +9038,9 @@
         "Advanced color grading tools are locked behind Pro subscription",
         "Desktop app can be resource-heavy on older machines"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 958,
@@ -8576,7 +9084,9 @@
         "Free plan limits to 3 review videos per month",
         "Script tone can feel formulaic without manual customization"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 959,
@@ -8620,7 +9130,9 @@
         "CRM lacks advanced automation like email sequences and lead scoring",
         "No mobile app yet; web-only access limits on-the-go usage"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 960,
@@ -8664,7 +9176,9 @@
         "Minimum commitment of 3 seats makes it expensive for solo entrepreneurs",
         "Initial setup and CRM integration requires technical configuration"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 962,
@@ -8708,7 +9222,9 @@
         "No free plan; starts at $19/month",
         "Template customization options could be more flexible for advanced users"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 963,
@@ -8752,7 +9268,9 @@
         "Text rendering on covers can occasionally have spacing issues",
         "Limited ability to precisely control layout composition"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 964,
@@ -8796,7 +9314,9 @@
         "Per-minute pricing makes long-form content expensive to dub",
         "Lip-sync quality degrades slightly for fast-paced dialogue scenes"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 965,
@@ -8840,7 +9360,9 @@
         "Free plan limits to 5 repositories and 100 scans per month",
         "Detection of business logic bugs is less reliable than security vulnerabilities"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 966,
@@ -8884,7 +9406,9 @@
         "No free plan; agency subscription starts at $49/month",
         "Brand voice training requires uploading 50+ examples for best results"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 967,
@@ -8928,7 +9452,9 @@
         "Auto-editing choices can feel formulaic after extended use",
         "Limited manual editing controls for users who want more creative direction"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 968,
@@ -8972,7 +9498,9 @@
         "360-degree quality depends heavily on input photo quality and angles",
         "Free plan limits to 5 product videos per month"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 969,
@@ -9016,7 +9544,9 @@
         "Financial projections are general guidance, not professional accounting advice",
         "Limited integrations with accounting software like QuickBooks or Xero"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 970,
@@ -9060,7 +9590,9 @@
         "Free plan limits to 50 leads and 100 emails per month",
         "LinkedIn integration requires Sales Navigator subscription for full functionality"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 971,
@@ -9104,7 +9636,9 @@
         "Free plan limits interactive elements to 2 per story",
         "Template variety could be broader for niche industries"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 975,
@@ -9148,7 +9682,9 @@
         "No free plan; team subscription starts at $99/month",
         "Initial visual baseline creation requires manual review for complex UIs"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 979,
@@ -9192,7 +9728,9 @@
         "Not suitable for businesses with more than 500 SKUs or multiple locations",
         "No integration with major accounting software like QuickBooks"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 980,
@@ -9236,7 +9774,9 @@
         "No free plan; starts at $39/month per user",
         "Forecasting accuracy depends on consistent pipeline data entry by the team"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 981,
@@ -9280,7 +9820,9 @@
         "Free plan limits to 10 designs per month",
         "Auto-layout occasionally makes questionable text placement choices"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 982,
@@ -9324,7 +9866,9 @@
         "Free plan limits to 10 minutes of processing per day",
         "Advanced EQ and compression controls require audio engineering knowledge"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 983,
@@ -9368,7 +9912,9 @@
         "Mobile experience is less full-featured than desktop",
         "Batch processing is only available on premium plans"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 988,
@@ -9412,7 +9958,9 @@
         "Export formats are limited on lower-tier plans",
         "Customer support response times can vary during peak hours"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 989,
@@ -9456,7 +10004,9 @@
         "Limited integration with niche or legacy platforms",
         "Learning curve for advanced customization options"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 996,
@@ -9500,7 +10050,9 @@
         "Export formats are limited on lower-tier plans",
         "Customer support response times can vary during peak hours"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 997,
@@ -9544,7 +10096,9 @@
         "Mobile experience is less full-featured than desktop",
         "Batch processing is only available on premium plans"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 999,
@@ -9588,7 +10142,9 @@
         "No offline mode; requires constant internet connection",
         "Some outputs need manual fine-tuning for complex scenarios"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1000,
@@ -9632,7 +10188,9 @@
         "No offline mode; requires constant internet connection",
         "Some outputs need manual fine-tuning for complex scenarios"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1002,
@@ -9676,7 +10234,9 @@
         "Export formats are limited on lower-tier plans",
         "Customer support response times can vary during peak hours"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1005,
@@ -9720,7 +10280,9 @@
         "Free plan has daily usage limits that may frustrate active users",
         "Advanced features require a paid subscription"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1014,
@@ -9764,7 +10326,9 @@
         "Export formats are limited on lower-tier plans",
         "Customer support response times can vary during peak hours"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1016,
@@ -9808,7 +10372,9 @@
         "Limited integration with niche or legacy platforms",
         "Learning curve for advanced customization options"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1021,
@@ -9852,7 +10418,9 @@
         "Mobile experience is less full-featured than desktop",
         "Batch processing is only available on premium plans"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1026,
@@ -9896,7 +10464,9 @@
         "Export formats are limited on lower-tier plans",
         "Customer support response times can vary during peak hours"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1027,
@@ -9940,7 +10510,9 @@
         "Limited integration with niche or legacy platforms",
         "Learning curve for advanced customization options"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1028,
@@ -9984,7 +10556,9 @@
         "Free plan has daily usage limits that may frustrate active users",
         "Advanced features require a paid subscription"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1031,
@@ -10028,7 +10602,9 @@
         "Free plan has daily usage limits that may frustrate active users",
         "Advanced features require a paid subscription"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1032,
@@ -10072,7 +10648,9 @@
         "Export formats are limited on lower-tier plans",
         "Customer support response times can vary during peak hours"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1038,
@@ -10116,7 +10694,9 @@
         "Mobile experience is less full-featured than desktop",
         "Batch processing is only available on premium plans"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1040,
@@ -10160,7 +10740,9 @@
         "Free plan has daily usage limits that may frustrate active users",
         "Advanced features require a paid subscription"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1046,
@@ -10204,7 +10786,9 @@
         "No offline mode; requires constant internet connection",
         "Some outputs need manual fine-tuning for complex scenarios"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1048,
@@ -10248,7 +10832,9 @@
         "Free plan has daily usage limits that may frustrate active users",
         "Advanced features require a paid subscription"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1050,
@@ -10292,7 +10878,9 @@
         "Export formats are limited on lower-tier plans",
         "Customer support response times can vary during peak hours"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1063,
@@ -10336,7 +10924,9 @@
         "Export formats are limited on lower-tier plans",
         "Customer support response times can vary during peak hours"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1065,
@@ -10380,7 +10970,9 @@
         "Limited integration with niche or legacy platforms",
         "Learning curve for advanced customization options"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1075,
@@ -10424,7 +11016,9 @@
         "Export formats are limited on lower-tier plans",
         "Customer support response times can vary during peak hours"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1084,
@@ -10468,7 +11062,9 @@
         "Mobile experience is less full-featured than desktop",
         "Batch processing is only available on premium plans"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1085,
@@ -10512,7 +11108,9 @@
         "Free plan has daily usage limits that may frustrate active users",
         "Advanced features require a paid subscription"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1087,
@@ -10556,7 +11154,9 @@
         "No offline mode; requires constant internet connection",
         "Some outputs need manual fine-tuning for complex scenarios"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1088,
@@ -10600,7 +11200,9 @@
         "Free plan has daily usage limits that may frustrate active users",
         "Advanced features require a paid subscription"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1093,
@@ -10644,7 +11246,9 @@
         "Limited integration with niche or legacy platforms",
         "Learning curve for advanced customization options"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1094,
@@ -10688,7 +11292,9 @@
         "Mobile experience is less full-featured than desktop",
         "Batch processing is only available on premium plans"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1100,
@@ -10732,7 +11338,9 @@
         "No offline mode; requires constant internet connection",
         "Some outputs need manual fine-tuning for complex scenarios"
       ]
-    }
+    },
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1105,
@@ -10755,7 +11363,9 @@
       "Podcasting",
       "Show Notes",
       "Automation"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1106,
@@ -10778,7 +11388,9 @@
       "Meetings",
       "Transcription",
       "Notes"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1107,
@@ -10801,7 +11413,9 @@
       "Advertising",
       "Marketing",
       "Conversion"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1110,
@@ -10824,7 +11438,9 @@
       "Enterprise",
       "LLM",
       "API"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1111,
@@ -10847,7 +11463,9 @@
       "Search",
       "Code Help",
       "Development"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1112,
@@ -10870,7 +11488,9 @@
       "Video Messages",
       "Async",
       "Communication"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1114,
@@ -10893,7 +11513,9 @@
       "Automation",
       "Workflows",
       "No Code"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1115,
@@ -10916,7 +11538,9 @@
       "Note-taking",
       "Design",
       "Organization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1117,
@@ -10939,7 +11563,9 @@
       "Graphics",
       "Infographics",
       "Visual"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1119,
@@ -10962,7 +11588,9 @@
       "Video Generation",
       "AI",
       "Text-to-Video"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1122,
@@ -10985,7 +11613,9 @@
       "RAG",
       "Enterprise",
       "Documents"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1126,
@@ -11008,7 +11638,9 @@
       "Chatbots",
       "Support",
       "Knowledge Base"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1127,
@@ -11031,7 +11663,9 @@
       "Chatbots",
       "No Code",
       "Support"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1128,
@@ -11054,7 +11688,9 @@
       "Voice Assistants",
       "Design",
       "Multi-channel"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1129,
@@ -11077,7 +11713,9 @@
       "3D Effects",
       "Photo",
       "Creative"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1134,
@@ -11100,7 +11738,9 @@
       "Headshots",
       "Professional",
       "Portraits"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1139,
@@ -11123,7 +11763,9 @@
       "Social Media",
       "Analytics",
       "Enterprise"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1141,
@@ -11146,7 +11788,9 @@
       "Video Clips",
       "Extraction",
       "Social Media"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1142,
@@ -11169,7 +11813,9 @@
       "Repurposing",
       "Podcasts",
       "Short Videos"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1147,
@@ -11192,7 +11838,9 @@
       "Security",
       "Cloud",
       "Vulnerabilities"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1150,
@@ -11215,7 +11863,9 @@
       "Cloud Security",
       "Posture",
       "Compliance"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1152,
@@ -11238,7 +11888,9 @@
       "E-commerce",
       "Personalization",
       "T-Shirts"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1158,
@@ -11261,7 +11913,9 @@
       "Sales",
       "Sequencing",
       "Intelligence"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1159,
@@ -11284,7 +11938,9 @@
       "Revenue Intelligence",
       "Sales",
       "Analytics"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1160,
@@ -11307,7 +11963,9 @@
       "CRM",
       "Enrichment",
       "Outreach"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1163,
@@ -11330,7 +11988,9 @@
       "HR",
       "Remote",
       "Payroll"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1164,
@@ -11353,7 +12013,9 @@
       "Payroll",
       "Compliance",
       "Global"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1165,
@@ -11376,7 +12038,9 @@
       "Collaboration",
       "Visual",
       "Remote"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1166,
@@ -11399,7 +12063,9 @@
       "Work OS",
       "Automation",
       "Predictive"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1167,
@@ -11422,7 +12088,9 @@
       "Snapchat Marketing",
       "Social Ads",
       "Audience Analytics"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1169,
@@ -11445,7 +12113,9 @@
       "Story Creation",
       "Content Planning",
       "Viewer Retention"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1172,
@@ -11468,7 +12138,9 @@
       "Live Stream Clips",
       "Social Video",
       "Auto-Captioning"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1183,
@@ -11491,7 +12163,9 @@
       "Sleep Aid",
       "Relaxation Audio",
       "Binaural Beats"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1185,
@@ -11514,7 +12188,9 @@
       "Deployment Automation",
       "Zero-Downtime",
       "Pipeline Config"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1189,
@@ -11537,7 +12213,9 @@
       "Email Campaigns",
       "Subject Lines",
       "Conversion Optimization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1192,
@@ -11560,7 +12238,9 @@
       "Subject Lines",
       "Open Rate Optimization",
       "Preview Text"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1194,
@@ -11583,7 +12263,9 @@
       "Pin Graphics",
       "SEO Descriptions",
       "Trending Topics"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1211,
@@ -11606,7 +12288,9 @@
       "Pipeline YAML",
       "Build Optimization",
       "Failure Prediction"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1216,
@@ -11629,7 +12313,9 @@
       "Short-Form Scripts",
       "Trending Formats",
       "Engagement Hooks"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1217,
@@ -11652,7 +12338,9 @@
       "Screenplays",
       "Scene Directions",
       "Timing Cues"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1220,
@@ -11675,7 +12363,9 @@
       "Networking",
       "Outreach Messages",
       "Follow-Up Management"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1221,
@@ -11698,7 +12388,9 @@
       "LinkedIn Articles",
       "Thought Leadership",
       "Algorithm Optimization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1223,
@@ -11721,7 +12413,9 @@
       "Live Engagement",
       "Auto-Moderation",
       "Interactive Polls"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1233,
@@ -11744,7 +12438,9 @@
       "React Native",
       "Native Modules",
       "TypeScript"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1234,
@@ -11767,7 +12463,9 @@
       "App Scaffolding",
       "Feature Implementation",
       "App Store Builds"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1236,
@@ -11790,7 +12488,9 @@
       "Research Articles",
       "Keyword Optimization",
       "Content Calendars"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1238,
@@ -11813,7 +12513,9 @@
       "Readability",
       "Keyword Placement",
       "CTA Generation"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1239,
@@ -11836,7 +12538,9 @@
       "Content Editing",
       "Performance Prediction",
       "Niche Optimization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1243,
@@ -11859,7 +12563,9 @@
       "Reels Creation",
       "Smart Transitions",
       "Hashtag Optimization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1245,
@@ -11882,7 +12588,9 @@
       "Brand Systems",
       "Color Palettes",
       "Brand Guidelines"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1250,
@@ -11905,7 +12613,9 @@
       "Narrative Pacing",
       "Tone Shifts",
       "Character Differentiation"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1258,
@@ -11928,7 +12638,9 @@
       "Viral Content",
       "Scheduling",
       "Growth Analysis"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1265,
@@ -11951,7 +12663,9 @@
       "Outfit Design",
       "Technical Sketches",
       "Trend Analysis"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1269,
@@ -11974,7 +12688,9 @@
       "Noise Reduction",
       "Multi-Track Mixing",
       "Show Notes"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1273,
@@ -11997,7 +12713,9 @@
       "Next.js",
       "Server Actions",
       "TypeScript"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1275,
@@ -12020,7 +12738,9 @@
       "Featured Snippets",
       "FAQ Content",
       "Schema Optimization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1278,
@@ -12043,7 +12763,9 @@
       "Email Segmentation",
       "Dynamic Content",
       "Predictive Analytics"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1283,
@@ -12066,7 +12788,9 @@
       "Teachers",
       "Lesson Plans",
       "Student Assessment"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1287,
@@ -12089,7 +12813,9 @@
       "Churn Prediction",
       "Win-Back Campaigns",
       "Attrition Reduction"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1288,
@@ -12112,7 +12838,9 @@
       "Video Courses",
       "Presentations",
       "Assessment Content"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1307,
@@ -12135,7 +12863,9 @@
       "Live Analytics",
       "Content Pivots",
       "Growth Reports"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1312,
@@ -12158,7 +12888,9 @@
       "Comic Strips",
       "Graphic Novels",
       "Auto-Lettering"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1318,
@@ -12181,7 +12913,9 @@
       "Creative Writing",
       "World-Building",
       "Visual Storytelling"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1321,
@@ -12204,7 +12938,9 @@
       "Fiction Writing",
       "Genre Fiction",
       "Creative Content"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1322,
@@ -12227,7 +12963,9 @@
       "Real-Time Generation",
       "Style Transfer",
       "Creative Iteration"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1327,
@@ -12250,7 +12988,9 @@
       "Calendar Management",
       "Focus Time",
       "Task Scheduling"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1328,
@@ -12273,7 +13013,9 @@
       "Team Scheduling",
       "Focus Time",
       "Meeting Optimization"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1331,
@@ -12296,7 +13038,9 @@
       "Enterprise Search",
       "Knowledge Management",
       "Cross-App Discovery"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1332,
@@ -12319,7 +13063,9 @@
       "Code Snippets",
       "Code Reuse",
       "Developer Productivity"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1333,
@@ -12342,7 +13088,9 @@
       "Code Review",
       "Security Scanning",
       "CI/CD Integration"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1335,
@@ -12365,7 +13113,9 @@
       "IDE Assistant",
       "Code Generation",
       "Code Explanation"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1336,
@@ -12388,7 +13138,9 @@
       "Code Generation",
       "Test Creation",
       "Developer Productivity"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1339,
@@ -12411,7 +13163,9 @@
       "Instant Song Creation",
       "Music Distribution",
       "Casual Music Making"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1340,
@@ -12434,7 +13188,9 @@
       "Music Mixing",
       "Content Creation",
       "Sound Library"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1341,
@@ -12457,7 +13213,9 @@
       "Text-to-Audio",
       "Audio Editing",
       "DAA Production"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1349,
@@ -12475,7 +13233,9 @@
     "best_for": [
       "Teams that need AI text expansion and keyboard shortcuts for repetitive writing"
     ],
-    "description_en": "Text expansion and automation tool with AI-powered templates that eliminates repetitive typing and boosts productivity across any web application."
+    "description_en": "Text expansion and automation tool with AI-powered templates that eliminates repetitive typing and boosts productivity across any web application.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1350,
@@ -12493,7 +13253,9 @@
     "best_for": [
       "E-commerce brands needing AI product descriptions and marketing copy at scale"
     ],
-    "description_en": "AI writing assistant specialized in e-commerce product descriptions, generating SEO-optimized content at scale for online stores and catalogs."
+    "description_en": "AI writing assistant specialized in e-commerce product descriptions, generating SEO-optimized content at scale for online stores and catalogs.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1351,
@@ -12511,7 +13273,9 @@
     "best_for": [
       "Content marketers who need AI to research and write fact-checked long-form articles"
     ],
-    "description_en": "AI content generator with built-in fact-checking and SEO optimization, ensuring accurate and search-engine-friendly long-form articles and blogs."
+    "description_en": "AI content generator with built-in fact-checking and SEO optimization, ensuring accurate and search-engine-friendly long-form articles and blogs.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1353,
@@ -12529,7 +13293,9 @@
     "best_for": [
       "Artists who want Stable Diffusion with an intuitive web interface and fine controls"
     ],
-    "description_en": "Official Stable Diffusion web interface for professional image generation, offering fine-grained control over parameters and high-quality visual output."
+    "description_en": "Official Stable Diffusion web interface for professional image generation, offering fine-grained control over parameters and high-quality visual output.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1359,
@@ -12547,7 +13313,9 @@
     "best_for": [
       "Remote teams that need AI-powered task management and real-time collaboration"
     ],
-    "description_en": "AI productivity workspace combining tasks, notes, and team collaboration with AI agents that automate workflows and generate project outlines."
+    "description_en": "AI productivity workspace combining tasks, notes, and team collaboration with AI agents that automate workflows and generate project outlines.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1365,
@@ -12565,7 +13333,9 @@
     "best_for": [
       "AWS developers who want AI code suggestions optimized for cloud services"
     ],
-    "description_en": "AWS AI coding companion for cloud development, providing code suggestions, security scans, and AWS best practices directly within your IDE."
+    "description_en": "AWS AI coding companion for cloud development, providing code suggestions, security scans, and AWS best practices directly within your IDE.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1369,
@@ -12583,7 +13353,9 @@
     "best_for": [
       "Remote workers needing AI background noise removal during calls and recordings"
     ],
-    "description_en": "AI noise cancellation tool for meetings and audio recordings, removing background noise and echo in real time for crystal-clear communication."
+    "description_en": "AI noise cancellation tool for meetings and audio recordings, removing background noise and echo in real time for crystal-clear communication.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1375,
@@ -12601,7 +13373,9 @@
     "best_for": [
       "Corporate trainers creating AI presenter videos with digital avatars"
     ],
-    "description_en": "AI video generation from text with digital presenters, enabling scalable personalized video content without cameras, studios, or production crews."
+    "description_en": "AI video generation from text with digital presenters, enabling scalable personalized video content without cameras, studios, or production crews.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1376,
@@ -12619,7 +13393,9 @@
     "best_for": [
       "Sales teams using AI to create personalized video messages for prospects"
     ],
-    "description_en": "AI video platform for sales outreach and marketing campaigns, combining video recording, hosting, and analytics to drive engagement and conversions."
+    "description_en": "AI video platform for sales outreach and marketing campaigns, combining video recording, hosting, and analytics to drive engagement and conversions.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1381,
@@ -12637,7 +13413,9 @@
     "best_for": [
       "Enterprise teams needing AI writing with brand governance and style guides"
     ],
-    "description_en": "Enterprise AI writing platform with style guide enforcement, terminology management, and team collaboration features."
+    "description_en": "Enterprise AI writing platform with style guide enforcement, terminology management, and team collaboration features.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1383,
@@ -12655,7 +13433,9 @@
     "best_for": [
       "Anyone needing quick AI background removal from photos"
     ],
-    "description_en": "AI background removal tool that instantly creates transparent backgrounds from any photo with a single click."
+    "description_en": "AI background removal tool that instantly creates transparent backgrounds from any photo with a single click.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1384,
@@ -12673,7 +13453,9 @@
     "best_for": [
       "Photographers and designers who need AI image upscaling without quality loss"
     ],
-    "description_en": "AI image upscaling and enhancement tool that transforms low-resolution photos into print-quality visuals effortlessly."
+    "description_en": "AI image upscaling and enhancement tool that transforms low-resolution photos into print-quality visuals effortlessly.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1385,
@@ -12691,7 +13473,9 @@
     "best_for": [
       "Artists who want to create surreal and dreamlike AI-generated artwork"
     ],
-    "description_en": "AI art platform that uses neural network visualization to transform photos into surreal and psychedelic artworks."
+    "description_en": "AI art platform that uses neural network visualization to transform photos into surreal and psychedelic artworks.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1386,
@@ -12709,7 +13493,9 @@
     "best_for": [
       "Creatives who want to breed and evolve AI-generated images through genetic mixing"
     ],
-    "description_en": "AI collaborative art tool for mixing and evolving images through generative adversarial networks and community creativity."
+    "description_en": "AI collaborative art tool for mixing and evolving images through generative adversarial networks and community creativity.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1387,
@@ -12727,7 +13513,9 @@
     "best_for": [
       "Meeting-heavy professionals who want AI transcription and searchable notes"
     ],
-    "description_en": "AI meeting transcription and note-taking tool with speaker identification and real-time collaboration for productive meetings."
+    "description_en": "AI meeting transcription and note-taking tool with speaker identification and real-time collaboration for productive meetings.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1388,
@@ -12745,7 +13533,9 @@
     "best_for": [
       "Sales and customer success teams that need AI meeting analysis and insights"
     ],
-    "description_en": "AI meeting assistant that automates transcription, conversation intelligence, and action item extraction across platforms."
+    "description_en": "AI meeting assistant that automates transcription, conversation intelligence, and action item extraction across platforms.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1390,
@@ -12763,7 +13553,9 @@
     "best_for": [
       "Teams that need AI to record, transcribe, and highlight key moments in meetings"
     ],
-    "description_en": "AI meeting recorder with automatic transcription, timestamped summaries, and clip sharing for async team collaboration."
+    "description_en": "AI meeting recorder with automatic transcription, timestamped summaries, and clip sharing for async team collaboration.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1393,
@@ -12781,7 +13573,9 @@
     "best_for": [
       "Developers who want an AI-enhanced terminal with modern features and smart completions"
     ],
-    "description_en": "AI-powered terminal with intelligent command suggestions, workflow automation, and collaborative features for developers."
+    "description_en": "AI-powered terminal with intelligent command suggestions, workflow automation, and collaborative features for developers.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1396,
@@ -12799,7 +13593,9 @@
     "best_for": [
       "Dev teams wanting AI code review that catches bugs before merging PRs"
     ],
-    "description_en": "AI code review tool that provides automated pull request analysis with actionable suggestions and context-aware feedback."
+    "description_en": "AI code review tool that provides automated pull request analysis with actionable suggestions and context-aware feedback.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1397,
@@ -12817,7 +13613,9 @@
     "best_for": [
       "Musicians and creators who want AI to generate original songs from text prompts"
     ],
-    "description_en": "AI music generation platform for creating full songs with vocals and instruments from simple text prompts in seconds."
+    "description_en": "AI music generation platform for creating full songs with vocals and instruments from simple text prompts in seconds.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1398,
@@ -12835,7 +13633,9 @@
     "best_for": [
       "Music enthusiasts wanting AI music generation with high-quality instrumentation"
     ],
-    "description_en": "AI music creation tool for generating high-quality songs and compositions across genres from descriptive text prompts."
+    "description_en": "AI music creation tool for generating high-quality songs and compositions across genres from descriptive text prompts.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1399,
@@ -12853,7 +13653,9 @@
     "best_for": [
       "Content creators needing AI-generated royalty-free background music"
     ],
-    "description_en": "AI music generator for creating royalty-free tracks tailored for content creators, streamers, and brand videos."
+    "description_en": "AI music generator for creating royalty-free tracks tailored for content creators, streamers, and brand videos.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1400,
@@ -12871,7 +13673,9 @@
     "best_for": [
       "Video creators who need AI to find and license the perfect soundtrack"
     ],
-    "description_en": "AI-powered music licensing platform offering a vast library of royalty-free tracks and sound effects for creators."
+    "description_en": "AI-powered music licensing platform offering a vast library of royalty-free tracks and sound effects for creators.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1401,
@@ -12889,7 +13693,9 @@
     "best_for": [
       "Content creators who want AI to compose original background music instantly"
     ],
-    "description_en": "AI music composition tool for creating custom soundtracks and background music for videos, podcasts, and games."
+    "description_en": "AI music composition tool for creating custom soundtracks and background music for videos, podcasts, and games.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1403,
@@ -12907,7 +13713,9 @@
     "best_for": [
       "Social media managers who need AI to repurpose long videos into short clips"
     ],
-    "description_en": "AI video editing platform for creating social media clips from long recordings with automatic captioning and layout."
+    "description_en": "AI video editing platform for creating social media clips from long recordings with automatic captioning and layout.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1404,
@@ -12926,7 +13734,9 @@
       "Content marketers who need AI to extract the most engaging moments from videos"
     ],
     "last_updated": "2026-09-24",
-    "description_en": "AI video editing tool that extracts viral-worthy clips from long-form content using trend analysis and engagement scoring."
+    "description_en": "AI video editing tool that extracts viral-worthy clips from long-form content using trend analysis and engagement scoring.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1405,
@@ -12944,7 +13754,9 @@
     "best_for": [
       "Gaming streamers who want AI to automatically create highlight clips from streams"
     ],
-    "description_en": "AI clip generator that automatically captures highlights from gaming streams and podcast recordings for social sharing."
+    "description_en": "AI clip generator that automatically captures highlights from gaming streams and podcast recordings for social sharing.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1406,
@@ -12962,7 +13774,9 @@
     "best_for": [
       "Video editors who want AI to auto-remove silences and create smooth jump cuts"
     ],
-    "description_en": "AI video editor that automatically generates cuts, storyboards, and captions to streamline post-production workflows."
+    "description_en": "AI video editor that automatically generates cuts, storyboards, and captions to streamline post-production workflows.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1408,
@@ -12980,7 +13794,9 @@
     "best_for": [
       "Startups who need AI to generate marketing copy for multiple channels quickly"
     ],
-    "description_en": "AI writing assistant for creating landing page copy, product descriptions, and ad content with GPT-powered generation."
+    "description_en": "AI writing assistant for creating landing page copy, product descriptions, and ad content with GPT-powered generation.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1411,
@@ -12998,7 +13814,9 @@
     "best_for": [
       "Content teams needing an all-in-one AI design and writing platform"
     ],
-    "description_en": "All-in-one AI writing and design tool for marketing teams to create copy, graphics, and videos from one workspace."
+    "description_en": "All-in-one AI writing and design tool for marketing teams to create copy, graphics, and videos from one workspace.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1412,
@@ -13016,7 +13834,9 @@
     "best_for": [
       "Photographers who need AI to sharpen, denoise, and upscale images to pro quality"
     ],
-    "description_en": "AI image enhancement tool for upscaling, denoising, and sharpening photos with industry-leading quality and detail recovery."
+    "description_en": "AI image enhancement tool for upscaling, denoising, and sharpening photos with industry-leading quality and detail recovery.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1415,
@@ -13034,7 +13854,9 @@
     "best_for": [
       "E-commerce sellers needing batch AI photo enhancement and background processing"
     ],
-    "description_en": "AI image processing tool for upscaling, enhancing, and converting photos with batch processing and workflow automation."
+    "description_en": "AI image processing tool for upscaling, enhancing, and converting photos with batch processing and workflow automation.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1416,
@@ -13052,7 +13874,9 @@
     "best_for": [
       "Non-designers who want AI to create social graphics, icons, and mockups"
     ],
-    "description_en": "AI art and design tool for creating graphics, art, and marketing visuals from templates with easy customization options."
+    "description_en": "AI art and design tool for creating graphics, art, and marketing visuals from templates with easy customization options.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1418,
@@ -13070,7 +13894,9 @@
     "best_for": [
       "Power users who want to build AI-automated workflows without coding"
     ],
-    "description_en": "Visual automation platform with AI-powered scenario building and data processing for complex multi-app workflows."
+    "description_en": "Visual automation platform with AI-powered scenario building and data processing for complex multi-app workflows.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1419,
@@ -13088,7 +13914,9 @@
     "best_for": [
       "Professionals wanting AI browser automation to eliminate repetitive tasks"
     ],
-    "description_en": "AI workflow automation tool for browser-based repetitive tasks, scraping, and app integration without coding."
+    "description_en": "AI workflow automation tool for browser-based repetitive tasks, scraping, and app integration without coding.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1420,
@@ -13106,7 +13934,9 @@
     "best_for": [
       "Teams that need AI to build custom classification and automation models without code"
     ],
-    "description_en": "AI automation tool for document processing, email classification, and data extraction without writing any code."
+    "description_en": "AI automation tool for document processing, email classification, and data extraction without writing any code.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1422,
@@ -13124,7 +13954,9 @@
     "best_for": [
       "GitLab users who want AI code suggestions and vulnerability explanations"
     ],
-    "description_en": "AI-powered DevSecOps platform with code suggestions, security scanning, and chat-based assistance for developers."
+    "description_en": "AI-powered DevSecOps platform with code suggestions, security scanning, and chat-based assistance for developers.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1423,
@@ -13142,7 +13974,9 @@
     "best_for": [
       "JetBrains IDE users wanting AI code completion and refactoring assistance"
     ],
-    "description_en": "AI assistant integrated into JetBrains IDEs for intelligent code completion, refactoring, and in-editor documentation."
+    "description_en": "AI assistant integrated into JetBrains IDEs for intelligent code completion, refactoring, and in-editor documentation.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1425,
@@ -13160,7 +13994,9 @@
     "best_for": [
       "Developers exploring OpenAI's code generation and natural language programming"
     ],
-    "description_en": "AI code generation model powering various developer tools with natural language to code translation capabilities."
+    "description_en": "AI code generation model powering various developer tools with natural language to code translation capabilities.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1426,
@@ -13178,7 +14014,9 @@
     "best_for": [
       "Startup teams wanting AI to auto-generate full-stack boilerplate from prompts"
     ],
-    "description_en": "AI developer assistant for code generation, debugging, and documentation with context-aware suggestions and explanations."
+    "description_en": "AI developer assistant for code generation, debugging, and documentation with context-aware suggestions and explanations.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1427,
@@ -13196,7 +14034,9 @@
     "best_for": [
       "Musicians who need AI-powered audio mastering to make tracks sound professional"
     ],
-    "description_en": "AI-powered music mastering and distribution platform for musicians to achieve professional sound quality instantly."
+    "description_en": "AI-powered music mastering and distribution platform for musicians to achieve professional sound quality instantly.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1428,
@@ -13214,7 +14054,9 @@
     "best_for": [
       "Mobile creators wanting pro-quality AI audio recording and noise reduction"
     ],
-    "description_en": "AI audio recording app with noise reduction and studio-quality enhancement for musicians and podcasters on the go."
+    "description_en": "AI audio recording app with noise reduction and studio-quality enhancement for musicians and podcasters on the go.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1429,
@@ -13232,7 +14074,9 @@
     "best_for": [
       "Beginner musicians wanting AI-assisted music creation and collaboration tools"
     ],
-    "description_en": "AI music creation and collaboration platform for musicians and producers with cloud-based mixing and sharing tools."
+    "description_en": "AI music creation and collaboration platform for musicians and producers with cloud-based mixing and sharing tools.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1430,
@@ -13250,7 +14094,9 @@
     "best_for": [
       "Music producers who need AI to discover and match samples and sounds"
     ],
-    "description_en": "AI-powered music production platform with curated samples, preset management, and intelligent creative suggestions."
+    "description_en": "AI-powered music production platform with curated samples, preset management, and intelligent creative suggestions.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1431,
@@ -13268,7 +14114,9 @@
     "best_for": [
       "Podcasters wanting open-source AI audio editing with noise reduction plugins"
     ],
-    "description_en": "AI-enhanced audio editor with noise removal, auto-leveling, and speech-to-text transcription for podcast production."
+    "description_en": "AI-enhanced audio editor with noise removal, auto-leveling, and speech-to-text transcription for podcast production.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1434,
@@ -13286,7 +14134,9 @@
     "best_for": [
       "Marketers creating AI-powered promotional and social media videos quickly"
     ],
-    "description_en": "AI video creation tool for social media marketing and advertising with premium footage and customizable templates."
+    "description_en": "AI video creation tool for social media marketing and advertising with premium footage and customizable templates.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1435,
@@ -13304,7 +14154,9 @@
     "best_for": [
       "Businesses needing AI video creation with templates for logos, intros, and explainers"
     ],
-    "description_en": "AI video and animation maker for branding and marketing content with logo animation and explainer video templates."
+    "description_en": "AI video and animation maker for branding and marketing content with logo animation and explainer video templates.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1436,
@@ -13322,7 +14174,9 @@
     "best_for": [
       "Small teams wanting to create simple AI-animated explainer videos"
     ],
-    "description_en": "AI video creation platform for making professional videos quickly with customizable templates and brand kit integration."
+    "description_en": "AI video creation platform for making professional videos quickly with customizable templates and brand kit integration.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1439,
@@ -13343,7 +14197,9 @@
     "best_for": [
       "Writers who need AI-powered grammar checking with multilingual support"
     ],
-    "description_en": "AI-powered writing assistant for grammar and style checking supporting over 30 languages with context-aware suggestions."
+    "description_en": "AI-powered writing assistant for grammar and style checking supporting over 30 languages with context-aware suggestions.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1440,
@@ -13361,7 +14217,9 @@
     "best_for": [
       "Small business owners wanting AI website copy and product descriptions"
     ],
-    "description_en": "AI content generator for website copy and e-commerce product descriptions that creates SEO-optimized text instantly."
+    "description_en": "AI content generator for website copy and e-commerce product descriptions that creates SEO-optimized text instantly.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1441,
@@ -13379,7 +14237,9 @@
     "best_for": [
       "Side hustlers who need AI to generate niche business and marketing ideas"
     ],
-    "description_en": "AI content generation tool for discovering profitable niches and creating targeted marketing content at scale."
+    "description_en": "AI content generation tool for discovering profitable niches and creating targeted marketing content at scale.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1442,
@@ -13398,7 +14258,9 @@
       "Selfie enthusiasts wanting AI portrait enhancement and artistic style filters"
     ],
     "last_updated": "2026-09-24",
-    "description_en": "AI photo editor with magic retouching and avatar generation features for creating stunning social media portraits."
+    "description_en": "AI photo editor with magic retouching and avatar generation features for creating stunning social media portraits.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1444,
@@ -13416,7 +14278,9 @@
     "best_for": [
       "Users who want AI face aging, gender swap, and fun photo transformations"
     ],
-    "description_en": "AI face editing tool for realistic photo transformations including age progression, gender swap, and style enhancements."
+    "description_en": "AI face editing tool for realistic photo transformations including age progression, gender swap, and style enhancements.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1445,
@@ -13434,7 +14298,9 @@
     "best_for": [
       "Photographers who need AI to relight portraits with studio-quality lighting effects"
     ],
-    "description_en": "AI photo relighting tool for adjusting light direction and intensity after the photo is taken for perfect illumination."
+    "description_en": "AI photo relighting tool for adjusting light direction and intensity after the photo is taken for perfect illumination.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1446,
@@ -13452,7 +14318,9 @@
     "best_for": [
       "Anyone who needs AI to instantly remove unwanted objects from photos"
     ],
-    "description_en": "AI object removal tool for seamlessly cleaning up photos by erasing unwanted people, text, and blemishes instantly."
+    "description_en": "AI object removal tool for seamlessly cleaning up photos by erasing unwanted people, text, and blemishes instantly.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1452,
@@ -13470,7 +14338,9 @@
     "best_for": [
       "Mistral users who want an optimized AI code assistant for fast completions"
     ],
-    "description_en": "AI code generation model specialized for software development tasks with deep understanding of codebase context."
+    "description_en": "AI code generation model specialized for software development tasks with deep understanding of codebase context.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1453,
@@ -13488,7 +14358,9 @@
     "best_for": [
       "Chinese-speaking developers wanting open-source AI code generation and completion"
     ],
-    "description_en": "AI coding model for code generation and understanding across multiple programming languages with strong reasoning."
+    "description_en": "AI coding model for code generation and understanding across multiple programming languages with strong reasoning.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1454,
@@ -13506,7 +14378,9 @@
     "best_for": [
       "QA engineers who want AI to auto-generate comprehensive test suites"
     ],
-    "description_en": "AI code quality tool for generating meaningful tests and documentation that improve codebase reliability and coverage."
+    "description_en": "AI code quality tool for generating meaningful tests and documentation that improve codebase reliability and coverage.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1457,
@@ -13524,7 +14398,9 @@
     "best_for": [
       "Sound designers who want AI to generate custom audio samples from text descriptions"
     ],
-    "description_en": "AI music and sound effect generation tool for content creators producing royalty-free audio from text descriptions."
+    "description_en": "AI music and sound effect generation tool for content creators producing royalty-free audio from text descriptions.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1459,
@@ -13542,7 +14418,9 @@
     "best_for": [
       "Musicians who want AI to separate vocals, drums, and instruments from any song"
     ],
-    "description_en": "AI music practice app with stem separation, pitch detection, and tempo control for musicians to learn any song."
+    "description_en": "AI music practice app with stem separation, pitch detection, and tempo control for musicians to learn any song.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1460,
@@ -13560,7 +14438,9 @@
     "best_for": [
       "Karaoke creators who need AI to remove vocals and create backing tracks"
     ],
-    "description_en": "AI tool for separating vocals from music tracks enabling remixing, karaoke creation, and sample extraction instantly."
+    "description_en": "AI tool for separating vocals from music tracks enabling remixing, karaoke creation, and sample extraction instantly.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1465,
@@ -13578,7 +14458,9 @@
     "best_for": [
       "Creators who want AI to generate whimsical and artistic short video clips"
     ],
-    "description_en": "AI video generation platform for creating and editing videos from text prompts with creative style control and effects."
+    "description_en": "AI video generation platform for creating and editing videos from text prompts with creative style control and effects.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1466,
@@ -13596,7 +14478,9 @@
     "best_for": [
       "Artists who want AI to generate music-synced animated video artworks"
     ],
-    "description_en": "AI video generation tool for creating mesmerizing music videos and visual art with animation from images and audio."
+    "description_en": "AI video generation tool for creating mesmerizing music videos and visual art with animation from images and audio.",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1467,
@@ -13624,7 +14508,9 @@
       "Anime",
       "Community",
       "Social Media"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1469,
@@ -13652,7 +14538,9 @@
       "Engineering Teams",
       "Autonomous Coding",
       "Complex Projects"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1470,
@@ -13684,7 +14572,9 @@
       "Office Workers",
       "Microsoft 365",
       "Teams"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1471,
@@ -13713,7 +14603,9 @@
       "Long Documents",
       "Chinese Users",
       "Research"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1472,
@@ -13742,7 +14634,9 @@
       "Chinese Users",
       "Students",
       "Voice Chat"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1473,
@@ -13771,7 +14665,9 @@
       "Enterprise",
       "Chinese Users",
       "Developers"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1474,
@@ -13799,7 +14695,9 @@
       "Social Media",
       "Collaboration",
       "Subtitles"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1475,
@@ -13830,7 +14728,9 @@
       "Desktop Editing",
       "Mobile",
       "Beginners"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1476,
@@ -13858,7 +14758,9 @@
       "Mobile Creators",
       "Short Form",
       "Captions"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1477,
@@ -13886,7 +14788,9 @@
       "Marketers",
       "Script Writing",
       "Avatars"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1478,
@@ -13916,7 +14820,9 @@
       "Mobile",
       "Reels",
       "TikTok"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1479,
@@ -13947,7 +14853,9 @@
       "Subtitles",
       "Short Videos",
       "Global Audiences"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1480,
@@ -13975,7 +14883,9 @@
       "Vocalists",
       "Producers",
       "Voice Cloning"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1481,
@@ -14003,7 +14913,9 @@
       "Producers",
       "DJs",
       "Stem Separation"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1482,
@@ -14032,7 +14944,9 @@
       "Chinese Users",
       "Education",
       "Speech"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1483,
@@ -14061,7 +14975,9 @@
       "Enterprise",
       "Chinese Users",
       "Coding"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1484,
@@ -14089,7 +15005,9 @@
       "Chinese Users",
       "Search",
       "Documents"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1485,
@@ -14117,7 +15035,9 @@
       "Mobile Users",
       "Chinese Users",
       "On-Device AI"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1486,
@@ -14148,7 +15068,9 @@
       "Social Media",
       "General Users",
       "Image Generation"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1487,
@@ -14171,7 +15093,9 @@
       "Agentic Coding",
       "Refactoring",
       "Terminal Workflows"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1488,
@@ -14194,7 +15118,9 @@
       "Open Source",
       "VS Code",
       "Autonomous Coding"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1489,
@@ -14217,7 +15143,9 @@
       "Open Source",
       "Terminal",
       "Model Agnostic"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1490,
@@ -14240,7 +15168,9 @@
       "Git Workflow",
       "Pair Programming",
       "Terminal"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1491,
@@ -14263,7 +15193,9 @@
       "Enterprise",
       "Large Codebases",
       "Code Search"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1492,
@@ -14286,7 +15218,9 @@
       "Performance",
       "Collaboration",
       "Editors"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1493,
@@ -14309,7 +15243,9 @@
       "Prototyping",
       "Full-Stack Apps",
       "No Setup"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1494,
@@ -14332,7 +15268,9 @@
       "UI Generation",
       "React",
       "Frontend"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1495,
@@ -14355,7 +15293,9 @@
       "Real-Time Data",
       "Research",
       "Chatbots"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1496,
@@ -14378,7 +15318,9 @@
       "Multilingual",
       "Chatbots",
       "European Models"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1497,
@@ -14401,7 +15343,9 @@
       "Reasoning",
       "Free Tier",
       "Coding"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1498,
@@ -14424,7 +15368,9 @@
       "Multilingual",
       "Free Tier",
       "Document Analysis"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1499,
@@ -14447,7 +15393,9 @@
       "Prototyping",
       "Developers",
       "Model Testing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1500,
@@ -14470,7 +15418,9 @@
       "Research",
       "Document Q&A",
       "Citations"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1501,
@@ -14493,7 +15443,9 @@
       "AI Search",
       "Privacy",
       "Cited Answers"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1502,
@@ -14516,7 +15468,9 @@
       "Academic Research",
       "Literature Review",
       "Data Extraction"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1503,
@@ -14539,7 +15493,9 @@
       "Academic Research",
       "Paper Explanations",
       "Citations"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1504,
@@ -14562,7 +15518,9 @@
       "AI Agents",
       "Automation",
       "Task Execution"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1505,
@@ -14585,7 +15543,9 @@
       "Automation",
       "Workflows",
       "Self-Hosting"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1506,
@@ -14608,7 +15568,9 @@
       "AI Apps",
       "RAG",
       "Open Source"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1507,
@@ -14631,7 +15593,9 @@
       "AI Agents",
       "Business Tasks",
       "Integrations"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1508,
@@ -14654,7 +15618,9 @@
       "No-Code",
       "Automation",
       "AI Workflows"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1509,
@@ -14677,7 +15643,9 @@
       "Automation",
       "Integrations",
       "No-Code"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1510,
@@ -14700,7 +15668,9 @@
       "Open Source",
       "Local Models",
       "Full Control"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1511,
@@ -14723,7 +15693,9 @@
       "Stock Assets",
       "Image Generation",
       "Upscaling"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1512,
@@ -14746,7 +15718,9 @@
       "Short-Form Video",
       "Auto Captions",
       "Social Media"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1513,
@@ -14769,7 +15743,9 @@
       "Video Generation",
       "Character Consistency",
       "Camera Control"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1514,
@@ -14792,7 +15768,9 @@
       "Talking Avatars",
       "Lip Sync",
       "Character Video"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1515,
@@ -14815,7 +15793,9 @@
       "Avatars",
       "Marketing Video",
       "Translation"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1516,
@@ -14838,7 +15818,9 @@
       "Cinematic Video",
       "Camera Moves",
       "Advertising"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1517,
@@ -14861,7 +15843,9 @@
       "Dictation",
       "Voice to Text",
       "Writing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1518,
@@ -14884,7 +15868,9 @@
       "Dictation",
       "Offline",
       "Privacy"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1519,
@@ -14907,7 +15893,9 @@
       "Meeting Notes",
       "Transcription",
       "Summaries"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1520,
@@ -14930,7 +15918,9 @@
       "Meeting Notes",
       "Zoom",
       "CRM Sync"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1521,
@@ -14953,7 +15943,9 @@
       "Speech API",
       "Transcription",
       "Developers"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1522,
@@ -14976,7 +15968,9 @@
       "Speech API",
       "Real-Time",
       "Voice AI"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1523,
@@ -14999,7 +15993,9 @@
       "Enterprise",
       "Brand Consistency",
       "Marketing"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1524,
@@ -15022,7 +16018,9 @@
       "Presentations",
       "Google Slides",
       "Summaries"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1525,
@@ -15045,7 +16043,9 @@
       "Notes",
       "Task Management",
       "Personal Assistant"
-    ]
+    ],
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1537,
@@ -15068,7 +16068,9 @@
       "slide decks",
       "meeting summaries"
     ],
-    "skill_level": "beginner"
+    "skill_level": "beginner",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1538,
@@ -15091,7 +16093,9 @@
       "grant proposals",
       "academic editing"
     ],
-    "skill_level": "intermediate"
+    "skill_level": "intermediate",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1539,
@@ -15115,7 +16119,9 @@
       "translation",
       "quick writing help"
     ],
-    "skill_level": "beginner"
+    "skill_level": "beginner",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1540,
@@ -15138,7 +16144,9 @@
       "multi-file features",
       "daily development"
     ],
-    "skill_level": "intermediate"
+    "skill_level": "intermediate",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1541,
@@ -15162,7 +16170,9 @@
       "writing tests",
       "pull requests"
     ],
-    "skill_level": "intermediate"
+    "skill_level": "intermediate",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1542,
@@ -15185,7 +16195,9 @@
       "CI automation",
       "research on coding agents"
     ],
-    "skill_level": "advanced"
+    "skill_level": "advanced",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1543,
@@ -15208,7 +16220,9 @@
       "storyboarding",
       "marketing video"
     ],
-    "skill_level": "beginner"
+    "skill_level": "beginner",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1544,
@@ -15231,7 +16245,9 @@
       "product video",
       "API video generation"
     ],
-    "skill_level": "intermediate"
+    "skill_level": "intermediate",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1545,
@@ -15254,7 +16270,9 @@
       "ad concepts",
       "pre-visualization"
     ],
-    "skill_level": "beginner"
+    "skill_level": "beginner",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1546,
@@ -15277,7 +16295,9 @@
       "texture detail",
       "print preparation"
     ],
-    "skill_level": "intermediate"
+    "skill_level": "intermediate",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1547,
@@ -15300,7 +16320,9 @@
       "API generation",
       "custom pipelines"
     ],
-    "skill_level": "intermediate"
+    "skill_level": "intermediate",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1548,
@@ -15324,7 +16346,9 @@
       "dubbing",
       "game dialogue"
     ],
-    "skill_level": "advanced"
+    "skill_level": "advanced",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1549,
@@ -15347,7 +16371,9 @@
       "remote interviews",
       "clip repurposing"
     ],
-    "skill_level": "beginner"
+    "skill_level": "beginner",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1550,
@@ -15370,7 +16396,9 @@
       "drafting replies",
       "executive support"
     ],
-    "skill_level": "beginner"
+    "skill_level": "beginner",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1551,
@@ -15393,7 +16421,9 @@
       "thread summaries",
       "fast triage"
     ],
-    "skill_level": "beginner"
+    "skill_level": "beginner",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1552,
@@ -15416,7 +16446,9 @@
       "knowledge search",
       "team automation"
     ],
-    "skill_level": "intermediate"
+    "skill_level": "intermediate",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1553,
@@ -15439,7 +16471,9 @@
       "sales automation",
       "support triage"
     ],
-    "skill_level": "intermediate"
+    "skill_level": "intermediate",
+    "rating": null,
+    "rating_count": null
   },
   {
     "id": 1554,
@@ -15462,6 +16496,8 @@
       "list enrichment",
       "outbound personalization"
     ],
-    "skill_level": "intermediate"
+    "skill_level": "intermediate",
+    "rating": null,
+    "rating_count": null
   }
 ]
