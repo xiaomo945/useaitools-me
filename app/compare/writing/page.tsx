@@ -24,7 +24,7 @@ type Tool = {
   rating_count?: number;
 };
 
-const writingTools = (tools as Tool[]).filter(tool => tool.category === 'Writing');
+const writingTools = (tools as unknown as Tool[]).filter(tool => tool.category === 'Writing');
 
 const getCategoryColors = () => ({
   bg: 'bg-blue-500',

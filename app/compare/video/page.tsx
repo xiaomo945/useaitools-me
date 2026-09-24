@@ -24,7 +24,7 @@ type Tool = {
   rating_count?: number;
 };
 
-const videoTools = (tools as Tool[]).filter(tool => tool.category === 'Video');
+const videoTools = (tools as unknown as Tool[]).filter(tool => tool.category === 'Video');
 
 const getCategoryColors = () => ({
   bg: 'bg-indigo-500',

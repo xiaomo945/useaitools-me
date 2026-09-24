@@ -24,7 +24,7 @@ type Tool = {
   rating_count?: number;
 };
 
-const audioTools = (tools as Tool[]).filter(tool => tool.category === 'Audio');
+const audioTools = (tools as unknown as Tool[]).filter(tool => tool.category === 'Audio');
 
 const getCategoryColors = () => ({
   bg: 'bg-pink-500',

@@ -4,7 +4,7 @@ import ToolComparison from '@/app/components/ToolComparison';
 import toolsData from '@/data/tools.json';
 import type { Tool } from '@/types';
 
-const tools = toolsData as Tool[];
+const tools = toolsData as unknown as Tool[];
 
 interface ComparePageProps {
   params: Promise<{ slugs: string }>;

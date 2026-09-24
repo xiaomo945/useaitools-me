@@ -12,7 +12,7 @@ import TopTools from '@/app/components/TopTools';
 import type { Tool } from '@/types';
 import { getAffiliateLink, hasAffiliateLink } from '@/lib/affiliate';
 
-const tools = toolsData as Tool[];
+const tools = toolsData as unknown as Tool[];
 type Category = Tool['category'];
 
 const categoryDescriptions: Record<Category, string> = {

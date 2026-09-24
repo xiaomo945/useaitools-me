@@ -7,7 +7,7 @@ import { Plus, X, Star, ArrowRight, Check, Trophy } from 'lucide-react';
 import toolsData from '@/data/tools.json';
 import { track } from '@/lib/analytics';
 
-const tools = toolsData as Tool[];
+const tools = toolsData as unknown as Tool[];
 
 const categoryColorMap: Record<string, { bg: string; text: string }> = {
   Writing: { bg: 'bg-blue-500/10', text: 'text-blue-600 dark:text-blue-400' },
@@ -148,7 +148,7 @@ export default function ComparePage() {
   const selectedTools = useMemo(() => {
     return selectedIds
       .map(id => tools.find(t => t.id === id))
-      .filter(Boolean) as Tool[];
+      .filter(Boolean) as unknown as Tool[];
   }, [selectedIds]);
 
   const availableTools = useMemo(() => {
