@@ -180,72 +180,12 @@
     ]
   },
   {
-    "id": 4,
-    "name": "Canva Magic Design",
-    "description": "Professional AI tool for Image tasks. Advanced machine learning capabilities for efficient workflow automation.",
-    "category": "Image",
-    "pricing": "Freemium",
-    "url": "https://canva.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Modern coffee shop social media post design, warm colors, friendly vibe",
-        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Professional business presentation template with clean design and blue accents",
-        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "needs_vpn": true,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Canva的AI设计工具，快速创建专业的设计作品。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.1,
-    "rating_count": 204,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 3.8,
-        "note": "User-friendly interface with intuitive navigation"
-      },
-      "output_quality": {
-        "score": 4.1,
-        "note": "High-quality outputs that meet expectations"
-      },
-      "features": {
-        "score": 4.2,
-        "note": "Comprehensive feature set for most use cases"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Good value for the price paid"
-      },
-      "stability": {
-        "score": 3.9,
-        "note": "Reliable performance with minimal downtime"
-      },
-      "support": {
-        "score": 4,
-        "note": "Helpful documentation and community support"
-      }
-    },
-    "last_updated": "2026-05-25",
-    "skill_level": "beginner",
-    "best_for": [
-      "Beginners",
-      "Budget-Friendly",
-      "Social Media"
-    ]
-  },
-  {
     "id": 5,
     "name": "Notion AI",
     "description": "Professional AI tool for Productivity tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Productivity",
     "pricing": "Freemium",
-    "url": "https://notion.so",
+    "url": "https://www.notion.com/product/ai",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [
@@ -291,7 +231,7 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
       "Teams",
@@ -305,7 +245,7 @@
     "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Freemium",
-    "url": "https://chat.openai.com",
+    "url": "https://chatgpt.com",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [
@@ -351,7 +291,7 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Beginners",
@@ -365,7 +305,7 @@
     "description": "The world's most widely-used AI coding assistant, helping 1M+ developers write code 55% faster. Integrates directly into VS Code, JetBrains IDEs, and Neovim. Supports 100+ programming languages with context-aware code suggestions, function generation, and intelligent debugging assistance.",
     "category": "Code",
     "pricing": "Paid",
-    "url": "https://github.com/copilot",
+    "url": "https://github.com/features/copilot",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [
@@ -411,7 +351,7 @@
         "note": "Comprehensive docs and GitHub Community support"
       }
     },
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
       "Professionals",
@@ -485,7 +425,7 @@
     "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Video",
     "pricing": "Freemium",
-    "url": "https://runwayml.com",
+    "url": "https://runway.com",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [
@@ -531,7 +471,7 @@
         "note": "Helpful documentation and community support"
       }
     },
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "advanced",
     "best_for": [
       "Professionals",
@@ -660,66 +600,6 @@
     ]
   },
   {
-    "id": 12,
-    "name": "Pika Labs",
-    "description": "Professional AI tool for Video tasks. Advanced machine learning capabilities for efficient workflow automation.",
-    "category": "Video",
-    "pricing": "Freemium",
-    "url": "https://pika.art",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Generate a cartoon video of a cute robot dancing in a cyberpunk city",
-        "image_url": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Create an animated scene of a cozy coffee shop with steam rising from cups",
-        "image_url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "needs_vpn": true,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI视频生成工具，从文本创建动画视频。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.4,
-    "rating_count": 411,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.2,
-        "note": "User-friendly interface with intuitive navigation"
-      },
-      "output_quality": {
-        "score": 4.9,
-        "note": "High-quality outputs that meet expectations"
-      },
-      "features": {
-        "score": 4.2,
-        "note": "Comprehensive feature set for most use cases"
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "note": "Good value for the price paid"
-      },
-      "stability": {
-        "score": 4.8,
-        "note": "Reliable performance with minimal downtime"
-      },
-      "support": {
-        "score": 3.5,
-        "note": "Helpful documentation and community support"
-      }
-    },
-    "last_updated": "2026-05-25",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Beginners",
-      "Quick Results",
-      "Social Media"
-    ]
-  },
-  {
     "id": 13,
     "name": "Cursor",
     "description": "The AI-first code editor built for pair programming. Combines the power of GPT-4 and Claude with a purpose-built IDE featuring predictive code, intelligent autocomplete, and conversational debugging. Loved by indie developers and startups for its blazing-fast performance and collaborative features.",
@@ -837,66 +717,6 @@
       "Productivity",
       "Teams",
       "Beginners"
-    ]
-  },
-  {
-    "id": 15,
-    "name": "Suno AI",
-    "description": "Professional AI tool for Audio tasks. Advanced machine learning capabilities for efficient workflow automation.",
-    "category": "Audio",
-    "pricing": "Freemium",
-    "url": "https://suno.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Create an upbeat pop song about summer vacation with catchy chorus and guitar melody",
-        "image_url": "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Generate a mellow jazz instrumental piece with piano and saxophone solo",
-        "image_url": "https://images.unsplash.com/photo-1537432376149-e84978be6b28?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "needs_vpn": true,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI音乐生成工具，能根据文字描述创作歌曲。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 3.7,
-    "rating_count": 382,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 3,
-        "note": "User-friendly interface with intuitive navigation"
-      },
-      "output_quality": {
-        "score": 3.8,
-        "note": "High-quality outputs that meet expectations"
-      },
-      "features": {
-        "score": 4,
-        "note": "Comprehensive feature set for most use cases"
-      },
-      "value_for_money": {
-        "score": 3.6,
-        "note": "Good value for the price paid"
-      },
-      "stability": {
-        "score": 3.6,
-        "note": "Reliable performance with minimal downtime"
-      },
-      "support": {
-        "score": 4.5,
-        "note": "Helpful documentation and community support"
-      }
-    },
-    "last_updated": "2026-05-25",
-    "skill_level": "beginner",
-    "best_for": [
-      "Content Creation",
-      "Beginners",
-      "Quick Results"
     ]
   },
   {
@@ -1372,66 +1192,6 @@
       "Teams",
       "Productivity",
       "Project Management"
-    ]
-  },
-  {
-    "id": 53,
-    "name": "Todoist AI",
-    "description": "Intelligent task management enhanced with AI for 25M+ users worldwide. Automatically categorizes tasks, suggests priorities based on deadlines and context, and breaks down complex projects into actionable steps. Natural language input ('Follow up with client next Monday') creates tasks instantly.",
-    "category": "Productivity",
-    "pricing": "Freemium",
-    "url": "https://todoist.com/productivity-methods/personal-assistants",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "I need to plan a wedding. Break this down into manageable tasks with priorities and suggested due dates",
-        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Categorize and prioritize these 20 random tasks and suggest which ones I should do first today",
-        "image_url": "https://images.unsplash.com/photo-1499914485622-a88fac536970?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "needs_vpn": true,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Intelligent task management enhanced with AI for automatic prioritization.",
-    "rating": 4.6,
-    "rating_count": 892,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.8,
-        "note": "Clean, minimal interface; natural language input is intuitive"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Smart prioritization suggestions are highly accurate"
-      },
-      "features": {
-        "score": 4.4,
-        "note": "AI prioritization, natural language input, calendar sync"
-      },
-      "value_for_money": {
-        "score": 4.7,
-        "note": "Premium at $4/month is one of the best values in task apps"
-      },
-      "stability": {
-        "score": 4.7,
-        "note": "Extremely reliable with sync across all devices"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Good documentation and helpful community"
-      }
-    },
-    "last_updated": "2026-05-25",
-    "skill_level": "beginner",
-    "best_for": [
-      "Beginners",
-      "Productivity",
-      "Quick Results"
     ]
   },
   {
@@ -2417,7 +2177,7 @@
     "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Code",
     "pricing": "Freemium",
-    "url": "https://www.codium.ai",
+    "url": "https://www.qodo.ai",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [
@@ -2437,41 +2197,7 @@
     "description_en": "AI代码助手，专注于代码测试、审查和质量保证。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.7,
     "rating_count": 361,
-    "last_updated": "2026-05-25",
-    "skill_level": "beginner",
-    "best_for": [
-      "Developers",
-      "Professionals",
-      "Teams"
-    ]
-  },
-  {
-    "id": 84,
-    "name": "Amazon CodeWhisperer",
-    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
-    "category": "Code",
-    "pricing": "Freemium",
-    "url": "https://aws.amazon.com/codewhisperer",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Generate Python code to interact with AWS S3 bucket for file upload and download operations",
-        "image_url": "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Create a Lambda function to process images uploaded to S3 and generate thumbnails automatically",
-        "image_url": "https://images.unsplash.com/photo-1526318896980-cf78c088247c?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "needs_vpn": true,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AWS的AI代码生成工具，集成到各种IDE中。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.5,
-    "rating_count": 348,
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Developers",
@@ -2707,7 +2433,7 @@
     "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
     "category": "Writing",
     "pricing": "Free",
-    "url": "https://www.bing.com/chat",
+    "url": "https://copilot.microsoft.com",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [
@@ -2727,7 +2453,7 @@
     "description_en": "Microsoft的AI聊天助手，集成网络搜索和创意功能。 This versatile tool offers advanced features for professionals and beginners alike.",
     "rating": 4.2,
     "rating_count": 438,
-    "last_updated": "2026-05-25",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -3033,40 +2759,6 @@
     ]
   },
   {
-    "id": 102,
-    "name": "Github Copilot X",
-    "description": "Professional AI tool for Code tasks. Advanced machine learning capabilities for efficient workflow automation.",
-    "category": "Code",
-    "pricing": "Paid",
-    "url": "https://github.com/features/copilot",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Chat with AI about my codebase to understand and refactor",
-        "image_url": "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Get explanations of complex code and debug issues",
-        "image_url": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "needs_vpn": true,
-    "languages": [
-      "English"
-    ],
-    "description_en": "先进的AI编程助手，提供更智能的代码建议和聊天功能。 This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 4.3,
-    "rating_count": 103,
-    "last_updated": "2026-05-25",
-    "skill_level": "beginner",
-    "best_for": [
-      "Developers",
-      "Professionals",
-      "Teams"
-    ]
-  },
-  {
     "id": 105,
     "name": "智谱清言",
     "description": "Professional AI tool for Writing tasks. Advanced machine learning capabilities for efficient workflow automation.",
@@ -3215,41 +2907,6 @@
       "Beginners",
       "Quick Results",
       "Content Creation"
-    ]
-  },
-  {
-    "id": 202,
-    "name": "Use AI Writer",
-    "description": "⭐ Coming Soon: Our own AI writing tool. Affordable, fast, and truly understands context. Join the waitlist.",
-    "category": "Writing",
-    "pricing": "Coming Soon",
-    "url": "https:///waitlist",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Write a compelling blog post about the future of AI-assisted content creation",
-        "image_url": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Generate a professional email campaign for a SaaS product launch",
-        "image_url": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "needs_vpn": false,
-    "languages": [
-      "English",
-      "Chinese"
-    ],
-    "description_en": "Our own AI writing tool — coming soon. Designed to be affordable, fast, and context-aware. This versatile tool offers advanced features for professionals and beginners alike.",
-    "rating": 0,
-    "rating_count": 0,
-    "last_updated": "2026-05-25",
-    "skill_level": "beginner",
-    "best_for": [
-      "Content Creation",
-      "Beginners",
-      "Quick Results"
     ]
   },
   {
@@ -3717,7 +3374,7 @@
     "description": "AI-powered podcast production platform. Text-to-speech, audio editing, and remote recording.",
     "category": "Audio",
     "pricing": "Freemium",
-    "url": "https://podcastle.com",
+    "url": "https://async.com",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -3754,7 +3411,7 @@
         "note": "Helpful support"
       }
     },
-    "last_updated": "2026-05-28",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Podcasting",
@@ -4069,57 +3726,6 @@
     ]
   },
   {
-    "id": 239,
-    "name": "OtterPilot",
-    "description": "AI meeting assistant that automatically takes notes, summarizes meetings, and extracts action items.",
-    "category": "Productivity",
-    "pricing": "Freemium",
-    "url": "https://otterpilot.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI meeting assistant.",
-    "rating": 4.7,
-    "rating_count": 790,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 5,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 4.684682263876042,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 4.54061857965272,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 5,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 4.6041663812333935,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.99812141319421,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Meetings",
-      "Notes",
-      "Action Items"
-    ]
-  },
-  {
     "id": 240,
     "name": "Sembly AI",
     "description": "AI-powered meeting minutes and action item tracker. Integrates with calendar apps.",
@@ -4176,7 +3782,7 @@
     "description": "AI meeting management platform. Prepare agendas, take notes, and track action items.",
     "category": "Productivity",
     "pricing": "Paid",
-    "url": "https://fellow.com",
+    "url": "https://fellow.app",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -4213,7 +3819,7 @@
         "note": "Helpful support"
       }
     },
-    "last_updated": "2026-05-28",
+    "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
       "Meeting Management",
@@ -4788,7 +4394,7 @@
     "description": "AI-powered reading and note-taking system. Capture highlights from books and articles.",
     "category": "Productivity",
     "pricing": "Paid",
-    "url": "https://readwise.com",
+    "url": "https://readwise.io",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -4825,7 +4431,7 @@
         "note": "Helpful support"
       }
     },
-    "last_updated": "2026-05-28",
+    "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
       "Reading",
@@ -4933,57 +4539,6 @@
       "Personal Assistant",
       "Productivity",
       "AI"
-    ]
-  },
-  {
-    "id": 263,
-    "name": "Pi AI",
-    "description": "Personal AI companion focused on conversations and learning.",
-    "category": "Productivity",
-    "pricing": "Free",
-    "url": "https://pi-ai.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Personal AI companion.",
-    "rating": 4.1,
-    "rating_count": 1777,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 3.814039487635856,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 3.9250195000602166,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 4.533752166590926,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 4.894653381619099,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 4.520876899018344,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.258921601307636,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Companion",
-      "Learning",
-      "Chat"
     ]
   },
   {
@@ -5188,57 +4743,6 @@
       "Naming",
       "Business",
       "Domains"
-    ]
-  },
-  {
-    "id": 270,
-    "name": "CopySmith",
-    "description": "AI copywriting tool for marketing professionals. Generate high-converting copy.",
-    "category": "Writing",
-    "pricing": "Freemium",
-    "url": "https://copysmith.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI copywriting tool for marketers.",
-    "rating": 4,
-    "rating_count": 3417,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.178704311213987,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 4.237993306112442,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 3.809909375481152,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 3.8164044042387135,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 3.9384901582547722,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.006201639462788,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Copywriting",
-      "Marketing",
-      "Conversion"
     ]
   },
   {
@@ -6007,57 +5511,6 @@
     ]
   },
   {
-    "id": 290,
-    "name": "CodeStream",
-    "description": "AI-powered code discussion and review. Collaborate on code.",
-    "category": "Code",
-    "pricing": "Freemium",
-    "url": "https://codestream.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI-powered code collaboration.",
-    "rating": 4.4,
-    "rating_count": 402,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.802172383303791,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 4.204982615287273,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 4.409211833778384,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 5,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 4.983983062052497,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.2283004081036,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Code Collaboration",
-      "Review",
-      "Team"
-    ]
-  },
-  {
     "id": 294,
     "name": "Canva AI",
     "description": "AI-powered design features in Canva. Magic design and text effects.",
@@ -6318,7 +5771,7 @@
     "description": "Detect AI-generated text with confidence scores.",
     "category": "Productivity",
     "pricing": "Freemium",
-    "url": "https://gptzero.com",
+    "url": "https://gptzero.me",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -6355,7 +5808,7 @@
         "note": "Helpful support"
       }
     },
-    "last_updated": "2026-05-28",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "AI Detection",
@@ -6616,57 +6069,6 @@
       "Brand Design",
       "Logo",
       "Business"
-    ]
-  },
-  {
-    "id": 311,
-    "name": "AI Translator",
-    "description": "Advanced AI-powered translation tool. Supports 100+ languages.",
-    "category": "Productivity",
-    "pricing": "Freemium",
-    "url": "https://ai-translator.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Advanced AI translation tool.",
-    "rating": 4.7,
-    "rating_count": 5027,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 5,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 5,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 5,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 5,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 4.698436492403176,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.193947371644919,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Translation",
-      "Multilingual",
-      "Global"
     ]
   },
   {
@@ -6976,57 +6378,6 @@
     ]
   },
   {
-    "id": 336,
-    "name": "Short Video Maker",
-    "description": "Create viral short videos with AI-powered editing and effects.",
-    "category": "Video",
-    "pricing": "Freemium",
-    "url": "https://short-video-maker.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI short video maker.",
-    "rating": 4.7,
-    "rating_count": 4246,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 5,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 5,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 4.34119538586164,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 5,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 4.797356929992791,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.319400811196285,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-05-26",
-    "skill_level": "beginner",
-    "best_for": [
-      "Short Videos",
-      "Social Media",
-      "Viral"
-    ]
-  },
-  {
     "id": 342,
     "name": "DeepBrain AI",
     "description": "Create AI-powered videos with realistic digital avatars.",
@@ -7134,7 +6485,7 @@
     "description": "Free AI-powered code acceleration toolkit.",
     "category": "Code",
     "pricing": "Free",
-    "url": "https://codeium.com",
+    "url": "https://devin.ai/desktop",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -7171,7 +6522,7 @@
         "note": "Helpful support"
       }
     },
-    "last_updated": "2026-05-26",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Free",
@@ -7644,7 +6995,7 @@
     "description": "AI tool for creating and regenerating vector graphics and illustrations.",
     "category": "Image",
     "pricing": "Freemium",
-    "url": "https://recraft.com",
+    "url": "https://www.recraft.ai",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -7681,7 +7032,7 @@
         "note": "Helpful support"
       }
     },
-    "last_updated": "2026-05-28",
+    "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
       "Vector",
@@ -7899,7 +7250,7 @@
     "description": "AI voice generator with expressive voices. Create natural-sounding speech.",
     "category": "Audio",
     "pricing": "Freemium",
-    "url": "https://play.ht.com",
+    "url": "https://play.ht",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -7936,7 +7287,7 @@
         "note": "Helpful support"
       }
     },
-    "last_updated": "2026-05-28",
+    "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
       "Voice Generation",
@@ -8205,7 +7556,7 @@
     "description": "Free AI coding assistant by Sourcegraph. Understand and write code with AI.",
     "category": "Code",
     "pricing": "Free",
-    "url": "https://cody.com",
+    "url": "https://sourcegraph.com/cody",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -8242,7 +7593,7 @@
         "note": "Helpful support"
       }
     },
-    "last_updated": "2026-05-28",
+    "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
       "Free",
@@ -8608,57 +7959,6 @@
     ]
   },
   {
-    "id": 519,
-    "name": "Copy.ai Ultimate",
-    "description": "Top-tier AI writing for enterprise content creation.",
-    "category": "Writing",
-    "pricing": "Paid",
-    "url": "https://copy.ai-ultimate.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Copy.ai Ultimate",
-    "rating": 4.5,
-    "rating_count": 2707,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.352604778882575,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 4.718366641360609,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 4.894440367817706,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 5,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 4.477378908836427,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.79080227574611,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Enterprise",
-      "Content Creation",
-      "Marketing"
-    ]
-  },
-  {
     "id": 425,
     "name": "Superhuman AI",
     "description": "AI-powered email client that learns your preferences and helps you reach inbox zero 3x faster. Features include AI email drafting, intelligent summarization, and smart reply suggestions.",
@@ -8728,376 +8028,6 @@
       },
       "features": {
         "score": 4.2,
-        "description": ""
-      }
-    }
-  },
-  {
-    "id": 428,
-    "name": "Copy.ai Pro",
-    "description": "Enterprise-grade AI copywriting platform with advanced features for marketing teams. Includes brand voice training, workflow automation, and collaborative tools.",
-    "category": "Writing",
-    "pricing": "Paid",
-    "url": "https://copy.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Write 10 variations of a Facebook ad headline for fitness gear",
-        "image_url": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Create a complete email marketing sequence for product launch",
-        "image_url": "https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.7,
-      "ease_of_use": {
-        "score": 4.6,
-        "note": "Easy to use for beginners and pros alike"
-      },
-      "output_quality": {
-        "score": 4.7,
-        "note": "High-quality marketing copy generation"
-      },
-      "features": {
-        "score": 4.8,
-        "note": "Brand voice training, workflows, and collaboration tools"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Good value for marketing teams"
-      },
-      "stability": {
-        "score": 4.8,
-        "note": "Enterprise-grade reliability"
-      },
-      "support": {
-        "score": 4.6,
-        "note": "Excellent customer support"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Marketing Teams",
-      "Agencies",
-      "Startups"
-    ],
-    "rating": 4.5,
-    "rating_count": 3200,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.5,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.4,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.4,
-        "description": ""
-      },
-      "features": {
-        "score": 4.5,
-        "description": ""
-      }
-    }
-  },
-  {
-    "id": 429,
-    "name": "Stability AI SDXL Turbo",
-    "description": "Blazing-fast image generation model from Stability AI that creates stunning visuals in under a second with exceptional quality and detail.",
-    "category": "Image",
-    "pricing": "Freemium",
-    "url": "https://stability.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Cyberpunk cityscape at night with neon lights and rain-soaked streets",
-        "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Photorealistic portrait in natural golden hour lighting",
-        "image_url": "https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.9,
-      "ease_of_use": {
-        "score": 4.4,
-        "note": "Some technical knowledge helpful but not required"
-      },
-      "output_quality": {
-        "score": 4.9,
-        "note": "Photorealistic quality with exceptional detail"
-      },
-      "features": {
-        "score": 4.8,
-        "note": "Text-to-image, image-to-image, and inpainting"
-      },
-      "value_for_money": {
-        "score": 4.7,
-        "note": "Excellent value for the quality"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Generally reliable with occasional updates"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Active community and documentation"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Creatives",
-      "Designers",
-      "Artists"
-    ],
-    "rating": 4.3,
-    "rating_count": 2100,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.3,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.2,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.2,
-        "description": ""
-      },
-      "features": {
-        "score": 4.3,
-        "description": ""
-      }
-    }
-  },
-  {
-    "id": 430,
-    "name": "Pika Labs 2.0",
-    "description": "Advanced AI video generation platform that creates stunning videos from text prompts, images, or other videos with unprecedented control and quality.",
-    "category": "Video",
-    "pricing": "Freemium",
-    "url": "https://pika.art",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Dragon flying over a fantasy castle at sunset, cinematic 4K",
-        "image_url": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Animate this static image into a smooth looping video",
-        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.8,
-      "ease_of_use": {
-        "score": 4.5,
-        "note": "Intuitive Discord-based interface"
-      },
-      "output_quality": {
-        "score": 4.9,
-        "note": "State-of-the-art video generation quality"
-      },
-      "features": {
-        "score": 4.7,
-        "note": "Text-to-video, image-to-video, and video editing"
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "note": "Great value compared to alternatives"
-      },
-      "stability": {
-        "score": 4.5,
-        "note": "Rapidly improving with consistent updates"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Active Discord community"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Creatives",
-      "Filmmakers",
-      "Animators"
-    ],
-    "rating": 4.4,
-    "rating_count": 2800,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.4,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.3,
-        "description": ""
-      },
-      "features": {
-        "score": 4.4,
-        "description": ""
-      }
-    }
-  },
-  {
-    "id": 431,
-    "name": "Suno AI Chirp",
-    "description": "Revolutionary AI music generation platform that creates complete songs with vocals, instrumentation, and lyrics from simple text prompts.",
-    "category": "Audio",
-    "pricing": "Freemium",
-    "url": "https://suno.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Upbeat pop song about summer vacation, 80's style",
-        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Epic orchestral film score with dramatic buildups",
-        "image_url": "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.9,
-      "ease_of_use": {
-        "score": 4.6,
-        "note": "Simple text prompt interface"
-      },
-      "output_quality": {
-        "score": 4.9,
-        "note": "Professional-quality music with vocals"
-      },
-      "features": {
-        "score": 4.8,
-        "note": "Full song generation with lyrics and multiple genres"
-      },
-      "value_for_money": {
-        "score": 4.7,
-        "note": "Exceptional value for the quality"
-      },
-      "stability": {
-        "score": 4.5,
-        "note": "Generally reliable with peak traffic considerations"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Good documentation and community"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Creatives",
-      "Musicians",
-      "Content Creators"
-    ],
-    "rating": 4.2,
-    "rating_count": 1500,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.2,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.1,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.1,
-        "description": ""
-      },
-      "features": {
-        "score": 4.2,
-        "description": ""
-      }
-    }
-  },
-  {
-    "id": 433,
-    "name": "Cursor AI",
-    "description": "AI-first code editor built from the ground up for AI pair programming. Features intelligent autocompletion, chat-based coding, and smart refactoring tools.",
-    "category": "Code",
-    "pricing": "Freemium",
-    "url": "https://cursor.so",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Build a complete REST API with authentication and database",
-        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Fix the bugs in this code and add proper error handling",
-        "image_url": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.8,
-      "ease_of_use": {
-        "score": 4.6,
-        "note": "Familiar VS Code-like interface"
-      },
-      "output_quality": {
-        "score": 4.8,
-        "note": "High-quality code generation and understanding"
-      },
-      "features": {
-        "score": 4.7,
-        "note": "AI chat, tab completion, and smart refactoring"
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "note": "Excellent value for the features"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Rapidly improving with regular updates"
-      },
-      "support": {
-        "score": 4.5,
-        "note": "Good community and documentation"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Developers",
-      "Students",
-      "Teams"
-    ],
-    "rating": 4.7,
-    "rating_count": 5600,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.7,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.6,
-        "description": ""
-      },
-      "features": {
-        "score": 4.7,
         "description": ""
       }
     }
@@ -9468,228 +8398,6 @@
       },
       "features": {
         "score": 4,
-        "description": ""
-      }
-    }
-  },
-  {
-    "id": 450,
-    "name": "ElevenLabs Reader",
-    "description": "AI-powered audiobook creation platform with ultra-realistic voices in 29 languages. Perfect for converting books, articles, and scripts into professional audiobooks.",
-    "category": "Audio",
-    "pricing": "Freemium",
-    "url": "https://elevenlabs.io",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Convert this 20-page document to audiobook",
-        "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Generate audiobook chapter with emotional narration",
-        "image_url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.9,
-      "ease_of_use": {
-        "score": 4.7,
-        "note": "Simple upload and generate"
-      },
-      "output_quality": {
-        "score": 4.9,
-        "note": "Industry-leading voice quality"
-      },
-      "features": {
-        "score": 4.8,
-        "note": "Voice cloning, emotion control"
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "note": "Free tier for testing"
-      },
-      "stability": {
-        "score": 4.8,
-        "note": "Very reliable"
-      },
-      "support": {
-        "score": 4.5,
-        "note": "Good documentation"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Authors",
-      "Publishers",
-      "Content Creators"
-    ],
-    "rating": 4.1,
-    "rating_count": 1100,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.1,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4,
-        "description": ""
-      },
-      "features": {
-        "score": 4.1,
-        "description": ""
-      }
-    }
-  },
-  {
-    "id": 452,
-    "name": "GitHub Copilot for DevOps",
-    "description": "AI pair programmer extended for infrastructure-as-code, CI/CD pipelines, and cloud configuration. Supports Terraform, Kubernetes, Docker, and AWS/GCP/Azure templates.",
-    "category": "Code",
-    "pricing": "Paid",
-    "url": "https://github.com/features/copilot",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Write Terraform module for AWS VPC setup",
-        "image_url": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Generate GitHub Actions workflow for deployment",
-        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.8,
-      "ease_of_use": {
-        "score": 4.7,
-        "note": "IDE integration"
-      },
-      "output_quality": {
-        "score": 4.8,
-        "note": "Production-ready code"
-      },
-      "features": {
-        "score": 4.9,
-        "note": "Multi-language, IaC support"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Worth it for developers"
-      },
-      "stability": {
-        "score": 4.9,
-        "note": "GitHub infrastructure"
-      },
-      "support": {
-        "score": 4.6,
-        "note": "Excellent docs"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "intermediate",
-    "best_for": [
-      "DevOps Engineers",
-      "Developers",
-      "SREs"
-    ],
-    "rating": 4.4,
-    "rating_count": 1900,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.4,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.3,
-        "description": ""
-      },
-      "features": {
-        "score": 4.4,
-        "description": ""
-      }
-    }
-  },
-  {
-    "id": 454,
-    "name": "Warp Terminal",
-    "description": "AI-powered terminal with natural language command input, block-based output, and intelligent suggestions for common DevOps workflows.",
-    "category": "Code",
-    "pricing": "Freemium",
-    "url": "https://warp.dev",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Show me all running Docker containers",
-        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Find and kill process on port 3000",
-        "image_url": "https://images.unsplash.com/photo-1554080353-a576cf803bda?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.6,
-      "ease_of_use": {
-        "score": 4.8,
-        "note": "Modern terminal experience"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Good command suggestions"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "AI command input, blocks"
-      },
-      "value_for_money": {
-        "score": 4.7,
-        "note": "Free for individuals"
-      },
-      "stability": {
-        "score": 4.5,
-        "note": "Still maturing"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Growing community"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Developers",
-      "DevOps",
-      "System Admins"
-    ],
-    "rating": 4.5,
-    "rating_count": 2200,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.5,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.4,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.4,
-        "description": ""
-      },
-      "features": {
-        "score": 4.5,
         "description": ""
       }
     }
@@ -10213,80 +8921,6 @@
     }
   },
   {
-    "id": 466,
-    "name": "Otter AI",
-    "description": "AI meeting assistant that records, transcribes, and summarizes meetings in real-time. Integrates with Zoom, Google Meet, and Teams with action item extraction.",
-    "category": "Productivity",
-    "pricing": "Freemium",
-    "url": "https://otter.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Transcribe and summarize client meeting",
-        "image_url": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Extract action items from sprint planning",
-        "image_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.5,
-      "ease_of_use": {
-        "score": 4.7,
-        "note": "Automatic recording"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Good transcription accuracy"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "Real-time, summaries, integration"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Free tier generous"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Reliable"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Good docs"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Teams",
-      "Students",
-      "Journalists"
-    ],
-    "rating": 4.5,
-    "rating_count": 3800,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.5,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.4,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.4,
-        "description": ""
-      },
-      "features": {
-        "score": 4.5,
-        "description": ""
-      }
-    }
-  },
-  {
     "id": 467,
     "name": "Beautiful.ai",
     "description": "AI presentation designer that creates professional slideshows from outlines or content. Auto-adjusts layouts, suggests visuals, and maintains design consistency.",
@@ -10356,228 +8990,6 @@
       },
       "features": {
         "score": 4.2,
-        "description": ""
-      }
-    }
-  },
-  {
-    "id": 468,
-    "name": "Gamma AI",
-    "description": "AI-powered document and presentation generator that creates polished decks, docs, and webpages from simple prompts. Collaborative and embeddable.",
-    "category": "Productivity",
-    "pricing": "Freemium",
-    "url": "https://gamma.app",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Create project proposal document from notes",
-        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Generate interactive product demo page",
-        "image_url": "https://images.unsplash.com/photo-1484417894907-623942c8ee29?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.6,
-      "ease_of_use": {
-        "score": 4.8,
-        "note": "Prompt-to-document"
-      },
-      "output_quality": {
-        "score": 4.6,
-        "note": "Clean, modern design"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Docs, decks, webpages"
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "note": "Good free tier"
-      },
-      "stability": {
-        "score": 4.5,
-        "note": "Improving"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Growing docs"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Teams",
-      "Startups",
-      "Educators"
-    ],
-    "rating": 4.4,
-    "rating_count": 2500,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.4,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.3,
-        "description": ""
-      },
-      "features": {
-        "score": 4.4,
-        "description": ""
-      }
-    }
-  },
-  {
-    "id": 469,
-    "name": "Runway ML Gen-3",
-    "description": "Next-generation AI video generation platform with photorealistic outputs, motion brush control, and cinematic quality. Industry-leading creative tools for filmmakers.",
-    "category": "Video",
-    "pricing": "Freemium",
-    "url": "https://runwayml.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Generate cinematic product commercial",
-        "image_url": "https://images.unsplash.com/photo-1468779036391-52341f60b55d?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Animate still image with camera movement",
-        "image_url": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.8,
-      "ease_of_use": {
-        "score": 4.5,
-        "note": "Advanced features"
-      },
-      "output_quality": {
-        "score": 4.9,
-        "note": "Cinematic quality"
-      },
-      "features": {
-        "score": 4.8,
-        "note": "Gen-3, motion brush, editing"
-      },
-      "value_for_money": {
-        "score": 4.4,
-        "note": "Premium pricing"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Rapidly improving"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Good community"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Filmmakers",
-      "Creatives",
-      "Agencies"
-    ],
-    "rating": 4.6,
-    "rating_count": 3500,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.6,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.5,
-        "description": ""
-      },
-      "features": {
-        "score": 4.6,
-        "description": ""
-      }
-    }
-  },
-  {
-    "id": 471,
-    "name": "Krisp AI",
-    "description": "AI noise cancellation app for meetings and recordings. Removes background noise, echoes, and distractions in real-time for crystal-clear audio communication.",
-    "category": "Audio",
-    "pricing": "Freemium",
-    "url": "https://krisp.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Remove background noise during Zoom call",
-        "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Clean up recorded podcast audio",
-        "image_url": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.6,
-      "ease_of_use": {
-        "score": 4.9,
-        "note": "Install and forget"
-      },
-      "output_quality": {
-        "score": 4.7,
-        "note": "Excellent noise removal"
-      },
-      "features": {
-        "score": 4.4,
-        "note": "Noise cancellation, voice changer"
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "note": "Free tier useful"
-      },
-      "stability": {
-        "score": 4.7,
-        "note": "Very reliable"
-      },
-      "support": {
-        "score": 4.3,
-        "note": "Good docs"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Remote Workers",
-      "Podcasters",
-      "Streamers"
-    ],
-    "rating": 4.4,
-    "rating_count": 2800,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.4,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.3,
-        "description": ""
-      },
-      "features": {
-        "score": 4.4,
         "description": ""
       }
     }
@@ -11175,80 +9587,6 @@
     }
   },
   {
-    "id": 487,
-    "name": "Taskade AI",
-    "description": "AI-powered project management and collaboration platform with task generation, mind mapping, and automated workflows. Combines notes, tasks, and AI in one workspace.",
-    "category": "Productivity",
-    "pricing": "Freemium",
-    "url": "https://taskade.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Generate project plan from description",
-        "image_url": "https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Create mind map for marketing campaign",
-        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.4,
-      "ease_of_use": {
-        "score": 4.6,
-        "note": "Intuitive workspace"
-      },
-      "output_quality": {
-        "score": 4.4,
-        "note": "Good AI generation"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "Tasks, mind maps, AI agents"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Generous free tier"
-      },
-      "stability": {
-        "score": 4.5,
-        "note": "Reliable"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Good templates"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Teams",
-      "Project Managers",
-      "Creatives"
-    ],
-    "rating": 4.3,
-    "rating_count": 1800,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.3,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.2,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.2,
-        "description": ""
-      },
-      "features": {
-        "score": 4.3,
-        "description": ""
-      }
-    }
-  },
-  {
     "id": 488,
     "name": "Jenni AI",
     "description": "AI writing assistant for academics and researchers with citation management, literature review assistance, and plagiarism detection. Helps write papers and research articles faster.",
@@ -11545,80 +9883,6 @@
     }
   },
   {
-    "id": 493,
-    "name": "Looka AI",
-    "description": "AI logo and brand identity generator that creates professional logos, business cards, and brand guidelines. Perfect for startups and small businesses on a budget.",
-    "category": "Image",
-    "pricing": "Paid",
-    "url": "https://looka.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Generate logo for tech startup",
-        "image_url": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Create complete brand identity kit",
-        "image_url": "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.3,
-      "ease_of_use": {
-        "score": 4.8,
-        "note": "Simple wizard flow"
-      },
-      "output_quality": {
-        "score": 4.3,
-        "note": "Good logo variety"
-      },
-      "features": {
-        "score": 4.4,
-        "note": "Logo, brand kit, social media kit"
-      },
-      "value_for_money": {
-        "score": 4.4,
-        "note": "One-time payment"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Stable"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Good help center"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Startups",
-      "Small Businesses",
-      "Freelancers"
-    ],
-    "rating": 4.1,
-    "rating_count": 1600,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.1,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4,
-        "description": ""
-      },
-      "features": {
-        "score": 4.1,
-        "description": ""
-      }
-    }
-  },
-  {
     "id": 494,
     "name": "v0 by Vercel",
     "description": "AI-powered UI generation tool from Vercel that creates React components from text descriptions. Integrates with Tailwind CSS and shadcn/ui for production-ready code.",
@@ -11688,80 +9952,6 @@
       },
       "features": {
         "score": 4.7,
-        "description": ""
-      }
-    }
-  },
-  {
-    "id": 497,
-    "name": "Beatoven AI",
-    "description": "AI music composition tool that creates royalty-free background music for videos, podcasts, and content. Customize mood, genre, tempo, and duration with simple controls.",
-    "category": "Audio",
-    "pricing": "Freemium",
-    "url": "https://beatoven.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Create upbeat background music for vlog",
-        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
-      },
-      {
-        "prompt": "Generate cinematic score for short film",
-        "image_url": "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "ratings": {
-      "overall": 4.3,
-      "ease_of_use": {
-        "score": 4.6,
-        "note": "Simple controls"
-      },
-      "output_quality": {
-        "score": 4.4,
-        "note": "Good for background music"
-      },
-      "features": {
-        "score": 4.3,
-        "note": "Mood, genre, tempo customization"
-      },
-      "value_for_money": {
-        "score": 4.4,
-        "note": "Royalty-free value"
-      },
-      "stability": {
-        "score": 4.3,
-        "note": "Generally stable"
-      },
-      "support": {
-        "score": 4.1,
-        "note": "Basic support"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "beginner",
-    "best_for": [
-      "Video Creators",
-      "Podcasters",
-      "Filmmakers"
-    ],
-    "rating": 4.2,
-    "rating_count": 1500,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.2,
-        "description": ""
-      },
-      "value_for_money": {
-        "score": 4.1,
-        "description": ""
-      },
-      "customer_support": {
-        "score": 4.1,
-        "description": ""
-      },
-      "features": {
-        "score": 4.2,
         "description": ""
       }
     }
@@ -12193,57 +10383,6 @@
     ]
   },
   {
-    "id": 590,
-    "name": "Synthesia AI",
-    "description": "AI avatar video creation for presentations and training.",
-    "category": "Video",
-    "pricing": "Paid",
-    "url": "https://synthesia-ai.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Synthesia AI avatar",
-    "rating": 4.6,
-    "rating_count": 306,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.360625783184515,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 5,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 5,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 5,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 5,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.774486423663763,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "intermediate",
-    "best_for": [
-      "AI avatars",
-      "Video production",
-      "Training"
-    ]
-  },
-  {
     "id": 612,
     "name": "AI Video Editor",
     "description": "AI-powered video editing with auto-editing and scene detection.",
@@ -12343,57 +10482,6 @@
       "E-commerce",
       "Product Photography",
       "Background Removal"
-    ]
-  },
-  {
-    "id": 633,
-    "name": "Research Assistant AI",
-    "description": "AI research assistant with source finding and literature review.",
-    "category": "Productivity",
-    "pricing": "Freemium",
-    "url": "https://research-assistant-ai.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI research assistant",
-    "rating": 4.1,
-    "rating_count": 2261,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.531280698128228,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 4.693959893433543,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 4.451737706019818,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 4.878424058851785,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 4.574379046875609,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.129205983324301,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-05-28",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Research",
-      "Academic",
-      "Literature Review"
     ]
   },
   {
@@ -12504,7 +10592,7 @@
     "description": "AI tool for Pinterest growth",
     "category": "Productivity",
     "pricing": "Freemium",
-    "url": "https://pinai.io",
+    "url": "https://www.pinai.com",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -12541,7 +10629,7 @@
         "note": "Support responds within 24 hours typically"
       }
     },
-    "last_updated": "2026-05-31",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Pinterest Marketing",
@@ -13795,150 +11883,6 @@
     }
   },
   {
-    "id": 897,
-    "name": "Synthesia Pro",
-    "description": "Enterprise AI avatar video platform",
-    "category": "Video",
-    "pricing": "Paid",
-    "url": "https://synthesia.io",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Enterprise AI avatar video platform",
-    "rating": 4.6,
-    "rating_count": 356,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.5,
-        "note": "User-friendly with helpful onboarding guidance"
-      },
-      "output_quality": {
-        "score": 4.9,
-        "note": "Output quality rivals more expensive alternatives"
-      },
-      "features": {
-        "score": 4.7,
-        "note": "Solid feature set with some advanced capabilities"
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "note": "Worth the investment for professional use"
-      },
-      "stability": {
-        "score": 4.8,
-        "note": "Stable platform with fast response times"
-      },
-      "support": {
-        "score": 4.5,
-        "note": "Helpful support with room for improvement"
-      }
-    },
-    "last_updated": "2026-05-31",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Enterprise Training",
-      "Corporate Communications",
-      "E-learning"
-    ],
-    "use_cases": [
-      {
-        "title": "Enterprise Training Videos",
-        "detail": "Produce consistent training content at scale with AI avatars speaking 120+ languages for global teams"
-      },
-      {
-        "title": "Product Demo Videos",
-        "detail": "Create product demonstration videos with professional AI presenters without studio equipment or actors"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "120+ languages with native-quality pronunciation and natural gestures",
-        "Enterprise-grade API for automated video generation at scale",
-        "SOC 2 Type II certified with GDPR compliance for enterprise security"
-      ],
-      "cons": [
-        "No free plan — enterprise pricing starts at $22/month per seat with annual commitment",
-        "Custom avatar creation requires additional fees and longer setup time"
-      ]
-    }
-  },
-  {
-    "id": 899,
-    "name": "Elai AI",
-    "description": "AI presenter video generator for e-learning",
-    "category": "Video",
-    "pricing": "Paid",
-    "url": "https://elai.io",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI presenter video generator for e-learning",
-    "rating": 4.3,
-    "rating_count": 178,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.5,
-        "note": "Straightforward workflow from start to finish"
-      },
-      "output_quality": {
-        "score": 4.7,
-        "note": "Professional-grade output suitable for production use"
-      },
-      "features": {
-        "score": 4.3,
-        "note": "Comprehensive feature set for most use cases"
-      },
-      "value_for_money": {
-        "score": 4.1,
-        "note": "Good value relative to competing tools"
-      },
-      "stability": {
-        "score": 4.4,
-        "note": "Dependable service with rare outages"
-      },
-      "support": {
-        "score": 3.9,
-        "note": "Support responds within 24 hours typically"
-      }
-    },
-    "last_updated": "2026-05-31",
-    "skill_level": "intermediate",
-    "best_for": [
-      "E-learning",
-      "Corporate Training",
-      "HR Teams"
-    ],
-    "use_cases": [
-      {
-        "title": "E-learning Course Videos",
-        "detail": "Transform course materials into engaging video lessons with AI presenters, quizzes, and interactive elements"
-      },
-      {
-        "title": "Onboarding Videos",
-        "detail": "Create consistent employee onboarding videos with AI presenters in multiple languages for global teams"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Built-in quiz and interaction features make videos engaging for learners",
-        "SCORM-compatible output integrates directly with major LMS platforms",
-        "60+ AI avatars with professional appearance suitable for corporate environments"
-      ],
-      "cons": [
-        "No free plan — pricing starts at $23/month with limited video minutes",
-        "Interactive features add complexity to the video creation workflow"
-      ]
-    }
-  },
-  {
     "id": 900,
     "name": "WanderLens AI",
     "description": "AI travel video editor with location intelligence",
@@ -14227,222 +12171,6 @@
     }
   },
   {
-    "id": 907,
-    "name": "FlutterAI",
-    "description": "AI Flutter app development assistant",
-    "category": "Code",
-    "pricing": "Freemium",
-    "url": "https://flutterai.dev",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI Flutter app development assistant",
-    "rating": 4.3,
-    "rating_count": 167,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.3,
-        "note": "User-friendly with helpful onboarding guidance"
-      },
-      "output_quality": {
-        "score": 4.6,
-        "note": "Delivers polished results with minimal artifacts"
-      },
-      "features": {
-        "score": 4.4,
-        "note": "Rich functionality with regular updates and improvements"
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "note": "Pricing is fair for the features provided"
-      },
-      "stability": {
-        "score": 4.4,
-        "note": "Rock-solid performance under normal usage"
-      },
-      "support": {
-        "score": 4,
-        "note": "Knowledge base covers most common questions"
-      }
-    },
-    "last_updated": "2026-05-31",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Flutter Developers",
-      "Mobile App Teams",
-      "Cross-Platform Devs"
-    ],
-    "use_cases": [
-      {
-        "title": "Widget Generation",
-        "detail": "Generate Flutter widgets and complete screens with proper state management, theming, and responsive layouts"
-      },
-      {
-        "title": "Debugging Assistant",
-        "detail": "Get AI-powered Flutter error diagnosis and fix suggestions with context-aware understanding of widget trees"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Deep understanding of Flutter widget tree, state management, and Material/Cupertino design",
-        "Generates complete screen implementations with BLoC, Riverpod, or Provider patterns",
-        "Error diagnosis explains Flutter-specific issues in plain language with fix suggestions"
-      ],
-      "cons": [
-        "Custom platform channel code sometimes needs manual implementation",
-        "Free plan limits to 75 code generations per day"
-      ]
-    }
-  },
-  {
-    "id": 909,
-    "name": "RunwayML",
-    "description": "Professional AI video generation and editing suite",
-    "category": "Video",
-    "pricing": "Paid",
-    "url": "https://runwayml.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Professional AI video generation and editing suite",
-    "rating": 4.7,
-    "rating_count": 398,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.8,
-        "note": "Straightforward workflow from start to finish"
-      },
-      "output_quality": {
-        "score": 5,
-        "note": "Delivers polished results with minimal artifacts"
-      },
-      "features": {
-        "score": 4.8,
-        "note": "Comprehensive feature set for most use cases"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Good value relative to competing tools"
-      },
-      "stability": {
-        "score": 4.7,
-        "note": "Dependable service with rare outages"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Responsive support team with helpful answers"
-      }
-    },
-    "last_updated": "2026-05-31",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Filmmakers",
-      "Creative Professionals",
-      "Video Artists"
-    ],
-    "use_cases": [
-      {
-        "title": "Text-to-Video Generation",
-        "detail": "Generate cinematic video clips from text prompts with control over camera movement, style, and duration"
-      },
-      {
-        "title": "Video Editing AI Tools",
-        "detail": "Use AI-powered tools for background removal, object tracking, color grading, and style transfer in post-production"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Industry-leading text-to-video quality with Gen-3 Alpha model producing cinematic results",
-        "Comprehensive AI editing suite includes inpainting, motion tracking, and green screen",
-        "Used by professional filmmakers and studios for production-quality output"
-      ],
-      "cons": [
-        "No free plan — pricing starts at $12/month with limited generation credits",
-        "Generation times can be slow during peak usage hours"
-      ]
-    }
-  },
-  {
-    "id": 911,
-    "name": "Kaiber AI",
-    "description": "AI video art generator with music reactivity",
-    "category": "Video",
-    "pricing": "Paid",
-    "url": "https://kaiber.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI video art generator with music reactivity",
-    "rating": 4.3,
-    "rating_count": 189,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.4,
-        "note": "Straightforward workflow from start to finish"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Professional-grade output suitable for production use"
-      },
-      "features": {
-        "score": 4.4,
-        "note": "Rich functionality with regular updates and improvements"
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "note": "Worth the investment for professional use"
-      },
-      "stability": {
-        "score": 4.4,
-        "note": "Consistent results across multiple sessions"
-      },
-      "support": {
-        "score": 3.9,
-        "note": "Support responds within 24 hours typically"
-      }
-    },
-    "last_updated": "2026-05-31",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Music Artists",
-      "Visual Artists",
-      "Creative Studios"
-    ],
-    "use_cases": [
-      {
-        "title": "Music Video Generation",
-        "detail": "Create mesmerizing music-reactive videos that morph and transform in sync with audio beats and frequencies"
-      },
-      {
-        "title": "Artistic Video Transforms",
-        "detail": "Transform existing videos into stylized art pieces with AI-driven visual effects and animation styles"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Music-reactive generation creates visuals that pulse and transform with audio beats",
-        "Unique artistic styles unavailable in other video generation tools",
-        "Flipbook and transform modes offer creative flexibility for different artistic visions"
-      ],
-      "cons": [
-        "No free plan — pricing starts at $5/month for limited generation credits",
-        "Generation times are longer than competitors, especially for music-reactive videos"
-      ]
-    }
-  },
-  {
     "id": 915,
     "name": "CodePilot AI",
     "description": "AI coding assistant with context-aware completions",
@@ -14583,78 +12311,6 @@
       "cons": [
         "No free plan — pricing starts at $29/month with limited generation minutes",
         "Synthesized vocals still lack the emotional nuance of professional singers"
-      ]
-    }
-  },
-  {
-    "id": 918,
-    "name": "ContentKing AI",
-    "description": "AI content strategy and optimization platform",
-    "category": "Writing",
-    "pricing": "Paid",
-    "url": "https://contentkingai.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI content strategy and optimization platform",
-    "rating": 4.4,
-    "rating_count": 178,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.2,
-        "note": "User-friendly with helpful onboarding guidance"
-      },
-      "output_quality": {
-        "score": 4.7,
-        "note": "Delivers polished results with minimal artifacts"
-      },
-      "features": {
-        "score": 4.5,
-        "note": "Solid feature set with some advanced capabilities"
-      },
-      "value_for_money": {
-        "score": 4.5,
-        "note": "Good value relative to competing tools"
-      },
-      "stability": {
-        "score": 4.5,
-        "note": "Reliable performance with minimal downtime"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Helpful support with room for improvement"
-      }
-    },
-    "last_updated": "2026-05-31",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Content Strategists",
-      "Marketing Directors",
-      "Enterprise Teams"
-    ],
-    "use_cases": [
-      {
-        "title": "Content Strategy Planning",
-        "detail": "Develop data-driven content strategies with AI analysis of market gaps, competitor content, and audience demand"
-      },
-      {
-        "title": "Content Performance Optimization",
-        "detail": "Optimize existing content for better rankings with AI recommendations on structure, keywords, and freshness"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Data-driven strategy recommendations based on real search demand and competitor analysis",
-        "Content audit feature identifies underperforming pages with specific optimization steps",
-        "Enterprise-grade collaboration features with role-based access and approval workflows"
-      ],
-      "cons": [
-        "No free plan — pricing starts at $59/month for limited content audits",
-        "Requires Search Console and Analytics integration for full functionality"
       ]
     }
   },
@@ -15087,222 +12743,6 @@
       "cons": [
         "No free plan — pricing starts at $29/month for limited keyword tracking",
         "Requires ongoing subscription to maintain rank tracking data and history"
-      ]
-    }
-  },
-  {
-    "id": 927,
-    "name": "Runway Pro Max",
-    "description": "Professional AI video generation suite",
-    "category": "Video",
-    "pricing": "Paid",
-    "url": "https://runwayml.com/promax",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Professional AI video generation suite",
-    "rating": 4.6,
-    "rating_count": 178,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.7,
-        "note": "Straightforward workflow from start to finish"
-      },
-      "output_quality": {
-        "score": 5,
-        "note": "Professional-grade output suitable for production use"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "Comprehensive feature set for most use cases"
-      },
-      "value_for_money": {
-        "score": 4.6,
-        "note": "Competitive pricing with generous free tier"
-      },
-      "stability": {
-        "score": 4.7,
-        "note": "Reliable performance with minimal downtime"
-      },
-      "support": {
-        "score": 4.4,
-        "note": "Support responds within 24 hours typically"
-      }
-    },
-    "last_updated": "2026-05-31",
-    "skill_level": "advanced",
-    "best_for": [
-      "Film Studios",
-      "VFX Artists",
-      "Professional Creators"
-    ],
-    "use_cases": [
-      {
-        "title": "Cinematic Generation",
-        "detail": "Generate cinema-quality video clips with advanced camera controls, lighting, and composition parameters"
-      },
-      {
-        "title": "VFX Integration",
-        "detail": "Use AI-generated video elements with professional VFX pipelines including alpha channels and depth maps"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Cinema-quality output with 4K resolution and professional color science",
-        "Alpha channel and depth map export enables seamless VFX compositing",
-        "Advanced camera controls for precise shot composition and movement"
-      ],
-      "cons": [
-        "Premium pricing at $76/month for the Pro Max tier",
-        "Steep learning curve for advanced camera and lighting parameters"
-      ]
-    }
-  },
-  {
-    "id": 928,
-    "name": "Pika Studio",
-    "description": "AI video creation with character animation",
-    "category": "Video",
-    "pricing": "Freemium",
-    "url": "https://pika.art/studio",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI video creation with character animation",
-    "rating": 4.3,
-    "rating_count": 198,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.2,
-        "note": "User-friendly with helpful onboarding guidance"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Professional-grade output suitable for production use"
-      },
-      "features": {
-        "score": 4.2,
-        "note": "Good range of features with useful integrations"
-      },
-      "value_for_money": {
-        "score": 4.2,
-        "note": "Worth the investment for professional use"
-      },
-      "stability": {
-        "score": 4.4,
-        "note": "Consistent results across multiple sessions"
-      },
-      "support": {
-        "score": 4.1,
-        "note": "Helpful support with room for improvement"
-      }
-    },
-    "last_updated": "2026-05-31",
-    "skill_level": "beginner",
-    "best_for": [
-      "Animators",
-      "Content Creators",
-      "Social Media"
-    ],
-    "use_cases": [
-      {
-        "title": "Character Animation",
-        "detail": "Animate characters in generated videos with control over expressions, gestures, and movement paths"
-      },
-      {
-        "title": "Scene Composition",
-        "detail": "Compose multi-element scenes with AI-generated characters, backgrounds, and props with proper spatial relationships"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Character animation feature brings AI-generated people to life with natural movement",
-        "Scene composition maintains proper perspective and lighting across all elements",
-        "Free plan includes enough credits to create several test videos"
-      ],
-      "cons": [
-        "Character consistency across multiple scenes can vary",
-        "Free plan videos are limited to 4 seconds with standard resolution"
-      ]
-    }
-  },
-  {
-    "id": 929,
-    "name": "Kaiber Motion",
-    "description": "AI motion graphics and video art generator",
-    "category": "Video",
-    "pricing": "Paid",
-    "url": "https://kaiber.ai/motion",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI motion graphics and video art generator",
-    "rating": 4.2,
-    "rating_count": 134,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.2,
-        "note": "Simple setup process with clear instructions"
-      },
-      "output_quality": {
-        "score": 4.4,
-        "note": "Professional-grade output suitable for production use"
-      },
-      "features": {
-        "score": 4.1,
-        "note": "Feature-rich platform covering core workflow needs"
-      },
-      "value_for_money": {
-        "score": 4.2,
-        "note": "Pricing is fair for the features provided"
-      },
-      "stability": {
-        "score": 4.2,
-        "note": "Rock-solid performance under normal usage"
-      },
-      "support": {
-        "score": 3.9,
-        "note": "Support responds within 24 hours typically"
-      }
-    },
-    "last_updated": "2026-05-31",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Motion Designers",
-      "Visual Artists",
-      "Music Video Creators"
-    ],
-    "use_cases": [
-      {
-        "title": "Motion Graphics",
-        "detail": "Generate professional motion graphics with customizable animation curves, transitions, and visual effects"
-      },
-      {
-        "title": "Video Art Creation",
-        "detail": "Create abstract and artistic video content with AI-driven morphing, particle effects, and generative patterns"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Produces unique motion graphics that would take hours to create manually",
-        "Music sync feature creates visuals that pulse and transform with audio",
-        "Export options include transparent backgrounds for compositing"
-      ],
-      "cons": [
-        "No free plan — pricing starts at $10/month for limited generation credits",
-        "Limited control over specific animation keyframes and timing"
       ]
     }
   },
@@ -15951,78 +13391,6 @@
       "cons": [
         "Free plan limits to 50 commit suggestions per day",
         "Complex merge conflicts with significant architectural changes need manual resolution"
-      ]
-    }
-  },
-  {
-    "id": 944,
-    "name": "DALL-E Studio",
-    "description": "Advanced AI image generation with fine control",
-    "category": "Image",
-    "pricing": "Paid",
-    "url": "https://openai.com/dall-e-studio",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Advanced AI image generation with fine control",
-    "rating": 4.5,
-    "rating_count": 312,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.6,
-        "note": "User-friendly with helpful onboarding guidance"
-      },
-      "output_quality": {
-        "score": 4.8,
-        "note": "High-quality output that meets professional standards"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "Rich functionality with regular updates and improvements"
-      },
-      "value_for_money": {
-        "score": 4.4,
-        "note": "Strong return on investment for regular users"
-      },
-      "stability": {
-        "score": 4.6,
-        "note": "Rock-solid performance under normal usage"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Helpful support with room for improvement"
-      }
-    },
-    "last_updated": "2026-05-31",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Creative Professionals",
-      "Design Teams",
-      "Content Creators"
-    ],
-    "use_cases": [
-      {
-        "title": "Precision Image Generation",
-        "detail": "Generate images with fine-grained control over composition, style, and detail through advanced prompt engineering tools"
-      },
-      {
-        "title": "Brand Asset Creation",
-        "detail": "Create consistent brand assets with style guides, color palette constraints, and composition rules enforced by AI"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Fine-grained control over composition, style, and detail exceeds standard DALL-E access",
-        "Style guide enforcement ensures all generated images maintain brand consistency",
-        "Batch generation with consistent parameters produces cohesive image sets"
-      ],
-      "cons": [
-        "No free plan — pricing starts at $20/month with limited generation credits",
-        "Advanced controls require prompt engineering knowledge for best results"
       ]
     }
   },
@@ -17400,7 +14768,7 @@
     "description": "AI lead generation and nurturing tool with email outreach and CRM integration",
     "category": "Productivity",
     "pricing": "Freemium",
-    "url": "https://leadpilot.ai",
+    "url": "https://leadpilot.com",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -17437,7 +14805,7 @@
         "note": "Good onboarding and responsive support team"
       }
     },
-    "last_updated": "2026-05-31",
+    "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
       "Lead Generation",
@@ -18111,78 +15479,6 @@
       "cons": [
         "Limited integration with niche or legacy platforms",
         "Learning curve for advanced customization options"
-      ]
-    }
-  },
-  {
-    "id": 993,
-    "name": "ProjectOrbit AI",
-    "description": "AI project management assistant with resource allocation optimization, risk prediction, and automated status reporting for distributed teams",
-    "category": "Productivity",
-    "pricing": "Freemium",
-    "url": "https://projectorbit.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI project management assistant with resource allocation optimization, risk prediction, and automated status reporting for distributed teams",
-    "rating": 4.6,
-    "rating_count": 133,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.3,
-        "note": "Some features require reading documentation"
-      },
-      "output_quality": {
-        "score": 4.5,
-        "note": "Results are polished and production-ready"
-      },
-      "features": {
-        "score": 4,
-        "note": "Well-rounded feature set with smart defaults"
-      },
-      "value_for_money": {
-        "score": 4.4,
-        "note": "Good ROI for professionals who use it daily"
-      },
-      "stability": {
-        "score": 4.7,
-        "note": "Reliable performance with consistent uptime"
-      },
-      "support": {
-        "score": 4.1,
-        "note": "Active community and good documentation"
-      }
-    },
-    "last_updated": "2026-05-31",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Project Management",
-      "Resource Allocation",
-      "Risk Prediction"
-    ],
-    "use_cases": [
-      {
-        "title": "Project Management Workflow",
-        "detail": "aI project management assistant with resource allocation optimization, risk prediction, and automated status reporting for distributed teams — streamline your daily operations with AI-powered automation"
-      },
-      {
-        "title": "Resource Allocation Automation",
-        "detail": "Leverage AI to automate repetitive resource allocation tasks, saving hours of manual work each week"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Intuitive interface that requires minimal training to get productive",
-        "AI-powered suggestions consistently produce high-quality results",
-        "Generous free tier lets you test core features before committing"
-      ],
-      "cons": [
-        "Mobile experience is less full-featured than desktop",
-        "Batch processing is only available on premium plans"
       ]
     }
   },
@@ -20479,57 +17775,6 @@
     ]
   },
   {
-    "id": 1109,
-    "name": "Jasper Art",
-    "description": "AI image generation integrated with Jasper's content platform. Create visuals that match your brand style.",
-    "category": "Image",
-    "pricing": "Paid",
-    "url": "https://jasper-art.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI image generation for brands.",
-    "rating": 4.3,
-    "rating_count": 1975,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.400928229467126,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 4.680962699762618,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 4.672912673875334,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 5,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 4.688285305859441,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.456405537293344,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-06-01",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Brand Images",
-      "Marketing",
-      "Creative"
-    ]
-  },
-  {
     "id": 1110,
     "name": "Cohere",
     "description": "Enterprise AI platform for building LLM-powered applications. Embeddings, classification, and semantic search.",
@@ -20836,63 +18081,12 @@
     ]
   },
   {
-    "id": 1118,
-    "name": "Pika AI",
-    "description": "AI video generation platform for creating and editing videos. User-friendly interface for content creators.",
-    "category": "Video",
-    "pricing": "Freemium",
-    "url": "https://pika-ai.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "User-friendly AI video generation.",
-    "rating": 4.4,
-    "rating_count": 2418,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.791493865734254,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 4.471675328701114,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 4.913561599020036,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 4.208440884422986,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 4.8395521269495525,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.828665503440274,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-06-01",
-    "skill_level": "beginner",
-    "best_for": [
-      "Video Creation",
-      "AI",
-      "Content"
-    ]
-  },
-  {
     "id": 1119,
     "name": "Hailuo AI",
     "description": "AI-powered video creation from text. Developed by MiniMax for high-quality video generation.",
     "category": "Video",
     "pricing": "Freemium",
-    "url": "https://hailuo-ai.com",
+    "url": "https://hailuoai.video",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -20929,63 +18123,12 @@
         "note": "Helpful support"
       }
     },
-    "last_updated": "2026-06-01",
+    "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
       "Video Generation",
       "AI",
       "Text-to-Video"
-    ]
-  },
-  {
-    "id": 1120,
-    "name": "Meshy AI",
-    "description": "AI-powered 3D model creation from text or images. Transform concepts into 3D assets quickly.",
-    "category": "Image",
-    "pricing": "Freemium",
-    "url": "https://meshy-ai.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI 3D model creation.",
-    "rating": 4.8,
-    "rating_count": 4681,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 5,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 5,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 5,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 5,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 4.945172000546308,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.460205815214859,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-06-01",
-    "skill_level": "intermediate",
-    "best_for": [
-      "3D Models",
-      "AI",
-      "Design"
     ]
   },
   {
@@ -21037,57 +18180,6 @@
       "RAG",
       "Enterprise",
       "Documents"
-    ]
-  },
-  {
-    "id": 1125,
-    "name": "AutoGen Studio",
-    "description": "Microsoft's open-source tool for building LLM agents. Create multi-agent workflows visually.",
-    "category": "Productivity",
-    "pricing": "Free",
-    "url": "https://autogen-studio.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Microsoft's LLM agent builder.",
-    "rating": 4.6,
-    "rating_count": 4677,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.258113017506461,
-        "note": "User-friendly interface"
-      },
-      "output_quality": {
-        "score": 4.569025692715372,
-        "note": "High-quality output"
-      },
-      "features": {
-        "score": 4.868178303424677,
-        "note": "Rich feature set"
-      },
-      "value_for_money": {
-        "score": 5,
-        "note": "Good value"
-      },
-      "stability": {
-        "score": 4.585756525832798,
-        "note": "Reliable performance"
-      },
-      "support": {
-        "score": 4.862688681409213,
-        "note": "Helpful support"
-      }
-    },
-    "last_updated": "2026-06-01",
-    "skill_level": "advanced",
-    "best_for": [
-      "LLM Agents",
-      "Microsoft",
-      "Automation"
     ]
   },
   {
@@ -21147,7 +18239,7 @@
     "description": "Build AI chatbots from your documents and websites. No coding required.",
     "category": "Productivity",
     "pricing": "Freemium",
-    "url": "https://chatbase.com",
+    "url": "https://www.chatbase.co",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -21184,7 +18276,7 @@
         "note": "Helpful support"
       }
     },
-    "last_updated": "2026-06-01",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Chatbots",
@@ -21249,7 +18341,7 @@
     "description": "Transform 2D photos into stunning 3D animations. Create dynamic visuals with depth effects.",
     "category": "Image",
     "pricing": "Free",
-    "url": "https://leiapix.com",
+    "url": "https://immersity.ai",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -21286,7 +18378,7 @@
         "note": "Helpful support"
       }
     },
-    "last_updated": "2026-06-01",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "3D Effects",
@@ -21504,7 +18596,7 @@
     "description": "AI-powered cloud security platform that finds and fixes vulnerabilities in code, containers, and infrastructure.",
     "category": "Code",
     "pricing": "Freemium",
-    "url": "https://snyk.com",
+    "url": "https://snyk.io",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -21541,7 +18633,7 @@
         "note": "Helpful support"
       }
     },
-    "last_updated": "2026-06-01",
+    "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
       "Security",
@@ -22159,57 +19251,6 @@
       "Live Stream Clips",
       "Social Video",
       "Auto-Captioning"
-    ]
-  },
-  {
-    "id": 1175,
-    "name": "ViralClip Studio",
-    "description": "Convert Twitter Live recordings into shareable short-form videos with AI-selected highlights, dynamic captions, and branded overlays in minutes.",
-    "category": "Video",
-    "pricing": "Freemium",
-    "url": "https://viralclipstudio.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Convert Twitter Live recordings into shareable short-form videos with AI-selected highlights, dynamic captions, and branded overlays in minutes.",
-    "rating": 4.6,
-    "rating_count": 4793,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.9,
-        "note": "Well-designed UI that guides users naturally"
-      },
-      "output_quality": {
-        "score": 4.2,
-        "note": "Excellent output that rivals manual work"
-      },
-      "features": {
-        "score": 4.7,
-        "note": "Rich functionality with regular updates"
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "note": "Fair pricing with a useful free tier"
-      },
-      "stability": {
-        "score": 4.9,
-        "note": "Stable performance with rare interruptions"
-      },
-      "support": {
-        "score": 3.8,
-        "note": "Good documentation with community resources"
-      }
-    },
-    "last_updated": "2026-06-01",
-    "skill_level": "advanced",
-    "best_for": [
-      "Clip Creation",
-      "Short-Form Video",
-      "Branded Content"
     ]
   },
   {
@@ -23896,57 +20937,6 @@
     ]
   },
   {
-    "id": 1323,
-    "name": "Leonardo Canvas",
-    "description": "AI image editor with real-time generation and layer-based editing, combining generative AI with professional design workflows for digital artists.",
-    "category": "Image",
-    "pricing": "Freemium",
-    "url": "https://leonardo.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "AI image editor with real-time generation and layer-based editing, combining generative AI with professional design workflows for digital artists.",
-    "rating": 4.6,
-    "rating_count": 465,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4,
-        "note": "Powerful but requires time to master all features"
-      },
-      "output_quality": {
-        "score": 4.7,
-        "note": "Outstanding image quality with fine control"
-      },
-      "features": {
-        "score": 4.6,
-        "note": "Layer-based editing with AI generation is a game-changer"
-      },
-      "value_for_money": {
-        "score": 4.3,
-        "note": "Generous free tier with affordable upgrades"
-      },
-      "stability": {
-        "score": 4.4,
-        "note": "Solid performance even with complex compositions"
-      },
-      "support": {
-        "score": 4.2,
-        "note": "Strong community and regular feature updates"
-      }
-    },
-    "last_updated": "2026-06-02",
-    "skill_level": "advanced",
-    "best_for": [
-      "Image Editing",
-      "Layer-Based Design",
-      "Digital Art"
-    ]
-  },
-  {
     "id": 1327,
     "name": "Reclaim AI",
     "description": "AI calendar assistant that auto-schedules tasks, habits, and meetings while protecting focus time, integrating seamlessly with Google Calendar workflows.",
@@ -24571,25 +21561,6 @@
     ]
   },
   {
-    "id": 1368,
-    "name": "Descript Audio",
-    "description": "AI audio transcription and editing with text-based interface, letting you edit audio by editing text with automatic filler word removal and enhancement.",
-    "category": "Audio",
-    "pricing": "Freemium",
-    "url": "https://descript.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "rating": 4.6,
-    "rating_count": 356,
-    "best_for": [
-      "Podcasters who need AI audio editing, transcription, and filler word removal"
-    ]
-  },
-  {
     "id": 1369,
     "name": "Krisp",
     "description": "AI noise cancellation tool for meetings and audio recordings, removing background noise and echo in real time for crystal-clear communication.",
@@ -24956,7 +21927,7 @@
     "description": "AI video editing tool that extracts viral-worthy clips from long-form content using trend analysis and engagement scoring.",
     "category": "Video",
     "pricing": "Freemium",
-    "url": "https://getmunch.com",
+    "url": "https://www.munchstudio.com",
     "affiliate_link": "",
     "icon_url": "",
     "needs_vpn": false,
@@ -24967,7 +21938,8 @@
     "rating_count": 156,
     "best_for": [
       "Content marketers who need AI to extract the most engaging moments from videos"
-    ]
+    ],
+    "last_updated": "2026-09-24"
   },
   {
     "id": 1405,
@@ -25024,25 +21996,6 @@
     "rating_count": 124,
     "best_for": [
       "Startups who need AI to generate marketing copy for multiple channels quickly"
-    ]
-  },
-  {
-    "id": 1410,
-    "name": "Peppertype",
-    "description": "AI content creation platform for generating high-converting copy across ads, emails, and long-form blog content.",
-    "category": "Writing",
-    "pricing": "Freemium",
-    "url": "https://peppertype.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "rating": 4.2,
-    "rating_count": 203,
-    "best_for": [
-      "Marketing teams wanting quick AI copywriting for ads, emails, and social posts"
     ]
   },
   {
@@ -25176,25 +22129,6 @@
     "rating_count": 134,
     "best_for": [
       "Teams that need AI to build custom classification and automation models without code"
-    ]
-  },
-  {
-    "id": 1421,
-    "name": "Automate.io",
-    "description": "AI workflow automation for connecting cloud apps and streamlining business processes with multi-step integrations.",
-    "category": "Productivity",
-    "pricing": "Freemium",
-    "url": "https://automate.io",
-    "affiliate_link": "",
-    "icon_url": "",
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "rating": 4.3,
-    "rating_count": 189,
-    "best_for": [
-      "Businesses wanting AI to connect apps and automate data transfers"
     ]
   },
   {
@@ -25426,25 +22360,6 @@
     ]
   },
   {
-    "id": 1437,
-    "name": "Rytr Pro",
-    "description": "Advanced AI writing assistant with long-form content capabilities and brand voice customization for professional creators.",
-    "category": "Writing",
-    "pricing": "Freemium",
-    "url": "https://rytr.me",
-    "affiliate_link": "",
-    "icon_url": "",
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "rating": 4.5,
-    "rating_count": 312,
-    "best_for": [
-      "Agencies needing AI copywriting with advanced tone matching and SEO features"
-    ]
-  },
-  {
     "id": 1439,
     "name": "LanguageTool",
     "description": "AI-powered writing assistant for grammar and style checking supporting over 30 languages with context-aware suggestions.",
@@ -25510,7 +22425,7 @@
     "description": "AI photo editor with magic retouching and avatar generation features for creating stunning social media portraits.",
     "category": "Image",
     "pricing": "Freemium",
-    "url": "https://lensa-ai.com",
+    "url": "https://lensa.app",
     "affiliate_link": "",
     "icon_url": "",
     "needs_vpn": false,
@@ -25521,7 +22436,8 @@
     "rating_count": 345,
     "best_for": [
       "Selfie enthusiasts wanting AI portrait enhancement and artistic style filters"
-    ]
+    ],
+    "last_updated": "2026-09-24"
   },
   {
     "id": 1444,
@@ -25695,44 +22611,6 @@
     ]
   },
   {
-    "id": 1462,
-    "name": "Pictory Pro",
-    "description": "AI video creation tool for transforming long-form blog content and podcasts into engaging short video clips automatically.",
-    "category": "Video",
-    "pricing": "Freemium",
-    "url": "https://pictory.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "rating": 4.3,
-    "rating_count": 234,
-    "best_for": [
-      "Content creators who need AI to turn blog posts into professional videos"
-    ]
-  },
-  {
-    "id": 1463,
-    "name": "Synthesia Studio",
-    "description": "AI video generation platform for creating professional training and corporate videos with realistic AI avatars.",
-    "category": "Video",
-    "pricing": "Paid",
-    "url": "https://synthesia.io",
-    "affiliate_link": "",
-    "icon_url": "",
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "rating": 4.5,
-    "rating_count": 312,
-    "best_for": [
-      "Enterprises wanting AI-powered digital human video presenters for training"
-    ]
-  },
-  {
     "id": 1465,
     "name": "Pika",
     "description": "AI video generation platform for creating and editing videos from text prompts with creative style control and effects.",
@@ -25824,62 +22702,6 @@
       "Anime",
       "Community",
       "Social Media"
-    ]
-  },
-  {
-    "id": 1468,
-    "name": "Stable Audio 2.0",
-    "description": "Stability AI's text-to-audio model for generating music, sound effects, and stems. Stable Audio 2.0 supports longer durations and higher audio fidelity for professional production.",
-    "description_en": "Stability AI text-to-audio model for music, sound effects, and stems.",
-    "category": "Audio",
-    "pricing": "Freemium",
-    "url": "https://stability.ai/stable-audio",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Example use case for Stable Audio 2.0",
-        "image_url": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "rating": 4.3,
-    "rating_count": 150,
-    "rating_breakdown": {
-      "ease_of_use": {
-        "score": 4.2,
-        "note": "Clean interface with a short learning curve"
-      },
-      "output_quality": {
-        "score": 4.4,
-        "note": "High-quality results competitive with leading tools"
-      },
-      "features": {
-        "score": 4.3,
-        "note": "Rich feature set covering most professional workflows"
-      },
-      "value_for_money": {
-        "score": 4,
-        "note": "Flexible pricing tiers for individuals and teams"
-      },
-      "stability": {
-        "score": 4.3,
-        "note": "Reliable uptime and consistent performance"
-      },
-      "support": {
-        "score": 3.9,
-        "note": "Documentation and community support available"
-      }
-    },
-    "last_updated": "2026-07-07",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Sound Design",
-      "Music Production",
-      "High Fidelity"
     ]
   },
   {
@@ -26005,7 +22827,7 @@
     "description_en": "Long-context AI assistant from Moonshot AI supporting up to 2 million tokens.",
     "category": "Writing",
     "pricing": "Freemium",
-    "url": "https://kimi.moonshot.cn",
+    "url": "https://www.kimi.com",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [
@@ -26047,7 +22869,7 @@
         "note": "Documentation and community support available"
       }
     },
-    "last_updated": "2026-07-07",
+    "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
       "Long Documents",
