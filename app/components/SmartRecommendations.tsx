@@ -176,7 +176,7 @@ export default function SmartRecommendations({ tools, currentToolId }: SmartReco
                     ))}
                   </div>
                   <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    {tool.rating.toFixed(1)}
+                    {(tool.rating ?? 0).toFixed(1)}
                   </span>
                   {tool.rating_count && (
                     <span className="text-xs text-slate-500 dark:text-slate-500">
