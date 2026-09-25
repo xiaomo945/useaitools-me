@@ -167,6 +167,24 @@ export default function Footer() {
                 Affiliate Disclosure
               </Link>
               <Link
+                href="/advertise"
+                className="text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 font-medium transition-colors duration-300 text-sm"
+              >
+                Advertise
+              </Link>
+              <Link
+                href="/privacy"
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                Terms
+              </Link>
+              <Link
                 href="#"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >
