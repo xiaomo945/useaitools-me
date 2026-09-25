@@ -189,10 +189,17 @@ export default async function BlogDetailPage({
     ...post,
     content: post.content
       .replace(/\{\{AFFILIATE_RYTR\}\}/g, process.env.AFFILIATE_RYTR || 'https://rytr.me')
+      .replace(/\{\{AFFILIATE_GRAMMARLY\}\}/g, process.env.AFFILIATE_GRAMMARLY || 'https://grammarly.com')
+      .replace(/\{\{AFFILIATE_JASPER\}\}/g, process.env.AFFILIATE_JASPER || 'https://jasper.ai')
+      .replace(/\{\{AFFILIATE_COPYAI\}\}/g, process.env.AFFILIATE_COPYAI || 'https://copy.ai')
+      .replace(/\{\{AFFILIATE_QUILLBOT\}\}/g, process.env.AFFILIATE_QUILLBOT || 'https://quillbot.com')
       .replace(/\{\{AFFILIATE_VEED\}\}/g, process.env.AFFILIATE_VEED || 'https://veed.io')
-      .replace(/\{\{AFFILIATE_MURF\}\}/g, process.env.AFFILIATE_MURF || 'https://murf.ai')
       .replace(/\{\{AFFILIATE_PICTORY\}\}/g, process.env.AFFILIATE_PICTORY || 'https://pictory.ai')
-      .replace(/\{\{AFFILIATE_ELEVENLABS\}\}/g, process.env.AFFILIATE_ELEVENLABS || 'https://elevenlabs.io'),
+      .replace(/\{\{AFFILIATE_SYNTHESIA\}\}/g, process.env.AFFILIATE_SYNTHESIA || 'https://synthesia.io')
+      .replace(/\{\{AFFILIATE_DESCRIPT\}\}/g, process.env.AFFILIATE_DESCRIPT || 'https://descript.com')
+      .replace(/\{\{AFFILIATE_MURF\}\}/g, process.env.AFFILIATE_MURF || 'https://murf.ai')
+      .replace(/\{\{AFFILIATE_ELEVENLABS\}\}/g, process.env.AFFILIATE_ELEVENLABS || 'https://elevenlabs.io')
+      .replace(/\{\{AFFILIATE_NOTION\}\}/g, process.env.AFFILIATE_NOTION || 'https://notion.com/product/ai'),
   };
 
   const breadcrumbLd = {
