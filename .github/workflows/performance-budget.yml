@@ -34,7 +34,9 @@ jobs:
       - name: Run Lighthouse CI
         run: |
           lhci autorun \
-            --collect.staticDistDir=.next \
+            --collect.startServerCommand="npm run start" \
+            --collect.startServerReadyTimeout=120000 \
+            --collect.url=http://localhost:3000/ \
             --assert.assertions.categories:performance=error \
             --assert.assertions.categories.accessibility=error \
             --assert.budgets[0].metric=interactive \
@@ -48,6 +50,7 @@ jobs:
             --assert.budgets[4].metric=speed-index \
             --assert.budgets[4].budget=3400
         env:
+          NODE_ENV: production
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
       
       - name: Upload Lighthouse results
