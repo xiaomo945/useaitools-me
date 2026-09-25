@@ -38,6 +38,36 @@ jobs:
           NODE_ENV: production
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
       
+      - name: Dump failing accessibility audits
+        if: always()
+        run: |
+          node -e "
+          const fs=require('fs'),path=require('path');
+          const dir='.lighthouseci';
+          if(!fs.existsSync(dir)){console.log('no .lighthouseci dir');process.exit(0);}
+          const files=fs.readdirSync(dir).filter(f=>f.startsWith('lhr-')&&f.endsWith('.json'));
+          console.log('lhr files:',files.length);
+          for(const f of files){
+            const r=JSON.parse(fs.readFileSync(path.join(dir,f),'utf8'));
+            const url=r.finalUrl||r.finalDisplayedUrl||'';
+            const a=r.categories.accessibility;
+            console.log('\\n=== '+f+' :: '+url+' :: a11y='+a.score);
+            if(!a.auditRefs) continue;
+            for(const ref of a.auditRefs){
+              const aud=r.audits[ref.id];
+              if(!aud||aud.score===null||aud.score>=1) continue;
+              console.log('  FAIL '+ref.id+' (weight='+ref.weight+') score='+aud.score);
+              const items=(aud.details&&aud.details.items)||[];
+              console.log('      items: '+items.length);
+              for(const it of items.slice(0,5)){
+                const n=it.node||{};
+                if(n.snippet) console.log('      node: '+String(n.snippet).slice(0,200));
+                if(n.explanation) console.log('      why : '+String(n.explanation).slice(0,220));
+              }
+            }
+          }
+          "
+
       - name: Upload Lighthouse results
         if: always()
         uses: actions/upload-artifact@v4
