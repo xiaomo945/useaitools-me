@@ -20,14 +20,24 @@ function loadTools() {
   return [];
 }
 
-// 加载博客文章数据
-function loadBlogPosts() {
-  const blogPostsPath = path.join(process.cwd(), 'data', 'blog-posts.json');
-  if (fs.existsSync(blogPostsPath)) {
-    const data = fs.readFileSync(blogPostsPath, 'utf8');
-    return JSON.parse(data);
+// 加载博客文章数据（分文件存储于 data/blog-posts/ 目录）
+function loadBlogPosts(): { slug: string; date: string }[] {
+  const dir = path.join(process.cwd(), 'data', 'blog-posts');
+  const posts: { slug: string; date: string }[] = [];
+  if (fs.existsSync(dir)) {
+    const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json'));
+    for (const file of files) {
+      try {
+        const data = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
+        if (data && data.slug) {
+          posts.push({ slug: data.slug, date: data.date });
+        }
+      } catch {
+        // 跳过损坏的 JSON 文件
+      }
+    }
   }
-  return [];
+  return posts;
 }
 
 // 加载工作流数据
