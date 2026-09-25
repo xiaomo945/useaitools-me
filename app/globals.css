@@ -8,6 +8,15 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /* A11y: default emerald-500/600 (#10b981 / #059669) and amber-500/600
+     (#f59e0b / #d97706) fall below the WCAG AA 4.5:1 contrast ratio on white
+     backgrounds (3.58:1 and 3.14:1 measured by Lighthouse). Deepen them one
+     step so every text/button using the brand colour passes AA in light mode.
+     Dark mode uses the -400 steps, which are untouched. */
+  --color-emerald-500: #047857;
+  --color-emerald-600: #047857;
+  --color-amber-500: #b45309;
+  --color-amber-600: #b45309;
   --font-sans: var(--font-inter), sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
   --font-serif: var(--font-playfair-display), serif;
