@@ -17,6 +17,10 @@
   --color-emerald-600: #047857;
   --color-amber-500: #b45309;
   --color-amber-600: #b45309;
+  /* slate-500 (#62748e) passes on pure white (4.76:1) but drops to 4.06-4.34:1
+     on the tinted surfaces used by badges and scene cards (#f1f5f9, #e4eefc,
+     #f9ece3). Deepen one step so it clears AA on every surface. */
+  --color-slate-500: #475569;
   --font-sans: var(--font-inter), sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
   --font-serif: var(--font-playfair-display), serif;
