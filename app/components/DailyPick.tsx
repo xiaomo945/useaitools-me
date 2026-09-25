@@ -70,9 +70,9 @@ export default function DailyPick({ tool, onDismiss }: DailyPickProps) {
         </Link>
         <div className="flex-1 min-w-0">
           <Link href={`/tools/${tool.id}`} className="inline-block">
-            <h3 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate">
+            <h2 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate">
               🌟 {tool.name}
-            </h3>
+            </h2>
           </Link>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5 truncate">{reason}</p>
         </div>
