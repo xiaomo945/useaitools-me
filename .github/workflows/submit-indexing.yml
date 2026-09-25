@@ -46,13 +46,16 @@ jobs:
             echo "::warning::IndexNow key file not reachable yet, engines will reject the submission"
           fi
 
+      # Best-effort: a search-engine submission hiccup must NOT redden the
+      # main deploy pipeline. IndexNow/Bing crawl anyway; this just speeds it up.
       - name: Submit to IndexNow
+        continue-on-error: true
         run: |
           SCOPE="${{ github.event.inputs.scope || 'all' }}"
           if [ "$SCOPE" = "all" ]; then
-            python3 scripts/submit-indexnow.py --all
+            python3 scripts/submit-indexnow.py --all || true
           else
-            python3 scripts/submit-indexnow.py --filter "$SCOPE"
+            python3 scripts/submit-indexnow.py --filter "$SCOPE" || true
           fi
 
       - name: Submit to Google Indexing API
