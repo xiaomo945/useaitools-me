@@ -130,8 +130,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  const workflowPages = workflows.map((wf: { slug: string }) => ({
-    url: `${baseUrl}/workflows/${wf.slug}`,
+  // Workflow detail pages are routed by `id` (see app/workflows/[slug]/page.tsx,
+  // generateStaticParams returns wf.id). Use the same key here so the sitemap
+  // points at real, working URLs instead of /workflows/undefined.
+  const workflowPages = workflows.map((wf: { id: string }) => ({
+    url: `${baseUrl}/workflows/${wf.id}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,
     priority: 0.5,

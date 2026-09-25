@@ -1,0 +1,67 @@
+name: Submit to Search Engines
+
+# Pushes new/changed URLs to IndexNow (Bing, Yandex, Seznam, Naver) and,
+# if GSC credentials are configured, to Google's Indexing API.
+# Runs after content changes land on main. Waits for the Vercel deploy so the
+# URLs are actually live before we ask engines to crawl them.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/blog-posts/**'
+      - 'data/tools.json'
+      - 'app/**'
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 'Which URLs to submit'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - blog
+          - tools
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Wait for Vercel deployment to go live
+        run: sleep 240
+
+      - name: Verify IndexNow key file is served
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" \
+            https://useaitools.me/f67850cb7587e549bb8e2a7ffca0c3af.txt)
+          echo "key file HTTP $code"
+          if [ "$code" != "200" ]; then
+            echo "::warning::IndexNow key file not reachable yet, engines will reject the submission"
+          fi
+
+      # Best-effort: a search-engine submission hiccup must NOT redden the
+      # main deploy pipeline. IndexNow/Bing crawl anyway; this just speeds it up.
+      - name: Submit to IndexNow
+        continue-on-error: true
+        run: |
+          SCOPE="${{ github.event.inputs.scope || 'all' }}"
+          if [ "$SCOPE" = "all" ]; then
+            python3 scripts/submit-indexnow.py --all || true
+          else
+            python3 scripts/submit-indexnow.py --filter "$SCOPE" || true
+          fi
+
+      - name: Submit to Google Indexing API
+        if: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON != '' }}
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: |
+          pip install --quiet google-auth
+          python3 scripts/auto-submit-gsc.py --days 7 --limit 150 || true
