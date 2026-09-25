@@ -21,6 +21,13 @@
      on the tinted surfaces used by badges and scene cards (#f1f5f9, #e4eefc,
      #f9ece3). Deepen one step so it clears AA on every surface. */
   --color-slate-500: #475569;
+  /* Category badges render white text on *-500 fills. The default 500 steps of
+     these four hues only reach 2.88-4.40:1 against white, so deepen them until
+     white text clears the 4.5:1 AA minimum. */
+  --color-orange-500: #c2410c;
+  --color-pink-500: #be185d;
+  --color-blue-500: #155dfc;
+  --color-violet-500: #7c3aed;
   --font-sans: var(--font-inter), sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
   --font-serif: var(--font-playfair-display), serif;
