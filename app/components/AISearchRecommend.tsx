@@ -15,9 +15,9 @@ type Tool = {
   icon_url: string;
   needs_vpn: boolean;
   languages: string[];
-  rating: number;
-  rating_count: number;
-  rating_breakdown: Record<string, { score: number; max: number }>;
+  rating?: number | null;
+  rating_count?: number | null;
+  rating_breakdown?: Record<string, { score: number; max: number }>;
   last_updated: string;
   skill_level: string;
   best_for: string[];
@@ -136,8 +136,8 @@ export default function AISearchRecommend() {
     }
 
     // Bonus for high rating
-    if (tool.rating >= 4.5) score += 10;
-    else if (tool.rating >= 4.0) score += 5;
+    if ((tool.rating ?? 0) >= 4.5) score += 10;
+    else if ((tool.rating ?? 0) >= 4.0) score += 5;
 
     if (score < 15) return null;
 

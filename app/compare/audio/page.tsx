@@ -20,11 +20,11 @@ type Tool = {
   affiliate_link: string;
   icon_url: string;
   needs_vpn: boolean;
-  rating?: number;
-  rating_count?: number;
+  rating?: number | null;
+  rating_count?: number | null;
 };
 
-const audioTools = (tools as Tool[]).filter(tool => tool.category === 'Audio');
+const audioTools = (tools as unknown as Tool[]).filter(tool => tool.category === 'Audio');
 
 const getCategoryColors = () => ({
   bg: 'bg-pink-500',

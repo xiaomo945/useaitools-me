@@ -113,8 +113,8 @@ export default function UserToolList({ savedTools }: UserToolListProps) {
         <div className="space-y-4">
           {lists.map(list => {
             const listTools = list.toolIds.map(id => 
-              (tools as Tool[]).find(t => t.id === id)
-            ).filter(Boolean) as Tool[];
+              (tools as unknown as Tool[]).find(t => t.id === id)
+            ).filter(Boolean) as unknown as Tool[];
             
             return (
               <div 

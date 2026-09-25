@@ -11,8 +11,8 @@ interface ComparisonTool {
   description: string;
   category: string;
   pricing: string;
-  rating?: number;
-  rating_count?: number;
+  rating?: number | null;
+  rating_count?: number | null;
   icon_url: string;
   affiliate_link?: string;
   url: string;
@@ -94,7 +94,7 @@ export default function ToolComparison({ tool1, tool2 }: ToolComparisonProps) {
                     ))}
                   </div>
                   <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    {tool1.rating.toFixed(1)}
+                    {tool1.rating != null ? tool1.rating.toFixed(1) : '—'}
                   </span>
                   {tool1.rating_count && (
                     <span className="text-xs text-slate-500 dark:text-slate-500">
@@ -149,7 +149,7 @@ export default function ToolComparison({ tool1, tool2 }: ToolComparisonProps) {
                     ))}
                   </div>
                   <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">
-                    {tool2.rating.toFixed(1)}
+                    {tool2.rating != null ? tool2.rating.toFixed(1) : '—'}
                   </span>
                   {tool2.rating_count && (
                     <span className="text-xs text-slate-500 dark:text-slate-500">
@@ -219,7 +219,7 @@ export default function ToolComparison({ tool1, tool2 }: ToolComparisonProps) {
                 <div className="flex items-center justify-center gap-1">
                   <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
                   <span className="font-semibold text-slate-900 dark:text-white">
-                    {tool1.rating.toFixed(1)}
+                    {tool1.rating != null ? tool1.rating.toFixed(1) : '—'}
                   </span>
                 </div>
               ) : (
@@ -231,7 +231,7 @@ export default function ToolComparison({ tool1, tool2 }: ToolComparisonProps) {
                 <div className="flex items-center justify-center gap-1">
                   <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
                   <span className="font-semibold text-slate-900 dark:text-white">
-                    {tool2.rating.toFixed(1)}
+                    {tool2.rating != null ? tool2.rating.toFixed(1) : '—'}
                   </span>
                 </div>
               ) : (

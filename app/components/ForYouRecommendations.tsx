@@ -7,7 +7,8 @@ interface Tool {
   id: number;
   name: string;
   category: string;
-  rating?: number;
+  rating?: number | null;
+  last_updated?: string;
 }
 
 interface ForYouRecommendationsProps {
@@ -31,8 +32,8 @@ const ForYouRecommendations = memo(function ForYouRecommendations({
   const topCategory = Object.entries(viewedCategories).sort((a, b) => b[1] - a[1])[0]?.[0];
   const unviewed = tools.filter(t => !recentlyViewedIds.includes(t.id));
   const forYouTools = topCategory
-    ? unviewed.filter(t => t.category === topCategory).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3)
-    : unviewed.sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
+    ? unviewed.filter(t => t.category === topCategory).sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || '')).slice(0, 3)
+    : unviewed.sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || '')).slice(0, 3);
   
   if (forYouTools.length === 0) return null;
   
@@ -59,7 +60,6 @@ const ForYouRecommendations = memo(function ForYouRecommendations({
                 {tool.name.charAt(0)}
               </span>
               <span className="text-xs font-medium text-slate-700 dark:text-slate-300 truncate max-w-[100px]">{tool.name}</span>
-              <span className="text-[10px] text-amber-500 font-semibold">★ {tool.rating || '4.5'}</span>
             </Link>
           );
         })}

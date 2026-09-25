@@ -6,7 +6,7 @@ import Footer from '@/app/components/Footer';
 import toolsData from '@/data/tools.json';
 import type { Tool } from '@/types';
 
-const tools = toolsData as Tool[];
+const tools = toolsData as unknown as Tool[];
 
 const categories = ['Writing', 'Image', 'Productivity', 'Code', 'Audio', 'Video'] as const;
 const categoryColors: Record<string, string> = {

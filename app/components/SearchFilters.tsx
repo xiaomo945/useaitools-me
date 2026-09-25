@@ -13,9 +13,10 @@ interface Tool {
   url: string;
   affiliate_link: string;
   icon_url?: string;
-  rating?: number;
+  rating?: number | null;
   best_for?: string[];
-  rating_count?: number;
+  rating_count?: number | null;
+  last_updated?: string;
 }
 
 interface SearchFiltersProps {
@@ -36,16 +37,15 @@ const CATEGORIES = ['Writing', 'Image', 'Productivity', 'Code', 'Audio', 'Video'
 const PRICING_OPTIONS = ['Free', 'Freemium', 'Free Trial', 'Paid', 'Open Source'];
 
 const SORT_OPTIONS = [
-  { value: 'rating', label: 'Highest Rated' },
+  { value: 'updated', label: 'Recently Updated' },
   { value: 'name', label: 'Name (A-Z)' },
-  { value: 'reviews', label: 'Most Reviews' },
 ];
 
 export default function SearchFilters({ tools, initialQuery = '' }: SearchFiltersProps) {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [selectedPricing, setSelectedPricing] = useState<string[]>([]);
   const [minRating, setMinRating] = useState(0);
-  const [sortBy, setSortBy] = useState('rating');
+  const [sortBy, setSortBy] = useState('updated');
   const [showFilters, setShowFilters] = useState(false);
   const [compareSelected, setCompareSelected] = useState<number[]>([]);
 
@@ -60,17 +60,11 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
       result = result.filter(t => selectedPricing.includes(t.pricing));
     }
 
-    if (minRating > 0) {
-      result = result.filter(t => (t.rating || 0) >= minRating);
-    }
-
     const sorted = [...result];
-    if (sortBy === 'rating') {
-      sorted.sort((a, b) => (b.rating || 0) - (a.rating || 0));
-    } else if (sortBy === 'name') {
+    if (sortBy === 'name') {
       sorted.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortBy === 'reviews') {
-      sorted.sort((a, b) => (b.rating_count || 0) - (a.rating_count || 0));
+    } else if (sortBy === 'updated') {
+      sorted.sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''));
     }
 
     return sorted;
@@ -197,32 +191,6 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
             </div>
           </div>
 
-          {/* Min Rating */}
-          <div>
-            <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">Minimum Rating</p>
-            <div className="flex items-center gap-2">
-              {[0, 3, 3.5, 4, 4.5].map(rating => (
-                <button
-                  key={rating}
-                  onClick={() => setMinRating(rating)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all inline-flex items-center gap-1 ${
-                    minRating === rating
-                      ? 'bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 ring-1 ring-amber-500'
-                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
-                  }`}
-                >
-                  {rating === 0 ? (
-                    'Any'
-                  ) : (
-                    <>
-                      <Star className="w-3 h-3 fill-current" />
-                      {rating}+
-                    </>
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
 

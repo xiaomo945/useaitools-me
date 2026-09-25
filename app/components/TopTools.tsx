@@ -16,10 +16,9 @@ interface TopToolsProps {
 }
 
 export default function TopTools({ tools, category, categoryColors }: TopToolsProps) {
-  // Select top 10 tools by rating (minimum 4.0)
-  const topTools = tools
-    .filter(t => t.rating && t.rating >= 4.0)
-    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+  // Select the 10 most recently updated tools
+  const topTools = [...tools]
+    .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
     .slice(0, 10);
 
   if (topTools.length === 0) return null;
@@ -91,10 +90,9 @@ export default function TopTools({ tools, category, categoryColors }: TopToolsPr
                     <h3 className="font-semibold text-sm text-slate-900 dark:text-white truncate group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                       {tool.name}
                     </h3>
-                    <div className="flex items-center gap-1 mt-0.5">
-                      <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
-                      <span className="text-xs font-medium text-slate-700 dark:text-slate-300">
-                        {(tool.rating || 0).toFixed(1)}
+                    <div className="mt-0.5">
+                      <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                        {tool.pricing}
                       </span>
                     </div>
                   </div>

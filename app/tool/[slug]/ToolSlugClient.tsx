@@ -47,8 +47,8 @@ type Tool = {
   languages: string[];
   use_cases?: UseCase[];
   pros_cons?: ProsCons;
-  rating?: number;
-  rating_count?: number;
+  rating?: number | null;
+  rating_count?: number | null;
   rating_breakdown?: RatingBreakdown;
   skill_level?: string;
   best_for?: string[];
@@ -164,12 +164,12 @@ const categoryFeatures: Record<string, string[]> = {
 };
 
 // StarRating component
-const StarRating = ({ rating }: { rating: number }) => (
+const StarRating = ({ rating }: { rating?: number | null }) => (
   <div className="flex items-center gap-0.5">
     {[1, 2, 3, 4, 5].map((star) => (
       <svg
         key={star}
-        className={`w-4 h-4 ${star <= rating ? 'text-amber-400' : 'text-slate-300 dark:text-slate-600'}`}
+        className={`w-4 h-4 ${star <= (rating ?? 0) ? 'text-amber-400' : 'text-slate-300 dark:text-slate-600'}`}
         fill="currentColor"
         viewBox="0 0 20 20"
       >
@@ -332,7 +332,7 @@ export default function ToolSlugClient({
               {/* Overall Rating */}
               <div className="text-center sm:text-left">
                 <div className="text-5xl sm:text-6xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">
-                  {tool.rating.toFixed(1)}
+                  {tool.rating != null ? tool.rating.toFixed(1) : '—'}
                 </div>
                 <div className="text-sm text-slate-600 dark:text-slate-400 font-medium">
                   Overall Score

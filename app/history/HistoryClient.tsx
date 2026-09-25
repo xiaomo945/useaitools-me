@@ -15,8 +15,8 @@ interface Tool {
   url: string;
   affiliate_link?: string;
   icon_url?: string;
-  rating: number;
-  rating_count: number;
+  rating?: number | null;
+  rating_count?: number | null;
 }
 
 interface HistoryItem {
@@ -27,8 +27,8 @@ interface HistoryItem {
   url: string;
   affiliate_link: string;
   icon_url: string;
-  rating: number;
-  rating_count: number;
+  rating?: number | null;
+  rating_count?: number | null;
   lastAccessed: string;
   accessType: 'bookmarked' | 'reviewed';
 }

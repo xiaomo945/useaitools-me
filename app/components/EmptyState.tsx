@@ -49,11 +49,10 @@ export default function EmptyState({ query, tools, onClearQuery, onClearFilters,
     return matched.slice(0, 3);
   }, [query]);
 
-  // 推荐 Top 3 工具（评分最高）
+  // 推荐最近更新的 3 个工具
   const recommendedTools = useMemo(() => {
     return [...tools]
-      .filter(t => t.rating && t.rating >= 4.0)
-      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+      .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
       .slice(0, 3);
   }, [tools]);
 

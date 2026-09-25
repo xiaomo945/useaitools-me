@@ -20,7 +20,7 @@ interface FavoriteTool {
   id: number;
   name: string;
   category: string;
-  rating: number;
+  rating?: number | null;
   review: string;
 }
 
@@ -29,7 +29,7 @@ interface Activity {
   toolName: string;
   toolId: number | null;
   date: string;
-  rating?: number;
+  rating?: number | null;
   status?: string;
 }
 
@@ -359,7 +359,7 @@ export default function ProfilePage() {
                                 {tool.category}
                               </span>
                               <span className="text-xs text-amber-500">
-                                {'⭐'.repeat(tool.rating)}
+                                {'⭐'.repeat(tool.rating || 0)}
                               </span>
                             </div>
                             {tool.review && (
@@ -404,7 +404,7 @@ export default function ProfilePage() {
                           </span>
                           {activity.rating && (
                             <span className="text-xs text-amber-500">
-                              {'⭐'.repeat(activity.rating)}
+                              {'⭐'.repeat(activity.rating || 0)}
                             </span>
                           )}
                           {activity.status && (

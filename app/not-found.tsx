@@ -2,11 +2,11 @@ import Link from 'next/link';
 import toolsData from '@/data/tools.json';
 import type { Tool } from '@/types';
 
-const tools = toolsData as Tool[];
+const tools = toolsData as unknown as Tool[];
 
-// Pick 5 popular tools for recommendation
-const popularTools = tools
-  .filter(t => t.rating && t.rating >= 4.5)
+// Pick 5 recently updated tools for recommendation
+const popularTools = [...tools]
+  .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
   .slice(0, 5);
 
 export default function NotFound() {

@@ -6,7 +6,7 @@ import type { Tool } from '@/types';
 import SearchFilters from '@/app/components/SearchFilters';
 import toolsData from '@/data/tools.json';
 
-const tools = toolsData as Tool[];
+const tools = toolsData as unknown as Tool[];
 
 function SearchPageInner() {
   const searchParams = useSearchParams();

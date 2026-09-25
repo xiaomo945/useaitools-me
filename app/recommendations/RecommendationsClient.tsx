@@ -11,8 +11,8 @@ interface Tool {
   id: number;
   name: string;
   category: string;
-  rating: number;
-  rating_count: number;
+  rating?: number | null;
+  rating_count?: number | null;
 }
 
 interface RecommendationData {
@@ -88,7 +88,7 @@ export default function RecommendationsClient() {
               {tool.category}
             </span>
             <span className="text-xs text-slate-400 dark:text-slate-500">
-              ⭐ {tool.rating.toFixed(1)} ({tool.rating_count})
+              ⭐ {(tool.rating ?? 0).toFixed(1)} ({tool.rating_count ?? 0})
             </span>
           </div>
         </div>

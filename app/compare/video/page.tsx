@@ -20,11 +20,11 @@ type Tool = {
   affiliate_link: string;
   icon_url: string;
   needs_vpn: boolean;
-  rating?: number;
-  rating_count?: number;
+  rating?: number | null;
+  rating_count?: number | null;
 };
 
-const videoTools = (tools as Tool[]).filter(tool => tool.category === 'Video');
+const videoTools = (tools as unknown as Tool[]).filter(tool => tool.category === 'Video');
 
 const getCategoryColors = () => ({
   bg: 'bg-indigo-500',

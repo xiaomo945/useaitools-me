@@ -10,8 +10,8 @@ export type Tool = {
   examples?: { prompt: string; image_url: string }[];
   needs_vpn: boolean;
   languages: string[];
-  rating?: number;
-  rating_count?: number;
+  rating?: number | null;
+  rating_count?: number | null;
   skill_level?: 'beginner' | 'intermediate' | 'advanced';
   best_for?: string[];
 };

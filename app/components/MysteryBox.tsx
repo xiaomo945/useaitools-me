@@ -13,9 +13,9 @@ export default function MysteryBox({ mysteryCount, onOpen }: MysteryBoxProps) {
           🎁
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white">
+          <h2 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white">
             Mystery Box
-          </h3>
+          </h2>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
             {mysteryCount >= 3 ? 'Come back tomorrow for more!' : `Discover a random AI tool (${3 - mysteryCount} left today)`}
           </p>

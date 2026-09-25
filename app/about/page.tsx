@@ -6,10 +6,10 @@ import tools from '@/data/tools.json';
 
 export const metadata: Metadata = {
   title: 'About – Use AI Tools',
-  description: 'Discover our story, built in public by an indie maker. 50+ AI tools curated for you.',
+  description: 'Discover our story, built in public by an indie maker. 500+ AI tools curated for you.',
   openGraph: {
     title: 'About – Use AI Tools',
-    description: 'Discover our story, built in public by an indie maker. 50+ AI tools curated for you.',
+    description: 'Discover our story, built in public by an indie maker. 500+ AI tools curated for you.',
   },
 };
 

@@ -16,7 +16,7 @@ function getCategoryColors(category: string) {
 
 export default function TrendingTools({ tools }: { tools: Tool[] }) {
   const trending = [...tools]
-    .sort((a, b) => (b.rating_count || 0) - (a.rating_count || 0))
+    .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
     .slice(0, 4);
 
   if (trending.length === 0) return null;
@@ -25,7 +25,7 @@ export default function TrendingTools({ tools }: { tools: Tool[] }) {
     <div className="mb-8 sm:mb-16">
       <div className="flex items-center gap-2 mb-4 sm:mb-6">
         <h2 className="text-xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-          🔥 Trending This Week
+          🆕 Recently Updated
         </h2>
         <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-gradient-to-r from-rose-500 to-amber-500 text-white">HOT</span>
       </div>
@@ -56,8 +56,7 @@ export default function TrendingTools({ tools }: { tools: Tool[] }) {
                     {tool.name}
                   </h3>
                   <div className="flex items-center gap-2 mt-0.5">
-                    <span className="text-xs text-amber-500 font-semibold">★ {(tool.rating || 0).toFixed(1)}</span>
-                    <span className="text-[10px] text-slate-400 dark:text-slate-500">{tool.rating_count || 0} reviews</span>
+                    <span className="text-[10px] text-slate-400 dark:text-slate-500">{tool.pricing}</span>
                   </div>
                 </div>
               </div>

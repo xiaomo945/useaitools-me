@@ -17,7 +17,7 @@ interface SearchBarProps {
   removeRecentSearch: (term: string) => void;
   saveRecentSearch: (term: string) => void;
   autocompleteItems: { type: 'tool' | 'blog'; name: string; category: string; id: number; score: number }[];
-  popularTools: { id: number; name: string; category: string; rating?: number }[];
+  popularTools: { id: number; name: string; category: string; rating?: number | null }[];
   blogPosts: { id: number; title: string; slug: string; date: string; description: string; category: string }[];
   router: ReturnType<typeof useRouter>;
   goToSearchPage: () => void;
@@ -403,6 +403,7 @@ export default function SearchBar({
           </p>
           <button
             onClick={() => setShowWelcomeTip(false)}
+            aria-label="Dismiss search tip"
             className="ml-2 p-1 rounded-full hover:bg-emerald-200 dark:hover:bg-emerald-800 transition-colors"
           >
             <svg className="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState, useMemo, useRef, useEffect, useCallback, memo } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
-import StarRating from './StarRating';
 import SkeletonCard from './Skeleton';
 import { useToast } from './Toast';
 import { debugLog } from '../utils/debug';
@@ -279,15 +279,6 @@ const ToolCard = memo(function ToolCard({
           </p>
         </Link>
 
-        {/* Star Rating */}
-        <div className="flex items-center gap-2 mb-3">
-          <StarRating
-            rating={tool.rating || 4.0}
-            count={tool.rating_count || 0}
-            size="sm"
-          />
-        </div>
-
         {/* Skill Level & Best For Tags */}
         <div className="mb-3 space-y-1.5">
           {tool.skill_level && (
@@ -415,10 +406,11 @@ type Tool = {
   examples?: { prompt: string; image_url: string }[];
   needs_vpn: boolean;
   languages: string[];
-  rating?: number;
-  rating_count?: number;
+  rating?: number | null;
+  rating_count?: number | null;
   skill_level?: 'beginner' | 'intermediate' | 'advanced';
   best_for?: string[];
+  last_updated?: string;
 };
 
 // Affiliate link helpers — unified in lib/affiliate.ts (single source of truth)
@@ -825,10 +817,10 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
     { type: 'category', label: 'AI Productivity Tools', value: 'productivity' },
   ];
 
-  // Get popular tools by rating count
+  // Get most recently updated tools
   const popularTools = useMemo(() => {
     return [...displayedTools]
-      .sort((a, b) => (b.rating_count || 0) - (a.rating_count || 0))
+      .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
       .slice(0, 3);
   }, [displayedTools]);
 
@@ -840,8 +832,8 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       // Add categories first
       suggestions.push(...popularSearches);
       
-      // Add popular tools sorted by rating_count descending
-      const sortedTools = [...displayedTools].sort((a, b) => (b.rating_count || 0) - (a.rating_count || 0));
+      // Add most recently updated tools first
+      const sortedTools = [...displayedTools].sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''));
       const topTools = sortedTools.slice(0, 8);
       topTools.forEach(tool => {
         suggestions.push({
@@ -900,7 +892,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
           name: tool.name,
           category: tool.category,
           id: tool.id,
-          score: nameMatch ? (tool.rating || 4) * 10 : (tool.rating || 4)
+          score: nameMatch ? 100 : 10
         };
       });
     
@@ -1111,10 +1103,8 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       hash |= 0;
     }
     
-    // Filter high-rated but less popular tools (hidden gems)
-    const candidates = displayedTools.filter(t => 
-      (t.rating || 0) >= 4.0 && !savedIds.includes(t.id)
-    );
+    // Pick a tool the visitor has not saved yet
+    const candidates = displayedTools.filter(t => !savedIds.includes(t.id));
     if (candidates.length === 0) return null;
     
     return candidates[Math.abs(hash) % candidates.length];
@@ -1169,8 +1159,9 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       hints.push('Premium quality experience');
     }
     
-    const ratingHint = (random.rating || 4.0) >= 4.5 ? 'Loved by users worldwide' : 'Highly rated by the community';
-    hints.push(ratingHint);
+    if (random.best_for && random.best_for.length > 0) {
+      hints.push(`Great for ${random.best_for[0]}`);
+    }
     
     setMysteryHints(hints);
     setShowMysteryBox(true);
@@ -1640,7 +1631,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
           <div className="max-w-7xl mx-auto flex items-center justify-center gap-3">
             <span className="text-lg">🚀</span>
             <p className="text-center text-sm sm:text-base font-medium">
-              Now featuring 50+ AI tools across 6 categories. New tools added weekly!
+              Now featuring 500+ AI tools across 6 categories. New tools added weekly!
             </p>
             <button
               onClick={() => setShowBanner(false)}
@@ -1712,7 +1703,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
               >
                 <span className="text-lg sm:text-2xl">{card.icon}</span>
                 <span className="text-[11px] sm:text-xs font-semibold text-slate-700 dark:text-slate-200 leading-tight">{card.label}</span>
-                <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500 hidden sm:block">{card.desc}</span>
+                <span className="text-[9px] sm:text-[10px] text-slate-500 dark:text-slate-400 hidden sm:block">{card.desc}</span>
                 <svg className="w-3 h-3 text-emerald-400 dark:text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -1783,9 +1774,10 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
             });
             const topCategory = Object.entries(viewedCategories).sort((a, b) => b[1] - a[1])[0]?.[0];
             const unviewed = displayedTools.filter(t => !recentlyViewedIds.includes(t.id));
+            const byRecency = (a: Tool, b: Tool) => (b.last_updated || '').localeCompare(a.last_updated || '');
             const forYouTools = topCategory
-              ? unviewed.filter(t => t.category === topCategory).sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3)
-              : unviewed.sort((a, b) => (b.rating || 0) - (a.rating || 0)).slice(0, 3);
+              ? unviewed.filter(t => t.category === topCategory).sort(byRecency).slice(0, 3)
+              : unviewed.sort(byRecency).slice(0, 3);
             
             if (forYouTools.length === 0) return null;
             return (
@@ -1811,7 +1803,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                           {tool.name.charAt(0)}
                         </span>
                         <span className="text-xs font-medium text-slate-700 dark:text-slate-300 truncate max-w-[100px]">{tool.name}</span>
-                        <span className="text-[10px] text-amber-500 font-semibold">★ {tool.rating || '4.5'}</span>
+                        <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">{tool.pricing}</span>
                       </Link>
                     );
                   })}
@@ -1988,19 +1980,21 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                     }}
                   >
                     {post.images?.[0] && (
-                      <img
-                        src={post.images[0].url}
-                        alt={post.images[0].alt}
-                        className="w-full h-40 object-cover rounded-xl mb-4"
-                        loading="lazy"
-                        decoding="async"
-                      />
+                      <div className="relative w-full h-40 mb-4">
+                        <Image
+                          src={post.images[0].url}
+                          alt={post.images[0].alt || post.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 20vw"
+                          className="object-cover rounded-xl"
+                        />
+                      </div>
                     )}
                     <div className="flex items-center gap-2 mb-3">
                       <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                         {post.category}
                       </span>
-                      <span className="text-xs text-slate-400 dark:text-gray-500">
+                      <span className="text-xs text-slate-500 dark:text-gray-400">
                         {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                       </span>
                     </div>
@@ -2201,7 +2195,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
               </Link>
             )}
             <div className="flex flex-wrap justify-center gap-2 mt-4">
-              <span className="text-sm text-slate-400 dark:text-slate-500">Try searching:</span>
+              <span className="text-sm text-slate-500 dark:text-slate-400">Try searching:</span>
               {['ChatGPT', 'Midjourney', 'GitHub Copilot', 'DALL-E', 'Notion AI'].map((suggestion) => (
                 <button
                   key={suggestion}
@@ -2219,12 +2213,12 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
             {/* Top 3 Recommended Tools */}
             {(() => {
               const topRated = [...displayedTools]
-                .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+                .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
                 .slice(0, 3);
               if (topRated.length === 0) return null;
               return (
                 <div className="mt-10 max-w-2xl mx-auto">
-                  <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">⭐ Popular picks you might like</p>
+                  <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-4">🆕 Recently updated picks</p>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {topRated.map((tool) => {
                       const colors = getCategoryColors(tool.category);
@@ -2244,7 +2238,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                           <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mb-2">{tool.description}</p>
                           <div className="flex items-center gap-1.5">
                             <span className={`px-1.5 py-0.5 rounded-full text-[9px] font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text}`}>{tool.category}</span>
-                            <span className="text-[10px] text-amber-500 font-semibold">★ {tool.rating || '4.5'}</span>
+                            <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">{tool.pricing}</span>
                           </div>
                         </Link>
                       );
@@ -2352,7 +2346,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                     <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${getCategoryColors(mysteryTool.category).bg} text-white`}>
                       {mysteryTool.category}
                     </span>
-                    <span className="text-amber-500 font-semibold text-sm">★ {mysteryTool.rating || '4.5'}</span>
+                    <span className="text-slate-500 dark:text-slate-400 text-sm">{mysteryTool.pricing}</span>
                   </div>
                   <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">{mysteryTool.description}</p>
                   <div className="flex flex-col gap-3">
@@ -2371,7 +2365,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                         🎲 Try Another
                       </button>
                     ) : (
-                      <p className="text-xs text-slate-400 dark:text-slate-500">Come back tomorrow for more mystery boxes!</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400">Come back tomorrow for more mystery boxes!</p>
                     )}
                   </div>
                 </div>

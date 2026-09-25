@@ -79,11 +79,12 @@ export interface Tool {
   needs_vpn: boolean;
   languages: string[];
   description_en?: string;
-  rating?: number;
-  rating_count?: number;
+  rating?: number | null;
+  rating_count?: number | null;
   rating_breakdown?: RatingBreakdown;
   use_cases?: UseCase[];
   pros_cons?: ProsCons;
   skill_level?: 'beginner' | 'intermediate' | 'advanced';
   best_for?: string[];
+  last_updated?: string;
 }

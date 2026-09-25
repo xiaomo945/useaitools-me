@@ -9,18 +9,13 @@ interface CategoryStatsProps {
 
 export default function CategoryStats({ category, tools }: CategoryStatsProps) {
   const totalTools = tools.length;
-  const avgRating = totalTools > 0 
-    ? tools.reduce((sum, tool) => sum + (tool.rating || 4), 0) / totalTools 
-    : 0;
+  // Ratings were fabricated and have been removed from the dataset.
+  // Show a real, verifiable count instead.
+  const recentlyUpdated = tools.filter(t => (t.last_updated || '') >= '2026-09').length;
   const freeTools = tools.filter(t => 
     t.pricing === 'Free' || t.pricing === 'Freemium' || t.pricing === 'Open Source'
   );
   const paidTools = totalTools - freeTools.length;
-
-  // Dummy difficulty data (since we don't have actual difficulty in JSON
-  const beginner = totalTools > 0 ? Math.floor(totalTools * 0.5) : 0;
-  const intermediate = totalTools > 0 ? Math.floor(totalTools * 0.35) : 0;
-  const advanced = totalTools - beginner - intermediate;
 
   const colorMap: Record<string, string> = {
     Writing: 'text-blue-600',
@@ -56,11 +51,10 @@ export default function CategoryStats({ category, tools }: CategoryStatsProps) {
         </div>
         <div className="p-6 text-center">
           <div className={`text-3xl font-extrabold ${color} mb-2`}>
-            {avgRating.toFixed(1)}
-            <span className="text-lg font-normal">/5</span>
+            {recentlyUpdated}
           </div>
           <div className="text-sm text-slate-600 dark:text-slate-400">
-            Avg Rating
+            Updated This Month
           </div>
         </div>
         <div className="p-6 text-center">
@@ -80,47 +74,6 @@ export default function CategoryStats({ category, tools }: CategoryStatsProps) {
           </div>
         </div>
       </div>
-      {/* Difficulty bar chart */}
-      {totalTools > 0 && (
-        <div className="mt-6 pt-6 border-t border-slate-200/60 dark:border-slate-800">
-          <div className="text-sm text-slate-700 dark:text-slate-400 mb-4 text-center">
-            Difficulty Distribution
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="flex-1 h-4 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden flex">
-              <div
-                className="h-full bg-emerald-500"
-                style={{ width: `${(beginner / totalTools) * 100}%` }}
-                title={`Beginner: ${beginner}`}
-              />
-              <div
-                className="h-full bg-amber-500"
-                style={{ width: `${(intermediate / totalTools) * 100}%` }}
-                title={`Intermediate: ${intermediate}`}
-              />
-              <div
-                className="h-full bg-red-500"
-                style={{ width: `${(advanced / totalTools) * 100}%` }}
-                title={`Advanced: ${advanced}`}
-              />
-            </div>
-            <div className="flex gap-3 text-xs text-slate-600 dark:text-slate-400">
-              <div className="flex items-center gap-1">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full" />
-                Beginner
-              </div>
-              <div className="flex items-center gap-1">
-                <div className="w-2 h-2 bg-amber-500 rounded-full" />
-                Intermediate
-              </div>
-              <div className="flex items-center gap-1">
-                <div className="w-2 h-2 bg-red-500 rounded-full" />
-                Advanced
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

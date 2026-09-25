@@ -186,7 +186,7 @@ export default async function WorkflowDetailPage({ params }: { params: Promise<{
                                 {truncate(tool.description_en || tool.description, 80)}
                               </p>
                               <div className="flex items-center gap-2">
-                                <StarRating rating={tool.rating || 4.0} size="sm" />
+                                <StarRating rating={tool.rating || 0} size="sm" />
                                 <span className="text-[10px] text-slate-400 dark:text-gray-500">
                                   ({tool.rating_count || 0})
                                 </span>

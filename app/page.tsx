@@ -7,6 +7,7 @@ import TrendingTools from '@/app/components/TrendingTools';
 import StatsBanner from '@/app/components/StatsBanner';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import type { Tool } from '@/types';
 import type { Metadata } from 'next';
@@ -22,7 +23,7 @@ const StoryCard = dynamic(() => import('@/app/components/StoryCard'), {
 
 export const metadata: Metadata = {
   title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
-  description: 'Curated directory of the best AI tools. Browse 1,300+ tools across Writing, Image, Video, Audio, Code & Productivity. Find your perfect AI tool in seconds.',
+  description: 'Curated directory of the best AI tools. Browse 500+ tools across Writing, Image, Video, Audio, Code & Productivity. Find your perfect AI tool in seconds.',
   metadataBase: new URL('https://useaitools.me'),
   alternates: {
     canonical: '/',
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
-    description: 'Curated directory of the best AI tools. Browse 1,300+ tools across 6 categories.',
+    description: 'Curated directory of the best AI tools. Browse 500+ tools across 6 categories.',
     url: 'https://useaitools.me',
     siteName: 'Use AI Tools',
     type: 'website',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Use AI Tools — Discover the Best AI Tools',
-    description: 'Curated directory of the best AI tools. Browse 1,300+ tools across 6 categories.',
+    description: 'Curated directory of the best AI tools. Browse 500+ tools across 6 categories.',
   },
 };
 
@@ -52,22 +53,31 @@ export default function Home() {
   const enrichedTools = tools.map(tool => ({
     ...tool,
     affiliate_link: getAffiliateLink(tool)
-  })) as Tool[];
+  })) as unknown as Tool[];
 
-  // Sort tools by rating + rating_count for featured selection
-  const sortedTools = [...enrichedTools].sort((a, b) => {
-    const scoreA = (a.rating || 4.0) * 100 + (a.rating_count || 0);
-    const scoreB = (b.rating || 4.0) * 100 + (b.rating_count || 0);
-    return scoreB - scoreA;
-  });
+  // Sort by most recently updated.
+  // NOTE: ratings in the dataset were fabricated and have been removed. Ordering
+  // now uses last_updated until real user ratings exist (see UserRating.tsx).
+  const sortedTools = [...enrichedTools].sort((a, b) =>
+    (b.last_updated || '').localeCompare(a.last_updated || '')
+  );
 
   // Only pass first 12 tools to client for initial load (performance optimization)
   const initialTools = sortedTools.slice(0, 12);
 
+  // Only hand the client the blog fields it actually renders.
+  // Post bodies average ~7KB and are never used client-side, so passing all 786
+  // of them serialized ~5.3MB into the RSC payload. Keep the newest 120 for
+  // search suggestions, and images only for the 5 cards that are displayed.
+  const clientBlogPosts = blogPosts.slice(0, 120).map((post, index) => ({
+    ...post,
+    content: '',
+    tldr: undefined,
+    images: index < 5 ? post.images : [],
+  }));
+
   // Select featured tools on server to prevent hydration mismatch
-  const selected: Tool[] = initialTools
-    .filter(t => t.rating && t.rating >= 4.5)
-    .slice(0, 3);
+  const selected: Tool[] = initialTools.slice(0, 3);
 
   // WebSite Schema with SearchAction
   const webSiteSchema = {
@@ -166,9 +176,17 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }}
       />
+      <div className="mb-4 sm:mb-5">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+          Browse AI Tools
+        </h2>
+        <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+          {enrichedTools.length} tools — search, filter and compare to find the right one
+        </p>
+      </div>
       <HomeClient
         initialTools={initialTools}
-        blogPosts={blogPosts}
+        blogPosts={clientBlogPosts}
         totalCount={enrichedTools.length}
       />
       <FeaturedTools tools={selected} />
@@ -206,12 +224,13 @@ export default function Home() {
               className="group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800/80 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               {post.images && post.images.length > 0 && (
-                <div className="aspect-video overflow-hidden bg-slate-100 dark:bg-gray-800">
-                  <img
+                <div className="relative aspect-video overflow-hidden bg-slate-100 dark:bg-gray-800">
+                  <Image
                     src={post.images[0].url}
                     alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
               )}
@@ -220,7 +239,7 @@ export default function Home() {
                   <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
                     {post.category}
                   </span>
-                  <span className="text-xs text-slate-400 dark:text-slate-500">
+                  <span className="text-xs text-slate-500 dark:text-slate-400">
                     {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                   </span>
                 </div>

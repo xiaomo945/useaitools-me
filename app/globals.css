@@ -8,6 +8,30 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /* A11y: default emerald-500/600 (#10b981 / #059669) and amber-500/600
+     (#f59e0b / #d97706) fall below the WCAG AA 4.5:1 contrast ratio on white
+     backgrounds (3.58:1 and 3.14:1 measured by Lighthouse). Deepen them one
+     step so every text/button using the brand colour passes AA in light mode.
+     Dark mode uses the -400 steps, which are untouched. */
+  --color-emerald-500: #047857;
+  --color-emerald-600: #047857;
+  --color-amber-500: #b45309;
+  --color-amber-600: #b45309;
+  /* slate-500 (#62748e) passes on pure white (4.76:1) but drops to 4.06-4.34:1
+     on the tinted surfaces used by badges and scene cards (#f1f5f9, #e4eefc,
+     #f9ece3). Deepen one step so it clears AA on every surface. */
+  --color-slate-500: #475569;
+  /* Category badges render white text on *-500 fills. The default 500 steps of
+     these four hues only reach 2.88-4.40:1 against white, so deepen them until
+     white text clears the 4.5:1 AA minimum. */
+  --color-orange-500: #9a3412;
+  --color-pink-500: #be185d;
+  --color-blue-500: #155dfc;
+  --color-violet-500: #7c3aed;
+  /* teal-500 (#00bba7) only reaches 2.42:1 behind white text. */
+  --color-teal-500: #0f766e;
+  /* slate-400 (#90a1b9) is 2.63:1 on white at 10px - lift to the 500 step. */
+  --color-slate-400: #64748b;
   --font-sans: var(--font-inter), sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
   --font-serif: var(--font-playfair-display), serif;

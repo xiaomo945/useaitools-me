@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 interface TrustIndicatorsProps {
   toolName: string;
-  rating?: number;
-  ratingCount?: number;
+  rating?: number | null;
+  ratingCount?: number | null;
   pricing: string;
 }
 
@@ -48,7 +48,9 @@ export default function TrustIndicators({ toolName, rating, ratingCount, pricing
                 <span className="text-xs font-medium text-slate-500 dark:text-slate-400">/5.0</span>
               </p>
               <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed mt-0.5">
-                Based on {(ratingCount || 1200).toLocaleString()}+ verified user reviews aggregated from Reddit, Trustpilot, and G2.
+                {ratingCount && ratingCount > 0
+                    ? `Based on ${ratingCount.toLocaleString()} verified user reviews.`
+                    : 'Editorial rating — no user reviews yet.'}
               </p>
             </>
           ) : (

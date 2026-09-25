@@ -1,6 +1,6 @@
 export default function StatsBanner() {
   const stats = [
-    { value: '1,300+', label: 'AI Tools', icon: '🛠️' },
+    { value: '500+', label: 'AI Tools', icon: '🛠️' },
     { value: '20+', label: 'Categories', icon: '📂' },
     { value: '700+', label: 'Reviews', icon: '⭐' },
     { value: 'Weekly', label: 'Updates', icon: '🔄' },

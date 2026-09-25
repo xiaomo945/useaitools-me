@@ -8,8 +8,8 @@ import StarRating from '@/app/components/StarRating';
 type Tool = (typeof tools)[0];
 
 export const metadata: Metadata = {
-  title: 'AI Tools Leaderboard 2026 – Top Rated AI Tools',
-  description: 'Discover the best AI tools ranked by user ratings. Compare top AI writing, image, video, audio, and productivity tools.',
+  title: 'AI Tools Leaderboard 2026 – Most Recently Updated AI Tools',
+  description: 'Browse AI tools across writing, image, video, audio, code and productivity, ordered by how recently their listing was updated.',
 };
 
 const categories = ['Writing', 'Image', 'Video', 'Audio', 'Code', 'Productivity'];
@@ -42,14 +42,14 @@ const getBadgeStyle = (rank: number) => {
 
 export default function LeaderboardPage() {
   const topTools = [...tools]
-    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+    .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
     .slice(0, 20);
 
   const categoryTopTools: Record<string, Tool[]> = {};
   categories.forEach((cat) => {
     categoryTopTools[cat] = [...tools]
       .filter((t) => t.category === cat)
-      .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+      .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
       .slice(0, 5);
   });
 
@@ -115,9 +115,8 @@ export default function LeaderboardPage() {
                       {tool.name}
                     </h3>
                     <div className="flex items-center gap-2 mt-1">
-                      <StarRating rating={tool.rating || 4.0} size="sm" />
                       <span className="text-xs text-slate-500 dark:text-gray-400">
-                        ({tool.rating_count || 0} reviews)
+                        {tool.pricing}
                       </span>
                     </div>
                   </Link>
@@ -168,7 +167,7 @@ export default function LeaderboardPage() {
                           {tool.name}
                         </div>
                         <div className="flex items-center gap-1 mt-0.5">
-                          <StarRating rating={tool.rating || 4.0} size="sm" />
+                          <span className="text-xs text-slate-500 dark:text-gray-400">{tool.pricing}</span>
                         </div>
                       </Link>
                     </div>
@@ -210,7 +209,7 @@ export default function LeaderboardPage() {
                     {tool.name}
                   </h3>
                   <div className="flex items-center gap-2 mt-1">
-                    <StarRating rating={tool.rating || 4.0} size="sm" />
+                    <span className="text-xs text-slate-500 dark:text-gray-400">{tool.pricing}</span>
                   </div>
                 </Link>
               </div>
@@ -243,7 +242,7 @@ export default function LeaderboardPage() {
                     {tool.name}
                   </h3>
                   <div className="flex items-center gap-2 mt-1">
-                    <StarRating rating={tool.rating || 4.0} size="sm" />
+                    <span className="text-xs text-slate-500 dark:text-gray-400">{tool.pricing}</span>
                   </div>
                 </Link>
               </div>

@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
+import { generateSlugFromName } from '@/lib/slug';
 
 // 动态生成 sitemap
 export const dynamic = 'force-dynamic';
@@ -55,15 +56,21 @@ function loadScenes(): string[] {
   return [];
 }
 
+function safeDate(value: string | undefined, fallback: Date): Date {
+  if (!value) return fallback;
+  const d = new Date(value);
+  return Number.isNaN(d.getTime()) ? fallback : d;
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const tools = loadTools();
   const blogPosts = loadBlogPosts();
   const workflows = loadWorkflows();
   const sceneSlugs = loadScenes();
   const baseUrl = 'https://useaitools.me';
-  
+
   const currentDate = new Date();
-  
+
   const staticPages = [
     { url: baseUrl, lastModified: currentDate, changeFrequency: 'daily' as const, priority: 1 },
     { url: `${baseUrl}/about`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.5 },
@@ -78,7 +85,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/history`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.5 },
     { url: `${baseUrl}/leaderboard`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.6 },
     { url: `${baseUrl}/help`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
-    { url: `${baseUrl}/dashboard`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.5 },
     { url: `${baseUrl}/privacy`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
     { url: `${baseUrl}/saved`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.5 },
     { url: `${baseUrl}/scenes`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.7 },
@@ -102,16 +108,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  const toolPages = tools.map((tool: { id: number }) => ({
-    url: `${baseUrl}/tools/${tool.id}`,
-    lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }));
+  // Canonical tool URLs: /tool/<slug>. The legacy /tools/<id> URLs 308-redirect
+  // here, so they must not appear in the sitemap.
+  const toolPages = (tools as unknown as { id: number; name: string; last_updated?: string }[])
+    .map((tool) => {
+      const slug = generateSlugFromName(tool.name);
+      if (!slug) return null;
+      return {
+        url: `${baseUrl}/tool/${slug}`,
+        lastModified: safeDate(tool.last_updated, currentDate),
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+      };
+    })
+    .filter((x): x is NonNullable<typeof x> => x !== null);
 
   const blogPostPages = blogPosts.map((post: { slug: string; date: string }) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.date),
+    lastModified: safeDate(post.date, currentDate),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }));
