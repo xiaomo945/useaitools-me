@@ -27,6 +27,9 @@ on:
 jobs:
   submit:
     runs-on: ubuntu-latest
+    # Best-effort notification job: a search-engine submission hiccup must
+    # NEVER redden or block the main deploy pipeline.
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
 
