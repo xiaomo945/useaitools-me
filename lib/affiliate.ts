@@ -46,14 +46,46 @@ function getFullEnvVar(toolName: string): string {
 }
 
 /**
+ * 环境变量静态映射表（客户端兜底）
+ *
+ * ⚠️ 关键：webpack 只会内联「静态书写」的 process.env.XXX，
+ * 动态写法 process.env[variableName] 在浏览器端拿不到值（客户端 process.env
+ * 只含 NEXT_PUBLIC_*）。所以这里必须逐个静态声明，
+ * 否则 'use client' 组件里 hasAffiliateLink() 恒为 false。
+ *
+ * 配套：next.config.ts 的 env 字段把这些 key 加进内联白名单。
+ */
+const AFFILIATE_ENV_MAP: Record<string, string> = {
+  AFFILIATE_RYTR: process.env.AFFILIATE_RYTR || '',
+  AFFILIATE_GRAMMARLY: process.env.AFFILIATE_GRAMMARLY || '',
+  AFFILIATE_JASPER: process.env.AFFILIATE_JASPER || '',
+  AFFILIATE_COPYAI: process.env.AFFILIATE_COPYAI || '',
+  AFFILIATE_QUILLBOT: process.env.AFFILIATE_QUILLBOT || '',
+  AFFILIATE_VEED: process.env.AFFILIATE_VEED || '',
+  AFFILIATE_PICTORY: process.env.AFFILIATE_PICTORY || '',
+  AFFILIATE_SYNTHESIA: process.env.AFFILIATE_SYNTHESIA || '',
+  AFFILIATE_DESCRIPT: process.env.AFFILIATE_DESCRIPT || '',
+  AFFILIATE_MURF: process.env.AFFILIATE_MURF || '',
+  AFFILIATE_ELEVENLABS: process.env.AFFILIATE_ELEVENLABS || '',
+  AFFILIATE_NOTION: process.env.AFFILIATE_NOTION || '',
+};
+
+/**
  * 解析联盟链接原始值（不含 UTM）
  * 优先级：短名环境变量 > 全名环境变量 > tool.affiliate_link
  */
 export function resolveAffiliateLink(tool: AffiliateTool): string {
   const shortVar = getShortEnvVar(tool.name);
   const fullVar = getFullEnvVar(tool.name);
+
+  // 1) 静态映射表 —— 客户端/服务端都能拿到
+  // 2) 动态全名变量 —— 仅服务端可用（浏览器端 process.env 无此 key）
   const envLink =
-    (shortVar && process.env[shortVar]) || process.env[fullVar] || '';
+    (shortVar && AFFILIATE_ENV_MAP[shortVar]) ||
+    AFFILIATE_ENV_MAP[fullVar] ||
+    (typeof window === 'undefined' ? process.env[fullVar] : '') ||
+    '';
+
   return envLink || tool.affiliate_link || '';
 }
 

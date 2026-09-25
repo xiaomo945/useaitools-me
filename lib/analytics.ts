@@ -20,6 +20,7 @@ export type TrackEvent =
   | 'tool_detail_view'
   | 'ab_variant_view'
   | 'gold_picks_click'
+  | 'affiliate_click'
   | 'share';
 
 interface TrackOptions {

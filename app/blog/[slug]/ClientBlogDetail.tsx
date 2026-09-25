@@ -7,6 +7,7 @@ import { Home, Share2, Copy, ChevronRight, List } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import { track } from '@/lib/analytics';
 import { formatRelativeDate } from '@/lib/format';
+import { hasAffiliateLink, getAffiliateLink, getDynamicCTA } from '@/lib/affiliate';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ReadingProgress from '@/app/components/ReadingProgress';
 import ImageFallbackHandler from './ImageFallbackHandler';
@@ -223,6 +224,50 @@ export default function ClientBlogDetail({
   const relativeDate = formatRelativeDate(post.date);
   const tocItems = extractHeadings(post.content);
 
+  // 正文中提到且已配置联盟链接的工具 —— 用于渲染 CTA
+  // 说明：联盟链接来自环境变量，next.config.ts 已把 AFFILIATE_* 内联进客户端
+  const monetizableTools = (() => {
+    const re = /\[\[link:\/tools\/(\d+)\|([^\]]+)\]\]/g;
+    const seen = new Set<number>();
+    const out: Array<{
+      id: number;
+      name: string;
+      pricing: string;
+      link: string;
+      cta: string;
+    }> = [];
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(post.content)) !== null) {
+      const id = parseInt(m[1], 10);
+      if (seen.has(id)) continue;
+      seen.add(id);
+      const t = (toolsData as any[]).find((td: any) => td.id === id);
+      if (!t || !hasAffiliateLink(t)) continue;
+      const link = getAffiliateLink(t);
+      if (!link) continue;
+      out.push({
+        id,
+        name: t.name,
+        pricing: t.pricing || '',
+        link,
+        cta: getDynamicCTA(t.pricing || '', true),
+      });
+    }
+    return out;
+  })();
+
+  const onAffiliateClick = (toolName: string, placement: string) => {
+    try {
+      track('affiliate_click', { slug, tool: toolName, placement });
+    } catch {
+      /* 埋点失败不影响跳转 */
+    }
+  };
+
+  const AFFILIATE_REL = 'sponsored nofollow noopener noreferrer';
+  const AFFILIATE_BTN =
+    'inline-flex items-center justify-center px-3 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white text-[11px] font-semibold transition-colors shrink-0';
+
   // Scroll to heading when clicking TOC item
   const scrollToHeading = (id: string) => {
     const element = document.getElementById(id);
@@ -371,6 +416,37 @@ export default function ClientBlogDetail({
             </div>
           )}
           
+          {/* Top Pick CTA —— 只对已配置联盟链接的工具展示 */}
+          {monetizableTools.length > 0 && (
+            <div className="mt-5">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 p-4 bg-white dark:bg-gray-900 border border-emerald-200 dark:border-emerald-800 rounded-xl">
+                <div className="flex-1 min-w-0">
+                  <p className="text-[11px] font-semibold uppercase tracking-wide text-emerald-700 dark:text-emerald-400">
+                    Our top pick in this guide
+                  </p>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white truncate">
+                    {monetizableTools[0].name}
+                  </p>
+                  <p className="text-xs text-slate-500 dark:text-gray-400">
+                    {monetizableTools[0].pricing || 'See site for pricing'}
+                  </p>
+                </div>
+                <a
+                  href={monetizableTools[0].link}
+                  target="_blank"
+                  rel={AFFILIATE_REL}
+                  onClick={() => onAffiliateClick(monetizableTools[0].name, 'top_pick')}
+                  className="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold transition-colors shrink-0"
+                >
+                  {monetizableTools[0].cta} →
+                </a>
+              </div>
+              <p className="mt-2 text-[11px] text-slate-500 dark:text-gray-400">
+                Some links on this page are affiliate links. We may earn a commission at no extra cost to you.
+              </p>
+            </div>
+          )}
+
           {/* Mobile TOC Button */}
           {tocItems.length > 0 && (
             <button
@@ -645,10 +721,10 @@ export default function ClientBlogDetail({
                       'Writing': 'bg-blue-500', 'Image': 'bg-violet-500', 'Video': 'bg-indigo-500',
                       'Audio': 'bg-pink-500', 'Code': 'bg-orange-500', 'Productivity': 'bg-teal-500',
                     };
+                    const affLink = hasAffiliateLink(tool) ? getAffiliateLink(tool) : '';
                     return (
-                      <Link
+                      <div
                         key={tool.id}
-                        href={`/tools/${tool.id}`}
                         className="group bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl p-3 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
                       >
                         <div className="flex items-center gap-2.5">
@@ -656,12 +732,36 @@ export default function ClientBlogDetail({
                             {tool.name.charAt(0)}
                           </div>
                           <div className="flex-1 min-w-0">
-                            <h4 className="font-semibold text-sm text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors truncate">{tool.name}</h4>
+                            <Link
+                              href={`/tools/${tool.id}`}
+                              className="block font-semibold text-sm text-slate-900 dark:text-white hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors truncate"
+                            >
+                              <h3 className="font-semibold text-sm truncate">{tool.name}</h3>
+                            </Link>
                             <span className={`text-[9px] font-semibold px-1.5 py-0.5 rounded-full ${catColors[tool.category] || 'bg-slate-500'} text-white`}>{tool.category}</span>
                           </div>
                         </div>
                         <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2 mt-1.5">{tool.description}</p>
-                      </Link>
+                        <div className="mt-2.5 flex items-center gap-2">
+                          <Link
+                            href={`/tools/${tool.id}`}
+                            className="text-[11px] font-medium text-slate-500 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors"
+                          >
+                            Details
+                          </Link>
+                          {affLink && (
+                            <a
+                              href={affLink}
+                              target="_blank"
+                              rel={AFFILIATE_REL}
+                              onClick={() => onAffiliateClick(tool.name, 'mentioned_card')}
+                              className={AFFILIATE_BTN}
+                            >
+                              {getDynamicCTA(tool.pricing || '', true)} ↗
+                            </a>
+                          )}
+                        </div>
+                      </div>
                     );
                   })}
                 </div>

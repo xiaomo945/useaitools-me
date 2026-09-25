@@ -49,9 +49,43 @@ const securityHeaders = [
   },
 ];
 
+/**
+ * 联盟链接环境变量白名单
+ *
+ * 背景：AFFILIATE_* 变量默认只在服务端可见（Next.js 只把 NEXT_PUBLIC_* 内联进
+ * 客户端 bundle）。但 HomeClient 等 'use client' 组件需要在浏览器端判断
+ * 「这个工具有没有联盟链接」并渲染 CTA，否则 hasAffiliateLink() 恒为 false，
+ * 按钮会退化成裸官网直链 —— 佣金归零。
+ *
+ * 这里显式内联到客户端。值本身只是带 affiliate id 的公开跳转链接
+ * （本来就要出现在 <a href> 上），真正需要保密的是「不写进 git 仓库」，
+ * 而这一点由 Vercel Environment Variables 保证，不受本配置影响。
+ */
+const AFFILIATE_ENV_KEYS = [
+  'AFFILIATE_RYTR',
+  'AFFILIATE_GRAMMARLY',
+  'AFFILIATE_JASPER',
+  'AFFILIATE_COPYAI',
+  'AFFILIATE_QUILLBOT',
+  'AFFILIATE_VEED',
+  'AFFILIATE_PICTORY',
+  'AFFILIATE_SYNTHESIA',
+  'AFFILIATE_DESCRIPT',
+  'AFFILIATE_MURF',
+  'AFFILIATE_ELEVENLABS',
+  'AFFILIATE_NOTION',
+] as const;
+
+const affiliateEnv = Object.fromEntries(
+  AFFILIATE_ENV_KEYS.map((key) => [key, process.env[key] ?? '']),
+) as Record<string, string>;
+
 const nextConfig: NextConfig = {
   trailingSlash: false,
   skipTrailingSlashRedirect: true,
+
+  // 让 AFFILIATE_* 在客户端组件里可读（见上方注释）
+  env: affiliateEnv,
 
   // Security: 关闭 X-Powered-By 头，减少框架暴露
   poweredByHeader: false,
