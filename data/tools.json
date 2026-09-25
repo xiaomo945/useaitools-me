@@ -15812,5 +15812,243 @@
     "skill_level": "intermediate",
     "rating": null,
     "rating_count": null
+  },
+  {
+    "id": 1555,
+    "name": "Supermaven",
+    "description": "AI code completion built for speed, with a context window large enough to pull in far more of your codebase than a typical autocomplete. Ships as a plugin for VS Code, JetBrains and Neovim, so you keep the editor you already use. A strong pick if you want inline suggestions without migrating to a whole new IDE.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://supermaven.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Autocomplete this TypeScript API client using the types defined elsewhere in the repo",
+        "image_url": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&h=800&fit=crop&auto=format&q=80"
+      },
+      {
+        "prompt": "Generate a database migration from this updated Prisma schema",
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Fast AI code completion with a large context window, as a plugin for your existing editor.",
+    "last_updated": "2026-09-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developers",
+      "Speed",
+      "Autocomplete"
+    ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "id": 1556,
+    "name": "Zencoder",
+    "description": "An AI coding agent that works at repository level from inside your IDE — writing features, repairing broken code and generating unit tests with awareness of your existing conventions. Aimed at professional teams that want agentic help without leaving their current editors.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://zencoder.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Add input validation and unit tests to this Express route handler",
+        "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&h=800&fit=crop&auto=format&q=80"
+      },
+      {
+        "prompt": "Find why the build fails after this dependency upgrade and patch it",
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI coding agent for IDEs that writes, repairs and tests code with repo-level context.",
+    "last_updated": "2026-09-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Teams",
+      "Developers",
+      "Automation"
+    ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "id": 1557,
+    "name": "Greptile",
+    "description": "AI code review and codebase question-answering. It indexes your repositories so you can ask plain-language questions about how things fit together, and posts automated review comments on pull requests. Especially useful when onboarding onto an unfamiliar codebase or reviewing large diffs.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.greptile.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Explain how authentication is wired up across this repository",
+        "image_url": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&h=800&fit=crop&auto=format&q=80"
+      },
+      {
+        "prompt": "Review this pull request for race conditions and error handling gaps",
+        "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&h=800&fit=crop&auto=format&q=80"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI code review and codebase Q&A that indexes your repositories.",
+    "last_updated": "2026-09-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams",
+      "Code Review",
+      "Onboarding"
+    ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "id": 1558,
+    "name": "Base44",
+    "description": "Describe an app in plain language and Base44 generates a working full-stack application — database, backend and interface included. Built for people who want a real, running app rather than a clickable mockup, and comfortable starting from a sentence instead of a scaffold.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://base44.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Build a booking app where clients pick a time slot and get a confirmation email",
+        "image_url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?w=1200&h=800&fit=crop&auto=format&q=80"
+      },
+      {
+        "prompt": "Create an internal inventory tracker with roles for staff and admins",
+        "image_url": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&h=800&fit=crop&auto=format&q=80"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Turn plain-language app descriptions into working full-stack applications.",
+    "last_updated": "2026-09-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Beginners",
+      "No-code",
+      "Prototyping"
+    ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "id": 1559,
+    "name": "Sesame",
+    "description": "Sesame builds conversational voice AI — speech models designed to sound like a real person in a live back-and-forth rather than a narrator reading a script. Best suited to voice assistants and interactive characters, where how something is said carries as much meaning as the words themselves.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.sesame.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Read this customer support reply in a calm, reassuring tone",
+        "image_url": "https://images.unsplash.com/photo-1534150034764-046bf225d3fa?w=1200&h=800&fit=crop&auto=format&q=80"
+      },
+      {
+        "prompt": "Narrate this short story with warm, expressive delivery",
+        "image_url": "https://images.unsplash.com/photo-1519892338195-f95e6a39cfae?w=1200&h=800&fit=crop&auto=format&q=80"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Conversational voice AI built to sound natural in live, back-and-forth speech.",
+    "last_updated": "2026-09-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Voice Assistants",
+      "Realistic Speech",
+      "Conversational"
+    ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "id": 1560,
+    "name": "Hume AI",
+    "description": "Hume works on emotion in voice — both producing expressive speech and reading emotional cues out of audio. It fits voice interfaces that should react to how someone sounds rather than only to what they said, and it also offers expression analysis across speech, text and facial video.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.hume.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Deliver this line with genuine excitement instead of flat enthusiasm",
+        "image_url": "https://images.unsplash.com/photo-1519892338195-f95e6a39cfae?w=1200&h=800&fit=crop&auto=format&q=80"
+      },
+      {
+        "prompt": "Analyse the emotional tone of this customer call recording",
+        "image_url": "https://images.unsplash.com/photo-1534150034764-046bf225d3fa?w=1200&h=800&fit=crop&auto=format&q=80"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Emotionally expressive voice AI that also reads emotional cues from audio.",
+    "last_updated": "2026-09-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Voice Assistants",
+      "Emotion",
+      "Research"
+    ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "id": 1561,
+    "name": "Cartesia",
+    "description": "Low-latency text-to-speech built for real-time use — voice agents, live translation, anywhere a pause is immediately obvious. Offers fast streaming synthesis and voice cloning through an API, which makes it a practical choice when response time matters more than squeezing out the last bit of polish.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.cartesia.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [
+      {
+        "prompt": "Synthesise this reply fast enough to keep a live voice agent call natural",
+        "image_url": "https://images.unsplash.com/photo-1534150034764-046bf225d3fa?w=1200&h=800&fit=crop&auto=format&q=80"
+      },
+      {
+        "prompt": "Clone this narrator voice and read a product walkthrough",
+        "image_url": "https://images.unsplash.com/photo-1519892338195-f95e6a39cfae?w=1200&h=800&fit=crop&auto=format&q=80"
+      }
+    ],
+    "needs_vpn": true,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Low-latency text-to-speech and voice cloning built for real-time applications.",
+    "last_updated": "2026-09-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Real-time",
+      "Voice Agents",
+      "API"
+    ],
+    "rating": null,
+    "rating_count": null
   }
 ]
