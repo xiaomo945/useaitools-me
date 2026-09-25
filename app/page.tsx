@@ -176,7 +176,14 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }}
       />
-      <h2 className="sr-only">AI tools directory</h2>
+      <div className="mb-4 sm:mb-5">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+          Browse AI Tools
+        </h2>
+        <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+          {enrichedTools.length} tools — search, filter and compare to find the right one
+        </p>
+      </div>
       <HomeClient
         initialTools={initialTools}
         blogPosts={clientBlogPosts}
