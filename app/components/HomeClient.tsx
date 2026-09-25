@@ -1703,7 +1703,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
               >
                 <span className="text-lg sm:text-2xl">{card.icon}</span>
                 <span className="text-[11px] sm:text-xs font-semibold text-slate-700 dark:text-slate-200 leading-tight">{card.label}</span>
-                <span className="text-[9px] sm:text-[10px] text-slate-400 dark:text-slate-500 hidden sm:block">{card.desc}</span>
+                <span className="text-[9px] sm:text-[10px] text-slate-500 dark:text-slate-400 hidden sm:block">{card.desc}</span>
                 <svg className="w-3 h-3 text-emerald-400 dark:text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -1803,7 +1803,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                           {tool.name.charAt(0)}
                         </span>
                         <span className="text-xs font-medium text-slate-700 dark:text-slate-300 truncate max-w-[100px]">{tool.name}</span>
-                        <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">{tool.pricing}</span>
+                        <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">{tool.pricing}</span>
                       </Link>
                     );
                   })}
@@ -1994,7 +1994,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                       <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                         {post.category}
                       </span>
-                      <span className="text-xs text-slate-400 dark:text-gray-500">
+                      <span className="text-xs text-slate-500 dark:text-gray-400">
                         {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                       </span>
                     </div>
@@ -2195,7 +2195,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
               </Link>
             )}
             <div className="flex flex-wrap justify-center gap-2 mt-4">
-              <span className="text-sm text-slate-400 dark:text-slate-500">Try searching:</span>
+              <span className="text-sm text-slate-500 dark:text-slate-400">Try searching:</span>
               {['ChatGPT', 'Midjourney', 'GitHub Copilot', 'DALL-E', 'Notion AI'].map((suggestion) => (
                 <button
                   key={suggestion}
@@ -2238,7 +2238,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                           <p className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2 mb-2">{tool.description}</p>
                           <div className="flex items-center gap-1.5">
                             <span className={`px-1.5 py-0.5 rounded-full text-[9px] font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text}`}>{tool.category}</span>
-                            <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">{tool.pricing}</span>
+                            <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">{tool.pricing}</span>
                           </div>
                         </Link>
                       );
@@ -2365,7 +2365,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                         🎲 Try Another
                       </button>
                     ) : (
-                      <p className="text-xs text-slate-400 dark:text-slate-500">Come back tomorrow for more mystery boxes!</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400">Come back tomorrow for more mystery boxes!</p>
                     )}
                   </div>
                 </div>
