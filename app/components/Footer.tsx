@@ -196,6 +196,13 @@ export default function Footer() {
               >
                 {t('footer.terms')}
               </Link>
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new Event('uaic-open-cookie-settings'))}
+                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
+              >
+                Cookie Settings
+              </button>
               <a
                 href="mailto:affiliate@useaitools.me"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"

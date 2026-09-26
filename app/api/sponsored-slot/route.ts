@@ -3,6 +3,30 @@ import { prisma } from '@/lib/prisma';
 
 export const dynamic = 'force-dynamic';
 
+/**
+ * This route exposes and mutates the ad slots that render on the public site.
+ * It used to accept every request, which let anyone inject and activate an
+ * ad slot. All admin surfaces now require the SPONSOR_ADMIN_TOKEN shared
+ * secret; when the variable is unset the route fails closed rather than
+ * leaving the hole open.
+ */
+function isAuthorized(request: NextRequest): boolean {
+  const token = process.env.SPONSOR_ADMIN_TOKEN;
+  if (!token) return false;
+  const provided =
+    request.headers.get('x-sponsor-token') ||
+    request.nextUrl.searchParams.get('token') ||
+    '';
+  return provided === token;
+}
+
+function unauthorized() {
+  return NextResponse.json(
+    { error: 'Unauthorized. Set SPONSOR_ADMIN_TOKEN to manage ad slots.' },
+    { status: 401 },
+  );
+}
+
 type SponsoredSlotPayload = {
   id?: string;
   slotName?: string;
@@ -25,6 +49,10 @@ export async function GET(request: NextRequest) {
   const slotName = searchParams.get('slotName') || '';
   const category = searchParams.get('category');
   const admin = searchParams.get('admin') === '1';
+
+  if (admin && !isAuthorized(request)) {
+    return unauthorized();
+  }
 
   try {
     if (admin) {
@@ -84,6 +112,10 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  if (!isAuthorized(request)) {
+    return unauthorized();
+  }
+
   try {
     const body = (await request.json().catch(() => ({}))) as SponsoredSlotPayload;
 
@@ -127,6 +159,10 @@ export async function POST(request: NextRequest) {
 }
 
 export async function PUT(request: NextRequest) {
+  if (!isAuthorized(request)) {
+    return unauthorized();
+  }
+
   try {
     const body = (await request.json().catch(() => ({}))) as SponsoredSlotPayload;
     const id = body.id;

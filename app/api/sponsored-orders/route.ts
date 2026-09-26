@@ -3,6 +3,49 @@ import { prisma } from '@/lib/prisma'
 import { auth } from '@/auth'
 import { checkRateLimit, getClientIp, isValidUrl, isValidLength } from '@/lib/rate-limit'
 
+/**
+ * Payment details for sponsored listings. There is no payment gateway wired up
+ * yet, so buyers complete the transfer manually and an operator activates the
+ * listing after confirming the money arrived.
+ *
+ * SPONSOR_PAYMENT_URL is meant to hold a Ko-fi / PayPal / Polar page so
+ * buyers can pay in a couple of clicks. Leave it unset to fall back to email.
+ */
+const PAYMENT_EMAIL = process.env.SPONSOR_PAYMENT_EMAIL || 'affiliate@useaitools.me'
+const PAYMENT_PAGE_URL = process.env.SPONSOR_PAYMENT_URL || ''
+
+function buildPaymentInstructions(amount: number, currency: string, orderId: string) {
+  const symbol = currency === 'USD' ? '$' : ''
+  const amountLabel = `${symbol}${amount}${currency === 'USD' ? '' : ` ${currency}`}`
+
+  // Returned as structured data rather than an HTML string so the client never
+  // has to inject markup.
+  const method = PAYMENT_PAGE_URL
+    ? { label: 'an online payment page', url: PAYMENT_PAGE_URL, kind: 'link' as const }
+    : {
+        label: `a direct email to ${PAYMENT_EMAIL}`,
+        url: `mailto:${PAYMENT_EMAIL}?subject=${encodeURIComponent(
+          `Sponsored listing order ${orderId}`,
+        )}`,
+        kind: 'mailto' as const,
+      }
+
+  return {
+    status: 'pending',
+    amount,
+    currency,
+    needsOperatorApproval: true,
+    method,
+    steps: [
+      `Send ${amountLabel} for order ${orderId} via ${method.label}.`,
+      'Keep your payment confirmation — we match it against the order ID.',
+      'Reply with the order ID plus your payment receipt.',
+      'We verify the payment and switch the listing to active within two business days.',
+      'Nothing is displayed to visitors until the payment is confirmed.',
+    ],
+  }
+}
+
 // POST /api/sponsored-orders - 创建赞助订单
 export async function POST(request: Request) {
   try {
@@ -85,26 +128,25 @@ export async function POST(request: Request) {
       )
     }
 
-    // 计算开始和结束日期
-    const startDate = new Date()
+    const now = new Date()
     const endDate = new Date()
     endDate.setDate(endDate.getDate() + pkg.duration)
 
-    // 创建订单（模拟支付成功）
+    // 订单一律从 pending 开始。早期这里写死了 status: 'active' + paymentMethod:
+    // 'demo'，等于任何注册用户点一下就能白嫖一个已生效的广告位，因此必须保留
+    // 人工确认这一步，只有运营在后台确认收款后才会变成 active。
     const order = await prisma.sponsoredOrder.create({
       data: {
         userId: user.id,
         packageId: pkg.id,
-        status: 'active', // 模拟支付成功，直接激活
+        status: 'pending',
         title,
         description: description || null,
         targetUrl,
         imageUrl: imageUrl || null,
-        startDate,
+        startDate: now,
         endDate,
-        amount: pkg.price,
-        paymentMethod: 'demo',
-        transactionId: `demo_${Date.now()}`
+        amount: pkg.price
       },
       include: {
         package: true
@@ -125,7 +167,8 @@ export async function POST(request: Request) {
           position: order.package.position,
           duration: order.package.duration
         }
-      }
+      },
+      payment: buildPaymentInstructions(pkg.price, pkg.currency, order.id)
     })
   } catch (error) {
     console.error('Failed to create sponsored order:', error)

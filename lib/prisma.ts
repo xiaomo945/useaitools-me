@@ -25,15 +25,25 @@ function getDbUrl(): string {
 }
 
 // ---- 懒加载 Prisma Client（任何错误都吞下）----
+//
+// Prisma 7 removed the `datasources` constructor option, so a plain
+// `new PrismaClient()` on SQLite throws at construction time and every read
+// silently degrades to an empty result. Local SQLite has to go through a
+// driver adapter; anything else (Postgres on Vercel) works without one.
 function tryCreateClient(): any {
   try {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const { PrismaClient } = require('@prisma/client');
-    const client = new PrismaClient({
-      datasources: { db: { url: getDbUrl() } },
-      log: ['error'],
-    });
-    return client;
+    const url = getDbUrl();
+    const options: Record<string, unknown> = { log: ['error'] };
+
+    if (url.startsWith('file:')) {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      const { PrismaLibSql } = require('@prisma/adapter-libsql');
+      options.adapter = new PrismaLibSql({ url });
+    }
+
+    return new PrismaClient(options);
   } catch (e) {
     globalForPrisma.initError = (e as Error).message;
     return undefined;
@@ -89,26 +99,35 @@ function createModelProxy(modelName: string): any {
 }
 
 // ---- 主导出：prisma.xxx.yyy() 永远不 throw ----
-const modelNames = [
-  'tool', 'category', 'collection', 'user', 'siteSubscription',
-  'sponsoredSlot', 'affiliateLink', 'contentReport', 'userInteraction',
-  'bookmark', 'blogPost', 'review', 'submission', 'discussion',
-  'notification', 'session', 'toolReview', 'toolUpdate',
-];
+//
+// 这里曾经用一份手写的模型白名单，凡是名单里没有的模型名都会被代理吞掉并返回
+// null。sponsoredPackage / sponsoredOrder 当时漏掉了，导致 /api/sponsored-packages
+// 拿到 null 后 .map 抛错、接口恒返回 500，付费收录页面只能一直显示兜底数据。
+// 改成按需生成代理：任何模型名都能用，只要求值后的调用是安全的。
 
-const prismaInternal: any = {};
-for (const name of modelNames) {
-  prismaInternal[name] = createModelProxy(name);
-}
-prismaInternal.$disconnect = async () => {
-  const client = getPrisma();
-  if (client) { try { await client.$disconnect(); } catch (_) { /* noop */ } }
-};
-prismaInternal.$connect = async () => {
-  const client = getPrisma();
-  if (!client) return;
-  try { await client.$connect(); } catch (_) { /* noop */ }
-};
+const modelCache: Record<string, any> = {};
+
+const prismaInternal: any = new Proxy({} as any, {
+  get(_target, prop: string) {
+    if (prop === '$disconnect') {
+      return async () => {
+        const client = getPrisma();
+        if (client) { try { await client.$disconnect(); } catch (_) { /* noop */ } }
+      };
+    }
+    if (prop === '$connect') {
+      return async () => {
+        const client = getPrisma();
+        if (!client) return;
+        try { await client.$connect(); } catch (_) { /* noop */ }
+      };
+    }
+    if (prop in modelCache) return modelCache[prop];
+    const proxy = createModelProxy(prop);
+    modelCache[prop] = proxy;
+    return proxy;
+  },
+});
 
 export const prisma = prismaInternal;
 

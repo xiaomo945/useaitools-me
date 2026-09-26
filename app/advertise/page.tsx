@@ -5,10 +5,10 @@ import Breadcrumbs from '@/app/components/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'Advertise on Use AI Tools — Reach AI Buyers',
-  description: 'Put your AI tool in front of thousands of active buyers. Choose from homepage features, category banners, tool recommendations, blog sponsorships, and newsletter ads.',
+  description: 'Put your AI tool in front of thousands of active buyers. Categories from $50, homepage features $150, in-content placements $300 per 30 days.',
   openGraph: {
     title: 'Advertise on Use AI Tools — Reach AI Buyers',
-    description: 'Put your AI tool in front of thousands of active buyers. Choose from homepage features, category banners, tool recommendations, blog sponsorships, and newsletter ads.',
+    description: 'Put your AI tool in front of thousands of active buyers. Categories from $50, homepage features $150, in-content placements $300 per 30 days.',
     url: 'https://useaitools.me/advertise',
     siteName: 'Use AI Tools',
     type: 'website',
@@ -33,72 +33,51 @@ interface AdOption {
   cta: string;
 }
 
+/**
+ * Rates must match the packages sold on /sponsored. These quotes used to read
+ * $15-$49 while the checkout listed $50-$300, and every visitor who compared
+ * the two pages bounced. One rate card, two views of it.
+ */
 const adOptions: AdOption[] = [
   {
+    icon: '📂',
+    title: 'Category Placement',
+    price: '$50 / 30 days',
+    description: 'Sidebar placement on the category pages your buyers browse',
+    features: [
+      'Sidebar placement on your chosen category',
+      'Reaches users already interested in your niche',
+      '6 categories: Writing, Image, Code, Audio, Video, Productivity',
+      'Click and view tracking included',
+    ],
+    cta: 'Choose this package',
+  },
+  {
     icon: '🏠',
-    title: 'Homepage Featured Spot',
-    price: '$19/month',
-    description: 'Featured placement on homepage for 30 days',
+    title: 'Homepage Feature',
+    price: '$150 / 30 days',
+    description: 'Featured position on the homepage for 30 days',
     features: [
       'Premium position on the homepage',
       'Visible to all visitors immediately',
       'Includes tool name, logo, and tagline',
-      '30-day rotation with max 3 featured tools',
+      'Priority placement, 30-day rotation',
     ],
     popular: true,
-    cta: 'Get Featured',
-  },
-  {
-    icon: '📂',
-    title: 'Category Page Banner',
-    price: '$29/month',
-    description: 'Banner ad at top of any category page',
-    features: [
-      'Top-of-page banner on your chosen category',
-      'Target users already interested in your niche',
-      '6 categories: Writing, Image, Code, Audio, Video, Productivity',
-      'Includes headline, description, and CTA link',
-    ],
-    cta: 'Place Banner',
-  },
-  {
-    icon: '⭐',
-    title: 'Tool Detail Page Recommendation',
-    price: '$15/month',
-    description: '"Recommended" badge on tool detail pages',
-    features: [
-      '"Recommended" badge next to your tool name',
-      'Higher visibility in search and filter results',
-      'Appears on your tool\'s dedicated detail page',
-      'Builds trust and credibility with buyers',
-    ],
-    cta: 'Get Recommended',
+    cta: 'Choose this package',
   },
   {
     icon: '📝',
-    title: 'Blog Post Sponsorship',
-    price: '$49/article',
-    description: 'Sponsored content within relevant blog articles',
+    title: 'In-Content Placement',
+    price: '$300 / 30 days',
+    description: 'Best available placement inside the content flow',
     features: [
-      'Sponsored section within a relevant blog post',
-      'Contextual placement alongside related content',
+      'Placement alongside related editorial content',
       'Includes product description and CTA link',
-      'Permanent placement — no expiration',
+      'Multi-position display',
+      'Custom performance report',
     ],
-    cta: 'Sponsor a Post',
-  },
-  {
-    icon: '📧',
-    title: 'Newsletter Ad',
-    price: '$39/issue',
-    description: 'Ad placement in weekly newsletter',
-    features: [
-      'Dedicated ad block in our weekly newsletter',
-      'Reaches engaged subscribers actively seeking AI tools',
-      'Includes headline, description, and CTA link',
-      'Sent every Friday to our full subscriber list',
-    ],
-    cta: 'Book Newsletter Ad',
+    cta: 'Choose this package',
   },
 ];
 
@@ -144,6 +123,40 @@ export default function AdvertisePage() {
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
               Put your AI tool in front of thousands of active buyers searching for the right solution.
+            </p>
+          </div>
+
+          {/* How buying works — there is no instant checkout yet */}
+          <div className="mb-16 rounded-2xl border border-amber-200 bg-amber-50 dark:border-amber-900/40 dark:bg-amber-950/30 p-6 sm:p-8">
+            <h2 className="text-lg font-bold text-slate-900 dark:text-white mb-4">
+              How it works
+            </h2>
+            <ol className="grid grid-cols-1 sm:grid-cols-4 gap-4 text-sm text-slate-700 dark:text-slate-300">
+              <li>
+                <span className="font-semibold text-slate-900 dark:text-white">1. Request</span>
+                <br />
+                Pick a package and submit your listing details.
+              </li>
+              <li>
+                <span className="font-semibold text-slate-900 dark:text-white">2. Pay</span>
+                <br />
+                We confirm the payment by email before going live.
+              </li>
+              <li>
+                <span className="font-semibold text-slate-900 dark:text-white">3. Go live</span>
+                <br />
+                Your ad goes up for the agreed 30 days.
+              </li>
+              <li>
+                <span className="font-semibold text-slate-900 dark:text-white">4. Track</span>
+                <br />
+                Watch clicks and views from your account.
+              </li>
+            </ol>
+            <p className="mt-4 text-xs text-slate-600 dark:text-slate-400">
+              Prices are per 30 days and match the packages listed below. A listing
+              is only shown after the payment is confirmed — nobody gets a slot by
+              submitting a request alone.
             </p>
           </div>
 
@@ -229,8 +242,8 @@ export default function AdvertisePage() {
                   ))}
                 </ul>
 
-                <a
-                  href="mailto:affiliate@useaitools.me?subject=Advertising Inquiry: {option.title}"
+                <Link
+                  href={`/sponsored?package=${encodeURIComponent(option.title)}`}
                   className={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 active:scale-[0.98] ${
                     option.popular
                       ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5'
@@ -239,7 +252,7 @@ export default function AdvertisePage() {
                   aria-label={`${option.cta} for ${option.title}`}
                 >
                   {option.cta}
-                </a>
+                </Link>
               </div>
             ))}
           </div>

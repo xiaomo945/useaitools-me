@@ -1,6 +1,6 @@
-import { PrismaClient } from '@prisma/client'
+import { createSeedClient } from './seed-client'
 
-const prisma = new PrismaClient()
+const prisma = createSeedClient()
 
 async function main() {
   console.log('🌱 开始初始化赞助套餐...')
@@ -13,53 +13,53 @@ async function main() {
   const packages = [
     {
       name: 'basic',
-      displayName: '基础版',
-      description: '适合个人开发者和小型项目',
+      displayName: 'Essential',
+      description: 'For indie developers and side projects',
       price: 50,
       currency: 'USD',
       duration: 30,
       position: 'sidebar',
       features: JSON.stringify([
-        '侧边栏展示 30 天',
-        '每月 10,000+ 曝光',
-        '点击数据统计',
-        '基础支持'
+        'Sidebar placement for 30 days',
+        '10,000+ impressions per month',
+        'Click-through tracking',
+        'Email support'
       ]),
       isActive: true
     },
     {
       name: 'pro',
-      displayName: '专业版',
-      description: '适合成长型公司和产品推广',
+      displayName: 'Featured',
+      description: 'For growing teams launching a product',
       price: 150,
       currency: 'USD',
       duration: 30,
       position: 'header',
       features: JSON.stringify([
-        '首页顶部展示 30 天',
-        '每月 50,000+ 曝光',
-        '点击数据统计',
-        '优先展示位置',
-        '专属客服支持'
+        'Homepage hero placement for 30 days',
+        '50,000+ impressions per month',
+        'Click-through tracking',
+        'Priority positioning',
+        'Priority email support'
       ]),
       isActive: true
     },
     {
       name: 'premium',
-      displayName: '高级版',
-      description: '适合企业级客户和大型推广',
+      displayName: 'Enterprise',
+      description: 'For companies running a serious launch',
       price: 300,
       currency: 'USD',
       duration: 30,
       position: 'inline',
       features: JSON.stringify([
-        '内容流嵌入展示 30 天',
-        '每月 100,000+ 曝光',
-        '点击数据统计',
-        '最佳展示位置',
-        '专属客户经理',
-        '定制化报告',
-        '多位置展示'
+        'In-content placement for 30 days',
+        '100,000+ impressions per month',
+        'Click-through tracking',
+        'Best available positioning',
+        'Dedicated account contact',
+        'Custom performance report',
+        'Multi-placement coverage'
       ]),
       isActive: true
     }

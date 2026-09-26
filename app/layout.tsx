@@ -6,6 +6,7 @@ import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 import PageProgress from "./components/PageProgress";
 import BackToTop from "./components/BackToTop";
+import CookieConsent from "./components/CookieConsent";
 import MobileNav from "./components/MobileNav";
 import ThemeToggle from "./components/ThemeToggle";
 import SoundToggle from "./components/SoundToggle";
@@ -194,6 +195,9 @@ export default function RootLayout({
           </ErrorBoundary>
           <div aria-live="polite" aria-atomic="true" className="sr-only" />
           <Analytics />
+          <Suspense fallback={null}>
+            <CookieConsent />
+          </Suspense>
           <Suspense fallback={null}>
             <BackToTop />
           </Suspense>

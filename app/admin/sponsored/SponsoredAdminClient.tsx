@@ -178,7 +178,10 @@ function EditModal({ row, onClose, onSaved }: {
     try {
       const res = await fetch('/api/sponsored-slot', {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'x-sponsor-token': window.sessionStorage.getItem(TOKEN_KEY) || '',
+        },
         body: JSON.stringify({
           id: form.id,
           slotName: form.slotName,
@@ -407,18 +410,36 @@ function EditModal({ row, onClose, onSaved }: {
   );
 }
 
+const TOKEN_KEY = 'uaic-sponsor-admin-token';
+
 export default function SponsoredAdminClient() {
   const [slots, setSlots] = useState<SponsoredSlotRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [editRow, setEditRow] = useState<SponsoredSlotRow | null>(null);
+  const [token, setToken] = useState('');
+  const [tokenReady, setTokenReady] = useState(false);
 
-  const loadSlots = async () => {
+  // The ad-slot API now requires SPONSOR_ADMIN_TOKEN, otherwise anyone on the
+  // internet could create or activate a slot. Keep the secret in this browser
+  // session only so it never ends up in a bundle.
+  useEffect(() => {
+    const stored = window.sessionStorage.getItem(TOKEN_KEY) || '';
+    setToken(stored);
+    setTokenReady(Boolean(stored));
+  }, []);
+
+  const loadSlots = async (value?: string) => {
+    const used = value ?? token;
     setLoading(true);
     try {
-      const res = await fetch('/api/sponsored-slot?admin=1');
+      const res = await fetch('/api/sponsored-slot?admin=1', {
+        headers: used ? { 'x-sponsor-token': used } : undefined,
+      });
       if (res.ok) {
         const data = await res.json();
         setSlots((data.slots || []) as SponsoredSlotRow[]);
+      } else {
+        setSlots([]);
       }
     } catch {
       // ignore
@@ -429,14 +450,28 @@ export default function SponsoredAdminClient() {
 
   useEffect(() => {
     loadSlots();
-  }, []);
+  }, [token]);
+
+  const applyToken = () => {
+    if (!token.trim()) return;
+    window.sessionStorage.setItem(TOKEN_KEY, token.trim());
+    setTokenReady(true);
+    loadSlots(token.trim());
+  };
+
+  const clearToken = () => {
+    window.sessionStorage.removeItem(TOKEN_KEY);
+    setToken('');
+    setTokenReady(false);
+    setSlots([]);
+  };
 
   const handleToggle = async (row: SponsoredSlotRow) => {
     const nextStatus = row.status === 'active' ? 'inactive' : 'active';
     try {
       const res = await fetch('/api/sponsored-slot', {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'x-sponsor-token': token },
         body: JSON.stringify({ id: row.id, status: nextStatus }),
       });
       if (res.ok) {
@@ -472,6 +507,46 @@ export default function SponsoredAdminClient() {
             + 新增赞助位
           </Link>
         </div>
+
+        {!tokenReady && (
+          <div className="mb-6 rounded-xl border border-amber-300 bg-amber-50 dark:bg-amber-950/40 p-4">
+            <p className="text-sm font-medium text-amber-900 dark:text-amber-200">需要操作员令牌</p>
+            <p className="mt-1 text-xs text-amber-800 dark:text-amber-300">
+              广告位接口现在要求 SPONSOR_ADMIN_TOKEN，否则任何人都能往站点注入广告。把令牌填在下面，只保存在当前浏览器会话。
+            </p>
+            <div className="mt-3 flex gap-2">
+              <input
+                type="password"
+                value={token}
+                onChange={(e) => setToken(e.target.value)}
+                placeholder="SPONSOR_ADMIN_TOKEN"
+                className="flex-1 rounded-lg border border-amber-300 dark:border-amber-800 bg-white dark:bg-gray-900 px-3 py-2 text-sm"
+              />
+              <button
+                type="button"
+                onClick={applyToken}
+                className="rounded-lg bg-amber-600 px-4 py-2 text-sm font-medium text-white hover:bg-amber-700"
+              >
+                使用
+              </button>
+            </div>
+          </div>
+        )}
+
+        {tokenReady && (
+          <div className="mb-4 flex items-center justify-between gap-3 rounded-lg bg-slate-50 dark:bg-gray-800/60 px-3 py-2">
+            <span className="text-xs text-slate-600 dark:text-slate-400">
+              操作员令牌已启用（当前会话）
+            </span>
+            <button
+              type="button"
+              onClick={clearToken}
+              className="text-xs text-slate-500 underline underline-offset-2 hover:text-slate-800 dark:hover:text-slate-200"
+            >
+              清除
+            </button>
+          </div>
+        )}
 
         {loading ? (
           <div className="text-slate-500 dark:text-slate-400 text-sm py-6">加载中...</div>
