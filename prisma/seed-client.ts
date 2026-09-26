@@ -19,10 +19,15 @@ export function createSeedClient(): PrismaClient {
   const url = getDbUrl();
   const options: Record<string, unknown> = {};
 
-  if (url.startsWith('file:')) {
+  // Same adapter rule as lib/prisma.ts: both a local file and a remote
+  // Turso/libSQL server need it, otherwise Prisma 7 refuses to construct.
+  if (url.startsWith('file:') || url.startsWith('libsql:')) {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const { PrismaLibSql } = require('@prisma/adapter-libsql');
-    options.adapter = new PrismaLibSql({ url });
+    const authToken = process.env.DATABASE_AUTH_TOKEN;
+    options.adapter = new PrismaLibSql(
+      authToken ? { url, authToken } : { url },
+    );
   }
 
   return new PrismaClient(options);

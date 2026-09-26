@@ -28,8 +28,8 @@ function getDbUrl(): string {
 //
 // Prisma 7 removed the `datasources` constructor option, so a plain
 // `new PrismaClient()` on SQLite throws at construction time and every read
-// silently degrades to an empty result. Local SQLite has to go through a
-// driver adapter; anything else (Postgres on Vercel) works without one.
+// silently degrades to an empty result. SQLite (both a local file and a remote
+// Turso/libSQL server) therefore has to go through a driver adapter.
 function tryCreateClient(): any {
   try {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -37,10 +37,18 @@ function tryCreateClient(): any {
     const url = getDbUrl();
     const options: Record<string, unknown> = { log: ['error'] };
 
-    if (url.startsWith('file:')) {
+    // `file:` is the local dev database; `libsql:` is a remote Turso database.
+    // Vercel has a read-only filesystem and throwaway containers, so a local
+    // file cannot persist anything there - the deployed site must use Turso.
+    if (url.startsWith('file:') || url.startsWith('libsql:')) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       const { PrismaLibSql } = require('@prisma/adapter-libsql');
-      options.adapter = new PrismaLibSql({ url });
+      // A remote libSQL server authenticates with a token that lives in a
+      // separate variable, since a URL cannot carry it safely.
+      const authToken = process.env.DATABASE_AUTH_TOKEN;
+      options.adapter = new PrismaLibSql(
+        authToken ? { url, authToken } : { url },
+      );
     }
 
     return new PrismaClient(options);
