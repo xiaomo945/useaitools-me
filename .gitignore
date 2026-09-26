@@ -40,6 +40,12 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# local sqlite databases (regenerate with: npx prisma db push && npx tsx prisma/seed-sponsored.ts)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
 # vercel
 .vercel
 
