@@ -159,6 +159,12 @@ https://useaitools.me/api/sponsored-packages
    ```
    把它复制下来
 5. 点右上角账号头像 → **API Tokens** → **Create Token**，复制生成的那串 token（很长，注意别漏字符）
+
+   > ⚠️ **这是整份清单最容易出错的一步**，请严格按这个来：
+   > - Create Token 页面上，**Database 一栏要选中你刚建的 `useaitools` 那个库**。留空或选错库，生成的 token 就对不上这个库
+   > - 页面上会同时出现连接串和 token 两个值。**token 是以 `eyJ` 开头、总长约 190~200 字符的那一串**。别把连接串（`libsql://` 开头）或别的什么东西误当成 token
+   > - token **只完整显示一次**，刷新页面就再也看不到了，所以现在就复制出来
+   > - 复制完对照一下：开头应该是 `eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.`，末尾是随机字符，中间没有空格、没有换行
 6. 回到 Vercel（**https://vercel.com/xiaomo945/useaitools-me-9tcz**），Settings → Environment Variables → Add New：
    - **Key**：`DATABASE_URL`
    - **Value**：第 4 步那条 `libsql://...` 连接串
@@ -186,10 +192,16 @@ https://useaitools.me/api/sponsored-packages
 
    > 这两条会自动使用 `DATABASE_URL`，灌的是 Turso 上的库，不是本地文件。
 
-   > 如果第 8 步报错，最常见的原因是 token 复制少了字符。Turso 的 token 很长，建议整段复制。报错了把内容发我。
+   > 如果第 8 步报 `401` 或 `invalid JWT token`，说明 token 不对（多半是从别的页面误抄了别的值，或漏了尾部字符）。报错原文直接发我，别自己反复试。
 
 **怎么验证**：
 - 打开 `https://useaitools.me/api/sponsored-packages`，返回内容里应该能看到真实的三个套餐（Essential / Featured / Enterprise），不再是 `[]`
+- 如果返回 `{"success":true,"packages":[]}`，说明库还没接上，回到第 8 步检查 token
+
+> **诊断小抄**：token 对不对，看报错就知道——
+> - `invalid JWT token: can't be decoded with any of the existing keys` → token 不属于这个库，或已被吊销。回 Turso 重新 Create Token
+> - `JWT error: JSON error` → 复制时被截断或混入了空格/换行
+> - 连接超时 → 区域选错了，回 Turso 换一个离你近的区域重建库
 
 > 不推荐用 Vercel Postgres：那要改 `prisma/schema.prisma` 的 provider，改动面大。Turso 省事得多。
 
