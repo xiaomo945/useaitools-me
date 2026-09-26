@@ -124,14 +124,18 @@ Turso 是专门给这种场景做的在线 SQLite，免费额度够一个小站�
    - **Key**：`DATABASE_AUTH_TOKEN`
    - **Value**：第 5 步那个 token
    - 三个全勾，Save
-8. 装一下命令行工具，把表结构和套餐数据灌进去。在本项目目录下执行：
+
+8. **把表和数据灌进去**。在项目目录下执行两条命令：
    ```
-   npm i -g @turso/cli
-   turso auth login
-   turso db shell useaitools < prisma/schema.sql   -- 如果没有 schema.sql 就跳过
+   npx prisma db push
+   npm run db:seed
    ```
-   然后手动把本地那 3 条套餐录进去（或者在网站 `/sponsored` 页面下单，后台确认）。
-   > 更简单的方式：让我来灌，你说一声就行。
+   这两条命令会自动使用你刚配的 `DATABASE_URL`，所以灌的是 Turso 上的库，不是本地文件。
+
+   > 如果第 8 步报错，把报错内容发我，我来看看。常见的报错是 token 复制少了字符（Turso 的 token 很长）。
+
+**验证第 3 件是否成功**：
+访问 `https://useaitools.me/sponsored`，刷新后能看到真实套餐名 **Essential / Featured / Enterprise** 而不是兜底内容。
 
 #### 方案 C：用 Vercel Postgres（约 20 分钟，代码要改）
 
