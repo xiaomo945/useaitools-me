@@ -9,7 +9,7 @@
 | 项目 | 状态 |
 | --- | --- |
 | 线上站点 | 活着，能访问 |
-| 代码 | 已推送到 GitHub `main`（最新 `417410c`） |
+| 代码 | 已推送到 GitHub `main`，最新提交见文件末尾 |
 | 线上版本 | **已是新版**。新版销售页标题、Cookie 同意层都在线上生效了 |
 | Git 连接 | **正常**，仓库 `xiaomo945/useaitools-me` 已连接 |
 | 付费收录功能 | **不能用**。线上数据库读出来是空数组，订单存不下来 |
@@ -130,6 +130,16 @@ https://useaitools.me/api/sponsored-packages
 > 因为代码第 15 行写的是 `if (!token) return false` —— 没配令牌时它同样拒绝一切请求（fail-closed 是对的，但让你没法区分）。
 > 所以**只有"带令牌返回 200"这一条才算真的配对了**。如果你已经重新部署完了，直接把这句话发我：「配好了」，我来验。
 
+**⛔ 顺手删掉一个隐患：`NEXT_PUBLIC_SPONSOR_ADMIN_TOKEN`**
+
+这个变量**代码里根本没用到**（我全项目搜过，零引用）。但它的名字带了 `NEXT_PUBLIC_` 前缀，这个前缀的意思是"**把这个值编译进浏览器里的 JS**"。
+
+危险在哪：现在虽然没人用它，所以还没泄漏。但只要哪天有人写了 `process.env.NEXT_PUBLIC_SPONSOR_ADMIN_TOKEN`，**你的管理员令牌就会直接出现在网页源代码里，全世界都能看到**，然后任何人都能进后台改广告位。
+
+**做法**：进 Vercel → Environment Variables，把 `NEXT_PUBLIC_SPONSOR_ADMIN_TOKEN` 这一条**删掉**。只保留不带 `NEXT_PUBLIC_` 的 `SPONSOR_ADMIN_TOKEN`。
+
+> 本地的 `.env.local` 里也有一份同样的变量，同样建议删掉，让本地跟线上保持一致。
+
 ---
 
 ### 第 2 件：换掉本地数据库（不做的话，广告位卖不出去）
@@ -158,12 +168,23 @@ https://useaitools.me/api/sponsored-packages
    - **Key**：`DATABASE_AUTH_TOKEN`
    - **Value**：第 5 步那个 token
    - 三个全勾，Save
-8. **把表和数据灌进云端库**。在项目目录下执行两条命令：
+8. **把表和数据灌进云端库**。在项目目录下执行：
+
+   第一步，先在终端里执行这一行（把 `.env.local` 里的配置读进当前环境）：
    ```
-   npx prisma db push
+   set -a && . ./.env.local && set +a
+   ```
+
+   第二步，执行这两条：
+   ```
+   npx prisma db push --schema=./prisma/schema.prisma
    npm run db:seed
    ```
-   这两条命令会自动使用刚才配的 `DATABASE_URL`，灌的是 Turso 上的库，不是本地文件。
+
+   > ⚠️ **第一条命令不能单跑**。`npx prisma db push` 会直接失败，终端只会打出一行提示让你指定 schema，不会执行任何操作。必须带上 `--schema=./prisma/schema.prisma`。
+   > 原因：项目的 Prisma 配置放在 `prisma/config` 里，不是默认位置，Prisma CLI 光看当前目录找不到。
+
+   > 这两条会自动使用 `DATABASE_URL`，灌的是 Turso 上的库，不是本地文件。
 
    > 如果第 8 步报错，最常见的原因是 token 复制少了字符。Turso 的 token 很长，建议整段复制。报错了把内容发我。
 
