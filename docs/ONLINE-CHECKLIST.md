@@ -22,21 +22,31 @@
 
 ### 第 1 件：重连 Git（不做的话，以后每次改代码都要手动点）
 
-**为什么必须先做**： hooked 断了以后，你 push 到 GitHub，Vercel 不会自动部署。每次都得手动点"Deploy"，太累。
+**为什么必须先做**： Git 断连以后，你 push 到 GitHub，Vercel 不会自动部署，每次都得手动点部署，太累。
+
+**先说一个坑**：`https://vercel.com/dashboard` 这个网址**已经不存在了**，打开会显示 404。别用它。
+
+**正确的入口**是这个（直接复制粘贴到浏览器地址栏）：
+
+```
+https://vercel.com/xiaomo945/useaitools-me-9tcz
+```
+
+打开后你会进入项目页面。从这里点 **Settings** → **Git**。
 
 **怎么做**（约 3 分钟）：
 
-1. 打开网址：**https://vercel.com/dashboard**
-2. 登录后，左侧项目列表里找 `useaitools-me`，点它
-3. 进入项目后，点顶部导航栏的 **Settings**
-4. 左侧菜单点 **Git**
-5. 如果看到 "Connected to GitHub / xiaomo945/useaitools-me"，说明正常，跳过
-   如果看到 **Disconnected** 或者 "Connect Git Repository" 按钮，继续往下
-6. 点 **Connect Git Repository** 按钮
-7. 弹窗里选 **GitHub**，然后点 **Install Vercel App** 或 **Connect**
-8. GitHub 会弹一个授权页，看清楚要授权什么，点 **Authorize Vercel**
-9. 回到 Vercel，选择仓库 `xiaomo945/useaitools-me`，点 **Connect**
-10. 等它转圈几秒，页面顶部出现 **Your project is now connected** 就成功了
+1. 打开上面那个网址，用 xiaomo945 账号登录
+2. 进去后点顶部的 **Settings**
+3. 左侧菜单点 **Git**
+4. 如果看到 "Connected to GitHub / xiaomo945/useaitools-me"，说明正常，跳过
+   如果看到连接选项，继续往下
+5. 页面上会让你选"用哪个身份连接"，认准带 **xiaomo945** 的那一项
+6. 点连接，GitHub 会弹授权页，点 **Authorize Vercel**
+7. 回到 Vercel，选择仓库 `xiaomo945/useaitools-me`，点 **Connect**
+8. 等它转圈几秒，页面顶部出现连接成功的提示就完成了
+
+> 页面上如果出现 **Origin 团队** 之类的字样，先别管它，按第 5 步选 **xiaomo945 个人账号**。那通常只是提示这个仓库在团队里也有记录，不是让你选的。
 
 **怎么验证成功**：
 - 回到这个项目的 **Deployments** 页签，能看到一条新的部署记录
@@ -54,11 +64,10 @@
 
 **怎么做**（约 5 分钟）：
 
-1. 打开：**https://vercel.com/dashboard**
-2. 点左侧的 `useaitools-me` 项目
-3. 点顶部 **Settings**
-4. 左侧菜单点 **Environment Variables**
-5. 点右上角 **Add New**
+1. 打开：**https://vercel.com/xiaomo945/useaitools-me-9tcz**（进项目页）
+2. 点顶部 **Settings**
+3. 左侧菜单点 **Environment Variables**
+4. 点右上角 **Add New**
 
 然后**填 2 个变量**（其他的先不用填，等需要再说）：
 
@@ -143,6 +152,19 @@ Turso 是专门给这种场景做的在线 SQLite，免费额度够一个小站�
 
 ---
 
+### 关于页面上出现的 "Origin 团队"
+
+你在 Git 设置页看到 "联系 Origin 团队" 这一行，不用管它，它通常只是一句提示，不是让你点的按钮。
+
+Vercel 项目可以挂在**个人账号**下，也可以挂在**团队**下。从项目里的记录看，这个项目的团队 ID 确实存在，说明它挂着某个团队。但你现在的操作全部在 **xiaomo945 个人账号**下做，**选个人账号就好**，理由：
+
+- 免费版（Hobby）本来就不适合团队管理，团队会带来额外的权限审批环节
+- 个人账号更简单，以后出问题也容易排查
+
+**如果点下去提示没权限**：说明这个仓库确实被团队占用了。那就换个思路做第 2 件（配环境变量），跳过 Git 重连，用别的办法上线。
+
+---
+
 ## 二、做完之后怎么确认一切正常
 
 在浏览器里依次打开这几个网址，对照下表检查：
@@ -169,7 +191,7 @@ Turso 是专门给这种场景做的在线 SQLite，免费额度够一个小站�
    git commit -m "简单说明这次改了什么"
    git push
    ```
-3. 去 https://vercel.com/dashboard 看部署进度，自动的，不用点
+3. 打开 https://vercel.com/xiaomo945/useaitools-me-9tcz 看部署进度，自动的，不用点
 
 **如果 Git 一直连不上**，还有个笨办法：
 在 Vercel 项目的 **Deployments** 页签，点右上角的 **Deploy** 按钮，可以手动部署当前 GitHub 上的代码。
