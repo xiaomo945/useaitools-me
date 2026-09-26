@@ -117,12 +117,13 @@ export async function PATCH(request: Request) {
     })
 
     const buyerEmail = (order.user as any)?.email
+    let notificationWarning: string | undefined
     if (buyerEmail && status === 'active') {
       const currency = order.package?.currency || 'USD'
       const amount = `${currency === 'USD' ? '$' : ''}${order.amount}${currency === 'USD' ? '' : ` ${currency}`}`
       const when = endDate ? new Date(endDate).toLocaleDateString('en-US') : 'the agreed date'
 
-      await sendEmail({
+      const emailResult = await sendEmail({
         to: buyerEmail,
         subject: 'Your sponsored listing is now live',
         html: `Hi ${(order.user as any)?.name || 'there'},<br><br>
@@ -134,9 +135,25 @@ export async function PATCH(request: Request) {
           <a href="https://useaitools.me/sponsored">useaitools.me/sponsored</a>.`,
         text: `Your sponsored listing "${order.title}" is now live on Use AI Tools. Runs until ${when}.`,
       })
+
+      // Payment is already taken and the listing is already live, so a failed
+      // notification must not roll the status back. Surface it instead: an
+      // operator who believes the email went out may never contact the buyer.
+      if (!emailResult.success) {
+        console.error('[sponsored-orders] buyer notification failed:', emailResult.error)
+        notificationWarning = `Order is live, but the confirmation email was not sent: ${emailResult.error}. Contact ${buyerEmail} manually.`
+      } else if (emailResult.skipped === 'no-resend-key') {
+        notificationWarning = `Order is live, but RESEND_API_KEY is not configured, so ${buyerEmail} was not emailed. Contact them manually.`
+      }
     }
 
-    return NextResponse.json({ success: true, order: { id: updated.id, status: updated.status } })
+    const response: Record<string, unknown> = {
+      success: true,
+      order: { id: updated.id, status: updated.status },
+    }
+    if (notificationWarning) response.warning = notificationWarning
+
+    return NextResponse.json(response)
   } catch (error) {
     console.error('Failed to update sponsored order:', error)
     return NextResponse.json(

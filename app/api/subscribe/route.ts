@@ -79,8 +79,11 @@ export async function POST(request: NextRequest) {
     if (!wasReactivation) {
       const emailPayload = renderWelcomeEmail(email, name || undefined);
       const result = await sendEmail(emailPayload);
-      if (!result.success && process.env.NODE_ENV === 'development') {
-        console.warn('[subscribe] Welcome email failed:', result.error);
+      // A subscription must survive an email failure, so this stays
+      // non-blocking. Log it unconditionally though: silently dropping the
+      // welcome email leaves the subscriber with an unconfirmed signup.
+      if (!result.success) {
+        console.error('[subscribe] Welcome email failed:', result.error);
       }
     }
 

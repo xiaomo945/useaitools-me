@@ -38,6 +38,7 @@ export default function SponsoredOrdersAdminPage() {
   const [orders, setOrders] = useState<AdminOrder[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [warning, setWarning] = useState('');
   const [busy, setBusy] = useState('');
 
   useEffect(() => {
@@ -83,6 +84,7 @@ export default function SponsoredOrdersAdminPage() {
     if (!value) return
     setBusy(orderId)
     setError('')
+    setWarning('')
     try {
       const res = await fetch('/api/sponsored-orders/admin', {
         method: 'PATCH',
@@ -97,6 +99,7 @@ export default function SponsoredOrdersAdminPage() {
         setError(data.error || 'Failed to update order')
         return
       }
+      if (data.warning) setWarning(data.warning)
       await loadOrders(value)
     } catch {
       setError('Network error while updating order')
@@ -165,6 +168,13 @@ export default function SponsoredOrdersAdminPage() {
         {error && (
           <div role="alert" className="mb-6 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800">
             {error}
+          </div>
+        )}
+
+        {warning && (
+          <div role="status" className="mb-6 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900">
+            <span className="font-semibold">Heads up: </span>
+            {warning}
           </div>
         )}
 

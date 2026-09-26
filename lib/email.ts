@@ -21,23 +21,26 @@ export type EmailPayload = {
 };
 
 export type EmailResult =
-  | { success: true; messageId?: string }
+  | { success: true; messageId?: string; skipped?: 'no-resend-key' }
   | { success: false; error: string };
 
 /**
- * Send an email via Resend. Returns a no-op success when no API key is
- * configured (development mode) so callers can treat email as best-effort.
+ * Send an email via Resend.
+ *
+ * Without an API key this deliberately does not throw - callers still get a
+ * result object. But it reports `skipped: 'no-resend-key'` instead of claiming
+ * plain success, because callers that ignore the result would otherwise tell
+ * an operator "email sent" while nothing was ever delivered. The warning is
+ * logged on every run, not just in development, for the same reason.
  */
 export async function sendEmail(payload: EmailPayload): Promise<EmailResult> {
   if (!RESEND_API_KEY) {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('[email:dev] Would send:', {
-        to: payload.to,
-        subject: payload.subject,
-        from: payload.from || FROM_ADDRESS,
-      });
-    }
-    return { success: true };
+    console.warn('[email] RESEND_API_KEY is not set - mail was NOT delivered:', {
+      to: payload.to,
+      subject: payload.subject,
+      from: payload.from || FROM_ADDRESS,
+    });
+    return { success: true, skipped: 'no-resend-key' };
   }
 
   try {
