@@ -56,7 +56,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "OpenAI开发的强大图像生成工具，通过文字描述生成图片。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "OpenAI's text-to-image model, available inside ChatGPT, the OpenAI API and Bing Image Creator.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -90,7 +90,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "开源的AI图像生成工具，可以本地部署，高度可定制。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "The open-weights image model behind much of the generative art ecosystem.",
     "last_updated": "2026-09-24",
     "skill_level": "advanced",
     "best_for": [
@@ -124,7 +124,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "集成在Notion中的AI助手，帮助写作、总结、翻译等。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "AI built directly into Notion workspaces: drafts and summarizes docs, answers questions across your wiki and databases, and fills database properties with AI",
     "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
@@ -158,7 +158,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "OpenAI的大语言模型，可以对话、写作、编程、分析等。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "OpenAI's conversational assistant for writing, analysis, coding, data and image work, with voice mode, file and document upload, and web search on paid plans.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -260,7 +260,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI视频编辑和生成平台，专业视频制作工具。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "A browser suite for AI video generation and editing: text-to-video, image-to-video, motion brush, inpainting and rotoscoping on a single timeline.",
     "last_updated": "2026-09-24",
     "skill_level": "advanced",
     "best_for": [
@@ -328,7 +328,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "OpenAI的语音转文字工具，支持多种语言。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "OpenAI's open-source speech-to-text model. Runs locally or through an API, transcribes 90+ languages, and produces punctuation and timestamps for captions.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -396,7 +396,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Obsidian笔记软件的AI插件，增强知识管理。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "An Obsidian community plugin that brings chat, embeddings and command-based AI actions into your vault, so answers come from your own notes.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -430,7 +430,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "OpenAI的最新视频生成模型，能创建高质量视频。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "OpenAI's video generation model. Creates short clips from text with scene continuity and camera movement, and is available inside the Sora app and ChatGPT.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -464,7 +464,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI代码补全工具，支持多种编程语言和IDE。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "An AI coding assistant with autocomplete and chat that can run fully local or self-hosted, with team-level policy controls over what code the model sees.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -532,7 +532,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Adobe的创意AI工具，用于生成图像、文字效果等。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Adobe's generative image and video models, wired into Photoshop, Illustrator and Express. Generative fill, text-to-image and commercially safe training data.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -566,7 +566,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Anthropic的先进AI助手，擅长推理、写作、分析和编程任务。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Anthropic's assistant for long documents, writing and analysis, with a large context window, Projects for grouped work, and Artifacts for live code",
     "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
@@ -600,7 +600,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Google的多模态AI助手，能理解文本、图像、音频等。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Google's multimodal assistant, connected to Search, Workspace and Android. Reads images, files and video, and works across Gmail, Docs and Sheets.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -634,7 +634,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI写作平台，用于创建SEO优化的文章、博客和营销文案。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "A content marketing platform for AI article drafting, SEO-optimized copy and brand-voice chat, with integrations for publishing workflows.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -668,7 +668,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI写作助手，帮助快速创建高质量内容。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "The most affordable AI writing tool trusted by 10M+ creators worldwide.",
     "use_cases": [
       {
         "title": "SEO Blog Posts",
@@ -727,7 +727,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI驱动的改写和写作工具，帮助提高词汇量和风格。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Paraphrasing, grammar checking, summarization and citation tools aimed at students and editors, with a browser extension and Word add-in.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -854,7 +854,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "自主AI代理，能够自动完成复杂任务而无需人工提示。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "One of the first open-source autonomous agent experiments. It chains model calls to pursue a goal with tools and memory; maintained by the community",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -888,7 +888,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Web-based AI agent platform，让用户配置和部署自主AI代理。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "A browser-based autonomous agent: give it a goal and it plans, runs steps and reports results without you driving each turn.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -922,7 +922,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI代理协作框架，让多个AI代理协同工作完成任务。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "An open-source Python framework for orchestrating role-based multi-agent teams, with Flows for deterministic automation and tracing for debugging.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -956,7 +956,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI驱动的SEO优化平台，帮助内容在搜索引擎中获得更好排名。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "SEO content tooling that scores drafts against currently ranking pages and gives keyword, structure and internal-link guidance while you write.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -990,7 +990,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI内容优化和研究平台，帮助创建SEO友好的高质量内容。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Researches a query, extracts the questions and headings competitors cover, then drafts briefs and content around the gaps.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1024,7 +1024,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI内容智能平台，通过内容策略和优化提升有机搜索流量。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "A content strategy platform that uses topic models to plan content clusters, audit existing pages and prioritize by competitive gap and authority.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1058,7 +1058,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI法律助手，帮助律师进行法律研究、合同审查和案例分析。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "An AI assistant for law firms and tax teams, grounded in legal research with domain-tuned models and citations back to source material.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1092,7 +1092,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI金融助手，帮助分析投资、优化投资组合和财务规划。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "An AI resume and cover letter builder with ATS-oriented templates, bullet rewriting and a job-specific tailoring flow.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1126,7 +1126,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Khan Academy的AI学习助手，提供个性化辅导和教育支持。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Khan Academy's AI tutor: Socratic-style guidance for students across subjects, plus lesson planning and grading helpers for teachers.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1160,7 +1160,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI驱动的语言学习平台，提供个性化课程和AI辅导。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Duolingo's top tier, adding roleplay conversations with characters and Explain My Answer on top of the standard lesson path.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1194,7 +1194,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI增强的学习平台，智能生成抽认卡、测验和学习计划。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Generates flashcards, practice tests and explanations from your own notes or textbooks, with adaptive study modes.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1228,7 +1228,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "基于浏览器的3D设计工具，AI辅助创建3D模型和动画。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "A 3D design tool with prompt-to-3D generation, materials and animation, exporting interactive scenes for the web.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1262,7 +1262,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI 3D内容创作平台，从文本或图像生成3D模型。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Generates 3D models from text or reference images, with texturing, rigging and exports sized for game engines and 3D printing.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1296,7 +1296,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI图像生成平台，专注于游戏资产、概念艺术和3D纹理。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "An image generation platform with fine-tuned models, canvas editing, upscaling and asset pipelines aimed at game and product designers.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1330,7 +1330,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI音乐生成器，为视频、播客和游戏创建免版税音乐。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Generates royalty-free instrumental music by mood, genre and length, with section and stem-level editing for video and podcast beds.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1364,7 +1364,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI作曲家，创作古典、电影配乐和电子风格的原创音乐。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "An AI composer for classical and cinematic scores, with style presets, MIDI export and rights registration for the tracks it generates.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1398,7 +1398,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI音乐创作平台，为内容创作者提供自适应的背景音乐。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Generates background music matched to a video's mood and scene length, with per-scene control and simple licensing for creators.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1432,7 +1432,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI角色聊天平台，可以与历史人物、虚构角色和自定义角色对话。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "A chat platform for roleplaying with user-created characters, with long-running memory, group chats and voice calls on paid tiers.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1466,7 +1466,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Quora的AI聊天平台，集成多个AI模型，提供统一访问体验。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Quora's chat aggregator: run many models side by side, compare answers, and build and monetize custom bots on top of them.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1500,7 +1500,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI写作和营销工具，帮助创建各种类型的营销文案。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "A marketing content platform with templates plus workflow automations for sales and content teams, including CRM data enrichment.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1534,7 +1534,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI图像搜索引擎和生成平台，寻找和创建完美的图像。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "A search engine and gallery for Stable Diffusion prompts and images, with its own generation model and API access.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1568,7 +1568,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "在线AI图像生成和编辑平台，支持多种模型和风格。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "An image editor that combines generation, inpainting, filters and canvas layout with generous free daily generations.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1602,7 +1602,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI图像生成工具，擅长文字渲染和排版设计。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "An image model known for reliable text rendering inside generated images, which makes it practical for logos, posters and typography.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1636,7 +1636,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI语音生成平台，创建专业的语音旁白和配音。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Studio-quality AI voice generator with 120+ realistic voices across 20+ languages, used by 30,000+ teams at companies like Google, Meta, and Deloitte.",
     "use_cases": [
       {
         "title": "Corporate Training Videos",
@@ -1695,7 +1695,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI音频和视频编辑平台，像编辑文档一样编辑媒体。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Edit audio and video by editing the transcript: remove filler words, overdub your own cloned voice, record screens and publish clips.",
     "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
@@ -1729,7 +1729,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Adobe Premiere Pro中的AI功能，增强视频编辑工作流程。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Premiere Pro's AI features: text-based editing, auto reframe, scene edit detection, and generative extend for filling clip gaps.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1763,7 +1763,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI视频生成平台，创建具有数字人主播的专业视频。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Avatar video generation with lip sync, voice cloning and video translation into many languages, aimed at marketing and training video.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1797,7 +1797,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI视频生成技术，创建会说话的头像和数字人视频。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Creates talking-head videos from a single photo plus a script or audio track, with a streaming avatar API for live interactions.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1831,7 +1831,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI代码助手，专注于代码测试、审查和质量保证。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Now Qodo: AI for code review, test generation and pull-request quality gating, running in your IDE and in CI.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1865,7 +1865,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Replit平台的AI编程助手，协作编码和学习。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "An AI pair programmer inside Replit's cloud IDE that scaffolds apps, explains code and deploys them without local setup.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -1899,7 +1899,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI 3D捕捉和重建工具，从照片创建3D模型。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Luma's Dream Machine turns text and images into video clips, and captures real-world objects into 3D from phone footage.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2001,7 +2001,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Grammarly的AI写作助手，增强写作、沟通和创意。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Generative writing assistance layered on Grammarly's grammar and tone checks: drafting, rewriting and tone shifts inside any text box.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2035,7 +2035,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Microsoft的AI聊天助手，集成网络搜索和创意功能。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Microsoft's assistant built into Windows, Edge and Microsoft 365, grounded in web search results with source citations.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2069,7 +2069,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI模型平台，提供数千个预训练模型和协作工具。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "The hub for open models and datasets: host and fine-tune models, run inference through an API, and publish demos as Spaces.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2103,7 +2103,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI应用开发框架，构建由语言模型驱动的应用。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "A framework for building LLM applications — retrieval, tool calling and agent graphs, with LangSmith for tracing and evaluation.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2137,7 +2137,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Figma中的AI设计助手，加速UI/UX设计工作流程。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "AI features inside Figma: generated layers and prototypes, instant placeholder content, visual search and design-to-code helpers.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2171,7 +2171,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI文本扩展和自动化工具，加速重复性写作任务。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "A browser autofill and text-expansion assistant that fills forms and writes routine messages from short snippets and saved data.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2205,7 +2205,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI视频生成平台，创建具有AI主播的专业视频，无需拍摄或编辑技能。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "The world's leading AI video avatar platform, trusted by 60,000+ businesses including 50% of Fortune 100 companies.",
     "use_cases": [
       {
         "title": "Employee Onboarding Videos",
@@ -2264,7 +2264,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI视频编辑工具，快速生成和编辑视频，简单易用的界面。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Generates full-stack web applications from a prompt — frontend, database and auth — with code you can export and own.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2298,7 +2298,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI写作和翻译助手，提升写作质量和多语言沟通。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "DeepL's writing assistant: rewrites and polishes text with tone, style and formality controls, separate from DeepL Translate.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2332,7 +2332,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI驱动的启动器和生产力工具，提升工作效率。 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "AI inside the Raycast launcher: quick AI commands, chat and extensions reachable from a single hotkey on macOS.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2363,7 +2363,7 @@
         "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "description_en": "智谱AI开发的多模态对话助手，支持文本、图像、代码等多种能力 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Zhipu AI's ChatGLM assistant for Chinese-language chat, document reading, image generation and coding help, with open-weight GLM models.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2394,7 +2394,7 @@
         "image_url": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "description_en": "百度开发的AI大语言模型，支持文本生成、代码、图像等能力 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Baidu's Ernie assistant (Wenxin Yiyan) for Chinese-language conversation, writing, search-grounded answers and image generation.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2425,7 +2425,7 @@
         "image_url": "https://images.unsplash.com/photo-1526312426976-f4d754fa9bd6?w=1200&h=800&fit=crop&auto=format&q=80"
       }
     ],
-    "description_en": "阿里云开发的AI大模型，支持文本、代码、图像等多种能力 This versatile tool offers advanced features for professionals and beginners alike.",
+    "description_en": "Alibaba's Qwen assistant for chat, document and image understanding, with open-weight Qwen models available to developers.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -6108,7 +6108,7 @@
   {
     "id": 760,
     "name": "Social Content Planner",
-    "description": "社交媒体内容规划AI，平台整合，内容创意，发布日历",
+    "description": "AI social media content planner, platform integration, content ideas, publishing calendar",
     "category": "Productivity",
     "pricing": "Freemium",
     "url": "https://social-content-planner.com",
