@@ -2509,7 +2509,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Comprehensive writing tool for authors.",
+    "description_en": "Comprehensive writing tool with style analysis, grammar checking, and readability reports. Great for authors and editors.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -2534,7 +2534,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI writing tool for fiction writers.",
+    "description_en": "AI writing tool specifically designed for fiction writers. Features include plot twists, character development, and style suggestions.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -2559,7 +2559,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Free AI image generator.",
+    "description_en": "Free AI image generator with decent quality. Great for quick sketches and concept ideas without cost.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -2584,7 +2584,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI image generator focused on artistic styles.",
+    "description_en": "AI image generator focused on artistic styles. Turn your ideas into beautiful artwork with AI.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -2609,7 +2609,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Professional screen recording for Mac.",
+    "description_en": "Professional screen recording and video editing for Mac. AI features for smart editing.",
     "last_updated": "2026-05-28",
     "skill_level": "advanced",
     "best_for": [
@@ -2634,7 +2634,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video maker for social media.",
+    "description_en": "AI video maker for social media. Turn photos and video clips into polished videos automatically.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -2659,7 +2659,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Cloud-based video editing with AI.",
+    "description_en": "Cloud-based video editing with AI tools. Collaborative editing features for teams.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -2684,7 +2684,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Free video editor built into Windows.",
+    "description_en": "Free video editor built into Windows. AI features for auto-generating captions and trimming.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -2709,7 +2709,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered audio post-production.",
+    "description_en": "AI-powered audio post-production for podcasts. Automatic leveling, noise reduction, and audio restoration.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -2734,7 +2734,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered podcast production platform.",
+    "description_en": "AI-powered podcast production platform. Text-to-speech, audio editing, and remote recording.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -2759,7 +2759,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Automated podcast production tool.",
+    "description_en": "Automated podcast production tool. AI editing, noise reduction, and publishing automation.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -2784,7 +2784,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI voice changer for streaming.",
+    "description_en": "AI voice changer for streaming and gaming. Real-time voice modification with various effects.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -2809,7 +2809,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Amazon's AI code assistant.",
+    "description_en": "Amazon's AI code assistant. Integrated with VS Code and supports multiple languages.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -2834,7 +2834,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered code refactoring tool.",
+    "description_en": "AI-powered code refactoring tool. Analyze code quality and suggest improvements.",
     "last_updated": "2026-05-28",
     "skill_level": "advanced",
     "best_for": [
@@ -2859,7 +2859,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Open-source AI code model.",
+    "description_en": "Open-source AI code model from Tsinghua University. Supports multiple languages.",
     "last_updated": "2026-05-28",
     "skill_level": "advanced",
     "best_for": [
@@ -2884,7 +2884,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Open-source code generation model.",
+    "description_en": "Open-source code generation model from Hugging Face. Trained on permissively licensed code.",
     "last_updated": "2026-05-28",
     "skill_level": "advanced",
     "best_for": [
@@ -2909,7 +2909,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered meeting minutes tool.",
+    "description_en": "AI-powered meeting minutes and action item tracker. Integrates with calendar apps.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -2934,7 +2934,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI meeting management platform.",
+    "description_en": "AI meeting management platform. Prepare agendas, take notes, and track action items.",
     "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
@@ -2959,7 +2959,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered notebook for data analysis.",
+    "description_en": "AI-powered notebook for data analysis. Combine code, text, and visualizations.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -2984,7 +2984,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered note-taking app.",
+    "description_en": "AI-powered note-taking app that learns from your notes and provides smart suggestions.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3009,7 +3009,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Local-first note-taking with AI.",
+    "description_en": "Local-first note-taking with AI plugin support. Powerful knowledge management.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -3034,7 +3034,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered note-taking with spaced repetition.",
+    "description_en": "AI-powered note-taking with spaced repetition for learning. Great for students.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3059,7 +3059,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Google's AI assistant for Workspace.",
+    "description_en": "Google's AI assistant for Workspace. Help with writing, analysis, and collaboration.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3084,7 +3084,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI copywriting with predictive performance.",
+    "description_en": "AI copywriting platform with predictive performance scores. Optimize marketing copy for better results.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -3109,7 +3109,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI SEO tool for content optimization.",
+    "description_en": "AI SEO tool for content optimization. Analyze competitors and identify content gaps.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -3134,7 +3134,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Chat with PDF documents using AI.",
+    "description_en": "Chat with your PDF documents using AI. Extract information and summarize content.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3159,7 +3159,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI search engine for scientific research.",
+    "description_en": "AI search engine for scientific research. Find relevant papers and studies.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3184,7 +3184,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered academic search.",
+    "description_en": "AI-powered academic search. Understand research papers better with AI summaries.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3209,7 +3209,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered social web highlighter.",
+    "description_en": "AI-powered social web highlighter. Highlight, organize, and share insights.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3234,7 +3234,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered reading and note-taking system.",
+    "description_en": "AI-powered reading and note-taking system. Capture highlights from books and articles.",
     "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
@@ -3259,7 +3259,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "ChatGPT integration for browsers.",
+    "description_en": "ChatGPT integration for browsers. Get AI assistance anywhere online.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3284,7 +3284,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Personal AI assistant.",
+    "description_en": "AI Sidekick is an AI productivity tool for Personal Assistant, Productivity and solo creators.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3309,7 +3309,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI companion with emotional support.",
+    "description_en": "AI companion that learns and grows with you. Emotional support and conversations.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3334,7 +3334,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Award-winning AI chatbot.",
+    "description_en": "Award-winning AI chatbot with natural conversation capabilities.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3359,7 +3359,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered content platform.",
+    "description_en": "AI-powered content platform with writing, editing, and publishing tools.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3384,7 +3384,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered business name generator.",
+    "description_en": "AI-powered business name generator. Generate creative and available domain names.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3409,7 +3409,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered email marketing copy.",
+    "description_en": "AI-powered email marketing copy. Optimize subject lines and email content.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -3434,7 +3434,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Enterprise AI for marketing language.",
+    "description_en": "Enterprise AI for marketing language optimization. Data-driven copywriting.",
     "last_updated": "2026-05-28",
     "skill_level": "advanced",
     "best_for": [
@@ -3459,7 +3459,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered creative platform for artists.",
+    "description_en": "AI-powered creative platform for artists. Experiment with AI-generated art.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -3484,7 +3484,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Open-source AI visual generation tool.",
+    "description_en": "Open-source AI video and image generation tool. Create stunning visual effects.",
     "last_updated": "2026-05-28",
     "skill_level": "advanced",
     "best_for": [
@@ -3509,7 +3509,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered text-to-video generation.",
+    "description_en": "AI-powered text-to-video generation. Turn scripts into videos automatically.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3534,7 +3534,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video creation platform.",
+    "description_en": "AI video creation platform that turns text into videos with AI voices.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3559,7 +3559,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered video editor with templates.",
+    "description_en": "AI-powered video editor with templates. Create professional videos quickly.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3584,7 +3584,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video creation from text.",
+    "description_en": "AI video creation from text. Automatically generates videos with stock footage.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3609,7 +3609,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI voice cloning and TTS.",
+    "description_en": "Lovo AI brings AI to audio work: Voice Cloning, Custom Voices and text-to-speech in one place.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -3634,7 +3634,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI text-to-speech for reading.",
+    "description_en": "An AI audio tool built for Reading and text-to-speech. Speechify also covers Accessibility.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3659,7 +3659,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered text-to-speech.",
+    "description_en": "AI-powered text-to-speech with natural voices. Great for e-learning.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3684,7 +3684,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered documentation generator.",
+    "description_en": "AI-powered documentation generator. Create beautiful docs from code.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -3709,7 +3709,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI code review and refactoring tool.",
+    "description_en": "AI code review and refactoring tool. Improve code quality automatically.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -3734,7 +3734,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered code review.",
+    "description_en": "DeepCode is an AI code tool for Code Review, Security and Bugs.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -3759,7 +3759,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI for understanding codebases.",
+    "description_en": "AI that helps you understand codebases. Navigate and explore code.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -3784,7 +3784,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered design features in Canva.",
+    "description_en": "AI-powered design features in Canva. Magic design and text effects.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3809,7 +3809,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Serverless AI deployment platform.",
+    "description_en": "Deploy AI models with minimal infrastructure. Serverless AI deployment.",
     "last_updated": "2026-05-28",
     "skill_level": "advanced",
     "best_for": [
@@ -3834,7 +3834,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "GPU cloud for AI workloads.",
+    "description_en": "Lambda Labs brings AI to productivity work: GPU, Cloud and AI Training in one place.",
     "last_updated": "2026-05-28",
     "skill_level": "advanced",
     "best_for": [
@@ -3859,7 +3859,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI content detection tool.",
+    "description_en": "Detect AI-generated content. Check if text was written by AI.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3884,7 +3884,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Advanced AI content detector.",
+    "description_en": "An AI productivity tool built for AI Detection and Plagiarism. Originality AI also covers Education.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -3909,7 +3909,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-generated text detector.",
+    "description_en": "GPTZero is an AI productivity tool for AI Detection, Education and Content.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -3934,7 +3934,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Plagiarism checker with AI.",
+    "description_en": "Copyscape brings AI to productivity work: Plagiarism, Content Protection and SEO in one place.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -3959,7 +3959,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered story generator.",
+    "description_en": "AI-powered story generator for kids and adults. Create engaging stories.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -3984,7 +3984,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI character generator.",
+    "description_en": "AI tool for creating detailed character profiles. Great for fiction writers.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4009,7 +4009,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered logo design tool.",
+    "description_en": "AI-powered logo design tool. Create professional logos quickly.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4034,7 +4034,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered brand design platform.",
+    "description_en": "An AI image tool built for Brand Design and Logo. Looka also covers Business.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4059,7 +4059,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered calendar assistant.",
+    "description_en": "AI-powered calendar assistant. Schedule meetings and optimize time.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4084,7 +4084,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered task manager.",
+    "description_en": "AI-powered task manager and calendar. Optimize your day automatically.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -4109,7 +4109,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered email assistant.",
+    "description_en": "AI-powered email assistant. Summarize emails and suggest replies.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4134,7 +4134,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered email organizer.",
+    "description_en": "SaneBox is an AI productivity tool for Email Organization, Productivity and Inbox.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4159,7 +4159,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI interior design visualization.",
+    "description_en": "AI-powered interior design visualization. Upload a room photo and redesign it with AI.",
     "last_updated": "2026-05-26",
     "skill_level": "beginner",
     "best_for": [
@@ -4184,7 +4184,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI room design generator.",
+    "description_en": "AI interior design generator that transforms room photos into stunning designs.",
     "last_updated": "2026-05-26",
     "skill_level": "beginner",
     "best_for": [
@@ -4209,7 +4209,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video platform with avatars.",
+    "description_en": "DeepBrain AI brings AI to video work: Avatars, AI Video and Training in one place.",
     "last_updated": "2026-05-26",
     "skill_level": "intermediate",
     "best_for": [
@@ -4234,7 +4234,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI code completions for Python/JS.",
+    "description_en": "An AI code tool built for Python and JavaScript. Kite AI also covers Completion.",
     "last_updated": "2026-05-26",
     "skill_level": "beginner",
     "best_for": [
@@ -4259,7 +4259,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Free AI code toolkit.",
+    "description_en": "Codeium is an AI code tool for Free, Completion and Search.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -4284,7 +4284,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Open-source code generation model.",
+    "description_en": "PolyCoder brings AI to code work: Open Source, Code Gen and Research in one place.",
     "last_updated": "2026-05-26",
     "skill_level": "advanced",
     "best_for": [
@@ -4309,7 +4309,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI social media manager.",
+    "description_en": "Manage all social media accounts with AI-powered scheduling and content.",
     "last_updated": "2026-05-26",
     "skill_level": "intermediate",
     "best_for": [
@@ -4334,7 +4334,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI soundscape designer.",
+    "description_en": "An AI audio tool built for Soundscapes and Custom. Soundscape AI also covers Design.",
     "last_updated": "2026-05-26",
     "skill_level": "beginner",
     "best_for": [
@@ -4359,7 +4359,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI interview prep.",
+    "description_en": "Interview Prep AI is an AI code tool for Interview, Prep and Technical.",
     "last_updated": "2026-05-26",
     "skill_level": "beginner",
     "best_for": [
@@ -4384,7 +4384,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI features for Slack workspace.",
+    "description_en": "AI-powered features for Slack workspace. Summarize messages, search smarter, and automate tasks.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4409,7 +4409,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI Companion for video meetings.",
+    "description_en": "AI Companion for Zoom meetings. Smart summaries, action items, and meeting insights.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4434,7 +4434,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-first word processor.",
+    "description_en": "AI-first word processor designed for writers. Focus mode, outlines, and intelligent suggestions.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4459,7 +4459,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI article writer with niches.",
+    "description_en": "AI article writer with niche specialization. Generate content for specific industries.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -4484,7 +4484,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI content automation platform.",
+    "description_en": "AI content automation platform. Generate blog posts, landing pages, and marketing copy.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -4509,7 +4509,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI tool for vector graphics.",
+    "description_en": "AI tool for creating and regenerating vector graphics and illustrations.",
     "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
@@ -4534,7 +4534,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered video creation.",
+    "description_en": "AI-powered video creation platform. Turn text into videos with automatic editing.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4559,7 +4559,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video from blog posts.",
+    "description_en": "AI video creator that turns blog posts into engaging videos automatically.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4584,7 +4584,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video with talking avatars.",
+    "description_en": "AI video generator with talking avatars. Professional videos with virtual presenters.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -4609,7 +4609,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI for personalized video.",
+    "description_en": "AI video platform for personalized video at scale. Create custom videos for each customer.",
     "last_updated": "2026-05-28",
     "skill_level": "advanced",
     "best_for": [
@@ -4634,7 +4634,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI voice generator.",
+    "description_en": "AI voice generator with expressive voices. Create natural-sounding speech.",
     "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
@@ -4659,7 +4659,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI TTS with podcast hosting.",
+    "description_en": "AI text-to-speech with podcast hosting. Convert text to audio and host podcasts.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -4684,7 +4684,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Enterprise AI for audio.",
+    "description_en": "Enterprise AI for audio and video. Voice cloning and content monetization.",
     "last_updated": "2026-05-28",
     "skill_level": "advanced",
     "best_for": [
@@ -4709,7 +4709,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI code completions for Python/JS.",
+    "description_en": "AI-powered code completions for Python and JavaScript. Free and privacy-focused.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4734,7 +4734,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI coding assistant.",
+    "description_en": "AI coding assistant for various tasks. Code completion, documentation, and testing.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4759,7 +4759,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI code assistant.",
+    "description_en": "AI code assistant for developers. Code generation, explanation, and debugging.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -4784,7 +4784,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Free AI coding assistant.",
+    "description_en": "Free AI coding assistant by Sourcegraph. Understand and write code with AI.",
     "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
@@ -4809,7 +4809,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI web app builder.",
+    "description_en": "AI-powered web app builder. Describe what you want and get working code.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -4834,7 +4834,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI website builder.",
+    "description_en": "Durable brings AI to code work: Website Builder, No Code and Fast in one place.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4859,7 +4859,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI website design.",
+    "description_en": "AI-powered website design and prototyping. Create stunning sites with AI.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4884,7 +4884,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI Bootstrap generator.",
+    "description_en": "AI-powered Bootstrap code generator. Create responsive UIs with AI assistance.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4909,7 +4909,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered note-taking",
+    "description_en": "AI assistant for Evernote with smart suggestions and content organization.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4934,7 +4934,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI for Ulysses app",
+    "description_en": "An AI writing tool built for Writing and Focus mode. Ulysses AI also covers Professional content.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -4959,7 +4959,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered Sketch features",
+    "description_en": "AI assistant for Sketch app with design suggestions and automation.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -5944,7 +5944,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Advanced AI SecOps platform.",
+    "description_en": "Advanced AI security operations platform. Detect and respond to threats automatically.",
     "last_updated": "2026-05-28",
     "skill_level": "advanced",
     "best_for": [
@@ -5969,7 +5969,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Advanced AI SEO content platform.",
+    "description_en": "Advanced AI SEO content platform. Research, write, and optimize blog content.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -5994,7 +5994,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video script writer.",
+    "description_en": "AI video script writer. Generate professional scripts for your videos.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -6019,7 +6019,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI for React Native",
+    "description_en": "React Native AI is an AI code tool for React Native, Mobile development and Cross-platform.",
     "last_updated": "2026-05-28",
     "skill_level": "advanced",
     "best_for": [
@@ -6044,7 +6044,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video editor",
+    "description_en": "AI-powered video editing with auto-editing and scene detection.",
     "last_updated": "2026-05-28",
     "skill_level": "intermediate",
     "best_for": [
@@ -6069,7 +6069,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI product photo editor",
+    "description_en": "AI product photo enhancer and background remover for e-commerce.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -6094,7 +6094,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI note taker",
+    "description_en": "AI note-taking with smart organization and search capabilities.",
     "last_updated": "2026-05-28",
     "skill_level": "beginner",
     "best_for": [
@@ -6144,7 +6144,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI tool for Pinterest growth",
+    "description_en": "PinAI brings AI to productivity work: Pinterest Marketing, Content Creators and E-commerce in one place.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -6190,7 +6190,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Transform audio podcasts into video content",
+    "description_en": "An AI video tool built for Podcasters and Content Repurposing. PodcastVideo AI also covers Social Media.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -6236,7 +6236,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered CI/CD pipeline optimization",
+    "description_en": "PipelineAI is an AI code tool for DevOps Engineers, Engineering Teams and Enterprise CI/CD.",
     "last_updated": "2026-05-31",
     "skill_level": "advanced",
     "best_for": [
@@ -6282,7 +6282,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Advanced AI voice generator with emotion control",
+    "description_en": "VoiceForge AI brings AI to audio work: Voiceover Artists, Audiobook Narrators and Content Creators in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -6328,7 +6328,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Free AI tools suite for teachers",
+    "description_en": "An AI productivity tool built for Teachers and Educators. TeachAI also covers Schools.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -6374,7 +6374,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered LinkedIn growth tool",
+    "description_en": "LinkedGrow AI is an AI productivity tool for LinkedIn Professionals, B2B Marketers and Job Seekers.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -6420,7 +6420,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video tool for TikTok Live",
+    "description_en": "TikTokLive AI brings AI to video work: TikTok Creators, Live Streamers and Social Media in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -6466,7 +6466,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI avatar video creation platform",
+    "description_en": "An AI video tool built for Corporate Training and Marketing Teams. AvatarStudio AI also covers E-learning.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -6512,7 +6512,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Free AI tools suite for startups",
+    "description_en": "LaunchPad AI is an AI productivity tool for Startup Founders, Entrepreneurs and Small Teams.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -6558,7 +6558,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI email marketing tool",
+    "description_en": "MailPilot AI brings AI to productivity work: Email Marketers, E-commerce and SaaS Companies in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -6604,7 +6604,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video tool for YouTube Shorts",
+    "description_en": "An AI video tool built for YouTube Creators and Short-Form Content. ShortsMaker AI also covers Social Media.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -6650,7 +6650,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Free AI tools for freelancers",
+    "description_en": "FreeLance AI is an AI productivity tool for Freelancers, Independent Contractors and Solopreneurs.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -6696,7 +6696,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video rendering and enhancement tool",
+    "description_en": "RenderAI brings AI to video work: Video Editors, VFX Artists and Post-Production in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "advanced",
     "best_for": [
@@ -6742,7 +6742,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI tool for live stream optimization",
+    "description_en": "An AI video tool built for Live Streamers and Gaming Creators. StreamBoost AI also covers Event Broadcasters.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -6788,7 +6788,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI pixel art and retro game sprite generator",
+    "description_en": "PixelForge AI is an AI image tool for Game Developers, Pixel Artists and Indie Studios.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -6834,7 +6834,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI beat maker and music production assistant",
+    "description_en": "BeatCraft AI brings AI to audio work: Music Producers, Beat Makers and Songwriters in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -6880,7 +6880,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI DevOps assistant for infrastructure management",
+    "description_en": "An AI code tool built for DevOps Engineers and SRE Teams. DevOps AI also covers Cloud Architects.",
     "last_updated": "2026-05-31",
     "skill_level": "advanced",
     "best_for": [
@@ -6926,7 +6926,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI copywriting tool for marketing teams",
+    "description_en": "CopyGenius AI is an AI writing tool for Marketing Teams, Copywriters and Ad Agencies.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -6972,7 +6972,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI travel video editor with location intelligence",
+    "description_en": "WanderLens AI brings AI to video work: Travel Creators, Tourism Boards and Vloggers in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -7018,7 +7018,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Free AI business plan and strategy generator",
+    "description_en": "An AI productivity tool built for First-Time Founders and Solo Entrepreneurs. StartupKit AI also covers Students.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -7064,7 +7064,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI short-form video creator for social media",
+    "description_en": "ReelMaker AI is an AI video tool for Social Media Managers, Content Creators and Small Businesses.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -7110,7 +7110,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI art collection manager and generator",
+    "description_en": "ArtVault AI brings AI to image work: Art Collectors, Gallery Owners and Digital Artists in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -7156,7 +7156,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI coding assistant with context-aware completions",
+    "description_en": "An AI code tool built for Software Developers and Engineering Teams. CodePilot AI also covers Code Learners.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -7202,7 +7202,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI vocal synthesis and harmony generator",
+    "description_en": "VocalAI is an AI audio tool for Music Producers, Songwriters and Studio Engineers.",
     "last_updated": "2026-05-31",
     "skill_level": "advanced",
     "best_for": [
@@ -7248,7 +7248,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video enhancement and upscaling tool",
+    "description_en": "VidBoost AI brings AI to video work: Video Editors, Content Restoration and Quality Improvement in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -7294,7 +7294,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI sketch-to-image converter",
+    "description_en": "An AI image tool built for Concept Artists and Designers. SketchAI also covers Creative Professionals.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -7340,7 +7340,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI Twitter/X growth and analytics platform",
+    "description_en": "XGrow AI is an AI productivity tool for Twitter/X Creators, Personal Brands and Social Media Growth.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -7386,7 +7386,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI YouTube Shorts creator with trend analysis",
+    "description_en": "ClipMaster AI brings AI to video work: YouTube Creators, Short-Form Content and Viral Marketing in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -7432,7 +7432,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI fashion design and prototyping tool",
+    "description_en": "An AI image tool built for Fashion Designers and Apparel Brands. DesignFlow AI also covers Design Students.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -7478,7 +7478,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI SEO writing assistant with SERP tracking",
+    "description_en": "RankWriter AI is an AI writing tool for SEO Writers, Content Managers and Digital Agencies.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -7524,7 +7524,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI Twitter thread composer and scheduler",
+    "description_en": "ThreadAI brings AI to productivity work: Twitter Creators, Thought Leaders and Content Marketers in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -7570,7 +7570,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI fashion lookbook and collection generator",
+    "description_en": "An AI image tool built for Fashion Brands and Lookbook Creators. StyleGen AI also covers Style Directors.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -7616,7 +7616,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI podcast studio with multi-track editing",
+    "description_en": "StudioMix AI is an AI audio tool for Podcast Producers, Audio Engineers and Broadcast Teams.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -7662,7 +7662,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI Next.js development assistant",
+    "description_en": "NextAI brings AI to code work: Next.js Developers, Full-Stack Engineers and Web Agencies in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -7708,7 +7708,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI long-form content writer with tone control",
+    "description_en": "An AI writing tool built for Content Writers and Authors. ProseAI also covers Bloggers.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -7754,7 +7754,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video production suite for marketing teams",
+    "description_en": "VideoForge AI is an AI video tool for Marketing Teams, Brand Managers and Ad Agencies.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -7800,7 +7800,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Free AI side-hustle idea generator and planner",
+    "description_en": "HustleAI brings AI to productivity work: Aspiring Entrepreneurs, Side-Hustle Seekers and Students in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -7846,7 +7846,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI agile project management tool",
+    "description_en": "An AI productivity tool built for Agile Teams and Scrum Masters. SprintAI also covers Product Managers.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -7892,7 +7892,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI Git workflow assistant with commit suggestions",
+    "description_en": "GitAI is an AI code tool for Developers, Engineering Teams and Open Source Contributors.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -7938,7 +7938,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI audio mixing and mastering tool",
+    "description_en": "MixMaster AI brings AI to audio work: Music Producers, Audio Engineers and Independent Artists in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -7984,7 +7984,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI blog writing assistant with SEO",
+    "description_en": "An AI writing tool built for Bloggers and Content Marketers. WordSmith AI also covers SEO Writers.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -8030,7 +8030,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI animation and motion graphics creator",
+    "description_en": "Animora AI is an AI video tool for Motion Designers, Animators and Social Media Creators.",
     "last_updated": "2026-05-31",
     "skill_level": "intermediate",
     "best_for": [
@@ -8076,7 +8076,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI deployment automation for cloud platforms",
+    "description_en": "DeployAI brings AI to code work: DevOps Teams, Cloud Engineers and SRE Professionals in one place.",
     "last_updated": "2026-05-31",
     "skill_level": "advanced",
     "best_for": [
@@ -8122,7 +8122,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI writing tone analyzer and adjuster",
+    "description_en": "An AI writing tool built for Business Writers and Customer Support. ToneCheck AI also covers Marketing Teams.",
     "last_updated": "2026-05-31",
     "skill_level": "beginner",
     "best_for": [
@@ -10606,7 +10606,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI podcast production with automated content generation.",
+    "description_en": "AI-powered podcast production tool that generates show notes, timestamps, social media clips, and full transcripts automatically.",
     "last_updated": "2026-06-01",
     "skill_level": "intermediate",
     "best_for": [
@@ -10631,7 +10631,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI meeting transcription and analysis.",
+    "description_en": "AI meeting assistant that transcribes, summarizes, and analyzes your meetings. Integrates with Zoom, Google Meet, and Teams.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -10656,7 +10656,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered ad creative generation.",
+    "description_en": "Generate high-converting ad creatives and copy with AI. Create multiple variations for A/B testing in seconds.",
     "last_updated": "2026-06-01",
     "skill_level": "intermediate",
     "best_for": [
@@ -10681,7 +10681,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Enterprise AI platform for applications.",
+    "description_en": "Enterprise AI platform for building LLM-powered applications. Embeddings, classification, and semantic search.",
     "last_updated": "2026-06-01",
     "skill_level": "advanced",
     "best_for": [
@@ -10706,7 +10706,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI search engine for developers.",
+    "description_en": "AI search engine designed for developers. Get instant answers to programming questions with code examples.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -10731,7 +10731,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video messaging and recording.",
+    "description_en": "AI-powered video messaging platform. Auto-generated titles, summaries, and chapter markers.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -10756,7 +10756,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Visual automation with AI.",
+    "description_en": "Visual automation platform with AI capabilities. Build complex workflows without code.",
     "last_updated": "2026-06-01",
     "skill_level": "intermediate",
     "best_for": [
@@ -10781,7 +10781,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI-powered note-taking.",
+    "description_en": "AI-powered note-taking app with beautiful design. Generate content and organize your thoughts.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -10806,7 +10806,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Create visual content from text.",
+    "description_en": "AI-powered tool for creating visual content from text. Turn your ideas into infographics and graphics.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -10831,7 +10831,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video generation by MiniMax.",
+    "description_en": "AI-powered video creation from text. Developed by MiniMax for high-quality video generation.",
     "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
@@ -10856,7 +10856,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Open-source RAG engine for documents.",
+    "description_en": "Open-source RAG engine for enterprise. Deep document understanding with intelligent retrieval.",
     "last_updated": "2026-06-01",
     "skill_level": "advanced",
     "best_for": [
@@ -10881,7 +10881,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI chatbots from your data.",
+    "description_en": "Create AI chatbots trained on your data. Build customer support and knowledge base bots easily.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -10906,7 +10906,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Build chatbots from documents.",
+    "description_en": "Build AI chatbots from your documents and websites. No coding required.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -10931,7 +10931,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Visual AI assistant designer.",
+    "description_en": "Design and deploy AI assistants across channels. Visual conversation designer.",
     "last_updated": "2026-06-01",
     "skill_level": "intermediate",
     "best_for": [
@@ -10956,7 +10956,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Transform photos into 3D animations.",
+    "description_en": "Transform 2D photos into stunning 3D animations. Create dynamic visuals with depth effects.",
     "last_updated": "2026-09-24",
     "skill_level": "beginner",
     "best_for": [
@@ -10981,7 +10981,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI professional headshots.",
+    "description_en": "AI professional headshot generator. Get studio-quality headshots from selfies.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -11006,7 +11006,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI social media suite with analytics.",
+    "description_en": "AI-driven social media suite with smart inbox, sentiment analysis, and automated reporting.",
     "last_updated": "2026-06-01",
     "skill_level": "intermediate",
     "best_for": [
@@ -11031,7 +11031,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video clip extraction and formatting.",
+    "description_en": "Extract the most engaging clips from long-form videos using AI. Auto-crop, caption, and format for any platform.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -11056,7 +11056,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI video repurposing from long content.",
+    "description_en": "AI video repurposing platform. Transform podcasts and webinars into short social media videos automatically.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -11081,7 +11081,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI cloud security and vulnerability scanning.",
+    "description_en": "AI-powered cloud security platform that finds and fixes vulnerabilities in code, containers, and infrastructure.",
     "last_updated": "2026-09-24",
     "skill_level": "intermediate",
     "best_for": [
@@ -11106,7 +11106,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI cloud security posture management.",
+    "description_en": "AI-powered cloud security posture management. Find misconfigurations and risks across cloud environments.",
     "last_updated": "2026-06-01",
     "skill_level": "intermediate",
     "best_for": [
@@ -11131,7 +11131,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI product personalization for e-commerce.",
+    "description_en": "AI-powered product personalization for e-commerce. Let customers customize t-shirts, mugs, and more with AI.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -11156,7 +11156,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI sales execution platform.",
+    "description_en": "AI-driven sales execution platform with smart sequencing, analytics, and deal intelligence.",
     "last_updated": "2026-06-01",
     "skill_level": "intermediate",
     "best_for": [
@@ -11181,7 +11181,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI revenue intelligence for sales teams.",
+    "description_en": "AI revenue intelligence platform that analyzes sales calls, emails, and deals to improve win rates.",
     "last_updated": "2026-06-01",
     "skill_level": "intermediate",
     "best_for": [
@@ -11206,7 +11206,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI CRM with automated enrichment.",
+    "description_en": "AI-powered CRM with automated enrichment, personalized outreach, and workflow automation.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -11231,7 +11231,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI HR platform for remote teams.",
+    "description_en": "AI-powered HR platform for remote teams. Automate payroll, compliance, and benefits across countries.",
     "last_updated": "2026-06-01",
     "skill_level": "intermediate",
     "best_for": [
@@ -11256,7 +11256,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI global payroll and compliance.",
+    "description_en": "AI-enhanced global payroll and compliance platform for remote contractors and employees worldwide.",
     "last_updated": "2026-06-01",
     "skill_level": "intermediate",
     "best_for": [
@@ -11281,7 +11281,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI visual collaboration for remote teams.",
+    "description_en": "AI-powered visual collaboration workspace for remote teams. Smart templates and facilitation tools.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -11406,7 +11406,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI tool for creating soothing ASMR and relaxation audio.",
+    "description_en": "AI tool for creating soothing ASMR and relaxation audio. Generates layered soundscapes with whisper tracks, gentle sounds, and binaural beats for sleep aid.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -11456,7 +11456,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Generate high-converting email campaigns with AI.",
+    "description_en": "Generate high-converting email campaigns with AI. Creates subject lines, body copy, and CTAs optimized for open rates and click-through rates across",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -11506,7 +11506,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Create viral Pinterest content with AI.",
+    "description_en": "Create viral Pinterest content with AI. Generates pin graphics, writes SEO-optimized descriptions, and identifies trending topics for content planning.",
     "last_updated": "2026-06-01",
     "skill_level": "advanced",
     "best_for": [
@@ -11631,7 +11631,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Create viral LinkedIn articles and posts with AI.",
+    "description_en": "Create viral LinkedIn articles and posts with AI. Analyzes trending topics in your industry, generates thought leadership content, and optimizes",
     "last_updated": "2026-06-01",
     "skill_level": "intermediate",
     "best_for": [
@@ -11681,7 +11681,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI code generator for React Native apps.",
+    "description_en": "AI code generator for React Native apps. Creates native modules, navigation flows, and responsive layouts with TypeScript support and best practice patterns.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -11956,7 +11956,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Specialized AI coding assistant for Next.",
+    "description_en": "Specialized AI coding assistant for Next.js development. Generates pages, API routes, server actions, and optimized components with TypeScript best practices.",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
@@ -12106,7 +12106,7 @@
     "languages": [
       "English"
     ],
-    "description_en": "Real-time AI analytics for Twitter Live streams.",
+    "description_en": "Real-time AI analytics for Twitter Live streams. Monitors viewer engagement, suggests content pivots, and generates post-stream performance reports",
     "last_updated": "2026-06-01",
     "skill_level": "beginner",
     "best_for": [
