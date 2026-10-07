@@ -97,6 +97,15 @@ const getRelatedPosts = (currentPost: BlogPost, allPosts: BlogPost[]): BlogPost[
   return scoredPosts.slice(0, 3).map(sp => sp.post);
 };
 
+// Prerender every known post and reject unknown slugs outright. Without this the
+// route is rendered on demand, notFound() fires after the 200 headers are sent,
+// and deleted posts turn into soft 404s that search engines keep as empty pages.
+export function generateStaticParams() {
+  return blogPosts.map((p) => ({ slug: p.slug }));
+}
+
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
