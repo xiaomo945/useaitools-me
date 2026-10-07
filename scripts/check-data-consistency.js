@@ -15,7 +15,8 @@ const fs = require('fs');
 const path = require('path');
 
 const TOOLS_FILE = path.join(__dirname, '..', 'data', 'tools.json');
-const BLOG_FILE = path.join(__dirname, '..', 'data', 'blog-posts.json');
+// Blog posts live as one JSON file per post in a directory, not in a single file
+const BLOG_DIR = path.join(__dirname, '..', 'data', 'blog-posts');
 const REPORT_FILE = path.join(__dirname, '..', '.tmp', 'data-consistency-report.md');
 
 // Valid categories
@@ -35,8 +36,10 @@ function checkDataConsistency() {
     const toolsData = fs.readFileSync(TOOLS_FILE, 'utf8');
     tools = JSON.parse(toolsData);
     
-    const blogData = fs.readFileSync(BLOG_FILE, 'utf8');
-    blogPosts = JSON.parse(blogData);
+    blogPosts = fs
+      .readdirSync(BLOG_DIR)
+      .filter((f) => f.endsWith('.json'))
+      .map((f) => JSON.parse(fs.readFileSync(path.join(BLOG_DIR, f), 'utf8')));
   } catch (err) {
     console.error('❌ Failed to read data files:', err.message);
     process.exit(1);

@@ -51,6 +51,9 @@ const jetbrainsMono = localFont({
 });
 
 export const metadata: Metadata = {
+  // Without this, every page that resolves a relative OG/Twitter image URL falls
+  // back to http://localhost:3000, so shared links show a broken preview.
+  metadataBase: new URL('https://useaitools.me'),
   title: "Best AI Tools Directory 2026 – Discover & Compare 500+ AI Tools",
   description: "Find the best AI tools for writing, image generation, video creation, coding, and more. Compare features, pricing, and alternatives side by side. Updated weekly.",
   keywords: ["AI tools", "AI directory", "AI writing tools", "AI image generators", "AI coding assistants", "AI video tools", "AI audio tools", "AI productivity tools", "best AI tools", "AI tools comparison", "free AI tools", "AI tools 2026"],

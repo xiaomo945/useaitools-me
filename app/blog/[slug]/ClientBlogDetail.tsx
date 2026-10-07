@@ -105,6 +105,22 @@ const renderContentWithImages = (content: string, images: BlogImage[] = [], high
     return path;
   });
 
+  // Fenced code blocks - extracted first so nothing inside them is rewritten
+  html = html.replace(/```(\w*)\r?\n([\s\S]*?)\r?\n```/g, (_m, lang, code) => {
+    const safe = code.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return `<pre class="my-6 p-4 rounded-xl bg-slate-900 overflow-x-auto"><code class="language-${lang || 'text'} text-slate-100 text-sm">${safe}</code></pre>`;
+  });
+
+  // Blockquotes
+  html = html.replace(/(?:^>[ \t]?.+$\r?\n?)+/gm, (block) => {
+    const inner = block
+      .trim()
+      .split(/\r?\n/)
+      .map((l) => l.replace(/^>[ \t]?/, ''))
+      .join(' ');
+    return `<blockquote class="border-l-4 border-emerald-400 pl-4 my-6 italic text-slate-600 dark:text-gray-300">${inner}</blockquote>`;
+  });
+
   // Tables (GFM pipe syntax) - must run before paragraph wrapping, otherwise each
   // row is wrapped in its own <p> and the pipe characters are shown to the reader.
   html = html.replace(/(?:^[ \t]*\|.*\|[ \t]*$\r?\n?){2,}/gm, (block) => {
@@ -172,8 +188,13 @@ const renderContentWithImages = (content: string, images: BlogImage[] = [], high
   });
   html = html.replace(/^# (.*?)$/gm, '<h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-8">$1</h1>');
 
+  // Sub-headings: ### is used 2000+ times across the corpus and was rendering
+  // as literal "###" text inside a paragraph.
+  html = html.replace(/^### (.*?)$/gm, '<h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">$1</h3>');
+  html = html.replace(/^#### (.*?)$/gm, '<h4 class="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-3">$1</h4>');
+
   // Paragraphs - optimized for readability (enhanced for mobile and desktop)
-  html = html.replace(/^(?!<h[12]|<table|<ul|<ol|<li|<hr|<p|<div|<pre|<blockquote)(.*?)$/gm, (match, p1) => {
+  html = html.replace(/^(?!<h[1-4]|<table|<ul|<ol|<li|<hr|<p|<div|<pre|<blockquote)(.*?)$/gm, (match, p1) => {
     if (p1.trim() && p1.trim() !== '---') {
       return `<p class="text-slate-600 dark:text-gray-300 leading-relaxed mb-6 text-base lg:text-lg max-w-prose">${p1}</p>`;
     } else if (p1.trim() === '---') {

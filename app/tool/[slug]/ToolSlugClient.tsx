@@ -52,6 +52,7 @@ type Tool = {
   rating_breakdown?: RatingBreakdown;
   skill_level?: string;
   best_for?: string[];
+  unverified?: boolean;
 };
 
 type BlogPost = {
@@ -282,6 +283,12 @@ export default function ToolSlugClient({
             {hasAffiliate && (
               <p className="text-xs text-slate-500 dark:text-slate-400 mb-4 text-center">
                 We may earn a small commission if you try this tool. It doesn&apos;t affect our recommendation.
+              </p>
+            )}
+
+            {tool.unverified && (
+              <p className="text-xs text-amber-800 dark:text-amber-300 mb-4 text-center bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 rounded-lg px-3 py-2">
+                ⚠️ We could not confirm this tool&apos;s official website, so the link below may be outdated or wrong. Check the vendor before signing up or paying.
               </p>
             )}
 
