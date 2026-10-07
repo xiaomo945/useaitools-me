@@ -88,8 +88,36 @@ const renderBlogImage = (image: BlogImage, index: number) => {
 };
 
 // Simple function to parse basic markdown-like content and insert images at appropriate positions
-const renderContentWithImages = (content: string, images: BlogImage[] = [], highlightKeyword?: string | null) => {
+const slugifyHeading = (text: string) =>
+  text
+    .replace(/<[^>]*>/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-');
+
+const renderContentWithImages = (
+  content: string,
+  images: BlogImage[] = [],
+  highlightKeyword?: string | null,
+  articleTitle?: string
+) => {
   let html = content;
+
+  // Most posts open with "# <the article title>". The page already renders the
+  // title as its <h1>, so keeping that line prints it twice on screen.
+  if (articleTitle) {
+    const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    // "$" only matches at end of input without the m flag, so anchor on the
+    // first newline instead - otherwise this never matches a real post body.
+    html = html.replace(/^\s*#\s+(.*)\r?\n?/, (match, heading: string) => {
+      const h = norm(heading);
+      const t = norm(articleTitle);
+      // Guard the prefix check: an unrelated short heading ("# FAQ") must not be
+      // dropped just because the title happens to start with the same word.
+      const shortest = Math.min(h.length, t.length);
+      if (h === t || (shortest >= 12 && (h.startsWith(t) || t.startsWith(h)))) return '';
+      return match;
+    });
+  }
 
   // Internal links first - format: [[link:/path|text]]
   html = html.replace(/\[\[link:([^\|]+)\|([^\]]+)\]\]/g, '<a href="$1" class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 underline font-medium transition-colors duration-300">$2</a>');
@@ -183,15 +211,33 @@ const renderContentWithImages = (content: string, images: BlogImage[] = [], high
 
   // Headings - add id for TOC navigation
   html = html.replace(/^## (.*?)$/gm, (match, headingText) => {
-    const id = headingText.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const id = slugifyHeading(headingText);
     return `<h2 id="${id}" class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-12 mb-5 sm:mb-7 scroll-mt-24">${headingText}</h2>`;
   });
-  html = html.replace(/^# (.*?)$/gm, '<h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-8">$1</h1>');
+  // The article title is already rendered as the page <h1>, so a "# " heading in
+  // the body has to land on h2 - emitting a second h1 broke the outline.
+  html = html.replace(/^# (.*?)$/gm, (match, headingText) => {
+    const id = slugifyHeading(headingText);
+    return `<h2 id="${id}" class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-12 mb-5 sm:mb-7 scroll-mt-24">${headingText}</h2>`;
+  });
 
   // Sub-headings: ### is used 2000+ times across the corpus and was rendering
   // as literal "###" text inside a paragraph.
   html = html.replace(/^### (.*?)$/gm, '<h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">$1</h3>');
   html = html.replace(/^#### (.*?)$/gm, '<h4 class="text-lg sm:text-xl font-semibold text-slate-900 dark:text-white mt-6 mb-3">$1</h4>');
+
+  // Heading order: axe "heading-order" fails when a level is skipped (h2 -> h4).
+  // Authors write whatever nesting they like, so clamp every body heading to at
+  // most one level deeper than the one before it.
+  let prevLevel = 1;
+  const openLevels: number[] = [];
+  html = html.replace(/<h([2-6])([^>]*)>/g, (_match, lvl: string, attrs: string) => {
+    const level = Math.min(Number(lvl), prevLevel + 1);
+    openLevels.push(level);
+    prevLevel = level;
+    return `<h${level}${attrs}>`;
+  });
+  html = html.replace(/<\/h([2-6])>/g, () => `</h${openLevels.shift() ?? 2}>`);
 
   // Paragraphs - optimized for readability (enhanced for mobile and desktop)
   html = html.replace(/^(?!<h[1-4]|<table|<ul|<ol|<li|<hr|<p|<div|<pre|<blockquote)(.*?)$/gm, (match, p1) => {
@@ -548,7 +594,7 @@ export default function ClientBlogDetail({
             <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 sm:p-8 lg:p-10 shadow-xl mb-8 max-w-3xl mx-auto">
               <article
                 className="prose prose-slate dark:prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images, highlightTerm) }}
+                dangerouslySetInnerHTML={{ __html: renderContentWithImages(post.content, post.images, highlightTerm, post.title) }}
               />
             </div>
           </div>
