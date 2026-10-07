@@ -4248,7 +4248,7 @@
   {
     "id": 356,
     "name": "Codeium",
-    "description": "Free AI-powered code acceleration toolkit.",
+    "description": "Codeium was Exafunction's free AI coding toolkit. The company rebranded to Windsurf in April 2025; after Google hired the founders and licensed the technology in July 2025, Cognition acquired the remaining business. The standalone editor became Devin Desktop in June 2026, while the editor extensions kept the Windsurf Plugin name. codeium.com now redirects to devin.ai/desktop.",
     "category": "Code",
     "pricing": "Free",
     "url": "https://devin.ai/desktop",
@@ -4259,8 +4259,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "Codeium is an AI code tool for Free, Completion and Search.",
-    "last_updated": "2026-09-24",
+    "description_en": "Codeium was Exafunction's free AI coding toolkit, later rebranded as Windsurf. After Google hired the founders and licensed the technology in July 2025, Cognition acquired the remaining business and renamed the standalone editor Devin Desktop in June 2026. The editor extensions kept the Windsurf Plugin name, so codeium.com now redirects to devin.ai/desktop.",
+    "renamed_to": "Devin Desktop",
+    "last_updated": "2026-10-08",
     "skill_level": "beginner",
     "best_for": [
       "Free",
@@ -16136,10 +16137,10 @@
   {
     "id": 1565,
     "name": "Windsurf",
-    "description": "AI-powered IDE from Codeium pairing an editor with the Cascade agent, which tracks your edits and commands so it can work across files rather than one at a time. Handles multi-file refactors, terminal commands and project-wide context. Aimed at developers who want agentic editing comparable to Cursor under a different pricing model.",
+    "description": "Agentic IDE built around the Cascade agent, which tracks your edits, commands and project context so it can refactor across files rather than one line at a time. Handles multi-file refactors, terminal commands and project-wide context. Google licensed the technology and hired the founders in July 2025, and Cognition acquired the remaining company the same month. Windsurf 2.0 folded Devin Cloud into every self-serve plan in April 2026; on June 2, 2026 the editor was renamed Devin Desktop, with Cascade, keybindings and extensions unchanged. Pro rose from $15 to $20 per month alongside a new $200 Max tier.",
     "category": "Code",
     "pricing": "Freemium",
-    "url": "https://windsurf.com",
+    "url": "https://devin.ai/desktop",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -16147,8 +16148,9 @@
     "languages": [
       "English"
     ],
-    "description_en": "AI IDE from Codeium whose Cascade agent makes multi-file changes by tracking your edits and project context.",
-    "last_updated": "2026-09-28",
+    "description_en": "Agentic IDE built around the Cascade agent, which tracks your edits, commands and project context so it can refactor across files instead of one at a time. Google licensed the tech and hired the founders in July 2025, and Cognition acquired the remaining company the same month. Windsurf 2.0 folded Devin Cloud into every self-serve plan in April 2026; on June 2, 2026 the editor was renamed Devin Desktop, with Cascade, keybindings and extensions unchanged.",
+    "renamed_to": "Devin Desktop",
+    "last_updated": "2026-10-08",
     "skill_level": "intermediate",
     "best_for": [
       "Multi-File Edits",
