@@ -105,6 +105,66 @@ const renderContentWithImages = (content: string, images: BlogImage[] = [], high
     return path;
   });
 
+  // Tables (GFM pipe syntax) - must run before paragraph wrapping, otherwise each
+  // row is wrapped in its own <p> and the pipe characters are shown to the reader.
+  html = html.replace(/(?:^[ \t]*\|.*\|[ \t]*$\r?\n?){2,}/gm, (block) => {
+    const rows = block
+      .trim()
+      .split(/\r?\n/)
+      .filter((r) => r.trim())
+      .map((r) =>
+        r
+          .trim()
+          .replace(/^\||\|$/g, '')
+          .split('|')
+          .map((c) => c.trim())
+      );
+    if (rows.length < 2) return block;
+    // Second row must be the |---|---| divider, otherwise this is not a table
+    if (!rows[1].every((c) => /^:?-{2,}:?$/.test(c))) return block;
+
+    const head = rows[0];
+    const body = rows.slice(2);
+    return `<table class="min-w-full my-6 border-collapse text-sm"><thead><tr>${head
+      .map(
+        (c) =>
+          `<th class="border-b border-slate-300 dark:border-gray-700 px-3 py-2 text-left font-semibold text-slate-900 dark:text-white">${c}</th>`
+      )
+      .join('')}</tr></thead><tbody>${body
+      .map(
+        (r) =>
+          `<tr>${r
+            .map(
+              (c) =>
+                `<td class="border-b border-slate-200 dark:border-gray-800 px-3 py-2 text-slate-600 dark:text-gray-300 align-top">${c}</td>`
+            )
+            .join('')}</tr>`
+      )
+      .join('')}</tbody></table>`;
+  });
+
+  // Bullet lists - also before paragraph wrapping, so "- item" does not render literally
+  html = html.replace(/(?:^[ \t]*[-*][ \t].+$\r?\n?)+/gm, (block) => {
+    const items = block
+      .trim()
+      .split(/\r?\n/)
+      .map((l) => l.trim().replace(/^[-*][ \t]+/, ''));
+    return `<ul class="list-disc pl-6 mb-6 space-y-2">${items
+      .map((i) => `<li class="text-slate-600 dark:text-gray-300 leading-relaxed">${i}</li>`)
+      .join('')}</ul>`;
+  });
+
+  // Numbered lists
+  html = html.replace(/(?:^[ \t]*\d+\.[ \t].+$\r?\n?)+/gm, (block) => {
+    const items = block
+      .trim()
+      .split(/\r?\n/)
+      .map((l) => l.trim().replace(/^\d+\.[ \t]+/, ''));
+    return `<ol class="list-decimal pl-6 mb-6 space-y-2">${items
+      .map((i) => `<li class="text-slate-600 dark:text-gray-300 leading-relaxed">${i}</li>`)
+      .join('')}</ol>`;
+  });
+
   // Headings - add id for TOC navigation
   html = html.replace(/^## (.*?)$/gm, (match, headingText) => {
     const id = headingText.toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -113,7 +173,7 @@ const renderContentWithImages = (content: string, images: BlogImage[] = [], high
   html = html.replace(/^# (.*?)$/gm, '<h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-8">$1</h1>');
 
   // Paragraphs - optimized for readability (enhanced for mobile and desktop)
-  html = html.replace(/^(?!<h[12])(.*?)$/gm, (match, p1) => {
+  html = html.replace(/^(?!<h[12]|<table|<ul|<ol|<li|<hr|<p|<div|<pre|<blockquote)(.*?)$/gm, (match, p1) => {
     if (p1.trim() && p1.trim() !== '---') {
       return `<p class="text-slate-600 dark:text-gray-300 leading-relaxed mb-6 text-base lg:text-lg max-w-prose">${p1}</p>`;
     } else if (p1.trim() === '---') {

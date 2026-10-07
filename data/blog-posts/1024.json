@@ -1,0 +1,49 @@
+{
+  "id": 1024,
+  "title": "Best New AI Tools of 2026: What Actually Shipped",
+  "slug": "what-actually-shipped-in-ai-2026",
+  "date": "2026-09-28",
+  "description": "A look at the AI tools that genuinely arrived in 2026 — self-hosted agents, agent-first IDEs, controllable video models and open-weight image models — and which ones are worth your time.",
+  "style": "沉稳技术风",
+  "images": [],
+  "content": "# Best New AI Tools of 2026: What Actually Shipped\n\nMost \"best new AI tools\" lists are the same twelve products reshuffled. This one covers what actually changed in 2026: agents that run on your own hardware, development environments built around delegation instead of autocomplete, video models you can direct, and image models you can download.\n\nExplore our [[link:/category/Productivity|Productivity category]] for more tools.\n\n---\n\n## The Shift: From Chatting to Delegating\n\nThe clearest change in 2026 is not a single product — it is what people expect these tools to do. In 2024 you asked a question and got an answer. In 2026 you hand over a task and check the result.\n\nThat difference sounds small and is not. It changes pricing (you pay for work completed, not messages), it changes trust (you need to review output, not read it), and it changes where the software runs.\n\n---\n\n## [[link:/tools/1562|OpenClaw]]: Agents You Host Yourself\n\n[[link:/tools/1562|OpenClaw]] is an open-source AI assistant that runs multi-step tasks on your own machine or a private server. It is the most visible product in a broader move toward self-hosted agents.\n\nWhy it matters:\n\n- **Data stays local**: Files and credentials never leave hardware you control\n- **No per-token billing**: You pay for compute, not messages\n- **Installable skills**: Community-built capabilities you can add or remove\n- **Unconstrained autonomy**: No provider deciding what your agent may attempt\n\nThe trade-off is real: you need a machine to run it on, and you are responsible for what it does. This is not a beginner tool, and the setup cost is measured in hours rather than minutes.\n\n---\n\n## [[link:/tools/1564|Google Antigravity]]: Delegation as the Default\n\n[[link:/tools/1564|Google Antigravity]] is Google's agent-first development environment. Instead of completing the line you are typing, you delegate a piece of work and review what comes back.\n\n### What Changes in Practice\n\n- **Long-running sessions**: Agents work across a project, not a single file\n- **Artifacts you review**: Output arrives as reviewable work, not just code in a buffer\n- **Project-level scope**: Refactors and migrations become a single request\n\n---\n\n## [[link:/tools/1565|Windsurf]]: The Multi-File Editor\n\n[[link:/tools/1565|Windsurf]] comes from Codeium and pairs an editor with the Cascade agent, which tracks your edits and commands so it can act across an entire project.\n\n### Windsurf vs Single-File Assistants\n\n- **Multi-file refactors**: Changes that touch dozens of files in one pass\n- **Project context**: The agent sees your edits as they happen\n- **Terminal awareness**: It can run commands, not only suggest them\n\nIf [[link:/tools/13|Cursor]] established the agentic IDE category, Windsurf is the credible alternative worth testing before you commit to either.\n\n---\n\n## [[link:/tools/1563|Seedance 2.0]]: Video You Can Direct\n\n[[link:/tools/1563|Seedance 2.0]] is ByteDance's video generation model, and it became the year's most discussed release in video for a specific reason: motion and camera control.\n\nEarlier video models produced clips that looked impressive for three seconds and fell apart at five. Seedance holds character consistency across shots and takes explicit camera direction, which is what separates a demo from something usable in advertising or short-form production.\n\n### Where It Fits\n\n- **Advertising and marketing video**: Scenes that would otherwise need a crew\n- **Short drama**: Multi-shot sequences from one prompt\n- **Concept visualisation**: Testing a direction before committing budget\n\n---\n\n## [[link:/tools/1566|Lyria]]: Music With Structure\n\n[[link:/tools/1566|Lyria]] is Google DeepMind's music generation model. Version 3.5 generates full-length tracks with verse and chorus structure from text or image prompts, supports custom lyrics, and watermarks everything it produces.\n\nThe structural control is the point. Most music models produce a pleasant loop; Lyria produces something with an arrangement, which is the difference between background noise and a usable soundtrack.\n\n---\n\n## [[link:/tools/1567|Qwen-Image]]: Open Weights for Images\n\n[[link:/tools/1567|Qwen-Image]] is Alibaba's open-weight image model. The 2.1 release runs at 7B parameters, handles transparent RGBA output, and accepts up to ten reference images when editing.\n\nIt is released under a research licence, so commercial use needs approval — check that before building on it.\n\n---\n\n## [[link:/tools/1500|NotebookLM]]: Answers Only From Your Sources\n\n[[link:/tools/1500|NotebookLM]] takes the opposite approach to a general chatbot: it answers only from documents you upload, and cites the passage behind each claim. Now folded deeper into Google's product line, it remains the most practical tool for reading a pile of material you do not have time to read.\n\n---\n\n## Comparison Table\n\n| Tool | Category | Runs where | Best for |\n|------|----------|-----------|----------|\n| [[link:/tools/1562|OpenClaw]] | Agent | Your own hardware | Privacy, automation at no token cost |\n| [[link:/tools/1564|Google Antigravity]] | Coding | Cloud | Delegating whole-project work |\n| [[link:/tools/1565|Windsurf]] | Coding | Local + cloud | Multi-file refactors |\n| [[link:/tools/1563|Seedance 2.0]] | Video | Cloud API | Directed marketing video |\n| [[link:/tools/1566|Lyria]] | Audio | Cloud API | Structured music tracks |\n| [[link:/tools/1567|Qwen-Image]] | Image | Local or cloud | Open-weight image editing |\n| [[link:/tools/1500|NotebookLM]] | Research | Cloud | Cited answers from your documents |\n\n---\n\n## What Did Not Change\n\nThree things stayed true despite the noise:\n\n1. **Output still needs review.** Agents are faster, not more accurate\n2. **Free tiers are still the right way to start.** Every tool here can be tested before paying\n3. **The best tool is the one you use weekly.** Breadth of features matters less than fit\n\n---\n\n## How to Pick One\n\nIf you only try one thing from this list, pick by your bottleneck:\n\n- **Repetitive computer work**: [[link:/tools/1562|OpenClaw]] or [[link:/tools/1505|n8n]]\n- **Too much code to change by hand**: [[link:/tools/1565|Windsurf]] or [[link:/tools/1564|Google Antigravity]]\n- **Video production cost**: [[link:/tools/1563|Seedance 2.0]]\n- **Reading you cannot keep up with**: [[link:/tools/1500|NotebookLM]]\n\n---\n\n## Frequently Asked Questions\n\n**Are these tools actually new in 2026?**\nOpenClaw, Google Antigravity, Seedance 2.0, Lyria and Qwen-Image all either launched or reached wide adoption during 2026. NotebookLM is older but changed substantially this year.\n\n**Do I need to run OpenClaw to benefit from agents?**\nNo. [[link:/tools/1487|Claude Code]] and [[link:/tools/13|Cursor]] offer hosted agentic coding. Self-hosting matters when data residency or token cost is the constraint.\n\n**Is Seedance 2.0 available outside China?**\nIt is distributed through Volcano Engine with API access. Availability and terms vary by region, so check before building a workflow around it.\n\n**Which of these has a usable free tier?**\n[[link:/tools/1500|NotebookLM]] is free, [[link:/tools/1567|Qwen-Image]] is open-weight, and [[link:/tools/1565|Windsurf]] and [[link:/tools/1566|Lyria]] both offer free entry points.\n",
+  "category": "Productivity",
+  "faq_schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are these tools actually new in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "OpenClaw, Google Antigravity, Seedance 2.0, Lyria and Qwen-Image all either launched or reached wide adoption during 2026. NotebookLM is older but changed substantially this year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to run OpenClaw to benefit from agents?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Claude Code and Cursor offer hosted agentic coding. Self-hosting matters when data residency or token cost is the constraint."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Seedance 2.0 available outside China?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is distributed through Volcano Engine with API access. Availability and terms vary by region, so check before building a workflow around it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which of these has a usable free tier?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NotebookLM is free, Qwen-Image is open-weight, and Windsurf and Lyria both offer free entry points."
+        }
+      }
+    ]
+  }
+}

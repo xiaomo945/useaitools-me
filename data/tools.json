@@ -15049,8 +15049,8 @@
     "languages": [
       "English"
     ],
-    "description_en": "Text- and image-to-video model from ShengShu Technology, with emphasis on keeping subjects consistent across shots and giving explicit camera-motion control. Aimed at short narrative clips and concept visualisation rather than long-form production.",
-    "last_updated": "2026-09-24",
+    "description_en": "Text- and image-to-video model from ShengShu Technology, with emphasis on keeping subjects consistent across shots and giving explicit camera-motion control. Aimed at short narrative clips and concept visualisation rather than long-form production. The S2 release adds real-time 720p editable output and interactive avatar characters.",
+    "last_updated": "2026-09-28",
     "skill_level": "beginner",
     "best_for": [
       "Video Generation",
@@ -16048,6 +16048,208 @@
       "Voice Agents",
       "API"
     ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "id": 1562,
+    "name": "OpenClaw",
+    "description": "Open-source, self-hosted AI assistant that executes multi-step tasks on your own machine or private server rather than answering one-off prompts in a browser. Runs locally with no per-token billing, supports installable skills from ClawHub, and keeps files and credentials on hardware you control. Popular with developers who want agent autonomy without sending data to a third party.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://openclaw.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Open-source self-hosted AI assistant that runs multi-step agent tasks locally, keeping your data on your own hardware.",
+    "last_updated": "2026-09-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Self-Hosting",
+      "Privacy",
+      "Automation"
+    ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "id": 1563,
+    "name": "Seedance 2.0",
+    "description": "ByteDance text-to-video model known for coherent human motion, controllable camera work and multi-shot generation from a single prompt. Aimed at advertising, short drama and marketing video, where it replaces scenes that previously needed a crew and a location. Accessed through Volcano Engine with API availability for production pipelines.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.volcengine.com/product/seedance",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": true,
+    "languages": [
+      "English",
+      "Chinese"
+    ],
+    "description_en": "ByteDance video generation model with coherent motion and camera control, built for advertising and short-form marketing video.",
+    "last_updated": "2026-09-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Marketing Video",
+      "Advertising",
+      "Camera Control"
+    ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "id": 1564,
+    "name": "Google Antigravity",
+    "description": "Google agent-first development environment where you delegate work to agents that plan, write and verify code across a whole project instead of completing single suggestions. Built around long-running agent sessions, artifact review and integration with Google model stack and cloud services.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://antigravity.google",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Google agent-first development environment that delegates whole-project coding work to agents with reviewable artifacts.",
+    "last_updated": "2026-09-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agentic Coding",
+      "Large Refactors",
+      "Teams"
+    ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "id": 1565,
+    "name": "Windsurf",
+    "description": "AI-powered IDE from Codeium pairing an editor with the Cascade agent, which tracks your edits and commands so it can work across files rather than one at a time. Handles multi-file refactors, terminal commands and project-wide context. Aimed at developers who want agentic editing comparable to Cursor under a different pricing model.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://windsurf.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI IDE from Codeium whose Cascade agent makes multi-file changes by tracking your edits and project context.",
+    "last_updated": "2026-09-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Multi-File Edits",
+      "Refactoring",
+      "IDE"
+    ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "id": 1566,
+    "name": "Lyria",
+    "description": "Google DeepMind music generation model producing high-fidelity stereo tracks with verse and chorus structure from text or image prompts. Lyria 3.5 adds custom lyrics, timestamp-based structural control and SynthID watermarking on all generated audio. Available through AI Studio, the Gemini API and the Gemini app.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://deepmind.google/models/lyria",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Google DeepMind music model that generates structured stereo tracks from prompts, with lyrics control and audio watermarking.",
+    "last_updated": "2026-09-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Music Generation",
+      "Soundtracks",
+      "Content Creators"
+    ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "id": 1567,
+    "name": "Qwen-Image",
+    "description": "Alibaba open-weight image generation and editing model. The 2.1 release runs at 7B parameters, handles transparent RGBA output and accepts up to 10 reference images for editing, and claims to outperform closed models on its own benchmark. Released under a research licence; commercial use requires approval.",
+    "category": "Image",
+    "pricing": "Open Source",
+    "url": "https://github.com/QwenLM/Qwen-Image",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "Chinese"
+    ],
+    "description_en": "Alibaba's open-weight 7B image model with RGBA output and multi-reference editing, free for research use.",
+    "last_updated": "2026-09-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Open Weights",
+      "Image Editing",
+      "Local Running"
+    ],
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "name": "Ollama",
+    "description": "Open-source runtime for running large language models locally on macOS, Linux and Windows with a single command. Ships a model library covering Llama, Qwen, Mistral, Gemma and Phi, exposes a local REST API and OpenAI-compatible endpoint, and is the default backbone for self-hosted agent stacks and private RAG pipelines. Popular with developers who need model access with no network dependency and no per-token bill.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://ollama.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Run open-weight LLMs locally with one command, exposing a local API for agents, RAG and private chatbots.",
+    "last_updated": "2026-10-07",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Self-Hosting",
+      "Privacy",
+      "Developers"
+    ],
+    "id": 1568,
+    "rating": null,
+    "rating_count": null
+  },
+  {
+    "name": "LM Studio",
+    "description": "Desktop application for discovering, downloading and running open-weight language models on your own hardware, with a graphical chat interface and a built-in local inference server. Supports GGUF and MLX formats, lets you tune context length and GPU offload without a terminal, and can expose an OpenAI-compatible API so local models drop into existing agent and coding tools.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://lmstudio.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Desktop app for running local LLMs with a GUI and a built-in OpenAI-compatible local server.",
+    "last_updated": "2026-10-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Self-Hosting",
+      "Privacy",
+      "Beginners"
+    ],
+    "id": 1569,
     "rating": null,
     "rating_count": null
   }

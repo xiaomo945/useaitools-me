@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import Footer from '@/app/components/Footer';
 import SearchClient from './SearchClient';
 
+// Metadata is derived from the query string, so this route cannot be prerendered.
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({ searchParams }: { searchParams: Promise<{ q?: string }> }): Promise<Metadata> {
   const { q } = await searchParams;
   const query = q || '';

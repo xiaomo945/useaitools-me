@@ -1,0 +1,57 @@
+{
+  "id": 1026,
+  "title": "Running AI Agents on Your Own Hardware: What Self-Hosting Actually Buys You",
+  "slug": "run-ai-agents-on-your-own-hardware",
+  "date": "2026-10-07",
+  "description": "What you really gain by running AI agents locally instead of in the cloud — privacy, predictable cost, offline access — and the three pieces of software that make it practical.",
+  "style": "沉稳技术风",
+  "images": [],
+  "content": "# Running AI Agents on Your Own Hardware: What Self-Hosting Actually Buys You\n\nThe pitch for local AI usually stops at \"your data never leaves your machine\". That is true, and it is also the least interesting reason to do it. The more useful reasons are cost predictability, offline availability, and the ability to leave an agent running for six hours without watching a meter.\n\nThis guide covers what self-hosting genuinely changes, what it costs in hardware and patience, and the three tools that make it a weekend project instead of a research project.\n\n---\n\n## The Three Things That Actually Change\n\n**Cost stops scaling with usage.** Cloud agents bill per token. A task that reads forty files, rewrites twelve and runs the test suite three times costs real money, and the bill is front-loaded — you pay before you know whether the output was any good. A local model costs the same whether you run it once or two hundred times. That difference flips how you work: you stop rationing attempts and start iterating.\n\n**It works on a plane.** Sounds minor until you have a deadline and unreliable wifi. A local model does not care.\n\n**You can point it at things you would never upload.** Client contracts, unreleased code, medical records, a folder of tax PDFs. Not because the cloud provider is untrustworthy, but because \"we do not train on your data\" is a policy, and a policy can change. Hardware is not a policy.\n\n---\n\n## The Stack, Bottom to Top\n\n### 1. A Model Runtime\n\nYou need something that loads weights, manages the GPU and exposes an API. Two options cover almost everyone:\n\n[[link:/tools/1568|Ollama]] is the command-line choice. One command pulls a model and serves it on a local port with an OpenAI-compatible endpoint, which means most agent frameworks work against it with a changed base URL and nothing else. It handles quantisation, GPU offload and model caching for you, and the model library covers Llama, Qwen, Mistral, Gemma and Phi. If you are comfortable in a terminal, start here.\n\n[[link:/tools/1569|LM Studio]] is the same idea with a graphical interface. You browse and download models from a library, chat with them immediately, and flip on a local server when you need the API. It supports GGUF and MLX, and lets you adjust context length and GPU offload with sliders instead of flags. If the terminal is not where you live, start here.\n\nBoth are free for personal use, and both will run the same models — the choice is interface, not capability.\n\n### 2. A Model\n\nIgnore benchmarks for a moment and think in VRAM. A 7B–8B parameter model at 4-bit quantisation needs roughly 5–6 GB and runs fine on a laptop with 16 GB of unified memory. A 30B–32B model wants 20 GB or more, which means a desktop GPU or an Apple machine with 32 GB+. Going bigger buys you better instruction-following and fewer loop failures on multi-step tasks — which is exactly what matters for agents.\n\nPractical default: a 7B model for classification and extraction work, a 30B-class model for anything that has to plan and use tools. Run both; switch per task.\n\n### 3. An Agent Layer\n\nThis is where [[link:/tools/1562|OpenClaw]] comes in. It is an open-source assistant that executes multi-step tasks on hardware you control rather than answering one prompt at a time in someone else's browser. It runs against a local runtime like Ollama or LM Studio, keeps files and credentials on the machine, and supports installable skills, so you can add capabilities without writing them from scratch.\n\nThe distinction matters: a chat interface answers; an agent completes. OpenClaw is the piece that turns \"I have a model running locally\" into \"this thing cleaned up my download folder and filed the receipts while I was asleep\".\n\n---\n\n## What It Costs You\n\nBeing straight about the downsides, because they are real:\n\n- **Speed.** A local 8B model is slower than a hosted frontier model. Tasks that take 30 seconds in the cloud can take several minutes locally. You trade latency for unlimited retries.\n- **Capability gap.** For hard reasoning, long-context synthesis and anything touching current events, hosted models are still better. Most people end up with a hybrid: local for volume and privacy, hosted for the hard 10%.\n- **Setup friction.** Drivers, quantisation formats and context limits are your problem now. Budget an afternoon, not an hour.\n- **Electricity and hardware** if you intend to run continuously. A always-on machine is not free, just cheaper per task.\n\n---\n\n## A Reasonable Way to Start\n\n1. Install [[link:/tools/1569|LM Studio]] (or [[link:/tools/1568|Ollama]] if you prefer the terminal) and pull a 7B-class instruct model.\n2. Use it as a chat tool for a week on low-stakes work. Note where it fails.\n3. Turn on the local server and point one existing tool at it — many coding assistants and note apps accept a custom endpoint.\n4. Only then add an agent layer like [[link:/tools/1562|OpenClaw]], once you know what your hardware can actually sustain.\n\nSkipping straight to step 4 is how people conclude that local AI does not work. It works; it just is not magic, and the model is doing the heavy lifting.\n\nBrowse more options in our [[link:/category/Productivity|Productivity category]].\n\n---\n\n## Frequently Asked Questions\n\n**Do I need an expensive GPU to run AI agents locally?**\nNo. A 7B–8B model at 4-bit quantisation runs comfortably on a recent laptop with 16 GB of unified memory, which covers most single-step agent tasks. You want a discrete GPU with 12 GB+ of VRAM or a 32 GB+ Apple Silicon machine for larger models and long multi-step runs.\n\n**Is a locally run model as good as ChatGPT or Claude?**\nFor hard reasoning, long documents and current events, no — hosted frontier models lead clearly. For extraction, summarisation, formatting, classification and repetitive multi-step work, a good local model is close enough that most people cannot tell the difference on their own tasks.\n\n**What is the difference between a model runtime and an agent?**\nThe runtime (Ollama, LM Studio) loads model weights and serves an API. The agent (OpenClaw) uses that API to plan and execute multi-step tasks — reading files, running commands, writing output. You need both, and they are separate pieces of software.\n\n**Can I use local models with tools I already pay for?**\nOften yes. Many developer tools and agent frameworks accept a custom base URL, and both Ollama and LM Studio expose an OpenAI-compatible endpoint. Point the base URL at localhost and the rest of the tool usually works unchanged.\n\n**Is running models locally actually cheaper?**\nIt depends on volume. Below a few million tokens a month, cloud is cheaper because you avoid hardware cost entirely. Above that — or if you run long agent loops that retry repeatedly — local wins, and the crossover arrives faster than most people expect.\n",
+  "category": "Productivity",
+  "faq_schema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need an expensive GPU to run AI agents locally?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. A 7B–8B model at 4-bit quantisation runs comfortably on a recent laptop with 16 GB of unified memory, which covers most single-step agent tasks. You want a discrete GPU with 12 GB+ of VRAM or a 32 GB+ Apple Silicon machine for larger models and long multi-step runs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a locally run model as good as ChatGPT or Claude?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For hard reasoning, long documents and current events, no — hosted frontier models lead clearly. For extraction, summarisation, formatting, classification and repetitive multi-step work, a good local model is close enough that most people cannot tell the difference on their own tasks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a model runtime and an agent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The runtime (Ollama, LM Studio) loads model weights and serves an API. The agent (OpenClaw) uses that API to plan and execute multi-step tasks — reading files, running commands, writing output. You need both, and they are separate pieces of software."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use local models with tools I already pay for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Often yes. Many developer tools and agent frameworks accept a custom base URL, and both Ollama and LM Studio expose an OpenAI-compatible endpoint. Point the base URL at localhost and the rest of the tool usually works unchanged."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is running models locally actually cheaper?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on volume. Below a few million tokens a month, cloud is cheaper because you avoid hardware cost entirely. Above that — or if you run long agent loops that retry repeatedly — local wins, and the crossover arrives faster than most people expect."
+        }
+      }
+    ]
+  }
+}
