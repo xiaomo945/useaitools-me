@@ -53,6 +53,7 @@ type Tool = {
   skill_level?: string;
   best_for?: string[];
   unverified?: boolean;
+  renamed_to?: string;
 };
 
 type BlogPost = {
@@ -289,6 +290,12 @@ export default function ToolSlugClient({
             {tool.unverified && (
               <p className="text-xs text-amber-800 dark:text-amber-300 mb-4 text-center bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 rounded-lg px-3 py-2">
                 ⚠️ We could not confirm this tool&apos;s official website, so the link below may be outdated or wrong. Check the vendor before signing up or paying.
+              </p>
+            )}
+
+            {tool.renamed_to && (
+              <p className="text-xs text-sky-800 dark:text-sky-300 mb-4 text-center bg-sky-50 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800/60 rounded-lg px-3 py-2">
+                This product is now called {tool.renamed_to}. The link below still works and takes you to the current site.
               </p>
             )}
 

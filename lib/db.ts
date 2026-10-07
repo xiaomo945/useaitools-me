@@ -44,6 +44,7 @@ export interface Tool {
   languages: string[];
   unverified?: boolean;
   unverified_reason?: string;
+  renamed_to?: string;
   rating?: number | null;
   rating_count?: number | null;
   rating_breakdown: any;
