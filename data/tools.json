@@ -2901,7 +2901,7 @@
     "description": "AI-powered meeting minutes and action item tracker. Integrates with calendar apps.",
     "category": "Productivity",
     "pricing": "Freemium",
-    "url": "https://sembly-ai.com",
+    "url": "https://sembly.ai",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -2910,7 +2910,7 @@
       "English"
     ],
     "description_en": "AI-powered meeting minutes and action item tracker. Integrates with calendar apps.",
-    "last_updated": "2026-05-28",
+    "last_updated": "2026-10-07",
     "skill_level": "beginner",
     "best_for": [
       "Meetings",
@@ -3576,7 +3576,7 @@
     "description": "AI video creation from text. Automatically generates videos with stock footage.",
     "category": "Video",
     "pricing": "Freemium",
-    "url": "https://pictory-ai.com",
+    "url": "https://pictory.ai",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -3585,7 +3585,7 @@
       "English"
     ],
     "description_en": "AI video creation from text. Automatically generates videos with stock footage.",
-    "last_updated": "2026-05-28",
+    "last_updated": "2026-10-07",
     "skill_level": "beginner",
     "best_for": [
       "Text-to-Video",
@@ -3601,7 +3601,7 @@
     "description": "AI voice cloning and text-to-speech. Create custom voices.",
     "category": "Audio",
     "pricing": "Freemium",
-    "url": "https://lovo-ai.com",
+    "url": "https://lovo.ai",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -3610,7 +3610,7 @@
       "English"
     ],
     "description_en": "Lovo AI brings AI to audio work: Voice Cloning, Custom Voices and text-to-speech in one place.",
-    "last_updated": "2026-05-28",
+    "last_updated": "2026-10-07",
     "skill_level": "intermediate",
     "best_for": [
       "Voice Cloning",
@@ -3776,7 +3776,7 @@
     "description": "AI-powered design features in Canva. Magic design and text effects.",
     "category": "Productivity",
     "pricing": "Freemium",
-    "url": "https://canva-ai.com",
+    "url": "https://www.canva.com",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -3785,7 +3785,7 @@
       "English"
     ],
     "description_en": "AI-powered design features in Canva. Magic design and text effects.",
-    "last_updated": "2026-05-28",
+    "last_updated": "2026-10-07",
     "skill_level": "beginner",
     "best_for": [
       "Design",
@@ -4310,7 +4310,7 @@
       "English"
     ],
     "description_en": "Manage all social media accounts with AI-powered scheduling and content.",
-    "last_updated": "2026-05-26",
+    "last_updated": "2026-10-07",
     "skill_level": "intermediate",
     "best_for": [
       "Social Media",
@@ -4318,7 +4318,9 @@
       "Management"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "unverified": true,
+    "unverified_reason": "social-media-manager.com is an unrelated German career-info page"
   },
   {
     "id": 431,
@@ -8252,7 +8254,7 @@
     "description": "AI-enhanced video editor with auto-subtitles, effects, and one-click templates",
     "category": "Video",
     "pricing": "Freemium",
-    "url": "https://capcut.pro",
+    "url": "https://www.capcut.com",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -8261,7 +8263,7 @@
       "English"
     ],
     "description_en": "AI-enhanced video editor with auto-subtitles, effects, and one-click templates",
-    "last_updated": "2026-05-31",
+    "last_updated": "2026-10-07",
     "skill_level": "beginner",
     "best_for": [
       "Video Editing",
@@ -9172,7 +9174,7 @@
     "description": "AI social media scheduler with predictive engagement scoring, optimal timing analysis, and cross-platform content adaptation for 8+ networks",
     "category": "Productivity",
     "pricing": "Freemium",
-    "url": "https://socialpilot-ai.com",
+    "url": "https://www.socialpilot.co",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -9181,7 +9183,7 @@
       "English"
     ],
     "description_en": "AI social media scheduler with predictive engagement scoring, optimal timing analysis, and cross-platform content adaptation for 8+ networks",
-    "last_updated": "2026-05-31",
+    "last_updated": "2026-10-07",
     "skill_level": "beginner",
     "best_for": [
       "Social Scheduling",
@@ -9319,7 +9321,7 @@
       "English"
     ],
     "description_en": "AI freelancer management platform with proposal generation, invoice tracking, client communication templates, and project timeline estimation",
-    "last_updated": "2026-05-31",
+    "last_updated": "2026-10-07",
     "skill_level": "beginner",
     "best_for": [
       "Freelancers",
@@ -9348,7 +9350,9 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "unverified": true,
+    "unverified_reason": "freelanceflow.ai returns 404"
   },
   {
     "id": 999,
@@ -9411,7 +9415,7 @@
       "English"
     ],
     "description_en": "AI data synchronization tool that automatically maps, transforms, and syncs data between business applications with zero-code integration setup",
-    "last_updated": "2026-05-31",
+    "last_updated": "2026-10-07",
     "skill_level": "intermediate",
     "best_for": [
       "Data Integration",
@@ -9440,7 +9444,9 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "unverified": true,
+    "unverified_reason": "datasync-ai.com serves an unrelated investment-industry product"
   },
   {
     "id": 1002,
@@ -11173,7 +11179,7 @@
     "description": "AI revenue intelligence platform that analyzes sales calls, emails, and deals to improve win rates.",
     "category": "Productivity",
     "pricing": "Paid",
-    "url": "https://gong-ai.com",
+    "url": "https://gong.io",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -11182,7 +11188,7 @@
       "English"
     ],
     "description_en": "AI revenue intelligence platform that analyzes sales calls, emails, and deals to improve win rates.",
-    "last_updated": "2026-06-01",
+    "last_updated": "2026-10-07",
     "skill_level": "intermediate",
     "best_for": [
       "Revenue Intelligence",
