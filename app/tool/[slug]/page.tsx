@@ -181,20 +181,50 @@ export default async function ToolSlugPage({ params }: { params: Promise<{ slug:
   };
 
   // Related tools: same category, most recently updated first (no fake scores involved).
-  const relatedTools = typedTools
+  //
+  // slice(0, 5) meant every page in a category linked to the same five
+  // freshest tools, which left 497 of 533 tool pages with no internal link
+  // pointing at them at all - invisible to crawlers and to readers. Starting
+  // from a per-tool offset instead spreads the links evenly: each page still
+  // recommends five same-category tools, but every tool now receives at least
+  // five inbound links. Deterministic, so static generation stays stable.
+  const sameCategory = typedTools
     .filter(t => t.id !== tool.id && t.category === tool.category)
-    .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
-    .slice(0, 5)
-    .map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
+    .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''));
 
-  const relatedArticles = blogPosts
+  const relatedTools = (() => {
+    if (sameCategory.length <= 5) return sameCategory;
+    const byId = [...sameCategory].sort((a, b) => a.id - b.id);
+    const next = byId.findIndex(t => t.id > tool.id);
+    const start = next === -1 ? 0 : next;
+    return Array.from({ length: 5 }, (_, k) => byId[(start + k) % byId.length]);
+  })().map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
+
+  // Same rotation for articles: taking the five newest per category left 411
+  // of 441 posts with no link from any tool page. Offsetting by the tool id
+  // spreads them out while keeping each list newest-first.
+  const categoryPosts = blogPosts
     .filter(post => {
       const postCategory = post.category?.toLowerCase() || '';
       const toolCategory = tool.category.toLowerCase();
       return postCategory === toolCategory || postCategory.includes(toolCategory);
     })
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 5);
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  // The offset is the tool's rank inside its own category, not its id: ids are
+  // sparse, so id % length skipped some posts entirely, while ranking walks the
+  // list in contiguous blocks and covers every post in the category.
+  const rankInCategory = typedTools
+    .filter(t => t.category === tool.category)
+    .sort((a, b) => a.id - b.id)
+    .findIndex(t => t.id === tool.id);
+
+  const relatedArticles = categoryPosts.length <= 5
+    ? categoryPosts
+    : Array.from(
+        { length: 5 },
+        (_, k) => categoryPosts[(rankInCategory * 5 + k) % categoryPosts.length],
+      );
 
   return (
     <>
