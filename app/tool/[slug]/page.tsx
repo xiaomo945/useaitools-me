@@ -16,6 +16,7 @@ type Tool = {
   name: string;
   description: string;
   description_en?: string;
+  renamed_to?: string;
   category: 'Writing' | 'Image' | 'Productivity' | 'Code' | 'Audio' | 'Video';
   pricing: string;
   url: string;
@@ -76,6 +77,10 @@ function buildJsonLd(tool: Tool, slug: string) {
       {
         '@type': 'SoftwareApplication',
         name: tool.name,
+        // A renamed product should still match the name readers search for,
+        // so the current brand goes in alternateName rather than replacing
+        // the title and the slug the page is reachable at.
+        alternateName: tool.renamed_to,
         description: (tool.description_en || tool.description).slice(0, 500),
         applicationCategory: 'BusinessApplication',
         applicationSubCategory: `${tool.category} AI`,
