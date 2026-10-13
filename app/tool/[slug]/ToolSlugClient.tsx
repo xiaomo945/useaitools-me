@@ -114,57 +114,6 @@ const getSkillLevelColors = (level: string) => {
   }
 };
 
-const categoryFeatures: Record<string, string[]> = {
-  Writing: [
-    'AI-powered content generation for blogs, social media, and marketing copy',
-    'Real-time grammar, spelling, and tone suggestions',
-    'SEO optimization and keyword integration',
-    'Multi-language content creation and translation',
-    'Content summarization and paraphrasing',
-    'Brand voice consistency tools',
-  ],
-  Image: [
-    'Text-to-image generation with detailed prompt control',
-    'Professional image editing and enhancement',
-    'Art style transfer and customization',
-    'High-resolution upscaling and output',
-    'Background removal and object manipulation',
-    'Batch image processing and generation',
-  ],
-  Productivity: [
-    'Smart task prioritization and management',
-    'AI-powered meeting transcription and summaries',
-    'Automated workflow creation and optimization',
-    'Real-time team collaboration and communication',
-    'Cross-device and cross-platform synchronization',
-    'Intelligent document analysis and organization',
-  ],
-  Code: [
-    'AI-driven code completion and suggestions',
-    'Automated code refactoring and optimization',
-    'Real-time error detection and debugging',
-    'Automatic code documentation generation',
-    'Multi-language programming support',
-    'Security vulnerability scanning',
-  ],
-  Audio: [
-    'Natural-sounding text-to-speech conversion',
-    'High-fidelity voice cloning technology',
-    'Professional audio editing and enhancement',
-    'AI music generation and composition',
-    'Advanced noise reduction and audio cleanup',
-    'Podcast and audiobook production tools',
-  ],
-  Video: [
-    'Text-to-video generation with customizable styles',
-    'AI avatar creation and lip-syncing',
-    'Professional video editing and enhancement',
-    'Automatic background removal and replacement',
-    'Multi-language text-to-speech dubbing',
-    'Video script generation and storyboarding',
-  ],
-};
-
 // StarRating component
 const StarRating = ({ rating }: { rating?: number | null }) => (
   <div className="flex items-center gap-0.5">
@@ -193,7 +142,6 @@ export default function ToolSlugClient({
   slug: string;
 }) {
   const colors = getCategoryColors(tool.category);
-  const features = categoryFeatures[tool.category] || categoryFeatures['Writing'];
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const hasAffiliate = hasAffiliateLink(tool);
   const ctaText = hasAffiliate ? ctaVariants[getCTAVariant()] : 'Visit Website';
@@ -481,26 +429,6 @@ export default function ToolSlugClient({
             </div>
           </div>
         )}
-
-        {/* Features */}
-        <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-8 mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Features</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className={`flex items-center gap-4 p-4 rounded-xl ${colors.bgDark} dark:${colors.bgDark}`}
-              >
-                <div className={`w-8 h-8 rounded-lg ${colors.bg} flex items-center justify-center`}>
-                  <span className="text-white text-sm font-bold">{index + 1}</span>
-                </div>
-                <span className={`font-medium ${colors.textLight} dark:${colors.text}`}>
-                  {feature}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* Examples */}
         {tool.examples && tool.examples.length > 0 && (

@@ -6,6 +6,7 @@ import ToolSlugClient from './ToolSlugClient';
 import { getAffiliateLink } from '@/lib/affiliate';
 import { generateSlugFromName } from '@/lib/slug';
 import { generateKeywords } from '@/lib/seo';
+import { isToolWorthIndexing } from '@/lib/toolQuality';
 
 export { generateSlugFromName };
 
@@ -151,11 +152,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const title = `${tool.name} – ${tool.category} AI Tool (${tool.pricing})`;
   const description = (tool.description_en || tool.description).slice(0, 160);
 
+  // Pages with no use cases, no pros/cons and no article pointing at them are
+  // about 30 words of unique text. Google crawled those and declined to index
+  // them (623 pages sat in "crawled, not indexed"), so rather than keep paying
+  // crawl budget for a page that cannot rank, say so explicitly. They stay
+  // online and stay linked; `follow` keeps passing their internal links along.
+  const indexable = isToolWorthIndexing(tool.id);
+
   return {
     title,
     description,
     keywords: generateKeywords(tool.category, tool.name),
     alternates: { canonical: `${SITE_URL}/tool/${slug}` },
+    robots: indexable ? undefined : { index: false, follow: true },
     openGraph: {
       title,
       description,
@@ -224,12 +233,28 @@ export default async function ToolSlugPage({ params }: { params: Promise<{ slug:
     .sort((a, b) => a.id - b.id)
     .findIndex(t => t.id === tool.id);
 
-  const relatedArticles = categoryPosts.length <= 5
+  // Posts that actually link to this tool come first. A page that only has
+  // ~30 words of its own reads far better when the articles beneath it are the
+  // ones that discuss it, and it gives the crawler a real reason to follow.
+  const citingPosts = blogPosts
+    .filter(post => (post.content || '').includes(`[[link:/tools/${tool.id}|`))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  const rotatedCategoryPosts = categoryPosts.length <= 5
     ? categoryPosts
     : Array.from(
         { length: 5 },
         (_, k) => categoryPosts[(rankInCategory * 5 + k) % categoryPosts.length],
       );
+
+  const seenSlug = new Set<string>();
+  const relatedArticles = [...citingPosts, ...rotatedCategoryPosts]
+    .filter(post => {
+      if (seenSlug.has(post.slug)) return false;
+      seenSlug.add(post.slug);
+      return true;
+    })
+    .slice(0, 5);
 
   return (
     <>

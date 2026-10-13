@@ -197,6 +197,18 @@ export default async function BlogDetailPage({
   const processedPost = {
     ...post,
     content: post.content
+      // Tool links are stored as [[link:/tools/<id>|Name]]. Left alone, the
+      // renderer emits href="/tools/23", and every one of those 308-redirects to
+      // /tool/<slug>. Search Console was reporting 183 pages as "redirects"
+      // because of exactly this: ~3,200 internal links, each one a hop. Resolving
+      // the id to its slug here means the anchor points straight at the canonical
+      // URL - no hop, no duplicate URL, and the link's weight lands on the page
+      // that is supposed to rank.
+      .replace(/\[\[link:\/tools\/(\d+)\|([^\]]+)\]\]/g, (full, id, text) => {
+        const linked = typedTools.find(t => t.id === Number(id));
+        const toolSlug = linked ? generateSlugFromName(linked.name) : '';
+        return toolSlug ? `[[link:/tool/${toolSlug}|${text}]]` : full;
+      })
       .replace(/\{\{AFFILIATE_RYTR\}\}/g, process.env.AFFILIATE_RYTR || 'https://rytr.me')
       .replace(/\{\{AFFILIATE_GRAMMARLY\}\}/g, process.env.AFFILIATE_GRAMMARLY || 'https://grammarly.com')
       .replace(/\{\{AFFILIATE_JASPER\}\}/g, process.env.AFFILIATE_JASPER || 'https://jasper.ai')

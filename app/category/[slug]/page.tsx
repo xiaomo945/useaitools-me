@@ -6,6 +6,7 @@ import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
 import CategoryHero from './CategoryHero';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import { generateSlugFromName } from '@/lib/slug';
 import CategoryStats from '@/app/components/CategoryStats';
 import GoldPicks from '@/app/components/GoldPicks';
 import TopTools from '@/app/components/TopTools';
@@ -151,8 +152,10 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         '@type': 'ListItem',
         'position': index + 1,
         'name': tool.name,
-        'url': `https://useaitools.me/tools/${tool.id}`,
-        'description': tool.description
+        // The canonical tool URL - /tools/<id> only 308-redirects here, and a
+        // structured-data URL should point at the page that actually exists.
+        'url': `https://useaitools.me/tool/${generateSlugFromName(tool.name)}`,
+        'description': tool.description_en || tool.description
       }))
     }
   };

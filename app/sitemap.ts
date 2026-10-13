@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { generateSlugFromName } from '@/lib/slug';
+import { toolsWorthIndexing } from '@/lib/toolQuality';
 
 // 动态生成 sitemap
 export const dynamic = 'force-dynamic';
@@ -120,7 +121,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Canonical tool URLs: /tool/<slug>. The legacy /tools/<id> URLs 308-redirect
   // here, so they must not appear in the sitemap.
-  const toolPages = (tools as unknown as { id: number; name: string; last_updated?: string }[])
+  // Only pages with something to say on their own, or backed by an article that
+  // links to them. See lib/toolQuality.ts for the reasoning.
+  const worthSubmitting = toolsWorthIndexing();
+  const toolPages = (
+    tools as unknown as {
+      id: number;
+      name: string;
+      last_updated?: string;
+      use_cases?: unknown[];
+      pros_cons?: unknown;
+      examples?: unknown[];
+    }[]
+  )
+    .filter((tool) => worthSubmitting.has(tool.id))
     .map((tool) => {
       const slug = generateSlugFromName(tool.name);
       if (!slug) return null;
