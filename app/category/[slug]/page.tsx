@@ -57,6 +57,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const description = categoryDescriptions[category];
   const title = `${categoryName} AI Tools - Use AI Tools`;
 
+  // /category/Productivity and /category/productivity both render, and each
+  // used to canonicalise to itself, so Google saw two unrelated pages with the
+  // same content and dropped one. Lowercase is what the sitemap uses, so it is
+  // the canonical form; the capitalised URL points at it.
+  const canonicalSlug = slug.toLowerCase();
+
   return {
     title,
     description,
@@ -65,7 +71,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description,
       siteName: 'Use AI Tools',
       type: 'website',
-      url: `https://useaitools.me/category/${slug}`,
+      url: `https://useaitools.me/category/${canonicalSlug}`,
       locale: 'en_US',
       alternateLocale: 'zh_CN',
     },
@@ -75,10 +81,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description,
     },
     alternates: {
-      canonical: `https://useaitools.me/category/${slug}`,
+      canonical: `https://useaitools.me/category/${canonicalSlug}`,
       languages: {
-        'en': `/category/${slug}`,
-        'zh': `/category/${slug}?lang=zh`,
+        'en': `/category/${canonicalSlug}`,
+        'zh': `/category/${canonicalSlug}?lang=zh`,
       },
     },
   };

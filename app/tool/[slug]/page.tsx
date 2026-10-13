@@ -45,6 +45,11 @@ export async function generateStaticParams() {
     .map(slug => ({ slug }));
 }
 
+// Without this, any /tool/<anything> that is not a real tool is rendered on
+// demand as a "Tool Not Found" page with a 200. Search Console was reporting
+// those as soft 404s and low-quality pages. Only the slugs above exist now.
+export const dynamicParams = false;
+
 /** Real, data-derived answers — no invented claims. */
 function buildFaqs(tool: Tool) {
   const isFree = ['Free', 'Freemium', 'Open Source'].includes(tool.pricing);

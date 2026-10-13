@@ -33,6 +33,10 @@ export async function generateStaticParams() {
     slug: wf.id,
   }));
 }
+// Only the slugs above exist; anything else should 404 instead of
+// rendering a "Not Found" page with a 200 (soft 404 in Search Console).
+export const dynamicParams = false;
+
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
