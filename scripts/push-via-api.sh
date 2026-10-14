@@ -44,6 +44,12 @@ for sha in $SHAS; do
   PARENT_TREE=$(curl -s -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.github+json" \
     "$API/git/commits/$PARENT" | jqget ".tree.sha")
 
+  # Base-tree path listing, so deletion entries can be skipped when the path is
+  # already absent there (GitHub rejects a sha:null deletion of a missing path).
+  curl -s -H "Authorization: Bearer $TOKEN" -H "Accept: application/vnd.github+json" \
+    "$API/git/trees/$PARENT_TREE?recursive=1" \
+    | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{const j=JSON.parse(d);const ps=(j.tree||[]).map(x=>x.path);require('fs').writeFileSync('$TMP/parent_paths.json',JSON.stringify(ps))})"
+
   echo "[]" > "$TMP/entries.json"
 
   while IFS= read -r p; do
@@ -70,6 +76,8 @@ for sha in $SHAS; do
     [ -z "$p" ] && continue
     node -e "
       const fs=require('fs');
+      const ps=JSON.parse(fs.readFileSync('$TMP/parent_paths.json','utf8'));
+      if(!ps.includes(process.argv[1])){ console.log('  - (skip, 基底已无) '+process.argv[1]); process.exit(0); }
       const e=JSON.parse(fs.readFileSync('$TMP/entries.json','utf8'));
       e.push({path:process.argv[1], mode:'100644', type:'blob', sha:null});
       fs.writeFileSync('$TMP/entries.json', JSON.stringify(e));
