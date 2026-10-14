@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
+import toolsData from '@/data/tools.json';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 
 export const metadata: Metadata = {
@@ -164,19 +165,19 @@ export default function AdvertisePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-16">
             <div className="text-center p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-slate-200/60 dark:border-gray-800/80">
               <div className="text-4xl font-extrabold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-2">
-                1,300+
+                {toolsData.length}
               </div>
               <div className="text-slate-600 dark:text-slate-300 font-medium">AI Tools Listed</div>
             </div>
             <div className="text-center p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-slate-200/60 dark:border-gray-800/80">
               <div className="text-4xl font-extrabold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-2">
-                700+
+                441
               </div>
               <div className="text-slate-600 dark:text-slate-300 font-medium">Articles Published</div>
             </div>
             <div className="text-center p-6 bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-slate-200/60 dark:border-gray-800/80">
               <div className="text-4xl font-extrabold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-2">
-                1,100+
+                700+
               </div>
               <div className="text-slate-600 dark:text-slate-300 font-medium">Google Indexed Pages</div>
             </div>

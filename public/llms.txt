@@ -1,6 +1,6 @@
 # Use AI Tools
 
-> Curated directory of 700+ AI tools for creators, developers, and businesses. Independent reviews, comparisons, and guides updated weekly.
+> Curated directory of 533 AI tools for creators, developers, and businesses. Independent reviews, comparisons, and guides updated weekly.
 
 ## About
 
@@ -8,42 +8,42 @@ Use AI Tools is an independent AI tools directory founded by xiaomo, an indie ma
 
 ## Core Categories
 
-### Writing Tools (150+ tools)
+### Writing Tools (75 tools)
 AI writing assistants for content creation, copywriting, SEO, and more.
 - **Top picks**: Rytr, Jasper, Copy.ai
 - **Use cases**: Blog posts, marketing copy, emails, social media
 - **Price range**: Free to $49/month
 - Browse: https://useaitools.me/category/writing
 
-### Image Tools (120+ tools)
+### Image Tools (65 tools)
 AI image generators, editors, and design tools.
 - **Top picks**: Midjourney, DALL-E 3, Stable Diffusion
 - **Use cases**: Art creation, product photos, marketing visuals
 - **Price range**: Free to $60/month
 - Browse: https://useaitools.me/category/image
 
-### Video Tools (100+ tools)
+### Video Tools (88 tools)
 AI video editors, generators, and enhancement tools.
 - **Top picks**: VEED.io, Synthesia, HeyGen
 - **Use cases**: Video editing, avatar videos, YouTube content
 - **Price range**: Free to $99/month
 - Browse: https://useaitools.me/category/video
 
-### Audio Tools (80+ tools)
+### Audio Tools (65 tools)
 AI audio editors, voice generators, and music tools.
 - **Top picks**: ElevenLabs, Murf, Play.ht
 - **Use cases**: Voiceovers, podcasts, music production
 - **Price range**: Free to $49/month
 - Browse: https://useaitools.me/category/audio
 
-### Code Tools (90+ tools)
+### Code Tools (84 tools)
 AI coding assistants, code generators, and development tools.
 - **Top picks**: GitHub Copilot, Cursor, Codeium
 - **Use cases**: Code completion, debugging, documentation
 - **Price range**: Free to $19/month
 - Browse: https://useaitools.me/category/code
 
-### Productivity Tools (160+ tools)
+### Productivity Tools (156 tools)
 AI productivity assistants, automation tools, and workflow optimizers.
 - **Top picks**: Notion AI, ChatGPT, Claude
 - **Use cases**: Task management, research, content organization
@@ -62,7 +62,7 @@ AI productivity assistants, automation tools, and workflow optimizers.
 
 - **100 Best AI Tools in 2026**: https://useaitools.me/blog/100-best-ai-tools-2026
 - **Best AI Tools for Students**: https://useaitools.me/blog/best-ai-tools-students-2026
-- **Best Free AI Tools for Content Creators**: https://useaitools.me/blog/best-free-ai-tools-content-creators-2026
+- **Best Free AI Writing Tools**: https://useaitools.me/blog/best-free-ai-writing-tools-2026
 - **AI Video Editing for Beginners**: https://useaitools.me/blog/ai-video-editing-beginners-guide-2026
 - **AI Tools for Small Business**: https://useaitools.me/blog/top-10-ai-tools-for-small-business
 
@@ -94,9 +94,9 @@ AI productivity assistants, automation tools, and workflow optimizers.
 
 ## Stats
 
-- **Total tools**: 700+
+- **Total tools**: 533
 - **Categories**: 6
-- **Blog posts**: 776
+- **Blog posts**: 441
 - **Updated**: Weekly
 - **Founded**: 2026
 - **Independent**: Yes (no paid placements)

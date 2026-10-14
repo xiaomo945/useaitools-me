@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
+import { robotsDirective } from '@/lib/seo';
 
+// Per-visitor page: the contents are the reader's own browsing history, so
+// there is nothing stable to index. `noindex, follow` — see app/saved/layout.tsx.
 export const metadata: Metadata = {
+  robots: robotsDirective(true),
   title: 'Browsing History – Recently Viewed AI Tools – Use AI Tools',
   description: 'View your recently explored AI tools. Track your browsing history across Writing, Image, Video, Audio, Code, and Productivity categories.',
   openGraph: {

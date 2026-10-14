@@ -1,10 +1,8 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import ToolComparison from '@/app/components/ToolComparison';
-import toolsData from '@/data/tools.json';
-import type { Tool } from '@/types';
-
-const tools = toolsData as unknown as Tool[];
+import { COMPARISON_SLUGS, resolveComparison } from '@/lib/comparisons';
+import { generateSlugFromName } from '@/lib/slug';
 
 interface ComparePageProps {
   params: Promise<{ slugs: string }>;
@@ -12,37 +10,23 @@ interface ComparePageProps {
 
 // 生成静态路径
 export async function generateStaticParams() {
-  // 生成热门工具对比页面
-  const popularComparisons = [
-    'rytr-vs-jasper',
-    'midjourney-vs-dall-e-3',
-    'chatgpt-vs-claude',
-    'grammarly-vs-hemingway',
-    'canva-vs-figma',
-    'notion-vs-obsidian',
-    'descript-vs-veed',
-    'synthesia-vs-heygen',
-  ];
-
-  return popularComparisons.map((slugs) => ({
-    slugs,
-  }));
+  return COMPARISON_SLUGS.map((slugs) => ({ slugs }));
 }
 
 // 生成元数据
 export async function generateMetadata({ params }: ComparePageProps): Promise<Metadata> {
   const { slugs } = await params;
-  const [slug1, slug2] = slugs.split('-vs-');
+  const pair = resolveComparison(slugs);
 
-  const tool1 = tools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === slug1);
-  const tool2 = tools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === slug2);
-
-  if (!tool1 || !tool2) {
+  if (!pair) {
     return {
       title: 'Comparison Not Found – Use AI Tools',
       description: 'The comparison you are looking for does not exist.',
+      robots: { index: false, follow: true },
     };
   }
+
+  const [tool1, tool2] = pair;
 
   return {
     title: `${tool1.name} vs ${tool2.name}: Which is Best in 2026? – Use AI Tools`,
@@ -67,20 +51,20 @@ export async function generateMetadata({ params }: ComparePageProps): Promise<Me
 
 export default async function CompareDetailPage({ params }: ComparePageProps) {
   const { slugs } = await params;
-  const [slug1, slug2] = slugs.split('-vs-');
+  const pair = resolveComparison(slugs);
 
-  const tool1 = tools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === slug1);
-  const tool2 = tools.find(t => t.name.toLowerCase().replace(/\s+/g, '-') === slug2);
-
-  if (!tool1 || !tool2) {
+  if (!pair) {
     notFound();
   }
+
+  const [tool1, tool2] = pair;
 
   // 转换为 ComparisonTool 类型
   const comparisonTool1 = {
     id: tool1.id,
     name: tool1.name,
-    slug: tool1.name.toLowerCase().replace(/\s+/g, '-'),
+    // Canonical slug, so links back into /compare/<a>-vs-<b> keep resolving.
+    slug: generateSlugFromName(tool1.name),
     description: tool1.description,
     category: tool1.category,
     pricing: tool1.pricing,
@@ -97,7 +81,7 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
   const comparisonTool2 = {
     id: tool2.id,
     name: tool2.name,
-    slug: tool2.name.toLowerCase().replace(/\s+/g, '-'),
+    slug: generateSlugFromName(tool2.name),
     description: tool2.description,
     category: tool2.category,
     pricing: tool2.pricing,

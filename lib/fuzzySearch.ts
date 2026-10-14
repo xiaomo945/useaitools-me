@@ -182,6 +182,125 @@ export function generateSearchSuggestions(
 }
 
 /**
+ * 工具检索：分词 + 大小写不敏感 + 拼写容错
+ * 检索范围：name / description / description_en / category / best_for / examples
+ */
+
+// 按非字母数字切词（保留拉丁扩展字符与 CJK）
+const TOKEN_SPLIT = /[^a-z0-9À-ɏ一-鿿]+/g;
+
+function tokenize(text: string): string[] {
+  return text
+    .toLowerCase()
+    .split(TOKEN_SPLIT)
+    .filter(Boolean);
+}
+
+interface ToolIndex {
+  tool: any;
+  nameTokens: string[];
+  textTokens: string[];
+  textTokenSet: Set<string>;
+}
+
+let indexCacheKey: readonly any[] | null = null;
+let indexCache: ToolIndex[] | null = null;
+
+function getIndex(tools: readonly any[]): ToolIndex[] {
+  if (indexCacheKey === tools && indexCache) return indexCache;
+
+  indexCache = tools.map(tool => {
+    const nameTokens = tokenize(tool.name || '');
+    const textTokens = tokenize(
+      [
+        tool.description || '',
+        tool.description_en || '',
+        tool.category || '',
+        (tool.best_for || []).join(' '),
+        (tool.examples || []).map((e: any) => e?.prompt || '').join(' '),
+      ].join(' ')
+    );
+    return { tool, nameTokens, textTokens, textTokenSet: new Set(textTokens) };
+  });
+  indexCacheKey = tools;
+  return indexCache;
+}
+
+/** 允许的编辑距离：短词更严格，避免误召回 */
+function allowedDistance(tokenLength: number): number {
+  if (tokenLength <= 4) return 1;
+  if (tokenLength <= 8) return 1;
+  return 2;
+}
+
+/** 单个查询词在一批 token 上的最佳得分 */
+function scoreToken(qt: string, tokens: string[], isName: boolean): number {
+  for (const t of tokens) {
+    if (t === qt) return isName ? 12 : 5;
+  }
+  if (qt.length >= 2) {
+    for (const t of tokens) {
+      if (t.startsWith(qt)) return isName ? 9 : 4;
+    }
+  }
+  // 拼写容错：只比较首字母相同、长度接近的 token
+  const maxDist = allowedDistance(qt.length);
+  let best = 0;
+  for (const t of tokens) {
+    if (t[0] !== qt[0]) continue;
+    if (Math.abs(t.length - qt.length) > maxDist) continue;
+    if (levenshteinDistance(qt, t) <= maxDist) {
+      best = Math.max(best, isName ? 6 : 2);
+      break;
+    }
+  }
+  return best;
+}
+
+export interface ToolSearchResult {
+  tools: any[];
+  /** true 表示没有全部命中，已放宽为「命中任一词」的部分匹配 */
+  relaxed: boolean;
+}
+
+/**
+ * 检索工具：多查询词默认要求全部命中（AND），
+ * 全部命中为空时自动放宽为部分命中（OR），保证不会一搜就空。
+ */
+export function searchTools(tools: readonly any[], query: string): ToolSearchResult {
+  const q = (query || '').trim();
+  if (!q) return { tools: [...tools], relaxed: false };
+
+  const queryTokens = tokenize(q);
+  if (queryTokens.length === 0) return { tools: [...tools], relaxed: false };
+
+  const index = getIndex(tools);
+  const scored: Array<{ tool: any; score: number; hits: number }> = [];
+
+  for (const entry of index) {
+    let score = 0;
+    let hits = 0;
+    for (const qt of queryTokens) {
+      const nameScore = scoreToken(qt, entry.nameTokens, true);
+      const textScore = nameScore > 0 ? 0 : scoreToken(qt, entry.textTokens, false);
+      const best = Math.max(nameScore, textScore);
+      if (best > 0) {
+        hits += 1;
+        score += best;
+      }
+    }
+    if (hits > 0) scored.push({ tool: entry.tool, score, hits });
+  }
+
+  const full = scored.filter(s => s.hits === queryTokens.length);
+  const pool = full.length > 0 ? full : scored;
+  const relaxed = full.length === 0 && scored.length > 0 && queryTokens.length > 1;
+
+  pool.sort((a, b) => b.score - a.score || (a.tool.name || '').localeCompare(b.tool.name || ''));
+  return { tools: pool.map(s => s.tool), relaxed };
+}
+
+/**
  * 拼写纠错建议
  */
 export function getSpellingSuggestions(

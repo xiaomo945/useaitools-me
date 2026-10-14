@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { scenes } from '@/data/scenes';
+import toolsData from '@/data/tools.json';
 
 export default function SceneExplorer() {
   return (
@@ -59,7 +60,7 @@ export default function SceneExplorer() {
             href="/"
             className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors group"
           >
-            Or browse all 1,300+ tools in the directory
+            Or browse all {toolsData.length} tools in the directory
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

@@ -1,24 +1,24 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowRight, Star, Filter, X, CheckSquare, Square } from 'lucide-react';
 import { generateSlugFromName } from '@/lib/slug';
-
-interface Tool {
-  id: number;
-  name: string;
-  description: string;
-  category: string;
-  pricing: string;
-  url: string;
-  affiliate_link: string;
-  icon_url?: string;
-  rating?: number | null;
-  best_for?: string[];
-  rating_count?: number | null;
-  last_updated?: string;
-}
+import type { Tool } from '@/types';
+import {
+  CATEGORIES,
+  PRICING_OPTIONS,
+  SKILL_LEVEL_OPTIONS,
+  VPN_OPTIONS,
+  DEFAULT_FILTERS,
+  ToolFilterState,
+  VpnFilter,
+  applyToolFilters,
+  countActiveFilters,
+  parseFiltersFromParams,
+  writeFiltersToParams,
+} from '@/lib/toolFilters';
 
 interface SearchFiltersProps {
   tools: Tool[];
@@ -34,54 +34,63 @@ const categoryColorMap: Record<string, { bg: string; text: string }> = {
   Video: { bg: 'bg-indigo-500/10', text: 'text-indigo-600 dark:text-indigo-400' },
 };
 
-const CATEGORIES = ['Writing', 'Image', 'Productivity', 'Code', 'Audio', 'Video'];
-const PRICING_OPTIONS = ['Free', 'Freemium', 'Free Trial', 'Paid', 'Open Source'];
-
 const SORT_OPTIONS = [
   { value: 'updated', label: 'Recently Updated' },
   { value: 'name', label: 'Name (A-Z)' },
 ];
 
+function chipClass(selected: string, extra?: string) {
+  return `px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
+    selected === 'on'
+      ? `${extra || 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300'} ring-1 ring-emerald-500`
+      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
+  }`;
+}
+
 export default function SearchFilters({ tools, initialQuery = '' }: SearchFiltersProps) {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [selectedPricing, setSelectedPricing] = useState<string[]>([]);
-  const [minRating, setMinRating] = useState(0);
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const [filters, setFilters] = useState<ToolFilterState>(() =>
+    parseFiltersFromParams(new URLSearchParams(searchParams?.toString() ?? ''))
+  );
   const [sortBy, setSortBy] = useState('updated');
   const [showFilters, setShowFilters] = useState(false);
   const [compareSelected, setCompareSelected] = useState<number[]>([]);
 
+  // 筛选状态写回 URL，方便分享与收录
+  const currentQuery = searchParams?.toString() ?? '';
+  useEffect(() => {
+    const params = new URLSearchParams(currentQuery);
+    writeFiltersToParams(params, filters);
+    const next = params.toString();
+    if (next === currentQuery) return;
+    router.replace(next ? `${pathname}?${next}` : pathname, { scroll: false });
+  }, [filters, currentQuery, pathname, router]);
+
+  const patch = (partial: Partial<ToolFilterState>) =>
+    setFilters(prev => ({ ...prev, ...partial }));
+
+  const toggleIn = (key: 'categories' | 'pricing' | 'skillLevels', value: string) =>
+    setFilters(prev => {
+      const list = prev[key];
+      return {
+        ...prev,
+        [key]: list.includes(value) ? list.filter(v => v !== value) : [...list, value],
+      };
+    });
+
   const filteredAndSorted = useMemo(() => {
-    let result = tools;
-
-    if (selectedCategories.length > 0) {
-      result = result.filter(t => selectedCategories.includes(t.category));
-    }
-
-    if (selectedPricing.length > 0) {
-      result = result.filter(t => selectedPricing.includes(t.pricing));
-    }
-
+    const result = applyToolFilters(tools, filters);
     const sorted = [...result];
     if (sortBy === 'name') {
       sorted.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sortBy === 'updated') {
+    } else {
       sorted.sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''));
     }
-
     return sorted;
-  }, [tools, selectedCategories, selectedPricing, minRating, sortBy]);
-
-  const toggleCategory = (cat: string) => {
-    setSelectedCategories(prev =>
-      prev.includes(cat) ? prev.filter(c => c !== cat) : [...prev, cat]
-    );
-  };
-
-  const togglePricing = (price: string) => {
-    setSelectedPricing(prev =>
-      prev.includes(price) ? prev.filter(p => p !== price) : [...prev, price]
-    );
-  };
+  }, [tools, filters, sortBy]);
 
   const toggleCompare = (id: number) => {
     setCompareSelected(prev => {
@@ -92,12 +101,16 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
   };
 
   const clearAll = () => {
-    setSelectedCategories([]);
-    setSelectedPricing([]);
-    setMinRating(0);
+    setFilters(DEFAULT_FILTERS);
+    setCompareSelected([]);
   };
 
-  const activeFilterCount = selectedCategories.length + selectedPricing.length + (minRating > 0 ? 1 : 0);
+  const activeFilterCount = countActiveFilters(filters);
+  const noVpnCount = useMemo(() => tools.filter(t => t.needs_vpn === false).length, [tools]);
+  const zhCount = useMemo(
+    () => tools.filter(t => (t.languages || []).some(l => /chinese|中文/i.test(l))).length,
+    [tools]
+  );
 
   return (
     <div>
@@ -145,17 +158,36 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
         </div>
 
         <div className={`${showFilters ? 'block' : 'hidden md:block'} space-y-3`}>
+          {/* 访问方式：中文用户刚需 */}
+          <div>
+            <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">
+              访问方式 / Access
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {VPN_OPTIONS.map(opt => (
+                <button
+                  key={opt.value}
+                  onClick={() => patch({ vpn: opt.value as VpnFilter })}
+                  className={chipClass(filters.vpn === opt.value ? 'on' : 'off')}
+                >
+                  {opt.label}
+                  {opt.value === 'no' && ` · ${noVpnCount}`}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Categories */}
           <div>
             <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">Category</p>
             <div className="flex flex-wrap gap-1.5">
               {CATEGORIES.map(cat => {
-                const isSelected = selectedCategories.includes(cat);
+                const isSelected = filters.categories.includes(cat);
                 const colors = categoryColorMap[cat];
                 return (
                   <button
                     key={cat}
-                    onClick={() => toggleCategory(cat)}
+                    onClick={() => toggleIn('categories', cat)}
                     className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
                       isSelected
                         ? `${colors?.bg} ${colors?.text} ring-1 ring-emerald-500`
@@ -173,22 +205,48 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
           <div>
             <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">Pricing</p>
             <div className="flex flex-wrap gap-1.5">
-              {PRICING_OPTIONS.map(price => {
-                const isSelected = selectedPricing.includes(price);
-                return (
-                  <button
-                    key={price}
-                    onClick={() => togglePricing(price)}
-                    className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
-                      isSelected
-                        ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-500'
-                        : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
-                    }`}
-                  >
-                    {price}
-                  </button>
-                );
-              })}
+              {PRICING_OPTIONS.map(price => (
+                <button
+                  key={price}
+                  onClick={() => toggleIn('pricing', price)}
+                  className={chipClass(filters.pricing.includes(price) ? 'on' : 'off')}
+                >
+                  {price}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* 上手难度 */}
+          <div>
+            <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">
+              上手难度 / Level
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {SKILL_LEVEL_OPTIONS.map(level => (
+                <button
+                  key={level.value}
+                  onClick={() => toggleIn('skillLevels', level.value)}
+                  className={chipClass(filters.skillLevels.includes(level.value) ? 'on' : 'off')}
+                >
+                  {level.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* 语言 */}
+          <div>
+            <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">
+              语言 / Language
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              <button
+                onClick={() => patch({ chineseOnly: !filters.chineseOnly })}
+                className={chipClass(filters.chineseOnly ? 'on' : 'off')}
+              >
+                支持中文 · {zhCount}
+              </button>
             </div>
           </div>
 
@@ -200,8 +258,18 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
         <div className="text-center py-12">
           <X className="w-12 h-12 text-slate-300 dark:text-slate-600 mx-auto mb-4" />
           <p className="text-slate-500 dark:text-slate-400">
-            No tools match your filters. Try adjusting your criteria.
+            {initialQuery
+              ? `No tools match "${initialQuery}" with the current filters.`
+              : 'No tools match your filters. Try adjusting your criteria.'}
           </p>
+          {activeFilterCount > 0 && (
+            <button
+              onClick={clearAll}
+              className="mt-4 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+            >
+              Clear all filters
+            </button>
+          )}
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -252,23 +320,33 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
                       <h3 className="font-semibold text-base text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors truncate">
                         {tool.name}
                       </h3>
-                      <div className="flex items-center gap-2 mt-0.5">
-                        {tool.rating && (
+                      <div className="flex items-center gap-2 mt-0.5 flex-wrap">
+                        {tool.rating != null && (
                           <div className="flex items-center gap-1">
                             <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
                             <span className="text-xs font-medium text-slate-700 dark:text-slate-300">
-                              {(tool.rating || 0).toFixed(1)}
+                              {tool.rating.toFixed(1)}
                             </span>
                           </div>
                         )}
                         <span className="text-xs text-slate-400 dark:text-slate-500">
                           {tool.pricing}
                         </span>
+                        <span
+                          className={`text-[10px] font-semibold px-1.5 py-0.5 rounded ${
+                            tool.needs_vpn
+                              ? 'bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300'
+                              : 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300'
+                          }`}
+                          title={tool.needs_vpn ? '需要梯子 / Requires VPN' : '国内直连 / No VPN needed'}
+                        >
+                          {tool.needs_vpn ? '需梯子' : '免梯子'}
+                        </span>
                       </div>
                     </div>
                   </div>
 
-                  <p className="text-sm text-slate-600 dark:text-gray-300 line-clamp-2 mb-3 group-hover:text-slate-900 dark:group-hover:text-white transition-colors">
+                  <p className="text-sm text-slate-600 dark:text-gray-300 line-clamp-2 mb-3 group-hover:text-slate-900 dark:hover:text-white transition-colors">
                     {tool.description}
                   </p>
 

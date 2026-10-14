@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
+import { robotsDirective } from '@/lib/seo';
 
+// Per-visitor page: what it shows depends on the reader's own bookmarks, so
+// there is nothing stable for a search engine to index. Keep it out of the
+// index but let `follow` pass its internal links along. Do NOT also disallow it
+// in robots.txt — that would stop crawlers from ever reading this directive.
 export const metadata: Metadata = {
+  robots: robotsDirective(true),
   title: 'Saved Tools – Your AI Tool Favorites – Use AI Tools',
   description: 'Your curated collection of favorite AI tools. Save, compare, and export your top picks across Writing, Image, Video, Audio, Code & Productivity categories.',
   openGraph: {

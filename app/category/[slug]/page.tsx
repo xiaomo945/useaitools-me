@@ -74,19 +74,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: 'website',
       url: `https://useaitools.me/category/${canonicalSlug}`,
       locale: 'en_US',
-      alternateLocale: 'zh_CN',
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
     },
+    // No hreflang: `?lang=zh` serves identical English HTML (no [locale]
+    // segment exists), so it only creates duplicate-content signals.
     alternates: {
       canonical: `https://useaitools.me/category/${canonicalSlug}`,
-      languages: {
-        'en': `/category/${canonicalSlug}`,
-        'zh': `/category/${canonicalSlug}?lang=zh`,
-      },
     },
   };
 }

@@ -24,8 +24,6 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Script and temp files:
     "scripts/**",
-    "split-blog-posts.js",
-    "temp-count.js",
   ]),
 ]);
 

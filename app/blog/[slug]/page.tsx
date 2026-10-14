@@ -3,7 +3,13 @@ import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blog-posts';
 import type { BlogPost } from '@/types';
 import toolsData from '@/data/tools.json';
+import demotedContent from '@/data/demoted-content.json';
+import { robotsDirective } from '@/lib/seo';
 import ClientBlogDetail from './ClientBlogDetail';
+
+// Slugs pulled out of search indexing pending a rewrite. Kept online at the same
+// URL - see data/demoted-content.json. The same file drives the sitemap filter.
+const DEMOTED_SLUGS = new Set<string>(demotedContent.demoted_slugs);
 
 type Tool = {
   id: number;
@@ -120,12 +126,16 @@ export async function generateMetadata({
     };
   }
 
-  // Use canonical_slug if it exists (for duplicate posts), otherwise use current slug
-  const canonicalSlug = post.canonical_slug || slug;
-  
+  // Use canonical_slug if it exists (for duplicate posts), otherwise use current slug.
+  // A demoted page is an exception: "don't index me" and "I'm a copy of <other url>"
+  // are contradictory signals, and most canonical_slug targets here 404 anyway, so a
+  // demoted page canonicalises to itself until it is rewritten.
+  const canonicalSlug = DEMOTED_SLUGS.has(slug) ? slug : post.canonical_slug || slug;
+
   return {
     title: post.title,
     description: post.description,
+    robots: robotsDirective(DEMOTED_SLUGS.has(slug)),
     openGraph: {
       title: post.title,
       description: post.description,
@@ -136,7 +146,6 @@ export async function generateMetadata({
       modifiedTime: post.date,
       authors: ['Use AI Tools'],
       locale: 'en_US',
-      alternateLocale: 'zh_CN',
     },
     twitter: {
       card: 'summary_large_image',
@@ -145,10 +154,6 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `https://useaitools.me/blog/${canonicalSlug}`,
-      languages: {
-        'en': `/blog/${slug}`,
-        'zh': `/blog/${slug}?lang=zh`,
-      },
     },
   };
 }
@@ -164,6 +169,8 @@ export default async function BlogDetailPage({
   if (!post) {
     notFound();
   }
+
+  const isDemoted = DEMOTED_SLUGS.has(slug);
 
   const relatedPosts = getRelatedPosts(post, blogPosts);
 
@@ -336,7 +343,7 @@ export default async function BlogDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
-      <ClientBlogDetail post={processedPost} slug={slug} relatedPosts={relatedPosts} relatedTools={relatedTools} />
+      <ClientBlogDetail post={processedPost} slug={slug} relatedPosts={relatedPosts} relatedTools={relatedTools} demoted={isDemoted} />
     </>
   );
 }
