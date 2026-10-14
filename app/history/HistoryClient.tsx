@@ -6,6 +6,7 @@ import { useSession } from 'next-auth/react';
 import { Home, Clock, Trash2, ExternalLink, LogIn } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import { generateSlugFromName } from '@/lib/slug';
 
 interface Tool {
   id: number;
@@ -243,7 +244,7 @@ export default function HistoryClient() {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2">
                             <Link
-                              href={`/tools/${item.id}`}
+                              href={`/tool/${generateSlugFromName(item.name)}`}
                               className="font-semibold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate"
                             >
                               {item.name}

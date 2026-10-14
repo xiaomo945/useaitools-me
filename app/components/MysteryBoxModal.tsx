@@ -2,6 +2,7 @@
 
 import { memo } from 'react';
 import Link from 'next/link';
+import { generateSlugFromName } from '@/lib/slug';
 
 interface Tool {
   id: number;
@@ -86,7 +87,7 @@ const MysteryBoxModal = memo(function MysteryBoxModal({
               <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">{tool.description}</p>
               <div className="flex flex-col gap-3">
                 <Link
-                  href={`/tools/${tool.id}`}
+                  href={`/tool/${generateSlugFromName(tool.name)}`}
                   onClick={onClose}
                   className="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >

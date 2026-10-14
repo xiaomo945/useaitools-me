@@ -6,6 +6,7 @@ import tools from '@/data/tools.json';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import StarRating from '@/app/components/StarRating';
+import { generateSlugFromName } from '@/lib/slug';
 
 type Tool = (typeof tools)[0];
 
@@ -170,7 +171,7 @@ export default async function WorkflowDetailPage({ params }: { params: Promise<{
                           return (
                             <Link
                               key={tool.id}
-                              href={`/tools/${tool.id}`}
+                              href={`/tool/${generateSlugFromName(tool.name)}`}
                               className="group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-4 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out"
                             >
                               <div className="flex items-center gap-3 mb-2">

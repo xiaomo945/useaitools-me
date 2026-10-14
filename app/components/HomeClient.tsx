@@ -219,13 +219,13 @@ const ToolCard = memo(function ToolCard({
         <div className="flex items-start justify-between gap-2 sm:gap-3 mb-2 sm:mb-3">
           <div className="flex items-center gap-2 sm:gap-2.5">
             <Link
-              href={`/tools/${tool.id}`}
+              href={`/tool/${generateSlugFromName(tool.name)}`}
               className={`w-8 h-8 sm:w-11 sm:h-11 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xs sm:text-xl font-bold hover:scale-105 transition-transform duration-300 ease-out font-serif`}
             >
               {tool.name.charAt(0)}
             </Link>
             <div className="min-w-0">
-              <Link href={`/tools/${tool.id}`} className="inline-block">
+              <Link href={`/tool/${generateSlugFromName(tool.name)}`} className="inline-block">
                 <h3 className="font-semibold text-sm sm:text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate">
                   {highlightText(tool.name, search)}
                 </h3>
@@ -273,7 +273,7 @@ const ToolCard = memo(function ToolCard({
         </div>
 
         {/* Description - linkable to tool page */}
-        <Link href={`/tools/${tool.id}`} className="block">
+        <Link href={`/tool/${generateSlugFromName(tool.name)}`} className="block">
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-2 sm:mt-3 mb-2 sm:mb-3 line-clamp-2 hover:text-gray-900 dark:hover:text-gray-100 transition-colors text-xs sm:text-base">
             {highlightText(tool.description, search)}
           </p>
@@ -416,6 +416,7 @@ type Tool = {
 // Affiliate link helpers — unified in lib/affiliate.ts (single source of truth)
 import { hasAffiliateLink, getAffiliateLink, getDynamicCTA } from '@/lib/affiliate';
 import { track } from '@/lib/analytics';
+import { generateSlugFromName } from '@/lib/slug';
 
 // CTA A/B test variants — track via Vercel Analytics
 // Variant A: direct action-oriented ("Try It Free")
@@ -824,6 +825,14 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       .slice(0, 3);
   }, [displayedTools]);
 
+  // Long-press "View details" hands us a tool id; map it to the canonical
+  // /tool/<slug> URL so we don't emit a 308 hop to /tools/<id>.
+  const toolSlugById = useMemo(() => {
+    const m = new Map<number, string>();
+    for (const t of initialTools) m.set(t.id, generateSlugFromName(t.name));
+    return m;
+  }, [initialTools]);
+
   // Get search suggestions based on input
   const searchSuggestions = useMemo(() => {
     const suggestions: { type: string; label: string; value: string; toolId?: number }[] = [];
@@ -930,7 +939,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
   // Handle suggestion click
   const handleSuggestionClick = (suggestion: { type: string; label: string; value: string; toolId?: number }) => {
     if (suggestion.type === 'tool' && suggestion.toolId) {
-      router.push(`/tools/${suggestion.toolId}`);
+      router.push(`/tool/${generateSlugFromName(suggestion.value)}`);
     } else if (suggestion.type === 'category') {
       router.push(`/category/${suggestion.value}`);
     } else {
@@ -1079,7 +1088,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
         }
         break;
       case 'details':
-        router.push(`/tools/${selectedTool.id}`);
+        router.push(`/tool/${generateSlugFromName(selectedTool.name)}`);
         break;
     }
     closeMenu();
@@ -1302,7 +1311,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       const tool = filteredTools[index];
       if (tool) {
         debugLog('Shortcut', `Alt+${index + 1} opening tool: ${tool.name}`);
-        router.push(`/tools/${tool.id}`);
+        router.push(`/tool/${generateSlugFromName(tool.name)}`);
       }
     };
 
@@ -1748,7 +1757,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                   return (
                     <Link
                       key={tool.id}
-                      href={`/tools/${tool.id}`}
+                      href={`/tool/${generateSlugFromName(tool.name)}`}
                       className="flex items-center gap-2 px-3 py-1.5 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-full whitespace-nowrap hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-md transition-all duration-300 ease-out shrink-0"
                     >
                       <span className={`w-5 h-5 rounded-md ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-[10px] font-bold font-serif`}>
@@ -1796,7 +1805,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                     return (
                       <Link
                         key={tool.id}
-                        href={`/tools/${tool.id}`}
+                        href={`/tool/${generateSlugFromName(tool.name)}`}
                         className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-emerald-50 to-white dark:from-emerald-950/20 dark:to-gray-900 border border-emerald-200/60 dark:border-emerald-800/40 rounded-full whitespace-nowrap hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-md transition-all duration-300 ease-out shrink-0"
                       >
                         <span className={`w-5 h-5 rounded-md ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-[10px] font-bold font-serif`}>
@@ -2225,7 +2234,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                       return (
                         <Link
                           key={tool.id}
-                          href={`/tools/${tool.id}`}
+                          href={`/tool/${generateSlugFromName(tool.name)}`}
                           className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 shadow-sm hover:shadow-lg hover:border-emerald-300 dark:hover:border-emerald-600 hover:-translate-y-1 transition-all duration-300 text-left relative"
                         >
                           <span className="absolute top-2 right-2 px-1.5 py-0.5 rounded-full text-[9px] font-bold bg-gradient-to-r from-emerald-500 to-teal-500 text-white">Recommended</span>
@@ -2351,7 +2360,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
                   <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">{mysteryTool.description}</p>
                   <div className="flex flex-col gap-3">
                     <Link
-                      href={`/tools/${mysteryTool.id}`}
+                      href={`/tool/${generateSlugFromName(mysteryTool.name)}`}
                       onClick={() => { setShowMysteryBox(false); setMysteryRevealed(false); }}
                       className="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     >
@@ -2399,7 +2408,10 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
             navigator.clipboard.writeText(tool.url);
           }
         }}
-        onViewDetails={(id) => router.push(`/tools/${id}`)}
+        onViewDetails={(id) => {
+          const slug = toolSlugById.get(id);
+          router.push(slug ? `/tool/${slug}` : `/tools/${id}`);
+        }}
       />
 
       {/* Mystery Box Modal */}

@@ -66,11 +66,16 @@ for (const category of categories) {
   urls.push(addUrl(`${baseUrl}/category/${category.toLowerCase()}`, '0.85', 'weekly'));
 }
 
-// Tool pages (both slug and id routes)
+// Tool pages - canonical slug URLs only.
+//
+// This used to emit /tools/<id> as well ("both slug and id routes"). That is
+// what produced the 3,448-URL public/sitemap.xml: 1,321 tool URLs for 533
+// tools, plus 1,321 legacy URLs that all 308-redirect. Google spent months
+// crawling redirects and URLs that did not exist. /tools/<id> still works for
+// anyone who has the old link; it just is not advertised any more.
 for (const tool of tools) {
   const slug = generateToolSlug(tool.name);
   urls.push(addUrl(`${baseUrl}/tool/${slug}`, '0.8', 'weekly'));
-  urls.push(addUrl(`${baseUrl}/tools/${tool.id}`, '0.8', 'weekly'));
 }
 
 // Blog posts

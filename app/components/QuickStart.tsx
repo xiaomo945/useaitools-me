@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import toolsData from '@/data/tools.json';
+import { generateSlugFromName } from '@/lib/slug';
 
 type Tool = {
   id: number;
@@ -141,7 +142,7 @@ export default function QuickStart() {
               return (
                 <Link
                   key={tool.id}
-                  href={`/tools/${tool.id}`}
+                  href={`/tool/${generateSlugFromName(tool.name)}`}
                   className="bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl p-4 hover:border-emerald-500 hover:shadow-lg transition-all group"
                 >
                   <div className="flex items-start gap-3 mb-3">

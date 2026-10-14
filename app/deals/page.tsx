@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import { generateSlugFromName } from '@/lib/slug';
 
 export const metadata: Metadata = {
   title: 'Best AI Tool Deals & Discounts 2026 – Use AI Tools',
@@ -183,7 +184,7 @@ export default function DealsPage() {
 
                   {/* CTA Button */}
                   <Link
-                    href={`/tools/${deal.toolId}`}
+                    href={`/tool/${generateSlugFromName(deal.name)}`}
                     className="block w-full text-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-[0.98]"
                     aria-label={`Claim deal for ${deal.name}`}
                   >

@@ -4,6 +4,7 @@ import tools from '@/data/tools.json';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import StarRating from '@/app/components/StarRating';
+import { generateSlugFromName } from '@/lib/slug';
 
 type Tool = (typeof tools)[0];
 
@@ -108,7 +109,7 @@ export default function LeaderboardPage() {
                     {getBadge(index + 1)}
                   </span>
                   <Link
-                    href={`/tools/${tool.id}`}
+                    href={`/tool/${generateSlugFromName(tool.name)}`}
                     className="flex-1 min-w-0"
                   >
                     <h3 className="font-semibold text-slate-900 dark:text-white truncate hover:text-emerald-600 dark:hover:text-emerald-400">
@@ -160,7 +161,7 @@ export default function LeaderboardPage() {
                         {getBadge(index + 1)}
                       </span>
                       <Link
-                        href={`/tools/${tool.id}`}
+                        href={`/tool/${generateSlugFromName(tool.name)}`}
                         className="flex-1 min-w-0"
                       >
                         <div className="font-medium text-sm text-slate-900 dark:text-white truncate hover:text-emerald-600 dark:hover:text-emerald-400">
@@ -202,7 +203,7 @@ export default function LeaderboardPage() {
                   New
                 </div>
                 <Link
-                  href={`/tools/${tool.id}`}
+                  href={`/tool/${generateSlugFromName(tool.name)}`}
                   className="block"
                 >
                   <h3 className="font-semibold text-slate-900 dark:text-white truncate hover:text-emerald-600 dark:hover:text-emerald-400">
@@ -235,7 +236,7 @@ export default function LeaderboardPage() {
                   Trending
                 </div>
                 <Link
-                  href={`/tools/${tool.id}`}
+                  href={`/tool/${generateSlugFromName(tool.name)}`}
                   className="block"
                 >
                   <h3 className="font-semibold text-slate-900 dark:text-white truncate hover:text-emerald-600 dark:hover:text-emerald-400">

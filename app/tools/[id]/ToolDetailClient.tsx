@@ -111,6 +111,7 @@ type Tool = {
 
 // Affiliate link helpers — unified in lib/affiliate.ts
 import { hasAffiliateLink, getAffiliateLink as getAffiliateLinkWithUTM } from '@/lib/affiliate';
+import { generateSlugFromName } from '@/lib/slug';
 
 // CTA A/B test variants
 const ctaVariants = {
@@ -349,7 +350,7 @@ const SimilarToolCard = ({ relatedTool }: { relatedTool: Tool }) => {
   const relatedColors = getCategoryColors(relatedTool.category);
   return (
     <Link
-      href={`/tools/${relatedTool.id}`}
+      href={`/tool/${generateSlugFromName(relatedTool.name)}`}
       className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
     >
       <div className="flex items-center gap-3 mb-3">
@@ -383,7 +384,7 @@ const AlternativeToolCard = ({ altTool }: { altTool: Tool }) => {
   const desc = (altTool.description_en || altTool.description).slice(0, 80);
   return (
     <Link
-      href={`/tools/${altTool.id}`}
+      href={`/tool/${generateSlugFromName(altTool.name)}`}
       className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 border-l-4 border-l-amber-500 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out animate-fade-in-up"
     >
       <div className="flex items-center gap-3 mb-3">
@@ -664,7 +665,7 @@ export default function ToolDetailClient({ tool, relatedTools, relatedArticles =
   };
 
   const handleShare = async () => {
-    const shareUrl = typeof window !== 'undefined' ? window.location.href : `https://useaitools.me/tools/${tool.id}`;
+    const shareUrl = typeof window !== 'undefined' ? window.location.href : `https://useaitools.me/tool/${generateSlugFromName(tool.name)}`;
     const shareData = {
       title: `${tool.name} - Use AI Tools`,
       text: `${tool.name}: ${tool.description.slice(0, 100)}...`,
@@ -719,7 +720,7 @@ const [hasReferrer] = useState(() => {
           items={[
             { label: 'Home', href: '/' },
             { label: tool.category, href: `/category/${tool.category.toLowerCase()}` },
-            { label: tool.name, href: `/tools/${tool.id}`, current: true }
+            { label: tool.name, href: `/tool/${generateSlugFromName(tool.name)}`, current: true }
           ]} 
         />
 
@@ -1170,7 +1171,7 @@ const [hasReferrer] = useState(() => {
                 return (
                   <Link
                     key={viewedTool.id}
-                    href={`/tools/${viewedTool.id}`}
+                    href={`/tool/${generateSlugFromName(viewedTool.name)}`}
                     className="group bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                   >
                     <div className="flex items-center gap-3 mb-2">
@@ -1272,7 +1273,7 @@ const [hasReferrer] = useState(() => {
                   return (
                     <Link
                       key={t.id}
-                      href={`/tools/${t.id}`}
+                      href={`/tool/${generateSlugFromName(t.name)}`}
                       className="group bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                     >
                       <div className="flex items-center gap-3 mb-2">

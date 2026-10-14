@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Sparkles, X, ArrowUpRight } from 'lucide-react';
+import { generateSlugFromName } from '@/lib/slug';
 
 type Tool = {
   id: number;
@@ -259,7 +260,7 @@ export default function AISearchRecommend() {
                 {results.map((result, index) => (
                   <a
                     key={result.tool.id}
-                    href={`/tools/${result.tool.id}`}
+                    href={`/tool/${generateSlugFromName(result.tool.name)}`}
                     target="_blank" rel="noopener noreferrer"
                     className="group block bg-gradient-to-br from-slate-50 to-emerald-50/20 dark:from-gray-800 dark:to-emerald-500/10 border border-slate-200 dark:border-gray-700 rounded-xl p-4 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
                   >

@@ -7,6 +7,7 @@ import { User, Award, Star, Bookmark, MessageSquare, Calendar, LogIn, TrendingUp
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import { formatDate } from '@/lib/format';
+import { generateSlugFromName } from '@/lib/slug';
 
 interface UserStats {
   totalReviews: number;
@@ -343,7 +344,7 @@ export default function ProfileClient() {
                     return (
                       <Link
                         key={tool.id}
-                        href={`/tools/${tool.id}`}
+                        href={`/tool/${generateSlugFromName(tool.name)}`}
                         className="group p-4 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl hover:border-emerald-300 dark:hover:border-emerald-700 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300"
                       >
                         <div className="flex items-start gap-4">
@@ -416,7 +417,7 @@ export default function ProfileClient() {
                       </div>
                       {activity.toolId && (
                         <Link
-                          href={`/tools/${activity.toolId}`}
+                          href={`/tool/${generateSlugFromName(activity.toolName)}`}
                           className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline"
                         >
                           View →

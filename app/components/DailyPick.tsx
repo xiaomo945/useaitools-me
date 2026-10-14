@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { generateSlugFromName } from '@/lib/slug';
 
 type DailyPickProps = {
   tool: {
@@ -62,14 +63,14 @@ export default function DailyPick({ tool, onDismiss }: DailyPickProps) {
       </div>
       <div className="flex items-center gap-3 sm:gap-4">
         <Link
-          href={`/tools/${tool.id}`}
+          href={`/tool/${generateSlugFromName(tool.name)}`}
           className={`w-10 h-10 sm:w-14 sm:h-14 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-lg sm:text-2xl font-bold shrink-0 hover:scale-105 transition-transform duration-300`}
           style={{ fontFamily: 'Playfair Display, serif' }}
         >
           {tool.name.charAt(0)}
         </Link>
         <div className="flex-1 min-w-0">
-          <Link href={`/tools/${tool.id}`} className="inline-block">
+          <Link href={`/tool/${generateSlugFromName(tool.name)}`} className="inline-block">
             <h2 className="font-bold text-sm sm:text-lg text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate">
               🌟 {tool.name}
             </h2>
@@ -77,7 +78,7 @@ export default function DailyPick({ tool, onDismiss }: DailyPickProps) {
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5 truncate">{reason}</p>
         </div>
         <Link
-          href={`/tools/${tool.id}`}
+          href={`/tool/${generateSlugFromName(tool.name)}`}
           className="shrink-0 inline-flex items-center gap-1 px-3 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 min-h-[44px]"
         >
           Try It →

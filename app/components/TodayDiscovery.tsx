@@ -2,6 +2,7 @@
 
 import { memo } from 'react';
 import Link from 'next/link';
+import { generateSlugFromName } from '@/lib/slug';
 
 interface DailyPick {
   id: number;
@@ -75,14 +76,14 @@ const TodayDiscovery = memo(function TodayDiscovery({
               </div>
               <div className="flex items-center gap-3">
                 <Link
-                  href={`/tools/${dailyPick.id}`}
+                  href={`/tool/${generateSlugFromName(dailyPick.name)}`}
                   className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-lg sm:text-xl font-bold shrink-0 hover:scale-105 transition-transform duration-300`}
                   style={{ fontFamily: 'Playfair Display, serif' }}
                 >
                   {dailyPick.name.charAt(0)}
                 </Link>
                 <div className="flex-1 min-w-0">
-                  <Link href={`/tools/${dailyPick.id}`} className="inline-block">
+                  <Link href={`/tool/${generateSlugFromName(dailyPick.name)}`} className="inline-block">
                     <h3 className="font-bold text-sm sm:text-base text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate">
                       {dailyPick.name}
                     </h3>
@@ -91,7 +92,7 @@ const TodayDiscovery = memo(function TodayDiscovery({
                 </div>
               </div>
               <Link
-                href={`/tools/${dailyPick.id}`}
+                href={`/tool/${generateSlugFromName(dailyPick.name)}`}
                 className="mt-3 w-full inline-flex items-center justify-center gap-1 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-xs sm:text-sm font-semibold rounded-xl shadow-sm hover:shadow-md transition-all duration-300 min-h-[40px]"
               >
                 Try It →

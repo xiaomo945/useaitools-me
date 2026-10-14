@@ -2,6 +2,7 @@ import type { Tool } from '@/types';
 import Link from 'next/link';
 import { ArrowRight, Star } from 'lucide-react';
 import { hasAffiliateLink, getAffiliateLink } from '@/lib/affiliate';
+import { generateSlugFromName } from '@/lib/slug';
 
 interface TopToolsProps {
   tools: Tool[];
@@ -56,7 +57,7 @@ export default function TopTools({ tools, category, categoryColors }: TopToolsPr
 
           return (
             <Link
-              href={`/tools/${tool.id}`}
+              href={`/tool/${generateSlugFromName(tool.name)}`}
               key={tool.id}
               className={`relative rounded-xl overflow-hidden border transition-all duration-300 hover:-translate-y-1 ${
                 isTop3

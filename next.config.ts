@@ -81,6 +81,14 @@ const affiliateEnv = Object.fromEntries(
 ) as Record<string, string>;
 
 const nextConfig: NextConfig = {
+  // Build output + cache directory.
+  // By default Next writes everything into ./.next inside the repo, which sits
+  // on the C: system drive and was filling it up (builds kept hitting <6 GB free).
+  // When NEXT_DIST_DIR is set we redirect the whole output to a drive with more
+  // room. Vercel never sets this variable, so production keeps using the
+  // standard .next location there. Locally the value lives in .env.local.
+  distDir: process.env.NEXT_DIST_DIR || '.next',
+
   trailingSlash: false,
   skipTrailingSlashRedirect: true,
 

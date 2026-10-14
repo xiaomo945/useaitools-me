@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import type { Tool } from '@/types';
 import tools from '@/data/tools.json';
+import { generateSlugFromName } from '@/lib/slug';
 
 interface RecommendationList {
   id: string;
@@ -149,7 +150,7 @@ export default function UserToolList({ savedTools }: UserToolListProps) {
                   {listTools.map(tool => (
                     <Link 
                       key={tool.id}
-                      href={`/tools/${tool.id}`}
+                      href={`/tool/${generateSlugFromName(tool.name)}`}
                       className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-sm hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
                     >
                       {tool.name}

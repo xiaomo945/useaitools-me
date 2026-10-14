@@ -6,6 +6,7 @@ import tools from '@/data/tools.json';
 import { Home, Clock, Trash2, ExternalLink } from 'lucide-react';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import { generateSlugFromName } from '@/lib/slug';
 
 type Tool = (typeof tools)[0];
 
@@ -213,7 +214,7 @@ export default function HistoryPage() {
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2">
                             <Link
-                              href={`/tools/${item.tool.id}`}
+                              href={`/tool/${generateSlugFromName(item.tool.name)}`}
                               className="font-semibold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate"
                             >
                               {item.tool.name}

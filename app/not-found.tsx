@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import toolsData from '@/data/tools.json';
 import type { Tool } from '@/types';
+import { generateSlugFromName } from '@/lib/slug';
 
 const tools = toolsData as unknown as Tool[];
 
@@ -60,7 +61,7 @@ export default function NotFound() {
               {popularTools.map(tool => (
                 <Link
                   key={tool.id}
-                  href={`/tools/${tool.id}`}
+                  href={`/tool/${generateSlugFromName(tool.name)}`}
                   className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-left"
                 >
                   <div className="flex items-center gap-3 mb-2">

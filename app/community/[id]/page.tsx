@@ -263,7 +263,7 @@ export default function DiscussionDetailPage() {
 
               {discussion.tool && (
                 <Link
-                  href={`/tools/${discussion.tool.slug}`}
+                  href={`/tool/${discussion.tool.slug}`}
                   className="ml-auto px-3 py-1 bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 rounded-lg text-sm font-semibold hover:bg-blue-100 dark:hover:bg-blue-500/20 transition-colors"
                 >
                   {discussion.tool.name}

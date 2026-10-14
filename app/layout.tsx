@@ -119,7 +119,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://cdn.ampproject.org" />
         {/* Prerender for high-traffic pages */}
-        <link rel="prerender" href="/tools/1" />
+        <link rel="prerender" href="/tool/midjourney" />
         <link rel="prerender" href="/search" />
         <script
           type="application/ld+json"

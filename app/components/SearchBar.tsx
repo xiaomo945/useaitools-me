@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { t } from '@/app/i18n';
+import { generateSlugFromName } from '@/lib/slug';
 
 interface SearchBarProps {
   search: string;
@@ -294,7 +295,7 @@ export default function SearchBar({
                     className={`w-full text-left px-4 py-3 text-sm transition-colors flex items-center gap-3 ${i === selectedIndex ? 'bg-emerald-50 dark:bg-emerald-900/20' : 'hover:bg-emerald-50 dark:hover:bg-emerald-900/20'}`}
                     onClick={() => {
                       if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current);
-                      router.push(`/tools/${tool.id}`);
+                      router.push(`/tool/${generateSlugFromName(tool.name)}`);
                       setShowSuggestions(false);
                       setSelectedIndex(-1);
                     }}

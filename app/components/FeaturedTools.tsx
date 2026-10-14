@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Tool } from '@/types';
+import { generateSlugFromName } from '@/lib/slug';
 
 const categoryColorMap: Record<string, { bg: string; bgDark: string; text: string; textLight: string }> = {
   'Writing': { bg: 'bg-blue-500', bgDark: 'bg-blue-500/20', text: 'text-blue-300', textLight: 'text-blue-500' },
@@ -62,7 +63,7 @@ export default function FeaturedTools({ tools }: { tools: Tool[] }) {
                 {tool.description}
               </p>
               <Link
-                href={`/tools/${tool.id}`}
+                href={`/tool/${generateSlugFromName(tool.name)}`}
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
               >
                 View Details →

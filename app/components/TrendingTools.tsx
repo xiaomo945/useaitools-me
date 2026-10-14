@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Tool } from '@/types';
+import { generateSlugFromName } from '@/lib/slug';
 
 const categoryColorMap: Record<string, { bg: string; bgDark: string; text: string; textLight: string }> = {
   'Writing': { bg: 'bg-blue-500', bgDark: 'bg-blue-500/20', text: 'text-blue-300', textLight: 'text-blue-500' },
@@ -35,7 +36,7 @@ export default function TrendingTools({ tools }: { tools: Tool[] }) {
           return (
             <Link
               key={tool.id}
-              href={`/tools/${tool.id}`}
+              href={`/tool/${generateSlugFromName(tool.name)}`}
               className="group bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 rounded-2xl p-4 sm:p-5 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out relative overflow-hidden"
             >
               <div className="absolute top-3 right-3 z-10">

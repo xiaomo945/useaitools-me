@@ -2,6 +2,7 @@
 
 import { memo } from 'react';
 import Link from 'next/link';
+import { generateSlugFromName } from '@/lib/slug';
 
 interface Tool {
   id: number;
@@ -53,7 +54,7 @@ const ForYouRecommendations = memo(function ForYouRecommendations({
           return (
             <Link
               key={tool.id}
-              href={`/tools/${tool.id}`}
+              href={`/tool/${generateSlugFromName(tool.name)}`}
               className="flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-emerald-50 to-white dark:from-emerald-950/20 dark:to-gray-900 border border-emerald-200/60 dark:border-emerald-800/40 rounded-full whitespace-nowrap hover:border-emerald-400 dark:hover:border-emerald-600 hover:shadow-md transition-all duration-300 ease-out shrink-0"
             >
               <span className={`w-5 h-5 rounded-md ${colors.bg}/10 dark:${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-[10px] font-bold`} style={{ fontFamily: 'Playfair Display, serif' }}>

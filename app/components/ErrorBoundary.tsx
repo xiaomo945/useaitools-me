@@ -93,7 +93,7 @@ class ErrorBoundary extends Component<Props, State> {
             <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800">
               <p className="text-sm text-slate-500 dark:text-slate-400 mb-3">Or explore:</p>
               <div className="flex gap-4 justify-center text-sm">
-                <Link href="/tools/1" className="text-emerald-600 dark:text-emerald-400 hover:underline">
+                <Link href="/tool/midjourney" className="text-emerald-600 dark:text-emerald-400 hover:underline">
                   Browse Tools
                 </Link>
                 <Link href="/compare" className="text-emerald-600 dark:text-emerald-400 hover:underline">

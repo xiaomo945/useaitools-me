@@ -4,6 +4,7 @@ import tools from '@/data/tools.json';
 import Footer from '@/app/components/Footer';
 import StarRating from '@/app/components/StarRating';
 import { getAffiliateLink } from '@/lib/affiliate';
+import { generateSlugFromName } from '@/lib/slug';
 
 export const metadata: Metadata = {
   title: 'AI Audio Tools Comparison - Use AI Tools',
@@ -131,7 +132,7 @@ export default function AudioComparePage() {
                             {tool.name.charAt(0)}
                           </div>
                           <div>
-                            <Link href={`/tools/${tool.id}`} className="font-semibold text-gray-900 dark:text-white hover:text-pink-600 dark:hover:text-pink-400">
+                            <Link href={`/tool/${generateSlugFromName(tool.name)}`} className="font-semibold text-gray-900 dark:text-white hover:text-pink-600 dark:hover:text-pink-400">
                               {tool.name}
                             </Link>
                             <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">{tool.description}</p>
@@ -165,7 +166,7 @@ export default function AudioComparePage() {
                       <td className="px-6 py-4">
                         <div className="flex justify-center gap-2">
                           <Link
-                            href={`/tools/${tool.id}`}
+                            href={`/tool/${generateSlugFromName(tool.name)}`}
                             className="px-3 py-2 text-sm font-semibold text-gray-600 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
                           >
                             Details
@@ -219,7 +220,7 @@ export default function AudioComparePage() {
                 </p>
                 <div className="flex gap-2">
                   <Link
-                    href={`/tools/${tool.id}`}
+                    href={`/tool/${generateSlugFromName(tool.name)}`}
                     className="flex-1 px-4 py-2.5 text-sm font-semibold text-gray-600 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center"
                   >
                     View Details

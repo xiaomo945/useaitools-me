@@ -9,6 +9,7 @@ import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import UserToolList from '@/app/components/UserToolList';
 import type { Tool } from '@/types';
+import { generateSlugFromName } from '@/lib/slug';
 
 const tools = toolsData as unknown as Tool[];
 
@@ -116,7 +117,7 @@ export default function SavedClient() {
 
   const handleCopyAsLinks = async () => {
     try {
-      const links = savedTools.map(t => `${t.name}: https://useaitools.me/tools/${t.id}`).join('\n');
+      const links = savedTools.map(t => `${t.name}: https://useaitools.me/tool/${generateSlugFromName(t.name)}`).join('\n');
       await navigator.clipboard.writeText(links);
       setCopySuccess('links');
       setShowExportMenu(false);

@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Star, Filter, X, CheckSquare, Square } from 'lucide-react';
+import { generateSlugFromName } from '@/lib/slug';
 
 interface Tool {
   id: number;
@@ -228,7 +229,7 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
 
                 <Link
                 key={tool.id}
-                href={`/tools/${tool.id}`}
+                href={`/tool/${generateSlugFromName(tool.name)}`}
                 className="group relative bg-white dark:bg-gray-900 border border-slate-200/60 dark:border-gray-800 shadow-sm rounded-2xl overflow-hidden hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-xl hover:shadow-emerald-500/5 hover:-translate-y-1 transition-all duration-300 ease-out animate-fade-in-up"
                 style={{ animationDelay: `${index * 30}ms` }}
               >

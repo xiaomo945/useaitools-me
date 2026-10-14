@@ -11,6 +11,7 @@ import { hasAffiliateLink, getAffiliateLink, getDynamicCTA } from '@/lib/affilia
 import Breadcrumbs from '@/app/components/Breadcrumbs';
 import ReadingProgress from '@/app/components/ReadingProgress';
 import ImageFallbackHandler from './ImageFallbackHandler';
+import { generateSlugFromName } from '@/lib/slug';
 
 type BlogImage = {
   url: string;
@@ -692,7 +693,7 @@ export default function ClientBlogDetail({
                   {mentionedTools.map((tool: any) => (
                     <Link
                       key={tool.id}
-                      href={`/tools/${tool.id}`}
+                      href={`/tool/${generateSlugFromName(tool.name)}`}
                       className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors text-sm"
                     >
                       <span className="font-medium text-slate-700 dark:text-slate-300">{tool.linkName || tool.name}</span>
@@ -710,7 +711,7 @@ export default function ClientBlogDetail({
                   {mentionedTools.map((tool: any) => (
                     <Link
                       key={tool.id}
-                      href={`/tools/${tool.id}`}
+                      href={`/tool/${generateSlugFromName(tool.name)}`}
                       className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors text-sm group"
                     >
                       <span className="font-medium text-slate-700 dark:text-slate-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">{tool.linkName || tool.name}</span>
@@ -860,7 +861,7 @@ export default function ClientBlogDetail({
                           </div>
                           <div className="flex-1 min-w-0">
                             <Link
-                              href={`/tools/${tool.id}`}
+                              href={`/tool/${generateSlugFromName(tool.name)}`}
                               className="block font-semibold text-sm text-slate-900 dark:text-white hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors truncate"
                             >
                               <h3 className="font-semibold text-sm truncate">{tool.name}</h3>
@@ -871,7 +872,7 @@ export default function ClientBlogDetail({
                         <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2 mt-1.5">{tool.description}</p>
                         <div className="mt-2.5 flex items-center gap-2">
                           <Link
-                            href={`/tools/${tool.id}`}
+                            href={`/tool/${generateSlugFromName(tool.name)}`}
                             className="text-[11px] font-medium text-slate-500 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors"
                           >
                             Details

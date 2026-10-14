@@ -7,6 +7,7 @@ import { ArrowRight, Star } from 'lucide-react';
 import { scenes, getSceneBySlug, getSceneSlugs, type SceneConfig } from '@/data/scenes';
 import type { Tool } from '@/types';
 import { getAffiliateLink, hasAffiliateLink } from '@/lib/affiliate';
+import { generateSlugFromName } from '@/lib/slug';
 
 const tools = toolsData as unknown as Tool[];
 
@@ -298,7 +299,7 @@ export default async function ScenePage({ params }: { params: Promise<{ slug: st
                       <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
 
                       <div className="p-4">
-                        <Link href={`/tools/${tool.id}`} className="flex items-center gap-3 mb-3">
+                        <Link href={`/tool/${generateSlugFromName(tool.name)}`} className="flex items-center gap-3 mb-3">
                           <div className={`w-10 h-10 rounded-xl ${colors.bg}/10 ${colors.textLight} flex items-center justify-center text-lg font-bold flex-shrink-0`}>
                             {tool.name.charAt(0)}
                           </div>
@@ -317,7 +318,7 @@ export default async function ScenePage({ params }: { params: Promise<{ slug: st
                           </div>
                         </Link>
 
-                        <Link href={`/tools/${tool.id}`}>
+                        <Link href={`/tool/${generateSlugFromName(tool.name)}`}>
                           <p className="text-sm text-slate-600 dark:text-gray-300 line-clamp-2 mb-3 hover:text-slate-900 dark:hover:text-white transition-colors">
                             {tool.description}
                           </p>
@@ -347,7 +348,7 @@ export default async function ScenePage({ params }: { params: Promise<{ slug: st
                             <ArrowRight className="w-3.5 h-3.5" />
                           </a>
                           <Link
-                            href={`/tools/${tool.id}`}
+                            href={`/tool/${generateSlugFromName(tool.name)}`}
                             className="inline-flex items-center justify-center px-3 py-2.5 rounded-xl text-sm font-semibold border border-slate-200 dark:border-gray-700 text-slate-600 dark:text-slate-400 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
                           >
                             Details
