@@ -269,12 +269,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
                         </h3>
                         <div className="flex items-center gap-1.5 mt-1">
                           {tool.needs_vpn ? (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                              🪜 VPN
+                            <span title="Not available in every region." className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300">
+                              🌐 Region-locked
                             </span>
                           ) : (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
-                              ✅ Direct
+                            <span title="Available worldwide without a VPN." className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
+                              ✅ Global
                             </span>
                           )}
                         </div>

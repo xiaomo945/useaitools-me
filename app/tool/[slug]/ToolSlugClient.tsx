@@ -196,12 +196,18 @@ export default function ToolSlugClient({
                     </span>
                   )}
                   {tool.needs_vpn ? (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                      🪜 VPN Required
+                    <span
+                      title="Not available in every region — visitors in some countries need a VPN or alternate access."
+                      className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300"
+                    >
+                      🌐 Region-locked
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
-                      ✅ Direct Access
+                    <span
+                      title="Available worldwide without a VPN."
+                      className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300"
+                    >
+                      ✅ Global access
                     </span>
                   )}
                   <div className="flex flex-wrap gap-1 mt-1">
@@ -364,7 +370,7 @@ export default function ToolSlugClient({
         <div className="bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 mb-8">
           <SocialShare
             title={`${tool.name} – AI Tool Review & Guide`}
-            url={`https://useaitools.me/tool/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+            url={`https://useaitools.me/tool/${slug}`}
             description={tool.description}
           />
         </div>
