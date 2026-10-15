@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import type { Tool } from '@/types';
 import SearchFilters from '@/app/components/SearchFilters';
+import { searchTools } from '@/lib/fuzzySearch';
 import toolsData from '@/data/tools.json';
 
 const tools = toolsData as unknown as Tool[];
@@ -17,17 +18,11 @@ function SearchPageInner() {
     setTimeout(() => setSearchQuery(query), 0);
   }, [query]);
 
-  // Apply text search first, then hand off to filters
-  const textFiltered = useMemo(() => {
-    const q = searchQuery.toLowerCase().trim();
-    if (!q) return tools;
-    return tools.filter(t =>
-      t.name.toLowerCase().includes(q) ||
-      t.description.toLowerCase().includes(q) ||
-      t.category.toLowerCase().includes(q) ||
-      (t.best_for || []).some(b => b.toLowerCase().includes(q))
-    );
-  }, [searchQuery]);
+  // 分词 + 容错检索（name/description/description_en/category/best_for/examples）
+  const { tools: textFiltered, relaxed } = useMemo(
+    () => searchTools(tools, searchQuery),
+    [searchQuery]
+  );
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
@@ -41,7 +36,7 @@ function SearchPageInner() {
             {searchQuery ? `Results for "${searchQuery}"` : 'Search AI Tools'}
           </h1>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Search across 1,300+ AI tools. Use filters to narrow down by category, pricing, and rating.
+            Search across {tools.length} AI tools. Use filters to narrow down by category and pricing.
           </p>
         </div>
 
@@ -55,7 +50,7 @@ function SearchPageInner() {
               type="text"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              placeholder="Search 1,300+ AI tools (try 'Rytr', 'blog writing', 'free video editor')..."
+              placeholder={`Search ${tools.length} AI tools (try 'Rytr', 'blog writing', 'free video editor')...`}
               className="w-full pl-12 pr-32 py-4 rounded-2xl border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-slate-900 dark:text-white placeholder:text-slate-400 text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
               autoFocus
             />
@@ -80,6 +75,11 @@ function SearchPageInner() {
           {searchQuery && (
             <p className="sm:hidden text-center text-xs text-slate-500 dark:text-slate-400 mt-2">
               {textFiltered.length} {textFiltered.length === 1 ? 'result' : 'results'} for &ldquo;{searchQuery}&rdquo;
+            </p>
+          )}
+          {searchQuery && relaxed && textFiltered.length > 0 && (
+            <p className="text-center text-xs text-amber-600 dark:text-amber-400 mt-2">
+              未找到完全匹配，以下为部分匹配结果
             </p>
           )}
         </div>

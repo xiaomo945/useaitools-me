@@ -23,7 +23,7 @@
         "step": 2,
         "title": "生成视频素材",
         "title_en": "Generate Video Footage",
-        "tool_ids": [36, 45],
+        "tool_ids": [9, 279],
         "description": "将脚本转换为视频，自动匹配素材",
         "description_en": "Convert script to video with auto B-roll matching"
       },
@@ -31,7 +31,7 @@
         "step": 3,
         "title": "添加AI配音",
         "title_en": "Add AI Voiceover",
-        "tool_ids": [40, 41],
+        "tool_ids": [8, 78],
         "description": "使用AI语音生成自然配音",
         "description_en": "Generate natural voiceover with AI"
       },
@@ -39,7 +39,7 @@
         "step": 4,
         "title": "自动添加字幕",
         "title_en": "Auto Add Subtitles",
-        "tool_ids": [37],
+        "tool_ids": [51],
         "description": "AI自动识别语音并添加多语言字幕",
         "description_en": "AI automatically recognizes speech and adds multilingual subtitles"
       },
@@ -47,7 +47,7 @@
         "step": 5,
         "title": "剪辑与发布",
         "title_en": "Edit and Publish",
-        "tool_ids": [89],
+        "tool_ids": [1512],
         "description": "快速剪辑并发布到社交媒体",
         "description_en": "Quick edit and publish to social media"
       }
@@ -93,7 +93,7 @@
         "step": 4,
         "title": "生成配图",
         "title_en": "Generate Featured Images",
-        "tool_ids": [1, 12],
+        "tool_ids": [1, 2],
         "description": "AI生成博客配图和社交媒体封面",
         "description_en": "AI generates featured images and social covers"
       },
@@ -131,7 +131,7 @@
         "step": 2,
         "title": "生成场景图",
         "title_en": "Generate Lifestyle Images",
-        "tool_ids": [1, 12],
+        "tool_ids": [1, 2],
         "description": "AI生成产品使用场景和生活方式图片",
         "description_en": "AI generates usage scenarios and lifestyle images"
       },
@@ -177,7 +177,7 @@
         "step": 2,
         "title": "选择声音角色",
         "title_en": "Choose Voice Characters",
-        "tool_ids": [40, 41],
+        "tool_ids": [8, 78],
         "description": "为不同角色选择合适的AI声音",
         "description_en": "Select appropriate AI voices for different characters"
       },
@@ -185,7 +185,7 @@
         "step": 3,
         "title": "生成语音",
         "title_en": "Generate Voiceover",
-        "tool_ids": [40, 41],
+        "tool_ids": [8, 78],
         "description": "AI批量生成章节语音",
         "description_en": "AI batch generates chapter voiceovers"
       },
@@ -201,7 +201,7 @@
         "step": 5,
         "title": "混音与导出",
         "title_en": "Mixing and Export",
-        "tool_ids": [97],
+        "tool_ids": [225],
         "description": "AI自动混音并导出为有声书格式",
         "description_en": "AI auto-mixes and exports in audiobook format"
       }
@@ -223,7 +223,7 @@
         "step": 1,
         "title": "AI代码补全",
         "title_en": "AI Code Completion",
-        "tool_ids": [43, 102, 105],
+        "tool_ids": [7, 13, 105],
         "description": "使用AI助手进行实时代码补全",
         "description_en": "Use AI assistants for real-time code completion"
       },
@@ -231,7 +231,7 @@
         "step": 2,
         "title": "自动生成测试",
         "title_en": "Auto-generate Tests",
-        "tool_ids": [43, 107],
+        "tool_ids": [7, 107],
         "description": "AI根据代码自动生成单元测试",
         "description_en": "AI auto-generates unit tests from code"
       },
@@ -239,7 +239,7 @@
         "step": 3,
         "title": "代码审查",
         "title_en": "Code Review",
-        "tool_ids": [106, 43],
+        "tool_ids": [288, 7],
         "description": "AI自动审查代码质量和安全问题",
         "description_en": "AI automatically reviews code quality and security"
       },
@@ -247,7 +247,7 @@
         "step": 4,
         "title": "生成文档",
         "title_en": "Generate Documentation",
-        "tool_ids": [43, 108],
+        "tool_ids": [7, 108],
         "description": "AI自动生成API文档和代码注释",
         "description_en": "AI auto-generates API docs and code comments"
       }
@@ -293,7 +293,7 @@
         "step": 4,
         "title": "排期发布",
         "title_en": "Schedule and Publish",
-        "tool_ids": [110],
+        "tool_ids": [988],
         "description": "AI选择最佳发布时间并自动排期",
         "description_en": "AI selects optimal posting times and auto-schedules"
       },
@@ -301,7 +301,7 @@
         "step": 5,
         "title": "数据分析",
         "title_en": "Analytics and Optimization",
-        "tool_ids": [113],
+        "tool_ids": [1139],
         "description": "AI分析帖子表现并给出优化建议",
         "description_en": "AI analyzes post performance and provides optimization suggestions"
       }
@@ -331,7 +331,7 @@
         "step": 2,
         "title": "生成教学内容",
         "title_en": "Generate Teaching Content",
-        "tool_ids": [36, 38],
+        "tool_ids": [96, 81],
         "description": "将教学内容转为视频或AI讲师视频",
         "description_en": "Convert teaching content to video or AI instructor video"
       },
@@ -339,7 +339,7 @@
         "step": 3,
         "title": "屏幕录制与演示",
         "title_en": "Screen Recording & Demo",
-        "tool_ids": [37],
+        "tool_ids": [1112],
         "description": "录制操作演示并自动标注",
         "description_en": "Record operation demos with auto annotations"
       },
@@ -347,7 +347,7 @@
         "step": 4,
         "title": "添加多语言字幕",
         "title_en": "Add Multilingual Subtitles",
-        "tool_ids": [37],
+        "tool_ids": [51],
         "description": "AI自动识别并添加多语言字幕",
         "description_en": "AI auto-recognizes and adds multilingual subtitles"
       },
@@ -393,7 +393,7 @@
         "step": 3,
         "title": "A/B测试",
         "title_en": "A/B Testing",
-        "tool_ids": [110],
+        "tool_ids": [271],
         "description": "AI自动测试不同主题行和内容",
         "description_en": "AI auto-tests different subject lines and content"
       },
@@ -401,9 +401,15 @@
         "step": 4,
         "title": "自动跟进",
         "title_en": "Automated Follow-ups",
-        "tool_ids": [110, 111],
+        "tool_ids": [1158],
         "description": "AI根据回复情况自动发送跟进邮件",
-        "description_en": "AI auto-sends follow-up emails based on responses"
+        "description_en": "AI auto-sends follow-up emails based on responses",
+        "unresolved_refs": [
+          {
+            "original_tool_id": 111,
+            "note": "tools.json 中不存在该 id，且无法从步骤上下文唯一确定对应工具，已移除待人工补全"
+          }
+        ]
       }
     ]
   },
@@ -439,7 +445,7 @@
         "step": 3,
         "title": "录音与降噪",
         "title_en": "Recording & Noise Reduction",
-        "tool_ids": [97],
+        "tool_ids": [1535],
         "description": "AI自动降噪和音频增强",
         "description_en": "AI auto noise reduction and audio enhancement"
       },
@@ -447,7 +453,7 @@
         "step": 4,
         "title": "剪辑与配乐",
         "title_en": "Editing & Music",
-        "tool_ids": [97, 99],
+        "tool_ids": [79, 99],
         "description": "AI剪辑音频并添加背景音乐",
         "description_en": "AI edits audio and adds background music"
       },
@@ -455,7 +461,7 @@
         "step": 5,
         "title": "转写与发布",
         "title_en": "Transcription & Publishing",
-        "tool_ids": [97],
+        "tool_ids": [11],
         "description": "AI生成文字稿并发布到各平台",
         "description_en": "AI generates transcripts and publishes to platforms"
       }
@@ -485,7 +491,7 @@
         "step": 2,
         "title": "数据分析",
         "title_en": "Data Analysis",
-        "tool_ids": [113],
+        "tool_ids": [52],
         "description": "AI分析本周完成的工作和进度",
         "description_en": "AI analyzes completed work and progress"
       },
@@ -501,7 +507,7 @@
         "step": 4,
         "title": "下周计划",
         "title_en": "Next Week Planning",
-        "tool_ids": [23, 84],
+        "tool_ids": [23, 461],
         "description": "AI辅助制定下周工作计划",
         "description_en": "AI assists in creating next week's work plan"
       }

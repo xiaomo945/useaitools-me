@@ -44,12 +44,18 @@ export function buildMetadata(options: BuildMetadataOptions = {}): Metadata {
     description: desc,
     keywords: DEFAULT_KEYWORDS,
     robots: noindex ? "noindex, follow" : "index, follow",
+    // No `alternates.languages` (hreflang) here on purpose.
+    //
+    // These used to declare `zh` -> `<path>?lang=zh`, but the site has no
+    // `[locale]` route segment and no i18n config in next.config.ts, so
+    // `?lang=zh` served the same English HTML under a second URL. That is a
+    // duplicate-content signal, not a translation signal.
+    //
+    // The plan is bilingual two-site / real locale routing. When that lands,
+    // hreflang goes back here — with `x-default` plus one entry per real,
+    // rendered locale URL (e.g. `/zh/...`), never a query parameter.
     alternates: {
       canonical,
-      languages: {
-        'en': canonicalPath || '/',
-        'zh': `${canonicalPath || '/'}?lang=zh`,
-      },
     },
     openGraph: {
       title: fullTitle,
@@ -58,7 +64,6 @@ export function buildMetadata(options: BuildMetadataOptions = {}): Metadata {
       type: "website",
       url: canonical,
       locale: 'en_US',
-      alternateLocale: 'zh_CN',
       images: [
         {
           url: ogImage,
@@ -77,6 +82,13 @@ export function buildMetadata(options: BuildMetadataOptions = {}): Metadata {
       images: [ogImage],
     },
   };
+}
+
+// Object form of the same `noindex, follow` convention used by buildMetadata().
+// `follow: true` matters on demoted pages: the URL stays indexable-adjacent so
+// crawlers keep walking its outbound links into the rest of the site.
+export function robotsDirective(noindex = false): Metadata["robots"] {
+  return noindex ? { index: false, follow: true } : { index: true, follow: true };
 }
 
 export function generateKeywords(category?: string, toolName?: string): string[] {

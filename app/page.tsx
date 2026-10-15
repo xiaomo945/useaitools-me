@@ -25,12 +25,11 @@ export const metadata: Metadata = {
   title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
   description: 'Curated directory of the best AI tools. Browse 500+ tools across Writing, Image, Video, Audio, Code & Productivity. Find your perfect AI tool in seconds.',
   metadataBase: new URL('https://useaitools.me'),
+  // No hreflang yet: `?lang=zh` renders the same English HTML (no [locale]
+  // segment, no i18n config), which sends a duplicate-content signal. Restored
+  // with real locale URLs when the bilingual routing plan ships.
   alternates: {
     canonical: '/',
-    languages: {
-      'en': '/',
-      'zh': '/?lang=zh',
-    },
   },
   openGraph: {
     title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
@@ -39,7 +38,6 @@ export const metadata: Metadata = {
     siteName: 'Use AI Tools',
     type: 'website',
     locale: 'en_US',
-    alternateLocale: 'zh_CN',
   },
   twitter: {
     card: 'summary_large_image',

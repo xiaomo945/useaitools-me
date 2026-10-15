@@ -2,12 +2,13 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { X, ArrowRight, ArrowLeft } from 'lucide-react';
+import toolsData from '@/data/tools.json';
 
 const tourSteps = [
   {
     target: 'search',
     selector: 'input[type="text"][placeholder*="Search" i]',
-    title: '🔍 Search 1,300+ Tools',
+    title: `🔍 Search ${toolsData.length} Tools`,
     description: 'Type any tool name, category, or use case. Try "Rytr" or "blog writing".',
   },
   {

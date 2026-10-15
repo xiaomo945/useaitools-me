@@ -1,9 +1,9 @@
-import { matchSubcategory, getSubcategories } from './lib/subcategory-mapping';
+import { matchSubcategory, getSubcategories } from '../lib/subcategory-mapping';
 import * as fs from 'fs';
 import * as path from 'path';
 
 // 读取工具数据
-const toolsPath = path.join(__dirname, 'data', 'tools.json');
+const toolsPath = path.join(__dirname, '..', 'data', 'tools.json');
 const tools = JSON.parse(fs.readFileSync(toolsPath, 'utf-8'));
 
 console.log('开始为工具添加子分类...\n');

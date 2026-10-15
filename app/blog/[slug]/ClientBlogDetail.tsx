@@ -336,11 +336,13 @@ export default function ClientBlogDetail({
   slug,
   relatedPosts = [],
   relatedTools = [],
+  demoted = false,
 }: {
   post: BlogPost;
   slug: string;
   relatedPosts?: BlogPost[];
   relatedTools?: RelatedTool[];
+  demoted?: boolean;
 }) {
   const [copied, setCopied] = useState(false);
   const [activeHeading, setActiveHeading] = useState('');
@@ -521,6 +523,31 @@ export default function ClientBlogDetail({
             { label: post.title, href: `/blog/${slug}`, current: true }
           ]} 
         />
+
+        {/* Rewrite notice — shown only on posts pulled from search indexing.
+            Stays factual and low-key: the page is still readable, just not being promoted. */}
+        {demoted && (
+          <div className="mb-6 max-w-4xl flex items-start gap-3 rounded-xl border border-amber-200 dark:border-amber-800/60 bg-amber-50 dark:bg-amber-900/20 px-4 py-3">
+            <span
+              aria-hidden="true"
+              className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-100 dark:bg-amber-800/60 text-amber-700 dark:text-amber-300 text-xs font-bold"
+            >
+              ↻
+            </span>
+            <p className="text-sm text-amber-900 dark:text-amber-200">
+              <span className="font-semibold">This guide is being rewritten.</span>{' '}
+              We&apos;re reworking it with fresh, hands-on testing. The page below is the earlier
+              version and stays available in the meantime — for the most current coverage,{' '}
+              <a
+                href="/blog"
+                className="font-medium underline underline-offset-2 hover:no-underline"
+              >
+                browse our latest guides
+              </a>
+              .
+            </p>
+          </div>
+        )}
 
         {/* Post Header */}
         <div className="mb-8 max-w-4xl">

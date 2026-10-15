@@ -9,6 +9,8 @@ interface CategoryFiltersProps {
   setSelectedCategories: (value: string[] | ((prev: string[]) => string[])) => void;
   selectedPricing: string;
   setSelectedPricing: (value: string) => void;
+  vpnFilter: 'all' | 'no' | 'yes';
+  setVpnFilter: (value: 'all' | 'no' | 'yes') => void;
   categories: string[];
   pricingOptions: string[];
   getCategoryColors: (category: string) => { bg: string; bgDark: string; text: string; textLight: string; border: string; ring: string; shadow: string };
@@ -32,6 +34,8 @@ export default function CategoryFilters({
   setSelectedCategories,
   selectedPricing,
   setSelectedPricing,
+  vpnFilter,
+  setVpnFilter,
   categories,
   pricingOptions,
   getCategoryColors,
@@ -105,8 +109,34 @@ export default function CategoryFilters({
         </div>
       </div>
       
-      {/* Pricing Filter Dropdown */}
-      <div className="flex justify-center mt-4 mb-2">
+      {/* Pricing Filter + 访问方式 */}
+      <div className="flex flex-wrap items-center justify-center gap-2 mt-4 mb-2">
+        {/* 免梯子 / 需梯子 —— 中文用户刚需维度 */}
+        <div className="inline-flex rounded-full bg-gray-100 dark:bg-gray-800 p-0.5">
+          {([
+            { value: 'all', label: '全部' },
+            { value: 'no', label: '免梯子' },
+            { value: 'yes', label: '需梯子' },
+          ] as const).map(opt => (
+            <button
+              key={opt.value}
+              onClick={() => {
+                debugLog('Filter', `VPN filter: ${opt.value}`);
+                track('filter', { vpn: opt.value });
+                setVpnFilter(opt.value);
+              }}
+              aria-pressed={vpnFilter === opt.value}
+              className={`px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 min-h-[36px] ${
+                vpnFilter === opt.value
+                  ? 'bg-emerald-600 text-white'
+                  : 'text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+              }`}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+
         <div className="relative">
           <select
             value={selectedPricing}
@@ -135,12 +165,13 @@ export default function CategoryFilters({
       </div>
       
       {/* Clear All Filters Button */}
-      {(!selectedCategories.includes('All') || selectedPricing !== 'All') && (
+      {(!selectedCategories.includes('All') || selectedPricing !== 'All' || vpnFilter !== 'all') && (
         <div className="flex justify-center mt-2 mb-2">
           <button
             onClick={() => {
               setSelectedCategories(['All']);
               setSelectedPricing('All');
+              setVpnFilter('all');
               try { localStorage.removeItem('useaitools_prefs'); } catch {}
               debugLog('Filter', 'All filters cleared');
               if (toolsGridRef.current) {
@@ -158,7 +189,7 @@ export default function CategoryFilters({
       )}
 
       {/* Active Filter Tags */}
-      {(!selectedCategories.includes('All') || selectedPricing !== 'All') && (
+      {(!selectedCategories.includes('All') || selectedPricing !== 'All' || vpnFilter !== 'all') && (
         <div className="flex flex-wrap items-center justify-center gap-2 mb-4">
           {!selectedCategories.includes('All') && selectedCategories.map(cat => (
             <button
@@ -175,6 +206,17 @@ export default function CategoryFilters({
               </svg>
             </button>
           ))}
+          {vpnFilter !== 'all' && (
+            <button
+              onClick={() => setVpnFilter('all')}
+              className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 hover:bg-rose-100 dark:hover:bg-rose-900/30 hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200"
+            >
+              {vpnFilter === 'no' ? '免梯子' : '需梯子'}
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          )}
           {selectedPricing !== 'All' && (
             <button
               onClick={() => setSelectedPricing('All')}

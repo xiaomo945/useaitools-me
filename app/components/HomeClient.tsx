@@ -518,6 +518,8 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
   const [triggeredSearch, setTriggeredSearch] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<Category[]>(['All']);
   const [selectedPricing, setSelectedPricing] = useState<string>('All');
+  // 'no' = 免梯子（needs_vpn false），'yes' = 需梯子
+  const [vpnFilter, setVpnFilter] = useState<'all' | 'no' | 'yes'>('all');
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
@@ -1264,7 +1266,8 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       if (!triggeredSearch.trim()) {
         const matchesCategory = selectedCategories.includes('All') || selectedCategories.includes(tool.category);
         const matchesPricing = selectedPricing === 'All' || tool.pricing === selectedPricing;
-        return { tool, score: 0, matches: matchesCategory && matchesPricing };
+        const matchesVpn = vpnFilter === 'all' || (vpnFilter === 'no' ? tool.needs_vpn === false : tool.needs_vpn === true);
+        return { tool, score: 0, matches: matchesCategory && matchesPricing && matchesVpn };
       }
       
       const nameMatch = fuzzyMatch(tool.name, triggeredSearch);
@@ -1274,8 +1277,9 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
       
       const matchesCategory = selectedCategories.includes('All') || selectedCategories.includes(tool.category);
       const matchesPricing = selectedPricing === 'All' || tool.pricing === selectedPricing;
+      const matchesVpn = vpnFilter === 'all' || (vpnFilter === 'no' ? tool.needs_vpn === false : tool.needs_vpn === true);
       
-      return { tool, score: searchScore, matches: matchesSearch && matchesCategory && matchesPricing };
+      return { tool, score: searchScore, matches: matchesSearch && matchesCategory && matchesPricing && matchesVpn };
     }).filter(item => item.matches);
     
     // Sort by relevance score (search), then Staff Pick, then VPN, then name
@@ -1295,15 +1299,15 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
 
       return a.tool.name.localeCompare(b.tool.name);
     }).map(item => item.tool);
-  }, [triggeredSearch, selectedCategories, selectedPricing, displayedTools]);
+  }, [triggeredSearch, selectedCategories, selectedPricing, vpnFilter, displayedTools]);
 
   useEffect(() => {
-    if (!selectedCategories.includes('All') || selectedPricing !== 'All' || triggeredSearch) {
+    if (!selectedCategories.includes('All') || selectedPricing !== 'All' || vpnFilter !== 'all' || triggeredSearch) {
       setTimeout(() => setIsFilterTransitioning(true), 0);
       const timer = setTimeout(() => setIsFilterTransitioning(false), 300);
       return () => clearTimeout(timer);
     }
-  }, [selectedCategories, selectedPricing, triggeredSearch]);
+  }, [selectedCategories, selectedPricing, vpnFilter, triggeredSearch]);
 
   useEffect(() => {
     const handleOpenTool = (e: Event) => {
@@ -1827,6 +1831,8 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
             setSelectedCategories={setSelectedCategories}
             selectedPricing={selectedPricing}
             setSelectedPricing={setSelectedPricing}
+            vpnFilter={vpnFilter}
+            setVpnFilter={setVpnFilter}
             categories={categories}
             pricingOptions={pricingOptions}
             getCategoryColors={getCategoryColors}
@@ -1847,9 +1853,9 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
           {/* Search Result Count */}
           <div className="text-center mb-8">
             <p className={`text-sm sm:text-lg font-semibold text-slate-600 dark:text-slate-300 ${
-              search.trim() || !selectedCategories.includes('All') || selectedPricing !== 'All' ? 'animate-pulse' : ''
+              search.trim() || !selectedCategories.includes('All') || selectedPricing !== 'All' || vpnFilter !== 'all' ? 'animate-pulse' : ''
             }`}>
-              {search.trim() || !selectedCategories.includes('All') || selectedPricing !== 'All' ? (
+              {search.trim() || !selectedCategories.includes('All') || selectedPricing !== 'All' || vpnFilter !== 'all' ? (
                 filteredTools.length === 0 ? (
                   <span className="text-rose-500 dark:text-rose-400">No tools found</span>
                 ) : (
