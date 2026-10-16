@@ -50,7 +50,7 @@ export default function MembershipPage() {
 
   const handleSubscribe = async (planId: string) => {
     if (!session) {
-      alert('请先登录')
+      alert('Please sign in first')
       return
     }
 
@@ -65,14 +65,14 @@ export default function MembershipPage() {
       const data = await res.json()
 
       if (res.ok) {
-        alert('订阅成功！')
+        alert('Subscription successful!')
         fetchMembership()
       } else {
-        alert(data.error || '订阅失败')
+        alert(data.error || 'Subscription failed')
       }
     } catch (error) {
       console.error('Failed to subscribe:', error)
-      alert('订阅失败')
+      alert('Subscription failed')
     } finally {
       setSubscribing(false)
     }
@@ -81,7 +81,7 @@ export default function MembershipPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-gray-500">加载中...</div>
+        <div className="text-gray-500">Loading...</div>
       </div>
     )
   }
@@ -92,10 +92,10 @@ export default function MembershipPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            会员计划
+            Membership Plans
           </h1>
           <p className="text-xl text-gray-600">
-            选择适合您的计划，解锁更多高级功能
+            Choose the plan that fits you and unlock premium features
           </p>
         </div>
 
@@ -106,15 +106,15 @@ export default function MembershipPage() {
               <div className="flex items-center justify-between">
                 <div>
                   <h2 className="text-2xl font-bold mb-2">
-                    当前会员：{userMembership.planName}
+                    Current plan: {userMembership.planName}
                   </h2>
                   <p className="text-blue-100">
-                    有效期至：{new Date(userMembership.endDate).toLocaleDateString('zh-CN')}
+                    Valid until: {new Date(userMembership.endDate).toLocaleDateString('en-US')}
                   </p>
                 </div>
                 <div className="text-right">
                   <div className="text-3xl font-bold">
-                    {userMembership.status === 'active' ? '✓ 活跃' : userMembership.status}
+                    {userMembership.status === 'active' ? '✓ Active' : userMembership.status}
                   </div>
                 </div>
               </div>
@@ -133,7 +133,7 @@ export default function MembershipPage() {
             >
               {plan.isPopular && (
                 <div className="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 text-sm font-semibold">
-                  推荐
+                  Recommended
                 </div>
               )}
 
@@ -148,7 +148,7 @@ export default function MembershipPage() {
                     ${plan.price}
                   </span>
                   <span className="text-gray-600">
-                    /{plan.interval === 'monthly' ? '月' : '年'}
+                    /{plan.interval === 'monthly' ? 'mo' : 'yr'}
                   </span>
                 </div>
 
@@ -185,10 +185,10 @@ export default function MembershipPage() {
                   }`}
                 >
                   {userMembership && userMembership.planLevel === plan.name
-                    ? '当前计划'
+                    ? 'Current plan'
                     : plan.price === 0
-                    ? '免费开始'
-                    : '立即订阅'}
+                    ? 'Start for free'
+                    : 'Subscribe now'}
                 </button>
               </div>
             </div>
@@ -198,53 +198,53 @@ export default function MembershipPage() {
         {/* Features Comparison */}
         <div className="mt-16 max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-            功能对比
+            Compare Plans
           </h2>
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <table className="w-full">
               <thead className="bg-gray-50">
                 <tr>
                   <th className="px-6 py-3 text-left text-sm font-semibold text-gray-900">
-                    功能
+                    Feature
                   </th>
                   <th className="px-6 py-3 text-center text-sm font-semibold text-gray-900">
-                    免费版
+                    Free
                   </th>
                   <th className="px-6 py-3 text-center text-sm font-semibold text-gray-900">
-                    专业版
+                    Pro
                   </th>
                   <th className="px-6 py-3 text-center text-sm font-semibold text-gray-900">
-                    企业版
+                    Team
                   </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr>
-                  <td className="px-6 py-4 text-sm text-gray-900">工具列表访问</td>
+                  <td className="px-6 py-4 text-sm text-gray-900">Tool directory access</td>
                   <td className="px-6 py-4 text-center text-green-500">✓</td>
                   <td className="px-6 py-4 text-center text-green-500">✓</td>
                   <td className="px-6 py-4 text-center text-green-500">✓</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 text-sm text-gray-900">收藏数量</td>
-                  <td className="px-6 py-4 text-center text-gray-600">10个</td>
-                  <td className="px-6 py-4 text-center text-gray-600">无限</td>
-                  <td className="px-6 py-4 text-center text-gray-600">无限</td>
+                  <td className="px-6 py-4 text-sm text-gray-900">Saved favorites</td>
+                  <td className="px-6 py-4 text-center text-gray-600">10</td>
+                  <td className="px-6 py-4 text-center text-gray-600">Unlimited</td>
+                  <td className="px-6 py-4 text-center text-gray-600">Unlimited</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 text-sm text-gray-900">工具对比</td>
+                  <td className="px-6 py-4 text-sm text-gray-900">Tool comparison</td>
                   <td className="px-6 py-4 text-center text-red-500">✗</td>
                   <td className="px-6 py-4 text-center text-green-500">✓</td>
                   <td className="px-6 py-4 text-center text-green-500">✓</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 text-sm text-gray-900">API 访问</td>
+                  <td className="px-6 py-4 text-sm text-gray-900">API access</td>
                   <td className="px-6 py-4 text-center text-red-500">✗</td>
                   <td className="px-6 py-4 text-center text-red-500">✗</td>
                   <td className="px-6 py-4 text-center text-green-500">✓</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 text-sm text-gray-900">团队协作</td>
+                  <td className="px-6 py-4 text-sm text-gray-900">Team collaboration</td>
                   <td className="px-6 py-4 text-center text-red-500">✗</td>
                   <td className="px-6 py-4 text-center text-red-500">✗</td>
                   <td className="px-6 py-4 text-center text-green-500">✓</td>

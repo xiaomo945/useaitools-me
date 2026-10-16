@@ -11,230 +11,230 @@ export interface SubcategoryRule {
 export const subcategoryRules: Record<string, SubcategoryRule[]> = {
   Writing: [
     {
-      subcategory: '内容写作',
+      subcategory: 'Content Writing',
       subcategoryEn: 'Content Writing',
       keywords: ['content writing', 'blog', 'article', 'post', 'long-form'],
-      description: '博客文章、长文内容创作工具'
+      description: 'Tools for blog posts and long-form content creation'
     },
     {
-      subcategory: '营销文案',
+      subcategory: 'Copywriting',
       subcategoryEn: 'Copywriting',
       keywords: ['copywriting', 'marketing', 'ad', 'advertisement', 'sales', 'conversion'],
-      description: '广告文案、营销内容、销售转化文案'
+      description: 'Ad copy, marketing content, and sales conversion copywriting'
     },
     {
-      subcategory: 'SEO写作',
+      subcategory: 'SEO Writing',
       subcategoryEn: 'SEO Writing',
       keywords: ['seo', 'search engine', 'keyword', 'ranking', 'optimization'],
-      description: '搜索引擎优化写作、关键词优化工具'
+      description: 'SEO writing and keyword optimization tools'
     },
     {
-      subcategory: '邮件写作',
+      subcategory: 'Email Writing',
       subcategoryEn: 'Email Writing',
       keywords: ['email', 'newsletter', 'mail', 'outreach'],
-      description: '邮件内容、营销邮件、外联邮件撰写'
+      description: 'Email content, marketing emails, and outreach messages'
     },
     {
-      subcategory: '创意写作',
+      subcategory: 'Creative Writing',
       subcategoryEn: 'Creative Writing',
       keywords: ['creative', 'story', 'fiction', 'novel', 'poetry', 'script'],
-      description: '故事创作、小说、诗歌、剧本写作'
+      description: 'Story, fiction, poetry, and script writing'
     },
     {
-      subcategory: '学术写作',
+      subcategory: 'Academic Writing',
       subcategoryEn: 'Academic Writing',
       keywords: ['academic', 'research', 'paper', 'essay', 'study', 'education'],
-      description: '学术论文、研究报告、教育内容'
+      description: 'Academic papers, research reports, and educational content'
     }
   ],
   Image: [
     {
-      subcategory: '图像生成',
+      subcategory: 'Image Generation',
       subcategoryEn: 'Image Generation',
       keywords: ['image generation', 'text to image', 'generate image', 'create image'],
-      description: '文字生成图像、AI绘画工具'
+      description: 'Text-to-image generation and AI painting tools'
     },
     {
-      subcategory: '照片编辑',
+      subcategory: 'Photo Editing',
       subcategoryEn: 'Photo Editing',
       keywords: ['photo editing', 'photo enhancement', 'retouch', 'beauty'],
-      description: '照片修饰、美化、增强工具'
+      description: 'Photo retouching, beautification, and enhancement tools'
     },
     {
-      subcategory: '设计工具',
+      subcategory: 'Design Tools',
       subcategoryEn: 'Design Tools',
       keywords: ['design', 'graphic design', 'layout', 'template'],
-      description: '平面设计、图形创作、模板设计'
+      description: 'Graphic design, visual creation, and template design'
     },
     {
-      subcategory: '品牌设计',
+      subcategory: 'Brand Design',
       subcategoryEn: 'Brand Design',
       keywords: ['brand', 'logo', 'identity', 'branding'],
-      description: '品牌标识、Logo设计、视觉识别系统'
+      description: 'Brand identity, logo design, and visual identity systems'
     },
     {
-      subcategory: '艺术生成',
+      subcategory: 'Art Generation',
       subcategoryEn: 'Art Generation',
       keywords: ['art', 'artistic', 'painting', 'illustration', 'style'],
-      description: '艺术风格创作、插画生成'
+      description: 'Artistic style creation and illustration generation'
     },
     {
-      subcategory: '背景移除',
+      subcategory: 'Background Removal',
       subcategoryEn: 'Background Removal',
       keywords: ['background removal', 'remove background', 'cutout', 'transparent'],
-      description: '背景抠图、透明背景、图像分割'
+      description: 'Background cutout, transparent backgrounds, and image segmentation'
     }
   ],
   Video: [
     {
-      subcategory: '视频编辑',
+      subcategory: 'Video Editing',
       subcategoryEn: 'Video Editing',
       keywords: ['video editing', 'edit video', 'video editor', 'cut', 'trim'],
-      description: '视频剪辑、后期制作工具'
+      description: 'Video editing and post-production tools'
     },
     {
-      subcategory: '视频生成',
+      subcategory: 'Video Generation',
       subcategoryEn: 'Video Generation',
       keywords: ['video generation', 'text to video', 'create video', 'generate video'],
-      description: '文字生成视频、AI视频创作'
+      description: 'Text-to-video generation and AI video creation'
     },
     {
-      subcategory: '社交媒体视频',
+      subcategory: 'Social Media Video',
       subcategoryEn: 'Social Media Video',
       keywords: ['social media', 'tiktok', 'instagram', 'youtube', 'short video', 'reels'],
-      description: '短视频、社交平台视频制作'
+      description: 'Short-form and social platform video production'
     },
     {
-      subcategory: '视频营销',
+      subcategory: 'Video Marketing',
       subcategoryEn: 'Video Marketing',
       keywords: ['video marketing', 'advertisement', 'promo', 'commercial'],
-      description: '营销视频、广告片、宣传片制作'
+      description: 'Marketing videos, ad spots, and promotional clips'
     },
     {
-      subcategory: '动画制作',
+      subcategory: 'Animation',
       subcategoryEn: 'Animation',
       keywords: ['animation', 'animated', 'motion', 'cartoon', 'anime'],
-      description: '动画创作、动态图形、卡通制作'
+      description: 'Animation, motion graphics, and cartoon production'
     },
     {
-      subcategory: '视频特效',
+      subcategory: 'Video Effects',
       subcategoryEn: 'Video Effects',
       keywords: ['effects', 'vfx', 'visual effects', 'filter', 'transition'],
-      description: '视频特效、视觉特效、滤镜转场'
+      description: 'Video effects, visual effects, filters, and transitions'
     }
   ],
   Audio: [
     {
-      subcategory: '语音生成',
+      subcategory: 'Voice Generation',
       subcategoryEn: 'Voice Generation',
       keywords: ['voice generation', 'text to speech', 'tts', 'voiceover', 'speech'],
-      description: '文字转语音、AI配音工具'
+      description: 'Text-to-speech and AI voiceover tools'
     },
     {
-      subcategory: '音乐创作',
+      subcategory: 'Music Creation',
       subcategoryEn: 'Music Creation',
       keywords: ['music', 'compose', 'melody', 'song', 'instrumental'],
-      description: '音乐创作、作曲、编曲工具'
+      description: 'Music composition, songwriting, and arrangement tools'
     },
     {
-      subcategory: '音频编辑',
+      subcategory: 'Audio Editing',
       subcategoryEn: 'Audio Editing',
       keywords: ['audio editing', 'edit audio', 'mix', 'master'],
-      description: '音频剪辑、混音、母带处理'
+      description: 'Audio editing, mixing, and mastering'
     },
     {
-      subcategory: '播客工具',
+      subcategory: 'Podcast Tools',
       subcategoryEn: 'Podcast Tools',
       keywords: ['podcast', 'episode', 'show', 'broadcast'],
-      description: '播客制作、音频节目创作'
+      description: 'Podcast production and audio show creation'
     },
     {
-      subcategory: '声音设计',
+      subcategory: 'Sound Design',
       subcategoryEn: 'Sound Design',
       keywords: ['sound design', 'sound effect', 'sfx', 'foley'],
-      description: '音效设计、声音特效创作'
+      description: 'Sound effect design and audio effects creation'
     },
     {
-      subcategory: '降噪处理',
+      subcategory: 'Noise Reduction',
       subcategoryEn: 'Noise Reduction',
       keywords: ['noise reduction', 'denoise', 'clean audio', 'enhance'],
-      description: '音频降噪、声音增强、清晰度提升'
+      description: 'Audio noise reduction, sound enhancement, and clarity improvement'
     }
   ],
   Code: [
     {
-      subcategory: '代码助手',
+      subcategory: 'Code Assistant',
       subcategoryEn: 'Code Assistant',
       keywords: ['code assistant', 'copilot', 'autocomplete', 'suggestion'],
-      description: '代码补全、智能提示、编程助手'
+      description: 'Code completion, smart suggestions, and coding assistance'
     },
     {
-      subcategory: '代码生成',
+      subcategory: 'Code Generation',
       subcategoryEn: 'Code Generation',
       keywords: ['code generation', 'generate code', 'create code', 'boilerplate'],
-      description: '代码生成、模板代码、脚手架工具'
+      description: 'Code generation, template code, and scaffolding tools'
     },
     {
-      subcategory: '开发工具',
+      subcategory: 'Development Tools',
       subcategoryEn: 'Development Tools',
       keywords: ['development', 'developer', 'debug', 'ide', 'editor'],
-      description: '开发环境、调试工具、IDE增强'
+      description: 'Development environments, debugging tools, and IDE enhancements'
     },
     {
-      subcategory: '安全工具',
+      subcategory: 'Security Tools',
       subcategoryEn: 'Security Tools',
       keywords: ['security', 'vulnerability', 'scan', 'audit', 'protect'],
-      description: '代码安全扫描、漏洞检测、安全审计'
+      description: 'Code security scanning, vulnerability detection, and security audits'
     },
     {
-      subcategory: '测试工具',
+      subcategory: 'Testing Tools',
       subcategoryEn: 'Testing Tools',
       keywords: ['testing', 'test', 'unit test', 'qa', 'quality assurance'],
-      description: '单元测试、质量保证、自动化测试'
+      description: 'Unit testing, quality assurance, and automated testing'
     },
     {
-      subcategory: '云开发',
+      subcategory: 'Cloud Development',
       subcategoryEn: 'Cloud Development',
       keywords: ['cloud', 'serverless', 'deploy', 'infrastructure', 'devops'],
-      description: '云端开发、服务器less、部署工具'
+      description: 'Cloud development, serverless, and deployment tools'
     }
   ],
   Productivity: [
     {
-      subcategory: '任务管理',
+      subcategory: 'Task Management',
       subcategoryEn: 'Task Management',
       keywords: ['task', 'todo', 'project management', 'workflow'],
-      description: '任务清单、项目管理、工作流程'
+      description: 'Task lists, project management, and workflows'
     },
     {
-      subcategory: '团队协作',
+      subcategory: 'Team Collaboration',
       subcategoryEn: 'Team Collaboration',
       keywords: ['team', 'collaboration', 'communication', 'meeting'],
-      description: '团队协作、沟通工具、会议管理'
+      description: 'Team collaboration, communication tools, and meeting management'
     },
     {
-      subcategory: '内容管理',
+      subcategory: 'Content Management',
       subcategoryEn: 'Content Management',
       keywords: ['content management', 'cms', 'organize', 'schedule'],
-      description: '内容组织、发布管理、日程安排'
+      description: 'Content organization, publishing management, and scheduling'
     },
     {
-      subcategory: '营销自动化',
+      subcategory: 'Marketing Automation',
       subcategoryEn: 'Marketing Automation',
       keywords: ['marketing automation', 'campaign', 'funnel', 'lead'],
-      description: '营销自动化、营销活动、线索管理'
+      description: 'Marketing automation, campaigns, and lead management'
     },
     {
-      subcategory: '数据分析',
+      subcategory: 'Analytics',
       subcategoryEn: 'Analytics',
       keywords: ['analytics', 'data analysis', 'insight', 'report', 'metric'],
-      description: '数据分析、报表生成、指标追踪'
+      description: 'Data analysis, report generation, and metric tracking'
     },
     {
-      subcategory: '社交媒体管理',
+      subcategory: 'Social Media Management',
       subcategoryEn: 'Social Media Management',
       keywords: ['social media', 'engagement', 'follower', 'post', 'schedule'],
-      description: '社交媒体运营、粉丝互动、内容排期'
+      description: 'Social media management, audience engagement, and content scheduling'
     }
   ]
 };
@@ -242,11 +242,11 @@ export const subcategoryRules: Record<string, SubcategoryRule[]> = {
 // 根据工具描述匹配子分类
 export function matchSubcategory(category: string, description: string, bestFor?: string[]): string {
   const rules = subcategoryRules[category];
-  if (!rules) return '其他';
+  if (!rules) return 'Other';
 
   const searchText = `${description} ${(bestFor || []).join(' ')}`.toLowerCase();
-  
-  let bestMatch = '其他';
+
+  let bestMatch = 'Other';
   let maxScore = 0;
 
   for (const rule of rules) {
@@ -258,7 +258,8 @@ export function matchSubcategory(category: string, description: string, bestFor?
     }
     if (score > maxScore) {
       maxScore = score;
-      bestMatch = rule.subcategory;
+      // Return the English label: this value is persisted into tool data.
+      bestMatch = rule.subcategoryEn;
     }
   }
 
@@ -274,6 +275,7 @@ export function getSubcategories(category: string): SubcategoryRule[] {
 export function getSubcategoryEn(category: string, subcategory: string): string {
   const rules = subcategoryRules[category];
   if (!rules) return '';
-  const rule = rules.find(r => r.subcategory === subcategory);
-  return rule?.subcategoryEn || '';
+  // Accept either the Chinese label or the English label as the lookup key.
+  const rule = rules.find(r => r.subcategory === subcategory || r.subcategoryEn === subcategory);
+  return rule?.subcategoryEn || subcategory;
 }

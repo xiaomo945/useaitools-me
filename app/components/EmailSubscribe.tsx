@@ -11,8 +11,8 @@ interface EmailSubscribeProps {
 }
 
 export default function EmailSubscribe({
-  title = '订阅 AI 工具周报',
-  description = '每周精选最新、最实用的 AI 工具与深度评测，直达您的邮箱。',
+  title = 'Subscribe to the AI Tools Weekly',
+  description = 'A weekly roundup of the newest and most useful AI tools, plus in-depth reviews, delivered straight to your inbox.',
   source = 'blog',
   showName = true,
 }: EmailSubscribeProps) {
@@ -29,14 +29,14 @@ export default function EmailSubscribe({
 
     if (!trimmedEmail) {
       setStatus('error');
-      setMessage('请输入邮箱地址。');
+      setMessage('Please enter your email address.');
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     if (!emailRegex.test(trimmedEmail)) {
       setStatus('error');
-      setMessage('请提供有效的邮箱地址。');
+      setMessage('Please enter a valid email address.');
       return;
     }
 
@@ -60,18 +60,18 @@ export default function EmailSubscribe({
         setStatus('success');
         setMessage(
           data.status === 'existing'
-            ? '您已经在订阅列表中，感谢关注！'
-            : data.message || '订阅成功！欢迎加入我们的读者社群。'
+            ? "You're already on the list — thanks for following along!"
+            : data.message || 'Thanks for subscribing! Welcome to our community of readers.'
         );
         setEmail('');
         setName('');
       } else {
         setStatus('error');
-        setMessage(data.message || '订阅失败，请稍后再试。');
+        setMessage(data.message || 'Subscription failed. Please try again later.');
       }
     } catch {
       setStatus('error');
-      setMessage('网络错误，请检查连接后重试。');
+      setMessage('Network error. Please check your connection and try again.');
     }
   };
 
@@ -106,7 +106,7 @@ export default function EmailSubscribe({
                 <Check className="w-6 h-6" strokeWidth={2.5} />
               </div>
               <p className="text-base font-semibold text-emerald-700 dark:text-emerald-300 mb-1">
-                订阅成功！
+                Subscribed!
               </p>
               <p className="text-sm text-emerald-700/80 dark:text-emerald-300/80">
                 {message}
@@ -127,7 +127,7 @@ export default function EmailSubscribe({
                       }
                     }}
                     aria-label="Your name"
-                    placeholder="您的称呼（可选）"
+                    placeholder="Your name (optional)"
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 disabled:opacity-60"
                     disabled={status === 'loading'}
                     autoComplete="name"
@@ -180,12 +180,12 @@ export default function EmailSubscribe({
                         d="M4 12a8 8 0 018-8v0C7.373 4 2 9.373 2 16h2z"
                       />
                     </svg>
-                    提交中...
+                    Submitting...
                   </>
                 ) : (
                   <>
                     <Mail className="w-4 h-4" />
-                    立即订阅
+                    Subscribe
                   </>
                 )}
               </button>
@@ -200,12 +200,12 @@ export default function EmailSubscribe({
           )}
 
           <p className="text-xs text-center text-slate-500 dark:text-slate-500 mt-5">
-            无垃圾邮件。随时可通过邮件底部链接或 <a
+            No spam. You can opt out anytime using the link at the bottom of any email or <a
               href="/api/unsubscribe?email=your@email.com"
               className="text-emerald-600 dark:text-emerald-400 hover:underline"
             >
-              取消订阅
-            </a> 退出。
+              unsubscribe
+            </a> here.
           </p>
         </div>
       </div>

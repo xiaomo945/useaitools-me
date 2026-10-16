@@ -36,8 +36,8 @@ export default function ABTestingDashboard() {
       const mockExperiments: Experiment[] = [
         {
           id: 'exp-001',
-          name: 'CTA 按钮颜色测试',
-          description: '测试绿色 vs 蓝色 CTA 按钮的转化率',
+          name: 'CTA Button Color Test',
+          description: 'Compare conversion rates of green vs. blue CTA buttons',
           variants: ['green', 'blue'],
           status: 'running',
           startDate: '2026-06-01',
@@ -45,8 +45,8 @@ export default function ABTestingDashboard() {
         },
         {
           id: 'exp-002',
-          name: '工具卡片布局测试',
-          description: '测试网格布局 vs 列表布局的用户参与度',
+          name: 'Tool Card Layout Test',
+          description: 'Compare user engagement between grid and list layouts',
           variants: ['grid', 'list'],
           status: 'running',
           startDate: '2026-06-10',
@@ -104,10 +104,10 @@ export default function ABTestingDashboard() {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">
-            A/B 测试仪表板
+            A/B Testing Dashboard
           </h1>
           <p className="text-slate-600 dark:text-slate-400">
-            管理和监控所有增长实验，数据驱动优化决策
+            Manage and monitor every growth experiment to make data-driven optimization decisions
           </p>
         </div>
 
@@ -136,13 +136,13 @@ export default function ABTestingDashboard() {
                       : 'bg-slate-100 text-slate-700 dark:bg-gray-800 dark:text-slate-400'
                   }`}
                 >
-                  {experiment.status === 'running' ? '运行中' : experiment.status === 'paused' ? '已暂停' : '已完成'}
+                  {experiment.status === 'running' ? 'Running' : experiment.status === 'paused' ? 'Paused' : 'Completed'}
                 </span>
               </div>
 
               <div className="mb-4">
                 <p className="text-xs text-slate-500 dark:text-slate-400 mb-2">
-                  开始日期: {new Date(experiment.startDate).toLocaleDateString('zh-CN')}
+                  Start date: {new Date(experiment.startDate).toLocaleDateString('en-US')}
                 </p>
                 <div className="flex gap-2">
                   {experiment.variants.map((variant) => (
@@ -160,7 +160,7 @@ export default function ABTestingDashboard() {
               {experiment.results && experiment.results.length > 0 && (
                 <div className="border-t border-slate-200 dark:border-gray-800 pt-4">
                   <h4 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-3">
-                    实验结果
+                    Experiment results
                   </h4>
                   <div className="space-y-2">
                     {experiment.results.map((result) => (
@@ -170,7 +170,7 @@ export default function ABTestingDashboard() {
                         </span>
                         <div className="flex items-center gap-4">
                           <span className="text-xs text-slate-500 dark:text-slate-400">
-                            {result.impressions} 次展示
+                            {result.impressions} impressions
                           </span>
                           <span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
                             {result.conversionRate.toFixed(2)}%
@@ -188,7 +188,7 @@ export default function ABTestingDashboard() {
         {/* Create New Experiment Button */}
         <div className="mt-8">
           <button className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-medium transition-colors">
-            创建新实验
+            Create new experiment
           </button>
         </div>
       </div>

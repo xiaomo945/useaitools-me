@@ -114,7 +114,7 @@ export default function SponsoredSlot({ slotName, toolCategory }: SponsoredSlotP
           onClick={handleClick}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-emerald-500 to-teal-500 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
         >
-          了解更多 →
+          Learn more →
         </a>
       </div>
     </section>

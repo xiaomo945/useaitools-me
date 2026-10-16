@@ -68,9 +68,9 @@ export default function CompetitorAnalysis() {
     <div className="bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-xl font-bold text-slate-900 dark:text-white">竞品分析</h3>
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white">Competitor Analysis</h3>
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-            监控主要竞争对手的流量和关键词表现
+            Track the traffic and keyword performance of your main competitors
           </p>
         </div>
         <BarChart3 className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
@@ -99,12 +99,12 @@ export default function CompetitorAnalysis() {
                 </div>
                 <div className="flex items-center gap-4 text-sm">
                   <span className="text-slate-600 dark:text-slate-400">
-                    流量排名: <span className={`font-semibold ${getTrafficColor(competitor.trafficRank)}`}>
+                    Traffic rank: <span className={`font-semibold ${getTrafficColor(competitor.trafficRank)}`}>
                       #{competitor.trafficRank.toLocaleString()}
                     </span>
                   </span>
                   <span className="text-slate-600 dark:text-slate-400">
-                    月访问量: <span className="font-semibold text-slate-900 dark:text-white">
+                    Monthly visits: <span className="font-semibold text-slate-900 dark:text-white">
                       {formatTraffic(competitor.monthlyVisits)}
                     </span>
                   </span>
@@ -117,7 +117,7 @@ export default function CompetitorAnalysis() {
                 <div>
                   <h5 className="text-sm font-semibold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
                     <Target className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                    主要优势
+                    Key strengths
                   </h5>
                   <ul className="space-y-1">
                     {competitor.strengths.map((strength, idx) => (
@@ -132,7 +132,7 @@ export default function CompetitorAnalysis() {
                 <div>
                   <h5 className="text-sm font-semibold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
                     <Zap className="w-4 h-4 text-yellow-600 dark:text-yellow-400" />
-                    潜在弱点
+                    Potential weaknesses
                   </h5>
                   <ul className="space-y-1">
                     {competitor.weaknesses.map((weakness, idx) => (
@@ -146,7 +146,7 @@ export default function CompetitorAnalysis() {
 
                 <div>
                   <h5 className="text-sm font-semibold text-slate-900 dark:text-white mb-2">
-                    核心关键词
+                    Top keywords
                   </h5>
                   <div className="flex flex-wrap gap-2">
                     {competitor.topKeywords.map((keyword, idx) => (
@@ -161,7 +161,7 @@ export default function CompetitorAnalysis() {
                 </div>
 
                 <div className="text-xs text-slate-500 dark:text-slate-500">
-                  最后更新: {new Date(competitor.lastUpdated).toLocaleDateString('zh-CN')}
+                  Last updated: {new Date(competitor.lastUpdated).toLocaleDateString('en-US')}
                 </div>
               </div>
             )}
@@ -171,7 +171,7 @@ export default function CompetitorAnalysis() {
 
       {competitors.length === 0 && (
         <div className="text-center py-12 text-slate-500 dark:text-slate-400">
-          暂无竞品数据，请先添加竞争对手
+          No competitor data yet. Add a competitor to get started.
         </div>
       )}
     </div>

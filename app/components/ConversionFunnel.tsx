@@ -59,9 +59,9 @@ export default function ConversionFunnel({ period = '30d' }: ConversionFunnelPro
     <div className="bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-xl font-bold text-slate-900 dark:text-white">转化漏斗</h3>
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white">Conversion Funnel</h3>
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-            追踪用户从访问到联盟点击的完整路径
+            Track the full path from visit to affiliate click
           </p>
         </div>
         <div className="flex gap-2">
@@ -75,7 +75,7 @@ export default function ConversionFunnel({ period = '30d' }: ConversionFunnelPro
                   : 'bg-slate-100 dark:bg-gray-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-gray-700'
               }`}
             >
-              {p === '7d' ? '近7天' : p === '30d' ? '近30天' : '近90天'}
+              {p === '7d' ? 'Last 7 days' : p === '30d' ? 'Last 30 days' : 'Last 90 days'}
             </button>
           ))}
         </div>
@@ -98,7 +98,7 @@ export default function ConversionFunnel({ period = '30d' }: ConversionFunnelPro
                     <div>
                       <h4 className="font-semibold text-slate-900 dark:text-white">{stage.name}</h4>
                       <p className="text-sm text-slate-600 dark:text-slate-400">
-                        {stage.count.toLocaleString()} 用户
+                        {stage.count.toLocaleString()} users
                       </p>
                     </div>
                   </div>
@@ -106,7 +106,7 @@ export default function ConversionFunnel({ period = '30d' }: ConversionFunnelPro
                     <div className="text-2xl font-bold text-slate-900 dark:text-white">
                       {stage.conversionRate.toFixed(1)}%
                     </div>
-                    <div className="text-xs text-slate-500 dark:text-slate-400">转化率</div>
+                    <div className="text-xs text-slate-500 dark:text-slate-400">Conversion rate</div>
                   </div>
                 </div>
 
@@ -136,19 +136,19 @@ export default function ConversionFunnel({ period = '30d' }: ConversionFunnelPro
           <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
             {stages[stages.length - 1]?.conversionRate.toFixed(2)}%
           </div>
-          <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">整体转化率</div>
+          <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Overall conversion rate</div>
         </div>
         <div className="text-center">
           <div className="text-2xl font-bold text-slate-900 dark:text-white">
             {stages[stages.length - 1]?.count.toLocaleString()}
           </div>
-          <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">联盟点击</div>
+          <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Affiliate clicks</div>
         </div>
         <div className="text-center">
           <div className="text-2xl font-bold text-slate-900 dark:text-white">
             ${((stages[stages.length - 1]?.count || 0) * 0.15).toFixed(2)}
           </div>
-          <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">预估收入</div>
+          <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Estimated revenue</div>
         </div>
       </div>
     </div>

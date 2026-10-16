@@ -118,9 +118,9 @@ export default function AutomatedReports() {
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 p-6">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h3 className="text-xl font-bold text-slate-900 dark:text-white">自动化报告</h3>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white">Automated Reports</h3>
             <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-              生成并查看网站运营数据报告
+              Generate and review reports on your site performance
             </p>
           </div>
           <div className="flex gap-2">
@@ -128,13 +128,13 @@ export default function AutomatedReports() {
               onClick={() => generateReport('weekly')}
               className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg transition-colors"
             >
-              生成周报
+              Generate Weekly Report
             </button>
             <button
               onClick={() => generateReport('monthly')}
               className="px-4 py-2 bg-slate-100 dark:bg-gray-800 hover:bg-slate-200 dark:hover:bg-gray-700 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-lg transition-colors"
             >
-              生成月报
+              Generate Monthly Report
             </button>
           </div>
         </div>
@@ -142,7 +142,7 @@ export default function AutomatedReports() {
         <div className="space-y-3">
           {reports.length === 0 ? (
             <div className="text-center py-12 text-slate-500 dark:text-slate-400">
-              暂无报告，点击"生成周报"或"生成月报"创建第一份报告
+              No reports yet. Click "Generate Weekly Report" or "Generate Monthly Report" to create your first one.
             </div>
           ) : (
             reports.map((report) => (
@@ -159,13 +159,13 @@ export default function AutomatedReports() {
                     <div>
                       <h4 className="font-semibold text-slate-900 dark:text-white">{report.title}</h4>
                       <p className="text-sm text-slate-600 dark:text-slate-400">
-                        {new Date(report.period.start).toLocaleDateString('zh-CN')} - {new Date(report.period.end).toLocaleDateString('zh-CN')}
+                        {new Date(report.period.start).toLocaleDateString('en-US')} - {new Date(report.period.end).toLocaleDateString('en-US')}
                       </p>
                     </div>
                   </div>
                   <div className="text-right">
                     <p className="text-xs text-slate-500 dark:text-slate-500">
-                      生成于 {new Date(report.generatedAt).toLocaleDateString('zh-CN')}
+                      Generated on {new Date(report.generatedAt).toLocaleDateString('en-US')}
                     </p>
                   </div>
                 </div>
@@ -177,7 +177,7 @@ export default function AutomatedReports() {
                       <div className="bg-slate-50 dark:bg-gray-800/50 rounded-lg p-3">
                         <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400 mb-1">
                           <Users className="w-3 h-3" />
-                          总访问
+                          Total Visits
                         </div>
                         <p className="text-lg font-bold text-slate-900 dark:text-white">
                           {formatNumber(report.metrics.totalVisits)}
@@ -186,7 +186,7 @@ export default function AutomatedReports() {
                       <div className="bg-slate-50 dark:bg-gray-800/50 rounded-lg p-3">
                         <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400 mb-1">
                           <MousePointer className="w-3 h-3" />
-                          页面浏览
+                          Page Views
                         </div>
                         <p className="text-lg font-bold text-slate-900 dark:text-white">
                           {formatNumber(report.metrics.pageViews)}
@@ -195,7 +195,7 @@ export default function AutomatedReports() {
                       <div className="bg-slate-50 dark:bg-gray-800/50 rounded-lg p-3">
                         <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400 mb-1">
                           <TrendingUp className="w-3 h-3" />
-                          转化率
+                          Conversion Rate
                         </div>
                         <p className="text-lg font-bold text-emerald-600 dark:text-emerald-400">
                           {report.metrics.conversionRate.toFixed(2)}%
@@ -204,7 +204,7 @@ export default function AutomatedReports() {
                       <div className="bg-slate-50 dark:bg-gray-800/50 rounded-lg p-3">
                         <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400 mb-1">
                           <DollarSign className="w-3 h-3" />
-                          预估收入
+                          Est. Revenue
                         </div>
                         <p className="text-lg font-bold text-slate-900 dark:text-white">
                           ${report.metrics.estimatedRevenue.toFixed(2)}
@@ -214,12 +214,12 @@ export default function AutomatedReports() {
 
                     {/* Top Pages */}
                     <div>
-                      <h5 className="text-sm font-semibold text-slate-900 dark:text-white mb-2">热门页面</h5>
+                      <h5 className="text-sm font-semibold text-slate-900 dark:text-white mb-2">Top Pages</h5>
                       <div className="space-y-2">
                         {report.topPages.slice(0, 5).map((page, idx) => (
                           <div key={idx} className="flex items-center justify-between text-sm">
                             <span className="text-slate-700 dark:text-slate-300 truncate">{page.path}</span>
-                            <span className="text-slate-500 dark:text-slate-400">{formatNumber(page.views)} 次</span>
+                            <span className="text-slate-500 dark:text-slate-400">{formatNumber(page.views)} views</span>
                           </div>
                         ))}
                       </div>
@@ -227,7 +227,7 @@ export default function AutomatedReports() {
 
                     {/* Insights */}
                     <div>
-                      <h5 className="text-sm font-semibold text-slate-900 dark:text-white mb-2">关键洞察</h5>
+                      <h5 className="text-sm font-semibold text-slate-900 dark:text-white mb-2">Key Insights</h5>
                       <ul className="space-y-1">
                         {report.insights.map((insight, idx) => (
                           <li key={idx} className="text-sm text-slate-600 dark:text-slate-400 flex items-start gap-2">

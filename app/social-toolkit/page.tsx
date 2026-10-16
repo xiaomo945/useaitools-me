@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Share2, MessageSquare, BookOpen, CheckCircle, ArrowRight, Zap, Target, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '社交媒体推广工具包 - Use AI Tools',
-  description: '一键生成 Twitter、Reddit、Dev.to 等平台的推广内容模板，快速分享你喜欢的 AI 工具。',
-  keywords: ['社交媒体推广', 'AI 工具分享', 'Twitter 推广', 'Reddit 发帖', '内容模板'],
+  title: 'Social Media Promotion Toolkit - Use AI Tools',
+  description: 'Generate ready-to-use promotion templates for Twitter, Reddit, Dev.to and more, and share the AI tools you love in seconds.',
+  keywords: ['social media promotion', 'AI tool sharing', 'Twitter promotion', 'Reddit posting', 'content templates'],
 };
 
 const platforms = [
@@ -14,19 +14,19 @@ const platforms = [
     icon: MessageSquare,
     color: 'text-sky-500',
     bg: 'bg-sky-50 dark:bg-sky-500/10',
-    limit: '280 字符',
+    limit: '280 characters',
     templates: [
       {
-        title: '工具推荐',
-        template: `Just discovered [工具名] — it's [一句话描述].\n\n[具体数据/成果]\n\nTry it → [链接]\n\n#AITools #BuildInPublic`,
+        title: 'Tool Recommendation',
+        template: `Just discovered [Tool name] — it's [one-line description].\n\n[Key numbers/results]\n\nTry it → [Link]\n\n#AITools #BuildInPublic`,
       },
       {
-        title: '对比分享',
-        template: `I've tested [数量] AI [类型] tools.\n\nHere's my ranking:\n\n1. [工具A] — [原因]\n2. [工具B] — [原因]\n3. [工具C] — [原因]\n\nFull comparison → [链接]`,
+        title: 'Comparison Post',
+        template: `I've tested [number] AI [category] tools.\n\nHere's my ranking:\n\n1. [Tool A] — [reason]\n2. [Tool B] — [reason]\n3. [Tool C] — [reason]\n\nFull comparison → [Link]`,
       },
       {
-        title: '成果展示',
-        template: `[时间] ago I started using AI tools for [任务].\n\nBefore: [旧方式的问题]\nAfter: [新方式的成果]\n\nThe tool that changed everything: [工具名] → [链接]`,
+        title: 'Results Showcase',
+        template: `[Time period] ago I started using AI tools for [task].\n\nBefore: [problem with the old way]\nAfter: [results with the new way]\n\nThe tool that changed everything: [Tool name] → [Link]`,
       },
     ],
   },
@@ -35,15 +35,15 @@ const platforms = [
     icon: MessageSquare,
     color: 'text-orange-500',
     bg: 'bg-orange-50 dark:bg-orange-500/10',
-    limit: '无字符限制',
+    limit: 'No character limit',
     templates: [
       {
         title: 'Build in Public',
-        template: `## Title: I built [什么] from [特别的环境] — [具体数据/成果]\n\nHey r/SideProject!\n\nI wanted to share what I've been working on...\n\n**What it does:**\n- [功能1]\n- [功能2]\n- [功能3]\n\n**Tech stack:** [技术栈]\n\n**Current stats:**\n- [数据1]\n- [数据2]\n\nWould love your feedback! Link in comments.`,
+        template: `## Title: I built [what] from [unusual situation] — [key numbers/results]\n\nHey r/SideProject!\n\nI wanted to share what I've been working on...\n\n**What it does:**\n- [Feature 1]\n- [Feature 2]\n- [Feature 3]\n\n**Tech stack:** [Tech stack]\n\n**Current stats:**\n- [Metric 1]\n- [Metric 2]\n\nWould love your feedback! Link in comments.`,
       },
       {
-        title: '工具推荐帖',
-        template: `## Title: After testing [数量] AI [类型] tools, here are my top picks\n\nI've spent [时间] testing various AI tools for [用途]. Here's what I found:\n\n**Best for [场景A]:** [工具名]\n- Pros: [优点]\n- Cons: [缺点]\n- Price: [价格]\n\n**Best for [场景B]:** [工具名]\n- Pros: [优点]\n- Cons: [缺点]\n- Price: [价格]\n\nFull breakdown: [链接]\n\nHappy to answer any questions!`,
+        title: 'Tool Recommendation Post',
+        template: `## Title: After testing [number] AI [category] tools, here are my top picks\n\nI've spent [time period] testing various AI tools for [use case]. Here's what I found:\n\n**Best for [Scenario A]:** [Tool name]\n- Pros: [pros]\n- Cons: [cons]\n- Price: [price]\n\n**Best for [Scenario B]:** [Tool name]\n- Pros: [pros]\n- Cons: [cons]\n- Price: [price]\n\nFull breakdown: [Link]\n\nHappy to answer any questions!`,
       },
     ],
   },
@@ -52,15 +52,15 @@ const platforms = [
     icon: BookOpen,
     color: 'text-indigo-500',
     bg: 'bg-indigo-50 dark:bg-indigo-500/10',
-    limit: '无字符限制',
+    limit: 'No character limit',
     templates: [
       {
-        title: '技术分享文章',
-        template: `# [数字] AI [类型] Tools That [解决什么痛点]\n\n## Introduction\n[建立共鸣：描述读者可能遇到的问题]\n\n## Tool 1: [工具名]\n**What it does:** [一句话]\n**Best for:** [适用场景]\n**Price:** [价格]\n[详细评测]\n\n## Tool 2: [工具名]\n[同上结构]\n\n## Comparison Table\n| Tool | Best For | Price | Rating |\n|------|----------|-------|--------|\n| [A]  | [场景]  | [价格] | [评分] |\n\n## Final Verdict\n[根据不同需求给出建议]\n\n---\n*What AI tools are you using? Let me know in the comments!*`,
+        title: 'Technical Article',
+        template: `# [Number] AI [Category] Tools That [Pain point they solve]\n\n## Introduction\n[Hook: describe the problem your readers are probably facing]\n\n## Tool 1: [Tool name]\n**What it does:** [one line]\n**Best for:** [best use case]\n**Price:** [price]\n[Detailed review]\n\n## Tool 2: [Tool name]\n[Same structure as above]\n\n## Comparison Table\n| Tool | Best For | Price | Rating |\n|------|----------|-------|--------|\n| [A]  | [Use case]  | [Price] | [Rating] |\n\n## Final Verdict\n[Recommendations for different needs]\n\n---\n*What AI tools are you using? Let me know in the comments!*`,
       },
       {
-        title: '建站经验分享',
-        template: `# How I Built [项目名] with [技术栈] in [时间]\n\n## Why I Built This\n[动机和背景]\n\n## The Tech Stack\n- **Frontend:** [技术]\n- **Backend:** [技术]\n- **Hosting:** [技术]\n\n## Key Challenges\n### Challenge 1: [问题]\n[解决方案]\n\n### Challenge 2: [问题]\n[解决方案]\n\n## What I Learned\n1. [经验1]\n2. [经验2]\n3. [经验3]\n\n## Results\n- [数据1]\n- [数据2]\n\nCheck it out: [链接]\n\n*Feedback welcome!*`,
+        title: 'Site Build Story',
+        template: `# How I Built [Project name] with [Tech stack] in [Time frame]\n\n## Why I Built This\n[Motivation and background]\n\n## The Tech Stack\n- **Frontend:** [Technology]\n- **Backend:** [Technology]\n- **Hosting:** [Technology]\n\n## Key Challenges\n### Challenge 1: [Problem]\n[Solution]\n\n### Challenge 2: [Problem]\n[Solution]\n\n## What I Learned\n1. [Lesson 1]\n2. [Lesson 2]\n3. [Lesson 3]\n\n## Results\n- [Metric 1]\n- [Metric 2]\n\nCheck it out: [Link]\n\n*Feedback welcome!*`,
       },
     ],
   },
@@ -69,18 +69,18 @@ const platforms = [
 const tips = [
   {
     icon: Target,
-    title: '选择合适的时间发布',
-    description: 'Twitter 最佳时间：美东 9-10 AM。Reddit：工作日早上。Dev.to：周二/周四上午。',
+    title: 'Post at the Right Time',
+    description: 'Best windows: Twitter/X 9–10 AM ET; Reddit on weekday mornings; Dev.to Tuesday and Thursday mornings.',
   },
   {
     icon: Zap,
-    title: '内容要真实有价值',
-    description: '分享真实使用体验，提供具体数据和截图。避免过度营销，社区最看重真诚。',
+    title: 'Make It Genuinely Useful',
+    description: 'Share real hands-on experience with concrete numbers and screenshots. Skip the hard sell — communities value authenticity most.',
   },
   {
     icon: TrendingUp,
-    title: '持续互动建立信任',
-    description: '回复每一条评论，参与社区讨论。不要发完就走，持续互动才能建立影响力。',
+    title: 'Keep Engaging to Build Trust',
+    description: 'Reply to every comment and join the discussion. Don’t post and ghost — consistent engagement is what builds influence.',
   },
 ];
 
@@ -92,13 +92,13 @@ export default function SocialToolkitPage() {
         <section className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 rounded-full text-sm font-semibold mb-6">
             <Share2 className="w-4 h-4" />
-            推广工具包
+            Promotion Toolkit
           </div>
           <h1 className="text-5xl font-bold text-slate-900 dark:text-white mb-6">
-            社交媒体推广工具包
+            Social Media Promotion Toolkit
           </h1>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            一键复制各平台推广模板，快速分享你喜欢的 AI 工具，帮助更多人发现好用的工具
+            Copy platform-ready templates in one click, share the AI tools you love, and help more people discover great tools
           </p>
         </section>
 
@@ -140,7 +140,7 @@ export default function SocialToolkitPage() {
                       {platform.name}
                     </h2>
                     <p className="text-sm text-slate-500 dark:text-slate-400">
-                      字符限制：{platform.limit}
+                      Character limit: {platform.limit}
                     </p>
                   </div>
                 </div>
@@ -159,7 +159,7 @@ export default function SocialToolkitPage() {
                           href="/"
                           className="inline-flex items-center gap-1 text-sm text-emerald-600 hover:text-emerald-700 font-medium"
                         >
-                          选择工具 <ArrowRight className="w-3 h-3" />
+                          Choose a Tool <ArrowRight className="w-3 h-3" />
                         </Link>
                       </div>
                       <pre className="bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl p-4 text-sm text-slate-700 dark:text-slate-300 whitespace-pre-wrap font-mono overflow-x-auto">
@@ -177,23 +177,23 @@ export default function SocialToolkitPage() {
         <section className="mt-16 text-center">
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl p-12 text-white">
             <h2 className="text-3xl font-bold mb-4">
-              开始推广你喜欢的 AI 工具
+              Start Promoting Your Favorite AI Tools
             </h2>
             <p className="text-lg text-emerald-100 mb-8 max-w-2xl mx-auto">
-              选择一款工具，复制模板，分享到社交媒体。帮助更多人发现好用的 AI 工具
+              Pick a tool, copy a template, and share it on social media. Help more people discover great AI tools
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white text-emerald-600 rounded-xl font-semibold hover:bg-emerald-50 transition-colors"
               >
-                浏览 AI 工具 <ArrowRight className="w-4 h-4" />
+                Browse AI Tools <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/blog"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-700 text-white rounded-xl font-semibold hover:bg-emerald-800 transition-colors"
               >
-                阅读博客文章
+                Read the Blog
               </Link>
             </div>
           </div>

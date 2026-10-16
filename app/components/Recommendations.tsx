@@ -30,10 +30,10 @@ const VARIANT_ICONS: Record<string, string> = {
 };
 
 const DEFAULT_TITLES: Record<string, string> = {
-  popular: '热门工具',
-  similar: '类似工具',
-  newest: '最新加入',
-  personalized: '为你推荐',
+  popular: 'Popular Tools',
+  similar: 'Similar Tools',
+  newest: 'Newest Additions',
+  personalized: 'Recommended for You',
 };
 
 function renderRating(rating: number | null | undefined): string {
@@ -51,7 +51,7 @@ export default function Recommendations({
   const [tools, setTools] = useState<RecommendedTool[] | null>(null);
   const [loading, setLoading] = useState(true);
 
-  const displayTitle = title || DEFAULT_TITLES[variant] || '推荐工具';
+  const displayTitle = title || DEFAULT_TITLES[variant] || 'Recommended Tools';
   const apiVariant = variant === 'similar' ? 'similar_category' : variant;
 
   const query = useMemo(() => {
@@ -107,7 +107,7 @@ export default function Recommendations({
                 {displayTitle}
               </h2>
               <p className="text-sm text-slate-500 dark:text-slate-400">
-                基于 {apiVariant} 策略为你精选
+                Handpicked for you using the {apiVariant} strategy
               </p>
             </div>
           </div>
@@ -161,14 +161,14 @@ export default function Recommendations({
                   </span>
                 </div>
                 <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4 line-clamp-3">
-                  {tool.description || '暂无描述'}
+                  {tool.description || 'No description available'}
                 </p>
                 <div className="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-gray-800">
                   <span className="text-xs text-slate-500 dark:text-slate-500 font-medium">
-                    {tool.reviewCount ? `${tool.reviewCount.toLocaleString()} reviews` : '精选推荐'}
+                    {tool.reviewCount ? `${tool.reviewCount.toLocaleString()} reviews` : 'Featured pick'}
                   </span>
                   <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-600 dark:text-emerald-400 group-hover:translate-x-1 transition-transform">
-                    查看详情 →
+                    View details →
                   </span>
                 </div>
               </Link>
@@ -178,7 +178,7 @@ export default function Recommendations({
           <div className="text-center py-12 rounded-2xl bg-white/50 dark:bg-gray-900/50 border border-dashed border-slate-200 dark:border-gray-800">
             <div className="text-3xl mb-3">🔍</div>
             <p className="text-slate-600 dark:text-slate-400 text-sm">
-              暂无推荐内容，请稍后再来查看
+              No recommendations yet — check back soon
             </p>
           </div>
         )}

@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import LanguageSwitcher from './LanguageSwitcher';
 import { useLocale, useTranslations } from './LanguageSwitcher';
 
 export default function Header() {
@@ -75,9 +74,8 @@ export default function Header() {
             })}
           </nav>
 
-          {/* CTA Button + Language Switcher */}
+          {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
-            <LanguageSwitcher />
             <Link
               href="/submit"
               className="px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white text-sm font-semibold rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98]"
@@ -141,10 +139,6 @@ export default function Header() {
               >
                 {t('nav.submitTool')}
               </Link>
-              <div className="mt-3 px-4 py-2 flex items-center justify-between border-t border-slate-200/80 dark:border-gray-800/80 pt-3">
-                <span className="text-sm text-slate-500 dark:text-slate-400">{t('nav.language')}</span>
-                <LanguageSwitcher />
-              </div>
             </nav>
           </div>
         )}

@@ -74,11 +74,11 @@ export default function SubmitClient() {
       if (response.ok && data.success) {
         setSubmitted(true);
       } else {
-        setError(data.error || '提交失败，请重试');
+        setError(data.error || 'Submission failed. Please try again.');
       }
     } catch (error) {
       console.error('Submission failed:', error);
-      setError('提交失败，请重试。您的数据已保留。');
+      setError('Submission failed. Please try again. Your data has been kept.');
     } finally {
       setLoading(false);
     }

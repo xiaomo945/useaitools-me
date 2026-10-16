@@ -114,9 +114,9 @@ export default function CategoryFilters({
         {/* 免梯子 / 需梯子 —— 中文用户刚需维度 */}
         <div className="inline-flex rounded-full bg-gray-100 dark:bg-gray-800 p-0.5">
           {([
-            { value: 'all', label: '全部' },
-            { value: 'no', label: '免梯子' },
-            { value: 'yes', label: '需梯子' },
+            { value: 'all', label: 'All' },
+            { value: 'no', label: 'No VPN' },
+            { value: 'yes', label: 'VPN needed' },
           ] as const).map(opt => (
             <button
               key={opt.value}
@@ -211,7 +211,7 @@ export default function CategoryFilters({
               onClick={() => setVpnFilter('all')}
               className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-teal-100 dark:bg-teal-900/30 text-teal-700 dark:text-teal-300 hover:bg-rose-100 dark:hover:bg-rose-900/30 hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200"
             >
-              {vpnFilter === 'no' ? '免梯子' : '需梯子'}
+              {vpnFilter === 'no' ? 'No VPN' : 'VPN needed'}
               <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>

@@ -89,7 +89,7 @@ export default function TrafficDashboard({ initialData }: TrafficDashboardProps)
     return (
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 p-12 text-center">
         <p className="text-slate-600 dark:text-slate-400">
-          分析数据加载中...请确保已配置 Plausible Analytics 或 Vercel Analytics
+          Loading analytics data... Please make sure Plausible Analytics or Vercel Analytics is configured.
         </p>
       </div>
     );
@@ -99,7 +99,7 @@ export default function TrafficDashboard({ initialData }: TrafficDashboardProps)
     <div className="space-y-6">
       {/* Time Range Selector */}
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-slate-900 dark:text-white">流量分析</h2>
+        <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Traffic Analytics</h2>
         <div className="flex gap-2">
           {(['7d', '30d', '90d'] as const).map((range) => (
             <button
@@ -111,7 +111,7 @@ export default function TrafficDashboard({ initialData }: TrafficDashboardProps)
                   : 'bg-slate-100 dark:bg-gray-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-gray-700'
               }`}
             >
-              {range === '7d' ? '近7天' : range === '30d' ? '近30天' : '近90天'}
+              {range === '7d' ? 'Last 7 days' : range === '30d' ? 'Last 30 days' : 'Last 90 days'}
             </button>
           ))}
         </div>
@@ -120,28 +120,28 @@ export default function TrafficDashboard({ initialData }: TrafficDashboardProps)
       {/* Metric Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard
-          title="页面浏览量"
+          title="Page Views"
           value={formatNumber(data?.pageViews || 0)}
           change={12.5}
           icon={Eye}
           trend="up"
         />
         <MetricCard
-          title="独立访客"
+          title="Unique Visitors"
           value={formatNumber(data?.uniqueVisitors || 0)}
           change={8.3}
           icon={Users}
           trend="up"
         />
         <MetricCard
-          title="跳出率"
+          title="Bounce Rate"
           value={`${(data?.bounceRate || 0).toFixed(1)}%`}
           change={-5.2}
           icon={TrendingUp}
           trend="down"
         />
         <MetricCard
-          title="平均停留时间"
+          title="Avg. Session Duration"
           value={formatDuration(data?.avgSessionDuration || 0)}
           change={15.7}
           icon={Clock}
@@ -153,7 +153,7 @@ export default function TrafficDashboard({ initialData }: TrafficDashboardProps)
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Daily Traffic Chart */}
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 p-6">
-          <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">每日流量趋势</h3>
+          <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Daily Traffic Trend</h3>
           <div className="h-64 flex items-end justify-between gap-2">
             {(data?.dailyStats || []).slice(-14).map((day, idx) => {
               const maxViews = Math.max(...(data?.dailyStats || []).map((d) => d.views));
@@ -163,7 +163,7 @@ export default function TrafficDashboard({ initialData }: TrafficDashboardProps)
                   <div
                     className="w-full bg-gradient-to-t from-emerald-500 to-teal-400 rounded-t-lg transition-all hover:from-emerald-600 hover:to-teal-500"
                     style={{ height: `${height}%` }}
-                    title={`${day.views} 次浏览`}
+                    title={`${day.views} views`}
                   />
                   <span className="text-xs text-slate-500 dark:text-slate-400">
                     {new Date(day.date).getDate()}
@@ -176,7 +176,7 @@ export default function TrafficDashboard({ initialData }: TrafficDashboardProps)
 
         {/* Top Pages */}
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 p-6">
-          <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">热门页面</h3>
+          <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Top Pages</h3>
           <div className="space-y-3">
             {(data?.topPages || []).slice(0, 5).map((page, idx) => (
               <div key={idx} className="flex items-center justify-between">
@@ -199,7 +199,7 @@ export default function TrafficDashboard({ initialData }: TrafficDashboardProps)
 
       {/* Top Referrers */}
       <div className="bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 p-6">
-        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">流量来源</h3>
+        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4">Traffic Sources</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {(data?.topReferrers || []).slice(0, 6).map((referrer, idx) => (
             <div
@@ -219,7 +219,7 @@ export default function TrafficDashboard({ initialData }: TrafficDashboardProps)
         <div className="fixed inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center z-50">
           <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-2xl">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600 mx-auto" />
-            <p className="mt-4 text-slate-600 dark:text-slate-400">加载分析数据...</p>
+            <p className="mt-4 text-slate-600 dark:text-slate-400">Loading analytics data...</p>
           </div>
         </div>
       )}

@@ -15,13 +15,13 @@ export default function AnalyticsPage() {
   const [activeTab, setActiveTab] = useState<TabType>('traffic');
 
   const tabs = [
-    { id: 'traffic' as TabType, label: '流量分析', icon: '📊' },
-    { id: 'funnel' as TabType, label: '转化漏斗', icon: '🎯' },
-    { id: 'keywords' as TabType, label: '关键词追踪', icon: '🔍' },
-    { id: 'competitors' as TabType, label: '竞品分析', icon: '🏆' },
-    { id: 'reports' as TabType, label: '自动化报告', icon: '📈' },
-    { id: 'ab-testing' as TabType, label: 'A/B 测试', icon: '🧪' },
-    { id: 'affiliate' as TabType, label: '联盟优化', icon: '💰' },
+    { id: 'traffic' as TabType, label: 'Traffic Analytics', icon: '📊' },
+    { id: 'funnel' as TabType, label: 'Conversion Funnel', icon: '🎯' },
+    { id: 'keywords' as TabType, label: 'Keyword Tracking', icon: '🔍' },
+    { id: 'competitors' as TabType, label: 'Competitor Analysis', icon: '🏆' },
+    { id: 'reports' as TabType, label: 'Automated Reports', icon: '📈' },
+    { id: 'ab-testing' as TabType, label: 'A/B Testing', icon: '🧪' },
+    { id: 'affiliate' as TabType, label: 'Affiliate Optimization', icon: '💰' },
   ];
 
   return (
@@ -30,10 +30,10 @@ export default function AnalyticsPage() {
       <div className="bg-white dark:bg-gray-900 border-b border-slate-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">
-            数据分析中心
+            Analytics Dashboard
           </h1>
           <p className="text-slate-600 dark:text-slate-400">
-            实时监控网站性能、用户行为和增长指标，数据驱动决策
+            Track site performance, user behavior and growth metrics in real time — make decisions backed by data
           </p>
         </div>
       </div>

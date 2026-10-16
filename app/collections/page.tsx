@@ -79,11 +79,11 @@ export default function CollectionsPage() {
         setFormData({ name: '', description: '', isPublic: false });
       } else {
         const data = await res.json();
-        alert(data.error || '操作失败');
+        alert(data.error || 'Something went wrong');
       }
     } catch (error) {
       console.error('提交失败:', error);
-      alert('操作失败，请重试');
+      alert('Something went wrong. Please try again.');
     } finally {
       setSubmitting(false);
     }
@@ -100,7 +100,7 @@ export default function CollectionsPage() {
   };
 
   const handleDelete = async (id: string) => {
-    if (!confirm('确定要删除这个收藏集合吗？')) return;
+    if (!confirm('Are you sure you want to delete this collection?')) return;
 
     try {
       const res = await fetch(`/api/collections/${id}`, {
@@ -110,11 +110,11 @@ export default function CollectionsPage() {
       if (res.ok) {
         await loadCollections();
       } else {
-        alert('删除失败');
+        alert('Failed to delete');
       }
     } catch (error) {
       console.error('删除失败:', error);
-      alert('删除失败，请重试');
+      alert('Failed to delete. Please try again.');
     }
   };
 

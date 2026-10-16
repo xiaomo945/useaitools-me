@@ -119,9 +119,9 @@ export default function KeywordTracker({ initialKeywords = [] }: KeywordTrackerP
     <div className="bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-xl font-bold text-slate-900 dark:text-white">关键词排名追踪</h3>
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white">Keyword Ranking Tracker</h3>
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-            监控网站在搜索引擎中的关键词排名变化
+            Track how your site ranks in search results for target keywords
           </p>
         </div>
         <div className="flex gap-2">
@@ -135,7 +135,7 @@ export default function KeywordTracker({ initialKeywords = [] }: KeywordTrackerP
                   : 'bg-slate-100 dark:bg-gray-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-gray-700'
               }`}
             >
-              {f === 'all' ? '全部' : f === 'improved' ? '上升' : f === 'declined' ? '下降' : '稳定'}
+              {f === 'all' ? 'All' : f === 'improved' ? 'Improved' : f === 'declined' ? 'Declined' : 'Stable'}
             </button>
           ))}
         </div>
@@ -149,7 +149,7 @@ export default function KeywordTracker({ initialKeywords = [] }: KeywordTrackerP
           onChange={(e) => setNewKeyword(e.target.value)}
           onKeyPress={(e) => e.key === 'Enter' && addKeyword()}
           aria-label="Enter keyword to track"
-          placeholder="输入要追踪的关键词..."
+          placeholder="Enter a keyword to track..."
           className="flex-1 px-4 py-2 bg-slate-50 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
         />
         <button
@@ -157,7 +157,7 @@ export default function KeywordTracker({ initialKeywords = [] }: KeywordTrackerP
           disabled={loading || !newKeyword.trim()}
           className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
-          添加
+          Add
         </button>
       </div>
 
@@ -172,7 +172,7 @@ export default function KeywordTracker({ initialKeywords = [] }: KeywordTrackerP
         <div className="text-center py-12">
           <Search className="w-12 h-12 text-slate-300 dark:text-slate-600 mx-auto mb-3" />
           <p className="text-slate-600 dark:text-slate-400">
-            {filter === 'all' ? '还没有追踪任何关键词' : `没有${filter === 'improved' ? '上升' : filter === 'declined' ? '下降' : '稳定'}的关键词`}
+            {filter === 'all' ? "You aren't tracking any keywords yet" : `No ${filter === 'improved' ? 'improved' : filter === 'declined' ? 'declined' : 'stable'} keywords`}
           </p>
         </div>
       ) : (
@@ -186,18 +186,18 @@ export default function KeywordTracker({ initialKeywords = [] }: KeywordTrackerP
                 <div className="flex items-center gap-3 mb-1">
                   <span className="font-semibold text-slate-900 dark:text-white">{kw.keyword}</span>
                   <span className={`text-xs px-2 py-0.5 rounded-full ${getDifficultyColor(kw.difficulty)}`}>
-                    难度 {kw.difficulty}
+                    Difficulty {kw.difficulty}
                   </span>
                 </div>
                 <div className="flex items-center gap-4 text-sm text-slate-600 dark:text-slate-400">
-                  <span>搜索量: {kw.searchVolume.toLocaleString()}</span>
+                  <span>Search volume: {kw.searchVolume.toLocaleString()}</span>
                   <a
                     href={kw.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                   >
-                    查看页面 <ExternalLink className="w-3 h-3" />
+                    View page <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
               </div>
@@ -207,7 +207,7 @@ export default function KeywordTracker({ initialKeywords = [] }: KeywordTrackerP
                   <div className={`text-2xl font-bold ${getPositionColor(kw.position)}`}>
                     #{kw.position}
                   </div>
-                  <div className="text-xs text-slate-500 dark:text-slate-400">当前排名</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400">Current rank</div>
                 </div>
 
                 <div className="flex items-center gap-2">
@@ -220,7 +220,7 @@ export default function KeywordTracker({ initialKeywords = [] }: KeywordTrackerP
                 <button
                   onClick={() => removeKeyword(kw.keyword)}
                   className="p-2 text-slate-400 hover:text-red-500 transition-colors"
-                  title="移除关键词"
+                  title="Remove keyword"
                 >
                   ×
                 </button>
@@ -235,25 +235,25 @@ export default function KeywordTracker({ initialKeywords = [] }: KeywordTrackerP
         <div className="mt-6 grid grid-cols-4 gap-4 pt-6 border-t border-slate-200 dark:border-gray-700">
           <div className="text-center">
             <div className="text-2xl font-bold text-slate-900 dark:text-white">{keywords.length}</div>
-            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">追踪关键词</div>
+            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Keywords tracked</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-green-600 dark:text-green-400">
               {keywords.filter((k) => k.change > 0).length}
             </div>
-            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">排名上升</div>
+            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Rankings up</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-red-600 dark:text-red-400">
               {keywords.filter((k) => k.change < 0).length}
             </div>
-            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">排名下降</div>
+            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Rankings down</div>
           </div>
           <div className="text-center">
             <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
               {keywords.filter((k) => k.position <= 10).length}
             </div>
-            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">前10名</div>
+            <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">Top 10</div>
           </div>
         </div>
       )}

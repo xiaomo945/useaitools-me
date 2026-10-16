@@ -13,14 +13,14 @@ function ErrorContent() {
       <div className="max-w-md w-full space-y-8 text-center">
         <div>
           <h2 className="mt-6 text-3xl font-extrabold text-slate-900 dark:text-white">
-            登录出错
+            Sign-in error
           </h2>
           <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-            {error === 'Configuration' && '配置错误，请联系管理员'}
-            {error === 'AccessDenied' && '访问被拒绝'}
-            {error === 'Verification' && '验证链接已过期或无效'}
-            {error === 'default' && '发生未知错误'}
-            {!error && '发生错误，请重试'}
+            {error === 'Configuration' && 'Configuration error. Please contact the administrator.'}
+            {error === 'AccessDenied' && 'Access denied'}
+            {error === 'Verification' && 'This verification link has expired or is invalid'}
+            {error === 'default' && 'An unknown error occurred'}
+            {!error && 'Something went wrong. Please try again.'}
           </p>
         </div>
 
@@ -29,13 +29,13 @@ function ErrorContent() {
             href="/auth/signin"
             className="px-4 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg transition-colors"
           >
-            重新登录
+            Sign in again
           </Link>
           <Link
             href="/"
             className="px-4 py-3 bg-slate-100 dark:bg-gray-800 text-slate-700 dark:text-slate-200 font-semibold rounded-lg hover:bg-slate-200 dark:hover:bg-gray-700 transition-colors"
           >
-            返回首页
+            Back to home
           </Link>
         </div>
       </div>
@@ -45,7 +45,7 @@ function ErrorContent() {
 
 export default function ErrorPage() {
   return (
-    <Suspense fallback={<div>加载中...</div>}>
+    <Suspense fallback={<div>Loading...</div>}>
       <ErrorContent />
     </Suspense>
   )

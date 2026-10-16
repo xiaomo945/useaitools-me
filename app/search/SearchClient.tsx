@@ -79,7 +79,7 @@ function SearchPageInner() {
           )}
           {searchQuery && relaxed && textFiltered.length > 0 && (
             <p className="text-center text-xs text-amber-600 dark:text-amber-400 mt-2">
-              未找到完全匹配，以下为部分匹配结果
+              No exact matches — showing partial matches
             </p>
           )}
         </div>

@@ -15,12 +15,12 @@ export type Experiment = {
 export const experiments: Record<string, Experiment> = {
   cta_text: {
     id: 'cta_text',
-    description: '工具卡片 CTA 按钮文案 A/B 测试',
+    description: 'A/B test: tool card CTA button copy',
     variants: ['visit_website', 'try_free', 'get_started'],
   },
   cta_color: {
     id: 'cta_color',
-    description: '工具卡片 CTA 按钮颜色 A/B 测试',
+    description: 'A/B test: tool card CTA button color',
     variants: ['emerald', 'indigo', 'slate'],
   },
 };

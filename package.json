@@ -14,7 +14,8 @@
     "db:seed:categories": "tsx prisma/seed-categories.ts",
     "db:seed:membership": "tsx prisma/seed-membership.ts",
   "indexnow": "node scripts/indexnow.mjs",
-  "indexnow:all": "node scripts/indexnow.mjs all"
+  "indexnow:all": "node scripts/indexnow.mjs all",
+  "scan:cjk": "node scripts/scan-cjk.mjs --list"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.11.2",

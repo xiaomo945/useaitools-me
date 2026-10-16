@@ -110,10 +110,10 @@ export default function AffiliateOptimization() {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-2">
-            联盟链接优化系统
+            Affiliate Link Optimization
           </h1>
           <p className="text-slate-600 dark:text-slate-400">
-            追踪点击、分析转化率、优化收入表现
+            Track clicks, analyze conversion rates, and optimize revenue performance
           </p>
         </div>
 
@@ -125,7 +125,7 @@ export default function AffiliateOptimization() {
                 <span className="text-2xl">🔗</span>
               </div>
               <h3 className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
-                总链接数
+                Total Links
               </h3>
               <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                 {stats.totalLinks}
@@ -137,7 +137,7 @@ export default function AffiliateOptimization() {
                 <span className="text-2xl">👆</span>
               </div>
               <h3 className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
-                总点击数
+                Total Clicks
               </h3>
               <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">
                 {stats.totalClicks.toLocaleString()}
@@ -149,7 +149,7 @@ export default function AffiliateOptimization() {
                 <span className="text-2xl">✅</span>
               </div>
               <h3 className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
-                总转化数
+                Total Conversions
               </h3>
               <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
                 {stats.totalConversions.toLocaleString()}
@@ -161,7 +161,7 @@ export default function AffiliateOptimization() {
                 <span className="text-2xl">💰</span>
               </div>
               <h3 className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
-                总收入
+                Total Revenue
               </h3>
               <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
                 ${stats.totalRevenue.toFixed(2)}
@@ -174,26 +174,26 @@ export default function AffiliateOptimization() {
         {Object.keys(networkStats).length > 0 && (
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-slate-200 dark:border-gray-800 p-6 mb-8">
             <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">
-              联盟网络表现
+              Affiliate Network Performance
             </h3>
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-slate-200 dark:divide-gray-700">
                 <thead>
                   <tr>
                     <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                      网络
+                      Network
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                      点击数
+                      Clicks
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                      转化数
+                      Conversions
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                      转化率
+                      Conv. Rate
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                      收入
+                      Revenue
                     </th>
                   </tr>
                 </thead>
@@ -232,7 +232,7 @@ export default function AffiliateOptimization() {
           {topPerformers.length > 0 && (
             <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-slate-200 dark:border-gray-800 p-6">
               <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">
-                🏆 表现最佳
+                🏆 Top Performers
               </h3>
               <div className="space-y-3">
                 {topPerformers.map((link) => {
@@ -244,7 +244,7 @@ export default function AffiliateOptimization() {
                           {link.toolName}
                         </p>
                         <p className="text-xs text-slate-500 dark:text-slate-400">
-                          {link.clickCount} 点击 → {link.conversionCount} 转化
+                          {link.clickCount} clicks → {link.conversionCount} conversions
                         </p>
                       </div>
                       <span className={`text-sm font-bold ${getPerformanceColor(rate)}`}>
@@ -261,7 +261,7 @@ export default function AffiliateOptimization() {
           {underperformers.length > 0 && (
             <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-slate-200 dark:border-gray-800 p-6">
               <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">
-                ⚠️ 需要优化
+                ⚠️ Needs Optimization
               </h3>
               <div className="space-y-3">
                 {underperformers.map((link) => {
@@ -273,7 +273,7 @@ export default function AffiliateOptimization() {
                           {link.toolName}
                         </p>
                         <p className="text-xs text-slate-500 dark:text-slate-400">
-                          {link.clickCount} 点击 → {link.conversionCount} 转化
+                          {link.clickCount} clicks → {link.conversionCount} conversions
                         </p>
                       </div>
                       <span className={`text-sm font-bold ${getPerformanceColor(rate)}`}>
@@ -292,14 +292,14 @@ export default function AffiliateOptimization() {
           <div className="flex flex-wrap gap-4">
             <div>
               <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                联盟网络
+                Affiliate Network
               </label>
               <select
                 value={filterNetwork}
                 onChange={(e) => setFilterNetwork(e.target.value)}
                 className="px-3 py-2 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-lg text-sm text-slate-900 dark:text-slate-100"
               >
-                <option value="">全部</option>
+                <option value="">All</option>
                 {Object.keys(networkStats).map((network) => (
                   <option key={network} value={network}>
                     {network}
@@ -310,45 +310,45 @@ export default function AffiliateOptimization() {
 
             <div>
               <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                状态
+                Status
               </label>
               <select
                 value={filterStatus}
                 onChange={(e) => setFilterStatus(e.target.value)}
                 className="px-3 py-2 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-lg text-sm text-slate-900 dark:text-slate-100"
               >
-                <option value="">全部</option>
-                <option value="active">活跃</option>
-                <option value="inactive">停用</option>
+                <option value="">All</option>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
               </select>
             </div>
 
             <div>
               <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                排序字段
+                Sort By
               </label>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="px-3 py-2 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-lg text-sm text-slate-900 dark:text-slate-100"
               >
-                <option value="clickCount">点击数</option>
-                <option value="conversionCount">转化数</option>
-                <option value="revenue">收入</option>
+                <option value="clickCount">Clicks</option>
+                <option value="conversionCount">Conversions</option>
+                <option value="revenue">Revenue</option>
               </select>
             </div>
 
             <div>
               <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                排序方式
+                Order
               </label>
               <select
                 value={sortOrder}
                 onChange={(e) => setSortOrder(e.target.value)}
                 className="px-3 py-2 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-lg text-sm text-slate-900 dark:text-slate-100"
               >
-                <option value="desc">降序</option>
-                <option value="asc">升序</option>
+                <option value="desc">Descending</option>
+                <option value="asc">Ascending</option>
               </select>
             </div>
           </div>
@@ -357,32 +357,32 @@ export default function AffiliateOptimization() {
         {/* All Affiliate Links */}
         <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-slate-200 dark:border-gray-800 p-6">
           <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-4">
-            所有联盟链接
+            All Affiliate Links
           </h3>
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-slate-200 dark:divide-gray-700">
               <thead>
                 <tr>
                   <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                    工具名称
+                    Tool
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                    网络
+                    Network
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                    状态
+                    Status
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                    点击数
+                    Clicks
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                    转化数
+                    Conversions
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                    转化率
+                    Conv. Rate
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                    收入
+                    Revenue
                   </th>
                 </tr>
               </thead>
@@ -403,7 +403,7 @@ export default function AffiliateOptimization() {
                             ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400'
                             : 'bg-slate-100 text-slate-700 dark:bg-gray-800 dark:text-slate-400'
                         }`}>
-                          {link.status === 'active' ? '活跃' : '停用'}
+                          {link.status === 'active' ? 'Active' : 'Inactive'}
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-900 dark:text-slate-100">

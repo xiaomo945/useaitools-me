@@ -136,7 +136,7 @@ export default function AdvertisementDisplay({ position, category }: Advertiseme
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase">
-                  {advertisement.adType === 'sponsored' ? '赞助' : '广告'}
+                  {advertisement.adType === 'sponsored' ? 'Sponsored' : 'Ad'}
                 </span>
                 {advertisement.advertiser && (
                   <span className="text-xs text-slate-400 dark:text-slate-500">

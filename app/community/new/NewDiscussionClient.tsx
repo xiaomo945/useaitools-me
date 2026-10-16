@@ -42,7 +42,7 @@ export default function NewDiscussionClient() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.title.trim() || !formData.content.trim()) {
-      alert('标题和内容不能为空');
+      alert('Title and content cannot be empty.');
       return;
     }
 
@@ -64,11 +64,11 @@ export default function NewDiscussionClient() {
         router.push(`/community/${data.id}`);
       } else {
         const data = await res.json();
-        alert(data.error || '创建失败');
+        alert(data.error || 'Failed to create.');
       }
     } catch (error) {
       console.error('创建讨论失败:', error);
-      alert('创建失败，请重试');
+      alert('Failed to create. Please try again.');
     } finally {
       setSubmitting(false);
     }

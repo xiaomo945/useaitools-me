@@ -3,58 +3,58 @@ import Link from 'next/link';
 import { PenTool, FileText, CheckCircle, ArrowRight, Users, TrendingUp, Globe } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Guest Post 投稿 - Use AI Tools',
-  description: '向 Use AI Tools 投稿，分享你的 AI 工具评测、使用经验和行业见解。与数万 AI 爱好者交流。',
-  keywords: ['投稿', 'Guest Post', 'AI 工具评测', '内容合作', '博主合作'],
+  title: 'Submit a Guest Post - Use AI Tools',
+  description: 'Write for Use AI Tools and share your AI tool reviews, hands-on experience and industry insights with thousands of AI enthusiasts.',
+  keywords: ['guest post', 'contribute', 'AI tool reviews', 'content collaboration', 'write for us'],
 };
 
 const benefits = [
   {
     icon: Users,
-    title: '触达精准受众',
-    description: '我们的读者都是 AI 工具的活跃用户，你的内容将直接触达目标群体。'
+    title: 'Reach a Targeted Audience',
+    description: 'Our readers are active AI tool users, so your content reaches exactly the audience you want.'
   },
   {
     icon: TrendingUp,
-    title: '提升品牌权威',
-    description: '在专业平台发布内容，建立你在 AI 领域的专业形象和影响力。'
+    title: 'Build Your Authority',
+    description: 'Publishing on a specialized platform helps you establish expertise and influence in the AI space.'
   },
   {
     icon: Globe,
-    title: '获取高质量外链',
-    description: '所有投稿都会包含你的个人简介和网站链接，提升 SEO 权重。'
+    title: 'Earn Quality Backlinks',
+    description: 'Every contribution includes your author bio and website link, giving your SEO a boost.'
   }
 ];
 
 const guidelines = [
   {
-    title: '内容主题',
+    title: 'Topics',
     items: [
-      'AI 工具深度评测（使用 2 周以上）',
-      '工具对比分析（至少对比 3 个工具）',
-      'AI 工具使用教程和技巧',
-      '行业趋势分析和洞察',
-      '实际案例和成功经验'
+      'In-depth AI tool reviews (after 2+ weeks of hands-on use)',
+      'Tool comparison analyses (at least 3 tools)',
+      'AI tool tutorials and tips',
+      'Industry trend analysis and insights',
+      'Real-world case studies and success stories'
     ]
   },
   {
-    title: '内容要求',
+    title: 'Content Requirements',
     items: [
-      '字数：1500-3000 字',
-      '原创内容，未在其他平台发布',
-      '包含真实使用截图或数据',
-      '客观公正，不偏袒特定产品',
-      '提供实用价值和可操作建议'
+      'Length: 1,500–3,000 words',
+      'Original content not published anywhere else',
+      'Include real screenshots or data from actual use',
+      'Objective and unbiased toward any specific product',
+      'Deliver practical value and actionable advice'
     ]
   },
   {
-    title: '格式规范',
+    title: 'Formatting',
     items: [
-      '使用 Markdown 格式',
-      '包含清晰的标题层级（H2/H3）',
-      '添加相关图片（至少 3 张）',
-      '提供工具官方链接',
-      '包含作者简介和联系方式'
+      'Submit your draft in Markdown',
+      'Use a clear heading hierarchy (H2/H3)',
+      'Add relevant images (at least 3)',
+      'Include official links to the tools',
+      'Provide an author bio and contact details'
     ]
   }
 ];
@@ -76,20 +76,20 @@ export default function GuestPostPage() {
         <section className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 rounded-full text-sm font-semibold mb-6">
             <PenTool className="w-4 h-4" />
-            内容合作
+            Content Collaboration
           </div>
           <h1 className="text-5xl font-bold text-slate-900 dark:text-white mb-6">
-            Guest Post 投稿
+            Submit a Guest Post
           </h1>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            分享你的 AI 工具使用经验，与数万 AI 爱好者交流，建立你在 AI 领域的专业影响力
+            Share your hands-on experience with AI tools, connect with thousands of AI enthusiasts, and build your authority in the AI space
           </p>
         </section>
 
         {/* Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-center text-slate-900 dark:text-white mb-12">
-            为什么选择我们？
+            Why Write for Us?
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
@@ -114,7 +114,7 @@ export default function GuestPostPage() {
         {/* Guidelines */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-center text-slate-900 dark:text-white mb-12">
-            投稿指南
+            Submission Guidelines
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {guidelines.map((section, index) => (
@@ -140,7 +140,7 @@ export default function GuestPostPage() {
         <section className="mb-16">
           <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              推荐选题
+              Suggested Topics
             </h2>
             <div className="grid md:grid-cols-2 gap-4">
               {topics.map((topic, index) => (
@@ -153,7 +153,7 @@ export default function GuestPostPage() {
               ))}
             </div>
             <p className="text-emerald-100 text-center mt-6 text-sm">
-              当然，你也可以选择其他与 AI 工具相关的主题
+              Of course, you're also welcome to pitch any other AI tool-related topic
             </p>
           </div>
         </section>
@@ -161,15 +161,15 @@ export default function GuestPostPage() {
         {/* Submission Process */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-center text-slate-900 dark:text-white mb-12">
-            投稿流程
+            How to Submit
           </h2>
           <div className="max-w-3xl mx-auto">
             <div className="space-y-6">
               {[
-                { step: '1', title: '准备内容', desc: '按照投稿指南准备你的文章，确保内容原创、有价值。' },
-                { step: '2', title: '发送邮件', desc: '将文章发送到 guest@useaitools.me，附上作者简介和联系方式。' },
-                { step: '3', title: '审核反馈', desc: '我们会在 3 个工作日内审核并回复，可能需要修改建议。' },
-                { step: '4', title: '发布上线', desc: '审核通过后，文章将在 1-2 天内发布，并通知你。' }
+                { step: '1', title: 'Prepare Your Draft', desc: 'Write your article following the guidelines above, making sure it is original and genuinely useful.' },
+                { step: '2', title: 'Send Us an Email', desc: 'Send your article to guest@useaitools.me along with your author bio and contact details.' },
+                { step: '3', title: 'Review & Feedback', desc: 'We review and reply within 3 business days, and may suggest a few revisions.' },
+                { step: '4', title: 'Publish', desc: 'Once approved, your article goes live within 1–2 days and we will let you know.' }
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-6">
                   <div className="flex-shrink-0 w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
@@ -193,10 +193,10 @@ export default function GuestPostPage() {
         <section className="text-center">
           <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg border border-slate-200 dark:border-gray-800 p-12">
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">
-              准备好投稿了吗？
+              Ready to Submit?
             </h2>
             <p className="text-xl text-slate-600 dark:text-slate-300 mb-8">
-              将你的文章发送到我们的邮箱，开始你的内容创作之旅
+              Send your article to our inbox and kick off your journey as a contributor
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
@@ -204,18 +204,18 @@ export default function GuestPostPage() {
                 className="px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
               >
                 <PenTool className="w-5 h-5" />
-                发送邮件投稿
+                Submit via Email
               </a>
               <Link
                 href="/blog"
                 className="px-8 py-4 bg-white dark:bg-gray-800 hover:bg-slate-50 dark:hover:bg-gray-700 text-slate-900 dark:text-white font-semibold rounded-xl border-2 border-slate-200 dark:border-gray-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
               >
-                查看博客示例
+                Browse Blog Examples
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
             <p className="text-sm text-slate-500 dark:text-slate-400 mt-6">
-              我们期待看到你的精彩内容！
+              We can't wait to read what you've been working on!
             </p>
           </div>
         </section>

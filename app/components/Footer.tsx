@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import NewsletterSubscribe from './NewsletterSubscribe';
-import LanguageSwitcher from './LanguageSwitcher';
 import { useLocale, useTranslations } from './LanguageSwitcher';
 
 export default function Footer() {
@@ -209,11 +208,6 @@ export default function Footer() {
               >
                 {t('footer.contact')}
               </a>
-            </div>
-
-            {/* Language Switcher */}
-            <div className="flex justify-center mb-6">
-              <LanguageSwitcher />
             </div>
 
             <p className="text-slate-500 dark:text-gray-500 text-sm">

@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Download, Mail, FileText, Image, BarChart3 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: '媒体资源 - Use AI Tools',
-  description: '下载 Use AI Tools 的品牌资源、Logo、截图和统计数据。欢迎媒体合作伙伴使用我们的资源进行报道。',
-  keywords: ['媒体资源', '品牌下载', 'Logo', '统计数据', '媒体报道'],
+  title: 'Press Kit - Use AI Tools',
+  description: 'Download Use AI Tools brand assets, logos, screenshots and key statistics. Media partners are welcome to use our resources for their coverage.',
+  keywords: ['press kit', 'brand assets', 'logo', 'statistics', 'media coverage'],
 };
 
 export default function PressPage() {
@@ -15,10 +15,10 @@ export default function PressPage() {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-5xl font-bold text-slate-900 dark:text-white mb-6">
-            媒体资源
+            Press Kit
           </h1>
           <p className="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-            欢迎媒体合作伙伴使用我们的品牌资源进行报道。如需更多信息，请联系我们的媒体团队。
+            Media partners are welcome to use our brand assets in their coverage. For more information, please get in touch with our press team.
           </p>
         </section>
 
@@ -26,18 +26,18 @@ export default function PressPage() {
         <section className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-gray-800 mb-12">
           <div className="flex items-center mb-6">
             <FileText className="w-8 h-8 text-emerald-600 mr-3" />
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">品牌指南</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Brand Guidelines</h2>
           </div>
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p className="text-slate-600 dark:text-slate-300 mb-4">
-              使用 Use AI Tools 品牌资源时，请遵循以下指南：
+              Please follow these guidelines when using Use AI Tools brand assets:
             </p>
             <ul className="space-y-2 text-slate-600 dark:text-slate-300">
-              <li>• 保持 Logo 的完整性和比例，不要扭曲或修改颜色</li>
-              <li>• 在深色背景上使用浅色版本，在浅色背景上使用深色版本</li>
-              <li>• 确保 Logo 周围有足够的留白空间</li>
-              <li>• 不要将 Logo 用作装饰元素或背景图案</li>
-              <li>• 提及品牌时使用完整名称 "Use AI Tools"</li>
+              <li>• Keep the logo intact and proportional — do not distort it or alter its colors</li>
+              <li>• Use the light version on dark backgrounds and the dark version on light backgrounds</li>
+              <li>• Leave enough clear space around the logo</li>
+              <li>• Do not use the logo as a decorative element or background pattern</li>
+              <li>• Refer to the brand by its full name, "Use AI Tools"</li>
             </ul>
           </div>
         </section>
@@ -46,7 +46,7 @@ export default function PressPage() {
         <section className="mb-12">
           <div className="flex items-center mb-6">
             <Image className="w-8 h-8 text-emerald-600 mr-3" />
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Logo 下载</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Logo Downloads</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-gray-800">
@@ -55,13 +55,13 @@ export default function PressPage() {
                   UAT
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">主 Logo</h3>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Primary Logo</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
-                标准版本，适用于大多数场景
+                Standard version, suitable for most use cases
               </p>
               <button className="w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center">
                 <Download className="w-4 h-4 mr-2" />
-                下载 PNG
+                Download PNG
               </button>
             </div>
 
@@ -71,13 +71,13 @@ export default function PressPage() {
                   UAT
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">深色背景版</h3>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Dark Background Version</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
-                适用于深色背景和界面
+                Designed for dark backgrounds and dark-mode interfaces
               </p>
               <button className="w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center">
                 <Download className="w-4 h-4 mr-2" />
-                下载 PNG
+                Download PNG
               </button>
             </div>
 
@@ -87,13 +87,13 @@ export default function PressPage() {
                   UAT
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">图标版本</h3>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Icon Version</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
-                适用于 favicon 和小尺寸显示
+                Ideal for favicons and small display sizes
               </p>
               <button className="w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center">
                 <Download className="w-4 h-4 mr-2" />
-                下载 PNG
+                Download PNG
               </button>
             </div>
           </div>
@@ -103,53 +103,53 @@ export default function PressPage() {
         <section className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-gray-800 mb-12">
           <div className="flex items-center mb-6">
             <Image className="w-8 h-8 text-emerald-600 mr-3" />
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">产品截图</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Product Screenshots</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="border border-slate-200 dark:border-gray-800 rounded-xl overflow-hidden">
               <div className="bg-gradient-to-br from-emerald-500 to-teal-500 h-48 flex items-center justify-center text-white text-xl font-bold">
-                首页截图
+                Homepage Screenshot
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">首页展示</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Homepage</h3>
                 <p className="text-slate-600 dark:text-slate-300 text-sm">
-                  展示工具发现、搜索和筛选功能
+                  Showcases tool discovery, search and filtering
                 </p>
               </div>
             </div>
 
             <div className="border border-slate-200 dark:border-gray-800 rounded-xl overflow-hidden">
               <div className="bg-gradient-to-br from-blue-500 to-indigo-500 h-48 flex items-center justify-center text-white text-xl font-bold">
-                工具详情页
+                Tool Detail Page
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">工具详情</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Tool Details</h3>
                 <p className="text-slate-600 dark:text-slate-300 text-sm">
-                  展示工具信息、评分和用户评价
+                  Showcases tool information, ratings and user reviews
                 </p>
               </div>
             </div>
 
             <div className="border border-slate-200 dark:border-gray-800 rounded-xl overflow-hidden">
               <div className="bg-gradient-to-br from-purple-500 to-pink-500 h-48 flex items-center justify-center text-white text-xl font-bold">
-                对比功能
+                Comparison Feature
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">工具对比</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Tool Comparison</h3>
                 <p className="text-slate-600 dark:text-slate-300 text-sm">
-                  展示多维度对比和决策矩阵
+                  Showcases multi-dimensional comparisons and decision matrices
                 </p>
               </div>
             </div>
 
             <div className="border border-slate-200 dark:border-gray-800 rounded-xl overflow-hidden">
               <div className="bg-gradient-to-br from-orange-500 to-red-500 h-48 flex items-center justify-center text-white text-xl font-bold">
-                博客文章
+                Blog Articles
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">内容生态</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">Content Ecosystem</h3>
                 <p className="text-slate-600 dark:text-slate-300 text-sm">
-                  展示评测文章和教程内容
+                  Showcases review articles and tutorial content
                 </p>
               </div>
             </div>
@@ -160,28 +160,28 @@ export default function PressPage() {
         <section className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-12 mb-12">
           <div className="flex items-center mb-6">
             <BarChart3 className="w-8 h-8 text-white mr-3" />
-            <h2 className="text-3xl font-bold text-white">关键数据</h2>
+            <h2 className="text-3xl font-bold text-white">Key Figures</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-white mb-2">1361+</div>
-              <div className="text-emerald-100">收录工具</div>
+              <div className="text-emerald-100">Tools Listed</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-white mb-2">766+</div>
-              <div className="text-emerald-100">评测文章</div>
+              <div className="text-emerald-100">Review Articles</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-white mb-2">6</div>
-              <div className="text-emerald-100">工具分类</div>
+              <div className="text-emerald-100">Tool Categories</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-white mb-2">2</div>
-              <div className="text-emerald-100">语言支持</div>
+              <div className="text-emerald-100">Languages Supported</div>
             </div>
           </div>
           <div className="mt-8 text-center text-emerald-100 text-sm">
-            数据更新时间：2026 年 6 月
+            Last updated: June 2026
           </div>
         </section>
 
@@ -189,17 +189,17 @@ export default function PressPage() {
         <section className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-gray-800">
           <div className="flex items-center mb-6">
             <Mail className="w-8 h-8 text-emerald-600 mr-3" />
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">媒体联系</h2>
+            <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Media Contact</h2>
           </div>
           <div className="prose prose-lg dark:prose-invert max-w-none mb-6">
             <p className="text-slate-600 dark:text-slate-300">
-              如果您是媒体记者、博主或内容创作者，需要更多信息或采访安排，请联系我们的媒体团队：
+              If you're a journalist, blogger or content creator who needs more information or would like to arrange an interview, please reach out to our press team:
             </p>
           </div>
           <div className="space-y-4">
             <div className="flex items-center justify-between p-4 bg-slate-50 dark:bg-gray-800 rounded-lg">
               <div>
-                <div className="font-semibold text-slate-900 dark:text-white">媒体邮箱</div>
+                <div className="font-semibold text-slate-900 dark:text-white">Press Email</div>
                 <div className="text-slate-600 dark:text-slate-300">press@useaitools.me</div>
               </div>
               <Mail className="w-6 h-6 text-emerald-600" />
@@ -216,7 +216,7 @@ export default function PressPage() {
           </div>
           <div className="mt-6 p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg border border-emerald-200 dark:border-emerald-800">
             <p className="text-sm text-emerald-800 dark:text-emerald-200">
-              <strong>提示：</strong>我们欢迎所有形式的媒体报道和合作。如果您需要采访创始人、获取产品演示或了解更多技术细节，请随时联系我们。
+              <strong>Note:</strong> We welcome media coverage and collaborations of all kinds. Whether you'd like to interview our founders, request a product demo or dig into the technical details, feel free to contact us anytime.
             </p>
           </div>
         </section>

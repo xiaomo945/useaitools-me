@@ -94,7 +94,7 @@ export default function NotificationsPage() {
   };
 
   const deleteAllRead = async () => {
-    if (!confirm('确定要删除所有已读通知吗？')) return;
+    if (!confirm('Are you sure you want to delete all read notifications?')) return;
     
     try {
       const res = await fetch('/api/notifications', {
@@ -151,12 +151,12 @@ export default function NotificationsPage() {
               </div>
               <div>
                 <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
-                  通知中心
+                  Notifications
                 </h1>
                 <p className="text-slate-600 dark:text-slate-400 mt-1">
                   {unreadCount > 0 
-                    ? `你有 ${unreadCount} 条未读通知`
-                    : '暂无未读通知'}
+                    ? `You have ${unreadCount} unread notifications`
+                    : 'No new notifications'}
                 </p>
               </div>
             </div>
@@ -167,7 +167,7 @@ export default function NotificationsPage() {
                 className="flex items-center gap-2 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl transition-colors"
               >
                 <Check className="w-4 h-4" />
-                全部已读
+                Mark all as read
               </button>
             )}
           </div>
@@ -183,7 +183,7 @@ export default function NotificationsPage() {
                   : 'bg-white dark:bg-gray-900 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-gray-800'
               }`}
             >
-              全部
+              All
             </button>
             <button
               onClick={() => setFilter('unread')}
@@ -193,7 +193,7 @@ export default function NotificationsPage() {
                   : 'bg-white dark:bg-gray-900 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-gray-800'
               }`}
             >
-              未读
+              Unread
             </button>
             
             <div className="flex-1" />
@@ -203,7 +203,7 @@ export default function NotificationsPage() {
               className="flex items-center gap-2 px-4 py-2 text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/20 rounded-lg transition-colors"
             >
               <Trash2 className="w-4 h-4" />
-              清除已读
+              Clear read
             </button>
           </div>
         </div>
@@ -230,10 +230,10 @@ export default function NotificationsPage() {
               <Bell className="w-10 h-10 text-slate-400 dark:text-slate-600" />
             </div>
             <p className="text-slate-500 dark:text-slate-400 text-lg mb-2">
-              {filter === 'unread' ? '没有未读通知' : '暂无通知'}
+              {filter === 'unread' ? 'No unread notifications' : 'No notifications yet'}
             </p>
             <p className="text-slate-400 dark:text-slate-500 text-sm">
-              {filter === 'unread' ? '所有通知都已阅读' : '当你收藏工具或参与讨论时，会收到相关通知'}
+              {filter === 'unread' ? 'You have read all your notifications' : 'You will get notified when tools you follow are updated or discussions you join get new replies'}
             </p>
           </div>
         ) : (
@@ -278,7 +278,7 @@ export default function NotificationsPage() {
                           href={notification.link}
                           className="flex items-center gap-1 text-sm text-emerald-600 dark:text-emerald-400 hover:underline"
                         >
-                          查看详情
+                          View details
                           <ExternalLink className="w-3 h-3" />
                         </a>
                       )}
@@ -291,7 +291,7 @@ export default function NotificationsPage() {
                           className="flex items-center gap-1 text-sm text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400"
                         >
                           <Check className="w-4 h-4" />
-                          标记已读
+                          Mark as read
                         </button>
                       )}
                       
@@ -300,7 +300,7 @@ export default function NotificationsPage() {
                         className="flex items-center gap-1 text-sm text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-400"
                       >
                         <Trash2 className="w-4 h-4" />
-                        删除
+                        Delete
                       </button>
                     </div>
                   </div>

@@ -85,18 +85,18 @@ export default function CommunityDetailClient() {
         await loadDiscussion();
       } else {
         const data = await res.json();
-        alert(data.error || '提交失败');
+        alert(data.error || 'Submission failed.');
       }
     } catch (error) {
       console.error('提交评论失败:', error);
-      alert('提交失败，请重试');
+      alert('Submission failed. Please try again.');
     } finally {
       setSubmitting(false);
     }
   };
 
   const handleDeleteComment = async (commentId: string) => {
-    if (!confirm('确定要删除这条评论吗？')) return;
+    if (!confirm('Are you sure you want to delete this comment?')) return;
 
     try {
       const res = await fetch(`/api/discussions/${params.id}/comments/${commentId}`, {
@@ -106,11 +106,11 @@ export default function CommunityDetailClient() {
       if (res.ok) {
         await loadDiscussion();
       } else {
-        alert('删除失败');
+        alert('Failed to delete.');
       }
     } catch (error) {
       console.error('删除评论失败:', error);
-      alert('删除失败，请重试');
+      alert('Failed to delete. Please try again.');
     }
   };
 
