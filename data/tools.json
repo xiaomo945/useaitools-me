@@ -31,7 +31,13 @@
       "Creative Projects"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "行业领先的 AI 图像生成器，可根据文字提示词创作出极具艺术感的视觉作品。深受 1500 万以上用户信赖，包括专业艺术家、游戏设计师和创意机构，以无与伦比的风格一致性与照片级真实输出著称。几秒内即可生成高分辨率图像，并配备直观的 Discord 交互界面。",
+    "best_for_zh": [
+      "高品质",
+      "艺术家",
+      "创意项目"
+    ]
   },
   {
     "id": 2,
@@ -65,7 +71,13 @@
       "Social Media"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "OpenAI 的文本生成图像模型，可在 ChatGPT、OpenAI API 和 Bing Image Creator 中使用。它能紧密遵循长而详细的提示词，并在图像中渲染出清晰可读的文字。",
+    "best_for_zh": [
+      "新手",
+      "快速出图",
+      "社交媒体"
+    ]
   },
   {
     "id": 3,
@@ -99,7 +111,13 @@
       "Custom Models"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "支撑起整个生成式艺术生态的开源权重图像模型。可在自有 GPU 上运行，也可通过托管服务使用，支持微调模型、LoRA 以及对采样过程的完全控制。",
+    "best_for_zh": [
+      "专业人士",
+      "可控性强",
+      "自定义模型"
+    ]
   },
   {
     "id": 5,
@@ -133,7 +151,13 @@
       "Knowledge Management"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "直接内置于 Notion 工作区的 AI：可起草和总结文档、跨 wiki 与数据库回答问题，并通过 AI 自动填充数据库属性。",
+    "best_for_zh": [
+      "团队协作",
+      "生产力",
+      "知识管理"
+    ]
   },
   {
     "id": 6,
@@ -167,7 +191,13 @@
       "Content Creation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "OpenAI 的对话式助手，适用于写作、分析、编程、数据处理和图像任务，付费方案支持语音模式、文件与文档上传以及联网搜索。",
+    "best_for_zh": [
+      "新手",
+      "快速上手",
+      "内容创作"
+    ]
   },
   {
     "id": 7,
@@ -201,7 +231,13 @@
       "Teams"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "全球使用最广泛的 AI 编程助手，帮助 100 万以上开发者将编码速度提升 55%。可直接集成到 VS Code、JetBrains 系列 IDE 和 Neovim 中。支持 100 多种编程语言，提供上下文感知的代码建议、函数生成和智能调试辅助。",
+    "best_for_zh": [
+      "专业人士",
+      "开发者",
+      "团队"
+    ]
   },
   {
     "id": 8,
@@ -235,7 +271,13 @@
       "Content Creation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "行业领先的 AI 语音合成平台，获得 100 万以上创作者信赖，可生成 128 种语言的逼真语音。具备业界领先的语音克隆、情绪范围控制和即时声音复刻功能。出版商、游戏开发者和内容创作者用它制作专业级配音。",
+    "best_for_zh": [
+      "专业人士",
+      "高品质",
+      "内容创作"
+    ]
   },
   {
     "id": 9,
@@ -269,7 +311,13 @@
       "Video Editing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "浏览器端的 AI 视频生成与剪辑套件：支持文生视频、图生视频、运动笔刷、局部重绘和抠像，全部集中在同一条时间线上完成。",
+    "best_for_zh": [
+      "专业人士",
+      "高品质",
+      "视频剪辑"
+    ]
   },
   {
     "id": 10,
@@ -303,7 +351,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的搜索引擎，为复杂问题提供带引用来源的实时答案。已有 1000 万以上研究人员、职场人士和学生使用它即时整合研究资料。支持话题串式对话、来源引用，以及使用 GPT-4 和 Claude 3 Sonnet 进行高级推理的 Pro 模式。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 11,
@@ -337,7 +391,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "OpenAI 的开源语音转文字模型。可本地运行或通过 API 调用，支持 90 多种语言的转写，并能输出标点和时间戳以生成字幕。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 13,
@@ -371,7 +431,13 @@
       "Control"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "专为结对编程打造的 AI 优先代码编辑器。将 GPT-4 与 Claude 的能力融入定制化 IDE，具备预测式代码、智能补全和对话式调试。以极快的速度和协作功能深受独立开发者与初创团队喜爱。",
+    "best_for_zh": [
+      "专业人士",
+      "开发者",
+      "可控性强"
+    ]
   },
   {
     "id": 14,
@@ -405,7 +471,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Obsidian 社区插件，将聊天、向量嵌入和基于命令的 AI 操作引入你的笔记库，让答案来自你自己的笔记。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 16,
@@ -439,7 +511,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "OpenAI 的视频生成模型。可根据文字生成带有场景连贯性和镜头运动的短片，可在 Sora 应用和 ChatGPT 中使用。",
+    "best_for_zh": [
+      "内容创作",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 17,
@@ -473,7 +551,13 @@
       "Teams"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "具备代码补全与聊天功能的 AI 编程助手，可完全本地运行或自行部署，并提供团队级别的策略控制，决定模型可以查看哪些代码。",
+    "best_for_zh": [
+      "开发者",
+      "专业人士",
+      "团队"
+    ]
   },
   {
     "id": 18,
@@ -507,7 +591,13 @@
       "High Quality"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "企业级 AI 写作平台，深受 Google、Anthropic、DoorDash 等公司 10 万以上营销团队信赖。提供 60 多种文案模板、品牌语调定制，以及面向完整内容工作流的 Campaign 生成功能。可规模化产出 SEO 优化的博客文章、广告文案和社媒内容。",
+    "best_for_zh": [
+      "团队",
+      "市场营销",
+      "高品质"
+    ]
   },
   {
     "id": 19,
@@ -541,7 +631,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Adobe 的生成式图像与视频模型，深度接入 Photoshop、Illustrator 和 Express。支持生成式填充、文生图像，并使用可商用的安全训练数据。",
+    "best_for_zh": [
+      "创意项目",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 20,
@@ -575,7 +671,13 @@
       "Long-Form Content"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Anthropic 推出的助手，擅长长文档处理、写作与分析，具备超大上下文窗口、用于归类工作的 Projects，以及可实时呈现代码与文档的 Artifacts。",
+    "best_for_zh": [
+      "专业人士",
+      "高品质",
+      "长文内容"
+    ]
   },
   {
     "id": 21,
@@ -609,7 +711,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Google 的多模态助手，打通搜索、Workspace 与 Android。可读取图片、文件和视频，并跨 Gmail、Docs 和 Sheets 工作。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 22,
@@ -643,7 +751,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "内容营销平台，提供 AI 文章起草、SEO 优化文案和品牌语调聊天，并支持与发布工作流集成。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 23,
@@ -702,7 +816,13 @@
       "Content Creation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "最实惠的 AI 写作工具，全球 1000 万以上创作者信赖。支持 30 多种语言撰写博客、邮件、社媒和营销文案，每月仅需 9 美元起。比 Jasper 快 3 倍而价格仅为其一半，内置查重与 SEO 优化工具。非常适合想以非企业预算获得优质内容的个体创业者、博主和小型企业。",
+    "best_for_zh": [
+      "新手",
+      "经济实惠",
+      "内容创作"
+    ]
   },
   {
     "id": 24,
@@ -736,7 +856,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向学生和编辑的改写、语法检查、摘要与引用工具，提供浏览器扩展和 Word 插件。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 51,
@@ -795,7 +921,13 @@
     ],
     "description_en": "Browser-based AI video editor used by 50M+ creators, with 100,000+ 5-star reviews. Auto-generate subtitles in 100+ languages, remove backgrounds, add AI voiceovers, and create polished videos — all in",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "浏览器端 AI 视频编辑器，被 5000 万以上创作者使用，收获 10 万以上五星好评。可自动生成 100 多种语言的字幕、去除背景、添加 AI 配音，并制作精美视频——全部在浏览器中完成，无需下载。相比 Premiere Pro 等传统工具可节省 80% 的剪辑时间，而成本仅为其一小部分。",
+    "best_for_zh": [
+      "新手",
+      "社交媒体",
+      "市场营销"
+    ]
   },
   {
     "id": 52,
@@ -829,7 +961,13 @@
       "Project Management"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的项目管理助手，为 200 万以上团队把 ClickUp 打造成智能工作空间。具备 AI 冲刺规划、任务自动拆解、带行动项提取的会议智能，以及文档起草功能。将 AI 直接引入项目工作流，从而替代多种工具。",
+    "best_for_zh": [
+      "团队",
+      "生产力",
+      "项目管理"
+    ]
   },
   {
     "id": 54,
@@ -863,7 +1001,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "最早出现的开源自主智能体实验项目之一。它通过串联模型调用，结合工具与记忆来推进目标，目前由社区作为研究项目维护。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 55,
@@ -897,7 +1041,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "基于浏览器的自主智能体：给它一个目标，它会自行规划、执行步骤并汇报结果，无需你逐轮驱动。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 56,
@@ -931,7 +1081,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用于编排角色化多智能体团队的开源 Python 框架，提供实现确定性自动化的 Flows 和便于调试的追踪功能。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 57,
@@ -965,7 +1121,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "SEO 内容工具，可将草稿与当前排名靠前的页面对比打分，并在写作过程中给出关键词、结构和内链建议。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 58,
@@ -999,7 +1161,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "研究某个搜索词，提取竞争对手覆盖的问题与标题，再围绕内容缺口起草提纲和正文。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 59,
@@ -1033,7 +1201,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "内容策略平台，利用主题模型规划内容集群、审计现有页面，并按竞争差距与权威性排定优先级。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 60,
@@ -1067,7 +1241,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向律所和税务团队的 AI 助手，以法律检索为基础，采用领域调优模型，并可回溯引用原始资料。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 62,
@@ -1101,7 +1281,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 简历与求职信制作工具，提供面向 ATS 的模板、要点改写和针对具体岗位的定制流程。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 63,
@@ -1135,7 +1321,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "可汗学院的 AI 家教：以苏格拉底式引导帮助学生学习各科，同时为教师提供备课与批改辅助。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 64,
@@ -1169,7 +1361,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Duolingo 的顶配套餐，在标准学习路径之外增加了与角色进行的情景对话练习和「解释我的答案」功能。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 65,
@@ -1203,7 +1401,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "可根据你自己的笔记或教材生成闪卡、练习测试和讲解，并提供自适应学习模式。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 66,
@@ -1237,7 +1441,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "3D 设计工具，支持提示词生成 3D、材质与动画，并可导出用于网页的交互式场景。",
+    "best_for_zh": [
+      "创意项目",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 67,
@@ -1271,7 +1481,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "可根据文字或参考图生成 3D 模型，并支持贴图、绑定骨骼，以及导出适配游戏引擎和 3D 打印的尺寸。",
+    "best_for_zh": [
+      "创意项目",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 68,
@@ -1305,7 +1521,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "图像生成平台，提供微调模型、画布编辑、放大和素材流水线，主要面向游戏与产品设计师。",
+    "best_for_zh": [
+      "创意项目",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 69,
@@ -1339,7 +1561,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "按情绪、风格和时长生成免版税的纯音乐，并支持分段与分轨编辑，适合视频和播客配乐。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 70,
@@ -1373,7 +1601,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "专注古典与影视配乐的 AI 作曲工具，提供风格预设、MIDI 导出，并为生成的曲目办理版权登记。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 71,
@@ -1407,7 +1641,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "根据视频的情绪与场景时长生成匹配的背景音乐，支持逐场景调节，并为创作者提供简洁的授权方式。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 72,
@@ -1441,7 +1681,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "与用户自建角色进行角色扮演聊天的平台，具备长期记忆、群聊，付费档位还支持语音通话。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 73,
@@ -1475,7 +1721,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Quora 推出的聊天聚合平台：可并排运行多个模型、对比答案，并在此基础上创建和变现自定义机器人。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 74,
@@ -1509,7 +1761,13 @@
       "Social Media"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "营销内容平台，提供模板以及面向销售和内容团队的工作流自动化，并包含 CRM 数据补全功能。",
+    "best_for_zh": [
+      "新手",
+      "快速出结果",
+      "社交媒体"
+    ]
   },
   {
     "id": 75,
@@ -1543,7 +1801,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Stable Diffusion 提示词与图像的搜索引擎和图库，同时拥有自有生成模型和 API 接口。",
+    "best_for_zh": [
+      "创意项目",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 76,
@@ -1577,7 +1841,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "图像编辑器，集生成、局部重绘、滤镜和画布排版于一体，并提供充裕的每日免费生成额度。",
+    "best_for_zh": [
+      "创意项目",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 77,
@@ -1611,7 +1881,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "以在生成图像中可靠渲染文字著称的图像模型，非常适合制作 logo、海报和字体排版类设计。",
+    "best_for_zh": [
+      "创意项目",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 78,
@@ -1670,7 +1946,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "录音室级 AI 语音生成工具，提供 20 多种语言的 120 多个逼真音色，被 Google、Meta、Deloitte 等公司的 3 万以上团队使用。几分钟（而非几天）即可为培训视频、播客和在线课程制作专业配音。成本比聘请配音演员低 10 倍，支持无限次修改并保持品牌语调一致。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 79,
@@ -1704,7 +1986,13 @@
       "Editing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "通过编辑文字稿来剪辑音频和视频：删除口头禅、用自己的克隆声音补录、录制屏幕并发布片段。",
+    "best_for_zh": [
+      "团队",
+      "播客",
+      "剪辑"
+    ]
   },
   {
     "id": 80,
@@ -1738,7 +2026,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Premiere Pro 的 AI 功能：基于文字稿的剪辑、自动重构图、场景剪辑检测，以及用于填补片段空隙的生成式延展。",
+    "best_for_zh": [
+      "内容创作",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 81,
@@ -1772,7 +2066,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "数字人视频生成工具，支持口型同步、语音克隆和视频翻译成多种语言，主要面向营销和培训视频。",
+    "best_for_zh": [
+      "内容创作",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 82,
@@ -1806,7 +2106,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "只需一张照片加上脚本或音轨，即可生成会说话的人物视频，并提供用于实时交互的流式数字人 API。",
+    "best_for_zh": [
+      "内容创作",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 83,
@@ -1840,7 +2146,13 @@
       "Teams"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "现更名 Qodo：面向代码审查、测试生成和 Pull Request 质量把关的 AI，可在 IDE 和 CI 中运行。",
+    "best_for_zh": [
+      "开发者",
+      "专业人士",
+      "团队"
+    ]
   },
   {
     "id": 85,
@@ -1874,7 +2186,13 @@
       "Teams"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "内置于 Replit 云端 IDE 的 AI 结对编程助手，可搭建应用骨架、讲解代码并完成部署，无需本地环境配置。",
+    "best_for_zh": [
+      "开发者",
+      "专业人士",
+      "团队"
+    ]
   },
   {
     "id": 86,
@@ -1908,7 +2226,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Luma 的 Dream Machine 可将文字和图片转化为视频片段，并能用手机拍摄的素材把现实物体捕捉成 3D 模型。",
+    "best_for_zh": [
+      "创意项目",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 87,
@@ -1942,7 +2266,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 演示文稿平台，几秒内即可根据文字生成精美幻灯片。拥有 200 万以上用户，其中包括 Shopify、Notion 和斯坦福大学的团队。具备自动生成版式、内嵌数据追踪和一键换肤功能。可导出为网页、PDF 或 PowerPoint，并保持品牌风格统一。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 88,
@@ -1976,7 +2306,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 叙事平台，用于创建交互式故事、演示文稿和微型网站。50 万以上创作者在使用，包括 Figma 和 Linear 的团队。具备流畅转场、内嵌 Figma 设计和 AI 生成内容块。非常适合产品文档、公司故事和客户提案。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 90,
@@ -2010,7 +2346,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "在 Grammarly 语法与语调检查之上叠加的生成式写作辅助：可在任意文本框内起草、重写和调整语气。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 91,
@@ -2044,7 +2386,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "微软内置于 Windows、Edge 和 Microsoft 365 的助手，回答基于网络搜索结果并附来源引用。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 92,
@@ -2078,7 +2426,13 @@
       "Teams"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "开源模型与数据集的中心：可托管和微调模型、通过 API 运行推理，并把演示发布为 Spaces。",
+    "best_for_zh": [
+      "开发者",
+      "专业人士",
+      "团队"
+    ]
   },
   {
     "id": 93,
@@ -2112,7 +2466,13 @@
       "Teams"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用于构建大语言模型应用的框架——涵盖检索、工具调用和智能体图，并搭配 LangSmith 做追踪与评估。",
+    "best_for_zh": [
+      "开发者",
+      "专业人士",
+      "团队"
+    ]
   },
   {
     "id": 94,
@@ -2146,7 +2506,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Figma 内置的 AI 功能：生成图层与原型、即时填充占位内容、视觉搜索以及设计转代码辅助。",
+    "best_for_zh": [
+      "创意项目",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 95,
@@ -2180,7 +2546,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "浏览器自动填充与文本扩展助手，可根据简短片段和已保存数据填写表单、撰写日常消息。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 96,
@@ -2239,7 +2611,13 @@
       "Training"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "全球领先的 AI 视频数字人平台，获得 6 万以上企业信赖，其中包括半数财富 100 强公司。无需摄像机、影棚或演员，即可让 AI 数字人以 130 多种语言讲解，制作专业的培训视频、产品演示和演示文稿。在保持广播级画质的同时，将视频制作成本降低 90%。",
+    "best_for_zh": [
+      "团队",
+      "市场营销",
+      "培训"
+    ]
   },
   {
     "id": 98,
@@ -2273,7 +2651,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "根据一句提示生成全栈 Web 应用——包含前端、数据库和身份验证，代码可导出并归你所有。",
+    "best_for_zh": [
+      "内容创作",
+      "社交媒体",
+      "快速出结果"
+    ]
   },
   {
     "id": 99,
@@ -2307,7 +2691,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "DeepL 的写作助手：可对文本进行重写和润色，并提供语气、风格和正式程度控制，与 DeepL Translate 相互独立。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 101,
@@ -2341,7 +2731,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "内置于 Raycast 启动器的 AI：在 macOS 上通过一个快捷键即可调用 AI 命令、聊天和扩展。",
+    "best_for_zh": [
+      "生产力",
+      "团队协作",
+      "新手"
+    ]
   },
   {
     "id": 105,
@@ -2372,7 +2768,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "智谱 AI 的 ChatGLM 助手，支持中文对话、文档阅读、图像生成和编程辅助，并提供开源权重的 GLM 模型。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 107,
@@ -2403,7 +2805,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "百度的 Ernie 助手（文心一言），支持中文对话、写作、基于搜索的问答和图像生成。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 108,
@@ -2434,7 +2842,13 @@
       "Quick Results"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "阿里的 Qwen 助手（通义千问），支持聊天、文档与图像理解，并向开发者提供开源权重的 Qwen 模型。",
+    "best_for_zh": [
+      "内容创作",
+      "新手",
+      "快速出结果"
+    ]
   },
   {
     "id": 201,
@@ -2493,7 +2907,13 @@
     ],
     "description_en": "AI video repurposing tool that transforms long-form content — blog posts, webinars, podcasts — into viral short-form videos for social media in minutes. Used by 500,000+ marketers and content creators",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 视频再利用工具，可在几分钟内把博客文章、网络研讨会、播客等长内容转化为适合社交媒体的爆款短视频。50 万以上营销人员和内容创作者用它扩大在 YouTube、TikTok、Instagram 和 LinkedIn 上的触达。可自动提取精彩片段、加字幕和加品牌元素，比手工剪辑快 5 倍。",
+    "best_for_zh": [
+      "新手",
+      "快速出结果",
+      "内容创作"
+    ]
   },
   {
     "id": 205,
@@ -2518,7 +2938,13 @@
       "Readability"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "功能全面的写作工具，提供风格分析、语法检查和可读性报告。非常适合作者和编辑。",
+    "best_for_zh": [
+      "编辑润色",
+      "作者",
+      "可读性"
+    ]
   },
   {
     "id": 208,
@@ -2543,7 +2969,13 @@
       "Plot"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "专为小说作者设计的 AI 写作工具，功能包括情节反转、角色塑造和风格建议。",
+    "best_for_zh": [
+      "小说创作",
+      "角色塑造",
+      "情节"
+    ]
   },
   {
     "id": 210,
@@ -2568,7 +3000,13 @@
       "Concept"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "免费的 AI 图像生成器，质量尚可。非常适合零成本快速出草图和做概念构思。",
+    "best_for_zh": [
+      "免费",
+      "快速草图",
+      "概念构思"
+    ]
   },
   {
     "id": 212,
@@ -2593,7 +3031,13 @@
       "Stylized"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "专注艺术风格的 AI 图像生成器，用 AI 把你的想法变成精美画作。",
+    "best_for_zh": [
+      "艺术感",
+      "创意",
+      "风格化"
+    ]
   },
   {
     "id": 220,
@@ -2618,7 +3062,13 @@
       "Screen Recorder"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 Mac 的专业屏幕录制与视频剪辑软件，带有智能剪辑的 AI 功能。",
+    "best_for_zh": [
+      "Mac",
+      "专业级",
+      "屏幕录制"
+    ]
   },
   {
     "id": 222,
@@ -2643,7 +3093,13 @@
       "Marketing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向社交媒体的 AI 视频制作工具，可自动把照片和视频片段合成为精美视频。",
+    "best_for_zh": [
+      "社交媒体",
+      "幻灯片视频",
+      "市场营销"
+    ]
   },
   {
     "id": 223,
@@ -2668,7 +3124,13 @@
       "Teams"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "云端视频剪辑工具，内置 AI 功能，并提供面向团队的协作编辑特性。",
+    "best_for_zh": [
+      "云端剪辑",
+      "协作",
+      "团队"
+    ]
   },
   {
     "id": 224,
@@ -2693,7 +3155,13 @@
       "Basic Editing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Windows 内置的免费视频编辑器，带有自动生成字幕和修剪片段的 AI 功能。",
+    "best_for_zh": [
+      "免费",
+      "Windows",
+      "基础剪辑"
+    ]
   },
   {
     "id": 225,
@@ -2718,7 +3186,13 @@
       "Noise Reduction"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向播客的 AI 音频后期处理工具，可自动电平调整、降噪和音频修复。",
+    "best_for_zh": [
+      "播客制作",
+      "音频后期",
+      "降噪"
+    ]
   },
   {
     "id": 228,
@@ -2743,7 +3217,13 @@
       "Production"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 播客制作平台，提供文字转语音、音频剪辑和远程录音功能。",
+    "best_for_zh": [
+      "播客制作",
+      "远程录音",
+      "节目制作"
+    ]
   },
   {
     "id": 229,
@@ -2768,7 +3248,13 @@
       "Publishing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "自动化播客制作工具，提供 AI 剪辑、降噪和发布自动化。",
+    "best_for_zh": [
+      "播客制作",
+      "自动化",
+      "发布"
+    ]
   },
   {
     "id": 230,
@@ -2793,7 +3279,13 @@
       "Voice Effects"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向直播和游戏的 AI 变声器，可实时改变声音并添加多种音效。",
+    "best_for_zh": [
+      "游戏",
+      "直播",
+      "声音特效"
+    ]
   },
   {
     "id": 233,
@@ -2818,7 +3310,13 @@
       "IDE Integration"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "亚马逊的 AI 编程助手，集成于 VS Code，支持多种编程语言。",
+    "best_for_zh": [
+      "AWS",
+      "代码补全",
+      "IDE 集成"
+    ]
   },
   {
     "id": 235,
@@ -2843,7 +3341,13 @@
       "Review"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的代码重构工具，可分析代码质量并提出改进建议。",
+    "best_for_zh": [
+      "代码重构",
+      "代码质量",
+      "审查"
+    ]
   },
   {
     "id": 237,
@@ -2868,7 +3372,13 @@
       "Research"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "清华大学推出的开源 AI 代码模型，支持多种编程语言。",
+    "best_for_zh": [
+      "开源",
+      "多语言",
+      "研究"
+    ]
   },
   {
     "id": 238,
@@ -2893,7 +3403,13 @@
       "Research"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Hugging Face 推出的开源代码生成模型，训练数据来自宽松许可的代码。",
+    "best_for_zh": [
+      "开源",
+      "Hugging Face",
+      "研究"
+    ]
   },
   {
     "id": 240,
@@ -2918,7 +3434,13 @@
       "Action Items"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的会议纪要与行动项跟踪工具，可与日历应用集成。",
+    "best_for_zh": [
+      "会议",
+      "纪要",
+      "行动项"
+    ]
   },
   {
     "id": 241,
@@ -2943,7 +3465,13 @@
       "Team"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 会议管理平台，可准备议程、记录笔记并跟踪行动项。",
+    "best_for_zh": [
+      "会议管理",
+      "议程",
+      "团队"
+    ]
   },
   {
     "id": 242,
@@ -2968,7 +3496,13 @@
       "Code"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的数据分析笔记本，可将代码、文本和可视化结合在一起。",
+    "best_for_zh": [
+      "数据分析",
+      "笔记本",
+      "代码"
+    ]
   },
   {
     "id": 243,
@@ -2993,7 +3527,13 @@
       "AI Assist"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 笔记应用，能从你的笔记中学习并提供智能建议。",
+    "best_for_zh": [
+      "笔记记录",
+      "知识库",
+      "AI 辅助"
+    ]
   },
   {
     "id": 245,
@@ -3018,7 +3558,13 @@
       "Plugins"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "本地优先的笔记应用，支持 AI 插件，知识管理能力强。",
+    "best_for_zh": [
+      "笔记记录",
+      "本地化",
+      "插件"
+    ]
   },
   {
     "id": 246,
@@ -3043,7 +3589,13 @@
       "Spaced Repetition"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 笔记工具，结合间隔重复帮助学习，非常适合学生。",
+    "best_for_zh": [
+      "学习",
+      "学生",
+      "间隔重复"
+    ]
   },
   {
     "id": 248,
@@ -3068,7 +3620,13 @@
       "Enterprise"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Google 面向 Workspace 的 AI 助手，可辅助写作、分析与协作。",
+    "best_for_zh": [
+      "Google Workspace",
+      "协作",
+      "企业"
+    ]
   },
   {
     "id": 249,
@@ -3093,7 +3651,13 @@
       "Optimization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 文案平台，带有效果预测评分，可优化营销文案以获得更好效果。",
+    "best_for_zh": [
+      "市场营销",
+      "文案撰写",
+      "效果优化"
+    ]
   },
   {
     "id": 250,
@@ -3118,7 +3682,13 @@
       "Competitors"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI SEO 内容优化工具，可分析竞争对手并识别内容缺口。",
+    "best_for_zh": [
+      "SEO",
+      "内容分析",
+      "竞争对手"
+    ]
   },
   {
     "id": 253,
@@ -3143,7 +3713,13 @@
       "Research"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用 AI 与你的 PDF 文档对话，提取信息并总结内容。",
+    "best_for_zh": [
+      "PDF",
+      "文档分析",
+      "研究"
+    ]
   },
   {
     "id": 255,
@@ -3168,7 +3744,13 @@
       "Academic"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向科学研究的 AI 搜索引擎，可查找相关论文与研究成果。",
+    "best_for_zh": [
+      "研究",
+      "科学",
+      "学术"
+    ]
   },
   {
     "id": 256,
@@ -3193,7 +3775,13 @@
       "Summaries"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的学术搜索工具，借助 AI 摘要更好地理解研究论文。",
+    "best_for_zh": [
+      "学术",
+      "研究",
+      "摘要"
+    ]
   },
   {
     "id": 257,
@@ -3218,7 +3806,13 @@
       "Sharing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的社交化网页标注工具，可高亮标记、整理并分享你的见解。",
+    "best_for_zh": [
+      "高亮标注",
+      "研究",
+      "分享"
+    ]
   },
   {
     "id": 258,
@@ -3243,7 +3837,13 @@
       "Knowledge"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的阅读与笔记系统，可收录书籍和文章中的高亮内容。",
+    "best_for_zh": [
+      "阅读",
+      "高亮摘录",
+      "知识积累"
+    ]
   },
   {
     "id": 261,
@@ -3268,7 +3868,13 @@
       "Productivity"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向浏览器的 ChatGPT 集成，让你在任何网页上都能获得 AI 协助。",
+    "best_for_zh": [
+      "浏览器",
+      "AI 助手",
+      "生产力"
+    ]
   },
   {
     "id": 262,
@@ -3293,7 +3899,13 @@
       "AI"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "能从你的使用习惯中学习的个人 AI 助手。",
+    "best_for_zh": [
+      "个人助理",
+      "生产力",
+      "AI"
+    ]
   },
   {
     "id": 265,
@@ -3318,7 +3930,13 @@
       "Chat"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "会与你一同学习成长的 AI 伙伴，提供情感支持和对话陪伴。",
+    "best_for_zh": [
+      "陪伴",
+      "情感支持",
+      "聊天"
+    ]
   },
   {
     "id": 266,
@@ -3343,7 +3961,13 @@
       "AI"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "屡获殊荣的 AI 聊天机器人，具备自然的对话能力。",
+    "best_for_zh": [
+      "聊天机器人",
+      "对话",
+      "AI"
+    ]
   },
   {
     "id": 268,
@@ -3368,7 +3992,13 @@
       "Publishing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的内容平台，提供写作、编辑和发布工具。",
+    "best_for_zh": [
+      "内容平台",
+      "写作",
+      "发布"
+    ]
   },
   {
     "id": 269,
@@ -3393,7 +4023,13 @@
       "Domains"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 商业命名生成器，可生成有创意且可用的域名。",
+    "best_for_zh": [
+      "命名",
+      "商业",
+      "域名"
+    ]
   },
   {
     "id": 271,
@@ -3418,7 +4054,13 @@
       "Optimization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的邮件营销文案工具，可优化主题行和邮件正文。",
+    "best_for_zh": [
+      "邮件营销",
+      "主题行",
+      "效果优化"
+    ]
   },
   {
     "id": 272,
@@ -3443,7 +4085,13 @@
       "Optimization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向企业的营销语言优化 AI，以数据驱动生成文案。",
+    "best_for_zh": [
+      "企业级",
+      "市场营销",
+      "效果优化"
+    ]
   },
   {
     "id": 273,
@@ -3468,7 +4116,13 @@
       "Experimental"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向艺术家的 AI 创意平台，可用于探索 AI 生成艺术。",
+    "best_for_zh": [
+      "艺术家",
+      "创意",
+      "实验性"
+    ]
   },
   {
     "id": 274,
@@ -3493,7 +4147,13 @@
       "Effects"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "开源的 AI 视频与图像生成工具，可创作惊艳的视觉效果。",
+    "best_for_zh": [
+      "开源",
+      "视频",
+      "视觉特效"
+    ]
   },
   {
     "id": 277,
@@ -3518,7 +4178,13 @@
       "Content"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 文生视频工具，可自动把脚本转化为视频。",
+    "best_for_zh": [
+      "文生视频",
+      "自动化",
+      "内容制作"
+    ]
   },
   {
     "id": 278,
@@ -3543,7 +4209,13 @@
       "Marketing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 视频创作平台，可将文字配合 AI 配音转化为视频。",
+    "best_for_zh": [
+      "文生视频",
+      "AI 配音",
+      "市场营销"
+    ]
   },
   {
     "id": 279,
@@ -3568,7 +4240,13 @@
       "Marketing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "提供模板的 AI 视频编辑器，可快速制作专业视频。",
+    "best_for_zh": [
+      "模板",
+      "快速出片",
+      "市场营销"
+    ]
   },
   {
     "id": 280,
@@ -3593,7 +4271,13 @@
       "Marketing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "根据文字生成 AI 视频，自动使用素材画面合成视频。",
+    "best_for_zh": [
+      "文生视频",
+      "素材画面",
+      "市场营销"
+    ]
   },
   {
     "id": 283,
@@ -3618,7 +4302,13 @@
       "TTS"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 语音克隆与文字转语音工具，可创建自定义音色。",
+    "best_for_zh": [
+      "语音克隆",
+      "自定义音色",
+      "TTS"
+    ]
   },
   {
     "id": 284,
@@ -3643,7 +4333,13 @@
       "Accessibility"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 文字转语音工具，可朗读文章和书籍。",
+    "best_for_zh": [
+      "阅读",
+      "TTS",
+      "无障碍"
+    ]
   },
   {
     "id": 285,
@@ -3668,7 +4364,13 @@
       "Accessibility"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 文字转语音工具，音色自然，非常适合在线教育。",
+    "best_for_zh": [
+      "在线教育",
+      "TTS",
+      "无障碍"
+    ]
   },
   {
     "id": 286,
@@ -3693,7 +4395,13 @@
       "Developer"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 文档生成工具，可根据代码生成美观的文档。",
+    "best_for_zh": [
+      "文档生成",
+      "代码文档",
+      "开发者"
+    ]
   },
   {
     "id": 287,
@@ -3718,7 +4426,13 @@
       "Quality"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 代码审查与重构工具，可自动提升代码质量。",
+    "best_for_zh": [
+      "代码审查",
+      "重构",
+      "代码质量"
+    ]
   },
   {
     "id": 288,
@@ -3743,7 +4457,13 @@
       "Bugs"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的代码审查工具，可检测缺陷和安全问题。",
+    "best_for_zh": [
+      "代码审查",
+      "安全",
+      "缺陷检测"
+    ]
   },
   {
     "id": 289,
@@ -3768,7 +4488,13 @@
       "Developer"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "帮助你理解代码库的 AI，可导航和探索代码。",
+    "best_for_zh": [
+      "代码探索",
+      "理解代码",
+      "开发者"
+    ]
   },
   {
     "id": 294,
@@ -3793,7 +4519,13 @@
       "Social Media"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Canva 中的 AI 设计功能，包括魔法设计和文字特效。",
+    "best_for_zh": [
+      "设计",
+      "模板",
+      "社交媒体"
+    ]
   },
   {
     "id": 298,
@@ -3818,7 +4550,13 @@
       "Serverless"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "以极少的运维投入部署 AI 模型，实现无服务器化的 AI 部署。",
+    "best_for_zh": [
+      "部署",
+      "AI 模型",
+      "无服务器"
+    ]
   },
   {
     "id": 299,
@@ -3843,7 +4581,13 @@
       "AI Training"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用于运行 AI 模型的 GPU 云平台，可租用高性能 GPU。",
+    "best_for_zh": [
+      "GPU",
+      "云计算",
+      "AI 训练"
+    ]
   },
   {
     "id": 300,
@@ -3868,7 +4612,13 @@
       "Education"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "检测 AI 生成内容，判断文本是否由 AI 撰写。",
+    "best_for_zh": [
+      "AI 检测",
+      "内容核验",
+      "教育"
+    ]
   },
   {
     "id": 301,
@@ -3893,7 +4643,13 @@
       "Education"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "高准确率的进阶 AI 内容检测工具。",
+    "best_for_zh": [
+      "AI 检测",
+      "查重",
+      "教育"
+    ]
   },
   {
     "id": 302,
@@ -3918,7 +4674,13 @@
       "Content"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "检测 AI 生成文本并给出置信度评分。",
+    "best_for_zh": [
+      "AI 检测",
+      "教育",
+      "内容"
+    ]
   },
   {
     "id": 303,
@@ -3943,7 +4705,13 @@
       "SEO"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "带 AI 功能的查重工具，保护你的内容。",
+    "best_for_zh": [
+      "查重",
+      "内容保护",
+      "SEO"
+    ]
   },
   {
     "id": 305,
@@ -3968,7 +4736,13 @@
       "Creative"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 故事生成器，面向儿童和成人，可创作引人入胜的故事。",
+    "best_for_zh": [
+      "讲故事",
+      "儿童",
+      "创意"
+    ]
   },
   {
     "id": 307,
@@ -3993,7 +4767,13 @@
       "Writers"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用于创建详尽角色档案的 AI 工具，非常适合小说作者。",
+    "best_for_zh": [
+      "角色创建",
+      "小说",
+      "作者"
+    ]
   },
   {
     "id": 308,
@@ -4018,7 +4798,13 @@
       "Business"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI logo 设计工具，可快速制作专业 logo。",
+    "best_for_zh": [
+      "Logo 设计",
+      "品牌",
+      "商业"
+    ]
   },
   {
     "id": 310,
@@ -4043,7 +4829,13 @@
       "Business"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 品牌设计平台，涵盖 logo、配色和字体。",
+    "best_for_zh": [
+      "品牌设计",
+      "Logo",
+      "商业"
+    ]
   },
   {
     "id": 314,
@@ -4068,7 +4860,13 @@
       "Productivity"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 日历助手，可安排会议并优化时间利用。",
+    "best_for_zh": [
+      "日历",
+      "日程安排",
+      "生产力"
+    ]
   },
   {
     "id": 316,
@@ -4093,7 +4891,13 @@
       "Productivity"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 任务管理与日历工具，自动优化你的一天。",
+    "best_for_zh": [
+      "任务管理",
+      "日历",
+      "生产力"
+    ]
   },
   {
     "id": 317,
@@ -4118,7 +4922,13 @@
       "AI"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 邮件助手，可总结邮件内容并建议回复。",
+    "best_for_zh": [
+      "邮件",
+      "生产力",
+      "AI"
+    ]
   },
   {
     "id": 318,
@@ -4143,7 +4953,13 @@
       "Inbox"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 邮件整理工具，可过滤邮件并划分优先级。",
+    "best_for_zh": [
+      "邮件整理",
+      "生产力",
+      "收件箱"
+    ]
   },
   {
     "id": 328,
@@ -4168,7 +4984,13 @@
       "Home"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 室内设计可视化工具，上传房间照片即可用 AI 重新设计。",
+    "best_for_zh": [
+      "室内设计",
+      "可视化",
+      "家居"
+    ]
   },
   {
     "id": 329,
@@ -4193,7 +5015,13 @@
       "Visualization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 室内设计生成器，把房间照片变成惊艳的设计方案。",
+    "best_for_zh": [
+      "房间设计",
+      "室内",
+      "可视化"
+    ]
   },
   {
     "id": 342,
@@ -4218,7 +5046,13 @@
       "Training"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用逼真的数字人创作 AI 视频。",
+    "best_for_zh": [
+      "数字人",
+      "AI 视频",
+      "培训"
+    ]
   },
   {
     "id": 355,
@@ -4243,7 +5077,13 @@
       "Completion"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 Python 和 JavaScript 的 AI 代码补全工具。",
+    "best_for_zh": [
+      "Python",
+      "JavaScript",
+      "代码补全"
+    ]
   },
   {
     "id": 356,
@@ -4269,7 +5109,13 @@
       "Search"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Codeium 曾是 Exafunction 旗下的免费 AI 编程工具。该公司于 2025 年 4 月更名为 Windsurf；2025 年 7 月 Google 聘用其创始人并授权相关技术后，Cognition 收购了剩余业务。独立编辑器在 2026 年 6 月更名为 Devin Desktop，而编辑器插件则继续沿用 Windsurf Plugin 名称。codeium.com 现已重定向到 devin.ai/desktop。",
+    "best_for_zh": [
+      "免费",
+      "代码补全",
+      "搜索"
+    ]
   },
   {
     "id": 357,
@@ -4294,7 +5140,13 @@
       "Research"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "专攻代码生成的开源 AI 代码模型。",
+    "best_for_zh": [
+      "开源",
+      "代码生成",
+      "研究"
+    ]
   },
   {
     "id": 359,
@@ -4321,7 +5173,13 @@
     "rating": null,
     "rating_count": null,
     "unverified": true,
-    "unverified_reason": "social-media-manager.com is an unrelated German career-info page"
+    "unverified_reason": "social-media-manager.com is an unrelated German career-info page",
+    "description_zh": "用 AI 驱动的排期与内容功能统一管理所有社交媒体账号。",
+    "best_for_zh": [
+      "社交媒体",
+      "排期",
+      "账号管理"
+    ]
   },
   {
     "id": 431,
@@ -4346,7 +5204,13 @@
       "Design"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用 AI 设计定制化的环境音景。",
+    "best_for_zh": [
+      "音景",
+      "定制化",
+      "设计"
+    ]
   },
   {
     "id": 441,
@@ -4371,7 +5235,13 @@
       "Technical"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "借助 AI 备考编程面试。",
+    "best_for_zh": [
+      "面试",
+      "备考",
+      "技术"
+    ]
   },
   {
     "id": 447,
@@ -4396,7 +5266,13 @@
       "Automation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Slack 工作区的 AI 功能，可总结消息、更智能地搜索并自动化任务。",
+    "best_for_zh": [
+      "沟通协作",
+      "团队聊天",
+      "自动化"
+    ]
   },
   {
     "id": 448,
@@ -4421,7 +5297,13 @@
       "Collaboration"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Zoom 会议的 AI Companion，提供智能摘要、行动项和会议洞察。",
+    "best_for_zh": [
+      "视频会议",
+      "会议",
+      "协作"
+    ]
   },
   {
     "id": 453,
@@ -4446,7 +5328,13 @@
       "Distraction-free"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "为写作者打造的 AI 优先文字处理器，具备专注模式、大纲和智能建议。",
+    "best_for_zh": [
+      "写作",
+      "专注",
+      "无干扰"
+    ]
   },
   {
     "id": 454,
@@ -4471,7 +5359,13 @@
       "SEO"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "具有垂直领域专精的 AI 写稿工具，可生成特定行业的内容。",
+    "best_for_zh": [
+      "文章",
+      "垂直内容",
+      "SEO"
+    ]
   },
   {
     "id": 455,
@@ -4496,7 +5390,13 @@
       "Landing Pages"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 内容自动化平台，可生成博客文章、落地页和营销文案。",
+    "best_for_zh": [
+      "自动化",
+      "市场营销",
+      "落地页"
+    ]
   },
   {
     "id": 459,
@@ -4521,7 +5421,13 @@
       "Graphics"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用于创建和重新生成矢量图形与插画的 AI 工具。",
+    "best_for_zh": [
+      "矢量图",
+      "插画",
+      "图形设计"
+    ]
   },
   {
     "id": 462,
@@ -4546,7 +5452,13 @@
       "Quick"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 视频创作平台，输入文字即可自动剪辑生成视频。",
+    "best_for_zh": [
+      "文生视频",
+      "社交媒体",
+      "快速"
+    ]
   },
   {
     "id": 464,
@@ -4571,7 +5483,13 @@
       "Marketing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 视频创作工具，可自动把博客文章转化为引人入胜的视频。",
+    "best_for_zh": [
+      "博客转视频",
+      "内容再利用",
+      "市场营销"
+    ]
   },
   {
     "id": 465,
@@ -4596,7 +5514,13 @@
       "Professional"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "带会说话数字人的 AI 视频生成工具，用虚拟主持人制作专业视频。",
+    "best_for_zh": [
+      "数字人",
+      "演示",
+      "专业级"
+    ]
   },
   {
     "id": 466,
@@ -4621,7 +5545,13 @@
       "Enterprise"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用于规模化制作个性化视频的 AI 视频平台，可为每位客户生成定制视频。",
+    "best_for_zh": [
+      "个性化",
+      "规模化",
+      "企业级"
+    ]
   },
   {
     "id": 468,
@@ -4646,7 +5576,13 @@
       "Natural"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 语音生成工具，音色富有表现力，可生成自然流畅的语音。",
+    "best_for_zh": [
+      "语音生成",
+      "富有表现力",
+      "自然"
+    ]
   },
   {
     "id": 470,
@@ -4671,7 +5607,13 @@
       "Hosting"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "带播客托管的 AI 文字转语音工具，可将文本转为音频并托管播客。",
+    "best_for_zh": [
+      "播客",
+      "TTS",
+      "托管"
+    ]
   },
   {
     "id": 473,
@@ -4696,7 +5638,13 @@
       "Voice Cloning"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向音视频的企业级 AI，提供语音克隆和内容变现能力。",
+    "best_for_zh": [
+      "企业级",
+      "变现",
+      "语音克隆"
+    ]
   },
   {
     "id": 474,
@@ -4721,7 +5669,13 @@
       "Free"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 Python 和 JavaScript 的 AI 代码补全工具，免费且注重隐私。",
+    "best_for_zh": [
+      "Python",
+      "JavaScript",
+      "免费"
+    ]
   },
   {
     "id": 475,
@@ -4746,7 +5700,13 @@
       "Completion"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "适用于多种任务的 AI 编程助手，覆盖代码补全、文档编写和测试。",
+    "best_for_zh": [
+      "文档编写",
+      "测试",
+      "代码补全"
+    ]
   },
   {
     "id": 476,
@@ -4771,7 +5731,13 @@
       "Explanation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向开发者的 AI 代码助手，支持代码生成、讲解和调试。",
+    "best_for_zh": [
+      "代码生成",
+      "调试",
+      "代码讲解"
+    ]
   },
   {
     "id": 477,
@@ -4796,7 +5762,13 @@
       "Sourcegraph"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Sourcegraph 推出的免费 AI 编程助手，借助 AI 理解和编写代码。",
+    "best_for_zh": [
+      "免费",
+      "代码库",
+      "Sourcegraph"
+    ]
   },
   {
     "id": 478,
@@ -4821,7 +5793,13 @@
       "Prototyping"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的 Web 应用构建工具，描述需求即可得到可运行的代码。",
+    "best_for_zh": [
+      "网页构建",
+      "无代码",
+      "原型开发"
+    ]
   },
   {
     "id": 479,
@@ -4846,7 +5824,13 @@
       "Fast"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 建站工具，几秒即可生成完整网站。",
+    "best_for_zh": [
+      "建站工具",
+      "无代码",
+      "快速"
+    ]
   },
   {
     "id": 480,
@@ -4871,7 +5855,13 @@
       "Modern"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的网站设计与原型工具，用 AI 打造精美站点。",
+    "best_for_zh": [
+      "设计",
+      "原型开发",
+      "现代感"
+    ]
   },
   {
     "id": 481,
@@ -4896,7 +5886,13 @@
       "UI"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的 Bootstrap 代码生成器，借助 AI 辅助创建响应式界面。",
+    "best_for_zh": [
+      "Bootstrap",
+      "响应式",
+      "界面"
+    ]
   },
   {
     "id": 488,
@@ -4921,7 +5917,13 @@
       "Information organization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Evernote 的 AI 助手，提供智能建议和内容整理功能。",
+    "best_for_zh": [
+      "笔记记录",
+      "知识管理",
+      "信息整理"
+    ]
   },
   {
     "id": 493,
@@ -4946,7 +5948,13 @@
       "Professional content"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Ulysses 写作应用中内置的 AI 写作助手。",
+    "best_for_zh": [
+      "写作",
+      "专注模式",
+      "专业内容"
+    ]
   },
   {
     "id": 501,
@@ -4971,7 +5979,13 @@
       "Professional design"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Sketch 应用的 AI 助手，提供设计建议和自动化功能。",
+    "best_for_zh": [
+      "Mac 设计",
+      "UI/UX",
+      "专业设计"
+    ]
   },
   {
     "id": 425,
@@ -5003,7 +6017,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 驱动的邮件客户端，会学习你的偏好，帮你以快 3 倍的速度清空收件箱。功能包括 AI 起草邮件、智能摘要和智能回复建议。",
+    "best_for_zh": [
+      "专业人士",
+      "高管",
+      "创业者"
+    ]
   },
   {
     "id": 444,
@@ -5035,7 +6055,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "面向 Instagram 的 AI 社媒排期与内容创作工具，可生成文案、推荐话题标签并给出最佳发布时间，以最大化互动效果。",
+    "best_for_zh": [
+      "社媒运营",
+      "品牌方",
+      "网红达人"
+    ]
   },
   {
     "id": 445,
@@ -5067,7 +6093,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 内容创作与社媒自动化平台，可生成帖子、图片，并在 Instagram、Facebook、Twitter 和 LinkedIn 上统一排期发布。",
+    "best_for_zh": [
+      "小型企业",
+      "内容创作者",
+      "营销人员"
+    ]
   },
   {
     "id": 446,
@@ -5099,7 +6131,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 驱动的 YouTube 优化工具，可生成标题、描述、标签并提供缩略图建议，提升视频被发现的概率。",
+    "best_for_zh": [
+      "YouTuber",
+      "内容创作者",
+      "视频营销人员"
+    ]
   },
   {
     "id": 1526,
@@ -5131,7 +6169,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI YouTube 数据分析与优化平台，提供关键词研究、竞品分析和内容建议，帮助你更快做大频道。",
+    "best_for_zh": [
+      "YouTuber",
+      "频道运营者",
+      "视频营销人员"
+    ]
   },
   {
     "id": 1527,
@@ -5163,7 +6207,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "集成多种算法（Stable Diffusion、DALL-E 等）的 AI 绘画生成器，尤其适合制作高分辨率印刷品和装饰画。提供社区挑战和风格迁移功能。",
+    "best_for_zh": [
+      "艺术家",
+      "印刷品设计",
+      "家居装饰"
+    ]
   },
   {
     "id": 458,
@@ -5195,7 +6245,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 视频创作平台，提供逼真数字人，适用于学习与发展类内容。具备自动翻译和协作编辑功能。",
+    "best_for_zh": [
+      "L&D 团队",
+      "企业培训",
+      "人力资源"
+    ]
   },
   {
     "id": 1528,
@@ -5227,7 +6283,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "面向销售团队的 AI 邮件教练，可实时分析并优化冷启动邮件，提供回复率预测和改进建议。",
+    "best_for_zh": [
+      "销售团队",
+      "SDR",
+      "创始人"
+    ]
   },
   {
     "id": 460,
@@ -5259,7 +6321,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 销售内容平台，可生成销售话术、邮件序列、电话脚本和 LinkedIn 开发信，并支持与 CRM 集成。",
+    "best_for_zh": [
+      "销售团队",
+      "营收团队",
+      "SDR"
+    ]
   },
   {
     "id": 461,
@@ -5291,7 +6359,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 驱动的日历与任务管理工具，可自动排程你的一天、为任务排定优先级，并在优先级变化时调整计划。非常适合同时对接多位客户的自由职业者。",
+    "best_for_zh": [
+      "自由职业者",
+      "项目经理",
+      "独立创业者"
+    ]
   },
   {
     "id": 1529,
@@ -5323,7 +6397,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "面向自由职业者的 AI 商务助手，处理开票、时间追踪、提案撰写与客户沟通。为独立工作者打造的一体化平台。",
+    "best_for_zh": [
+      "自由职业者",
+      "顾问",
+      "承包商"
+    ]
   },
   {
     "id": 463,
@@ -5355,7 +6435,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 库存管理与需求预测工具，可预测库存水位、自动补货，并优化中小企业的仓储运营。",
+    "best_for_zh": [
+      "零售",
+      "电商",
+      "仓储"
+    ]
   },
   {
     "id": 1530,
@@ -5387,7 +6473,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 驱动的库存规划与采购工具，可与 Shopify、Amazon 和 WooCommerce 集成，生成智能采购订单与需求预测。",
+    "best_for_zh": [
+      "电商",
+      "零售商",
+      "分销商"
+    ]
   },
   {
     "id": 467,
@@ -5419,7 +6511,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 演示文稿设计工具，可根据大纲或内容生成专业幻灯片。自动调整版式、推荐视觉素材，并保持设计风格一致。",
+    "best_for_zh": [
+      "演示者",
+      "市场营销人员",
+      "顾问"
+    ]
   },
   {
     "id": 1531,
@@ -5451,7 +6549,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 写作助手，可针对清晰度、语气和风格润色你的句子，帮你更精准地表达想法，并在各类平台上高效写作。",
+    "best_for_zh": [
+      "写作者",
+      "职场人士",
+      "学生"
+    ]
   },
   {
     "id": 1532,
@@ -5483,7 +6587,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 图像编辑套件，提供背景移除、重新打光、画面清理和画质放大等工具。隶属 Stability AI 生态，输出达到专业水准。",
+    "best_for_zh": [
+      "设计师",
+      "摄影师",
+      "电商"
+    ]
   },
   {
     "id": 1533,
@@ -5515,7 +6625,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 背景移除与产品摄影工具，能把简单的手机照片处理成影棚级图片，非常适合电商与社交媒体使用。",
+    "best_for_zh": [
+      "电商",
+      "卖家",
+      "社交媒体"
+    ]
   },
   {
     "id": 1534,
@@ -5547,7 +6663,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 视频再利用工具，可自动从长视频中剪辑出有传播潜力的短片。非常适合把播客和 YouTube 视频变成 TikTok、Reels 和 Shorts 内容。",
+    "best_for_zh": [
+      "内容创作者",
+      "播客主",
+      "YouTube 创作者"
+    ]
   },
   {
     "id": 1535,
@@ -5579,7 +6701,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 音频增强工具，可消除背景噪音、提升人声质量，用任意麦克风都能录出录音棚级效果。还包含转录与编辑功能。",
+    "best_for_zh": [
+      "播客主",
+      "YouTube 创作者",
+      "访谈者"
+    ]
   },
   {
     "id": 482,
@@ -5611,7 +6739,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "开源 AI 编程助手，支持 VS Code 与 JetBrains。提供代码补全、对话式辅助，以及可适配任意编码工作流的自定义提示模板。",
+    "best_for_zh": [
+      "开发者",
+      "开源爱好者",
+      "团队"
+    ]
   },
   {
     "id": 484,
@@ -5643,7 +6777,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 驱动的工作空间，可自动整理笔记、文档与知识。借助 AI 串联想法、推送相关信息，构建个人知识库。",
+    "best_for_zh": [
+      "知识工作者",
+      "研究人员",
+      "写作者"
+    ]
   },
   {
     "id": 485,
@@ -5675,7 +6815,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 会议转录与笔记工具，可将音频转为 104 种语言的文字。具备说话人识别、摘要生成和待办事项提取功能。",
+    "best_for_zh": [
+      "团队",
+      "学生",
+      "记者"
+    ]
   },
   {
     "id": 1536,
@@ -5707,7 +6853,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "面向学者与研究人员的 AI 写作助手，支持引用管理、文献综述辅助和抄袭检测，帮助更快地完成论文与研究文章的写作。",
+    "best_for_zh": [
+      "研究人员",
+      "学生",
+      "学者"
+    ]
   },
   {
     "id": 489,
@@ -5739,7 +6891,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 写作助手浏览器扩展，让你在网页任意位置都能写作。可生成内容、改写文本，并在任意输入框中提供建议。",
+    "best_for_zh": [
+      "写作者",
+      "社交媒体运营",
+      "博主"
+    ]
   },
   {
     "id": 491,
@@ -5771,7 +6929,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 视频创作工具，可将文本、博客文章和脚本转化为配有 AI 配音与素材画面的精彩视频，非常适合规模化产出社交媒体内容。",
+    "best_for_zh": [
+      "内容创作者",
+      "社交媒体",
+      "市场营销人员"
+    ]
   },
   {
     "id": 492,
@@ -5803,7 +6967,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 增强的设计平台，提供 Magic Write、Magic Edit、背景移除和 AI 图像生成等功能。面向非设计师与专业人士的一体化设计工具。",
+    "best_for_zh": [
+      "设计师",
+      "市场营销人员",
+      "小型企业"
+    ]
   },
   {
     "id": 494,
@@ -5835,7 +7005,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "Vercel 推出的 AI 界面生成工具，可根据文字描述创建 React 组件，并集成 Tailwind CSS 与 shadcn/ui，输出可直接投产的代码。",
+    "best_for_zh": [
+      "前端开发者",
+      "设计师",
+      "初创公司"
+    ]
   },
   {
     "id": 499,
@@ -5867,7 +7043,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "个人 AI 搜索引擎，会为你在电脑上的一切操作建立索引——应用、网页、会议、文档——让你用自然语言检索自己的整个数字生活。",
+    "best_for_zh": [
+      "知识工作者",
+      "企业高管",
+      "研究人员"
+    ]
   },
   {
     "id": 502,
@@ -5899,7 +7081,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "AI 视频生成模型，可根据文字和图片生成逼真、高质量的视频。具备时间一致性、镜头控制和电影级画质输出。",
+    "best_for_zh": [
+      "影视创作者",
+      "创意工作者",
+      "市场营销人员"
+    ]
   },
   {
     "id": 503,
@@ -5931,7 +7119,13 @@
     "rating": null,
     "rating_count": null,
     "languages": [],
-    "needs_vpn": false
+    "needs_vpn": false,
+    "description_zh": "先进的 AI 视频生成平台，可根据文字提示生成高质量、时间连贯的视频，支持最长 5 分钟的视频，动作与细节表现逼真。",
+    "best_for_zh": [
+      "视频创作者",
+      "影视创作者",
+      "广告主"
+    ]
   },
   {
     "id": 555,
@@ -5956,7 +7150,13 @@
       "Enterprise"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "先进的 AI 安全运营平台，可自动检测并响应威胁。",
+    "best_for_zh": [
+      "安全运营",
+      "威胁检测",
+      "企业"
+    ]
   },
   {
     "id": 558,
@@ -5981,7 +7181,13 @@
       "Optimization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "先进的 AI SEO 内容平台，可用于博客内容的调研、撰写与优化。",
+    "best_for_zh": [
+      "SEO 内容",
+      "调研",
+      "优化"
+    ]
   },
   {
     "id": 561,
@@ -6006,7 +7212,13 @@
       "Content"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 视频脚本撰写工具，可为你的视频生成专业脚本。",
+    "best_for_zh": [
+      "视频脚本",
+      "写作",
+      "内容"
+    ]
   },
   {
     "id": 587,
@@ -6031,7 +7243,13 @@
       "Cross-platform"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 React Native 开发的先进 AI 辅助。",
+    "best_for_zh": [
+      "React Native",
+      "移动开发",
+      "跨平台"
+    ]
   },
   {
     "id": 612,
@@ -6056,7 +7274,13 @@
       "YouTube"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的视频剪辑工具，具备自动剪辑与场景检测功能。",
+    "best_for_zh": [
+      "视频剪辑",
+      "内容创作",
+      "YouTube"
+    ]
   },
   {
     "id": 616,
@@ -6081,7 +7305,13 @@
       "Background Removal"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向电商的 AI 产品图增强与背景移除工具。",
+    "best_for_zh": [
+      "电商",
+      "产品摄影",
+      "背景移除"
+    ]
   },
   {
     "id": 635,
@@ -6106,7 +7336,13 @@
       "Search"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 笔记工具，具备智能整理与搜索功能。",
+    "best_for_zh": [
+      "笔记记录",
+      "整理",
+      "搜索"
+    ]
   },
   {
     "id": 760,
@@ -6131,7 +7367,13 @@
       "Marketing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 社交媒体内容规划工具，支持平台集成、内容创意与发布日历。",
+    "best_for_zh": [
+      "社交媒体",
+      "内容规划",
+      "营销"
+    ]
   },
   {
     "id": 860,
@@ -6177,7 +7419,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "助力 Pinterest 增长的 AI 工具",
+    "best_for_zh": [
+      "Pinterest 营销",
+      "内容创作者",
+      "电商"
+    ]
   },
   {
     "id": 861,
@@ -6223,7 +7471,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "将音频播客转化为视频内容",
+    "best_for_zh": [
+      "播客主",
+      "内容再利用",
+      "社交媒体"
+    ]
   },
   {
     "id": 864,
@@ -6269,7 +7523,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的 CI/CD 流水线优化工具",
+    "best_for_zh": [
+      "DevOps 工程师",
+      "工程团队",
+      "企业级 CI/CD"
+    ]
   },
   {
     "id": 866,
@@ -6315,7 +7575,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "先进的 AI 语音生成工具，支持情绪控制",
+    "best_for_zh": [
+      "配音演员",
+      "有声书朗读者",
+      "内容创作者"
+    ]
   },
   {
     "id": 868,
@@ -6361,7 +7627,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向教师的免费 AI 工具套件",
+    "best_for_zh": [
+      "教师",
+      "教育工作者",
+      "学校"
+    ]
   },
   {
     "id": 870,
@@ -6407,7 +7679,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的 LinkedIn 增长工具",
+    "best_for_zh": [
+      "LinkedIn 职场人士",
+      "B2B 市场营销人员",
+      "求职者"
+    ]
   },
   {
     "id": 871,
@@ -6453,7 +7731,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 TikTok 直播的 AI 视频工具",
+    "best_for_zh": [
+      "TikTok 创作者",
+      "主播",
+      "社交媒体"
+    ]
   },
   {
     "id": 876,
@@ -6499,7 +7783,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 数字人视频创作平台",
+    "best_for_zh": [
+      "企业培训",
+      "市场营销团队",
+      "在线学习"
+    ]
   },
   {
     "id": 878,
@@ -6545,7 +7835,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向初创公司的免费 AI 工具套件",
+    "best_for_zh": [
+      "初创公司创始人",
+      "创业者",
+      "小团队"
+    ]
   },
   {
     "id": 879,
@@ -6591,7 +7887,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 邮件营销工具",
+    "best_for_zh": [
+      "邮件营销人员",
+      "电商",
+      "SaaS 公司"
+    ]
   },
   {
     "id": 881,
@@ -6637,7 +7939,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 YouTube Shorts 的 AI 视频工具",
+    "best_for_zh": [
+      "YouTube 创作者",
+      "短视频内容",
+      "社交媒体"
+    ]
   },
   {
     "id": 887,
@@ -6683,7 +7991,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向自由职业者的免费 AI 工具",
+    "best_for_zh": [
+      "自由职业者",
+      "独立承包商",
+      "独立创业者"
+    ]
   },
   {
     "id": 889,
@@ -6729,7 +8043,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 视频渲染与增强工具",
+    "best_for_zh": [
+      "视频剪辑师",
+      "视觉特效艺术家",
+      "后期制作"
+    ]
   },
   {
     "id": 892,
@@ -6775,7 +8095,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用于直播优化的 AI 工具",
+    "best_for_zh": [
+      "主播",
+      "游戏内容创作者",
+      "活动直播方"
+    ]
   },
   {
     "id": 893,
@@ -6821,7 +8147,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 像素画与复古游戏精灵图生成器",
+    "best_for_zh": [
+      "游戏开发者",
+      "像素艺术家",
+      "独立工作室"
+    ]
   },
   {
     "id": 894,
@@ -6867,7 +8199,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 编曲与音乐制作助手",
+    "best_for_zh": [
+      "音乐制作人",
+      "Beat 制作者",
+      "词曲作者"
+    ]
   },
   {
     "id": 895,
@@ -6913,7 +8251,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向基础设施管理的 AI DevOps 助手",
+    "best_for_zh": [
+      "DevOps 工程师",
+      "SRE 团队",
+      "云架构师"
+    ]
   },
   {
     "id": 896,
@@ -6959,7 +8303,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向市场营销团队的 AI 文案工具",
+    "best_for_zh": [
+      "市场营销团队",
+      "文案撰稿人",
+      "广告公司"
+    ]
   },
   {
     "id": 900,
@@ -7005,7 +8355,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "具备地理智能的 AI 旅行视频剪辑工具",
+    "best_for_zh": [
+      "旅行内容创作者",
+      "旅游机构",
+      "Vlog 创作者"
+    ]
   },
   {
     "id": 901,
@@ -7051,7 +8407,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "免费的 AI 商业计划与策略生成工具",
+    "best_for_zh": [
+      "首次创业者",
+      "个人创业者",
+      "学生"
+    ]
   },
   {
     "id": 904,
@@ -7097,7 +8459,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向社交媒体的 AI 短视频创作工具",
+    "best_for_zh": [
+      "社交媒体运营",
+      "内容创作者",
+      "小型企业"
+    ]
   },
   {
     "id": 905,
@@ -7143,7 +8511,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 艺术藏品管理与生成工具",
+    "best_for_zh": [
+      "艺术收藏家",
+      "画廊主",
+      "数字艺术家"
+    ]
   },
   {
     "id": 915,
@@ -7189,7 +8563,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "具备上下文感知补全能力的 AI 编程助手",
+    "best_for_zh": [
+      "软件开发者",
+      "工程团队",
+      "编程学习者"
+    ]
   },
   {
     "id": 917,
@@ -7235,7 +8615,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 人声合成与和声生成工具",
+    "best_for_zh": [
+      "音乐制作人",
+      "词曲作者",
+      "录音室工程师"
+    ]
   },
   {
     "id": 919,
@@ -7281,7 +8667,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 视频增强与画质提升工具",
+    "best_for_zh": [
+      "视频剪辑师",
+      "影像修复",
+      "画质提升"
+    ]
   },
   {
     "id": 920,
@@ -7327,7 +8719,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 草图转图像工具",
+    "best_for_zh": [
+      "概念艺术家",
+      "设计师",
+      "创意从业者"
+    ]
   },
   {
     "id": 921,
@@ -7373,7 +8771,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI Twitter/X 增长与分析平台",
+    "best_for_zh": [
+      "Twitter/X 创作者",
+      "个人品牌",
+      "社交媒体增长"
+    ]
   },
   {
     "id": 922,
@@ -7419,7 +8823,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "具备趋势分析能力的 AI YouTube Shorts 创作工具",
+    "best_for_zh": [
+      "YouTube 创作者",
+      "短视频内容",
+      "病毒式营销"
+    ]
   },
   {
     "id": 923,
@@ -7465,7 +8875,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 时装设计与打样工具",
+    "best_for_zh": [
+      "时装设计师",
+      "服装品牌",
+      "设计专业学生"
+    ]
   },
   {
     "id": 926,
@@ -7511,7 +8927,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "具备 SERP 排名追踪能力的 AI SEO 写作助手",
+    "best_for_zh": [
+      "SEO 写作者",
+      "内容经理",
+      "数字营销机构"
+    ]
   },
   {
     "id": 933,
@@ -7557,7 +8979,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI Twitter 长推文撰写与排程工具",
+    "best_for_zh": [
+      "Twitter 创作者",
+      "意见领袖",
+      "内容营销人员"
+    ]
   },
   {
     "id": 935,
@@ -7603,7 +9031,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 时尚 lookbook 与系列设计生成工具",
+    "best_for_zh": [
+      "时尚品牌",
+      "Lookbook 创作者",
+      "造型总监"
+    ]
   },
   {
     "id": 936,
@@ -7649,7 +9083,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "支持多轨编辑的 AI 播客制作工具",
+    "best_for_zh": [
+      "播客制作人",
+      "音频工程师",
+      "广播团队"
+    ]
   },
   {
     "id": 937,
@@ -7695,7 +9135,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI Next.js 开发助手",
+    "best_for_zh": [
+      "Next.js 开发者",
+      "全栈工程师",
+      "网页开发机构"
+    ]
   },
   {
     "id": 938,
@@ -7741,7 +9187,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "可控制语气的 AI 长文写作工具",
+    "best_for_zh": [
+      "内容写作者",
+      "作者",
+      "博主"
+    ]
   },
   {
     "id": 939,
@@ -7787,7 +9239,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向市场营销团队的 AI 视频制作套件",
+    "best_for_zh": [
+      "市场营销团队",
+      "品牌经理",
+      "广告公司"
+    ]
   },
   {
     "id": 941,
@@ -7833,7 +9291,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "免费的 AI 副业创意生成与规划工具",
+    "best_for_zh": [
+      "准创业者",
+      "副业探索者",
+      "学生"
+    ]
   },
   {
     "id": 942,
@@ -7879,7 +9343,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 敏捷项目管理工具",
+    "best_for_zh": [
+      "敏捷团队",
+      "Scrum 敏捷教练",
+      "产品经理"
+    ]
   },
   {
     "id": 943,
@@ -7925,7 +9395,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "具备提交信息建议能力的 AI Git 工作流助手",
+    "best_for_zh": [
+      "开发者",
+      "工程团队",
+      "开源贡献者"
+    ]
   },
   {
     "id": 945,
@@ -7971,7 +9447,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 音频混音与母带处理工具",
+    "best_for_zh": [
+      "音乐制作人",
+      "音频工程师",
+      "独立音乐人"
+    ]
   },
   {
     "id": 946,
@@ -8017,7 +9499,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "具备 SEO 能力的 AI 博客写作助手",
+    "best_for_zh": [
+      "博主",
+      "内容营销人员",
+      "SEO 写作者"
+    ]
   },
   {
     "id": 947,
@@ -8063,7 +9551,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 动画与动态图形创作工具",
+    "best_for_zh": [
+      "动态设计师",
+      "动画师",
+      "社交媒体创作者"
+    ]
   },
   {
     "id": 949,
@@ -8109,7 +9603,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向云平台的 AI 部署自动化工具",
+    "best_for_zh": [
+      "DevOps 团队",
+      "云工程师",
+      "SRE 专业人士"
+    ]
   },
   {
     "id": 950,
@@ -8155,7 +9655,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 写作语气分析与调整工具",
+    "best_for_zh": [
+      "商务写作者",
+      "客户支持",
+      "市场营销团队"
+    ]
   },
   {
     "id": 953,
@@ -8201,7 +9707,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向音乐人的 AI 专辑封面生成工具，支持风格迁移与封面设计模板",
+    "best_for_zh": [
+      "专辑封面",
+      "音乐",
+      "封面设计"
+    ]
   },
   {
     "id": 956,
@@ -8247,7 +9759,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 Google Ads、Facebook Ads 及社交媒体投放的 AI 广告文案生成工具",
+    "best_for_zh": [
+      "广告文案",
+      "广告投放",
+      "营销"
+    ]
   },
   {
     "id": 957,
@@ -8293,7 +9811,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 增强的视频剪辑工具，具备自动字幕、特效和一键模板",
+    "best_for_zh": [
+      "视频剪辑",
+      "短视频",
+      "社交媒体"
+    ]
   },
   {
     "id": 958,
@@ -8339,7 +9863,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 产品评测视频创作工具，支持脚本生成、B-roll 素材建议和对比表格",
+    "best_for_zh": [
+      "产品评测",
+      "电商",
+      "视频"
+    ]
   },
   {
     "id": 959,
@@ -8385,7 +9915,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向小型企业的免费 AI 工具包，包含发票生成、CRM 和营销模板",
+    "best_for_zh": [
+      "小型企业",
+      "发票开具",
+      "CRM"
+    ]
   },
   {
     "id": 960,
@@ -8431,7 +9967,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 销售自动化平台，具备线索评分、邮件序列和销售漏斗分析功能",
+    "best_for_zh": [
+      "销售",
+      "CRM",
+      "线索获取"
+    ]
   },
   {
     "id": 962,
@@ -8477,7 +10019,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向社交媒体短片的 AI 视频工作室，配备品牌工具包、模板和批量导出功能",
+    "best_for_zh": [
+      "视频短片",
+      "品牌内容",
+      "社交媒体"
+    ]
   },
   {
     "id": 963,
@@ -8523,7 +10071,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向书籍、播客和音乐的 AI 封面设计工具，提供按题材分类的模板",
+    "best_for_zh": [
+      "封面设计",
+      "书籍设计",
+      "播客封面"
+    ]
   },
   {
     "id": 964,
@@ -8569,7 +10123,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 译制配音工具，支持口型同步、多语言与情绪匹配",
+    "best_for_zh": [
+      "译制配音",
+      "本地化",
+      "旁白"
+    ]
   },
   {
     "id": 965,
@@ -8615,7 +10175,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 缺陷检测工具，可发现漏洞、给出修复建议并追踪问题模式",
+    "best_for_zh": [
+      "缺陷检测",
+      "安全",
+      "代码质量"
+    ]
   },
   {
     "id": 966,
@@ -8661,7 +10227,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向广告公司的 AI 文案平台，支持 A/B 测试并保持品牌语调一致",
+    "best_for_zh": [
+      "文案撰写",
+      "广告投放",
+      "品牌语调"
+    ]
   },
   {
     "id": 967,
@@ -8707,7 +10279,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 短视频生成工具，提供热门模板与自动剪辑",
+    "best_for_zh": [
+      "Reels",
+      "TikTok",
+      "短视频"
+    ]
   },
   {
     "id": 968,
@@ -8753,7 +10331,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 产品视频创作工具，支持 360 度全景展示、卖点高亮和对比叠加",
+    "best_for_zh": [
+      "产品视频",
+      "电商",
+      "营销"
+    ]
   },
   {
     "id": 969,
@@ -8799,7 +10383,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向小型企业的免费 AI 商务助手，提供财务规划与客户洞察",
+    "best_for_zh": [
+      "小型企业",
+      "财务规划",
+      "洞察分析"
+    ]
   },
   {
     "id": 970,
@@ -8845,7 +10435,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 线索获取与培育工具，支持邮件触达与 CRM 集成",
+    "best_for_zh": [
+      "线索获取",
+      "邮件触达",
+      "销售"
+    ]
   },
   {
     "id": 971,
@@ -8891,7 +10487,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI Instagram Stories 创作工具，支持互动投票、贴纸和品牌模板",
+    "best_for_zh": [
+      "Instagram Stories",
+      "社交媒体",
+      "品牌内容"
+    ]
   },
   {
     "id": 975,
@@ -8937,7 +10539,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 端到端测试平台，支持视觉回归测试、API 测试和 CI/CD 集成",
+    "best_for_zh": [
+      "端到端测试",
+      "视觉回归",
+      "CI/CD"
+    ]
   },
   {
     "id": 979,
@@ -8983,7 +10591,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向微型企业的免费 AI 工具包，具备库存跟踪、客户管理和费用记录功能",
+    "best_for_zh": [
+      "微型企业",
+      "库存",
+      "费用管理"
+    ]
   },
   {
     "id": 980,
@@ -9029,7 +10643,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 销售漏斗管理工具，具备预测、商机评分和自动跟进功能",
+    "best_for_zh": [
+      "销售漏斗",
+      "预测",
+      "商机"
+    ]
   },
   {
     "id": 981,
@@ -9075,7 +10695,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI Instagram 帖子与 Stories 设计工具，配备品牌工具包与自动排版",
+    "best_for_zh": [
+      "Instagram 设计",
+      "社交媒体",
+      "品牌工具包"
+    ]
   },
   {
     "id": 982,
@@ -9121,7 +10747,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向配音的 AI 音频后期工具，支持降噪、均衡和压缩处理",
+    "best_for_zh": [
+      "音频后期",
+      "配音",
+      "声音设计"
+    ]
   },
   {
     "id": 983,
@@ -9167,7 +10799,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI Snapchat 营销助手，可为面向 Z 世代的品牌生成 Snap 广告、Story 内容和受众定向策略",
+    "best_for_zh": [
+      "Snapchat 营销",
+      "Z 世代广告",
+      "Story 内容"
+    ]
   },
   {
     "id": 988,
@@ -9213,7 +10851,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 社交媒体排程工具，具备互动效果预测评分、最佳发布时间分析，以及面向 8 个以上平台的跨平台内容适配能力",
+    "best_for_zh": [
+      "社交排程",
+      "跨平台",
+      "互动效果"
+    ]
   },
   {
     "id": 989,
@@ -9259,7 +10903,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 达人匹配平台，帮助品牌对接微小影响力达人、协商报价，并自动追踪投放 ROI",
+    "best_for_zh": [
+      "达人营销",
+      "投放 ROI",
+      "品牌匹配"
+    ]
   },
   {
     "id": 996,
@@ -9305,7 +10955,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向大学生的 AI 学习助手，支持课堂内容摘要、备考复习、引用生成和研究论文整理",
+    "best_for_zh": [
+      "大学生",
+      "学习辅助",
+      "研究"
+    ]
   },
   {
     "id": 997,
@@ -9353,7 +11009,13 @@
     "rating": null,
     "rating_count": null,
     "unverified": true,
-    "unverified_reason": "freelanceflow.ai returns 404"
+    "unverified_reason": "freelanceflow.ai returns 404",
+    "description_zh": "面向自由职业者的 AI 管理平台，支持提案生成、发票跟踪、客户沟通模板和项目工期估算",
+    "best_for_zh": [
+      "自由职业者",
+      "提案撰写",
+      "客户管理"
+    ]
   },
   {
     "id": 999,
@@ -9399,7 +11061,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 团队协作平台，支持会议摘要、待办事项提取，以及面向远程团队的跨时区工作流同步",
+    "best_for_zh": [
+      "远程团队",
+      "会议记录",
+      "工作流同步"
+    ]
   },
   {
     "id": 1000,
@@ -9447,7 +11115,13 @@
     "rating": null,
     "rating_count": null,
     "unverified": true,
-    "unverified_reason": "datasync-ai.com serves an unrelated investment-industry product"
+    "unverified_reason": "datasync-ai.com serves an unrelated investment-industry product",
+    "description_zh": "AI 数据同步工具，可自动映射、转换业务应用之间的数据，零代码即可完成集成配置",
+    "best_for_zh": [
+      "数据集成",
+      "应用同步",
+      "自动化"
+    ]
   },
   {
     "id": 1002,
@@ -9493,7 +11167,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 文档管理助手，具备智能归档、版本控制、合同分析和商业文档自动合规检查",
+    "best_for_zh": [
+      "文档管理",
+      "合同分析",
+      "合规"
+    ]
   },
   {
     "id": 1005,
@@ -9539,7 +11219,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 房产视频看房生成工具，可根据照片制作电影感的房屋漫游视频，配有旁白、平面图叠加和品牌片头",
+    "best_for_zh": [
+      "房产看房",
+      "房源视频",
+      "漫游视频"
+    ]
   },
   {
     "id": 1014,
@@ -9585,7 +11271,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 产品演示视频生成工具，可将屏幕录制转化为带旁白、标注和行动号召叠加的交互式演示",
+    "best_for_zh": [
+      "产品演示",
+      "操作演示",
+      "SaaS 营销"
+    ]
   },
   {
     "id": 1016,
@@ -9631,7 +11323,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 活动直播平台，支持多机位切换、实时图文叠加和自动字幕，适用于线上线下混合会议与虚拟会议",
+    "best_for_zh": [
+      "活动直播",
+      "会议",
+      "多机位"
+    ]
   },
   {
     "id": 1021,
@@ -9677,7 +11375,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 漫画生成工具，可创作完整漫画页面，保持角色风格一致，并支持分镜布局、对话气泡和墨线效果",
+    "best_for_zh": [
+      "漫画绘制",
+      "图像小说",
+      "角色设计"
+    ]
   },
   {
     "id": 1026,
@@ -9723,7 +11427,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 建筑可视化工具，可将草图和平面图转化为写实渲染图，并提供材质、灯光和景观选项",
+    "best_for_zh": [
+      "建筑",
+      "可视化",
+      "渲染图"
+    ]
   },
   {
     "id": 1027,
@@ -9769,7 +11479,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 图标设计生成工具，可产出多种风格、尺寸和格式的成套图标，支持 SVG 导出与设计系统集成",
+    "best_for_zh": [
+      "图标设计",
+      "设计系统",
+      "SVG 图标"
+    ]
   },
   {
     "id": 1028,
@@ -9815,7 +11531,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 包装设计工具，可生成产品包装效果图，提供 3D 预览、刀版模板和合规性检查",
+    "best_for_zh": [
+      "包装设计",
+      "产品效果图",
+      "3D 预览"
+    ]
   },
   {
     "id": 1031,
@@ -9861,7 +11583,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 老照片修复工具，可修复破损的旧照片、为黑白照片上色，并在保持原貌的同时提升分辨率",
+    "best_for_zh": [
+      "照片修复",
+      "上色",
+      "老照片"
+    ]
   },
   {
     "id": 1032,
@@ -9907,7 +11635,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 信息图生成工具，可将数据与文字转化为视觉出色的信息图，提供智能版式、图标库和品牌主题定制",
+    "best_for_zh": [
+      "信息图",
+      "数据可视化",
+      "报告"
+    ]
   },
   {
     "id": 1038,
@@ -9953,7 +11687,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI UI 线框图生成工具，可根据文字描述创建可交互线框图，提供组件库和响应式布局预览",
+    "best_for_zh": [
+      "UI 线框图",
+      "原型设计",
+      "布局设计"
+    ]
   },
   {
     "id": 1040,
@@ -9999,7 +11739,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 播客混音与母带处理工具，具备自动电平平衡、噪声门、环境底噪匹配和广播级响度标准化",
+    "best_for_zh": [
+      "播客混音",
+      "音频母带",
+      "响度标准化"
+    ]
   },
   {
     "id": 1046,
@@ -10045,7 +11791,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 编曲与音乐制作工具，提供按音乐类型划分的鼓组节奏型、旋律生成和分轨导出，适合嘻哈、EDM 和流行音乐制作人",
+    "best_for_zh": [
+      "Beat 制作",
+      "音乐制作",
+      "鼓组节奏型"
+    ]
   },
   {
     "id": 1048,
@@ -10091,7 +11843,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 有声书制作平台，支持按章节旁白、角色音色分配、节奏控制，并输出符合 ACX 标准的文件，适合自助出版作者",
+    "best_for_zh": [
+      "有声书制作",
+      "旁白",
+      "自助出版"
+    ]
   },
   {
     "id": 1050,
@@ -10137,7 +11895,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 人声和声生成工具，可根据旋律创作多声部合唱编排，支持声部分配与乐谱导出",
+    "best_for_zh": [
+      "人声和声",
+      "合唱音乐",
+      "编曲"
+    ]
   },
   {
     "id": 1063,
@@ -10183,7 +11947,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 测试生成平台，可通过代码分析生成单元测试、集成测试和端到端测试，并支持变异测试与覆盖率优化",
+    "best_for_zh": [
+      "测试生成",
+      "覆盖率",
+      "变异测试"
+    ]
   },
   {
     "id": 1065,
@@ -10229,7 +11999,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI DevOps 助手，支持基础设施即代码生成、监控配置、故障响应预案，以及云环境成本优化",
+    "best_for_zh": [
+      "DevOps",
+      "基础设施",
+      "成本优化"
+    ]
   },
   {
     "id": 1075,
@@ -10275,7 +12051,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 LLM 集成的 AI 提示词工程工具，支持提示词测试、token 优化、响应评估和思维链模板生成",
+    "best_for_zh": [
+      "提示词工程",
+      "LLM 集成",
+      "Token 优化"
+    ]
   },
   {
     "id": 1084,
@@ -10321,7 +12103,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 剧本与影视脚本写作工具，支持角色弧光设计、对白生成，并输出符合格式规范的内容，适用于电影、电视和 YouTube",
+    "best_for_zh": [
+      "剧本创作",
+      "对白",
+      "故事弧光"
+    ]
   },
   {
     "id": 1085,
@@ -10367,7 +12155,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 商业提案生成工具，提供按行业划分的模板、报价表构建器，并基于历史提案数据优化中标率",
+    "best_for_zh": [
+      "商业提案",
+      "中标率",
+      "报价表"
+    ]
   },
   {
     "id": 1087,
@@ -10413,7 +12207,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 简历与求职信撰写工具，支持 ATS 优化、行业关键词植入，并提供有助于提高面试邀约率的格式模板",
+    "best_for_zh": [
+      "简历撰写",
+      "ATS 优化",
+      "求职信"
+    ]
   },
   {
     "id": 1088,
@@ -10459,7 +12259,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向电商的 AI 产品描述生成工具，支持 SEO 关键词、以卖点为导向的文案，以及面向大型商品目录的批量生成",
+    "best_for_zh": [
+      "产品描述",
+      "电商",
+      "SEO"
+    ]
   },
   {
     "id": 1093,
@@ -10505,7 +12311,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 学术写作助手，支持引用管理、论证结构分析和按期刊规范排版，用于研究论文写作",
+    "best_for_zh": [
+      "学术写作",
+      "引用",
+      "研究论文"
+    ]
   },
   {
     "id": 1094,
@@ -10551,7 +12363,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI UX 文案与微文案生成工具，为产品团队提供语调指南、按钮文案优化和错误提示撰写",
+    "best_for_zh": [
+      "UX 文案",
+      "微文案",
+      "产品设计"
+    ]
   },
   {
     "id": 1100,
@@ -10597,7 +12415,13 @@
       ]
     },
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI API 构建工具，可根据自然语言描述生成 RESTful 与 GraphQL 接口，并自带鉴权、校验和自动文档",
+    "best_for_zh": [
+      "API 构建",
+      "REST API 接口",
+      "自动文档"
+    ]
   },
   {
     "id": 1105,
@@ -10622,7 +12446,13 @@
       "Automation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的播客制作工具，可自动生成节目简介、时间戳、社交媒体短片和完整字幕稿。",
+    "best_for_zh": [
+      "播客制作",
+      "节目简介",
+      "自动化"
+    ]
   },
   {
     "id": 1106,
@@ -10647,7 +12477,13 @@
       "Notes"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 会议助手，可转录、总结并分析你的会议，并与 Zoom、Google Meet 和 Teams 集成。",
+    "best_for_zh": [
+      "会议",
+      "转录",
+      "笔记"
+    ]
   },
   {
     "id": 1107,
@@ -10672,7 +12508,13 @@
       "Conversion"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用 AI 生成高转化率的广告素材与文案，几秒钟内即可产出多个版本用于 A/B 测试。",
+    "best_for_zh": [
+      "广告投放",
+      "营销",
+      "转化"
+    ]
   },
   {
     "id": 1110,
@@ -10697,7 +12539,13 @@
       "API"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向企业的 AI 平台，用于构建基于 LLM 的应用，提供向量嵌入、文本分类和语义搜索能力。",
+    "best_for_zh": [
+      "企业",
+      "LLM",
+      "API"
+    ]
   },
   {
     "id": 1111,
@@ -10722,7 +12570,13 @@
       "Development"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "专为开发者打造的 AI 搜索引擎，可即时解答编程问题并附上代码示例。",
+    "best_for_zh": [
+      "搜索",
+      "代码求助",
+      "开发"
+    ]
   },
   {
     "id": 1112,
@@ -10747,7 +12601,13 @@
       "Communication"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的视频消息平台，可自动生成标题、摘要和章节标记。",
+    "best_for_zh": [
+      "视频消息",
+      "异步协作",
+      "沟通"
+    ]
   },
   {
     "id": 1114,
@@ -10772,7 +12632,13 @@
       "No Code"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "具备 AI 能力的可视化自动化平台，无需代码即可搭建复杂工作流。",
+    "best_for_zh": [
+      "自动化",
+      "工作流",
+      "无代码"
+    ]
   },
   {
     "id": 1115,
@@ -10797,7 +12663,13 @@
       "Organization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "设计精美的 AI 笔记应用，可生成内容并帮你整理思路。",
+    "best_for_zh": [
+      "笔记记录",
+      "设计",
+      "整理"
+    ]
   },
   {
     "id": 1117,
@@ -10822,7 +12694,13 @@
       "Visual"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的图文内容创作工具，把你的想法变成信息图和视觉图形。",
+    "best_for_zh": [
+      "图形",
+      "信息图",
+      "视觉"
+    ]
   },
   {
     "id": 1119,
@@ -10847,7 +12725,13 @@
       "Text-to-Video"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的文生视频工具，由 MiniMax 开发，可生成高质量视频。",
+    "best_for_zh": [
+      "视频生成",
+      "AI",
+      "文生视频"
+    ]
   },
   {
     "id": 1122,
@@ -10872,7 +12756,13 @@
       "Documents"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向企业的开源 RAG 引擎，具备深度文档理解与智能检索能力。",
+    "best_for_zh": [
+      "RAG",
+      "企业",
+      "文档"
+    ]
   },
   {
     "id": 1126,
@@ -10897,7 +12787,13 @@
       "Knowledge Base"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "基于你自己的数据训练 AI 聊天机器人，轻松搭建客服与知识库机器人。",
+    "best_for_zh": [
+      "聊天机器人",
+      "客服支持",
+      "知识库"
+    ]
   },
   {
     "id": 1127,
@@ -10922,7 +12818,13 @@
       "Support"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用你的文档和网站构建 AI 聊天机器人，无需编程。",
+    "best_for_zh": [
+      "聊天机器人",
+      "无代码",
+      "客服支持"
+    ]
   },
   {
     "id": 1128,
@@ -10947,7 +12849,13 @@
       "Multi-channel"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "设计并跨渠道部署 AI 助手，提供可视化的对话设计工具。",
+    "best_for_zh": [
+      "语音助手",
+      "设计",
+      "多渠道"
+    ]
   },
   {
     "id": 1129,
@@ -10972,7 +12880,13 @@
       "Creative"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "将 2D 照片转化为惊艳的 3D 动画，创作带景深效果的动态视觉内容。",
+    "best_for_zh": [
+      "3D 特效",
+      "照片",
+      "创意"
+    ]
   },
   {
     "id": 1134,
@@ -10997,7 +12911,13 @@
       "Portraits"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 职业形象照生成工具，用自拍即可得到影棚级职业照。",
+    "best_for_zh": [
+      "职业形象照",
+      "专业",
+      "人像"
+    ]
   },
   {
     "id": 1139,
@@ -11022,7 +12942,13 @@
       "Enterprise"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的社交媒体套件，具备智能收件箱、情绪分析和自动化报表。",
+    "best_for_zh": [
+      "社交媒体",
+      "数据分析",
+      "企业"
+    ]
   },
   {
     "id": 1141,
@@ -11047,7 +12973,13 @@
       "Social Media"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用 AI 从长视频中提取最吸引人的片段，自动裁切、加字幕并适配任意平台格式。",
+    "best_for_zh": [
+      "视频片段",
+      "片段提取",
+      "社交媒体"
+    ]
   },
   {
     "id": 1142,
@@ -11072,7 +13004,13 @@
       "Short Videos"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 视频再利用平台，可自动把播客和网络研讨会转化为社交媒体短视频。",
+    "best_for_zh": [
+      "内容再利用",
+      "播客",
+      "短视频"
+    ]
   },
   {
     "id": 1147,
@@ -11097,7 +13035,13 @@
       "Vulnerabilities"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的云安全平台，可发现并修复代码、容器和基础设施中的漏洞。",
+    "best_for_zh": [
+      "安全",
+      "云",
+      "漏洞"
+    ]
   },
   {
     "id": 1150,
@@ -11122,7 +13066,13 @@
       "Compliance"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的云安全态势管理，可发现云环境中的配置错误与风险。",
+    "best_for_zh": [
+      "云安全",
+      "安全态势",
+      "合规"
+    ]
   },
   {
     "id": 1152,
@@ -11147,7 +13097,13 @@
       "T-Shirts"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向电商的 AI 产品个性化定制方案，让顾客用 AI 自定义 T 恤、马克杯等商品。",
+    "best_for_zh": [
+      "电商",
+      "个性化定制",
+      "T 恤"
+    ]
   },
   {
     "id": 1158,
@@ -11172,7 +13128,13 @@
       "Intelligence"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的销售执行平台，具备智能序列、数据分析和商机洞察。",
+    "best_for_zh": [
+      "销售",
+      "序列触达",
+      "商机洞察"
+    ]
   },
   {
     "id": 1159,
@@ -11197,7 +13159,13 @@
       "Analytics"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 收入智能平台，通过分析销售通话、邮件和商机来提升赢单率。",
+    "best_for_zh": [
+      "收入智能",
+      "销售",
+      "数据分析"
+    ]
   },
   {
     "id": 1160,
@@ -11222,7 +13190,13 @@
       "Outreach"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的 CRM，具备自动数据补全、个性化触达和工作流自动化。",
+    "best_for_zh": [
+      "CRM",
+      "数据补全",
+      "客户触达"
+    ]
   },
   {
     "id": 1163,
@@ -11247,7 +13221,13 @@
       "Payroll"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向远程团队的 AI 人力资源平台，可跨国自动处理薪酬、合规与福利。",
+    "best_for_zh": [
+      "人力资源",
+      "远程",
+      "薪酬"
+    ]
   },
   {
     "id": 1164,
@@ -11272,7 +13252,13 @@
       "Global"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 增强的全球薪酬与合规平台，服务于世界各地的远程承包商与雇员。",
+    "best_for_zh": [
+      "薪酬",
+      "合规",
+      "全球化"
+    ]
   },
   {
     "id": 1165,
@@ -11297,7 +13283,13 @@
       "Remote"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向远程团队的 AI 可视化协作空间，提供智能模板与引导工具。",
+    "best_for_zh": [
+      "协作",
+      "可视化",
+      "远程"
+    ]
   },
   {
     "id": 1166,
@@ -11322,7 +13314,13 @@
       "Predictive"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的工作操作系统，具备智能字段建议、自动化工作流和项目工期预测。",
+    "best_for_zh": [
+      "工作操作系统",
+      "自动化",
+      "预测"
+    ]
   },
   {
     "id": 1167,
@@ -11347,7 +13345,13 @@
       "Audience Analytics"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的 Snapchat 营销工具，可生成富有吸引力的 Snap 广告、优化发布时段，并分析受众互动规律，以最大化触达与转化。",
+    "best_for_zh": [
+      "Snapchat 营销",
+      "社交广告",
+      "受众分析"
+    ]
   },
   {
     "id": 1169,
@@ -11372,7 +13376,13 @@
       "Viewer Retention"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 工具，可生成引人入胜的 Snapchat Stories，优化发布时机、推荐热门音频并智能放置互动贴纸，从而最大化观众留存。",
+    "best_for_zh": [
+      "Story 创作",
+      "内容规划",
+      "观众留存"
+    ]
   },
   {
     "id": 1172,
@@ -11397,7 +13407,13 @@
       "Auto-Captioning"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "将 Twitter 直播转化为热门短片，具备 AI 高光片段识别、自动字幕和跨平台分发格式优化。",
+    "best_for_zh": [
+      "直播切片",
+      "社交视频",
+      "自动字幕"
+    ]
   },
   {
     "id": 1183,
@@ -11422,7 +13438,13 @@
       "Binaural Beats"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用于创作舒缓 ASMR 与放松音频的 AI 工具，可生成包含耳语音轨、轻柔音效和双耳节拍的多层声景，帮助入睡。",
+    "best_for_zh": [
+      "助眠",
+      "放松音频",
+      "双耳节拍"
+    ]
   },
   {
     "id": 1185,
@@ -11447,7 +13469,13 @@
       "Pipeline Config"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用 AI 自动生成部署配置、预测回滚需求并同步多环境，实现零停机发布。",
+    "best_for_zh": [
+      "部署自动化",
+      "零停机",
+      "流水线配置"
+    ]
   },
   {
     "id": 1189,
@@ -11472,7 +13500,13 @@
       "Conversion Optimization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用 AI 生成高转化率的邮件营销活动，产出针对打开率与点击率优化的标题、正文和行动号召，适用于各行各业。",
+    "best_for_zh": [
+      "邮件营销活动",
+      "邮件标题",
+      "转化优化"
+    ]
   },
   {
     "id": 1192,
@@ -11497,7 +13531,13 @@
       "Preview Text"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 邮件标题生成工具，可预测打开率、测试情绪触发点并优化预览文本，最大化邮件营销效果。",
+    "best_for_zh": [
+      "邮件标题",
+      "打开率优化",
+      "预览文本"
+    ]
   },
   {
     "id": 1194,
@@ -11522,7 +13562,13 @@
       "Trending Topics"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用 AI 打造热门 Pinterest 内容：生成 Pin 图、撰写 SEO 优化描述，并识别趋势话题辅助内容规划。",
+    "best_for_zh": [
+      "Pin 图",
+      "SEO 描述",
+      "趋势话题"
+    ]
   },
   {
     "id": 1211,
@@ -11547,7 +13593,13 @@
       "Failure Prediction"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "智能 CI/CD 配置工具，可生成流水线 YAML、优化构建耗时，并在部署失败发生前做出预测。",
+    "best_for_zh": [
+      "流水线 YAML",
+      "构建优化",
+      "故障预测"
+    ]
   },
   {
     "id": 1216,
@@ -11572,7 +13624,13 @@
       "Engagement Hooks"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "为 TikTok、Instagram Reels 和 YouTube Shorts 创作短视频脚本，提供 AI 生成的开头钩子、热门格式和互动策略。",
+    "best_for_zh": [
+      "短视频脚本",
+      "热门格式",
+      "互动钩子"
+    ]
   },
   {
     "id": 1217,
@@ -11597,7 +13655,13 @@
       "Timing Cues"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 视频脚本生成工具，可产出包含场景描述、角色走位和时间提示的专业分镜脚本，适用于任意视频形式。",
+    "best_for_zh": [
+      "分镜脚本",
+      "场景调度",
+      "时间提示"
+    ]
   },
   {
     "id": 1220,
@@ -11622,7 +13686,13 @@
       "Follow-Up Management"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI LinkedIn 人脉拓展助手，可识别高价值联系人、生成个性化触达消息，并管理后续跟进序列以建立关系。",
+    "best_for_zh": [
+      "人脉拓展",
+      "触达消息",
+      "跟进管理"
+    ]
   },
   {
     "id": 1221,
@@ -11647,7 +13717,13 @@
       "Algorithm Optimization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用 AI 创作热门 LinkedIn 文章与帖子：分析你所在行业的趋势话题、生成思想领导力内容，并针对 LinkedIn 算法进行优化。",
+    "best_for_zh": [
+      "LinkedIn 文章",
+      "思想领导力",
+      "算法优化"
+    ]
   },
   {
     "id": 1223,
@@ -11672,7 +13748,13 @@
       "Interactive Polls"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用 AI 互动工具增强 TikTok 直播，包括自动内容审核、礼物致谢和互动投票生成，提升观众参与感。",
+    "best_for_zh": [
+      "直播互动",
+      "自动审核",
+      "互动投票"
+    ]
   },
   {
     "id": 1233,
@@ -11697,7 +13779,13 @@
       "TypeScript"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 React Native 应用的 AI 代码生成工具，可创建原生模块、导航流程和响应式布局，支持 TypeScript 并遵循最佳实践模式。",
+    "best_for_zh": [
+      "React Native",
+      "原生模块",
+      "TypeScript"
+    ]
   },
   {
     "id": 1234,
@@ -11722,7 +13810,13 @@
       "App Store Builds"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "端到端的 AI 移动应用构建工具，可生成项目脚手架、根据需求说明实现功能，并产出可直接上架应用商店的构建包。",
+    "best_for_zh": [
+      "应用脚手架",
+      "功能实现",
+      "应用商店构建"
+    ]
   },
   {
     "id": 1236,
@@ -11747,7 +13841,13 @@
       "Content Calendars"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 博客写作助手，可生成有研究依据的文章、针对目标关键词进行优化，并制定内容日历以保持稳定的发布节奏。",
+    "best_for_zh": [
+      "研究型文章",
+      "关键词优化",
+      "内容日历"
+    ]
   },
   {
     "id": 1238,
@@ -11772,7 +13872,13 @@
       "CTA Generation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 博客文章创作工具，生成易读的内容，优化可读性评分、策略性布置关键词并植入以转化为导向的行动号召。",
+    "best_for_zh": [
+      "可读性",
+      "关键词布局",
+      "CTA 生成"
+    ]
   },
   {
     "id": 1239,
@@ -11797,7 +13903,13 @@
       "Niche Optimization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "智能博客写作平台，提供 AI 内容生成、编辑建议，并基于你所在领域的成功内容规律预测表现。",
+    "best_for_zh": [
+      "内容编辑",
+      "效果预测",
+      "垂直领域优化"
+    ]
   },
   {
     "id": 1243,
@@ -11822,7 +13934,13 @@
       "Hashtag Optimization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI Instagram Reels 创作工具，可生成具备传播力的视频内容，提供智能转场、特效推荐和话题标签优化以提升曝光。",
+    "best_for_zh": [
+      "Reels 创作",
+      "智能转场",
+      "话题标签优化"
+    ]
   },
   {
     "id": 1245,
@@ -11847,7 +13965,13 @@
       "Brand Guidelines"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的 logo 与品牌识别生成工具，可产出完整设计系统，包括 logo、配色方案、字体规范和品牌指南。",
+    "best_for_zh": [
+      "品牌系统",
+      "配色方案",
+      "品牌指南"
+    ]
   },
   {
     "id": 1250,
@@ -11872,7 +13996,13 @@
       "Character Differentiation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 有声书朗读生成工具，能够理解叙事语境，营造恰当的节奏、语气变化和角色区分，带来更投入的听书体验。",
+    "best_for_zh": [
+      "叙事节奏",
+      "语气变化",
+      "角色区分"
+    ]
   },
   {
     "id": 1258,
@@ -11897,7 +14027,13 @@
       "Growth Analysis"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI Twitter 助手，可创作有传播力的内容、在互动高峰时段排程发帖，并分析粉丝增长规律以制定账号运营策略。",
+    "best_for_zh": [
+      "热门内容",
+      "排程发布",
+      "增长分析"
+    ]
   },
   {
     "id": 1265,
@@ -11922,7 +14058,13 @@
       "Trend Analysis"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 时装设计工具，可根据趋势分析与品牌简报生成完整的成套服装设计、技术平面图与面料可视化效果。",
+    "best_for_zh": [
+      "服装设计",
+      "技术平面图",
+      "趋势分析"
+    ]
   },
   {
     "id": 1269,
@@ -11947,7 +14089,13 @@
       "Show Notes"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "专业 AI 播客编辑工具，具备降噪、多轨混音和自动生成节目笔记功能，让播客后期制作更高效。",
+    "best_for_zh": [
+      "降噪",
+      "多轨混音",
+      "节目笔记"
+    ]
   },
   {
     "id": 1273,
@@ -11972,7 +14120,13 @@
       "TypeScript"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "专注 Next.js 开发的 AI 编程助手，遵循 TypeScript 最佳实践生成页面、API 路由、Server Actions 和优化后的组件。",
+    "best_for_zh": [
+      "Next.js",
+      "Server Actions",
+      "TypeScript"
+    ]
   },
   {
     "id": 1275,
@@ -11997,7 +14151,13 @@
       "Schema Optimization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的 SEO 内容生成工具，可撰写完整的文章、FAQ 板块以及支持结构化数据的内容，助力优化精选摘要。",
+    "best_for_zh": [
+      "精选摘要",
+      "FAQ 内容",
+      "结构化数据优化"
+    ]
   },
   {
     "id": 1278,
@@ -12022,7 +14182,13 @@
       "Predictive Analytics"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的邮件营销工具，支持自动分群、动态内容生成和预测分析，帮助优化邮件营销活动效果。",
+    "best_for_zh": [
+      "邮件分群",
+      "动态内容",
+      "预测分析"
+    ]
   },
   {
     "id": 1283,
@@ -12047,7 +14213,13 @@
       "Student Assessment"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向教师的 AI 工具，可生成教案、创建测评题目，并提供个性化学习建议，提升学生参与度。",
+    "best_for_zh": [
+      "教师",
+      "教案",
+      "学生测评"
+    ]
   },
   {
     "id": 1287,
@@ -12072,7 +14244,13 @@
       "Attrition Reduction"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 客户流失预测与干预工具，可识别有流失风险的客户、生成留存策略并自动执行召回活动，从而降低客户流失率。",
+    "best_for_zh": [
+      "流失预测",
+      "召回活动",
+      "降低流失"
+    ]
   },
   {
     "id": 1288,
@@ -12097,7 +14275,13 @@
       "Assessment Content"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 培训素材生成工具，可根据行业专家访谈内容生成视频课程、演示幻灯片和测评内容。",
+    "best_for_zh": [
+      "视频课程",
+      "演示文稿",
+      "测评内容"
+    ]
   },
   {
     "id": 1307,
@@ -12122,7 +14306,13 @@
       "Growth Reports"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 Twitter 直播的实时 AI 分析工具，可监测观众互动、建议内容调整方向，并生成直播后的表现报告与增长建议。",
+    "best_for_zh": [
+      "直播分析",
+      "内容调整",
+      "增长报告"
+    ]
   },
   {
     "id": 1312,
@@ -12147,7 +14337,13 @@
       "Auto-Lettering"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 漫画创作工具，可根据故事大纲生成完整的漫画条带和图像小说页面，自动处理角色一致性、分镜构图与文字填字。",
+    "best_for_zh": [
+      "漫画条带",
+      "图像小说",
+      "自动填字"
+    ]
   },
   {
     "id": 1318,
@@ -12172,7 +14368,13 @@
       "Visual Storytelling"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的创意写作平台，专注于故事创作与世界构建，提供可自定义的 AI 模型和图像生成功能，实现视觉化叙事。",
+    "best_for_zh": [
+      "创意写作",
+      "世界构建",
+      "视觉化叙事"
+    ]
   },
   {
     "id": 1321,
@@ -12197,7 +14399,13 @@
       "Creative Content"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 文本生成工具，面向小说写作与创意内容，提供多种题材模式和可配置的风格控制，适合作者和故事创作者使用。",
+    "best_for_zh": [
+      "小说写作",
+      "类型小说",
+      "创意内容"
+    ]
   },
   {
     "id": 1322,
@@ -12222,7 +14430,13 @@
       "Creative Iteration"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "实时 AI 图像生成工具，强化了控制力与风格迁移，配合实时预览和精细调整，让艺术家快速迭代。",
+    "best_for_zh": [
+      "实时生成",
+      "风格迁移",
+      "创意迭代"
+    ]
   },
   {
     "id": 1327,
@@ -12247,7 +14461,13 @@
       "Task Scheduling"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 日历助手，可自动安排任务、习惯与会议，同时守护专注时间，并与 Google Calendar 工作流无缝集成。",
+    "best_for_zh": [
+      "日程管理",
+      "专注时间",
+      "任务排期"
+    ]
   },
   {
     "id": 1328,
@@ -12272,7 +14492,13 @@
       "Meeting Optimization"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 日历优化工具，专注团队排期与专注时间保护，可自动化解会议冲突、创造不受打扰的工作时段。",
+    "best_for_zh": [
+      "团队排期",
+      "专注时间",
+      "会议优化"
+    ]
   },
   {
     "id": 1331,
@@ -12297,7 +14523,13 @@
       "Cross-App Discovery"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 驱动的企业搜索，覆盖公司所有应用与文档，结合上下文理解与企业级安全，即时给出答案。",
+    "best_for_zh": [
+      "企业搜索",
+      "知识管理",
+      "跨应用检索"
+    ]
   },
   {
     "id": 1332,
@@ -12322,7 +14554,13 @@
       "Developer Productivity"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 代码片段管理器，具备上下文搜索与代码复用功能，帮助开发者高效整理、查找和跨项目共享代码。",
+    "best_for_zh": [
+      "代码片段",
+      "代码复用",
+      "开发者效率"
+    ]
   },
   {
     "id": 1333,
@@ -12347,7 +14585,13 @@
       "CI/CD Integration"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 代码分析工具，用于自动化代码审查和安全扫描，在 IDE 与 CI/CD 流水线中提供实时反馈，提升代码质量。",
+    "best_for_zh": [
+      "代码审查",
+      "安全扫描",
+      "CI/CD 集成"
+    ]
   },
   {
     "id": 1335,
@@ -12372,7 +14616,13 @@
       "Code Explanation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 IDE 的 AI 编程助手，支持代码生成与代码讲解，提供上下文感知的建议和编辑器内对话，加快开发流程。",
+    "best_for_zh": [
+      "IDE 助手",
+      "代码生成",
+      "代码讲解"
+    ]
   },
   {
     "id": 1336,
@@ -12397,7 +14647,13 @@
       "Developer Productivity"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 开发者助手，覆盖代码生成、测试与讲解，可集成主流 IDE，通过上下文感知的 AI 建议加速开发。",
+    "best_for_zh": [
+      "代码生成",
+      "测试生成",
+      "开发者效率"
+    ]
   },
   {
     "id": 1339,
@@ -12422,7 +14678,13 @@
       "Casual Music Making"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 音乐创作平台，可即时生成并发行歌曲，让任何人在几分钟内创作原创音乐并发布到流媒体平台。",
+    "best_for_zh": [
+      "即时创作歌曲",
+      "音乐发行",
+      "轻量音乐制作"
+    ]
   },
   {
     "id": 1340,
@@ -12447,7 +14709,13 @@
       "Sound Library"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向内容创作者的 AI 音乐创作与混音工具，提供丰富的音效库和直观的混音功能，产出专业级音频。",
+    "best_for_zh": [
+      "音乐混音",
+      "内容创作",
+      "音效库"
+    ]
   },
   {
     "id": 1341,
@@ -12472,7 +14740,13 @@
       "DAA Production"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 音频编辑工具，具备文本转音频生成能力，将专业 DAW 界面与 AI 创作结合，服务于音乐人与播客创作者。",
+    "best_for_zh": [
+      "文本转音频",
+      "音频编辑",
+      "DAW 制作"
+    ]
   },
   {
     "id": 1349,
@@ -12493,7 +14767,11 @@
     "description_en": "Text expansion and automation tool with AI-powered templates that eliminates repetitive typing and boosts productivity across any web application.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "文本扩展与自动化工具，提供 AI 驱动的模板，消除重复打字，在任何网页应用中提升效率。",
+    "best_for_zh": [
+      "需要 AI 文本扩展与快捷键来处理重复性写作的团队"
+    ]
   },
   {
     "id": 1350,
@@ -12514,7 +14792,11 @@
     "description_en": "AI writing assistant specialized in e-commerce product descriptions, generating SEO-optimized content at scale for online stores and catalogs.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "专注电商产品文案的 AI 写作助手，可为线上商店和商品目录规模化生成 SEO 优化内容。",
+    "best_for_zh": [
+      "需要 AI 批量生成产品描述与营销文案的电商品牌"
+    ]
   },
   {
     "id": 1351,
@@ -12535,7 +14817,11 @@
     "description_en": "AI content generator with built-in fact-checking and SEO optimization, ensuring accurate and search-engine-friendly long-form articles and blogs.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "内置事实核查与 SEO 优化的 AI 内容生成工具，确保长文文章与博客内容准确且利于搜索。",
+    "best_for_zh": [
+      "需要 AI 完成调研并撰写经过事实核查的长文的内容营销人员"
+    ]
   },
   {
     "id": 1353,
@@ -12556,7 +14842,11 @@
     "description_en": "Official Stable Diffusion web interface for professional image generation, offering fine-grained control over parameters and high-quality visual output.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "Stable Diffusion 官方网页界面，面向专业图像生成，可对参数进行精细控制并输出高质量视觉效果。",
+    "best_for_zh": [
+      "希望通过直观网页界面和精细控制使用 Stable Diffusion 的艺术家"
+    ]
   },
   {
     "id": 1359,
@@ -12577,7 +14867,11 @@
     "description_en": "AI productivity workspace combining tasks, notes, and team collaboration with AI agents that automate workflows and generate project outlines.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 生产力工作空间，融合任务、笔记与团队协作，内置 AI 智能体自动执行工作流并生成项目大纲。",
+    "best_for_zh": [
+      "需要 AI 任务管理与实时协作的远程团队"
+    ]
   },
   {
     "id": 1365,
@@ -12598,7 +14892,11 @@
     "description_en": "AWS AI coding companion for cloud development, providing code suggestions, security scans, and AWS best practices directly within your IDE.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AWS 推出的 AI 云开发助手，直接在 IDE 内提供代码建议、安全扫描和 AWS 最佳实践。",
+    "best_for_zh": [
+      "希望获得面向云服务优化的 AI 代码建议的 AWS 开发者"
+    ]
   },
   {
     "id": 1369,
@@ -12619,7 +14917,11 @@
     "description_en": "AI noise cancellation tool for meetings and audio recordings, removing background noise and echo in real time for crystal-clear communication.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 降噪工具，用于会议和录音，实时消除背景噪音与回声，带来清晰纯净的通话效果。",
+    "best_for_zh": [
+      "需要在通话和录音时由 AI 消除背景噪音的远程工作者"
+    ]
   },
   {
     "id": 1375,
@@ -12640,7 +14942,11 @@
     "description_en": "AI video generation from text with digital presenters, enabling scalable personalized video content without cameras, studios, or production crews.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "文本转 AI 视频生成工具，配备数字虚拟主播，无需摄像机、影棚或制作团队即可规模化产出个性化视频内容。",
+    "best_for_zh": [
+      "使用数字虚拟形象制作 AI 主播视频的企业培训人员"
+    ]
   },
   {
     "id": 1376,
@@ -12661,7 +14967,11 @@
     "description_en": "AI video platform for sales outreach and marketing campaigns, combining video recording, hosting, and analytics to drive engagement and conversions.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "面向销售外联与营销活动的 AI 视频平台，集视频录制、托管与分析于一体，提升互动与转化。",
+    "best_for_zh": [
+      "用 AI 为潜在客户制作个性化视频的销售团队"
+    ]
   },
   {
     "id": 1381,
@@ -12682,7 +14992,11 @@
     "description_en": "Enterprise AI writing platform with style guide enforcement, terminology management, and team collaboration features.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "企业级 AI 写作平台，支持风格指南强制执行、术语管理与团队协作功能。",
+    "best_for_zh": [
+      "需要 AI 写作并配合品牌规范与风格指南的企业团队"
+    ]
   },
   {
     "id": 1383,
@@ -12703,7 +15017,11 @@
     "description_en": "AI background removal tool that instantly creates transparent backgrounds from any photo with a single click.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 抠图工具，一键即可去除任意照片的背景，生成透明背景图。",
+    "best_for_zh": [
+      "需要快速用 AI 去除照片背景的所有人"
+    ]
   },
   {
     "id": 1384,
@@ -12724,7 +15042,11 @@
     "description_en": "AI image upscaling and enhancement tool that transforms low-resolution photos into print-quality visuals effortlessly.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 图像放大与增强工具，可轻松将低分辨率照片转化为印刷级画质。",
+    "best_for_zh": [
+      "需要 AI 放大图像且不损失画质的摄影师与设计师"
+    ]
   },
   {
     "id": 1385,
@@ -12745,7 +15067,11 @@
     "description_en": "AI art platform that uses neural network visualization to transform photos into surreal and psychedelic artworks.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 艺术平台，利用神经网络可视化技术将照片转化为超现实、迷幻风格的艺术作品。",
+    "best_for_zh": [
+      "想要用 AI 创作超现实、梦境般艺术作品的艺术家"
+    ]
   },
   {
     "id": 1386,
@@ -12766,7 +15092,11 @@
     "description_en": "AI collaborative art tool for mixing and evolving images through generative adversarial networks and community creativity.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 协作艺术工具，借助生成对抗网络与社区创意对图像进行混合与演化。",
+    "best_for_zh": [
+      "希望通过基因式混合来繁育并演化 AI 生成图像的创意人群"
+    ]
   },
   {
     "id": 1387,
@@ -12787,7 +15117,11 @@
     "description_en": "AI meeting transcription and note-taking tool with speaker identification and real-time collaboration for productive meetings.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 会议转写与笔记工具，具备说话人识别和实时协作功能，让会议更高效。",
+    "best_for_zh": [
+      "需要 AI 转写和可搜索笔记、会议繁重的职场人士"
+    ]
   },
   {
     "id": 1388,
@@ -12808,7 +15142,11 @@
     "description_en": "AI meeting assistant that automates transcription, conversation intelligence, and action item extraction across platforms.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 会议助手，可跨平台自动完成转写、会话智能分析与待办事项提取。",
+    "best_for_zh": [
+      "需要 AI 会议分析与洞察的销售和客户成功团队"
+    ]
   },
   {
     "id": 1390,
@@ -12829,7 +15167,11 @@
     "description_en": "AI meeting recorder with automatic transcription, timestamped summaries, and clip sharing for async team collaboration.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 会议录制工具，可自动转写、生成带时间戳的摘要并分享视频片段，便于团队异步协作。",
+    "best_for_zh": [
+      "需要 AI 录制、转写并标注会议关键时刻的团队"
+    ]
   },
   {
     "id": 1393,
@@ -12850,7 +15192,11 @@
     "description_en": "AI-powered terminal with intelligent command suggestions, workflow automation, and collaborative features for developers.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 驱动的终端，提供智能命令建议、工作流自动化与协作功能，专为开发者打造。",
+    "best_for_zh": [
+      "想要具备现代特性和智能补全的 AI 增强终端的开发者"
+    ]
   },
   {
     "id": 1396,
@@ -12871,7 +15217,11 @@
     "description_en": "AI code review tool that provides automated pull request analysis with actionable suggestions and context-aware feedback.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 代码审查工具，可对 Pull Request 进行自动化分析，给出可执行的建议与上下文感知的反馈。",
+    "best_for_zh": [
+      "希望在合并 PR 前由 AI 代码审查发现缺陷的研发团队"
+    ]
   },
   {
     "id": 1397,
@@ -12892,7 +15242,11 @@
     "description_en": "AI music generation platform for creating full songs with vocals and instruments from simple text prompts in seconds.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 音乐生成平台，仅需简单文本提示，几秒内即可创作出带人声与配器的完整歌曲。",
+    "best_for_zh": [
+      "希望 AI 根据文本提示生成原创歌曲的音乐人与创作者"
+    ]
   },
   {
     "id": 1398,
@@ -12913,7 +15267,11 @@
     "description_en": "AI music creation tool for generating high-quality songs and compositions across genres from descriptive text prompts.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 音乐创作工具，可根据描述性文本提示跨曲风生成高质量歌曲与乐曲。",
+    "best_for_zh": [
+      "想要高品质配器的 AI 音乐生成的音乐爱好者"
+    ]
   },
   {
     "id": 1399,
@@ -12934,7 +15292,11 @@
     "description_en": "AI music generator for creating royalty-free tracks tailored for content creators, streamers, and brand videos.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 音乐生成器，为内容创作者、主播和品牌视频量身打造免版税曲目。",
+    "best_for_zh": [
+      "需要 AI 生成免版税背景音乐的内容创作者"
+    ]
   },
   {
     "id": 1400,
@@ -12955,7 +15317,11 @@
     "description_en": "AI-powered music licensing platform offering a vast library of royalty-free tracks and sound effects for creators.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 驱动的音乐授权平台，为创作者提供海量免版税曲目与音效库。",
+    "best_for_zh": [
+      "需要 AI 帮忙找到并授权完美配乐的视频创作者"
+    ]
   },
   {
     "id": 1401,
@@ -12976,7 +15342,11 @@
     "description_en": "AI music composition tool for creating custom soundtracks and background music for videos, podcasts, and games.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 作曲工具，可为视频、播客和游戏创作定制配乐与背景音乐。",
+    "best_for_zh": [
+      "希望 AI 即时创作原创背景音乐的内容创作者"
+    ]
   },
   {
     "id": 1403,
@@ -12997,7 +15367,11 @@
     "description_en": "AI video editing platform for creating social media clips from long recordings with automatic captioning and layout.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 视频剪辑平台，可将长录像剪辑成社交媒体短片，自动生成字幕并完成排版。",
+    "best_for_zh": [
+      "需要 AI 把长视频再利用为短片段的社交媒体运营者"
+    ]
   },
   {
     "id": 1404,
@@ -13019,7 +15393,11 @@
     "description_en": "AI video editing tool that extracts viral-worthy clips from long-form content using trend analysis and engagement scoring.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 视频剪辑工具，通过趋势分析与互动热度评分，从长内容中提炼出有爆款潜力的片段。",
+    "best_for_zh": [
+      "需要 AI 提取视频中最具吸引力片段的内容营销人员"
+    ]
   },
   {
     "id": 1405,
@@ -13040,7 +15418,11 @@
     "description_en": "AI clip generator that automatically captures highlights from gaming streams and podcast recordings for social sharing.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 片段生成工具，可自动捕捉游戏直播和播客录音中的精彩瞬间，便于社交分享。",
+    "best_for_zh": [
+      "希望 AI 自动从直播中生成精彩集锦的游戏主播"
+    ]
   },
   {
     "id": 1406,
@@ -13061,7 +15443,11 @@
     "description_en": "AI video editor that automatically generates cuts, storyboards, and captions to streamline post-production workflows.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 视频编辑器，自动生成剪辑点、分镜头和字幕，简化后期制作流程。",
+    "best_for_zh": [
+      "希望 AI 自动去除静音片段并生成流畅跳剪的视频剪辑师"
+    ]
   },
   {
     "id": 1408,
@@ -13082,7 +15468,11 @@
     "description_en": "AI writing assistant for creating landing page copy, product descriptions, and ad content with GPT-powered generation.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "由 GPT 驱动的 AI 写作助手，用于撰写着陆页文案、产品描述和广告内容。",
+    "best_for_zh": [
+      "需要 AI 快速生成多渠道营销文案的初创公司"
+    ]
   },
   {
     "id": 1411,
@@ -13103,7 +15493,11 @@
     "description_en": "All-in-one AI writing and design tool for marketing teams to create copy, graphics, and videos from one workspace.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "一体化 AI 写作与设计工具，营销团队可在一个工作空间内完成文案、图片与视频制作。",
+    "best_for_zh": [
+      "需要一体化 AI 设计与写作平台的内容团队"
+    ]
   },
   {
     "id": 1412,
@@ -13124,7 +15518,11 @@
     "description_en": "AI image enhancement tool for upscaling, denoising, and sharpening photos with industry-leading quality and detail recovery.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 图像增强工具，用于照片放大、降噪与锐化，画质与细节还原处于行业领先水平。",
+    "best_for_zh": [
+      "需要 AI 将图像锐化、降噪并放大到专业画质的摄影师"
+    ]
   },
   {
     "id": 1415,
@@ -13145,7 +15543,11 @@
     "description_en": "AI image processing tool for upscaling, enhancing, and converting photos with batch processing and workflow automation.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 图像处理工具，支持照片放大、增强与格式转换，并提供批量处理与工作流自动化。",
+    "best_for_zh": [
+      "需要批量 AI 照片增强与背景处理的电商卖家"
+    ]
   },
   {
     "id": 1416,
@@ -13166,7 +15568,11 @@
     "description_en": "AI art and design tool for creating graphics, art, and marketing visuals from templates with easy customization options.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 艺术与设计工具，可通过模板创建图形、艺术作品和营销视觉素材，并支持便捷的自定义。",
+    "best_for_zh": [
+      "希望 AI 生成社交图片、图标和样机效果的非设计人员"
+    ]
   },
   {
     "id": 1418,
@@ -13187,7 +15593,11 @@
     "description_en": "Visual automation platform with AI-powered scenario building and data processing for complex multi-app workflows.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "可视化自动化平台，具备 AI 场景构建与数据处理能力，用于处理复杂的多应用工作流。",
+    "best_for_zh": [
+      "希望无需编码即可搭建 AI 自动化工作流的资深用户"
+    ]
   },
   {
     "id": 1419,
@@ -13208,7 +15618,11 @@
     "description_en": "AI workflow automation tool for browser-based repetitive tasks, scraping, and app integration without coding.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "面向浏览器重复任务、数据抓取和应用集成的 AI 工作流自动化工具，无需编码。",
+    "best_for_zh": [
+      "希望用 AI 浏览器自动化消除重复工作的职场人士"
+    ]
   },
   {
     "id": 1420,
@@ -13229,7 +15643,11 @@
     "description_en": "AI automation tool for document processing, email classification, and data extraction without writing any code.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 自动化工具，无需编写任何代码即可完成文档处理、邮件分类和数据提取。",
+    "best_for_zh": [
+      "需要 AI 无需代码即可构建自定义分类与自动化模型的团队"
+    ]
   },
   {
     "id": 1422,
@@ -13250,7 +15668,11 @@
     "description_en": "AI-powered DevSecOps platform with code suggestions, security scanning, and chat-based assistance for developers.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 驱动的 DevSecOps 平台，为开发者提供代码建议、安全扫描和对话式协助。",
+    "best_for_zh": [
+      "希望获得 AI 代码建议与漏洞解读的 GitLab 用户"
+    ]
   },
   {
     "id": 1423,
@@ -13271,7 +15693,11 @@
     "description_en": "AI assistant integrated into JetBrains IDEs for intelligent code completion, refactoring, and in-editor documentation.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "集成在 JetBrains 系列 IDE 中的 AI 助手，提供智能代码补全、重构和编辑器内文档。",
+    "best_for_zh": [
+      "希望获得 AI 代码补全与重构辅助的 JetBrains IDE 用户"
+    ]
   },
   {
     "id": 1425,
@@ -13292,7 +15718,11 @@
     "description_en": "AI code generation model powering various developer tools with natural language to code translation capabilities.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 代码生成模型，为多种开发者工具提供自然语言到代码的转换能力。",
+    "best_for_zh": [
+      "探索 OpenAI 代码生成与自然语言编程的开发者"
+    ]
   },
   {
     "id": 1426,
@@ -13313,7 +15743,11 @@
     "description_en": "AI developer assistant for code generation, debugging, and documentation with context-aware suggestions and explanations.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 开发者助手，覆盖代码生成、调试与文档撰写，提供上下文感知的建议与讲解。",
+    "best_for_zh": [
+      "希望 AI 根据提示自动生成全栈项目脚手架的初创团队"
+    ]
   },
   {
     "id": 1427,
@@ -13334,7 +15768,11 @@
     "description_en": "AI-powered music mastering and distribution platform for musicians to achieve professional sound quality instantly.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 音乐母带处理与发行平台，帮助音乐人即时获得专业级音质。",
+    "best_for_zh": [
+      "需要 AI 母带处理让作品听感更专业的音乐人"
+    ]
   },
   {
     "id": 1428,
@@ -13355,7 +15793,11 @@
     "description_en": "AI audio recording app with noise reduction and studio-quality enhancement for musicians and podcasters on the go.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 录音应用，具备降噪与录音室级音质增强，方便音乐人和播客创作者随身高品质录制。",
+    "best_for_zh": [
+      "想要专业级 AI 录音与降噪的移动创作者"
+    ]
   },
   {
     "id": 1429,
@@ -13376,7 +15818,11 @@
     "description_en": "AI music creation and collaboration platform for musicians and producers with cloud-based mixing and sharing tools.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "面向音乐人与制作人的 AI 音乐创作与协作平台，提供云端混音与分享工具。",
+    "best_for_zh": [
+      "想要 AI 辅助音乐创作与协作工具的音乐新手"
+    ]
   },
   {
     "id": 1430,
@@ -13397,7 +15843,11 @@
     "description_en": "AI-powered music production platform with curated samples, preset management, and intelligent creative suggestions.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 驱动的音乐制作平台，提供精选采样、预设管理与智能创作建议。",
+    "best_for_zh": [
+      "需要 AI 发现并匹配采样与音色的音乐制作人"
+    ]
   },
   {
     "id": 1431,
@@ -13418,7 +15868,11 @@
     "description_en": "AI-enhanced audio editor with noise removal, auto-leveling, and speech-to-text transcription for podcast production.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 增强的音频编辑器，具备降噪、自动电平与语音转文字功能，适用于播客制作。",
+    "best_for_zh": [
+      "想要带降噪插件的开源 AI 音频编辑的播客创作者"
+    ]
   },
   {
     "id": 1434,
@@ -13439,7 +15893,11 @@
     "description_en": "AI video creation tool for social media marketing and advertising with premium footage and customizable templates.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "面向社交媒体营销与广告的 AI 视频创作工具，提供优质素材与可自定义模板。",
+    "best_for_zh": [
+      "需要快速制作 AI 推广与社交媒体视频的营销人员"
+    ]
   },
   {
     "id": 1435,
@@ -13460,7 +15918,11 @@
     "description_en": "AI video and animation maker for branding and marketing content with logo animation and explainer video templates.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 视频与动画制作工具，用于品牌与营销内容，提供 Logo 动画和讲解视频模板。",
+    "best_for_zh": [
+      "需要带 Logo、片头、讲解视频模板的 AI 视频创作的企业"
+    ]
   },
   {
     "id": 1436,
@@ -13481,7 +15943,11 @@
     "description_en": "AI video creation platform for making professional videos quickly with customizable templates and brand kit integration.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 视频创作平台，借助可自定义模板和品牌工具包集成，快速制作专业视频。",
+    "best_for_zh": [
+      "想要制作简单 AI 动画讲解视频的小团队"
+    ]
   },
   {
     "id": 1439,
@@ -13505,7 +15971,11 @@
     "description_en": "AI-powered writing assistant for grammar and style checking supporting over 30 languages with context-aware suggestions.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 驱动的写作助手，支持 30 多种语言的语法与文风检查，并提供上下文感知的修改建议。",
+    "best_for_zh": [
+      "需要 AI 语法检查并支持多语种的写作者"
+    ]
   },
   {
     "id": 1440,
@@ -13526,7 +15996,11 @@
     "description_en": "AI content generator for website copy and e-commerce product descriptions that creates SEO-optimized text instantly.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 内容生成工具，面向网站文案与电商产品描述，可即时生成 SEO 优化文本。",
+    "best_for_zh": [
+      "想要 AI 网站文案与产品描述的小企业主"
+    ]
   },
   {
     "id": 1441,
@@ -13547,7 +16021,11 @@
     "description_en": "AI content generation tool for discovering profitable niches and creating targeted marketing content at scale.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 内容生成工具，用于发掘有利可图的细分市场并规模化产出定向营销内容。",
+    "best_for_zh": [
+      "需要 AI 生成细分领域商业与营销点子的副业创业者"
+    ]
   },
   {
     "id": 1442,
@@ -13569,7 +16047,11 @@
     "description_en": "AI photo editor with magic retouching and avatar generation features for creating stunning social media portraits.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 修图工具，具备魔法修图和头像生成功能，可创作出惊艳的社交媒体人像。",
+    "best_for_zh": [
+      "想要 AI 人像增强与艺术风格滤镜的自拍爱好者"
+    ]
   },
   {
     "id": 1444,
@@ -13590,7 +16072,11 @@
     "description_en": "AI face editing tool for realistic photo transformations including age progression, gender swap, and style enhancements.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 人脸编辑工具，可实现逼真的人脸变换，包括年龄变化、性别互换与风格美化。",
+    "best_for_zh": [
+      "想要 AI 变老、性别互换等趣味人脸变换的用户"
+    ]
   },
   {
     "id": 1445,
@@ -13611,7 +16097,11 @@
     "description_en": "AI photo relighting tool for adjusting light direction and intensity after the photo is taken for perfect illumination.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 照片重新打光工具，可在拍摄后调整光线方向与强度，获得理想的光照效果。",
+    "best_for_zh": [
+      "需要 AI 为人像重新打光、营造影棚级光效的摄影师"
+    ]
   },
   {
     "id": 1446,
@@ -13632,7 +16122,11 @@
     "description_en": "AI object removal tool for seamlessly cleaning up photos by erasing unwanted people, text, and blemishes instantly.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 物体消除工具，可即时抹去照片中多余的人物、文字和瑕疵，实现干净无痕的修图。",
+    "best_for_zh": [
+      "需要 AI 即时去除照片中多余物体的所有人"
+    ]
   },
   {
     "id": 1452,
@@ -13653,7 +16147,11 @@
     "description_en": "AI code generation model specialized for software development tasks with deep understanding of codebase context.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "专为软件开发任务打造的 AI 代码生成模型，对代码库上下文有深入理解。",
+    "best_for_zh": [
+      "希望获得针对快速补全优化的 AI 代码助手的 Mistral 用户"
+    ]
   },
   {
     "id": 1453,
@@ -13674,7 +16172,11 @@
     "description_en": "AI coding model for code generation and understanding across multiple programming languages with strong reasoning.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 编程模型，覆盖多种编程语言的代码生成与理解，具备较强的推理能力。",
+    "best_for_zh": [
+      "希望使用开源 AI 代码生成与补全的中文开发者"
+    ]
   },
   {
     "id": 1454,
@@ -13695,7 +16197,11 @@
     "description_en": "AI code quality tool for generating meaningful tests and documentation that improve codebase reliability and coverage.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 代码质量工具，用于生成有意义的测试与文档，提升代码库的可靠性与覆盖率。",
+    "best_for_zh": [
+      "希望 AI 自动生成全面测试套件的 QA 工程师"
+    ]
   },
   {
     "id": 1457,
@@ -13716,7 +16222,11 @@
     "description_en": "AI music and sound effect generation tool for content creators producing royalty-free audio from text descriptions.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 音乐与音效生成工具，为内容创作者根据文字描述制作免版税音频。",
+    "best_for_zh": [
+      "希望 AI 根据文字描述生成定制音频样本的声音设计师"
+    ]
   },
   {
     "id": 1459,
@@ -13737,7 +16247,11 @@
     "description_en": "AI music practice app with stem separation, pitch detection, and tempo control for musicians to learn any song.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 音乐练习应用，具备音轨分离、音高检测和速度控制，帮助音乐人学习任意歌曲。",
+    "best_for_zh": [
+      "希望 AI 从任意歌曲中分离人声、鼓和各乐器的音乐人"
+    ]
   },
   {
     "id": 1460,
@@ -13758,7 +16272,11 @@
     "description_en": "AI tool for separating vocals from music tracks enabling remixing, karaoke creation, and sample extraction instantly.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 工具，可将人声从音乐中分离出来，便于即时进行混音、制作卡拉 OK 和提取采样。",
+    "best_for_zh": [
+      "需要 AI 去除人声、制作伴奏带的卡拉 OK 创作者"
+    ]
   },
   {
     "id": 1465,
@@ -13779,7 +16297,11 @@
     "description_en": "AI video generation platform for creating and editing videos from text prompts with creative style control and effects.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 视频生成平台，可根据文本提示创作和编辑视频，并提供创意风格控制与特效。",
+    "best_for_zh": [
+      "希望 AI 生成奇趣、富有艺术感短视频片段的创作者"
+    ]
   },
   {
     "id": 1466,
@@ -13800,7 +16322,11 @@
     "description_en": "AI video generation tool for creating mesmerizing music videos and visual art with animation from images and audio.",
     "rating": null,
     "rating_count": null,
-    "examples": []
+    "examples": [],
+    "description_zh": "AI 视频生成工具，可将图像与音频转化为动画，创作令人着迷的音乐视频和视觉艺术作品。",
+    "best_for_zh": [
+      "希望 AI 生成与音乐同步的动画视频作品的艺术家"
+    ]
   },
   {
     "id": 1467,
@@ -13830,7 +16356,13 @@
       "Social Media"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "社区驱动的 AI 视频创作平台，提供文生视频、图生视频和角色生视频工具。PixVerse 主打动漫与奇幻风格，并有活跃的创作者模板生态。",
+    "best_for_zh": [
+      "动漫",
+      "社区",
+      "社交媒体"
+    ]
   },
   {
     "id": 1469,
@@ -13860,7 +16392,13 @@
       "Complex Projects"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "自主 AI 软件工程师，能够规划、编码、调试并部署完整项目。Devin 可根据自然语言需求说明，端到端地处理整个开发流程。",
+    "best_for_zh": [
+      "工程团队",
+      "自主编程",
+      "复杂项目"
+    ]
   },
   {
     "id": 1470,
@@ -13894,7 +16432,13 @@
       "Teams"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "集成于 Microsoft 365 应用、Windows 和 Edge 的高级 AI 助手。Copilot Pro 提供先进的 GPT-4 Turbo 访问权限、自定义 GPT，以及面向办公工作流的增强生产力功能。",
+    "best_for_zh": [
+      "办公人士",
+      "Microsoft 365",
+      "Teams"
+    ]
   },
   {
     "id": 1471,
@@ -13925,7 +16469,13 @@
       "Research"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "月之暗面（Moonshot AI）推出的长上下文 AI 助手，支持最高 200 万 token。Kimi AI 擅长文档分析、编程辅助，以及中英文的长对话。",
+    "best_for_zh": [
+      "长文档",
+      "中文用户",
+      "研究"
+    ]
   },
   {
     "id": 1472,
@@ -13956,7 +16506,13 @@
       "Voice Chat"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "字节跳动的 AI 助手，具备聊天、写作、学习和图像生成功能。Doubao 支持语音对话，并接入字节跳动内容生态，面向中文用户。",
+    "best_for_zh": [
+      "中文用户",
+      "学生",
+      "语音聊天"
+    ]
   },
   {
     "id": 1473,
@@ -13987,7 +16543,13 @@
       "Developers"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "腾讯的基座模型，支持文本、图像和代码生成。Hunyuan 已接入腾讯云服务、微信及企业应用，服务中国企业。",
+    "best_for_zh": [
+      "企业",
+      "中文用户",
+      "开发者"
+    ]
   },
   {
     "id": 1474,
@@ -14017,7 +16579,13 @@
       "Subtitles"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "基于浏览器的视频编辑器，支持 AI 字幕、翻译和内容二次利用。Kapwing 因能制作社交媒体短片和协作视频项目且无需下载安装而广受欢迎。",
+    "best_for_zh": [
+      "社交媒体",
+      "协作",
+      "字幕"
+    ]
   },
   {
     "id": 1475,
@@ -14050,7 +16618,13 @@
       "Beginners"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向大众的视频编辑器，内置 AI 工具，支持遮罩、音频增强、文生视频特效和智能抠像。Filmora 面向希望在桌面端和移动端获得专业效果的创作者。",
+    "best_for_zh": [
+      "桌面剪辑",
+      "移动端",
+      "新手"
+    ]
   },
   {
     "id": 1476,
@@ -14080,7 +16654,13 @@
       "Captions"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "移动优先的 AI 视频应用，可自动添加动态字幕、剪掉静音片段并翻译语音。Captions AI 专为在 TikTok、Reels 和 Shorts 发布作品的短视频创作者设计。",
+    "best_for_zh": [
+      "移动创作者",
+      "短视频",
+      "字幕"
+    ]
   },
   {
     "id": 1477,
@@ -14110,7 +16690,13 @@
       "Avatars"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 视频工作流工具，可根据选题生成脚本、虚拟形象和社交短视频。Syllaby 帮助营销人员规模化产出稳定更新的短视频内容。",
+    "best_for_zh": [
+      "营销人员",
+      "脚本撰写",
+      "虚拟形象"
+    ]
   },
   {
     "id": 1478,
@@ -14142,7 +16728,13 @@
       "TikTok"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "移动端视频编辑器，具备 AI 特效、自动字幕和智能模板。InShot AI 简化了竖屏视频制作，适合专注 Instagram Reels 和 TikTok 的创作者。",
+    "best_for_zh": [
+      "移动端",
+      "Reels",
+      "TikTok"
+    ]
   },
   {
     "id": 1479,
@@ -14175,7 +16767,13 @@
       "Global Audiences"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 字幕生成工具，可为短视频制作多语言的动态动画字幕。Submagic 专注提升社交媒体内容的互动与留存。",
+    "best_for_zh": [
+      "字幕",
+      "短视频",
+      "全球受众"
+    ]
   },
   {
     "id": 1480,
@@ -14205,7 +16803,13 @@
       "Voice Cloning"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向歌手与制作人的 AI 声音平台，提供声音克隆、乐器模型和免版税 AI 人声。Kits AI 常用于小样制作、混音和人声制作。",
+    "best_for_zh": [
+      "歌手",
+      "制作人",
+      "声音克隆"
+    ]
   },
   {
     "id": 1481,
@@ -14235,7 +16839,13 @@
       "Stem Separation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 音轨分离工具，可从任意音频文件中分离人声、鼓、贝斯和乐器。Lalal.ai 支持批量处理与高质量提取，服务于制作人和 DJ。",
+    "best_for_zh": [
+      "制作人",
+      "DJ",
+      "音轨分离"
+    ]
   },
   {
     "id": 1482,
@@ -14266,7 +16876,13 @@
       "Speech"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "科大讯飞的大语言模型与 AI 助手，中文语音识别与文档理解能力突出。Spark Desk 面向教育、办公和企业场景。",
+    "best_for_zh": [
+      "中文用户",
+      "教育",
+      "语音"
+    ]
   },
   {
     "id": 1483,
@@ -14297,7 +16913,13 @@
       "Coding"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "百川智能的大语言模型，针对中国企业应用优化。Baichuan 具备较强的推理、编程和领域专业知识，适用于业务工作流。",
+    "best_for_zh": [
+      "企业",
+      "中文用户",
+      "编程"
+    ]
   },
   {
     "id": 1484,
@@ -14327,7 +16949,13 @@
       "Documents"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "腾讯的 AI 助手，由 Hunyuan 模型驱动，提供聊天、搜索、文档分析和图像生成。元宝接入腾讯生态，面向中文用户。",
+    "best_for_zh": [
+      "中文用户",
+      "搜索",
+      "文档"
+    ]
   },
   {
     "id": 1485,
@@ -14357,7 +16985,13 @@
       "On-Device AI"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "vivo 的大语言模型，面向移动与生产力场景。BlueLM 为 vivo 和 iQOO 设备的 AI 功能提供支持，具备端侧与云端能力，服务中文用户。",
+    "best_for_zh": [
+      "移动用户",
+      "中文用户",
+      "端侧 AI"
+    ]
   },
   {
     "id": 1486,
@@ -14390,7 +17024,13 @@
       "Image Generation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Meta 的通用 AI 助手，已集成到 Facebook、Instagram、WhatsApp 和 Ray-Ban 智能眼镜中。Meta AI 支持实时图像生成与对话式搜索。",
+    "best_for_zh": [
+      "社交媒体",
+      "普通用户",
+      "图像生成"
+    ]
   },
   {
     "id": 1487,
@@ -14415,7 +17055,13 @@
       "Terminal Workflows"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Anthropic 推出的终端原生编程智能体。它会读取你的代码仓库、执行 shell 命令、运行测试套件并提交更改，作为交互式 CLI 运行在现有终端中，而非独立编辑器。仓库约定可写入 CLAUDE.md 文件，并通过钩子与权限规则加以约束；借助 MCP 服务器可连接外部数据库、问题跟踪系统和 API。",
+    "best_for_zh": [
+      "智能体编程",
+      "重构",
+      "终端工作流"
+    ]
   },
   {
     "id": 1488,
@@ -14440,7 +17086,13 @@
       "Autonomous Coding"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 VS Code 的开源编程智能体，每次修改文件和执行终端命令前都会请求确认，让你清楚掌握它的一举一动。它不绑定特定模型——可自带 Claude、GPT 或本地模型的 API 密钥——并支持 MCP 工具生态，以扩展智能体的能力范围。",
+    "best_for_zh": [
+      "开源",
+      "VS Code",
+      "自主编程"
+    ]
   },
   {
     "id": 1489,
@@ -14465,7 +17117,13 @@
       "Model Agnostic"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "MIT 许可的终端编程智能体，支持 75 家以上的模型服务商，因此不会被单一厂商或订阅绑定。完全在终端中以 TUI 界面运行，深受希望完全掌控各任务所用模型的开发者欢迎。",
+    "best_for_zh": [
+      "开源",
+      "终端",
+      "模型无关"
+    ]
   },
   {
     "id": 1490,
@@ -14490,7 +17148,13 @@
       "Terminal"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "基于 Git 的 AI 结对编程工具，在终端中运行并将改动直接写入你的仓库。每次编辑都会附带描述性信息提交，因此 AI 的全部贡献都能通过常规 git 历史进行审查和回滚。支持 Claude、GPT 以及本地部署的模型。",
+    "best_for_zh": [
+      "Git 工作流",
+      "结对编程",
+      "终端"
+    ]
   },
   {
     "id": 1491,
@@ -14515,7 +17179,13 @@
       "Code Search"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向大型企业代码库的 AI 编程平台，核心是一套上下文引擎，可索引数百万行代码，让回答基于整个仓库而非当前打开的单个文件。它集成 VS Code 与 JetBrains，侧重团队级代码理解，而非单文件自动补全。",
+    "best_for_zh": [
+      "企业",
+      "大型代码库",
+      "代码搜索"
+    ]
   },
   {
     "id": 1492,
@@ -14540,7 +17210,13 @@
       "Editors"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用 Rust 编写的原生代码编辑器，内置 AI 智能体支持、实时协作编辑和 vim 模式。它以性能著称——相比基于 Electron 的编辑器启动更快、内存占用更小——同时仍提供现代的智能体编程功能。",
+    "best_for_zh": [
+      "性能",
+      "协作",
+      "编辑器"
+    ]
   },
   {
     "id": 1493,
@@ -14565,7 +17241,13 @@
       "No Setup"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "StackBlitz 推出的浏览器端 AI 应用构建工具，只需一条提示即可生成、运行并部署全栈 Web 应用。一切都发生在浏览器内的开发环境中，无需安装本地工具链——可直接实时预览并部署，全程不用离开当前标签页。",
+    "best_for_zh": [
+      "原型开发",
+      "全栈应用",
+      "免配置"
+    ]
   },
   {
     "id": 1494,
@@ -14590,7 +17272,13 @@
       "Frontend"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Vercel 的 AI 应用构建工具，可将文本提示和截图转化为基于 shadcn/ui 和 Tailwind CSS 的生产级 React 组件。生成结果既可复制到自己的项目中，也能直接部署到 Vercel，因此常被用作内部工具和着陆页的起点。",
+    "best_for_zh": [
+      "UI 生成",
+      "React",
+      "前端"
+    ]
   },
   {
     "id": 1495,
@@ -14615,7 +17303,13 @@
       "Chatbots"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "xAI 的对话助手，特点是能实时访问 X（Twitter）数据，并采取刻意宽松的内容策略。内置 DeepSearch 模式可执行多步研究并附上引用来源，同时支持图像生成。",
+    "best_for_zh": [
+      "实时数据",
+      "研究",
+      "聊天机器人"
+    ]
   },
   {
     "id": 1496,
@@ -14640,7 +17334,13 @@
       "European Models"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Mistral AI 的聊天助手，多语言表现尤为出色且响应速度快。内置带引用的网页搜索、文档分析、浏览器内代码执行，以及便于迭代文字输出的画布式编辑。",
+    "best_for_zh": [
+      "多语言",
+      "聊天机器人",
+      "欧洲模型"
+    ]
   },
   {
     "id": 1497,
@@ -14665,7 +17365,13 @@
       "Coding"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "基于 DeepSeek 开放权重推理模型的聊天助手。它因在数学和编程基准上以远低于常规的推理成本达到前沿水平而备受关注，且网页版目前可免费使用。",
+    "best_for_zh": [
+      "推理",
+      "免费额度",
+      "编程"
+    ]
   },
   {
     "id": 1498,
@@ -14690,7 +17396,13 @@
       "Document Analysis"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "阿里巴巴基于 Qwen 系列模型打造的聊天助手，中英文能力出色。免费网页版支持文档与图像理解、网页搜索和代码生成，无需订阅。",
+    "best_for_zh": [
+      "多语言",
+      "免费额度",
+      "文档分析"
+    ]
   },
   {
     "id": 1499,
@@ -14715,7 +17427,13 @@
       "Model Testing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Google 面向 Gemini 模型的浏览器试验场。你可以测试提示词、并排比较不同模型变体、调整采样参数并导出可用代码——这是在付费调用 API 之前验证想法的实用途径。",
+    "best_for_zh": [
+      "原型开发",
+      "开发者",
+      "模型测试"
+    ]
   },
   {
     "id": 1500,
@@ -14740,7 +17458,13 @@
       "Citations"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Google 的基于素材来源的研究助手。你上传 PDF、文档、幻灯片和网页后即可提问，回答仅来自你提供的资料，并附内联引用指向所依据的原文段落。还能根据素材生成音频概览、思维导图和幻灯片。",
+    "best_for_zh": [
+      "研究",
+      "文档问答",
+      "引用"
+    ]
   },
   {
     "id": 1501,
@@ -14765,7 +17489,13 @@
       "Cited Answers"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 搜索引擎，将带有引用来源的综合答案与传统网页结果结合起来。其智能体模式可跨来源执行多步研究，平台整体以隐私优先为理念，并提供可自定义的搜索与聊天模式。",
+    "best_for_zh": [
+      "AI 搜索",
+      "隐私",
+      "带引用答案"
+    ]
   },
   {
     "id": 1502,
@@ -14790,7 +17520,13 @@
       "Data Extraction"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向文献综述的研究助手。它检索学术论文，然后将样本量、研究方法、核心发现等结构化字段提取到对比表格中，并对各项研究进行汇总，每项结论都附有引用。",
+    "best_for_zh": [
+      "学术研究",
+      "文献综述",
+      "数据提取"
+    ]
   },
   {
     "id": 1503,
@@ -14815,7 +17551,13 @@
       "Citations"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "学术平台，用通俗语言解读论文，并允许你针对 PDF 提问，答案严格基于原文。此外还涵盖引用管理与文献综述起草，面向需要同时处理大量论文的研究人员。",
+    "best_for_zh": [
+      "学术研究",
+      "论文解读",
+      "引用"
+    ]
   },
   {
     "id": 1504,
@@ -14840,7 +17582,13 @@
       "Task Execution"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "通用 AI 智能体，可在沙箱云环境中把多步骤任务执行到底——包括研究、编程、表格处理和文件产出——而不仅仅是回答问题。你只需交付目标，再审视它返回的工作成果。",
+    "best_for_zh": [
+      "AI 智能体",
+      "自动化",
+      "任务执行"
+    ]
   },
   {
     "id": 1505,
@@ -14865,7 +17613,13 @@
       "Self-Hosting"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "源代码可用的工作流自动化平台，拥有 400 多个集成，并提供一流的 AI 与 LLM 节点用于构建智能体自动化。由于支持自托管，凭证和数据都留在自己的基础设施上——这通常是受合规约束团队的硬性要求。",
+    "best_for_zh": [
+      "自动化",
+      "工作流",
+      "自托管"
+    ]
   },
   {
     "id": 1506,
@@ -14890,7 +17644,13 @@
       "Open Source"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用于交付生产级 AI 应用的开源平台，集可视化工作流编排、RAG 流水线、提示词管理与智能体工具于一体，并内置可观测性。让团队从原型平滑走向已部署的服务，无需重建周边基础设施。",
+    "best_for_zh": [
+      "AI 应用",
+      "RAG",
+      "开源"
+    ]
   },
   {
     "id": 1507,
@@ -14915,7 +17675,13 @@
       "Integrations"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "构建 AI 智能体的平台，可接管日常重复性业务工作——邮件分类、会议安排、更新 CRM 记录、起草客服回复——无需编码即可连接 300 多个第三方应用。",
+    "best_for_zh": [
+      "AI 智能体",
+      "业务任务",
+      "集成"
+    ]
   },
   {
     "id": 1508,
@@ -14940,7 +17706,13 @@
       "AI Workflows"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "通过节点编辑器组装 AI 工作流与智能体的无代码平台。面向希望把 LLM 步骤与电子表格、CRM、邮件等日常业务工具串联起来的非技术团队。",
+    "best_for_zh": [
+      "无代码",
+      "自动化",
+      "AI 工作流"
+    ]
   },
   {
     "id": 1509,
@@ -14965,7 +17737,13 @@
       "No-Code"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "连接数千款商业应用的自动化平台，并扩展了 AI 智能体与自然语言工作流搭建能力。它的价值在于集成的广度——当任务需要在没有原生连接的工具之间搬运数据时尤为实用。",
+    "best_for_zh": [
+      "自动化",
+      "集成",
+      "无代码"
+    ]
   },
   {
     "id": 1510,
@@ -14990,7 +17768,13 @@
       "Full Control"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 Stable Diffusion 及其他扩散模型的节点式开源界面。它将整个生成流程暴露为可编辑的图，让你可以精确控制采样、条件控制、放大和 LoRA 叠加。完全在本地运行，因此没有使用费，数据也不会离开你的机器。",
+    "best_for_zh": [
+      "开源",
+      "本地模型",
+      "完全掌控"
+    ]
   },
   {
     "id": 1511,
@@ -15015,7 +17799,13 @@
       "Upscaling"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "构建在 Freepik 素材库之上的 AI 图像与视频生成套件。包含文生图生成器、AI 放大器、背景去除和修图工具，可快速产出可直接商用的营销视觉素材，且授权问题已预先解决。",
+    "best_for_zh": [
+      "素材资源",
+      "图像生成",
+      "放大"
+    ]
   },
   {
     "id": 1512,
@@ -15040,7 +17830,13 @@
       "Social Media"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "字节跳动旗下的视频编辑器，广泛用于 TikTok、Reels 和 Shorts 内容制作。其 AI 功能涵盖带翻译的自动字幕、背景去除、文本转语音以及模板化短视频剪辑，桌面端和移动端均可免费使用。",
+    "best_for_zh": [
+      "短视频",
+      "自动字幕",
+      "社交媒体"
+    ]
   },
   {
     "id": 1513,
@@ -15065,7 +17861,13 @@
       "Camera Control"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "生数科技推出的文本与图像转视频模型，侧重保持主体在不同镜头间的一致性，并提供明确的镜头运动控制。面向短叙事片段和概念可视化，而非长片制作。",
+    "best_for_zh": [
+      "视频生成",
+      "角色一致性",
+      "镜头控制"
+    ]
   },
   {
     "id": 1514,
@@ -15090,7 +17892,13 @@
       "Character Video"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 视频工具，可用单张人像照片和一段音频生成富有表现力的说话人物短片。注重口型同步精度与面部表演，因此常被用于角色主导的讲解和社交内容。",
+    "best_for_zh": [
+      "说话虚拟形象",
+      "口型同步",
+      "角色视频"
+    ]
   },
   {
     "id": 1515,
@@ -15115,7 +17923,13 @@
       "Translation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 视频平台，用于制作以虚拟形象为主导的营销与培训视频，内置声音克隆和多语言翻译。同一份脚本无需重新录制即可在多个市场复用发布。",
+    "best_for_zh": [
+      "虚拟形象",
+      "营销视频",
+      "翻译"
+    ]
   },
   {
     "id": 1516,
@@ -15140,7 +17954,13 @@
       "Advertising"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向电影感图像与视频生成的 AI 原生创作套件，提供预置镜头运动和运镜控制库。适用于短视频和广告制作——在这类场景中，特定镜头质感比纯粹的生成速度更重要。",
+    "best_for_zh": [
+      "电影感视频",
+      "镜头运动",
+      "广告"
+    ]
   },
   {
     "id": 1517,
@@ -15165,7 +17985,13 @@
       "Writing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "语音输入应用，可在 Mac 或 Windows 的任意程序中把语音转化为整洁、有格式的文字。自动处理标点并剔除口头赘词，因此得到的是可直接使用的成稿，而非原始转写稿。",
+    "best_for_zh": [
+      "语音输入",
+      "语音转文字",
+      "写作"
+    ]
   },
   {
     "id": 1518,
@@ -15190,7 +18016,13 @@
       "Privacy"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "支持 macOS、Windows 和 iOS 的语音转文字工具，模型完全在设备端运行，音频不会离开你的机器。支持自定义词库和格式预设，在保密要求不允许云端转写的场景下常被选用。",
+    "best_for_zh": [
+      "语音输入",
+      "离线",
+      "隐私"
+    ]
   },
   {
     "id": 1519,
@@ -15215,7 +18047,13 @@
       "Summaries"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向会议的 AI 记事本，在后台转写，并将转写内容与你手打的笔记融合成结构化摘要。没有机器人加入会议，避免了出现一个可见参会者的尴尬，也适用于线下会议。",
+    "best_for_zh": [
+      "会议记录",
+      "转写",
+      "摘要"
+    ]
   },
   {
     "id": 1520,
@@ -15240,7 +18078,13 @@
       "CRM Sync"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "会议记录工具，可录制、转写并总结 Zoom、Google Meet 和 Teams 通话，随后起草跟进邮件。免费额度相当慷慨，付费方案还增加 CRM 同步，让笔记自动归到对应记录下。",
+    "best_for_zh": [
+      "会议记录",
+      "Zoom",
+      "CRM 同步"
+    ]
   },
   {
     "id": 1521,
@@ -15265,7 +18109,13 @@
       "Developers"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向开发者的语音转文字 API，支持说话人分离、主题与情感检测、情感分析以及个人敏感信息（PII）脱敏。专为需要可靠转写并从音频中提取结构化元数据的生产流水线而设计。",
+    "best_for_zh": [
+      "语音 API",
+      "转写",
+      "开发者"
+    ]
   },
   {
     "id": 1522,
@@ -15290,7 +18140,13 @@
       "Voice AI"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "语音 AI API 服务商，提供实时与批量语音识别以及文本转语音。以低延迟流式传输和面向特定领域调优的语言模型著称，常用于实时字幕和呼叫中心分析。",
+    "best_for_zh": [
+      "语音 API",
+      "实时",
+      "语音 AI"
+    ]
   },
   {
     "id": 1523,
@@ -15315,7 +18171,13 @@
       "Marketing"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "企业级内容平台，可规模化产出符合品牌规范的营销物料。品牌工具包、审批通过的模板和营销活动工作流，确保生成的文案与图像始终在规范之内，这正是大型团队选择它而非通用写作工具的主要原因。",
+    "best_for_zh": [
+      "企业",
+      "品牌一致性",
+      "营销"
+    ]
   },
   {
     "id": 1524,
@@ -15340,7 +18202,13 @@
       "Summaries"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Google Slides 插件，可将文本大纲或文档转换为排版好的幻灯片，并包含演讲者备注和配图建议。当内容已就绪、只差幻灯片排版时尤为实用。",
+    "best_for_zh": [
+      "演示文稿",
+      "Google Slides",
+      "摘要"
+    ]
   },
   {
     "id": 1525,
@@ -15365,7 +18233,13 @@
       "Personal Assistant"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 个人助理，将笔记、任务和日历整合到一个工作空间，并采用对 ADHD 友好的工作流设计：快速记录、自动排优先级，以及基于你自己的笔记进行对话，而非依赖独立知识库。",
+    "best_for_zh": [
+      "笔记",
+      "任务管理",
+      "个人助理"
+    ]
   },
   {
     "id": 1537,
@@ -15390,7 +18264,13 @@
     ],
     "skill_level": "beginner",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 智能体工作空间，会先研究某个主题，再返回结构化的「sparkpage」而非对话串；其智能体还能通过一条提示生成幻灯片、电子表格和通话摘要。",
+    "best_for_zh": [
+      "研究报告",
+      "幻灯片",
+      "会议摘要"
+    ]
   },
   {
     "id": 1538,
@@ -15415,7 +18295,13 @@
     ],
     "skill_level": "intermediate",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Cactus Communications 推出的学术写作助手，可检查稿件的语言、结构与期刊匹配度，其投稿前检查功能被研究人员和出版机构广泛使用。",
+    "best_for_zh": [
+      "期刊稿件",
+      "基金申请书",
+      "学术润色"
+    ]
   },
   {
     "id": 1539,
@@ -15441,7 +18327,13 @@
     ],
     "skill_level": "beginner",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "一体化 AI 助手，提供浏览器扩展、桌面端和移动端应用。在侧边栏中整合了多模型对话、网页与视频摘要、翻译、写作辅助和图像工具。",
+    "best_for_zh": [
+      "网页摘要",
+      "翻译",
+      "快速写作辅助"
+    ]
   },
   {
     "id": 1540,
@@ -15466,7 +18358,13 @@
     ],
     "skill_level": "intermediate",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "字节跳动推出的 AI 原生 IDE，支持 macOS 和 Windows。Builder 模式可规划并编写跨多文件的功能，智能体能执行终端命令和调试，主流模型均可免费使用。",
+    "best_for_zh": [
+      "智能体编程",
+      "多文件功能",
+      "日常开发"
+    ]
   },
   {
     "id": 1541,
@@ -15492,7 +18390,14 @@
     ],
     "skill_level": "intermediate",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Google 的异步编程智能体。把它指向某个 GitHub 仓库、描述任务，它就会把仓库克隆到云虚拟机中，写出计划、生成 diff 并为你发起 Pull Request 供审查。",
+    "best_for_zh": [
+      "缺陷修复",
+      "版本升级",
+      "编写测试",
+      "Pull Request"
+    ]
   },
   {
     "id": 1542,
@@ -15517,7 +18422,13 @@
     ],
     "skill_level": "advanced",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "面向 AI 软件工程智能体的开源平台。可在本地、CI 或托管环境中运行，让智能体编辑文件、执行命令、浏览网页并创建 Pull Request。",
+    "best_for_zh": [
+      "自托管智能体",
+      "CI 自动化",
+      "编程智能体研究"
+    ]
   },
   {
     "id": 1543,
@@ -15542,7 +18453,13 @@
     ],
     "skill_level": "beginner",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Google 基于 Veo 和 Imagen 打造的 AI 影视创作工具。可从文本或图像生成场景、控制镜头运动、保持角色在不同镜头间一致，并在 scenebuilder 时间线上完成整体组装。",
+    "best_for_zh": [
+      "AI 短片",
+      "分镜",
+      "营销视频"
+    ]
   },
   {
     "id": 1544,
@@ -15567,7 +18484,13 @@
     ],
     "skill_level": "intermediate",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Google DeepMind 的视频生成模型，可生成带原生音频、支持镜头控制与参考图条件的片段。可通过 Gemini、Flow 和 Gemini API 使用。",
+    "best_for_zh": [
+      "电影感片段",
+      "产品视频",
+      "API 视频生成"
+    ]
   },
   {
     "id": 1545,
@@ -15592,7 +18515,13 @@
     ],
     "skill_level": "beginner",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Lightricks 推出的 AI 分镜与视频工作室。可从脚本一路搭建到镜头清单，按场景保持角色与镜头一致，再渲染导出以便进一步剪辑。",
+    "best_for_zh": [
+      "分镜",
+      "广告创意",
+      "预可视化"
+    ]
   },
   {
     "id": 1546,
@@ -15617,7 +18546,13 @@
     ],
     "skill_level": "intermediate",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 图像放大与增强工具，不只是锐化像素，而是重新生成纹理与光照，并提供相似度、创意度和细节等滑块调节。",
+    "best_for_zh": [
+      "艺术作品放大",
+      "纹理细节",
+      "印刷准备"
+    ]
   },
   {
     "id": 1547,
@@ -15642,7 +18577,13 @@
     ],
     "skill_level": "intermediate",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Black Forest Labs 的图像模型（FLUX.2），并提供视频生成与编辑能力，可通过 BFL 试验场、API 以及第三方模型托管平台使用。",
+    "best_for_zh": [
+      "写实图像",
+      "API 生成",
+      "自定义流水线"
+    ]
   },
   {
     "id": 1548,
@@ -15668,7 +18609,13 @@
     ],
     "skill_level": "advanced",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "语音 AI 平台，提供定制声音克隆、语音转语音转换、实时合成与配音，应用于游戏、影视本地化和呼叫中心产品。",
+    "best_for_zh": [
+      "声音克隆",
+      "配音",
+      "游戏对白"
+    ]
   },
   {
     "id": 1549,
@@ -15693,7 +18640,13 @@
     ],
     "skill_level": "beginner",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "远程录音工作室，可为每位嘉宾分别采集本地音视频轨道，随后转写会话内容并剪辑成便于分享的片段。",
+    "best_for_zh": [
+      "播客录制",
+      "远程访谈",
+      "片段再利用"
+    ]
   },
   {
     "id": 1550,
@@ -15718,7 +18671,13 @@
     ],
     "skill_level": "beginner",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "邮件 AI 助手，以你自己的口吻起草回复、对收件箱分类、记录会议笔记并归档邮件，运行在 Gmail 和 Outlook 之上。",
+    "best_for_zh": [
+      "收件箱分类",
+      "起草回复",
+      "高管助理"
+    ]
   },
   {
     "id": 1551,
@@ -15743,7 +18702,13 @@
     ],
     "skill_level": "beginner",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 邮件客户端，支持会话摘要、覆盖整个邮箱的自然语言搜索，以及基于你自身邮件历史起草回复的助手。",
+    "best_for_zh": [
+      "邮件搜索",
+      "会话摘要",
+      "快速分类"
+    ]
   },
   {
     "id": 1552,
@@ -15768,7 +18733,13 @@
     ],
     "skill_level": "intermediate",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "构建 AI 智能体的平台，可连接 Slack、Notion、Drive、GitHub 等公司数据，支持可配置的助手、工具调用和团队共享工作空间。",
+    "best_for_zh": [
+      "内部助手",
+      "知识搜索",
+      "团队自动化"
+    ]
   },
   {
     "id": 1553,
@@ -15793,7 +18764,13 @@
     ],
     "skill_level": "intermediate",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "无需代码即可构建和部署 AI 智能体团队的平台，提供可视化工作流编排器、工具库，以及面向销售、客服和运营的集成能力。",
+    "best_for_zh": [
+      "智能体工作流",
+      "销售自动化",
+      "客服分诊"
+    ]
   },
   {
     "id": 1554,
@@ -15818,7 +18795,13 @@
     ],
     "skill_level": "intermediate",
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "数据充实与外联平台，可从 100 多个数据源抓取信息，并对每一行运行 AI 调研智能体，以构建并个性化营销触达名单。",
+    "best_for_zh": [
+      "潜客调研",
+      "名单充实",
+      "外联个性化"
+    ]
   },
   {
     "id": 1555,
@@ -15852,7 +18835,13 @@
       "Autocomplete"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "为速度而生的 AI 代码补全工具，上下文窗口足够大，能比普通自动补全引入多得多的代码库内容。以插件形式支持 VS Code、JetBrains 和 Neovim，因此你可以继续使用现有编辑器。如果你想获得行内建议、又不想迁移到全新 IDE，它是不错的选择。",
+    "best_for_zh": [
+      "开发者",
+      "速度",
+      "自动补全"
+    ]
   },
   {
     "id": 1556,
@@ -15886,7 +18875,13 @@
       "Automation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "在 IDE 内以仓库级视角工作的 AI 编程智能体——编写功能、修复问题代码、生成单元测试，并能理解你既有的代码约定。面向希望在不离开现有编辑器的前提下获得智能体协助的专业团队。",
+    "best_for_zh": [
+      "团队",
+      "开发者",
+      "自动化"
+    ]
   },
   {
     "id": 1557,
@@ -15920,7 +18915,13 @@
       "Onboarding"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "AI 代码审查与代码库问答工具。它会为你的仓库建立索引，让你可以用自然语言提问各部分如何关联，并在 Pull Request 上自动发表审查评论。在接手陌生代码库或审查大型改动时尤其有用。",
+    "best_for_zh": [
+      "团队",
+      "代码审查",
+      "上手熟悉"
+    ]
   },
   {
     "id": 1558,
@@ -15954,7 +18955,13 @@
       "Prototyping"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "用自然语言描述一个应用，Base44 就能生成可运行的全栈应用——包含数据库、后端和界面。适合想要真正能跑起来的应用、而非可点击原型的人，也适合习惯从一句话开始而不是从脚手架开始的人。",
+    "best_for_zh": [
+      "新手",
+      "无代码",
+      "原型开发"
+    ]
   },
   {
     "id": 1559,
@@ -15988,7 +18995,13 @@
       "Conversational"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Sesame 打造的是对话式语音 AI——其语音模型旨在听起来像真人在实时交谈，而非照稿朗读的旁白。最适合语音助手和交互式角色，在这类场景中「怎么说」与「说什么」同样重要。",
+    "best_for_zh": [
+      "语音助手",
+      "拟真语音",
+      "对话式"
+    ]
   },
   {
     "id": 1560,
@@ -16022,7 +19035,13 @@
       "Research"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Hume 专注于语音中的情绪——既能生成富有表现力的语音，也能从音频中读出情绪线索。适用于需要依据用户说话方式（而不只是说话内容）作出反应的语音界面；此外还提供涵盖语音、文本和面部视频的表情分析。",
+    "best_for_zh": [
+      "语音助手",
+      "情绪",
+      "研究"
+    ]
   },
   {
     "id": 1561,
@@ -16056,7 +19075,13 @@
       "API"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "为实时场景打造的低延迟文本转语音——语音智能体、实时同传，任何停顿都会被立刻察觉的场合。通过 API 提供快速流式合成与声音克隆，当响应速度比极致打磨更重要时，是务实之选。",
+    "best_for_zh": [
+      "实时",
+      "语音智能体",
+      "API"
+    ]
   },
   {
     "id": 1562,
@@ -16081,7 +19106,13 @@
       "Automation"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "开源、可自托管的 AI 助手，在你自己的机器或私有服务器上执行多步骤任务，而非在浏览器里回答一次性提问。本地运行、无按 token 计费，支持从 ClawHub 安装技能，文件与凭证都留在你掌控的硬件上。深受既想要智能体自主性、又不想把数据发给第三方的开发者欢迎。",
+    "best_for_zh": [
+      "自托管",
+      "隐私",
+      "自动化"
+    ]
   },
   {
     "id": 1563,
@@ -16107,7 +19138,13 @@
       "Camera Control"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "字节跳动的文生视频模型，以人物动作连贯、运镜可控以及单次提示生成多镜头著称。面向广告、短剧和营销视频，可替代以往需要团队和外景才能完成的场景。通过火山引擎访问，并提供 API 供生产流水线接入。",
+    "best_for_zh": [
+      "营销视频",
+      "广告",
+      "镜头控制"
+    ]
   },
   {
     "id": 1564,
@@ -16132,7 +19169,13 @@
       "Teams"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Google 的智能体优先开发环境，你把工作交给智能体，由它们在整个项目范围内规划、编写并验证代码，而非只完成单条建议。围绕长时间运行的智能体会话、产物评审，以及与 Google 模型栈和云服务的集成构建。",
+    "best_for_zh": [
+      "智能体编程",
+      "大型重构",
+      "团队"
+    ]
   },
   {
     "id": 1565,
@@ -16158,7 +19201,13 @@
       "IDE"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "以 Cascade 智能体为核心的代理式 IDE，它会追踪你的编辑、命令和项目上下文，从而跨文件重构而非逐行修改。可处理多文件重构、终端命令与项目级上下文。Google 于 2025 年 7 月授权该技术并招募了创始团队，同月 Cognition 收购了剩余公司。Windsurf 2.0 于 2026 年 4 月将 Devin Cloud 纳入所有自助套餐；2026 年 6 月 2 日该编辑器更名为 Devin Desktop，Cascade、快捷键和扩展均保持不变。Pro 套餐从每月 15 美元涨至 20 美元，同时新增 200 美元的 Max 套餐。",
+    "best_for_zh": [
+      "多文件编辑",
+      "重构",
+      "IDE"
+    ]
   },
   {
     "id": 1566,
@@ -16183,7 +19232,13 @@
       "Content Creators"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "Google DeepMind 的音乐生成模型，可根据文本或图像提示生成带主歌与副歌结构的高保真立体声轨。Lyria 3.5 新增自定义歌词、基于时间戳的结构控制，并对所有生成音频添加 SynthID 水印。可通过 AI Studio、Gemini API 和 Gemini 应用使用。",
+    "best_for_zh": [
+      "音乐生成",
+      "配乐",
+      "内容创作者"
+    ]
   },
   {
     "id": 1567,
@@ -16209,7 +19264,13 @@
       "Local Running"
     ],
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "阿里巴巴的开放权重图像生成与编辑模型。2.1 版本参数量为 7B，支持透明 RGBA 输出，编辑时最多可接受 10 张参考图，并宣称在自有基准上优于闭源模型。采用研究许可发布；商用需获得授权。",
+    "best_for_zh": [
+      "开放权重",
+      "图像编辑",
+      "本地运行"
+    ]
   },
   {
     "name": "Ollama",
@@ -16234,7 +19295,13 @@
     ],
     "id": 1568,
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "开源运行时，一条命令即可在 macOS、Linux 和 Windows 本地运行大语言模型。内置涵盖 Llama、Qwen、Mistral、Gemma 和 Phi 的模型库，提供本地 REST API 与 OpenAI 兼容端点，是自托管智能体技术栈和私有 RAG 流水线的默认底座。深受需要无网络依赖、无按 token 计费地访问模型的开发者欢迎。",
+    "best_for_zh": [
+      "自托管",
+      "隐私",
+      "开发者"
+    ]
   },
   {
     "name": "LM Studio",
@@ -16259,6 +19326,12 @@
     ],
     "id": 1569,
     "rating": null,
-    "rating_count": null
+    "rating_count": null,
+    "description_zh": "桌面应用，可在你自己的硬件上发现、下载并运行开放权重语言模型，提供图形化聊天界面和内置本地推理服务器。支持 GGUF 和 MLX 格式，无需终端即可调整上下文长度和 GPU 卸载，并可暴露 OpenAI 兼容 API，让本地模型直接接入现有的智能体与编程工具。",
+    "best_for_zh": [
+      "自托管",
+      "隐私",
+      "新手"
+    ]
   }
 ]
