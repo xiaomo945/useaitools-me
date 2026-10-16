@@ -158,10 +158,10 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
         </div>
 
         <div className={`${showFilters ? 'block' : 'hidden md:block'} space-y-3`}>
-          {/* 访问方式：中文用户刚需 */}
+          {/* Access: whether a tool is reachable without a VPN */}
           <div>
             <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">
-              访问方式 / Access
+              Access
             </p>
             <div className="flex flex-wrap gap-1.5">
               {VPN_OPTIONS.map(opt => (
@@ -217,10 +217,10 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
             </div>
           </div>
 
-          {/* 上手难度 */}
+          {/* Skill level */}
           <div>
             <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">
-              上手难度 / Level
+              Level
             </p>
             <div className="flex flex-wrap gap-1.5">
               {SKILL_LEVEL_OPTIONS.map(level => (
@@ -235,17 +235,17 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
             </div>
           </div>
 
-          {/* 语言 */}
+          {/* Language support */}
           <div>
             <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">
-              语言 / Language
+              Language
             </p>
             <div className="flex flex-wrap gap-1.5">
               <button
                 onClick={() => patch({ chineseOnly: !filters.chineseOnly })}
                 className={chipClass(filters.chineseOnly ? 'on' : 'off')}
               >
-                支持中文 · {zhCount}
+                Supports Chinese · {zhCount}
               </button>
             </div>
           </div>
@@ -338,9 +338,13 @@ export default function SearchFilters({ tools, initialQuery = '' }: SearchFilter
                               ? 'bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300'
                               : 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300'
                           }`}
-                          title={tool.needs_vpn ? '需要梯子 / Requires VPN' : '国内直连 / No VPN needed'}
+                          title={
+                            tool.needs_vpn
+                              ? 'Region-locked: may be unreachable in some regions'
+                              : 'Global access: reachable without a VPN'
+                          }
                         >
-                          {tool.needs_vpn ? '需梯子' : '免梯子'}
+                          {tool.needs_vpn ? 'Region-locked' : 'Global access'}
                         </span>
                       </div>
                     </div>

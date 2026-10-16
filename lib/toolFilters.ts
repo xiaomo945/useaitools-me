@@ -27,15 +27,15 @@ export const DEFAULT_FILTERS: ToolFilterState = {
 };
 
 export const SKILL_LEVEL_OPTIONS = [
-  { value: 'beginner', label: '入门' },
-  { value: 'intermediate', label: '进阶' },
-  { value: 'advanced', label: '专业' },
+  { value: 'beginner', label: 'Beginner' },
+  { value: 'intermediate', label: 'Intermediate' },
+  { value: 'advanced', label: 'Advanced' },
 ] as const;
 
 export const VPN_OPTIONS = [
-  { value: 'all', label: '全部' },
-  { value: 'no', label: '免梯子' },
-  { value: 'yes', label: '需梯子' },
+  { value: 'all', label: 'All' },
+  { value: 'no', label: 'Global access' },
+  { value: 'yes', label: 'Region-locked' },
 ] as const;
 
 export function supportsChinese(tool: Pick<Tool, 'languages'>): boolean {
