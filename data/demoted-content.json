@@ -1,6 +1,6 @@
 {
   "meta": {
-    "purpose": "Pages listed here are temporarily removed from search indexing (noindex, follow) while they are rewritten. They stay online at the same URL. Consumers: (1) app/sitemap.ts must exclude every slug in demoted_slugs; (2) app/blog/[slug]/page.tsx serves robots noindex,follow and shows a rewrite notice.",
+    "purpose": "Historical audit record. All 56 previously-demoted articles have been rewritten into substantive, tool-grounded content and RE-INCLUDED in search indexing. demoted_slugs is intentionally empty: app/sitemap.ts and app/blog/[slug]/page.tsx therefore exclude nothing and serve no noindex directive. Retained for audit traceability only.",
     "generated_at": "2026-10-15",
     "generated_by": "content-quality audit (sentence boilerplate rate + 6-gram shingle similarity)",
     "source_of_truth": "data/blog-posts/*.json (441 files)",
@@ -18,51 +18,12 @@
     "notes": [
       "duplicate-blog-report.json is stale: of its 111 groups / 279 entries, 201 reference posts that no longer exist and 0 groups still have two live members. It was NOT used as the demotion source.",
       "58 posts still carry a canonical_slug pointing at a URL that no longer exists; they are not demoted here because their own content measured clean. See report."
-    ]
+    ],
+    "reincluded_at": "2026-10-16",
+    "reincluded_note": "All 41 demoted articles were rewritten (verified >=700 words, >=3 valid tool links, 0 broken links) and removed from demoted_slugs on 2026-10-16.",
+    "demoted_remaining": 0
   },
-  "demoted_slugs": [
-    "pictory-vs-invideo-vs-fliki-best-video-creator-2026",
-    "how-to-create-ai-generated-training-materials-2026",
-    "best-free-ai-tools-startup-founders-2026",
-    "ai-tools-customer-support-automation-2026",
-    "best-ai-tools-instagram-marketing-2026",
-    "best-ai-video-tools-youtube-ads-2026",
-    "best-ai-code-tools-devops-2026",
-    "best-ai-writing-tools-product-descriptions-2026",
-    "heygen-vs-synthesia-vs-elai-best-ai-avatar-2026",
-    "how-to-create-ai-generated-sales-scripts-2026",
-    "best-free-ai-tools-freelancers-2026",
-    "ai-tools-inventory-management-2026",
-    "best-ai-tools-tiktok-marketing-2026",
-    "best-ai-video-tools-facebook-ads-2026",
-    "best-ai-audio-tools-podcast-mixing-2026",
-    "best-ai-code-tools-cloud-security-2026",
-    "best-ai-writing-tools-blog-posts-2026",
-    "pictory-vs-invideo-vs-fliki-best-ai-video-tool-marketers-2026",
-    "how-to-create-ai-generated-explainer-videos-2026-412",
-    "best-free-ai-tools-content-creators-2026",
-    "ai-tools-social-media-scheduling-2026",
-    "best-ai-video-tools-linkedin-ads-2026",
-    "best-ai-audio-tools-voice-cloning-2026",
-    "best-ai-code-tools-mobile-development-2026",
-    "best-ai-writing-tools-email-newsletters-2026",
-    "how-to-create-ai-generated-training-courses-2026",
-    "best-free-ai-tools-remote-workers-2026",
-    "ai-tools-customer-feedback-analysis-2026",
-    "best-ai-writing-tools-blog-content-2026",
-    "best-ai-tools-email-marketing-copywriting-2026",
-    "ai-writing-tools-content-creators-bloggers-2026",
-    "best-ai-video-editing-tools-content-creators-2026",
-    "ai-image-generators-marketing-branding-2026",
-    "best-ai-audio-tools-podcast-production-2026",
-    "ai-coding-assistants-developers-2026",
-    "best-ai-productivity-tools-remote-teams-2026",
-    "ai-tools-social-media-management-growth-2026",
-    "best-free-ai-tools-students-educators-2026",
-    "ultimate-guide-ai-video-creation-beginners-2026",
-    "ai-image-generation-idea-to-masterpiece-2026",
-    "ai-tools-small-business-grow-2026"
-  ],
+  "demoted_slugs": [],
   "items": [
     {
       "slug": "best-ai-tools-linkedin-marketing-2026",
@@ -81,8 +42,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-video-tools-instagram-reels-2026",
@@ -101,8 +63,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-image-generators-logo-design-2026",
@@ -121,8 +84,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-audio-tools-voiceovers-2026",
@@ -141,8 +105,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-code-tools-bug-fixing-2026",
@@ -161,8 +126,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-writing-tools-email-campaigns-2026",
@@ -181,8 +147,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "how-to-create-ai-generated-podcasts-2026",
@@ -201,8 +168,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-free-ai-tools-students-2026",
@@ -221,8 +189,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "ai-tools-project-management-2026",
@@ -241,8 +210,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-tools-twitter-marketing-2026",
@@ -261,8 +231,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-video-tools-tiktok-ads-2026",
@@ -281,8 +252,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-image-generators-poster-design-2026",
@@ -301,8 +273,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-audio-tools-language-learning-2026",
@@ -321,8 +294,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-code-tools-api-testing-2026",
@@ -341,8 +315,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-writing-tools-newsletters-2026",
@@ -361,8 +336,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "pictory-vs-invideo-vs-fliki-best-video-creator-2026",
@@ -381,8 +357,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "how-to-create-ai-generated-training-materials-2026",
@@ -401,8 +378,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-free-ai-tools-startup-founders-2026",
@@ -421,8 +399,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "ai-tools-customer-support-automation-2026",
@@ -441,8 +420,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-tools-instagram-marketing-2026",
@@ -461,8 +441,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-video-tools-youtube-ads-2026",
@@ -481,8 +462,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-code-tools-devops-2026",
@@ -501,8 +483,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-writing-tools-product-descriptions-2026",
@@ -521,8 +504,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "heygen-vs-synthesia-vs-elai-best-ai-avatar-2026",
@@ -541,8 +525,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "how-to-create-ai-generated-sales-scripts-2026",
@@ -561,8 +546,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-free-ai-tools-freelancers-2026",
@@ -581,8 +567,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "ai-tools-inventory-management-2026",
@@ -601,8 +588,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-tools-tiktok-marketing-2026",
@@ -621,8 +609,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-video-tools-facebook-ads-2026",
@@ -641,8 +630,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-audio-tools-podcast-mixing-2026",
@@ -661,8 +651,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-code-tools-cloud-security-2026",
@@ -681,8 +672,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-writing-tools-blog-posts-2026",
@@ -701,8 +693,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "pictory-vs-invideo-vs-fliki-best-ai-video-tool-marketers-2026",
@@ -721,8 +714,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "how-to-create-ai-generated-explainer-videos-2026-412",
@@ -741,8 +735,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-free-ai-tools-content-creators-2026",
@@ -761,8 +756,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "ai-tools-social-media-scheduling-2026",
@@ -781,8 +777,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-video-tools-linkedin-ads-2026",
@@ -801,8 +798,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-audio-tools-voice-cloning-2026",
@@ -821,8 +819,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-code-tools-mobile-development-2026",
@@ -841,8 +840,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-writing-tools-email-newsletters-2026",
@@ -861,8 +861,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "how-to-create-ai-generated-training-courses-2026",
@@ -881,8 +882,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-free-ai-tools-remote-workers-2026",
@@ -901,8 +903,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "ai-tools-customer-feedback-analysis-2026",
@@ -921,8 +924,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-writing-tools-blog-content-2026",
@@ -941,8 +945,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-tools-email-marketing-copywriting-2026",
@@ -961,8 +966,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "ai-writing-tools-content-creators-bloggers-2026",
@@ -981,8 +987,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-video-editing-tools-content-creators-2026",
@@ -1001,8 +1008,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "ai-image-generators-marketing-branding-2026",
@@ -1021,8 +1029,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-audio-tools-podcast-production-2026",
@@ -1041,8 +1050,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "ai-coding-assistants-developers-2026",
@@ -1061,8 +1071,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-ai-productivity-tools-remote-teams-2026",
@@ -1081,8 +1092,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "ai-tools-social-media-management-growth-2026",
@@ -1101,8 +1113,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "best-free-ai-tools-students-educators-2026",
@@ -1121,8 +1134,9 @@
       "similarity_to_twin": null,
       "canonical_target_slug": null,
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "ultimate-guide-ai-video-creation-beginners-2026",
@@ -1141,8 +1155,9 @@
       "similarity_to_twin": 0.9739,
       "canonical_target_slug": "ai-video-tools-youtube-creators-2026",
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "ai-image-generation-idea-to-masterpiece-2026",
@@ -1161,8 +1176,9 @@
       "similarity_to_twin": 0.9702,
       "canonical_target_slug": "best-ai-image-generators-marketers-2026",
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     },
     {
       "slug": "ai-tools-small-business-grow-2026",
@@ -1181,8 +1197,9 @@
       "similarity_to_twin": 0.7226,
       "canonical_target_slug": "10-ai-tools-change-workflow-2026",
       "demoted_at": "2026-10-15",
-      "rewrite_status": "pending",
-      "robots_directive": "noindex, follow"
+      "rewrite_status": "done",
+      "robots_directive": "index, follow",
+      "rewritten_at": "2026-10-16"
     }
   ]
 }
