@@ -27423,5 +27423,916 @@
         "Large models still require ample memory and storage to run comfortably"
       ]
     }
+  },
+  {
+    "id": 1570,
+    "name": "Whiteboard",
+    "description": "Whiteboard is an open-source canvas for software design that lets AI coding agents draw diagrams directly onto a shared document through MCP. Built on a customized Code OSS base with an Electron desktop app, it combines prose, code peeks and sequence steps in one reviewable file. Agents such as Claude Code, Cursor and Codex connect over SSH and write to the canvas through session tools. A batch authoring mode runs the same pipeline headless in CI, so design reviews stay reproducible.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/devdotfast/whiteboard",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Whiteboard is an open-source canvas for software design that lets AI coding agents draw diagrams directly onto a shared document through MCP. Built on a customized Code OSS base with an Electron desktop app, it combines prose, code peeks and sequence steps in one reviewable file. Agents such as Claude Code, Cursor and Codex connect over SSH and write to the canvas through session tools. A batch authoring mode runs the same pipeline headless in CI, so design reviews stay reproducible.",
+    "last_updated": "2026-09-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developers",
+      "Open Source",
+      "Code Review",
+      "Prototyping"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Agent-Drawn Design Reviews",
+        "detail": "Let Claude Code or Cursor sketch architecture and sequence diagrams straight onto the canvas"
+      },
+      {
+        "title": "Code Peek Reviews",
+        "detail": "Show up to four code ranges inside a single review step for context"
+      },
+      {
+        "title": "CI Design Checks",
+        "detail": "Run reviews headlessly in batch mode without the desktop app"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Agents draw on the canvas through MCP session tools instead of describing diagrams in prose",
+        "Runs headless in CI so design reviews can be validated on every pipeline run",
+        "Open source with macOS and Linux builds for desktop and remote review"
+      ],
+      "cons": [
+        "Remote review hosts need glibc 2.34 or newer plus tar, xz, curl and sha256sum",
+        "Still early at version 0.2.x, so expect rough edges in the agent workflow"
+      ]
+    }
+  },
+  {
+    "id": 1571,
+    "name": "Huzzah",
+    "description": "Huzzah is an experimental editor that replaces longform chat prompts with persistent, declarative pseudocode files. You write a .hz file describing the shape of the code you want; Huzzah turns each save into a diff and feeds that to the model to regenerate the affected source. Prompts become documentation rather than throwaway instructions, and the same pseudocode can target multiple languages. The author calls it a response to coding-agent fatigue and positions it as better suited to new codebases than legacy ones.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/danielvaughn/hz",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Huzzah is an experimental editor that replaces longform chat prompts with persistent, declarative pseudocode files. You write a .hz file describing the shape of the code you want; Huzzah turns each save into a diff and feeds that to the model to regenerate the affected source. Prompts become documentation rather than throwaway instructions, and the same pseudocode can target multiple languages. The author calls it a response to coding-agent fatigue and positions it as better suited to new codebases than legacy ones.",
+    "last_updated": "2026-08-20",
+    "skill_level": "advanced",
+    "best_for": [
+      "Developers",
+      "Experimentation",
+      "Code Generation"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Declarative Prompting",
+        "detail": "Describe a feature in terse pseudocode and let the model write the implementation"
+      },
+      {
+        "title": "Prompt as Documentation",
+        "detail": "Keep a human-written spec next to the generated code that never goes stale"
+      },
+      {
+        "title": "Multi-Target Codegen",
+        "detail": "Reuse one language-agnostic spec across several target languages"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Pseudocode files persist, so intent survives across sessions instead of living in a discarded chat",
+        "Diffs are small and targeted, so regenerating a function does not rewrite the whole file",
+        "Source code and setup instructions are published for anyone to run locally"
+      ],
+      "cons": [
+        "Explicitly experimental, with no promise of stability or breadth of support",
+        "Cross-file dependencies and LSP-style features are known gaps the author flags"
+      ]
+    }
+  },
+  {
+    "id": 1572,
+    "name": "Cactus Needle 3",
+    "description": "Needle 3 is a foundation model shipped as a single 8 to 29 MB binary for phones, wearables, robots and microcontrollers. Its 29 to 121 million parameters are organised as laddered subnetworks from 2 to 20 layers, so you pick the size that fits your device. It handles tool calls, structured extraction and text embeddings, decoding 400 to 4,000 tokens per second on a Raspberry Pi 5. Install it with pip and decorate functions to expose them as tools.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://cactuscompute.com/needle",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Needle 3 is a foundation model shipped as a single 8 to 29 MB binary for phones, wearables, robots and microcontrollers. Its 29 to 121 million parameters are organised as laddered subnetworks from 2 to 20 layers, so you pick the size that fits your device. It handles tool calls, structured extraction and text embeddings, decoding 400 to 4,000 tokens per second on a Raspberry Pi 5. Install it with pip and decorate functions to expose them as tools.",
+    "last_updated": "2026-09-18",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developers",
+      "Edge AI",
+      "Automation",
+      "Open Source"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "On-Device Tool Calling",
+        "detail": "Turn spoken commands into ordered function calls with no network round trip"
+      },
+      {
+        "title": "Structured Extraction",
+        "detail": "Pull typed fields from invoices, forms and notifications with a decode grammar"
+      },
+      {
+        "title": "Local Semantic Search",
+        "detail": "Embed sentences on device to search notes and match requests to the right tool"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs offline in an 8 to 29 MB binary, sized by choosing a subnetwork from 2 to 20 layers",
+        "Beats models ten times its size on mobile tool calling and matches 2 to 3x larger ones on extraction",
+        "Ships prebuilt engines under 1 MB for macOS, Linux, Windows, Android, iOS and WASM"
+      ],
+      "cons": [
+        "Trades general chat capacity for tool calling and extraction accuracy",
+        "Fine-tuning for peak results on your own tool set needs the paid Cactus Platform"
+      ]
+    }
+  },
+  {
+    "id": 1573,
+    "name": "Copperhead",
+    "description": "Copperhead is an open-source, verification-first AI agent for printed circuit board design, described by its authors as a Cursor for circuit boards. Point it at a KiCad repository and it edits real schematic and layout files, updates every document that references them, and runs KiCad's own ERC and DRC checks until they pass. Eight gated stages run from a written brief to gerbers, and nothing commits until the artifacts are on disk. The CLI is free and Apache-2.0; hosted cloud runs start at $49 per user per month.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://copperhead.sh/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Copperhead is an open-source, verification-first AI agent for printed circuit board design, described by its authors as a Cursor for circuit boards. Point it at a KiCad repository and it edits real schematic and layout files, updates every document that references them, and runs KiCad's own ERC and DRC checks until they pass. Eight gated stages run from a written brief to gerbers, and nothing commits until the artifacts are on disk. The CLI is free and Apache-2.0; hosted cloud runs start at $49 per user per month.",
+    "last_updated": "2026-09-08",
+    "skill_level": "advanced",
+    "best_for": [
+      "Developers",
+      "Hardware",
+      "Verification",
+      "Open Source"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "KiCad Change Requests",
+        "detail": "Describe a change and let the agent edit the schematic, docs and layout together"
+      },
+      {
+        "title": "Design From a Brief",
+        "detail": "Run the full eight-stage pipeline from a short product brief to gerbers and firmware"
+      },
+      {
+        "title": "Drift Detection",
+        "detail": "Catch documents that no longer match the schematic before a respin"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Edits are surgical s-expression changes, so diffs stay small and reviewable",
+        "Every stage gated on real KiCad ERC and DRC output rather than the model's own claim",
+        "Free Apache-2.0 CLI runs entirely on your machine with your own model key"
+      ],
+      "cons": [
+        "Requires KiCad with kicad-cli installed and a Node 20 or newer runtime",
+        "Refuses to run on a dirty git tree and blocks edits before a validated proposal exists"
+      ]
+    }
+  },
+  {
+    "id": 1574,
+    "name": "Ante",
+    "description": "Ante is a self-contained coding agent that lives in your terminal as a single roughly 15 MB Rust executable with zero runtime dependencies. It ships Grep and git inside the same binary, supports interactive TUI, headless, server and gateway modes, and can run fully offline against GGUF models through a pinned llama.cpp build. Running twenty parallel tasks in one container, it reports about 7x less peak memory and 9x less average CPU than Claude Code. macOS and Linux only; the beta preview is free.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://github.com/AntigmaLabs/ante",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Ante is a self-contained coding agent that lives in your terminal as a single roughly 15 MB Rust executable with zero runtime dependencies. It ships Grep and git inside the same binary, supports interactive TUI, headless, server and gateway modes, and can run fully offline against GGUF models through a pinned llama.cpp build. Running twenty parallel tasks in one container, it reports about 7x less peak memory and 9x less average CPU than Claude Code. macOS and Linux only; the beta preview is free.",
+    "last_updated": "2026-08-10",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developers",
+      "Privacy",
+      "Offline Use"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Offline Coding",
+        "detail": "Point the bundled llama.cpp engine at local GGUF files with no API key or internet"
+      },
+      {
+        "title": "Parallel Agents",
+        "detail": "Orchestrate multiple CLI agents like Claude or Codex from one terminal view"
+      },
+      {
+        "title": "Editor Integration",
+        "detail": "Expose the agent over stdio, socket or WebSocket for editors and web UIs"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One compressed download expands to a single binary with nothing else to install",
+        "Measured around 7x lower peak memory than Claude Code across twenty concurrent tasks",
+        "Supports fifteen hosted providers plus local GGUF inference through one config layer"
+      ],
+      "cons": [
+        "macOS and Linux only, with Windows users pointed at WSL",
+        "Beta preview status means breaking changes and incomplete features are expected"
+      ]
+    }
+  },
+  {
+    "id": 1575,
+    "name": "Slotstream",
+    "description": "Slotstream runs AI models too large for your Mac's memory by keeping shared weights resident and streaming mixture-of-experts layers from SSD on demand. A single native Swift binary built on MLX and Metal serves Ollama, OpenAI and Anthropic compatible APIs, with one command to launch Claude Code against the local model. It targets Apple Silicon Macs with 16 to 64 GB of RAM and about 110 GB of free disk; a 48 GB machine reports around 21 tokens per second on a 105 GB model.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/carloslfu/slotstream",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Slotstream runs AI models too large for your Mac's memory by keeping shared weights resident and streaming mixture-of-experts layers from SSD on demand. A single native Swift binary built on MLX and Metal serves Ollama, OpenAI and Anthropic compatible APIs, with one command to launch Claude Code against the local model. It targets Apple Silicon Macs with 16 to 64 GB of RAM and about 110 GB of free disk; a 48 GB machine reports around 21 tokens per second on a 105 GB model.",
+    "last_updated": "2026-09-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developers",
+      "Privacy",
+      "Mac Users",
+      "Open Source"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Big Models on Small Macs",
+        "detail": "Run a 105 GB model on 16 to 64 GB of RAM through expert streaming"
+      },
+      {
+        "title": "Local Agent Coding",
+        "detail": "Launch Claude Code, Codex or opencode against the model with one command"
+      },
+      {
+        "title": "Disk Prefix Caching",
+        "detail": "Persist long conversations and shared system prompts across restarts"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No Python runtime between the request and the GPU, so latency stays predictable",
+        "Auto mode picks memory target, cache size, speculative decoding and context window for you",
+        "MIT licensed and works fully offline once the model is downloaded"
+      ],
+      "cons": [
+        "Apple Silicon with at least 16 GB RAM and macOS 14 or newer; nothing else",
+        "Not optimised for 96 GB and larger Macs, and refuses to start on an 8 GB machine"
+      ]
+    }
+  },
+  {
+    "id": 1576,
+    "name": "ThoughtDAG",
+    "description": "ThoughtDAG is an open-source AI conversation canvas that makes context editable instead of invisible. Conversations become a directed graph where each wire is a route into the next request, so you can prune a stale branch, explore a side question and still bring selected evidence forward. A preview shows exactly what the model will receive before sending, down to the token count. A CLI and read-only MCP server search local agent sessions, and a desktop app works on Windows, macOS and Linux.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/chenxiachan/thoughtdag",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ThoughtDAG is an open-source AI conversation canvas that makes context editable instead of invisible. Conversations become a directed graph where each wire is a route into the next request, so you can prune a stale branch, explore a side question and still bring selected evidence forward. A preview shows exactly what the model will receive before sending, down to the token count. A CLI and read-only MCP server search local agent sessions, and a desktop app works on Windows, macOS and Linux.",
+    "last_updated": "2026-08-15",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Researchers",
+      "Developers",
+      "Knowledge Work",
+      "Open Source"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Context Repair",
+        "detail": "Delete one edge to remove a contaminated branch from the next request"
+      },
+      {
+        "title": "Cross-Agent Search",
+        "detail": "Find the conversation behind a code file or phrase across Claude Code, Codex and Harness"
+      },
+      {
+        "title": "Cited Answers",
+        "detail": "Attach source nodes with provenance so answers stay traceable to documents"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Graph structure is the protocol, so what the model sees and why stays inspectable",
+        "Ships as a CLI, an MCP server, a DeepSeek Harness plugin and a standalone desktop app",
+        "Open source with signed and notarized macOS builds and Homebrew install"
+      ],
+      "cons": [
+        "Indexes only local records you have connected, not chats stored in a web account",
+        "Windows builds are unsigned, so SmartScreen needs an extra confirmation"
+      ]
+    }
+  },
+  {
+    "id": 1577,
+    "name": "OpenAPPA",
+    "description": "OpenAPPA is a deterministic guardrail engine for AI agents that tracks data flow instead of matching patterns, claiming full resistance to prompt-injection data exfiltration. It runs outside the agent's prompt and execution loop as a MIT-licensed, vendor-agnostic component, driven by one declarative config describing data sources, audiences, trust levels and authorities. Every trajectory carries a security label that only gets more restrictive, and the engine derives decisions algebraically. Backed by a NeurIPS-accepted paper.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://www.openappa.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "OpenAPPA is a deterministic guardrail engine for AI agents that tracks data flow instead of matching patterns, claiming full resistance to prompt-injection data exfiltration. It runs outside the agent's prompt and execution loop as a MIT-licensed, vendor-agnostic component, driven by one declarative config describing data sources, audiences, trust levels and authorities. Every trajectory carries a security label that only gets more restrictive, and the engine derives decisions algebraically. Backed by a NeurIPS-accepted paper.",
+    "last_updated": "2026-09-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Developers",
+      "Security",
+      "Enterprise"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Agent Sandboxing",
+        "detail": "Keep an untrusted read isolated in a disposable subagent so the parent stays clean"
+      },
+      {
+        "title": "Data Flow Labels",
+        "detail": "Let audience and trust labels propagate and tighten automatically across tool calls"
+      },
+      {
+        "title": "CI Policy Validation",
+        "detail": "Verify the whole tool graph is covered by the declarative config in CI"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs outside the model loop, so an injected prompt cannot negotiate with it",
+        "Returns machine-readable remedy plans with sanitizers, authorities and subagents instead of stalling",
+        "MIT licensed with published benchmark comparisons against auto-mode judges"
+      ],
+      "cons": [
+        "Needs a carefully authored contract config, which is more setup work than a blocklist",
+        "Only 25 points and 12 comments on launch, so the community is still thin"
+      ]
+    }
+  },
+  {
+    "id": 1578,
+    "name": "ai-rete-RAG",
+    "description": "ai-rete-RAG pairs a Rete rule engine with retrieval-augmented generation so a decision stays deterministic while the explanation stays grounded. Rules decide the what and produce an auditable trace; retrieval is invoked only to narrate the why in plain language from your own documents. Three composition patterns are live: rules as retrieval filters, documents asserted into working memory, and post-hoc explanation. Eight built-in demo domains include loan underwriting, fraud screening and clinical vitals, and the live demo needs no signup.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://ai-rete-rag.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ai-rete-RAG pairs a Rete rule engine with retrieval-augmented generation so a decision stays deterministic while the explanation stays grounded. Rules decide the what and produce an auditable trace; retrieval is invoked only to narrate the why in plain language from your own documents. Three composition patterns are live: rules as retrieval filters, documents asserted into working memory, and post-hoc explanation. Eight built-in demo domains include loan underwriting, fraud screening and clinical vitals, and the live demo needs no signup.",
+    "last_updated": "2026-09-22",
+    "skill_level": "advanced",
+    "best_for": [
+      "Developers",
+      "Compliance",
+      "Research"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Auditable Decisions",
+        "detail": "Get a verdict plus the exact rules that fired and the ones that nearly did"
+      },
+      {
+        "title": "Grounded Explanations",
+        "detail": "Generate natural-language rationale cited back to your source documents"
+      },
+      {
+        "title": "Agent Fact Gathering",
+        "detail": "Let an assistant over MCP pull only the facts your rules actually need"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Decision logic is deterministic and repeatable, unlike a pure language-model judge",
+        "Static conflict analysis flags rules with opposing verdicts before production",
+        "Try the live engine on real demo policies without an account"
+      ],
+      "cons": [
+        "You must bring your own rules and policies, so domain modelling is on you",
+        "New project with a small launch footprint on Hacker News"
+      ]
+    }
+  },
+  {
+    "id": 1579,
+    "name": "Scry",
+    "description": "Scry is a programmable search MCP server that lets an agent run one bounded query across 108 billion indexed rows instead of reading ten web links. It covers Reddit, Hacker News, LessWrong, arXiv, Stack Exchange, Wikipedia and prediction markets, and the agent reads the live schema to write phrase matches, time windows, joins or vector math itself. Measured throughput is 0.86 seconds per query over every indexed byte of Hacker News text. Setup takes about two minutes in ChatGPT or Claude with no code.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://scry.io/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Scry is a programmable search MCP server that lets an agent run one bounded query across 108 billion indexed rows instead of reading ten web links. It covers Reddit, Hacker News, LessWrong, arXiv, Stack Exchange, Wikipedia and prediction markets, and the agent reads the live schema to write phrase matches, time windows, joins or vector math itself. Measured throughput is 0.86 seconds per query over every indexed byte of Hacker News text. Setup takes about two minutes in ChatGPT or Claude with no code.",
+    "last_updated": "2026-09-17",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Researchers",
+      "Developers",
+      "Data Analysis"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Corpus-Wide Questions",
+        "detail": "Ask a question that needs every matching page, grouped and filtered, in one query"
+      },
+      {
+        "title": "Time Series on the Public Record",
+        "detail": "Track when a phrase or topic appeared and how fast it spread"
+      },
+      {
+        "title": "Market and Paper Analysis",
+        "detail": "Query prediction-market moves or citation graphs across decades"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Agent writes the query itself from the live schema, so no hand-written SQL per question",
+        "Free for non-commercial use when there is capacity, with most questions under a few cents",
+        "One MCP URL works in ChatGPT, Claude, Claude Code, Codex and Cursor"
+      ],
+      "cons": [
+        "Freshness varies by source and you must check each relation's lag in the schema",
+        "Commercial use and custom sources require an email to the team"
+      ]
+    }
+  },
+  {
+    "id": 1580,
+    "name": "SolidCraft",
+    "description": "SolidCraft is an open-source parametric 3D CAD application written in pure Rust, available on desktop, in the browser and through an MCP server that lets AI agents model for you. It sketches with a real constraint solver, builds a feature timeline of extrude, revolve, sweep and loft operations, and exports STEP, IGES, STL, OBJ and URDF. Agents get tools for execute, inspect_design, measure, set_parameter and screenshot. Dual MIT or Apache-2.0 licensed, and self-described as early but usable for simple parts.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/bherbruck/solidcraft",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SolidCraft is an open-source parametric 3D CAD application written in pure Rust, available on desktop, in the browser and through an MCP server that lets AI agents model for you. It sketches with a real constraint solver, builds a feature timeline of extrude, revolve, sweep and loft operations, and exports STEP, IGES, STL, OBJ and URDF. Agents get tools for execute, inspect_design, measure, set_parameter and screenshot. Dual MIT or Apache-2.0 licensed, and self-described as early but usable for simple parts.",
+    "last_updated": "2026-10-13",
+    "skill_level": "advanced",
+    "best_for": [
+      "Developers",
+      "Engineering",
+      "Automation",
+      "Open Source"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Agent-Driven Modelling",
+        "detail": "Let Claude Code build and rebuild parts through the built-in MCP server"
+      },
+      {
+        "title": "Parametric Editing",
+        "detail": "Change one dimension and watch the model regenerate from the timeline"
+      },
+      {
+        "title": "Scripted Export",
+        "detail": "Run the headless CLI to measure, render PNG and export STEP or STL in batches"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One codebase runs on Windows, macOS, Linux and the browser via WebGPU or WebGL2",
+        "Imports STEP, IGES, 3MF, STL, OBJ, glTF, FreeCAD and Rhino files",
+        "Exposed UI handles and a JSON-lines channel let agents drive the desktop app directly"
+      ],
+      "cons": [
+        "Explicitly early, with only simple parts described as reliably usable",
+        "Downloads are unsigned, so Windows SmartScreen and macOS Gatekeeper need overrides"
+      ]
+    }
+  },
+  {
+    "id": 1581,
+    "name": "Pi pod",
+    "description": "Pi pod is a self-hosted layer that runs the pi coding agent in isolated sandboxes on your own server, consolidating agent sandboxing, native clients, role-based session sharing and browser automation in one package. The author describes it as built on and around pi so it should feel no different from the harness you have already tuned, with minimal curated tooling that stays out of the way. A self-hosted edition is published on GitHub, and a hosted service is listed as coming soon.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/pi-pod/pipod",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pi pod is a self-hosted layer that runs the pi coding agent in isolated sandboxes on your own server, consolidating agent sandboxing, native clients, role-based session sharing and browser automation in one package. The author describes it as built on and around pi so it should feel no different from the harness you have already tuned, with minimal curated tooling that stays out of the way. A self-hosted edition is published on GitHub, and a hosted service is listed as coming soon.",
+    "last_updated": "2026-10-02",
+    "skill_level": "advanced",
+    "best_for": [
+      "Developers",
+      "Teams",
+      "Self-Hosting"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Sandboxed Agent Runs",
+        "detail": "Keep an agent's file and network access isolated on hardware you control"
+      },
+      {
+        "title": "Session Sharing",
+        "detail": "Share agent sessions across a team with role-based access"
+      },
+      {
+        "title": "Self-Hosted Setup",
+        "detail": "Spin the self-hosted edition up in your own data centre"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Designed to feel identical to an existing pi harness, avoiding lock-in",
+        "Self-hosting keeps the whole agentic environment inside your own infrastructure",
+        "Source repository is public for anyone to fork and adapt"
+      ],
+      "cons": [
+        "Hosted service is only listed as coming soon, with no timeline given",
+        "Thin public documentation beyond the launch post and repository"
+      ]
+    }
+  },
+  {
+    "id": 1582,
+    "name": "Mini-AGI",
+    "description": "Mini-AGI is a continual learning byte-level language model that assembles its own architecture, trains from scratch on a single 8 GB VRAM GPU and keeps learning from everything it reads. Weights live as ordinary files on disk and page onto the card as needed, so parameter count is bounded by free disk space rather than VRAM. At one snapshot it held 1.26 billion parameters while activating about 345 million per byte, and the author calls it a small toy-level model rather than a frontier one.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/volotat/mini-AGI/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Mini-AGI is a continual learning byte-level language model that assembles its own architecture, trains from scratch on a single 8 GB VRAM GPU and keeps learning from everything it reads. Weights live as ordinary files on disk and page onto the card as needed, so parameter count is bounded by free disk space rather than VRAM. At one snapshot it held 1.26 billion parameters while activating about 345 million per byte, and the author calls it a small toy-level model rather than a frontier one.",
+    "last_updated": "2026-09-21",
+    "skill_level": "advanced",
+    "best_for": [
+      "Developers",
+      "Research",
+      "Experimentation"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Train From Scratch Locally",
+        "detail": "Fit a growing model on a single 8 GB GPU with disk-backed experts"
+      },
+      {
+        "title": "Continual Learning",
+        "detail": "Keep teaching the model from your own notes and files as you read"
+      },
+      {
+        "title": "Research Reproduction",
+        "detail": "Clone the training and serving scripts and replicate the published runs"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Parameter count bounded by disk rather than VRAM, so the model can grow past card capacity",
+        "Reported 97.3 percent retention across eight old domains when adapting to a new one",
+        "Training scripts, serving code and replication weights are published on GitHub and Hugging Face"
+      ],
+      "cons": [
+        "Author explicitly labels it a toy-level model, not a frontier system",
+        "Final weights are not published yet, only undertrained snapshots"
+      ]
+    }
+  },
+  {
+    "id": 1583,
+    "name": "Stillwet",
+    "description": "Stillwet is a gallery where AI models write every brushstroke as code and a simulation renders it as oil paint or watercolour, with no image generator involved. Each painting is presented with a session you can replay to watch it being made, along with a short journal of what the model decided to change. Featured work includes pieces after Friedrich, Hopper and free-subject paintings by models including Claude Opus 5.5 and GPT-6 Astra, across 109 published paintings.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://stillwet.art/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Stillwet is a gallery where AI models write every brushstroke as code and a simulation renders it as oil paint or watercolour, with no image generator involved. Each painting is presented with a session you can replay to watch it being made, along with a short journal of what the model decided to change. Featured work includes pieces after Friedrich, Hopper and free-subject paintings by models including Claude Opus 5.5 and GPT-6 Astra, across 109 published paintings.",
+    "last_updated": "2026-10-02",
+    "skill_level": "beginner",
+    "best_for": [
+      "Creative Projects",
+      "Artists",
+      "Curiosity"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Watch a Painting Happen",
+        "detail": "Replay a full painting session instead of seeing only the finished image"
+      },
+      {
+        "title": "Study Model Judgment",
+        "detail": "Read the model's journal to see what it chose to change between passages"
+      },
+      {
+        "title": "Art Reference Browsing",
+        "detail": "Browse 109 paintings sorted by featured, after and free-subject themes"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Each painting ships with a replayable session and a written journal of its decisions",
+        "Simulates actual paint behaviour rather than producing a diffusion image",
+        "Free to browse, with no account or signup mentioned on the site"
+      ],
+      "cons": [
+        "Purely a viewing experience, with no tool to generate your own paintings",
+        "Small, curated catalogue rather than a searchable large-scale library"
+      ]
+    }
+  },
+  {
+    "id": 1584,
+    "name": "SCM",
+    "description": "SCM, short for Screen Memories, is a local-first macOS app that runs deep AI search across every photo and every frame of video in any folder. Five modes cover file similarity, scene-level video retrieval, OCR in 36 languages, spoken dialogue and an optional local chat model. Visual search uses CLIP, SigLIP or EmbeddingGemma embeddings, video is embedded at 30 frames per second by default, and Whisper transcribes audio. No accounts, no cloud and no uploads; inference runs on your Mac.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://github.com/allenv0/SCM",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "Multilingual"
+    ],
+    "description_en": "SCM, short for Screen Memories, is a local-first macOS app that runs deep AI search across every photo and every frame of video in any folder. Five modes cover file similarity, scene-level video retrieval, OCR in 36 languages, spoken dialogue and an optional local chat model. Visual search uses CLIP, SigLIP or EmbeddingGemma embeddings, video is embedded at 30 frames per second by default, and Whisper transcribes audio. No accounts, no cloud and no uploads; inference runs on your Mac.",
+    "last_updated": "2026-10-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Mac Users",
+      "Privacy",
+      "Video Editors",
+      "Researchers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Find Any Frame",
+        "detail": "Search inside video down to the exact scene or shot that matched"
+      },
+      {
+        "title": "Search What Was Said",
+        "detail": "Locate a spoken line with exact, near-exact or fuzzy matching"
+      },
+      {
+        "title": "Offline Media Library",
+        "detail": "Index photos and clips with no account, cloud or upload"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Three swappable embedding models from fast and small to multilingual and code-aware",
+        "Content hashing and MIME sniffing deduplicate files and catch disguised extensions",
+        "Everything runs locally, with renderer sandboxing and no telemetry"
+      ],
+      "cons": [
+        "macOS 12 or later on Apple Silicon only, installed through Homebrew",
+        "First index build is slow, and large libraries need hundreds of MB to GB of model downloads"
+      ]
+    }
+  },
+  {
+    "id": 1585,
+    "name": "BetterWispr",
+    "description": "BetterWispr is a free, open-source dictation app for macOS that transcribes locally with no account and no cloud fallback. Hold Option and Space in any app, speak, and cleaned text lands where your cursor was. Nine built-in speech models cover Apple speech, Parakeet and Whisper across English, Japanese and 25 European languages, and a notetaker mode uses Apple Intelligence or Ollama on your Mac to write meeting summaries, decisions and action items. Apache 2.0 licensed.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://betterwispr.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "Multilingual"
+    ],
+    "description_en": "BetterWispr is a free, open-source dictation app for macOS that transcribes locally with no account and no cloud fallback. Hold Option and Space in any app, speak, and cleaned text lands where your cursor was. Nine built-in speech models cover Apple speech, Parakeet and Whisper across English, Japanese and 25 European languages, and a notetaker mode uses Apple Intelligence or Ollama on your Mac to write meeting summaries, decisions and action items. Apache 2.0 licensed.",
+    "last_updated": "2026-10-11",
+    "skill_level": "beginner",
+    "best_for": [
+      "Mac Users",
+      "Privacy",
+      "Writers",
+      "Meetings"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Dictate Anywhere",
+        "detail": "Speak into any app with a hold-to-talk shortcut and get clean text pasted back"
+      },
+      {
+        "title": "Meeting Notes",
+        "detail": "Transcribe your mic and other apps, then summarise decisions and actions locally"
+      },
+      {
+        "title": "Voice Corrections",
+        "detail": "Say comma, question mark or scratch that to edit as you speak"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Models run on your Mac with no account, no API key and no cloud transcription",
+        "Nine built-in models plus custom Sarvam AI, Smallest AI or OpenAI compatible endpoints",
+        "Apache 2.0 licensed with EdDSA-signed updates delivered through GitHub Releases"
+      ],
+      "cons": [
+        "macOS 14 or newer, with Apple Silicon recommended for local inference",
+        "Filler cleanup, writing styles and voice commands work in English only"
+      ]
+    }
+  },
+  {
+    "id": 1586,
+    "name": "OzBrain",
+    "description": "OzBrain is a shared knowledge layer that every AI agent on your team reads and writes, positioned as a company brain rather than another per-product memory. Connect it from the connector menu in Claude or ChatGPT and your agents work from one current source of truth instead of a folder of launch-plan copies. Knowledge nests into pieces so an agent pulls the slice it needs, newer thinking automatically supersedes older notes, and every write is staged and recorded with the agent and reason behind it. Free up to 50 articles, Pro $20 per month.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://ozbrain.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "OzBrain is a shared knowledge layer that every AI agent on your team reads and writes, positioned as a company brain rather than another per-product memory. Connect it from the connector menu in Claude or ChatGPT and your agents work from one current source of truth instead of a folder of launch-plan copies. Knowledge nests into pieces so an agent pulls the slice it needs, newer thinking automatically supersedes older notes, and every write is staged and recorded with the agent and reason behind it. Free up to 50 articles, Pro $20 per month.",
+    "last_updated": "2026-08-21",
+    "skill_level": "beginner",
+    "best_for": [
+      "Teams",
+      "Knowledge Work",
+      "Collaboration"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One Source of Truth",
+        "detail": "Point every agent at a single brain instead of duplicated files in Drive and email"
+      },
+      {
+        "title": "Scoped Knowledge Pulls",
+        "detail": "Let an agent fetch only the nested slice a task needs, not the whole document"
+      },
+      {
+        "title": "Change Audit Trail",
+        "detail": "See which agent changed what, when, and the reasoning it gave"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works through the native connector flows Claude and ChatGPT already expose",
+        "Automatic supersession marks old notes replaced instead of leaving stale answers around",
+        "Encrypted at rest, never used for training, and exportable as markdown at any time"
+      ],
+      "cons": [
+        "Free tier caps at 50 articles, so real team use needs the $20 or $99 plan",
+        "Requires your agents to support connectors or MCP-style tool calls"
+      ]
+    }
+  },
+  {
+    "id": 1587,
+    "name": "MySetup.ai",
+    "description": "MySetup.ai is a community directory where engineers and makers publish the AI tools, workflows and harnesses they actually use, from planning agents to open-source review models. Public profiles show what someone has tried, what they moved on from and how their stack evolved, with each setup carrying a short self-description and a last-updated date. The founder built it after seeing only fragmented setup snippets on social media, and sharing your own setup requires no account to browse.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://mysetup.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English",
+      "Multilingual"
+    ],
+    "description_en": "MySetup.ai is a community directory where engineers and makers publish the AI tools, workflows and harnesses they actually use, from planning agents to open-source review models. Public profiles show what someone has tried, what they moved on from and how their stack evolved, with each setup carrying a short self-description and a last-updated date. The founder built it after seeing only fragmented setup snippets on social media, and sharing your own setup requires no account to browse.",
+    "last_updated": "2026-09-17",
+    "skill_level": "beginner",
+    "best_for": [
+      "Developers",
+      "Research",
+      "Productivity"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Compare Real Setups",
+        "detail": "See which agents, harnesses and skills working engineers rely on"
+      },
+      {
+        "title": "Track What Changed",
+        "detail": "Follow a profile and watch it evolve as people switch tools"
+      },
+      {
+        "title": "Share Your Own Stack",
+        "detail": "Publish a short description of your workflow without building a page"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Profiles are written by practitioners, with dates and view counts showing what is current",
+        "Free to browse and share, with no signup wall on community pages",
+        "Covers the full stack including planning agents, review models and knowledge bases"
+      ],
+      "cons": [
+        "Content is user-written and self-reported, so nothing is independently verified",
+        "Community is small, with some profiles showing only a handful of views"
+      ]
+    }
   }
 ]
