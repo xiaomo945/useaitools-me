@@ -38,25 +38,16 @@ function urlRewritten() {
   return d.items.map((i) => `${SITE}/blog/${i.slug}`);
 }
 
-/** Every blog post, tool page, category and comparison page. */
-function urlAll() {
-  const urls = [];
-  const blogDir = path.join(root, 'data', 'blog-posts');
-  for (const f of fs.readdirSync(blogDir)) {
-    if (!f.endsWith('.json')) continue;
-    try {
-      const p = JSON.parse(fs.readFileSync(path.join(blogDir, f), 'utf8'));
-      if (p?.slug) urls.push(`${SITE}/blog/${p.slug}`);
-    } catch { /* skip corrupt */ }
-  }
-  for (const t of readJson('data/tools.json')) {
-    if (t?.slug) urls.push(`${SITE}/tool/${t.slug}`);
-    else if (t?.id) urls.push(`${SITE}/tool/${t.id}`);
-  }
-  for (const c of ['Image', 'Writing', 'Code', 'Video', 'Productivity', 'Audio']) {
-    urls.push(`${SITE}/category/${c.toLowerCase()}`);
-  }
-  return urls;
+/**
+ * Every URL the site actually advertises. Read from the live sitemap rather
+ * than generated locally, so we never push a URL shape that doesn't exist
+ * (the tool-page slug logic lives in lib/slug.ts and is easy to get wrong).
+ */
+async function urlAll() {
+  const res = await fetch(`${SITE}/sitemap.xml`);
+  if (!res.ok) throw new Error(`could not fetch sitemap: HTTP ${res.status}`);
+  const xml = await res.text();
+  return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim());
 }
 
 function urlFile(p) {
@@ -75,7 +66,7 @@ async function submit(list) {
 
 const mode = process.argv[2] || 'rewritten';
 let urls;
-if (mode === 'all') urls = urlAll();
+if (mode === 'all') urls = await urlAll();
 else if (mode === 'file') urls = urlFile(process.argv[3]);
 else urls = urlRewritten();
 
