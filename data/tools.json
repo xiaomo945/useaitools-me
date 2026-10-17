@@ -28334,5 +28334,405 @@
         "Community is small, with some profiles showing only a handful of views"
       ]
     }
+  },
+  {
+    "id": 1588,
+    "name": "Janus",
+    "description": "Janus is a Go binary that runs GGUF models through the Vulkan API, so the same local model runs on AMD, Intel and Nvidia graphics cards without a separate build for each vendor. It targets developers who want one portable command-line runner for local inference across mixed hardware. Because the model weights stay on your machine, prompts and data do not go to a hosted API. The project is shared as an open-source repository and is described as a lightweight alternative to heavier local inference stacks.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://github.com/Vibra-Ingenn/Janus",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Janus is a Go binary that runs GGUF models through the Vulkan API, so the same local model runs on AMD, Intel and Nvidia graphics cards without a separate build for each vendor. It targets developers who want one portable command-line runner for local inference across mixed hardware. Because the model weights stay on your machine, prompts and data do not go to a hosted API. The project is shared as an open-source repository and is described as a lightweight alternative to heavier local inference stacks.",
+    "last_updated": "2026-10-01",
+    "skill_level": "advanced",
+    "best_for": [
+      "Local inference",
+      "Mixed GPU setups",
+      "Developers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Local Model Runs",
+        "detail": "Run GGUF models on your own machine instead of calling a hosted API"
+      },
+      {
+        "title": "Cross-Vendor GPUs",
+        "detail": "Use one binary across AMD, Intel and Nvidia graphics cards"
+      },
+      {
+        "title": "Scripted Inference",
+        "detail": "Drive local model runs from a terminal or automation pipeline"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One binary covers AMD, Intel and Nvidia GPUs",
+        "Keeps model weights and prompts on your own hardware",
+        "Open source, so the runner can be inspected and rebuilt"
+      ],
+      "cons": [
+        "Getting Vulkan drivers working still takes manual setup",
+        "Speed depends heavily on the specific GPU you own"
+      ]
+    }
+  },
+  {
+    "id": 1589,
+    "name": "Engrim",
+    "description": "Engrim is a local-first memory engine built on SQLite that gives AI command-line tools a shared, persistent place to store context. It is described as universal, meaning one memory store can back different coding agents and CLIs rather than locking you into a single vendor. Because everything lives in a SQLite file on your own machine, your history stays local and portable. Engrim targets developers who run several AI coding assistants and want them to remember earlier decisions, file paths and preferences between sessions.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://github.com/timgordontg/engrim",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Engrim is a local-first memory engine built on SQLite that gives AI command-line tools a shared, persistent place to store context. It is described as universal, meaning one memory store can back different coding agents and CLIs rather than locking you into a single vendor. Because everything lives in a SQLite file on your own machine, your history stays local and portable. Engrim targets developers who run several AI coding assistants and want them to remember earlier decisions, file paths and preferences between sessions.",
+    "last_updated": "2026-09-07",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developers",
+      "Agent memory",
+      "Local-first tools"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Persistent Context",
+        "detail": "Keep project context between CLI sessions instead of starting fresh"
+      },
+      {
+        "title": "Shared Memory",
+        "detail": "Point several AI coding tools at one memory store"
+      },
+      {
+        "title": "Portable History",
+        "detail": "Back up or move agent memory as a single SQLite file"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Local SQLite storage keeps context on your own disk",
+        "Works across different AI CLIs rather than one vendor",
+        "Simple file format that is easy to inspect or back up"
+      ],
+      "cons": [
+        "You manage the SQLite file and its growth yourself",
+        "Recall quality still depends on what each agent writes down"
+      ]
+    }
+  },
+  {
+    "id": 1590,
+    "name": "Offrun",
+    "description": "Offrun is a workspace for managing coding agents, letting you keep several of them under one interface instead of juggling separate terminals and dashboards. It is aimed at developers who run more than one agent at a time and need a single place to see what each one is doing. Rather than being an agent itself, Offrun sits above the agents you already use and coordinates them. The product is offered as a hosted site, and the launch post describes it as a way to manage every coding agent from one workspace.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://offrun.dev/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Offrun is a workspace for managing coding agents, letting you keep several of them under one interface instead of juggling separate terminals and dashboards. It is aimed at developers who run more than one agent at a time and need a single place to see what each one is doing. Rather than being an agent itself, Offrun sits above the agents you already use and coordinates them. The product is offered as a hosted site, and the launch post describes it as a way to manage every coding agent from one workspace.",
+    "last_updated": "2026-10-03",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developers",
+      "Agent orchestration",
+      "Teams"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Multi-Agent Oversight",
+        "detail": "Watch what several coding agents are doing from one screen"
+      },
+      {
+        "title": "Centralised Runs",
+        "detail": "Start and stop agent tasks without switching between tools"
+      },
+      {
+        "title": "Team Visibility",
+        "detail": "Share a single view of agent activity across a team"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Brings several coding agents into one place",
+        "Cuts down context switching between terminal windows",
+        "Most useful once you run more than one agent at a time"
+      ],
+      "cons": [
+        "Pricing and usage limits were not clear from the launch post",
+        "You still configure and pay for the underlying agents separately"
+      ]
+    }
+  },
+  {
+    "id": 1591,
+    "name": "Atticus",
+    "description": "Atticus is a macOS voice assistant that uses hold-to-talk input and runs on top of Claude command-line mode. You press and hold a key to speak, and the transcribed request is passed to the assistant, which makes it a hands-free way to drive a coding or writing session. It is built for people who would rather talk than type when giving an agent instructions. The project is published as an open-source macOS application and relies on a local Claude setup instead of a separate hosted service.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://github.com/SaarthurR/atticus-mac",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Atticus is a macOS voice assistant that uses hold-to-talk input and runs on top of Claude command-line mode. You press and hold a key to speak, and the transcribed request is passed to the assistant, which makes it a hands-free way to drive a coding or writing session. It is built for people who would rather talk than type when giving an agent instructions. The project is published as an open-source macOS application and relies on a local Claude setup instead of a separate hosted service.",
+    "last_updated": "2026-10-12",
+    "skill_level": "intermediate",
+    "best_for": [
+      "macOS users",
+      "Hands-free input",
+      "Voice workflows"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Hands-Free Commands",
+        "detail": "Speak instructions instead of typing them out"
+      },
+      {
+        "title": "Voice-Driven Agents",
+        "detail": "Drive a Claude coding session by talking"
+      },
+      {
+        "title": "Quick Dictation",
+        "detail": "Turn spoken notes into text for an agent to act on"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Hold-to-talk keeps dictation deliberate and short",
+        "Open source and built specifically for macOS",
+        "Works with the Claude setup you already have"
+      ],
+      "cons": [
+        "Needs your own Claude command-line setup to function",
+        "macOS only, with no Windows or Linux build"
+      ]
+    }
+  },
+  {
+    "id": 1592,
+    "name": "PDF to MP3 AI Connect",
+    "description": "PDF to MP3 AI Connect turns documents into spoken audio using text-to-speech access that comes with an existing OpenAI subscription. Instead of paying a separate narrated-audio service, you connect your account and convert long documents such as PDFs into MP3 files you can listen to. It targets readers who want to get through reports, papers or ebooks during a commute. The tool is offered as a hosted web page and is positioned as a way to reuse a subscription you already pay for.",
+    "category": "Audio",
+    "pricing": "Unknown",
+    "url": "https://pdftomp3.com/connect-ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "PDF to MP3 AI Connect turns documents into spoken audio using text-to-speech access that comes with an existing OpenAI subscription. Instead of paying a separate narrated-audio service, you connect your account and convert long documents such as PDFs into MP3 files you can listen to. It targets readers who want to get through reports, papers or ebooks during a commute. The tool is offered as a hosted web page and is positioned as a way to reuse a subscription you already pay for.",
+    "last_updated": "2026-10-13",
+    "skill_level": "beginner",
+    "best_for": [
+      "Audiobooks",
+      "Commuters",
+      "Document listening"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Document to Audio",
+        "detail": "Convert long PDFs into MP3 files you can listen to"
+      },
+      {
+        "title": "Reuse Subscription",
+        "detail": "Use speech access you already pay for through OpenAI"
+      },
+      {
+        "title": "Commute Reading",
+        "detail": "Get through reports and papers without sitting down to read"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Uses an existing OpenAI subscription rather than a separate service",
+        "Turns long documents into audio you can play anywhere",
+        "Simple conversion flow aimed at non-technical readers"
+      ],
+      "cons": [
+        "Requires an active OpenAI subscription to work",
+        "Voice quality depends on what that subscription exposes"
+      ]
+    }
+  },
+  {
+    "id": 1593,
+    "name": "Big Arrow on the Screen",
+    "description": "Big Arrow on the Screen lets AI agents draw large arrows, boxes and text directly on top of your display. Instead of describing where to look in words, an agent can point at exactly the part of the screen it means, which makes supervised and shared-control workflows far easier to follow. It is aimed at developers building or running computer-use agents who want clearer visual feedback. The project is published as an open-source utility and is described as a way for agents to paint on your screen.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Big Arrow on the Screen lets AI agents draw large arrows, boxes and text directly on top of your display. Instead of describing where to look in words, an agent can point at exactly the part of the screen it means, which makes supervised and shared-control workflows far easier to follow. It is aimed at developers building or running computer-use agents who want clearer visual feedback. The project is published as an open-source utility and is described as a way for agents to paint on your screen.",
+    "last_updated": "2026-10-09",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agent feedback",
+      "Screen annotation",
+      "Developers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Visual Agent Feedback",
+        "detail": "Let an agent point at the region of screen it is referring to"
+      },
+      {
+        "title": "Shared Control",
+        "detail": "Watch what a computer-use agent is targeting while it works"
+      },
+      {
+        "title": "Demos and Walkthroughs",
+        "detail": "Record agent sessions where the pointer is obvious on screen"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Makes agent intent obvious with large on-screen markers",
+        "Open source and easy to drop into an existing agent setup",
+        "Helpful for supervising computer-use agents"
+      ],
+      "cons": [
+        "Only useful when an agent is already driving the screen",
+        "Overlays can obscure the very content you are looking at"
+      ]
+    }
+  },
+  {
+    "id": 1594,
+    "name": "CUA-S1",
+    "description": "CUA-S1 is a model built for computer use, meaning it is trained to operate a desktop interface the way a person would rather than only answering in text. It ships alongside the CUA project, which provides the surrounding tooling for running and evaluating these agents. The focus is on general control of a computer: moving the pointer, clicking and completing multi-step tasks inside real applications. It targets developers building automation that has to work through a normal graphical interface, and the project is shared as an open-source repository.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://github.com/trycua/cua",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "CUA-S1 is a model built for computer use, meaning it is trained to operate a desktop interface the way a person would rather than only answering in text. It ships alongside the CUA project, which provides the surrounding tooling for running and evaluating these agents. The focus is on general control of a computer: moving the pointer, clicking and completing multi-step tasks inside real applications. It targets developers building automation that has to work through a normal graphical interface, and the project is shared as an open-source repository.",
+    "last_updated": "2026-09-19",
+    "skill_level": "advanced",
+    "best_for": [
+      "Computer use",
+      "Automation",
+      "Research"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Desktop Automation",
+        "detail": "Drive real applications through their graphical interface"
+      },
+      {
+        "title": "Agent Evaluation",
+        "detail": "Test how well a model completes multi-step screen tasks"
+      },
+      {
+        "title": "Local Agent Builds",
+        "detail": "Experiment with computer-use agents on your own machine"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Built specifically for controlling a desktop interface",
+        "Open source, with tooling for running and evaluation",
+        "Aimed at real multi-step tasks rather than single replies"
+      ],
+      "cons": [
+        "Running a computer-use model needs capable hardware",
+        "Still needs supervision before you let it act on real files"
+      ]
+    }
+  },
+  {
+    "id": 1595,
+    "name": "Pulse Local",
+    "description": "Pulse Local is a Mac budgeting app that runs its AI models on your own machine instead of sending financial data to a hosted service. Because the analysis happens locally, your spending history stays on your computer. It is aimed at people who want the convenience of an AI-assisted budget review without uploading bank or card data to a third party. The app is built for macOS, and the launch post frames it as a budgeting tool whose AI models run on your machine.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://pulseos.finance",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pulse Local is a Mac budgeting app that runs its AI models on your own machine instead of sending financial data to a hosted service. Because the analysis happens locally, your spending history stays on your computer. It is aimed at people who want the convenience of an AI-assisted budget review without uploading bank or card data to a third party. The app is built for macOS, and the launch post frames it as a budgeting tool whose AI models run on your machine.",
+    "last_updated": "2026-10-13",
+    "skill_level": "beginner",
+    "best_for": [
+      "Personal finance",
+      "Privacy",
+      "macOS users"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Local Budget Review",
+        "detail": "Get AI-assisted insight into spending without uploading data"
+      },
+      {
+        "title": "Private Finances",
+        "detail": "Keep financial history on your own Mac"
+      },
+      {
+        "title": "Spending Insights",
+        "detail": "Summarise where money goes each month"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Financial data stays on your machine",
+        "AI models run locally with no cloud round trip",
+        "Built specifically for macOS"
+      ],
+      "cons": [
+        "Mac only, with no Windows or mobile version",
+        "On-device models are smaller than hosted alternatives"
+      ]
+    }
   }
 ]
