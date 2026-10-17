@@ -28734,5 +28734,955 @@
         "On-device models are smaller than hosted alternatives"
       ]
     }
+  },
+  {
+    "id": 1596,
+    "name": "Docker Sandboxes",
+    "description": "Docker Sandboxes gives AI coding agents a disposable, isolated environment to work in, so the code they write and the packages they install never touch your host machine. Each agent gets its own sandbox that can be created, used, and thrown away. It is aimed at developers who want to let agents run commands freely without risking their local setup or a production system. The product is published by Docker and sits alongside its existing container tooling.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://www.docker.com/products/docker-sandboxes/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Docker Sandboxes gives AI coding agents a disposable, isolated environment to work in, so the code they write and the packages they install never touch your host machine. Each agent gets its own sandbox that can be created, used, and thrown away. It is aimed at developers who want to let agents run commands freely without risking their local setup or a production system. The product is published by Docker and sits alongside its existing container tooling.",
+    "last_updated": "2026-08-10",
+    "skill_level": "intermediate",
+    "best_for": [
+      "AI coding agents",
+      "Developers",
+      "Safe experimentation"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run Agent Code Safely",
+        "detail": "Let an agent execute commands inside a throwaway sandbox"
+      },
+      {
+        "title": "Isolate Package Installs",
+        "detail": "Keep experimental dependencies off your host machine"
+      },
+      {
+        "title": "Disposable Environments",
+        "detail": "Spin up and discard an environment per agent run"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Disposable environments keep the host machine clean",
+        "Backed by Docker and its existing container tooling",
+        "Lets agents install packages without supervision"
+      ],
+      "cons": [
+        "Pricing is not stated on the launch page",
+        "Assumes some familiarity with container concepts"
+      ]
+    }
+  },
+  {
+    "id": 1597,
+    "name": "Lemonade",
+    "description": "Lemonade is an open-source local AI server from AMD that handles text, images, and speech on your own machine. Installing it equips your computer with an AI runtime, a graphical interface, a command-line tool, and API endpoints, so you can chat with it, connect it to agents, or embed its SDK into your own app. It is built around GPU acceleration and targets developers who want local inference instead of a hosted API.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://lemonade-server.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Lemonade is an open-source local AI server from AMD that handles text, images, and speech on your own machine. Installing it equips your computer with an AI runtime, a graphical interface, a command-line tool, and API endpoints, so you can chat with it, connect it to agents, or embed its SDK into your own app. It is built around GPU acceleration and targets developers who want local inference instead of a hosted API.",
+    "last_updated": "2026-04-02",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Local inference",
+      "AMD GPU owners",
+      "Developers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Local Inference Server",
+        "detail": "Serve text, image and speech models from your own machine"
+      },
+      {
+        "title": "Embed the SDK",
+        "detail": "Build local AI into your own application"
+      },
+      {
+        "title": "Connect Agents",
+        "detail": "Point coding agents at a local model endpoint"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source",
+        "Covers text, images and speech in one runtime",
+        "Ships a runtime, GUI, CLI and API endpoints"
+      ],
+      "cons": [
+        "Built around AMD GPU acceleration",
+        "Local models are limited by your own hardware"
+      ]
+    }
+  },
+  {
+    "id": 1598,
+    "name": "Echo",
+    "description": "Echo is an AI system from Tracer built by pooling open-weight models instead of relying on a single hosted one. The launch post describes it as reaching Fable-level results at roughly a third of the cost, by routing work across a pool of models. It is aimed at developers who want frontier-adjacent coding performance without paying frontier API prices. Access runs through a hosted sign-in, so you use it as a service rather than running it locally.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://echo.tracerml.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Echo is an AI system from Tracer built by pooling open-weight models instead of relying on a single hosted one. The launch post describes it as reaching Fable-level results at roughly a third of the cost, by routing work across a pool of models. It is aimed at developers who want frontier-adjacent coding performance without paying frontier API prices. Access runs through a hosted sign-in, so you use it as a service rather than running it locally.",
+    "last_updated": "2026-07-23",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Coding agents",
+      "Cost control",
+      "Open-weight models"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Lower-Cost Coding Assistance",
+        "detail": "Get agent-grade coding help without frontier pricing"
+      },
+      {
+        "title": "Open-Weight Routing",
+        "detail": "Spread work across a pool of open models"
+      },
+      {
+        "title": "Cost-Sensitive Agent Runs",
+        "detail": "Keep long agent sessions affordable"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Built on open-weight models rather than one vendor",
+        "Targets roughly a third of typical frontier cost",
+        "Aims at Fable-level coding results"
+      ],
+      "cons": [
+        "Requires creating an account to use",
+        "Performance depends on the models in the pool"
+      ]
+    }
+  },
+  {
+    "id": 1599,
+    "name": "Llmspeed",
+    "description": "Llmspeed lets you feel how fast a local model will actually run before you buy the hardware. You browse by specific machine — an RTX 5090, a Mac Studio M5 Ultra, a Strix Halo laptop, a DGX Spark — and see the speed you would get. It is aimed at anyone weighing a GPU or memory upgrade for local inference and unwilling to guess. Instead of reading abstract benchmark tables, you pick your hardware and get a concrete answer.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://llmspeed.dev/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Llmspeed lets you feel how fast a local model will actually run before you buy the hardware. You browse by specific machine — an RTX 5090, a Mac Studio M5 Ultra, a Strix Halo laptop, a DGX Spark — and see the speed you would get. It is aimed at anyone weighing a GPU or memory upgrade for local inference and unwilling to guess. Instead of reading abstract benchmark tables, you pick your hardware and get a concrete answer.",
+    "last_updated": "2026-10-17",
+    "skill_level": "beginner",
+    "best_for": [
+      "Hardware buying",
+      "Local LLM users",
+      "Benchmarks"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Compare Hardware Before Buying",
+        "detail": "Check real speed on a machine you are considering"
+      },
+      {
+        "title": "Estimate Local Token Speed",
+        "detail": "See how a model performs on your current setup"
+      },
+      {
+        "title": "Plan a Memory Upgrade",
+        "detail": "Decide whether more VRAM is worth it"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Browse by exact hardware configuration",
+        "Concrete answer instead of abstract benchmark tables",
+        "Helps avoid buying the wrong hardware"
+      ],
+      "cons": [
+        "Covers a fixed list of configurations",
+        "Speed figures depend on the model you pick"
+      ]
+    }
+  },
+  {
+    "id": 1600,
+    "name": "Oak",
+    "description": "Oak is version control built for people and agents working in the same repository. The project argues that git was not designed for how agents work, and reports snapshots and status checks running up to 95% faster than git in its own benchmarks. You keep your model and your IDE — you just tell your agents to use Oak. It installs from the command line and is positioned as an agentic substrate rather than a drop-in git clone.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://oak.space",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Oak is version control built for people and agents working in the same repository. The project argues that git was not designed for how agents work, and reports snapshots and status checks running up to 95% faster than git in its own benchmarks. You keep your model and your IDE — you just tell your agents to use Oak. It installs from the command line and is positioned as an agentic substrate rather than a drop-in git clone.",
+    "last_updated": "2026-06-22",
+    "skill_level": "intermediate",
+    "best_for": [
+      "AI coding agents",
+      "Version control",
+      "Developers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Agent-Friendly Version Control",
+        "detail": "Track changes made by both you and your agents"
+      },
+      {
+        "title": "Faster Snapshots",
+        "detail": "Cut the overhead of status checks inside agent loops"
+      },
+      {
+        "title": "Agent Edit History",
+        "detail": "Keep a reviewable record of what an agent changed"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Snapshots and status checks reported up to 95% faster than git",
+        "Works with your existing model and IDE",
+        "Designed for humans and agents together"
+      ],
+      "cons": [
+        "New tool with a small surrounding ecosystem",
+        "Speed figures come from the project own benchmarks"
+      ]
+    }
+  },
+  {
+    "id": 1601,
+    "name": "Tilde.run",
+    "description": "Tilde.run is an agent sandbox built around a transactional, versioned filesystem. Instead of letting an agent make unreviewable changes, it tracks filesystem state so you can see what the agent did and roll it back. Because the sandbox is transactional, a run that goes wrong can be reverted to the state before it started. It is aimed at developers running coding agents who want a safety net underneath file edits rather than trusting them blindly.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://tilde.run/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Tilde.run is an agent sandbox built around a transactional, versioned filesystem. Instead of letting an agent make unreviewable changes, it tracks filesystem state so you can see what the agent did and roll it back. Because the sandbox is transactional, a run that goes wrong can be reverted to the state before it started. It is aimed at developers running coding agents who want a safety net underneath file edits rather than trusting them blindly.",
+    "last_updated": "2026-05-06",
+    "skill_level": "advanced",
+    "best_for": [
+      "Coding agents",
+      "Sandboxing",
+      "Developers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Sandboxed Agent Runs",
+        "detail": "Give an agent an isolated place to work"
+      },
+      {
+        "title": "Roll Back Bad Edits",
+        "detail": "Revert a run to the state before it started"
+      },
+      {
+        "title": "Audit Agent Changes",
+        "detail": "See exactly which files an agent touched"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Transactional filesystem makes changes reversible",
+        "Versioned state shows what the agent did",
+        "Isolated sandbox protects the host machine"
+      ],
+      "cons": [
+        "Another tool to adopt alongside your current setup",
+        "Limited public detail beyond the launch post"
+      ]
+    }
+  },
+  {
+    "id": 1602,
+    "name": "Trace",
+    "description": "Trace is a Mac app that records and transcribes your meetings entirely on your own machine. It captures your microphone, system audio, and optional screenshots, then hands you a markdown transcript and a summary with flagged moments inline. Nothing leaves the Mac, which is the point — it is built for people who cannot paste a client call into a cloud service. It requires macOS 14.4 or later and Apple silicon, and is distributed through the Mac App Store.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://traceapp.info",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Trace is a Mac app that records and transcribes your meetings entirely on your own machine. It captures your microphone, system audio, and optional screenshots, then hands you a markdown transcript and a summary with flagged moments inline. Nothing leaves the Mac, which is the point — it is built for people who cannot paste a client call into a cloud service. It requires macOS 14.4 or later and Apple silicon, and is distributed through the Mac App Store.",
+    "last_updated": "2026-06-13",
+    "skill_level": "beginner",
+    "best_for": [
+      "Meeting notes",
+      "Privacy",
+      "macOS users"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Private Meeting Transcripts",
+        "detail": "Transcribe calls without uploading the audio"
+      },
+      {
+        "title": "Flag Moments Mid-Call",
+        "detail": "Mark the parts worth returning to while still in the meeting"
+      },
+      {
+        "title": "Markdown Notes",
+        "detail": "Get a transcript and summary you can paste anywhere"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Transcription runs locally on your Mac",
+        "Captures microphone, system audio and screenshots",
+        "Delivers a markdown transcript plus inline summary"
+      ],
+      "cons": [
+        "macOS 14.4 or later and Apple silicon only",
+        "No Windows or Linux version"
+      ]
+    }
+  },
+  {
+    "id": 1603,
+    "name": "MarbleOS",
+    "description": "MarbleOS is a macOS workspace for AI agents that keeps files, tools, tasks, and outputs on screen instead of burying them in chat threads. You tell Marble what you need — find qualified leads, prepare for tomorrow meeting — and it does the googling, browsing, and pulling together, then hands you something to review. The product is an argument that the chat window is the wrong interface for agent work.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://marbleos.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "MarbleOS is a macOS workspace for AI agents that keeps files, tools, tasks, and outputs on screen instead of burying them in chat threads. You tell Marble what you need — find qualified leads, prepare for tomorrow meeting — and it does the googling, browsing, and pulling together, then hands you something to review. The product is an argument that the chat window is the wrong interface for agent work.",
+    "last_updated": "2026-07-31",
+    "skill_level": "beginner",
+    "best_for": [
+      "Agent workflows",
+      "Research",
+      "macOS users"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Research and Lead Lists",
+        "detail": "Have an agent assemble a qualified list with notes"
+      },
+      {
+        "title": "Meeting Preparation",
+        "detail": "Get background pulled together before a call"
+      },
+      {
+        "title": "Visible Agent Outputs",
+        "detail": "Watch files, tasks and results instead of scrolling chat"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Files, tasks and outputs stay visible rather than in chat",
+        "Handles multi-step browsing and gathering for you",
+        "Native macOS application"
+      ],
+      "cons": [
+        "macOS only",
+        "Pricing is not stated on the launch page"
+      ]
+    }
+  },
+  {
+    "id": 1604,
+    "name": "Fata",
+    "description": "Fata is a spaced-repetition app for engineers who now direct coding agents instead of writing every line themselves. It drills full-stack fundamentals — frontend, backend, and the technical design that holds up in production — so you can still judge whether what an agent produced is sound. The premise is that you cannot direct what you do not understand. There is a daily ten-question programming quiz, and the app is free on the App Store, Google Play, and the web.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://fata.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Fata is a spaced-repetition app for engineers who now direct coding agents instead of writing every line themselves. It drills full-stack fundamentals — frontend, backend, and the technical design that holds up in production — so you can still judge whether what an agent produced is sound. The premise is that you cannot direct what you do not understand. There is a daily ten-question programming quiz, and the app is free on the App Store, Google Play, and the web.",
+    "last_updated": "2026-06-11",
+    "skill_level": "beginner",
+    "best_for": [
+      "Engineers",
+      "Skill maintenance",
+      "Working with coding agents"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Daily Programming Drills",
+        "detail": "Ten short questions a day to stay sharp"
+      },
+      {
+        "title": "Keep Fundamentals Sharp",
+        "detail": "Revisit frontend, backend and design basics"
+      },
+      {
+        "title": "Review Agent Output",
+        "detail": "Stay able to judge the code an agent hands you"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free on web, iOS and Android",
+        "Focuses on fundamentals agents do not replace",
+        "Short daily format that fits a routine"
+      ],
+      "cons": [
+        "Narrow focus on programming fundamentals",
+        "No coverage of non-technical topics"
+      ]
+    }
+  },
+  {
+    "id": 1605,
+    "name": "Zot",
+    "description": "Zot is a coding agent harness delivered as a single binary. There is no runtime to install, no Docker, and no package manager — the project describes itself as just the agent loop, written in Go, that you drop on your PATH and run. It supports extensions, models, and themes, and is aimed at developers who find the existing harnesses heavier than they need.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://www.zot.sh",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Zot is a coding agent harness delivered as a single binary. There is no runtime to install, no Docker, and no package manager — the project describes itself as just the agent loop, written in Go, that you drop on your PATH and run. It supports extensions, models, and themes, and is aimed at developers who find the existing harnesses heavier than they need.",
+    "last_updated": "2026-05-29",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Terminal users",
+      "Minimal setups",
+      "Coding agents"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Lightweight Agent Loop",
+        "detail": "Run a coding agent with almost no setup"
+      },
+      {
+        "title": "Agents Without Docker",
+        "detail": "Skip the container layer entirely"
+      },
+      {
+        "title": "Terminal-First Work",
+        "detail": "Drive an agent from the command line"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Single binary with no runtime, Docker or package manager",
+        "Small and fast to install",
+        "Extensible through extensions, models and themes"
+      ],
+      "cons": [
+        "Describes itself as yet another harness",
+        "Fewer guardrails than larger agent products"
+      ]
+    }
+  },
+  {
+    "id": 1606,
+    "name": "Boxes.dev",
+    "description": "Boxes.dev gives every coding agent its own cloud computer. You bring your Codex or Claude subscription, start agents from Slack or Linear, and manage them from your desktop, phone, or terminal. Because the dev environment lives in the cloud, every one of those surfaces is a first-class client, so you can close your laptop and still steer a running agent. The pitch is a cloud-only agentic development environment rather than a local sandbox.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://boxes.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Boxes.dev gives every coding agent its own cloud computer. You bring your Codex or Claude subscription, start agents from Slack or Linear, and manage them from your desktop, phone, or terminal. Because the dev environment lives in the cloud, every one of those surfaces is a first-class client, so you can close your laptop and still steer a running agent. The pitch is a cloud-only agentic development environment rather than a local sandbox.",
+    "last_updated": "2026-06-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Remote agent runs",
+      "Teams",
+      "Cloud dev environments"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run Agents in the Cloud",
+        "detail": "Give each agent its own remote machine"
+      },
+      {
+        "title": "Start From Slack or Linear",
+        "detail": "Kick off agent work from the tools your team uses"
+      },
+      {
+        "title": "Steer From Your Phone",
+        "detail": "Manage running agents away from your desk"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Every agent gets its own cloud machine",
+        "Works from desktop, mobile and terminal",
+        "Integrates with Slack and Linear"
+      ],
+      "cons": [
+        "Requires your own Codex or Claude subscription",
+        "Code and environment live off your machine"
+      ]
+    }
+  },
+  {
+    "id": 1607,
+    "name": "Shoehorn",
+    "description": "Shoehorn makes a language model fit the memory you actually have. Preset quantizations ignore your hardware: pick one that fits and you either waste quality headroom or discover at load time that it did not fit after all. Shoehorn starts from your available memory, subtracts what inference itself needs, and solves a per-tensor mixed-precision assignment that reportedly uses about 99.99% of the remaining budget. It runs on Mac, Linux, and Windows.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://notactuallytreyanastasio.github.io/shoehorn/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Shoehorn makes a language model fit the memory you actually have. Preset quantizations ignore your hardware: pick one that fits and you either waste quality headroom or discover at load time that it did not fit after all. Shoehorn starts from your available memory, subtracts what inference itself needs, and solves a per-tensor mixed-precision assignment that reportedly uses about 99.99% of the remaining budget. It runs on Mac, Linux, and Windows.",
+    "last_updated": "2026-08-18",
+    "skill_level": "advanced",
+    "best_for": [
+      "Local inference",
+      "Limited VRAM",
+      "Model quantization"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Fit a Model to Limited VRAM",
+        "detail": "Quantize to the memory you actually have"
+      },
+      {
+        "title": "Per-Tensor Mixed Precision",
+        "detail": "Go beyond one-size-fits-all quantization presets"
+      },
+      {
+        "title": "Avoid Load-Time Failures",
+        "detail": "Stop discovering at load time that a model does not fit"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Starts from your real available memory",
+        "Per-tensor mixed precision instead of a fixed preset",
+        "Reported to use nearly all of the remaining budget"
+      ],
+      "cons": [
+        "Open-source project with a small user base",
+        "Quantization still costs some model quality"
+      ]
+    }
+  },
+  {
+    "id": 1608,
+    "name": "Hypercubic Hopper",
+    "description": "Hopper is an agentic TN3270 terminal, described as the first agentic development environment for the mainframe. It uses AI agents to navigate TN3270 screens, inspect datasets, write JCL, debug jobs, and query VSAM from a modern development environment inside z/OS. It is aimed at the shrinking pool of engineers who maintain mainframe systems and want agent help there. A Windows download is available, with other platforms noted.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://www.hypercubic.ai/hopper",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Hopper is an agentic TN3270 terminal, described as the first agentic development environment for the mainframe. It uses AI agents to navigate TN3270 screens, inspect datasets, write JCL, debug jobs, and query VSAM from a modern development environment inside z/OS. It is aimed at the shrinking pool of engineers who maintain mainframe systems and want agent help there. A Windows download is available, with other platforms noted.",
+    "last_updated": "2026-05-12",
+    "skill_level": "advanced",
+    "best_for": [
+      "Mainframe",
+      "COBOL and z/OS",
+      "Enterprise developers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Navigate Mainframe Screens",
+        "detail": "Let an agent drive TN3270 instead of you"
+      },
+      {
+        "title": "Write and Debug JCL",
+        "detail": "Get agent help with batch jobs"
+      },
+      {
+        "title": "Inspect Datasets",
+        "detail": "Query VSAM and inspect data inside z/OS"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Brings agent assistance to mainframe work",
+        "Covers TN3270, JCL, VSAM and z/OS",
+        "Modern interface over legacy systems"
+      ],
+      "cons": [
+        "Windows download at launch",
+        "Very narrow audience"
+      ]
+    }
+  },
+  {
+    "id": 1609,
+    "name": "Nobie",
+    "description": "Nobie is an Excel-compatible runtime built for agents and humans working on the same spreadsheet. Rather than forcing an agent to drive Excel through screenshots or macros, it gives the agent a runtime where formulas and cells are first-class. The launch positions it as a runtime rather than a plugin, so both the agent and the person can work in the same model. It suits teams whose real work already lives in spreadsheets.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://nobie.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Nobie is an Excel-compatible runtime built for agents and humans working on the same spreadsheet. Rather than forcing an agent to drive Excel through screenshots or macros, it gives the agent a runtime where formulas and cells are first-class. The launch positions it as a runtime rather than a plugin, so both the agent and the person can work in the same model. It suits teams whose real work already lives in spreadsheets.",
+    "last_updated": "2026-07-13",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Spreadsheets",
+      "Agents",
+      "Business teams"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Let Agents Edit Spreadsheets",
+        "detail": "Hand an agent a workbook instead of a screenshot"
+      },
+      {
+        "title": "Automate Formula Work",
+        "detail": "Have repetitive cell work handled for you"
+      },
+      {
+        "title": "One Shared File",
+        "detail": "Keep humans and agents working in the same document"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Excel-compatible so existing files keep working",
+        "Built for agents and humans together",
+        "Avoids screen-scraping Excel"
+      ],
+      "cons": [
+        "Early product with limited public documentation",
+        "Tied to spreadsheet-based workflows"
+      ]
+    }
+  },
+  {
+    "id": 1610,
+    "name": "LingoChunk",
+    "description": "LingoChunk turns native-language audio into study material. It started as a way to build Anki cards from real recordings: it takes audio in the language you are learning, extracts the words, and turns them into flashcards and shadowing practice. The tool grew out of the author own German and Greek study, and is aimed at learners who would rather study what people actually say than textbook sentences.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://lingochunk.com/try",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "LingoChunk turns native-language audio into study material. It started as a way to build Anki cards from real recordings: it takes audio in the language you are learning, extracts the words, and turns them into flashcards and shadowing practice. The tool grew out of the author own German and Greek study, and is aimed at learners who would rather study what people actually say than textbook sentences.",
+    "last_updated": "2026-06-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Language learning",
+      "Flashcards",
+      "Listening practice"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Build Flashcards From Audio",
+        "detail": "Turn a real recording into review cards"
+      },
+      {
+        "title": "Shadowing Practice",
+        "detail": "Repeat native speech with the source in front of you"
+      },
+      {
+        "title": "Study Real Spoken Language",
+        "detail": "Learn from actual usage instead of graded text"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Uses real native audio rather than textbook text",
+        "Produces both flashcards and shadowing material",
+        "Built from an actual learner workflow"
+      ],
+      "cons": [
+        "Early tool with a narrow feature set",
+        "Depends on the quality of the source audio"
+      ]
+    }
+  },
+  {
+    "id": 1611,
+    "name": "Diffui",
+    "description": "Diffui generates interface designs from a prompt using a diffusion model rather than an LLM. The company claims nine options in about fifty seconds, against one page in three to five minutes for LLM-based competitors. You can upload existing screenshots so it learns your design language and generates new features that match. The pitch is brand-compliant generation at speed, aimed at designers tired of generic generated layouts.",
+    "category": "Image",
+    "pricing": "Unknown",
+    "url": "https://diffui.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Diffui generates interface designs from a prompt using a diffusion model rather than an LLM. The company claims nine options in about fifty seconds, against one page in three to five minutes for LLM-based competitors. You can upload existing screenshots so it learns your design language and generates new features that match. The pitch is brand-compliant generation at speed, aimed at designers tired of generic generated layouts.",
+    "last_updated": "2026-07-21",
+    "skill_level": "beginner",
+    "best_for": [
+      "UI design",
+      "Designers",
+      "Rapid prototyping"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Generate UI Options",
+        "detail": "Get several design directions from one prompt"
+      },
+      {
+        "title": "Match an Existing Design",
+        "detail": "Upload screenshots so output fits your product"
+      },
+      {
+        "title": "Explore Layouts Quickly",
+        "detail": "Compare directions before committing"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Multiple options generated quickly",
+        "Learns your design language from uploaded screenshots",
+        "Diffusion-based rather than LLM-based generation"
+      ],
+      "cons": [
+        "Speed and option-count claims come from the vendor",
+        "Output still needs a designer review"
+      ]
+    }
+  },
+  {
+    "id": 1612,
+    "name": "SubSmith",
+    "description": "SubSmith turns videos in the language you are learning into study material. You drop in any file — MKV, MP4, or MP3 — and get accurately synced subtitles you never have to retime, then use them to study vocabulary in context. It is aimed at learners who would rather use films, series, and YouTube than graded course material. There is a seven-day free trial that does not require a credit card.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://subsmith.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SubSmith turns videos in the language you are learning into study material. You drop in any file — MKV, MP4, or MP3 — and get accurately synced subtitles you never have to retime, then use them to study vocabulary in context. It is aimed at learners who would rather use films, series, and YouTube than graded course material. There is a seven-day free trial that does not require a credit card.",
+    "last_updated": "2026-08-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Language learning",
+      "Video subtitles",
+      "Self-study"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Subtitle Your Own Videos",
+        "detail": "Add synced subtitles to any file you already have"
+      },
+      {
+        "title": "Study Vocabulary in Context",
+        "detail": "Learn words from how they are really used"
+      },
+      {
+        "title": "Learn From Films and Series",
+        "detail": "Use the content you already want to watch"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works with your own video files",
+        "Accurately synced subtitles that need no retiming",
+        "Seven-day trial without a credit card"
+      ],
+      "cons": [
+        "Desktop app with per-OS downloads",
+        "Requires a subscription after the trial ends"
+      ]
+    }
+  },
+  {
+    "id": 1613,
+    "name": "MLJAR Studio",
+    "description": "MLJAR Studio is a desktop AI analyst that answers questions about your data in plain English and returns real Python code, charts, and reproducible notebooks. Everything runs locally, so your data stays on your computer. It also lets AI run machine learning experiments for you, and comes from the team behind the open-source MLJAR AutoML package. It is aimed at analysts who want automation without uploading datasets to a hosted service.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://mljar.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "MLJAR Studio is a desktop AI analyst that answers questions about your data in plain English and returns real Python code, charts, and reproducible notebooks. Everything runs locally, so your data stays on your computer. It also lets AI run machine learning experiments for you, and comes from the team behind the open-source MLJAR AutoML package. It is aimed at analysts who want automation without uploading datasets to a hosted service.",
+    "last_updated": "2026-05-02",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Data analysis",
+      "Privacy",
+      "Python notebooks"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Ask Questions About Data",
+        "detail": "Query a dataset in plain English"
+      },
+      {
+        "title": "Reproducible Notebooks",
+        "detail": "Get real Python code you can rerun and share"
+      },
+      {
+        "title": "Run ML Experiments Locally",
+        "detail": "Have experiments run on your own machine"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Data stays on your own machine",
+        "Returns real Python code and notebooks, not just answers",
+        "Backed by an established open-source AutoML project"
+      ],
+      "cons": [
+        "Desktop application you must install",
+        "Local runs are limited by your hardware"
+      ]
+    }
+  },
+  {
+    "id": 1614,
+    "name": "Agent.reviews",
+    "description": "Agent.reviews is a directory where AI agents, rather than people, read and write reviews of software tools. Every page has a Markdown version at the same address plus .md, and the site exposes a skill file and install instructions so a coding agent can consume it directly. It comes from Armature, which measured tens of thousands of agent sessions to see how agents actually pick the tools they use.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://agent.reviews/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Agent.reviews is a directory where AI agents, rather than people, read and write reviews of software tools. Every page has a Markdown version at the same address plus .md, and the site exposes a skill file and install instructions so a coding agent can consume it directly. It comes from Armature, which measured tens of thousands of agent sessions to see how agents actually pick the tools they use.",
+    "last_updated": "2026-10-07",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Coding agents",
+      "Tool discovery",
+      "Developers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Let Your Agent Research Tools",
+        "detail": "Give a coding agent a source it can read"
+      },
+      {
+        "title": "Publish Agent-Readable Reviews",
+        "detail": "Make a tool discoverable to agents"
+      },
+      {
+        "title": "Inspect Agent Preferences",
+        "detail": "See what agents trend toward choosing"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Every page has a Markdown version for agents",
+        "Ships a skill file and install steps",
+        "Built on real agent session data"
+      ],
+      "cons": [
+        "Reviews may be written by agents rather than people",
+        "New site with a small catalogue"
+      ]
+    }
   }
 ]
