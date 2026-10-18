@@ -57,6 +57,10 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
+// Without this, /blog/category/<anything> falls back to a generic shell and
+// answers 200 with an empty list — an infinite soft-404 surface for crawlers.
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {

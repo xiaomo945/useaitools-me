@@ -1,5 +1,6 @@
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
+import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ export default function PrivacyPage() {
           </section>
           <section>
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">4. Affiliate Links</h2>
-            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">Some links on our site are affiliate links. When you click these links and make a purchase, we may earn a commission at no extra cost to you. This does not affect our editorial independence. See our <a href="/affiliate-disclosure" className="text-emerald-600 dark:text-emerald-400 hover:underline">Affiliate Disclosure</a> for details.</p>
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">Some links on our site are affiliate links. When you click these links and make a purchase, we may earn a commission at no extra cost to you. This does not affect our editorial independence. See our <Link href="/affiliate-disclosure" className="text-emerald-600 dark:text-emerald-400 hover:underline">Affiliate Disclosure</Link> for details.</p>
           </section>
           <section>
             <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-3">5. Third-Party Services</h2>

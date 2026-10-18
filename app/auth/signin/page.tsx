@@ -3,6 +3,7 @@
 import { signIn } from 'next-auth/react'
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
+import Link from 'next/link'
 
 function SignInContent() {
   const searchParams = useSearchParams()
@@ -70,24 +71,24 @@ function SignInContent() {
           </div>
 
           <div className="mt-6">
-            <a
+            <Link
               href="/"
               className="w-full flex items-center justify-center px-4 py-3 border border-transparent rounded-lg shadow-sm text-sm font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-gray-800 hover:bg-slate-200 dark:hover:bg-gray-700 transition-colors"
             >
               Back to home
-            </a>
+            </Link>
           </div>
         </div>
 
         <p className="mt-8 text-center text-xs text-slate-500 dark:text-slate-400">
           By signing in, you agree to our{' '}
-          <a href="/terms" className="font-medium text-emerald-600 hover:text-emerald-500">
+          <Link href="/terms" className="font-medium text-emerald-600 hover:text-emerald-500">
             Terms of Service
-          </a>
+          </Link>
           {' '}and{' '}
-          <a href="/privacy" className="font-medium text-emerald-600 hover:text-emerald-500">
+          <Link href="/privacy" className="font-medium text-emerald-600 hover:text-emerald-500">
             Privacy Policy
-          </a>
+          </Link>
         </p>
       </div>
     </div>
