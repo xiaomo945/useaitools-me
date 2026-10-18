@@ -3367,7 +3367,7 @@
     "name": "Microsoft Copilot",
     "description": "Microsoft Copilot is an assistant built into Windows, Edge, and Microsoft 365 applications. It answers questions grounded in web search results with source citations, drafts documents, summarizes meetings, and helps with spreadsheets and presentations. It is aimed at everyday users and Microsoft 365 subscribers who want assistance inside the software they already use, with free access and paid plans for deeper productivity features.",
     "category": "Writing",
-    "pricing": "Free",
+    "pricing": "Freemium",
     "url": "https://copilot.microsoft.com",
     "affiliate_link": "",
     "icon_url": "",
@@ -3386,7 +3386,7 @@
       "English"
     ],
     "description_en": "Microsoft Copilot is an assistant built into Windows, Edge, and Microsoft 365 applications. It answers questions grounded in web search results with source citations, drafts documents, summarizes meetings, and helps with spreadsheets and presentations. It is aimed at everyday users and Microsoft 365 subscribers who want assistance inside the software they already use, with free access and paid plans for deeper productivity features.",
-    "last_updated": "2026-09-24",
+    "last_updated": "2026-10-19",
     "skill_level": "beginner",
     "best_for": [
       "Content Creation",
@@ -6271,56 +6271,6 @@
     }
   },
   {
-    "id": 280,
-    "name": "Pictory AI",
-    "description": "Pictory AI turns text scripts into videos by automatically pairing narration with stock footage. Writers paste a script or article and receive a video draft with visuals matched to each section, which skips the storyboard stage. Marketers and content teams use it to repurpose blogs and articles into video for social and email. A free tier allows testing the format, with paid plans unlocking longer videos and more complete stock access.",
-    "category": "Video",
-    "pricing": "Freemium",
-    "url": "https://pictory.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Pictory AI turns text scripts into videos by automatically pairing narration with stock footage. Writers paste a script or article and receive a video draft with visuals matched to each section, which skips the storyboard stage. Marketers and content teams use it to repurpose blogs and articles into video for social and email. A free tier allows testing the format, with paid plans unlocking longer videos and more complete stock access.",
-    "last_updated": "2026-10-07",
-    "skill_level": "beginner",
-    "best_for": [
-      "Text-to-Video",
-      "Stock Footage",
-      "Marketing"
-    ],
-    "rating": null,
-    "rating_count": null,
-    "use_cases": [
-      {
-        "title": "Blog Repurposing",
-        "detail": "Turn published articles into narrated videos for social distribution"
-      },
-      {
-        "title": "Rough Cuts",
-        "detail": "Generate a first draft video from a script in minutes"
-      },
-      {
-        "title": "Marketing Snippets",
-        "detail": "Create short promo videos without sourcing footage yourself"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Automatic stock footage matching skips the storyboarding stage",
-        "Useful for repurposing written content into video channels",
-        "Editing tools still allow swapping clips and adjusting pacing"
-      ],
-      "cons": [
-        "Stock visuals may not match every niche topic precisely",
-        "Free tier limits video length and stock library access"
-      ]
-    }
-  },
-  {
     "id": 283,
     "name": "Lovo AI",
     "description": "Lovo AI is a voice generation platform for cloning custom voices and producing text-to-speech. Creators can build a voice model from sample recordings and use it for narration, characters, videos and ads across many projects. The platform targets video producers, game developers and marketing teams who need consistent, branded voiceovers without booking recording sessions for every script revision.",
@@ -7617,57 +7567,6 @@
       "cons": [
         "Discontinued, so no new features, bug fixes, or official support",
         "Suggestions are limited to two languages and simple line-level completions"
-      ]
-    }
-  },
-  {
-    "id": 356,
-    "name": "Codeium",
-    "description": "Codeium was Exafunction's free AI coding toolkit with inline completions and code search across many editors. The company rebranded to Windsurf in 2025 before the business passed to Cognition, and codeium.com now redirects to Devin Desktop. Existing users were moved to Windsurf plugins, so new users should review the current lineup before adopting. The original extension remains a free option for individual developers.",
-    "category": "Code",
-    "pricing": "Free",
-    "url": "https://devin.ai/desktop",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Codeium was Exafunction's free AI coding toolkit with inline completions and code search across many editors. The company rebranded to Windsurf in 2025 before the business passed to Cognition, and codeium.com now redirects to Devin Desktop. Existing users were moved to Windsurf plugins, so new users should review the current lineup before adopting. The original extension remains a free option for individual developers.",
-    "renamed_to": "Devin Desktop",
-    "last_updated": "2026-10-08",
-    "skill_level": "beginner",
-    "best_for": [
-      "Free",
-      "Completion",
-      "Search"
-    ],
-    "rating": null,
-    "rating_count": null,
-    "use_cases": [
-      {
-        "title": "Inline Completions",
-        "detail": "Autocomplete code inside VS Code and JetBrains editors"
-      },
-      {
-        "title": "Code Search",
-        "detail": "Find snippets and examples across your own codebase"
-      },
-      {
-        "title": "Editor Plugins",
-        "detail": "Install the extension and get suggestions in minutes"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Free tier covered individual developers without a paid plan",
-        "Lightweight extension fits into existing editor workflows easily",
-        "Autocomplete and search helped without leaving the editor"
-      ],
-      "cons": [
-        "Repeated rebrands and ownership changes make the roadmap unclear",
-        "Users must decide between Windsurf plugins and Devin Desktop"
       ]
     }
   },
@@ -13478,56 +13377,6 @@
       "cons": [
         "Output can feel generic and usually needs human editing before publishing",
         "Free tier limits monthly generations, so heavy users must upgrade quickly"
-      ]
-    },
-    "rating": null,
-    "rating_count": null
-  },
-  {
-    "id": 957,
-    "name": "CapCut Pro AI",
-    "description": "CapCut Pro AI is an AI-enhanced video editor aimed at short video and social media production. It provides automatic subtitle generation, a library of effects, and one-click templates that let creators assemble polished clips quickly. The tool targets content creators and social media teams who publish frequently and want to reduce editing time. A freemium model covers basic editing, with paid options for more complete output.",
-    "category": "Video",
-    "pricing": "Freemium",
-    "url": "https://www.capcut.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "CapCut Pro AI is an AI-enhanced video editor aimed at short video and social media production. It provides automatic subtitle generation, a library of effects, and one-click templates that let creators assemble polished clips quickly. The tool targets content creators and social media teams who publish frequently and want to reduce editing time. A freemium model covers basic editing, with paid options for more complete output.",
-    "last_updated": "2026-10-07",
-    "skill_level": "beginner",
-    "best_for": [
-      "Video Editing",
-      "Short Video",
-      "Social Media"
-    ],
-    "use_cases": [
-      {
-        "title": "Auto Subtitles",
-        "detail": "Generate subtitles for clips automatically without manual typing"
-      },
-      {
-        "title": "One-Click Templates",
-        "detail": "Assemble short social videos from ready-made template styles"
-      },
-      {
-        "title": "Visual Effects",
-        "detail": "Add trending effects to social videos in seconds"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Automatic subtitles remove tedious manual captioning work from editing",
-        "One-click templates suit creators with limited editing experience",
-        "Effects library keeps short-form social content visually current"
-      ],
-      "cons": [
-        "Templates can make videos look similar across creators",
-        "Premium effects and exports require a paid subscription"
       ]
     },
     "rating": null,
@@ -22801,65 +22650,6 @@
     }
   },
   {
-    "id": 1470,
-    "name": "Microsoft Copilot Pro",
-    "description": "Microsoft Copilot Pro is a premium subscription that brings AI assistance across Microsoft 365 apps, Windows, and Edge. Subscribers get access to advanced models and custom GPTs, plus features like drafting in Word, summarizing in Outlook, and analyzing data in Excel. It is designed for office workers who live in Microsoft's ecosystem and want AI embedded where they already work. Deep app integration lets the assistant use the document you have open.",
-    "description_en": "Microsoft Copilot Pro is a premium subscription that brings AI assistance across Microsoft 365 apps, Windows, and Edge. Subscribers get access to advanced models and custom GPTs, plus features like drafting in Word, summarizing in Outlook, and analyzing data in Excel. It is designed for office workers who live in Microsoft's ecosystem and want AI embedded where they already work. Deep app integration lets the assistant use the document you have open.",
-    "category": "Productivity",
-    "pricing": "Paid",
-    "url": "https://copilot.microsoft.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [
-      {
-        "prompt": "Example use case for Microsoft Copilot Pro",
-        "image_url": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=1200&h=800&fit=crop&auto=format&q=80"
-      }
-    ],
-    "needs_vpn": false,
-    "languages": [
-      "English",
-      "Chinese",
-      "Spanish",
-      "French",
-      "German"
-    ],
-    "last_updated": "2026-07-07",
-    "skill_level": "beginner",
-    "best_for": [
-      "Office Workers",
-      "Microsoft 365",
-      "Teams"
-    ],
-    "rating": null,
-    "rating_count": null,
-    "use_cases": [
-      {
-        "title": "Draft Documents",
-        "detail": "Start drafts and rewrite text inside Word with AI help"
-      },
-      {
-        "title": "Summarize Inbox",
-        "detail": "Condense long Outlook threads and draft replies quickly"
-      },
-      {
-        "title": "Analyze Spreadsheets",
-        "detail": "Generate formulas and insights from data in Excel sheets"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "AI sits inside the Microsoft apps where office work already happens",
-        "Custom GPTs let teams build reusable assistants for repeated tasks",
-        "Advanced model access goes beyond the free Copilot built into Windows"
-      ],
-      "cons": [
-        "Value depends on already paying for Microsoft 365 and using it daily",
-        "Business deployments require compatible Microsoft 365 plans for full features"
-      ]
-    }
-  },
-  {
     "id": 1471,
     "name": "Kimi AI",
     "description": "Kimi AI is a long-context assistant from Moonshot AI, supporting contexts of up to two million tokens. That capacity makes it practical for whole-book analysis, extended document sets and very long conversations without losing earlier material. It handles both Chinese and English, with strength in document analysis and coding assistance. Researchers, students and developers use it when context length is the deciding factor. The web interface is free to use, with paid tiers adding heavier access.",
@@ -27175,7 +26965,7 @@
   {
     "id": 1565,
     "name": "Windsurf",
-    "description": "Windsurf is an agentic IDE built around the Cascade agent, which tracks your edits, commands and project context to refactor across multiple files rather than one line at a time. It handles multi-file refactors, terminal commands and project-wide context within the editor. The tool has changed ownership: Google licensed the technology and hired the founders in July 2025, and Cognition acquired the remaining company the same month. The editor was later renamed Devin Desktop, with Cascade, keybindings and extensions unchanged.",
+    "description": "Windsurf (formerly Codeium) is an agentic IDE built around the Cascade agent, which tracks your edits, commands and project context to refactor across multiple files rather than one line at a time. It handles multi-file refactors, terminal commands and project-wide context within the editor. The tool has changed ownership: Google licensed the technology and hired the founders in July 2025, and Cognition acquired the remaining company the same month. The editor was later renamed Devin Desktop, with Cascade, keybindings and extensions unchanged.",
     "category": "Code",
     "pricing": "Freemium",
     "url": "https://devin.ai/desktop",
@@ -27188,7 +26978,7 @@
     ],
     "description_en": "Windsurf is an agentic IDE built around the Cascade agent, which tracks your edits, commands and project context to refactor across multiple files rather than one line at a time. It handles multi-file refactors, terminal commands and project-wide context within the editor. The tool has changed ownership: Google licensed the technology and hired the founders in July 2025, and Cognition acquired the remaining company the same month. The editor was later renamed Devin Desktop, with Cascade, keybindings and extensions unchanged.",
     "renamed_to": "Devin Desktop",
-    "last_updated": "2026-10-08",
+    "last_updated": "2026-10-19",
     "skill_level": "intermediate",
     "best_for": [
       "Multi-File Edits",

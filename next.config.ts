@@ -128,6 +128,45 @@ const nextConfig: NextConfig = {
     ],
   },
 
+  /**
+   * Duplicate tool entries that were merged into one canonical page.
+   *
+   * Four products had two records each pointing at the same vendor site
+   * (Copilot / Copilot Pro, Pictory / Pictory AI, Codeium / Windsurf,
+   * CapCut / CapCut Pro AI). Keeping both meant two near-identical pages
+   * competing for the same query, so the weaker record was removed. These
+   * 308s keep the old URLs — and any inbound links or search results that
+   * still use them — landing on the surviving page instead of a 404.
+   */
+  async redirects() {
+    const merged: { from: string; to: string }[] = [
+      { from: 'pictory-ai', to: 'pictory' },
+      { from: 'microsoft-copilot-pro', to: 'microsoft-copilot' },
+      { from: 'codeium', to: 'windsurf' },
+      { from: 'capcut-pro-ai', to: 'capcut' },
+    ];
+    // The removed records' numeric ids, which used to resolve via /tools/<id>.
+    const mergedIds: { id: number; to: string }[] = [
+      { id: 280, to: 'pictory' },
+      { id: 1470, to: 'microsoft-copilot' },
+      { id: 356, to: 'windsurf' },
+      { id: 957, to: 'capcut' },
+    ];
+
+    return [
+      ...merged.map(({ from, to }) => ({
+        source: `/tool/${from}`,
+        destination: `/tool/${to}`,
+        permanent: true,
+      })),
+      ...mergedIds.map(({ id, to }) => ({
+        source: `/tools/${id}`,
+        destination: `/tool/${to}`,
+        permanent: true,
+      })),
+    ];
+  },
+
   // Security & Performance: Headers
   async headers() {
     return [

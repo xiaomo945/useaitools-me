@@ -84,7 +84,7 @@ export const scenes: SceneConfig[] = [
     includes: [
       'VEED.io', 'Pictory', 'Synthesia', 'Runway', 'Lumen5',
       'InVideo', 'Descript', 'HeyGen', 'Murf AI', 'FlexClip',
-      'Wondershare Filmora', 'Pictory AI', 'Fliki'
+      'Wondershare Filmora', 'Fliki'
     ],
     topPicks: ['VEED.io', 'Pictory', 'Synthesia'],
     faq: [
