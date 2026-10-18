@@ -22,6 +22,10 @@ export default function ABTestingDashboard() {
   const [experiments, setExperiments] = useState<Experiment[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedExperiment, setSelectedExperiment] = useState<string | null>(null);
+  const [showCreateForm, setShowCreateForm] = useState(false);
+  const [formName, setFormName] = useState('');
+  const [formDescription, setFormDescription] = useState('');
+  const [formVariants, setFormVariants] = useState('');
 
   useEffect(() => {
     fetchExperiments();
@@ -79,6 +83,32 @@ export default function ABTestingDashboard() {
     } catch (error) {
       console.error('Failed to record variant:', error);
     }
+  };
+
+  const createExperiment = () => {
+    const name = formName.trim();
+    if (!name) return;
+
+    const variants = formVariants
+      .split(',')
+      .map((v) => v.trim())
+      .filter(Boolean);
+
+    const experiment: Experiment = {
+      id: `exp-${Date.now()}`,
+      name,
+      description: formDescription.trim() || 'No description provided',
+      variants: variants.length > 0 ? variants : ['control', 'variant-b'],
+      status: 'running',
+      startDate: new Date().toISOString().split('T')[0],
+      results: [],
+    };
+
+    setExperiments((prev) => [experiment, ...prev]);
+    setFormName('');
+    setFormDescription('');
+    setFormVariants('');
+    setShowCreateForm(false);
   };
 
   if (loading) {
@@ -185,11 +215,78 @@ export default function ABTestingDashboard() {
           ))}
         </div>
 
-        {/* Create New Experiment Button */}
+        {/* Create New Experiment */}
         <div className="mt-8">
-          <button className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-medium transition-colors">
-            Create new experiment
+          <button
+            type="button"
+            onClick={() => setShowCreateForm((prev) => !prev)}
+            className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-medium transition-colors"
+          >
+            {showCreateForm ? 'Cancel' : 'Create new experiment'}
           </button>
+
+          {showCreateForm && (
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                createExperiment();
+              }}
+              className="mt-4 bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-slate-200 dark:border-gray-800 p-6 space-y-4"
+            >
+              <div>
+                <label htmlFor="exp-name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                  Experiment name
+                </label>
+                <input
+                  id="exp-name"
+                  type="text"
+                  value={formName}
+                  onChange={(e) => setFormName(e.target.value)}
+                  placeholder="e.g. Hero headline test"
+                  required
+                  className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="exp-desc" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                  Description
+                </label>
+                <input
+                  id="exp-desc"
+                  type="text"
+                  value={formDescription}
+                  onChange={(e) => setFormDescription(e.target.value)}
+                  placeholder="What are you testing?"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="exp-variants" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                  Variants (comma separated)
+                </label>
+                <input
+                  id="exp-variants"
+                  type="text"
+                  value={formVariants}
+                  onChange={(e) => setFormVariants(e.target.value)}
+                  placeholder="control, variant-b"
+                  className="w-full px-3 py-2 rounded-lg border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
+                />
+                <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                  Leave empty to use the default &quot;control, variant-b&quot;.
+                </p>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full py-2.5 bg-slate-900 dark:bg-slate-700 hover:bg-slate-800 dark:hover:bg-slate-600 text-white rounded-lg font-medium transition-colors"
+              >
+                Start experiment
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </div>

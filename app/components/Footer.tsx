@@ -183,18 +183,6 @@ export default function Footer() {
               >
                 Terms
               </Link>
-              <Link
-                href="#"
-                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
-              >
-                {t('footer.privacy')}
-              </Link>
-              <Link
-                href="#"
-                className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
-              >
-                {t('footer.terms')}
-              </Link>
               <button
                 type="button"
                 onClick={() => window.dispatchEvent(new Event('uaic-open-cookie-settings'))}

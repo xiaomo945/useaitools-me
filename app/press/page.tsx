@@ -59,10 +59,14 @@ export default function PressPage() {
               <p className="text-slate-600 dark:text-slate-300 mb-4">
                 Standard version, suitable for most use cases
               </p>
-              <button className="w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center">
+              <a
+                href="/logo.png"
+                download="use-ai-tools-logo.png"
+                className="w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center"
+              >
                 <Download className="w-4 h-4 mr-2" />
                 Download PNG
-              </button>
+              </a>
             </div>
 
             <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-gray-800">
@@ -75,10 +79,14 @@ export default function PressPage() {
               <p className="text-slate-600 dark:text-slate-300 mb-4">
                 Designed for dark backgrounds and dark-mode interfaces
               </p>
-              <button className="w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center">
+              <a
+                href="/brand/use-ai-tools-logo-dark.svg"
+                download="use-ai-tools-logo-dark.svg"
+                className="w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center"
+              >
                 <Download className="w-4 h-4 mr-2" />
-                Download PNG
-              </button>
+                Download SVG
+              </a>
             </div>
 
             <div className="bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg border border-slate-200 dark:border-gray-800">
@@ -91,10 +99,14 @@ export default function PressPage() {
               <p className="text-slate-600 dark:text-slate-300 mb-4">
                 Ideal for favicons and small display sizes
               </p>
-              <button className="w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center">
+              <a
+                href="/brand/use-ai-tools-icon.svg"
+                download="use-ai-tools-icon.svg"
+                className="w-full px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center"
+              >
                 <Download className="w-4 h-4 mr-2" />
-                Download PNG
-              </button>
+                Download SVG
+              </a>
             </div>
           </div>
         </section>

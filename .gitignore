@@ -53,3 +53,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .env.local
+
+# agent memory / automation run logs (local only, never commit)
+.workbuddy-ai/
