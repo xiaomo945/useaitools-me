@@ -3,6 +3,7 @@
 import { useState, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import type { Tool } from '@/types';
+import { generateSlugFromName } from '@/lib/slug';
 
 interface SmartRecommendationsProps {
   tools: Tool[];
@@ -140,7 +141,7 @@ export default function SmartRecommendations({ tools, currentToolId }: SmartReco
           return (
             <Link
               key={tool.id}
-              href={`/tool/${tool.id}`}
+              href={`/tool/${generateSlugFromName(tool.name)}`}
               className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-start gap-3 mb-3">
