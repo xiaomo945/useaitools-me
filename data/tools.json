@@ -16543,7 +16543,7 @@
     "description": "RAGFlow is an open-source RAG engine designed for enterprise document understanding. It parses complex documents with tables, layouts, and multi-column text, then supports intelligent retrieval so question answering over a document collection returns grounded answers. Teams analyzing large archives use it to build internal knowledge systems without sending documents to external services. Because it is self-hosted and open source, deployment and maintenance require in-house technical capability.",
     "category": "Productivity",
     "pricing": "Free",
-    "url": "https://ragflow.com",
+    "url": "https://ragflow.io",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -16552,7 +16552,7 @@
       "English"
     ],
     "description_en": "RAGFlow is an open-source RAG engine designed for enterprise document understanding. It parses complex documents with tables, layouts, and multi-column text, then supports intelligent retrieval so question answering over a document collection returns grounded answers. Teams analyzing large archives use it to build internal knowledge systems without sending documents to external services. Because it is self-hosted and open source, deployment and maintenance require in-house technical capability.",
-    "last_updated": "2026-06-01",
+    "last_updated": "2026-10-19",
     "skill_level": "advanced",
     "best_for": [
       "RAG",
@@ -24411,7 +24411,7 @@
     "description": "NotebookLM is Google's research assistant that answers questions only from the sources you upload. Users add PDFs, documents, slides, and web pages, then chat with the material and receive answers with inline citations pointing to the exact passage used, which makes verification straightforward. It can also produce audio overviews, mind maps, and slide decks from the uploaded sources. It is aimed at students, researchers, and professionals who work across many documents and need answers they can trust and trace.",
     "category": "Productivity",
     "pricing": "Freemium",
-    "url": "https://notebooklm.google",
+    "url": "https://notebook.google.com",
     "affiliate_link": "",
     "icon_url": "",
     "examples": [],
@@ -24420,7 +24420,7 @@
       "English"
     ],
     "description_en": "NotebookLM is Google's research assistant that answers questions only from the sources you upload. Users add PDFs, documents, slides, and web pages, then chat with the material and receive answers with inline citations pointing to the exact passage used, which makes verification straightforward. It can also produce audio overviews, mind maps, and slide decks from the uploaded sources. It is aimed at students, researchers, and professionals who work across many documents and need answers they can trust and trace.",
-    "last_updated": "2026-09-24",
+    "last_updated": "2026-10-19",
     "skill_level": "beginner",
     "best_for": [
       "Research",
