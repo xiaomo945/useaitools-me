@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
+import enCommon from '@/locales/en/common.json';
 
 const locales = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
@@ -35,15 +36,20 @@ export function useLocale() {
 }
 
 export function useTranslations(locale: string) {
-  const [translations, setTranslations] = useState<any>(null);
+  // Seed with the English dictionary instead of null. The dictionary is only
+  // 2 KB, and starting from null made t('footer.copyright') return the raw key
+  // on the server and during first paint, so crawlers and users saw literal
+  // strings like "footer.copyright" until the async import resolved.
+  const [translations, setTranslations] = useState<any>(enCommon);
 
   useEffect(() => {
+    if (locale === 'en') {
+      setTranslations(enCommon);
+      return;
+    }
     import(`@/locales/${locale}/common.json`)
       .then(module => setTranslations(module.default))
-      .catch(() => {
-        import('@/locales/en/common.json')
-          .then(module => setTranslations(module.default));
-      });
+      .catch(() => setTranslations(enCommon));
   }, [locale]);
 
   return translations;

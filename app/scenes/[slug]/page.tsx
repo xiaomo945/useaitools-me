@@ -127,10 +127,13 @@ export default async function ScenePage({ params }: { params: Promise<{ slug: st
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-emerald-50/80 to-slate-50 dark:from-gray-900 dark:to-gray-950 border-b border-slate-200 dark:border-gray-800">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-            <Link href="/" className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:underline mb-6 transition-colors">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-              Back to Home
-            </Link>
+            <nav aria-label="Breadcrumb" className="flex items-center flex-wrap gap-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-6">
+              <Link href="/" className="hover:underline transition-colors">Home</Link>
+              <span className="text-slate-400 dark:text-gray-600">/</span>
+              <Link href="/scenes" className="hover:underline transition-colors">Scenes</Link>
+              <span className="text-slate-400 dark:text-gray-600">/</span>
+              <span className="text-slate-500 dark:text-gray-400 font-medium" aria-current="page">{scene.title}</span>
+            </nav>
 
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 mb-4">
               <span>{scene.heroTag}</span> {scene.heroTagLabel}

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Plus, Edit, Eye, CheckCircle, Clock, FileText, AlertCircle } from 'lucide-react';
+import { Plus, Eye, CheckCircle, Clock, FileText, AlertCircle } from 'lucide-react';
 import Link from 'next/link';
 import Footer from '@/app/components/Footer';
 
@@ -305,13 +305,6 @@ export default function ReviewWorkflowClient() {
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <Link
-                          href={`/admin/review-editor/${workflow.id}`}
-                          className="flex items-center gap-1 px-3 py-1.5 text-sm text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
-                        >
-                          <Edit className="w-4 h-4" />
-                          编辑
-                        </Link>
                         {workflow.status === 'published' && (
                           <Link
                             href={`/blog/${workflow.blogPost.slug}`}

@@ -55,7 +55,14 @@ export default function SceneExplorer() {
           ))}
         </div>
 
-        <div className="text-center mt-8">
+        <div className="text-center mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+          <Link
+            href="/scenes"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors group"
+          >
+            Browse all {scenes.length} use-case scenes
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
           <Link
             href="/"
             className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors group"
