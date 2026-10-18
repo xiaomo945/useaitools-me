@@ -30934,5 +30934,1505 @@
         "Paid tiers likely for production use"
       ]
     }
+  },
+  {
+    "id": 1640,
+    "name": "TurboFieldfare",
+    "description": "TurboFieldfare is a Swift and Metal runtime that runs Gemma 4 26B-A4B in about 2 GB of RAM on any Apple Silicon Mac, including the 8 GB models. It is built for memory-constrained local inference, ships a Mac app and a local OpenAI-compatible server, and documents its system design, benchmarks and optimization work in the repository.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/drumih/turbo-fieldfare",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "TurboFieldfare is a Swift and Metal runtime that runs Gemma 4 26B-A4B in about 2 GB of RAM on any Apple Silicon Mac, including the 8 GB models. It is built for memory-constrained local inference, ships a Mac app and a local OpenAI-compatible server, and documents its system design, benchmarks and optimization work in the repository.",
+    "last_updated": "2026-07-29",
+    "skill_level": "advanced",
+    "best_for": [
+      "Apple Silicon owners",
+      "Local model experimenters",
+      "Machines with little RAM"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run a 26B Model on 8 GB",
+        "detail": "Load Gemma 4 26B-A4B on a base M-series MacBook"
+      },
+      {
+        "title": "Serve Models Locally",
+        "detail": "Expose an OpenAI-compatible endpoint from your Mac"
+      },
+      {
+        "title": "Prototype On-Device Apps",
+        "detail": "Build Swift apps that call a model running on the same machine"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs a 26B-class model on base Apple Silicon hardware",
+        "Apache-2.0 with benchmarks and system design documented",
+        "Ships both a Mac app and a local server"
+      ],
+      "cons": [
+        "Requires macOS 26 or later",
+        "Focused on one model family"
+      ]
+    }
+  },
+  {
+    "id": 1641,
+    "name": "PS5LM",
+    "description": "PS5LM ports llama.cpp to a jailbroken PlayStation 5 so the console GPU runs GGUF models and serves them to every device on your network. It exposes OpenAI and Anthropic compatible APIs plus an interface made for a television, needs no PC while it runs, and has added support for Jev-style decision models.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/cobanov/PS5LM",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "PS5LM ports llama.cpp to a jailbroken PlayStation 5 so the console GPU runs GGUF models and serves them to every device on your network. It exposes OpenAI and Anthropic compatible APIs plus an interface made for a television, needs no PC while it runs, and has added support for Jev-style decision models.",
+    "last_updated": "2026-10-16",
+    "skill_level": "advanced",
+    "best_for": [
+      "Home lab tinkerers",
+      "Jailbroken console owners",
+      "Private model serving"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Serve Models at Home",
+        "detail": "Run a GGUF model on the console and call it from a laptop or phone"
+      },
+      {
+        "title": "Reuse Idle Hardware",
+        "detail": "Turn a games console into an inference box"
+      },
+      {
+        "title": "Keep Inference Local",
+        "detail": "Avoid cloud APIs for personal and household workloads"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Uses hardware that would otherwise sit idle",
+        "OpenAI and Anthropic compatible endpoints",
+        "GPL-3.0, with a screen designed for a TV"
+      ],
+      "cons": [
+        "Requires a jailbroken console",
+        "Console GPU memory caps how large a model you can load"
+      ]
+    }
+  },
+  {
+    "id": 1642,
+    "name": "Swiftlet",
+    "description": "Swiftlet is a Swift and Metal runtime that runs large Qwen mixture-of-experts models locally on Apple devices by streaming expert weights from storage. Because experts are read from disk instead of held in memory, RAM use stays low enough to run 35B and 80B models, including on iPhone.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/leonickson1/Swiftlet",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Swiftlet is a Swift and Metal runtime that runs large Qwen mixture-of-experts models locally on Apple devices by streaming expert weights from storage. Because experts are read from disk instead of held in memory, RAM use stays low enough to run 35B and 80B models, including on iPhone.",
+    "last_updated": "2026-08-03",
+    "skill_level": "advanced",
+    "best_for": [
+      "Apple device developers",
+      "Large mixture-of-experts models",
+      "Inference without the cloud"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run an 80B Model on a Mac",
+        "detail": "Stream expert weights instead of holding them in RAM"
+      },
+      {
+        "title": "Prototype on iPhone",
+        "detail": "Test large models on mobile Apple hardware"
+      },
+      {
+        "title": "Avoid Cloud Costs",
+        "detail": "Keep inference on hardware you already own"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs models larger than the RAM you have",
+        "Native Swift and Metal on Apple Silicon",
+        "Works on iPhone as well as Mac"
+      ],
+      "cons": [
+        "Tuned around Qwen mixture-of-experts models",
+        "Large weights must be installed on local storage"
+      ]
+    }
+  },
+  {
+    "id": 1643,
+    "name": "Janas",
+    "description": "Janas is a pure C inference runtime for running language models larger than your RAM, on CPU or GPU. The authors report 37 tokens per second from Qwen3-Next-80B, a 48 GB model, on a 32 GB laptop against 2.8 for llama.cpp, and faster results on all 13 models they compared at Q4_K_M.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/prabanta-dev/janas",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Janas is a pure C inference runtime for running language models larger than your RAM, on CPU or GPU. The authors report 37 tokens per second from Qwen3-Next-80B, a 48 GB model, on a 32 GB laptop against 2.8 for llama.cpp, and faster results on all 13 models they compared at Q4_K_M.",
+    "last_updated": "2026-10-12",
+    "skill_level": "advanced",
+    "best_for": [
+      "CPU inference",
+      "Oversized models",
+      "Throughput comparisons"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run a Model Bigger Than RAM",
+        "detail": "Stream weights on a machine with limited memory"
+      },
+      {
+        "title": "Compare Backends",
+        "detail": "Measure throughput against llama.cpp on your own hardware"
+      },
+      {
+        "title": "Serve Locally",
+        "detail": "Host a model without a GPU cluster"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Handles models larger than available RAM",
+        "Pure C, with CPU or GPU execution",
+        "Published comparisons against llama.cpp"
+      ],
+      "cons": [
+        "Benchmarks are the authors' own",
+        "Early-stage project"
+      ]
+    }
+  },
+  {
+    "id": 1644,
+    "name": "Cactus Hybrid",
+    "description": "Cactus Hybrid post-trains small on-device models to know when they are wrong. Every answer carries a confidence score returned as structured data rather than parsed out of the answer text, so an application can answer locally when confidence is high and hand the query to a larger cloud model when it is low.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/cactus-compute/cactus-hybrid",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Cactus Hybrid post-trains small on-device models to know when they are wrong. Every answer carries a confidence score returned as structured data rather than parsed out of the answer text, so an application can answer locally when confidence is high and hand the query to a larger cloud model when it is low.",
+    "last_updated": "2026-07-22",
+    "skill_level": "advanced",
+    "best_for": [
+      "On-device inference",
+      "Cost-controlled routing",
+      "Mobile developers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Route Only Hard Queries",
+        "detail": "Send low-confidence answers on to a bigger model"
+      },
+      {
+        "title": "Keep Easy Answers Local",
+        "detail": "Answer on-device and avoid an API call entirely"
+      },
+      {
+        "title": "Budget Inference Spend",
+        "detail": "Trade a small accuracy drop for a much lower bill"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Confidence returned as structured data, not parsed text",
+        "Published handoff rates across common benchmarks",
+        "MIT licensed, with builds on Hugging Face"
+      ],
+      "cons": [
+        "You have to tune the confidence threshold per use case",
+        "Rollout starts with the Gemma 4 E2B Hybrid build"
+      ]
+    }
+  },
+  {
+    "id": 1645,
+    "name": "LittleBit",
+    "description": "LittleBit is the official implementation of sub-1-bit large language model compression by latent factorization, published at NeurIPS 2025, together with its follow-up LittleBit-2 from ICML 2026. It targets pushing model weights below one bit per parameter so large models fit into far less memory.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/SamsungLabs/LittleBit",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "LittleBit is the official implementation of sub-1-bit large language model compression by latent factorization, published at NeurIPS 2025, together with its follow-up LittleBit-2 from ICML 2026. It targets pushing model weights below one bit per parameter so large models fit into far less memory.",
+    "last_updated": "2026-10-08",
+    "skill_level": "advanced",
+    "best_for": [
+      "Model compression research",
+      "Memory-constrained deployment",
+      "Quantization experiments"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Compress Weights Below One Bit",
+        "detail": "Apply latent factorization to a checkpoint"
+      },
+      {
+        "title": "Study Compression Trade-offs",
+        "detail": "Reproduce the published results on your own models"
+      },
+      {
+        "title": "Fit Models in Less Memory",
+        "detail": "Prepare a model for small or embedded devices"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Reference code behind two published papers",
+        "Targets extreme compression ratios",
+        "Maintained by Samsung Labs"
+      ],
+      "cons": [
+        "Research code rather than a packaged product",
+        "Repository license is not a standard open source license"
+      ]
+    }
+  },
+  {
+    "id": 1646,
+    "name": "Agentic CUDA Kernel Optimizer",
+    "description": "Agentic CUDA Kernel Optimizer is a LangGraph workflow wrapped around a C++ CUDA harness that optimizes CUDA kernels. Instead of asking a model to suggest changes in prose, it lets an agent propose and measure kernel variants inside a real build and benchmark loop.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/bertaye/agentic-cuda-optimizer",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Agentic CUDA Kernel Optimizer is a LangGraph workflow wrapped around a C++ CUDA harness that optimizes CUDA kernels. Instead of asking a model to suggest changes in prose, it lets an agent propose and measure kernel variants inside a real build and benchmark loop.",
+    "last_updated": "2026-09-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "GPU performance work",
+      "CUDA developers",
+      "Agent-driven optimization"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Speed Up a Hot Kernel",
+        "detail": "Let an agent iterate on CUDA variants against measurements"
+      },
+      {
+        "title": "Automate Benchmarking",
+        "detail": "Measure each candidate in a repeatable harness"
+      },
+      {
+        "title": "Learn CUDA Optimization",
+        "detail": "Inspect generated variants next to their timings"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "A real C++ CUDA harness rather than text-only suggestions",
+        "Built on LangGraph, so the workflow is editable",
+        "Measurements drive every iteration"
+      ],
+      "cons": [
+        "Needs an NVIDIA GPU and a CUDA toolchain",
+        "Narrow scope: kernel optimization only"
+      ]
+    }
+  },
+  {
+    "id": 1647,
+    "name": "AI-DLC",
+    "description": "AI-DLC, the AI-Driven Development Life Cycle from AWS Labs, turns AI coding assistants into structured and verifiable delivery workflows. One harness-neutral core runs natively in Claude Code, Kiro CLI, Kiro IDE, Codex CLI, Cursor, opencode and GitHub Copilot, installed through a native aidlc command.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/awslabs/aidlc-workflows",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI-DLC, the AI-Driven Development Life Cycle from AWS Labs, turns AI coding assistants into structured and verifiable delivery workflows. One harness-neutral core runs natively in Claude Code, Kiro CLI, Kiro IDE, Codex CLI, Cursor, opencode and GitHub Copilot, installed through a native aidlc command.",
+    "last_updated": "2026-10-15",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams standardizing agent use",
+      "Multi-harness setups",
+      "Structured software delivery"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Standardize Agent Workflows",
+        "detail": "Give every coding assistant the same delivery process"
+      },
+      {
+        "title": "Switch Harnesses Without Rework",
+        "detail": "Keep one core across several coding tools"
+      },
+      {
+        "title": "Onboard a Team",
+        "detail": "Install the same steering rules on every developer machine"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs in seven different coding harnesses",
+        "Backed by AWS Labs under MIT-0",
+        "One installer sets up the CLI and every runtime"
+      ],
+      "cons": [
+        "Adds process overhead for small changes",
+        "Installer expects macOS, Linux, WSL or PowerShell"
+      ]
+    }
+  },
+  {
+    "id": 1648,
+    "name": "Pocketty",
+    "description": "Pocketty is an SSH terminal for iPhone and iPad built for watching coding agents. It alerts your phone the moment an agent is blocked or finished, sealed so only that phone can read it, then opens the exact pane over SSH so you can answer with real keystrokes, swipe for the diff of the turn and preview dev-server ports.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://pocketty.app/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pocketty is an SSH terminal for iPhone and iPad built for watching coding agents. It alerts your phone the moment an agent is blocked or finished, sealed so only that phone can read it, then opens the exact pane over SSH so you can answer with real keystrokes, swipe for the diff of the turn and preview dev-server ports.",
+    "last_updated": "2026-10-08",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agent supervision on the move",
+      "Claude Code and Codex users",
+      "Tailscale users"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Unblock an Agent From Your Phone",
+        "detail": "Answer a permission prompt while away from your desk"
+      },
+      {
+        "title": "Review What Changed",
+        "detail": "Swipe for the diff since the agent started the turn"
+      },
+      {
+        "title": "Watch Every Agent",
+        "detail": "See live state for all panes on a host at a glance"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Alerts are sealed for one phone only",
+        "Real keystrokes over SSH with no server in between",
+        "Shows per-turn diffs and forwards dev-server ports"
+      ],
+      "cons": [
+        "Paid app once the 14-day trial ends",
+        "Built around a specific pane workflow"
+      ]
+    }
+  },
+  {
+    "id": 1649,
+    "name": "ai-deslop",
+    "description": "ai-deslop is a set of opinionated Oxlint rules that reject low-evidence, low-signal AI slop patterns in TypeScript. The rules cover type-safety shortcuts such as chained type assertions, conditional empty object spreads, known-value widening, runtime typeof checks and object-typed parameters.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/maharshi365/deslop",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ai-deslop is a set of opinionated Oxlint rules that reject low-evidence, low-signal AI slop patterns in TypeScript. The rules cover type-safety shortcuts such as chained type assertions, conditional empty object spreads, known-value widening, runtime typeof checks and object-typed parameters.",
+    "last_updated": "2026-10-13",
+    "skill_level": "intermediate",
+    "best_for": [
+      "TypeScript teams",
+      "Reviewing AI-generated code",
+      "Lint-gated CI"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Gate Agent Output",
+        "detail": "Fail CI on the patterns coding agents commonly produce"
+      },
+      {
+        "title": "Enforce Boundary Parsing",
+        "detail": "Require real parsing instead of ad hoc typeof checks"
+      },
+      {
+        "title": "Clean Up a Codebase",
+        "detail": "Find type-safety shortcuts that accumulated over time"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Concrete rules against common AI-generated patterns",
+        "Installs as an oxlint JavaScript plugin",
+        "Works on Bun, Deno and Node runtimes"
+      ],
+      "cons": [
+        "Vendored rules expect your oxlint version to stay in sync",
+        "Opinionated defaults may need per-repo tuning"
+      ]
+    }
+  },
+  {
+    "id": 1650,
+    "name": "Jotbus",
+    "description": "Jotbus gives coding agents a shared, end-to-end encrypted scratchpad so they stop copying context between each other. It registers itself with each agent you pick and adds a hook so @mentions reach them, letting Claude Code, Codex and others share notes, hand off work and review changes across machines.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://jotbus.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Jotbus gives coding agents a shared, end-to-end encrypted scratchpad so they stop copying context between each other. It registers itself with each agent you pick and adds a hook so @mentions reach them, letting Claude Code, Codex and others share notes, hand off work and review changes across machines.",
+    "last_updated": "2026-10-06",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Running multiple coding agents",
+      "Cross-machine handoffs",
+      "Independent code review"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Hand Work Between Agents",
+        "detail": "Ask an agent on another machine to review a branch"
+      },
+      {
+        "title": "Share Notes Without Copying",
+        "detail": "Keep one workspace that several agents read and write"
+      },
+      {
+        "title": "Keep Context Private",
+        "detail": "Use an encrypted workspace with a short lifetime"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Instant to try with no signup",
+        "End-to-end encrypted 60-minute workspaces",
+        "Never reads your code, history or credentials"
+      ],
+      "cons": [
+        "Workspace lifetime is deliberately limited",
+        "Setup writes to your agent configuration files"
+      ]
+    }
+  },
+  {
+    "id": 1651,
+    "name": "Pinrail",
+    "description": "Pinrail is a desktop app where coding agents ask you before they act. The agent decides which steps need a person, and each request gets a view made for its content: a code review shows the diff with the agent findings on it, while a set of generated images can be marked up directly.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/forgeplane/pinrail",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pinrail is a desktop app where coding agents ask you before they act. The agent decides which steps need a person, and each request gets a view made for its content: a code review shows the diff with the agent findings on it, while a set of generated images can be marked up directly.",
+    "last_updated": "2026-10-07",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Human-in-the-loop review",
+      "Risky agent actions",
+      "Claude Code, Codex, Cursor and OpenCode"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Approve Before Production",
+        "detail": "Gate deploys, customer emails and posted comments"
+      },
+      {
+        "title": "Review an Agent Diff",
+        "detail": "Accept or reject each finding with a reason attached"
+      },
+      {
+        "title": "Mark Up Generated Images",
+        "detail": "Draw a box on the part of an image that needs work"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works with any agent that can run a command",
+        "Apache-2.0 with a separate plugin repository",
+        "Review views match the type of content"
+      ],
+      "cons": [
+        "Early development, so expect rough edges",
+        "Windows support is still listed as coming"
+      ]
+    }
+  },
+  {
+    "id": 1652,
+    "name": "terse",
+    "description": "terse is a Claude Code plugin that makes replies short and plain. It targets the essays, slogans, metaphors and it-is-not-X-it-is-Y constructions Claude tends to produce; the author reports 46 percent fewer words and 51 percent lower cost on Fable 5.1 compared with vanilla Claude Code.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/lowenbjer/claude-terse",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "terse is a Claude Code plugin that makes replies short and plain. It targets the essays, slogans, metaphors and it-is-not-X-it-is-Y constructions Claude tends to produce; the author reports 46 percent fewer words and 51 percent lower cost on Fable 5.1 compared with vanilla Claude Code.",
+    "last_updated": "2026-10-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Claude Code users",
+      "Cutting token spend",
+      "Chat-style replies"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Shorten Every Reply",
+        "detail": "Stop reading an essay to get a one-line answer"
+      },
+      {
+        "title": "Lower Token Cost",
+        "detail": "Reduce output tokens across long coding sessions"
+      },
+      {
+        "title": "Keep Voice Consistent",
+        "detail": "Avoid the drift that system prompts suffer after a few turns"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Documented before-and-after on real prompts",
+        "Installs as a plugin rather than a system prompt",
+        "Free and open source"
+      ],
+      "cons": [
+        "Only helps if you dislike the default Claude voice",
+        "Focused on Claude Code alone"
+      ]
+    }
+  },
+  {
+    "id": 1653,
+    "name": "BlastLoop",
+    "description": "BlastLoop is a structure-first operating process for AI coding agents. Work is written at three altitudes named Blast, Mid and Inner, each with a clear owner, and every result then passes through T1 structural, T2 bug and ops, and T3 adversarial gates in a fixed order before it ships.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/rlshaw-ml/BlastLoop",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "BlastLoop is a structure-first operating process for AI coding agents. Work is written at three altitudes named Blast, Mid and Inner, each with a clear owner, and every result then passes through T1 structural, T2 bug and ops, and T3 adversarial gates in a fixed order before it ships.",
+    "last_updated": "2026-10-15",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agents working on large codebases",
+      "Teams with review gates",
+      "Reducing rework"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Scope a Change by Altitude",
+        "detail": "Pick the prompt that matches the size of the job"
+      },
+      {
+        "title": "Gate Agent Output",
+        "detail": "Run structural, then operational, then adversarial checks"
+      },
+      {
+        "title": "Standardize Team Practice",
+        "detail": "Point every agent at the same AGENTS.md file"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Three explicit build altitudes with named owners",
+        "Fixed order for three distinct quality gates",
+        "Usable in minutes by pointing an agent at the repo"
+      ],
+      "cons": [
+        "Process-heavy for quick scripts",
+        "Needs team buy-in to pay off"
+      ]
+    }
+  },
+  {
+    "id": 1654,
+    "name": "littleguys",
+    "description": "littleguys is a Mac menu-bar app that turns each coding agent into a chat contact. It talks to Claude Code, Codex, Gemini CLI, Goose, OpenCode and any ACP agent over the Agent Client Protocol, so you can reply, approve tool calls and schedule routines from a single window while the menu bar shows who needs you.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://littleguys.hervalicio.us",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "littleguys is a Mac menu-bar app that turns each coding agent into a chat contact. It talks to Claude Code, Codex, Gemini CLI, Goose, OpenCode and any ACP agent over the Agent Client Protocol, so you can reply, approve tool calls and schedule routines from a single window while the menu bar shows who needs you.",
+    "last_updated": "2026-10-11",
+    "skill_level": "beginner",
+    "best_for": [
+      "Running several agents at once",
+      "Menu-bar status at a glance",
+      "ACP-compatible agents"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Approve Tool Calls in One Click",
+        "detail": "Answer prompts that used to be buried in a terminal tab"
+      },
+      {
+        "title": "Watch Who Needs You",
+        "detail": "See a live status ring for every agent in the menu bar"
+      },
+      {
+        "title": "Schedule Routines",
+        "detail": "Run morning digests or nightly dependency bumps"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Speaks the Agent Client Protocol, so new agents are one click away",
+        "Free and open source on macOS",
+        "Finds gateways on your tailnet and LAN by itself"
+      ],
+      "cons": [
+        "macOS 13 or later only",
+        "Holds gateway tokens and approves real commands"
+      ]
+    }
+  },
+  {
+    "id": 1655,
+    "name": "LLMxRay",
+    "description": "LLMxRay is a local observability interface for the models you run through Ollama. One command opens a browser tab with token-by-token streaming, cache diagnostics, model comparison, benchmarks and cost tracking, alongside chat, reasoning, RAG and introspection views.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/LogneBudo/llmxray",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "LLMxRay is a local observability interface for the models you run through Ollama. One command opens a browser tab with token-by-token streaming, cache diagnostics, model comparison, benchmarks and cost tracking, alongside chat, reasoning, RAG and introspection views.",
+    "last_updated": "2026-10-11",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Ollama users",
+      "Debugging local models",
+      "Cache and cost diagnostics"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Watch a Stream Token by Token",
+        "detail": "Inspect generation as it happens rather than after"
+      },
+      {
+        "title": "Compare Local Models",
+        "detail": "Run benchmarks across the models you host"
+      },
+      {
+        "title": "Diagnose Cache Behaviour",
+        "detail": "See prompt cache diagnostics for each request"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One command to a full dashboard",
+        "Covers chat, reasoning, RAG and metrics in one interface",
+        "Also exposed as an MCP server"
+      ],
+      "cons": [
+        "Built around Ollama specifically",
+        "Small project with a deliberately narrow scope"
+      ]
+    }
+  },
+  {
+    "id": 1656,
+    "name": "Agor",
+    "description": "Agor is a multiplayer workspace for coding agents. It runs Claude Code, Codex, Gemini and others on isolated git branches, each with its own dev environment and conversation history, and presents them on live spatial boards where a team can watch the work, collaborate and reuse what already worked.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/preset-io/agor",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Agor is a multiplayer workspace for coding agents. It runs Claude Code, Codex, Gemini and others on isolated git branches, each with its own dev environment and conversation history, and presents them on live spatial boards where a team can watch the work, collaborate and reuse what already worked.",
+    "last_updated": "2026-10-13",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams running agents",
+      "Parallel agent branches",
+      "Shared agent knowledge"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run Agents Side by Side",
+        "detail": "Give each agent its own branch and dev environment"
+      },
+      {
+        "title": "Share What Worked",
+        "detail": "Reuse skills, memory and tool connections across a team"
+      },
+      {
+        "title": "Review Work on a Board",
+        "detail": "See live agent activity in one shared space"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Isolated git branch per agent run",
+        "Agents carry memory, skills and tool connections",
+        "Installs with npm and scales from solo to team"
+      ],
+      "cons": [
+        "Business source license rather than OSI open source",
+        "Adds a new shared workspace your team has to adopt"
+      ]
+    }
+  },
+  {
+    "id": 1657,
+    "name": "Skills Hub",
+    "description": "Skills Hub is a cross-platform desktop app for managing Agent Skills. You install a skill once and it syncs to the global skills directories of the AI coding tools and projects you use, with downloads for macOS, Windows and Linux and the option to import from Git or a local folder.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://github.com/qufei1993/skills-hub",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Skills Hub is a cross-platform desktop app for managing Agent Skills. You install a skill once and it syncs to the global skills directories of the AI coding tools and projects you use, with downloads for macOS, Windows and Linux and the option to import from Git or a local folder.",
+    "last_updated": "2026-10-12",
+    "skill_level": "beginner",
+    "best_for": [
+      "Managing agent skills",
+      "Several coding tools at once",
+      "Keeping skills in sync"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Install a Skill Once",
+        "detail": "Sync it to every coding tool you run"
+      },
+      {
+        "title": "Browse Collections",
+        "detail": "Find task-focused skill packs inside the app"
+      },
+      {
+        "title": "Import Your Own",
+        "detail": "Pull skills in from Git repositories or local folders"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One install syncs everywhere",
+        "Desktop app for macOS, Windows and Linux",
+        "Can import from Git and local folders"
+      ],
+      "cons": [
+        "Only useful once you already work with Agent Skills",
+        "macOS may warn about an unverified developer"
+      ]
+    }
+  },
+  {
+    "id": 1658,
+    "name": "DocFlare AI",
+    "description": "DocFlare AI is an open-source chatbot and site search widget for documentation. A single script tag adds a streaming retrieval-augmented answer box that cites the sources it used, running entirely on Cloudflare Workers AI, Vectorize and D1, with no OpenAI key, no external vector database and no server to run.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/p10node/docflare-ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "DocFlare AI is an open-source chatbot and site search widget for documentation. A single script tag adds a streaming retrieval-augmented answer box that cites the sources it used, running entirely on Cloudflare Workers AI, Vectorize and D1, with no OpenAI key, no external vector database and no server to run.",
+    "last_updated": "2026-10-08",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Documentation sites",
+      "Cloudflare developers",
+      "Zero-cost site search"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Add Docs Search",
+        "detail": "Drop one script tag onto your documentation site"
+      },
+      {
+        "title": "Answer With Sources",
+        "detail": "Stream answers that cite the pages they came from"
+      },
+      {
+        "title": "Stay on the Free Tier",
+        "detail": "Run retrieval and storage on Cloudflare's free plan"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No external vector database or API key needed",
+        "MIT licensed with a one-click Cloudflare deploy",
+        "Streaming answers with cited sources"
+      ],
+      "cons": [
+        "Tied to the Cloudflare stack",
+        "Answer quality depends on Workers AI models"
+      ]
+    }
+  },
+  {
+    "id": 1659,
+    "name": "Weatherdeck",
+    "description": "Weatherdeck is a read-only status board for the machines and the work running on them. Small pushers feed a television or phone page that shows what is waiting on you, how long it has waited, a named plate and state for each machine, and a running log, with a demo mode you can try first.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/Moshik21/weatherdeck",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Weatherdeck is a read-only status board for the machines and the work running on them. Small pushers feed a television or phone page that shows what is waiting on you, how long it has waited, a named plate and state for each machine, and a running log, with a demo mode you can try first.",
+    "last_updated": "2026-10-16",
+    "skill_level": "beginner",
+    "best_for": [
+      "Watching agent lanes",
+      "Team status displays",
+      "At-a-glance monitoring"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Put Agent Status on a TV",
+        "detail": "Show every lane on a wall display"
+      },
+      {
+        "title": "See What Needs You",
+        "detail": "Surface the calls waiting on a person and for how long"
+      },
+      {
+        "title": "Track Machines",
+        "detail": "Give each machine a name plate and a visible state"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Read-only by design, with no alerting to tune",
+        "Ships a demo mode with invented sources",
+        "MIT licensed"
+      ],
+      "cons": [
+        "Very early project",
+        "Explicitly not a monitoring or alerting system"
+      ]
+    }
+  },
+  {
+    "id": 1660,
+    "name": "GSD Task Manager",
+    "description": "GSD Task Manager is an offline-first Eisenhower matrix for sorting work into urgent and important. It ships a responsive four-quadrant board with drag and drop, quick capture, search and keyboard navigation, optional PocketBase sync, and a GSD MCP server so an AI agent can work from the same list.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/vscarpenter/gsd-task-manager",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "GSD Task Manager is an offline-first Eisenhower matrix for sorting work into urgent and important. It ships a responsive four-quadrant board with drag and drop, quick capture, search and keyboard navigation, optional PocketBase sync, and a GSD MCP server so an AI agent can work from the same list.",
+    "last_updated": "2026-10-11",
+    "skill_level": "beginner",
+    "best_for": [
+      "Priority triage",
+      "Offline-first task lists",
+      "Agents that need a task list"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Triage the Day",
+        "detail": "Sort tasks into do, schedule, delegate or eliminate"
+      },
+      {
+        "title": "Give an Agent a Task List",
+        "detail": "Connect through the bundled MCP server"
+      },
+      {
+        "title": "Keep Data Local",
+        "detail": "Work offline with storage on your own device"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Offline-first with optional self-hosted sync",
+        "MCP server exposes your tasks to agents",
+        "Drag-and-drop matrix with full keyboard navigation"
+      ],
+      "cons": [
+        "Single-matrix workflow will not suit every team",
+        "Sync requires running a PocketBase instance"
+      ]
+    }
+  },
+  {
+    "id": 1661,
+    "name": "Aweb",
+    "description": "Aweb lets AI agents work as a team. Each agent gets a name and an inbox, messages wait until the agent reads them, every message is signed so the receiver can check who sent it, and agents wake where they already run, including Claude Code, Codex, Pi, ChatGPT and Claude. It is MIT licensed and self-hostable.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://aweb.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Aweb lets AI agents work as a team. Each agent gets a name and an inbox, messages wait until the agent reads them, every message is signed so the receiver can check who sent it, and agents wake where they already run, including Claude Code, Codex, Pi, ChatGPT and Claude. It is MIT licensed and self-hostable.",
+    "last_updated": "2026-10-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Multi-agent coordination",
+      "Agents across machines",
+      "Signed agent messaging"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Route Work Between Agents",
+        "detail": "Let one agent ask another that actually has the answer"
+      },
+      {
+        "title": "Stop Polling",
+        "detail": "Wake a session only when a message arrives for it"
+      },
+      {
+        "title": "Verify Instructions",
+        "detail": "Check who signed a message before acting on it"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Signed messages and one stable address per agent",
+        "Self-hostable under the MIT license",
+        "Works across machines, harnesses and organizations"
+      ],
+      "cons": [
+        "Paid plans sit alongside the free tier",
+        "Each agent you connect needs its own setup"
+      ]
+    }
+  },
+  {
+    "id": 1662,
+    "name": "Sayso",
+    "description": "Sayso is dictation that runs on your own computer. You press a key, speak, and the text lands in the application you are using. Recognition runs on the Neural Engine of a Mac and on the processor of a Windows or Linux machine, and nothing leaves the computer unless you deliberately choose a cloud model.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://github.com/watzon/sayso",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Sayso is dictation that runs on your own computer. You press a key, speak, and the text lands in the application you are using. Recognition runs on the Neural Engine of a Mac and on the processor of a Windows or Linux machine, and nothing leaves the computer unless you deliberately choose a cloud model.",
+    "last_updated": "2026-10-13",
+    "skill_level": "beginner",
+    "best_for": [
+      "Cross-platform dictation",
+      "Offline speech to text",
+      "Open source tooling"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Dictate Into Any App",
+        "detail": "Send recognized text straight to the active window"
+      },
+      {
+        "title": "Keep Speech Local",
+        "detail": "Run recognition on your own hardware by default"
+      },
+      {
+        "title": "Add a Cloud Model",
+        "detail": "Switch to a remote model only if you choose to"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source on macOS, Windows and Linux",
+        "On-device recognition by default",
+        "Uses the Neural Engine on Apple Silicon"
+      ],
+      "cons": [
+        "Accuracy depends on the local model you install",
+        "Cloud models are optional but need your own key"
+      ]
+    }
+  },
+  {
+    "id": 1663,
+    "name": "Blokkily",
+    "description": "Blokkily is an experimental pattern-first digital audio workstation. The same pattern can be edited in a tracker, a piano roll or a step grid and then arranged across multiple tracks, with CLAP and VST3 plugin support, SoundFont instruments and built-in samplers. An AI agent can also drive a session over MCP.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://github.com/andrewfader/blokkily",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Blokkily is an experimental pattern-first digital audio workstation. The same pattern can be edited in a tracker, a piano roll or a step grid and then arranged across multiple tracks, with CLAP and VST3 plugin support, SoundFont instruments and built-in samplers. An AI agent can also drive a session over MCP.",
+    "last_updated": "2026-10-12",
+    "skill_level": "advanced",
+    "best_for": [
+      "Pattern-based production",
+      "Agent-driven music making",
+      "CLAP and VST3 users"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Edit One Pattern Three Ways",
+        "detail": "Switch between tracker, piano roll and step grid"
+      },
+      {
+        "title": "Let an Agent Build a Track",
+        "detail": "Drive the session through the MCP interface"
+      },
+      {
+        "title": "Use Your Own Plugins",
+        "detail": "Load CLAP and VST3 instruments and SoundFonts"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MCP support lets an AI agent direct the session",
+        "CLAP support required in every build",
+        "Three synchronized editors for the same pattern"
+      ],
+      "cons": [
+        "Explicitly experimental",
+        "Expects desktop audio and plugin knowledge"
+      ]
+    }
+  },
+  {
+    "id": 1664,
+    "name": "Dub Anything",
+    "description": "Dub Anything dubs films and shows into another language in each actor's own voice, keeping the original music and sound effects intact. An AI coding agent directs the dub line by line the way a dubbing director would, and all audio generation runs on your own PC.",
+    "category": "Video",
+    "pricing": "Open Source",
+    "url": "https://github.com/swax/dub-anything",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Dub Anything dubs films and shows into another language in each actor's own voice, keeping the original music and sound effects intact. An AI coding agent directs the dub line by line the way a dubbing director would, and all audio generation runs on your own PC.",
+    "last_updated": "2026-10-14",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Fan and independent dubbing",
+      "Preserving actor voices",
+      "Local video processing"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Dub a Film Locally",
+        "detail": "Produce a new language track on your own machine"
+      },
+      {
+        "title": "Keep the Original Mix",
+        "detail": "Preserve music and effects underneath the dub"
+      },
+      {
+        "title": "Ship Both Tracks",
+        "detail": "Deliver an MKV with the original audio and subtitles included"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Uses the original actor voices, not one narrator",
+        "Audio generation runs on your own PC",
+        "Output keeps the original audio and both subtitle tracks"
+      ],
+      "cons": [
+        "Local generation is faster with a capable GPU",
+        "Long-form video takes significant processing time"
+      ]
+    }
+  },
+  {
+    "id": 1665,
+    "name": "Palmier Pro",
+    "description": "Palmier Pro is a video editor for macOS 26 on Apple Silicon, built around AI features and MCP connectivity. Releases through v0.7.6 were published under GPLv3 with source available, while later binary releases are proprietary and their corresponding source is not published.",
+    "category": "Video",
+    "pricing": "Unknown",
+    "url": "https://github.com/palmier-io/palmier-pro",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Palmier Pro is a video editor for macOS 26 on Apple Silicon, built around AI features and MCP connectivity. Releases through v0.7.6 were published under GPLv3 with source available, while later binary releases are proprietary and their corresponding source is not published.",
+    "last_updated": "2026-07-23",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Mac video editors",
+      "AI-assisted editing",
+      "MCP workflows"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Edit Video on a Mac",
+        "detail": "Cut and assemble in a native Apple Silicon application"
+      },
+      {
+        "title": "Connect an Agent",
+        "detail": "Work through MCP instead of manual menu steps"
+      },
+      {
+        "title": "Use the Open Builds",
+        "detail": "Stay on the last GPLv3 source if you need it"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Native macOS app built for Apple Silicon",
+        "AI and MCP aware editing workflow",
+        "Historical GPLv3 source remains available"
+      ],
+      "cons": [
+        "Current binary releases are proprietary",
+        "Requires macOS 26 on Apple Silicon"
+      ]
+    }
+  },
+  {
+    "id": 1666,
+    "name": "Sygal",
+    "description": "Sygal turns documents into clean, AI-ready Markdown and structured JSON on your own machine. It reads PDF, Word, Excel, PowerPoint, images, scans, screenshots, web pages and YouTube links, and can sharply cut the tokens an AI needs for scans, images and web pages.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://sygal.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Sygal turns documents into clean, AI-ready Markdown and structured JSON on your own machine. It reads PDF, Word, Excel, PowerPoint, images, scans, screenshots, web pages and YouTube links, and can sharply cut the tokens an AI needs for scans, images and web pages.",
+    "last_updated": "2026-10-15",
+    "skill_level": "beginner",
+    "best_for": [
+      "Document pipelines",
+      "Retrieval ingestion",
+      "Local OCR"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Feed a Knowledge Base",
+        "detail": "Convert a folder of PDFs into clean Markdown"
+      },
+      {
+        "title": "Cut Token Spend",
+        "detail": "Normalize scans and screenshots before you prompt"
+      },
+      {
+        "title": "Parse Into JSON",
+        "detail": "Get structured output a pipeline can read directly"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Conversion runs on your own machine",
+        "Very wide input format coverage",
+        "Uses the OCR provider and key you choose"
+      ],
+      "cons": [
+        "One-time paid license after a 14-day trial",
+        "OCR quality depends on the provider you configure"
+      ]
+    }
+  },
+  {
+    "id": 1667,
+    "name": "Parrot",
+    "description": "Parrot is a free, open-source meeting recorder for Mac with a live AI assistant built in. It notices when a call starts, suggests answers from your own documents while you are still talking, and remembers every call so you can ask about it later, with the audio staying on your Mac.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://openparrot.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Parrot is a free, open-source meeting recorder for Mac with a live AI assistant built in. It notices when a call starts, suggests answers from your own documents while you are still talking, and remembers every call so you can ask about it later, with the audio staying on your Mac.",
+    "last_updated": "2026-09-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Sales and support calls",
+      "Mac meeting notes",
+      "Private transcription"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Get Help During a Call",
+        "detail": "Surface answers from your own playbook while talking"
+      },
+      {
+        "title": "Record Without a Bot",
+        "detail": "Capture what your Mac already plays and hears"
+      },
+      {
+        "title": "Ask About Past Calls",
+        "detail": "Query transcripts and notes after the meeting"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No bot joins the meeting or appears in the participant list",
+        "Audio, transcription and documents stay on your Mac",
+        "GPL-3.0, with no account and no telemetry"
+      ],
+      "cons": [
+        "macOS 14 or later on Apple Silicon only",
+        "Cloud transcription is opt-in, not the default"
+      ]
+    }
+  },
+  {
+    "id": 1668,
+    "name": "Nace AI",
+    "description": "Nace.AI builds small models for professional work. Its Document Intelligence stack parses, splits, classifies, extracts and grounds 36 file types, pointing every value back to the page it came from, and a decision model called Drex selects the next step in a workflow.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://www.nace.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Nace.AI builds small models for professional work. Its Document Intelligence stack parses, splits, classifies, extracts and grounds 36 file types, pointing every value back to the page it came from, and a decision model called Drex selects the next step in a workflow.",
+    "last_updated": "2026-10-09",
+    "skill_level": "advanced",
+    "best_for": [
+      "Accounting and audit automation",
+      "Document extraction with grounding",
+      "Low-cost enterprise AI"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Parse Professional Documents",
+        "detail": "Extract values across 36 supported file types"
+      },
+      {
+        "title": "Ground Every Value",
+        "detail": "Point each extracted field back to its source page"
+      },
+      {
+        "title": "Automate Accounting Work",
+        "detail": "Run accounts receivable, payable and audit workflows"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Every extracted value is grounded back to its page",
+        "Company reports first-place grounding and one-tenth the cost of large LLMs",
+        "Deployable inside your own environment"
+      ],
+      "cons": [
+        "Enterprise sales motion with no public pricing",
+        "Narrow vertical focus on professional services"
+      ]
+    }
+  },
+  {
+    "id": 1669,
+    "name": "Apogee",
+    "description": "Apogee is a private AI summarizer browser extension for articles, videos, PDFs, DOCX files and pasted text, inspired by Mozilla's Orbit. It runs on WebGPU or WebAssembly inside the browser, or against your own local Ollama or llama.cpp server if you prefer to keep inference off the extension.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://github.com/darshi1337/apogee",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Apogee is a private AI summarizer browser extension for articles, videos, PDFs, DOCX files and pasted text, inspired by Mozilla's Orbit. It runs on WebGPU or WebAssembly inside the browser, or against your own local Ollama or llama.cpp server if you prefer to keep inference off the extension.",
+    "last_updated": "2026-10-09",
+    "skill_level": "beginner",
+    "best_for": [
+      "Private summarization",
+      "Browser reading",
+      "Local model users"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Summarize What You Read",
+        "detail": "Condense an article, video or PDF without leaving the tab"
+      },
+      {
+        "title": "Keep It In the Browser",
+        "detail": "Run inference on WebGPU or WebAssembly locally"
+      },
+      {
+        "title": "Use Your Own Server",
+        "detail": "Point it at a local Ollama or llama.cpp instance"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Summarization can run entirely inside the browser",
+        "Works with your own local inference server",
+        "Available for both Chrome and Firefox"
+      ],
+      "cons": [
+        "Browser-only, with no desktop application",
+        "Summary quality depends on the model you run"
+      ]
+    }
   }
 ]
