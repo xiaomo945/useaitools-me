@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 import PageProgress from "./components/PageProgress";
+import Header from "./components/Header";
 import BackToTop from "./components/BackToTop";
 import CookieConsent from "./components/CookieConsent";
 import MobileNav from "./components/MobileNav";
@@ -191,6 +192,7 @@ export default function RootLayout({
           </Suspense>
           <ErrorBoundary>
             <AuthProvider>
+              <Header />
               <main id="main-content">
                 <PageTransition>{children}</PageTransition>
               </main>

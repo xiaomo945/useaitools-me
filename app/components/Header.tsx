@@ -12,6 +12,11 @@ export default function Header() {
   const { locale } = useLocale();
   const translations = useTranslations(locale);
 
+  // Standalone product landing pages ship their own full-bleed nav; a site
+  // header on top of them would double up and eat the hero's vertical space.
+  const STANDALONE = ['/tryaiwriter', '/useaiimage', '/useaipen'];
+  const hideOnRoute = STANDALONE.some(p => pathname === p || pathname.startsWith(p + '/'));
+
   const t = (key: string): string => {
     if (!translations) return key;
     const keys = key.split('.');
@@ -40,13 +45,18 @@ export default function Header() {
     return pathname.startsWith(path);
   };
 
+  if (hideOnRoute) return null;
+
   return (
-    <header className="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-b border-slate-200/80 dark:border-gray-800/80 shadow-sm">
+    <header className="hidden md:block sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-b border-slate-200/80 dark:border-gray-800/80 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <Image src="/logo.png" alt="Use AI Tools" className="h-8 w-auto" width={32} height={32} priority />
+            {/* icon.svg (521 B) instead of logo.png (908 KB): the header mark is
+                32 px tall, so shipping the full-size PNG as a priority preload
+                would cost far more than it renders. */}
+            <Image src="/icon.svg" alt="" aria-hidden="true" className="h-8 w-8" width={32} height={32} priority unoptimized />
             <span className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
               Use AI Tools
             </span>

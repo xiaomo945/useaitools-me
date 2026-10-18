@@ -39,7 +39,7 @@ export default function AnalyticsPage() {
       </div>
 
       {/* Tabs */}
-      <div className="bg-white dark:bg-gray-900 border-b border-slate-200 dark:border-gray-800 sticky top-0 z-10">
+      <div className="bg-white dark:bg-gray-900 border-b border-slate-200 dark:border-gray-800 sticky top-0 md:top-16 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex space-x-1 overflow-x-auto" aria-label="Tabs">
             {tabs.map((tab) => (

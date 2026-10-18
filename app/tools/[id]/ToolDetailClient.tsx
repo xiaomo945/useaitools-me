@@ -912,7 +912,7 @@ const [hasReferrer] = useState(() => {
         <ScreenshotGallery tool={tool} colors={colors} />
 
         {/* Tab Navigation */}
-        <div className="sticky top-0 z-30 bg-slate-50/95 dark:bg-gray-950/95 backdrop-blur-md border-b border-slate-200 dark:border-gray-800 mb-8 -mx-3 sm:-mx-6 px-3 sm:px-6">
+        <div className="sticky top-0 md:top-16 z-30 bg-slate-50/95 dark:bg-gray-950/95 backdrop-blur-md border-b border-slate-200 dark:border-gray-800 mb-8 -mx-3 sm:-mx-6 px-3 sm:px-6">
           <nav className="flex gap-1 overflow-x-auto scrollbar-hide" role="tablist" aria-label="Tool information tabs">
             {([
               { key: 'overview' as const, label: 'Overview', icon: '📋' },

@@ -630,7 +630,7 @@ export default function ClientBlogDetail({
           {/* Table of Contents (Desktop) */}
           {tocItems.length > 0 && (
             <div className="hidden lg:block order-1 lg:order-2">
-              <div className="sticky top-6 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg">
+              <div className="sticky top-6 md:top-24 bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-lg">
                 <h3 className="font-semibold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
                   <List className="w-4 h-4 text-emerald-500" />
                   Table of Contents
