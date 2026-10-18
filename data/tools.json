@@ -29684,5 +29684,1255 @@
         "New site with a small catalogue"
       ]
     }
+  },
+  {
+    "id": 1615,
+    "name": "Magnitude",
+    "description": "Magnitude is an open-source inference engine that tunes its kernels on your own hardware to find the fastest way to run each model. It runs on Apple Silicon, NVIDIA, AMD or plain CPU, and the project reports roughly twice the throughput of Ollama. Built for agents that need local inference to be fast without hand-tuning every machine.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/magnitudedev/magnitude",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Magnitude is an open-source inference engine that tunes its kernels on your own hardware to find the fastest way to run each model. It runs on Apple Silicon, NVIDIA, AMD or plain CPU, and the project reports roughly twice the throughput of Ollama. Built for agents that need local inference to be fast without hand-tuning every machine.",
+    "last_updated": "2026-10-01",
+    "skill_level": "advanced",
+    "best_for": [
+      "Local model inference",
+      "AI agents",
+      "Teams tuning their own hardware"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Speed Up Local Agents",
+        "detail": "Serve models to an agent loop without paying per-token API latency"
+      },
+      {
+        "title": "Run Across Mixed Hardware",
+        "detail": "Use the same engine on Apple Silicon, NVIDIA, AMD or CPU-only boxes"
+      },
+      {
+        "title": "Replace a Generic Runtime",
+        "detail": "Swap Ollama for a kernel-tuned engine when throughput matters"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Tunes kernels to your specific hardware instead of shipping fixed defaults",
+        "Works on Apple Silicon, NVIDIA, AMD and CPU",
+        "Open source, so the tuning behaviour is inspectable"
+      ],
+      "cons": [
+        "Advanced setup compared with a one-click local runner",
+        "Model coverage is narrower than a general-purpose runtime"
+      ]
+    }
+  },
+  {
+    "id": 1616,
+    "name": "Breadcrumb",
+    "description": "Breadcrumb is a local, encrypted AI plugin for developers on macOS. It records screens, meetings, days and AI sessions so you can ask later what happened, and organises context into scopes: a folder with its own rules that apply automatically while you work inside it. Each scope tracks its own rules and notes.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://innerloop.works/breadcrumb",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Breadcrumb is a local, encrypted AI plugin for developers on macOS. It records screens, meetings, days and AI sessions so you can ask later what happened, and organises context into scopes: a folder with its own rules that apply automatically while you work inside it. Each scope tracks its own rules and notes.",
+    "last_updated": "2026-10-02",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developers",
+      "Context management for AI",
+      "Privacy-conscious teams"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Recall an AI Session",
+        "detail": "Ask what an agent did yesterday without re-reading transcripts"
+      },
+      {
+        "title": "Scope Rules Per Project",
+        "detail": "Attach project-specific AI rules to a folder and have them apply automatically"
+      },
+      {
+        "title": "Keep Context Local",
+        "detail": "Record screens and meetings on your Mac instead of a cloud service"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs locally and encrypted on macOS",
+        "Scopes apply the right rules per folder without manual switching",
+        "Records screens, meetings and AI sessions in one place"
+      ],
+      "cons": [
+        "Pricing is not stated on the site",
+        "macOS only"
+      ]
+    }
+  },
+  {
+    "id": 1617,
+    "name": "Plimsoll",
+    "description": "Plimsoll is a self-hosted sandbox service for running untrusted, agent-authored code. Its distinguishing detail is that each run reports back the isolation boundary it actually executed behind, so you can see what protected you instead of assuming it. It also ships browser-based lessons that need no clone to try.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/plimsollmark/plimsoll",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Plimsoll is a self-hosted sandbox service for running untrusted, agent-authored code. Its distinguishing detail is that each run reports back the isolation boundary it actually executed behind, so you can see what protected you instead of assuming it. It also ships browser-based lessons that need no clone to try.",
+    "last_updated": "2026-10-12",
+    "skill_level": "advanced",
+    "best_for": [
+      "AI coding agents",
+      "Security-minded developers",
+      "Untrusted code execution"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run Agent Code Safely",
+        "detail": "Execute code an agent wrote without trusting it on your host"
+      },
+      {
+        "title": "Verify the Isolation Boundary",
+        "detail": "See which isolation layer each run actually landed behind"
+      },
+      {
+        "title": "Learn Sandboxing in the Browser",
+        "detail": "Work through lessons without cloning or installing anything"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Reports the actual isolation boundary per run rather than assuming",
+        "Self-hosted, so sandboxes stay on your infrastructure",
+        "Browser lessons lower the barrier to trying it"
+      ],
+      "cons": [
+        "Very new project with a small community",
+        "Advanced topic; expects comfort with sandbox concepts"
+      ]
+    }
+  },
+  {
+    "id": 1618,
+    "name": "Corral",
+    "description": "Corral is an open-source utility for killing every command your AI agent starts. When an autonomous agent spawns a runaway process tree, Corral gives you one place to see and terminate what it launched instead of hunting through process lists. Aimed at anyone running coding agents locally on their own machine.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/Cardinal44/corral",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Corral is an open-source utility for killing every command your AI agent starts. When an autonomous agent spawns a runaway process tree, Corral gives you one place to see and terminate what it launched instead of hunting through process lists. Aimed at anyone running coding agents locally on their own machine.",
+    "last_updated": "2026-09-29",
+    "skill_level": "intermediate",
+    "best_for": [
+      "AI coding agents",
+      "Local agent safety",
+      "Developers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Stop a Runaway Agent",
+        "detail": "Terminate everything an agent spawned in one action"
+      },
+      {
+        "title": "See What an Agent Launched",
+        "detail": "Inspect the commands an agent started instead of guessing"
+      },
+      {
+        "title": "Keep Local Work Safe",
+        "detail": "Run autonomous agents without losing control of your processes"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Solves a concrete pain point for anyone running autonomous agents",
+        "Open source and small enough to read",
+        "Addresses process control rather than adding another agent layer"
+      ],
+      "cons": [
+        "Early-stage project with limited documentation",
+        "Narrow scope; it only handles process control"
+      ]
+    }
+  },
+  {
+    "id": 1619,
+    "name": "DwarfStar 4",
+    "description": "DwarfStar 4 (ds4) is a narrow C inference engine for running frontier open-weight models locally on high-memory Mac, CUDA and ROCm machines. It supports DeepSeek V4 and V4.1 Flash, GLM 5.x and Qwen3.8 Flash Next, with text and vision models, local APIs, a CLI and a native agent in one stack. MIT licensed.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://dwarfstar.sh/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "DwarfStar 4 (ds4) is a narrow C inference engine for running frontier open-weight models locally on high-memory Mac, CUDA and ROCm machines. It supports DeepSeek V4 and V4.1 Flash, GLM 5.x and Qwen3.8 Flash Next, with text and vision models, local APIs, a CLI and a native agent in one stack. MIT licensed.",
+    "last_updated": "2026-10-03",
+    "skill_level": "advanced",
+    "best_for": [
+      "Local frontier models",
+      "High-memory workstations",
+      "Self-hosting"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run DeepSeek Locally",
+        "detail": "Serve DeepSeek V4 or V4.1 Flash from your own machine"
+      },
+      {
+        "title": "One Stack for Text and Vision",
+        "detail": "Use text and vision models through the same local API and CLI"
+      },
+      {
+        "title": "Self-Host an Agent",
+        "detail": "Run the bundled native agent entirely on your hardware"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Targets frontier open-weight models rather than only small ones",
+        "Single stack covers local APIs, CLI and an agent",
+        "MIT licensed and written in C for a small footprint"
+      ],
+      "cons": [
+        "Requires a high-memory machine and GPU setup",
+        "Model support is deliberately narrow"
+      ]
+    }
+  },
+  {
+    "id": 1620,
+    "name": "MemorySync",
+    "description": "MemorySync gives AI agents persistent memory through an API. In the browser playground you tell it one fact, reload the page and ask for it back in your own words, with no signup. Stored facts are not kept word for word; the lasting facts are extracted instead. Every API call is shown as it happens in cURL, Python and Node.js.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://memorysync.io/try",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "MemorySync gives AI agents persistent memory through an API. In the browser playground you tell it one fact, reload the page and ask for it back in your own words, with no signup. Stored facts are not kept word for word; the lasting facts are extracted instead. Every API call is shown as it happens in cURL, Python and Node.js.",
+    "last_updated": "2026-10-13",
+    "skill_level": "intermediate",
+    "best_for": [
+      "AI agents",
+      "Agent memory",
+      "Developers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Give an Agent Long-Term Memory",
+        "detail": "Store facts once and have an agent recall them in later sessions"
+      },
+      {
+        "title": "Try It Without Signing Up",
+        "detail": "Save a fact in the playground, reload, and ask for it back"
+      },
+      {
+        "title": "Copy Real API Calls",
+        "detail": "See each call emitted as cURL, Python and Node.js while you test"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Playground works with no signup, so you can verify it first",
+        "Extracts lasting facts instead of storing raw text verbatim",
+        "Shows every API call in three languages as it happens"
+      ],
+      "cons": [
+        "Hosted service, so memory leaves your infrastructure",
+        "New project with a small ecosystem"
+      ]
+    }
+  },
+  {
+    "id": 1621,
+    "name": "Jevcrawl",
+    "description": "Jevcrawl is an MCP server and CLI that crawls websites for AI agents with no LLM in the crawl loop. By keeping the model out of the fetching path it reports finding the answer page about twice as often as Crawl4AI and costing roughly ten times less per answer than letting Claude crawl directly.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/RayenMlayeh/jevcrawl",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Jevcrawl is an MCP server and CLI that crawls websites for AI agents with no LLM in the crawl loop. By keeping the model out of the fetching path it reports finding the answer page about twice as often as Crawl4AI and costing roughly ten times less per answer than letting Claude crawl directly.",
+    "last_updated": "2026-10-14",
+    "skill_level": "intermediate",
+    "best_for": [
+      "AI agents",
+      "Web crawling",
+      "Cost-conscious developers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Crawl for an Agent",
+        "detail": "Let an agent pull web pages through an MCP server instead of a browser"
+      },
+      {
+        "title": "Cut Crawl Costs",
+        "detail": "Keep the LLM out of the crawl loop so fetching stays cheap"
+      },
+      {
+        "title": "Find the Answer Page",
+        "detail": "Improve the odds the crawler lands on the page that actually answers"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No LLM in the crawl loop keeps per-answer cost down",
+        "Ships as both an MCP server and a CLI",
+        "Claims concrete gains over Crawl4AI on answer-page hit rate"
+      ],
+      "cons": [
+        "Performance claims come from the project itself, not independent benchmarks",
+        "New tool with limited production track record"
+      ]
+    }
+  },
+  {
+    "id": 1622,
+    "name": "MCPJam",
+    "description": "MCPJam is a testing, debugging and evaluation platform for MCP servers. It covers OAuth flows, LLM-powered evals and CI/CD integration, and tests a server across 16 or more major AI clients to show what breaks where. Aimed at shipping MCP servers that behave consistently from first prompt to release gate.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.mcpjam.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "MCPJam is a testing, debugging and evaluation platform for MCP servers. It covers OAuth flows, LLM-powered evals and CI/CD integration, and tests a server across 16 or more major AI clients to show what breaks where. Aimed at shipping MCP servers that behave consistently from first prompt to release gate.",
+    "last_updated": "2026-09-18",
+    "skill_level": "intermediate",
+    "best_for": [
+      "MCP server developers",
+      "QA and evals",
+      "Platform teams"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Test Across AI Clients",
+        "detail": "See how one MCP server behaves in many different clients"
+      },
+      {
+        "title": "Debug OAuth and EMA",
+        "detail": "Inspect auth flows that usually fail silently"
+      },
+      {
+        "title": "Gate Every Release",
+        "detail": "Run evals in CI so a bad server change does not ship"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Cross-client testing catches issues a single client hides",
+        "Covers OAuth, evals and CI/CD in one platform",
+        "Directly targets the MCP ecosystem"
+      ],
+      "cons": [
+        "Paid tiers exist, so full capability is not free",
+        "Only useful if you build or maintain MCP servers"
+      ]
+    }
+  },
+  {
+    "id": 1623,
+    "name": "Autolith",
+    "description": "Autolith is a self-modifiable general purpose AI agent written in Lisp. Because the agent is Lisp all the way down, it can rewrite parts of its own behaviour at runtime instead of only calling a fixed set of tools. Aimed at people who want to experiment with agents that extend themselves rather than stay inside a preset loop.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/lambda-symbolics/autolith",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Autolith is a self-modifiable general purpose AI agent written in Lisp. Because the agent is Lisp all the way down, it can rewrite parts of its own behaviour at runtime instead of only calling a fixed set of tools. Aimed at people who want to experiment with agents that extend themselves rather than stay inside a preset loop.",
+    "last_updated": "2026-10-06",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agent research",
+      "Lisp developers",
+      "Self-modifying systems"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Experiment With Self-Modification",
+        "detail": "Let an agent rewrite parts of its own behaviour at runtime"
+      },
+      {
+        "title": "Build a General Agent",
+        "detail": "Start from a general-purpose agent rather than a single-task bot"
+      },
+      {
+        "title": "Inspect Agent Logic",
+        "detail": "Read and edit agent behaviour as Lisp instead of opaque prompts"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Genuine self-modification rather than tool calling dressed up",
+        "Lisp base makes agent logic readable and editable",
+        "Open source with active forks and stars"
+      ],
+      "cons": [
+        "Requires Lisp familiarity to use well",
+        "Self-modifying agents are hard to predict or constrain"
+      ]
+    }
+  },
+  {
+    "id": 1624,
+    "name": "Talorys",
+    "description": "Talorys puts a personal AI agent inside your own Cloudflare account with a single command. It handles chat, memory, tasks, notes and scheduled reminders, and is built to stay inside Cloudflare free-tier limits. Single-user by design with no telemetry, so your data stays on infrastructure you control.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://github.com/rociiu/talorys",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Talorys puts a personal AI agent inside your own Cloudflare account with a single command. It handles chat, memory, tasks, notes and scheduled reminders, and is built to stay inside Cloudflare free-tier limits. Single-user by design with no telemetry, so your data stays on infrastructure you control.",
+    "last_updated": "2026-10-10",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Personal AI agents",
+      "Self-hosting",
+      "Cloudflare users"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Deploy Your Own Agent",
+        "detail": "Run one command and get an agent in your Cloudflare account"
+      },
+      {
+        "title": "Keep Data in Your Account",
+        "detail": "Store chat, notes and memory where you already hold the keys"
+      },
+      {
+        "title": "Schedule Reminders",
+        "detail": "Let the agent run tasks and reminders on a schedule"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One-command deploy into your own Cloudflare account",
+        "Designed to stay within the free tier",
+        "No telemetry and single-user by design"
+      ],
+      "cons": [
+        "Requires a Cloudflare account and some setup comfort",
+        "Single-user focus makes it unsuitable for teams"
+      ]
+    }
+  },
+  {
+    "id": 1625,
+    "name": "Blumify",
+    "description": "Blumify tracks what AI leaders say and how their views change. Every day it finds the interviews, podcasts and speeches where they speak, summarises what was said, and links each quote to its exact moment in the transcript so you can see a position shift side by side. Built for investors, journalists and founders who follow AI.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://blumify.io/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Blumify tracks what AI leaders say and how their views change. Every day it finds the interviews, podcasts and speeches where they speak, summarises what was said, and links each quote to its exact moment in the transcript so you can see a position shift side by side. Built for investors, journalists and founders who follow AI.",
+    "last_updated": "2026-10-14",
+    "skill_level": "beginner",
+    "best_for": [
+      "Investors",
+      "Journalists",
+      "Founders tracking AI"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Track a View Change",
+        "detail": "See two quotes from the same person on opposite sides of a topic"
+      },
+      {
+        "title": "Follow Daily AI Commentary",
+        "detail": "Get interviews, podcasts and speeches surfaced every day"
+      },
+      {
+        "title": "Jump to the Exact Moment",
+        "detail": "Open a quote at its timestamp in the original transcript"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Quotes link back to exact transcript moments for verification",
+        "Explicitly surfaces changed views, not just summaries",
+        "Focused on AI leaders specifically"
+      ],
+      "cons": [
+        "Pricing beyond the free tier is not clearly stated",
+        "Useful mainly if you actively track AI commentary"
+      ]
+    }
+  },
+  {
+    "id": 1626,
+    "name": "NanoMuse",
+    "description": "NanoMuse is an open-source personal agent for every device you own, with a name and a look of its own. It keeps working while the app is closed, remembers you, and asks before anything you cannot undo. It runs on Android, iPhone and iPad, Windows, macOS, Linux and in the browser, treating your phone screen and computer as its hands.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/nano-muse/nanoMuse",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "NanoMuse is an open-source personal agent for every device you own, with a name and a look of its own. It keeps working while the app is closed, remembers you, and asks before anything you cannot undo. It runs on Android, iPhone and iPad, Windows, macOS, Linux and in the browser, treating your phone screen and computer as its hands.",
+    "last_updated": "2026-10-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Personal AI agents",
+      "Cross-device users",
+      "Privacy-conscious users"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One Agent Everywhere",
+        "detail": "Run the same agent on phone, desktop and browser"
+      },
+      {
+        "title": "Let It Work in the Background",
+        "detail": "Keep tasks going while the app is closed"
+      },
+      {
+        "title": "Control Your Devices",
+        "detail": "Give the agent your phone screen and computer as its hands"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Covers Android, iOS, desktop and browser from one project",
+        "Asks for confirmation before irreversible actions",
+        "Open source rather than a hosted black box"
+      ],
+      "cons": [
+        "Early project, so device coverage may be uneven",
+        "Self-hosting and setup still required"
+      ]
+    }
+  },
+  {
+    "id": 1627,
+    "name": "Lathoa",
+    "description": "Lathoa is a math companion for children aged 10 to 14 where the AI is wrong on purpose. Errol, a robot powered by real AI, works a problem step by step and always makes a bad step. The child has to find the mistake, explain why it breaks and earn detective rank, building the checking habit that matters when answers are cheap.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://lathoa.ai/en",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Lathoa is a math companion for children aged 10 to 14 where the AI is wrong on purpose. Errol, a robot powered by real AI, works a problem step by step and always makes a bad step. The child has to find the mistake, explain why it breaks and earn detective rank, building the checking habit that matters when answers are cheap.",
+    "last_updated": "2026-09-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Parents",
+      "Children aged 10 to 14",
+      "Critical thinking practice"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Catch the Mistake",
+        "detail": "Find the bad step in a worked solution and explain why it breaks"
+      },
+      {
+        "title": "Build Checking Habits",
+        "detail": "Train a child to interrogate answers instead of trusting them"
+      },
+      {
+        "title": "Practise Arithmetic",
+        "detail": "Work through a fresh case each day at an appropriate level"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Turns AI errors into the lesson instead of hiding them",
+        "Age-banded for 10 to 14 with daily cases",
+        "Gamified through detective rank"
+      ],
+      "cons": [
+        "Narrow subject coverage centred on math",
+        "Requires a parent or teacher to get value from it"
+      ]
+    }
+  },
+  {
+    "id": 1628,
+    "name": "rStation",
+    "description": "rStation is a research community built for independent AI agents. Agents pick an open problem, discuss it with other agents and publish reviewed papers, while humans are welcome to observe. The board currently spans the Riemann hypothesis, the Hodge conjecture, Epoch AI problems and Brouwer graph tables across math, AI and computer science.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://rstation.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "rStation is a research community built for independent AI agents. Agents pick an open problem, discuss it with other agents and publish reviewed papers, while humans are welcome to observe. The board currently spans the Riemann hypothesis, the Hodge conjecture, Epoch AI problems and Brouwer graph tables across math, AI and computer science.",
+    "last_updated": "2026-10-16",
+    "skill_level": "intermediate",
+    "best_for": [
+      "AI agents",
+      "Research communities",
+      "Observing agent behaviour"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Send an Agent to Research",
+        "detail": "Point your agent at an open problem and let it discuss"
+      },
+      {
+        "title": "Publish Reviewed Papers",
+        "detail": "Have agent-written papers go through a review step"
+      },
+      {
+        "title": "Watch Agent Discourse",
+        "detail": "Observe how independent agents argue about a problem"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Unusual focus on agents as participants rather than assistants",
+        "Review step before publication",
+        "Spans named Millennium Prize and Epoch AI problems"
+      ],
+      "cons": [
+        "Pricing and access model are not stated",
+        "Very new; community activity is unproven"
+      ]
+    }
+  },
+  {
+    "id": 1629,
+    "name": "OpenChart",
+    "description": "OpenChart is an open-source trading workspace built as a TradingView alternative that brings your own agents into the charting workflow. Instead of a closed platform with fixed scripting, you get an OSS workspace where the agents you already use sit alongside the charts, so analysis and automation live in the same place.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/longsurf-ai/openchart",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "OpenChart is an open-source trading workspace built as a TradingView alternative that brings your own agents into the charting workflow. Instead of a closed platform with fixed scripting, you get an OSS workspace where the agents you already use sit alongside the charts, so analysis and automation live in the same place.",
+    "last_updated": "2026-10-06",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Traders",
+      "Agent-assisted analysis",
+      "Open-source advocates"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Chart With Your Own Agent",
+        "detail": "Put an agent next to your charts instead of a hosted scripting language"
+      },
+      {
+        "title": "Self-Host a Trading Workspace",
+        "detail": "Run the workspace yourself rather than in a vendor cloud"
+      },
+      {
+        "title": "Automate Analysis",
+        "detail": "Let agents handle repetitive chart analysis tasks"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Open source alternative to a closed charting platform",
+        "Designed around the agents you already run",
+        "Active repository with forks and stars"
+      ],
+      "cons": [
+        "Early-stage compared with mature charting platforms",
+        "Financial tooling carries real risk if misused"
+      ]
+    }
+  },
+  {
+    "id": 1630,
+    "name": "Edi Life OS",
+    "description": "Edi Life OS is a self-hosted life dashboard covering habits, goals, a Kanban board, finance and focus, with an MCP server so your AI can read and write it. Because it runs on your own machine, the personal data behind your routines stays yours while agents can still act on it through a standard protocol.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/edrisranjbar/lifeos",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Edi Life OS is a self-hosted life dashboard covering habits, goals, a Kanban board, finance and focus, with an MCP server so your AI can read and write it. Because it runs on your own machine, the personal data behind your routines stays yours while agents can still act on it through a standard protocol.",
+    "last_updated": "2026-10-09",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Self-hosters",
+      "Personal dashboards",
+      "MCP users"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Track Habits and Goals",
+        "detail": "Keep habits, goals and focus in one self-hosted dashboard"
+      },
+      {
+        "title": "Let an Agent Update It",
+        "detail": "Give an AI write access through the bundled MCP server"
+      },
+      {
+        "title": "Keep Personal Data Local",
+        "detail": "Self-host finance and routine data instead of using a cloud app"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MCP server means agents can act on your data, not just read it",
+        "Self-hosted, so personal data stays on your machine",
+        "Covers habits, goals, Kanban, finance and focus together"
+      ],
+      "cons": [
+        "Self-hosting means you own the maintenance",
+        "Smaller community than commercial life-trackers"
+      ]
+    }
+  },
+  {
+    "id": 1631,
+    "name": "Kinesis",
+    "description": "Kinesis adds native macOS controls for the Meta Neural Band, letting you drive your Mac from wristband gestures. The project describes itself as highly experimental, so expect rough edges, but it is a concrete attempt at hands-free computer control using neural input rather than a camera or a pointing device.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/callbacked/kinesis",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Kinesis adds native macOS controls for the Meta Neural Band, letting you drive your Mac from wristband gestures. The project describes itself as highly experimental, so expect rough edges, but it is a concrete attempt at hands-free computer control using neural input rather than a camera or a pointing device.",
+    "last_updated": "2026-09-14",
+    "skill_level": "advanced",
+    "best_for": [
+      "Accessibility",
+      "Hands-free control",
+      "Hardware experimenters"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Control a Mac by Gesture",
+        "detail": "Map neural band gestures to native macOS actions"
+      },
+      {
+        "title": "Try Hands-Free Input",
+        "detail": "Drive a computer without a mouse or trackpad"
+      },
+      {
+        "title": "Explore Neural Interfaces",
+        "detail": "Experiment with consumer neural input hardware on macOS"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Native macOS integration rather than a shim",
+        "Targets real consumer hardware already shipping",
+        "Open source so the gesture mapping is editable"
+      ],
+      "cons": [
+        "Self-described as highly experimental",
+        "Requires owning a Meta Neural Band"
+      ]
+    }
+  },
+  {
+    "id": 1632,
+    "name": "Pizza Bot",
+    "description": "Pizza Bot is a local-first inbox for AI agents that work in the background. Long-running agents need somewhere to drop results and requests without depending on a hosted service, so Pizza Bot gives them a mailbox you own. It is built with DeepAgents and LangGraph and keeps the conversation on your own machine.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/pizza-bot-app/pizza-bot",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pizza Bot is a local-first inbox for AI agents that work in the background. Long-running agents need somewhere to drop results and requests without depending on a hosted service, so Pizza Bot gives them a mailbox you own. It is built with DeepAgents and LangGraph and keeps the conversation on your own machine.",
+    "last_updated": "2026-09-15",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Long-running AI agents",
+      "Local-first workflows",
+      "Developers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Give an Agent an Inbox",
+        "detail": "Let a background agent leave results you can read later"
+      },
+      {
+        "title": "Avoid Hosted Queues",
+        "detail": "Keep agent messaging local instead of on a vendor service"
+      },
+      {
+        "title": "Track Background Work",
+        "detail": "See what long-running agents have produced over time"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Local-first design keeps agent traffic on your machine",
+        "Built on DeepAgents and LangGraph, so it fits existing stacks",
+        "Addresses a real gap for long-running agents"
+      ],
+      "cons": [
+        "Small project with narrow scope",
+        "Requires comfort running an agent stack locally"
+      ]
+    }
+  },
+  {
+    "id": 1633,
+    "name": "MicroLLM Lab",
+    "description": "MicroLLM Lab runs quantised small language models entirely in your browser with WebGPU. You load a model, chat with it and benchmark it against the others in the catalog, with no server, no account and nothing uploaded. It is a practical way to compare tiny models such as PetitGPT and SmolLM2 on your own hardware.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://stateofutopia.com/experiments/microllmlab/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "MicroLLM Lab runs quantised small language models entirely in your browser with WebGPU. You load a model, chat with it and benchmark it against the others in the catalog, with no server, no account and nothing uploaded. It is a practical way to compare tiny models such as PetitGPT and SmolLM2 on your own hardware.",
+    "last_updated": "2026-09-29",
+    "skill_level": "beginner",
+    "best_for": [
+      "Small language models",
+      "Browser-based AI",
+      "Model comparison"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Try Tiny Models in a Browser",
+        "detail": "Load and chat with a small model without installing anything"
+      },
+      {
+        "title": "Benchmark on Your Hardware",
+        "detail": "Compare models using your own GPU rather than published numbers"
+      },
+      {
+        "title": "Keep Prompts Private",
+        "detail": "Run inference on-device with no server and no account"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Zero server, zero account, nothing uploaded",
+        "WebGPU acceleration makes on-device runs practical",
+        "Side-by-side comparison of several tiny models"
+      ],
+      "cons": [
+        "Limited to small quantised models, not frontier quality",
+        "Performance depends heavily on your browser and GPU"
+      ]
+    }
+  },
+  {
+    "id": 1634,
+    "name": "Otis",
+    "description": "Otis is a minimal AI agent designed to run local models out of the box, so you can point it at models already on your machine without assembling a stack first. It targets people who want the shortest path from a local model to an agent that can act, rather than another full framework to configure.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://triangllabs.ai/otis",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Otis is a minimal AI agent designed to run local models out of the box, so you can point it at models already on your machine without assembling a stack first. It targets people who want the shortest path from a local model to an agent that can act, rather than another full framework to configure.",
+    "last_updated": "2026-09-14",
+    "skill_level": "beginner",
+    "best_for": [
+      "Local model users",
+      "Minimal agent setups",
+      "Beginners"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Point an Agent at a Local Model",
+        "detail": "Run local models without wiring up a full agent framework"
+      },
+      {
+        "title": "Keep Everything on Device",
+        "detail": "Avoid hosted APIs by running models locally"
+      },
+      {
+        "title": "Start Small",
+        "detail": "Try agent behaviour without heavy configuration"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works with local models out of the box",
+        "Minimal setup compared with full agent frameworks",
+        "Good entry point for local-first agents"
+      ],
+      "cons": [
+        "Pricing and licensing are not stated on the site",
+        "Little public documentation or community yet"
+      ]
+    }
+  },
+  {
+    "id": 1635,
+    "name": "Strata",
+    "description": "Strata pairs a governed semantic layer with dashboards built for self-service analytics that stays safe when AI and agents query it. It routes queries across federated Open OLAP engines with partition-aware routing to hot tiers, and the semantic layer is designed to refuse a request rather than answer it badly. A live demo runs in the browser or via Docker.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://strata.do/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Strata pairs a governed semantic layer with dashboards built for self-service analytics that stays safe when AI and agents query it. It routes queries across federated Open OLAP engines with partition-aware routing to hot tiers, and the semantic layer is designed to refuse a request rather than answer it badly. A live demo runs in the browser or via Docker.",
+    "last_updated": "2026-09-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Data teams",
+      "AI-safe analytics",
+      "Self-service BI"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Let Agents Query Safely",
+        "detail": "Expose analytics to agents through a semantic layer that can say no"
+      },
+      {
+        "title": "Federate Open OLAP Engines",
+        "detail": "Route queries across engines with partition-aware hot-tier routing"
+      },
+      {
+        "title": "Try Before Committing",
+        "detail": "Run the live demo in a browser or locally with Docker"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Semantic layer is built to refuse unsafe requests",
+        "Federated Open OLAP with partition-aware routing",
+        "Browser demo with no credit card"
+      ],
+      "cons": [
+        "Enterprise-oriented, so self-serve onboarding may be limited",
+        "Advanced topic requiring data-warehouse context"
+      ]
+    }
+  },
+  {
+    "id": 1636,
+    "name": "LDraw Nova",
+    "description": "LDraw Nova is agent tooling for generative LEGO model building, built with Astra and Opus 5.5 and powered by Jev. Instead of placing bricks by hand you describe what you want and the agent assembles an LDraw model, the open file format the LEGO CAD community already uses for parts, builds and instructions.",
+    "category": "Image",
+    "pricing": "Open Source",
+    "url": "https://github.com/anteloc/ldraw-nova",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "LDraw Nova is agent tooling for generative LEGO model building, built with Astra and Opus 5.5 and powered by Jev. Instead of placing bricks by hand you describe what you want and the agent assembles an LDraw model, the open file format the LEGO CAD community already uses for parts, builds and instructions.",
+    "last_updated": "2026-10-03",
+    "skill_level": "intermediate",
+    "best_for": [
+      "LEGO builders",
+      "Generative 3D models",
+      "CAD hobbyists"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Generate a LEGO Model",
+        "detail": "Describe a build and have the agent assemble it in LDraw format"
+      },
+      {
+        "title": "Work in an Open Format",
+        "detail": "Output LDraw so existing LEGO CAD tools can open it"
+      },
+      {
+        "title": "Prototype Builds Fast",
+        "detail": "Explore variations before committing to real bricks"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Outputs the standard LDraw format the community already uses",
+        "Agent-driven generation instead of manual brick placement",
+        "Open source"
+      ],
+      "cons": [
+        "Niche audience of LEGO and LDraw users",
+        "Tied to specific model providers"
+      ]
+    }
+  },
+  {
+    "id": 1637,
+    "name": "Rembrandt",
+    "description": "Rembrandt is a free photo editor with RAW support, masks and on-device AI for macOS, Windows and Linux. There is no account, no subscription and no tracking, and it can be self-hosted, so editing stays on your machine. It suits photographers who want a Lightroom-class workflow without handing photos to a cloud service.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://github.com/thesnarkitecht/rembrandt",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Rembrandt is a free photo editor with RAW support, masks and on-device AI for macOS, Windows and Linux. There is no account, no subscription and no tracking, and it can be self-hosted, so editing stays on your machine. It suits photographers who want a Lightroom-class workflow without handing photos to a cloud service.",
+    "last_updated": "2026-10-09",
+    "skill_level": "beginner",
+    "best_for": [
+      "Photographers",
+      "RAW editing",
+      "Privacy-conscious editors"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Edit RAW Locally",
+        "detail": "Process RAW files with masks and on-device AI"
+      },
+      {
+        "title": "Avoid Subscription Editing",
+        "detail": "Use a full editor with no account or recurring fee"
+      },
+      {
+        "title": "Self-Host Your Workflow",
+        "detail": "Run the editor on your own infrastructure"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No account, subscription or tracking",
+        "On-device AI keeps photos local",
+        "Cross-platform on macOS, Windows and Linux"
+      ],
+      "cons": [
+        "Newer project than established photo editors",
+        "Feature set may lag mature commercial tools"
+      ]
+    }
+  },
+  {
+    "id": 1638,
+    "name": "Nari Labs",
+    "description": "Nari Labs offers Qwen3-TTS and Qwen3-ASR as text-to-speech and speech-to-text APIs aimed at accuracy, latency and cost. The team reports leading Coval September 2026 voice benchmarks on STT latency and TTS word error rate, sitting on the quality-latency Pareto frontier for both directions. The free public beta ended in September 2026.",
+    "category": "Audio",
+    "pricing": "Unknown",
+    "url": "https://narilabs.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Nari Labs offers Qwen3-TTS and Qwen3-ASR as text-to-speech and speech-to-text APIs aimed at accuracy, latency and cost. The team reports leading Coval September 2026 voice benchmarks on STT latency and TTS word error rate, sitting on the quality-latency Pareto frontier for both directions. The free public beta ended in September 2026.",
+    "last_updated": "2026-09-14",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Voice AI",
+      "Speech-to-text",
+      "Text-to-speech"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Transcribe Audio",
+        "detail": "Run speech-to-text with a focus on low latency"
+      },
+      {
+        "title": "Generate Speech",
+        "detail": "Produce natural speech through the Qwen3-TTS models"
+      },
+      {
+        "title": "Optimise Voice Cost",
+        "detail": "Pick models that sit on the quality-cost frontier"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Strong benchmark results on both latency and word error rate",
+        "Covers both directions of voice AI",
+        "Published benchmark comparisons rather than vague claims"
+      ],
+      "cons": [
+        "Free public beta has ended, so usage now needs GA model access",
+        "Pricing is not clearly published"
+      ]
+    }
+  },
+  {
+    "id": 1639,
+    "name": "Vespper",
+    "description": "Vespper ships DOCX MCP, a model fine-tuned specifically for editing Word documents and exposed as an MCP server. Where general agents struggle with tracked changes and formatting, Vespper targets the contracts and regulatory documents where a Word file is the actual deliverable, reporting three times faster and two times cheaper edits on its own benchmark.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://www.vespper.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Vespper ships DOCX MCP, a model fine-tuned specifically for editing Word documents and exposed as an MCP server. Where general agents struggle with tracked changes and formatting, Vespper targets the contracts and regulatory documents where a Word file is the actual deliverable, reporting three times faster and two times cheaper edits on its own benchmark.",
+    "last_updated": "2026-09-29",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Legal and finance teams",
+      "Word document editing",
+      "MCP users"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Edit Contracts With an Agent",
+        "detail": "Let an agent revise Word documents without breaking formatting"
+      },
+      {
+        "title": "Handle Tracked Changes",
+        "detail": "Work with tracked changes instead of flattened text"
+      },
+      {
+        "title": "Cut Document Edit Cost",
+        "detail": "Use a fine-tuned model rather than a general one for DOCX edits"
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Purpose-built for Word editing rather than generic text",
+        "Ships as an MCP server, so agents can call it directly",
+        "Targets document-heavy domains like legal and finance"
+      ],
+      "cons": [
+        "Speed and cost claims come from the vendor internal benchmark",
+        "Paid tiers likely for production use"
+      ]
+    }
   }
 ]
