@@ -159,6 +159,8 @@ const nextConfig: NextConfig = {
     const mergedPosts: { from: string; to: string }[] = [
       { from: '10-ai-tools-change-workflow-2026', to: 'ai-productivity-tools-remote-workers-2026' },
       { from: 'ai-audio-tools-professional-podcasts-2026', to: 'ai-audio-tools-podcasters-2026' },
+      { from: 'best-ai-tools-facebook-marketing-2026', to: 'ai-tools-social-media-management-2026' },
+      { from: 'best-free-ai-tools-small-teams-2026', to: 'best-free-ai-tools-need-to-try-2026' },
     ];
 
     return [
