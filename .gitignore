@@ -56,3 +56,8 @@ next-env.d.ts
 
 # agent memory / automation run logs (local only, never commit)
 .workbuddy-ai/
+
+# Local content-audit scratch files
+_*.mjs
+_*.txt
+_rewrite/
