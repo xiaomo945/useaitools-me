@@ -153,6 +153,14 @@ const nextConfig: NextConfig = {
       { id: 957, to: 'capcut' },
     ];
 
+    // Blog posts merged into a canonical article. The duplicates were the same
+    // piece under two titles (5-gram similarity above 0.97), so the weaker slug
+    // now 308s to the one that survived.
+    const mergedPosts: { from: string; to: string }[] = [
+      { from: '10-ai-tools-change-workflow-2026', to: 'ai-productivity-tools-remote-workers-2026' },
+      { from: 'ai-audio-tools-professional-podcasts-2026', to: 'ai-audio-tools-podcasters-2026' },
+    ];
+
     return [
       ...merged.map(({ from, to }) => ({
         source: `/tool/${from}`,
@@ -162,6 +170,11 @@ const nextConfig: NextConfig = {
       ...mergedIds.map(({ id, to }) => ({
         source: `/tools/${id}`,
         destination: `/tool/${to}`,
+        permanent: true,
+      })),
+      ...mergedPosts.map(({ from, to }) => ({
+        source: `/blog/${from}`,
+        destination: `/blog/${to}`,
         permanent: true,
       })),
     ];
