@@ -53,10 +53,9 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            {/* icon.svg (521 B) instead of logo.png (908 KB): the header mark is
-                32 px tall, so shipping the full-size PNG as a priority preload
-                would cost far more than it renders. */}
-            <Image src="/icon.svg" alt="" aria-hidden="true" className="h-8 w-8" width={32} height={32} priority unoptimized />
+            {/* The real brand mark (cropped from logo.png, transparent background)
+                instead of the generic green "AI" tile — the site has a proper logo. */}
+            <Image src="/brand/ua-mark.png" alt="" aria-hidden="true" className="h-8 w-auto" width={32} height={30} priority />
             <span className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
               Use AI Tools
             </span>

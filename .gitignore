@@ -60,4 +60,5 @@ next-env.d.ts
 # Local content-audit scratch files
 _*.mjs
 _*.txt
+_*.cjs
 _rewrite/
