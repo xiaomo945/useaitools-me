@@ -1,0 +1,569 @@
+[
+ {
+  "id": 1,
+  "name": "Midjourney",
+  "field": "description",
+  "label": "superlative",
+  "match": "leading AI"
+ },
+ {
+  "id": 1,
+  "name": "Midjourney",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "leading AI"
+ },
+ {
+  "id": 8,
+  "name": "ElevenLabs",
+  "field": "pros",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 11,
+  "name": "Whisper",
+  "field": "description",
+  "label": "unsourced language/avatar count",
+  "match": "90+ languages"
+ },
+ {
+  "id": 11,
+  "name": "Whisper",
+  "field": "description_en",
+  "label": "unsourced language/avatar count",
+  "match": "90+ languages"
+ },
+ {
+  "id": 11,
+  "name": "Whisper",
+  "field": "pros",
+  "label": "unsourced language/avatar count",
+  "match": "90+ languages"
+ },
+ {
+  "id": 23,
+  "name": "Rytr",
+  "field": "description",
+  "label": "unsourced language/avatar count",
+  "match": "30+ languages"
+ },
+ {
+  "id": 23,
+  "name": "Rytr",
+  "field": "description_en",
+  "label": "unsourced language/avatar count",
+  "match": "30+ languages"
+ },
+ {
+  "id": 70,
+  "name": "AIVA",
+  "field": "description",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 70,
+  "name": "AIVA",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 71,
+  "name": "Beatoven",
+  "field": "cons",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 79,
+  "name": "Descript",
+  "field": "description",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 79,
+  "name": "Descript",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 96,
+  "name": "Synthesia",
+  "field": "description",
+  "label": "unsourced language/avatar count",
+  "match": "140+ languages"
+ },
+ {
+  "id": 96,
+  "name": "Synthesia",
+  "field": "description_en",
+  "label": "unsourced language/avatar count",
+  "match": "140+ languages"
+ },
+ {
+  "id": 96,
+  "name": "Synthesia",
+  "field": "pros",
+  "label": "unsourced language/avatar count",
+  "match": "140+ languages"
+ },
+ {
+  "id": 201,
+  "name": "Pictory",
+  "field": "use_cases",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 265,
+  "name": "Replika",
+  "field": "description",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 265,
+  "name": "Replika",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 266,
+  "name": "Mitsuku",
+  "field": "description",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 266,
+  "name": "Mitsuku",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 271,
+  "name": "Phrasee",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 284,
+  "name": "Speechify",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 316,
+  "name": "Motion AI",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 1529,
+  "name": "Lago Fast",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 484,
+  "name": "Mem AI",
+  "field": "cons",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 494,
+  "name": "v0 by Vercel",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 616,
+  "name": "Product Photo AI",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 870,
+  "name": "LinkedGrow AI",
+  "field": "use_cases",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 917,
+  "name": "VocalAI",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 921,
+  "name": "XGrow AI",
+  "field": "use_cases",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 960,
+  "name": "SalesForge AI",
+  "field": "use_cases",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1021,
+  "name": "ComicForge AI",
+  "field": "description",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1021,
+  "name": "ComicForge AI",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1026,
+  "name": "ArchViz AI",
+  "field": "description",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1026,
+  "name": "ArchViz AI",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1026,
+  "name": "ArchViz AI",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 1063,
+  "name": "TestGuard AI",
+  "field": "cons",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1112,
+  "name": "Loom AI",
+  "field": "cons",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1115,
+  "name": "Craft AI",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 1167,
+  "name": "SnapAd Studio",
+  "field": "use_cases",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1172,
+  "name": "ClipForge AI",
+  "field": "use_cases",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1233,
+  "name": "ReactNative AI — RN Code Generator",
+  "field": "description",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1233,
+  "name": "ReactNative AI — RN Code Generator",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1233,
+  "name": "ReactNative AI — RN Code Generator",
+  "field": "use_cases",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1233,
+  "name": "ReactNative AI — RN Code Generator",
+  "field": "pros",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1273,
+  "name": "NextForge AI",
+  "field": "description",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1273,
+  "name": "NextForge AI",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1283,
+  "name": "TeachAI Pro",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 1365,
+  "name": "Amazon Q Developer",
+  "field": "description",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1365,
+  "name": "Amazon Q Developer",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1365,
+  "name": "Amazon Q Developer",
+  "field": "use_cases",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 1365,
+  "name": "Amazon Q Developer",
+  "field": "pros",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1405,
+  "name": "Eklipse",
+  "field": "use_cases",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1444,
+  "name": "FaceApp",
+  "field": "description",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1444,
+  "name": "FaceApp",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1444,
+  "name": "FaceApp",
+  "field": "cons",
+  "label": "superlative",
+  "match": "most popular"
+ },
+ {
+  "id": 1471,
+  "name": "Kimi AI",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 1479,
+  "name": "Submagic",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 1480,
+  "name": "Kits AI",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 1511,
+  "name": "Freepik AI",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 1541,
+  "name": "Jules",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Best"
+ },
+ {
+  "id": 1574,
+  "name": "Ante",
+  "field": "description",
+  "label": "percentage claim",
+  "match": "7x"
+ },
+ {
+  "id": 1574,
+  "name": "Ante",
+  "field": "description",
+  "label": "percentage claim",
+  "match": "9x"
+ },
+ {
+  "id": 1574,
+  "name": "Ante",
+  "field": "description_en",
+  "label": "percentage claim",
+  "match": "7x"
+ },
+ {
+  "id": 1574,
+  "name": "Ante",
+  "field": "description_en",
+  "label": "percentage claim",
+  "match": "9x"
+ },
+ {
+  "id": 1574,
+  "name": "Ante",
+  "field": "pros",
+  "label": "percentage claim",
+  "match": "7x"
+ },
+ {
+  "id": 1600,
+  "name": "Oak",
+  "field": "description",
+  "label": "percentage claim",
+  "match": "95%"
+ },
+ {
+  "id": 1600,
+  "name": "Oak",
+  "field": "description_en",
+  "label": "percentage claim",
+  "match": "95%"
+ },
+ {
+  "id": 1600,
+  "name": "Oak",
+  "field": "pros",
+  "label": "percentage claim",
+  "match": "95%"
+ },
+ {
+  "id": 1607,
+  "name": "Shoehorn",
+  "field": "description",
+  "label": "percentage claim",
+  "match": "99%"
+ },
+ {
+  "id": 1607,
+  "name": "Shoehorn",
+  "field": "description_en",
+  "label": "percentage claim",
+  "match": "99%"
+ },
+ {
+  "id": 1615,
+  "name": "Magnitude",
+  "field": "description",
+  "label": "superlative",
+  "match": "fastest"
+ },
+ {
+  "id": 1615,
+  "name": "Magnitude",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "fastest"
+ },
+ {
+  "id": 1747,
+  "name": "Qwen Scribe",
+  "field": "cons",
+  "label": "superlative",
+  "match": "best"
+ },
+ {
+  "id": 1750,
+  "name": "Jev Ultrafast",
+  "field": "description",
+  "label": "superlative",
+  "match": "fastest"
+ },
+ {
+  "id": 1750,
+  "name": "Jev Ultrafast",
+  "field": "description",
+  "label": "superlative",
+  "match": "cheapest"
+ },
+ {
+  "id": 1750,
+  "name": "Jev Ultrafast",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "fastest"
+ },
+ {
+  "id": 1750,
+  "name": "Jev Ultrafast",
+  "field": "description_en",
+  "label": "superlative",
+  "match": "cheapest"
+ },
+ {
+  "id": 1750,
+  "name": "Jev Ultrafast",
+  "field": "cons",
+  "label": "superlative",
+  "match": "Fastest"
+ },
+ {
+  "id": 1790,
+  "name": "Endo",
+  "field": "use_cases",
+  "label": "superlative",
+  "match": "best"
+ }
+]

@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import toolsData from '@/data/tools.json';
 import { generateSlugFromName } from '@/lib/slug';
+import { QUICK_START_PROFILES, type QuickStartProfile } from '@/lib/quickStartProfiles';
 
 type Tool = {
   id: number;
@@ -16,41 +16,7 @@ type Tool = {
   url: string;
 };
 
-const tools = toolsData as unknown as Tool[];
-
-type UserProfile = {
-  label: string;
-  emoji: string;
-  description: string;
-  toolIds: number[];
-};
-
-const userProfiles: Record<string, UserProfile> = {
-  creator: {
-    label: 'Content Creator',
-    emoji: '🎨',
-    description: 'Video, image, and audio tools for creators',
-    toolIds: [1, 8, 9, 12, 13], // Midjourney, ElevenLabs, Runway ML, Pika Labs, Suno AI
-  },
-  developer: {
-    label: 'Developer',
-    emoji: '💻',
-    description: 'Code assistants and productivity tools',
-    toolIds: [6, 7, 11, 14, 15], // ChatGPT, GitHub Copilot, Cursor, Tabnine, Obsidian Copilot
-  },
-  student: {
-    label: 'Student',
-    emoji: '📚',
-    description: 'Writing and research tools for learning',
-    toolIds: [5, 6, 10, 16, 17], // Notion AI, ChatGPT, Whisper, Jasper, Claude
-  },
-  marketer: {
-    label: 'Marketer',
-    emoji: '📊',
-    description: 'Marketing copy and social media tools',
-    toolIds: [5, 6, 16, 18, 19], // Notion AI, ChatGPT, Jasper, Adobe Firefly, Copy.ai
-  },
-};
+type UserProfile = QuickStartProfile;
 
 const getCategoryColors = (category: string) => {
   switch (category) {
@@ -71,10 +37,18 @@ const getCategoryColors = (category: string) => {
   }
 };
 
-export default function QuickStart() {
+/**
+ * Takes the tools it renders as a prop.
+ *
+ * This component used to import the whole 548 KB tools.json so it could look
+ * up sixteen tools by id. Because it is a client component, that import shipped
+ * the entire dataset to the browser on the homepage; the server now resolves
+ * the ids and passes only what is needed.
+ */
+export default function QuickStart({ tools }: { tools: Tool[] }) {
   const [selectedProfile, setSelectedProfile] = useState<string | null>(null);
 
-  const profile = selectedProfile ? userProfiles[selectedProfile] : null;
+  const profile = selectedProfile ? QUICK_START_PROFILES[selectedProfile] : null;
   const recommendedTools = profile
     ? profile.toolIds
         .map(id => tools.find(t => t.id === id))
@@ -88,26 +62,26 @@ export default function QuickStart() {
           Quick Start: Find Your Perfect Tools
         </h2>
         <p className="text-slate-600 dark:text-slate-400">
-          Tell us what you do, and we'll recommend the best AI tools for you
+          Tell us what you do, and we&apos;ll recommend the best AI tools for you
         </p>
       </div>
 
       {!selectedProfile ? (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-          {Object.entries(userProfiles).map(([key, profile]) => (
+          {Object.entries(QUICK_START_PROFILES).map(([key, p]) => (
             <button
               key={key}
               onClick={() => setSelectedProfile(key)}
               className="p-4 sm:p-5 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-xl hover:border-emerald-500 hover:shadow-lg transition-all text-left group"
             >
               <div className="text-3xl sm:text-4xl mb-2 group-hover:scale-110 transition-transform">
-                {profile.emoji}
+                {p.emoji}
               </div>
               <div className="font-semibold text-slate-900 dark:text-white mb-1">
-                {profile.label}
+                {p.label}
               </div>
               <div className="text-xs text-slate-500 dark:text-slate-400 line-clamp-2">
-                {profile.description}
+                {p.description}
               </div>
             </button>
           ))}

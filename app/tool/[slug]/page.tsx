@@ -5,7 +5,6 @@ import { blogPosts } from '@/data/blog-posts';
 import ToolSlugClient from './ToolSlugClient';
 import { getAffiliateLink } from '@/lib/affiliate';
 import { generateSlugFromName } from '@/lib/slug';
-import { generateKeywords } from '@/lib/seo';
 import { isToolWorthIndexing } from '@/lib/toolQuality';
 
 export { generateSlugFromName };
@@ -162,7 +161,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title,
     description,
-    keywords: generateKeywords(tool.category, tool.name),
     alternates: { canonical: `${SITE_URL}/tool/${slug}` },
     robots: indexable ? undefined : { index: false, follow: true },
     openGraph: {

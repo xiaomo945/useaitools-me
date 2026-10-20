@@ -4,21 +4,6 @@ export const SITE_NAME = "Use AI Tools";
 export const SITE_URL = "https://useaitools.me";
 export const DEFAULT_DESC = "A handpicked directory of 500+ AI tools for writing, image, video, audio, code and productivity. Compare features, pricing and alternatives side by side.";
 
-const DEFAULT_KEYWORDS = [
-  "AI tools",
-  "AI directory",
-  "AI writing tools",
-  "AI image generators",
-  "AI coding assistants",
-  "AI video tools",
-  "AI audio tools",
-  "AI productivity tools",
-  "best AI tools",
-  "AI tools comparison",
-  "free AI tools",
-  "AI tools 2026",
-];
-
 export interface BuildMetadataOptions {
   title?: string;
   description?: string;
@@ -42,7 +27,6 @@ export function buildMetadata(options: BuildMetadataOptions = {}): Metadata {
   return {
     title: fullTitle,
     description: desc,
-    keywords: DEFAULT_KEYWORDS,
     robots: noindex ? "noindex, follow" : "index, follow",
     // No `alternates.languages` (hreflang) here on purpose.
     //
@@ -89,33 +73,4 @@ export function buildMetadata(options: BuildMetadataOptions = {}): Metadata {
 // crawlers keep walking its outbound links into the rest of the site.
 export function robotsDirective(noindex = false): Metadata["robots"] {
   return noindex ? { index: false, follow: true } : { index: true, follow: true };
-}
-
-export function generateKeywords(category?: string, toolName?: string): string[] {
-  const base = [...DEFAULT_KEYWORDS];
-
-  if (category) {
-    const lower = category.toLowerCase();
-    base.push(`${lower} AI tools`, `${lower} tools`, `best AI tools for ${lower}`);
-  }
-
-  if (toolName) {
-    const lowerName = toolName.toLowerCase();
-    base.push(
-      lowerName,
-      `${lowerName} AI tool`,
-      `${lowerName} review`,
-      `${lowerName} alternative`,
-      `is ${lowerName} good`,
-      `${lowerName} vs`,
-      `${lowerName} free trial`,
-      `${lowerName} pricing`,
-      `${lowerName} features`,
-      `${lowerName} tutorial`,
-      `best ${lowerName}`,
-      `${lowerName} review 2026`,
-    );
-  }
-
-  return base;
 }

@@ -2,13 +2,16 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { X, ArrowRight, ArrowLeft } from 'lucide-react';
-import toolsData from '@/data/tools.json';
 
 const tourSteps = [
   {
     target: 'search',
     selector: 'input[type="text"][placeholder*="Search" i]',
-    title: `🔍 Search ${toolsData.length} Tools`,
+    // No tool count here on purpose. This component used to import all 762
+    // records from tools.json just to interpolate the number, and since it sits
+    // in the root layout that shipped the whole dataset to the browser on every
+    // page. The count is shown in StatsBanner instead.
+    title: '🔍 Search Every Tool',
     description: 'Type any tool name, category, or use case. Try "Rytr" or "blog writing".',
   },
   {

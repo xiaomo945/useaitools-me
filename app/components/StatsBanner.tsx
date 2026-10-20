@@ -1,8 +1,21 @@
-export default function StatsBanner() {
+/**
+ * Counts are passed in as props.
+ *
+ * They used to be hardcoded (533 tools / 441 articles) and had drifted well
+ * away from the real dataset, so the banner was advertising numbers the site
+ * could not support. app/page.tsx now feeds it the actual lengths.
+ */
+export default function StatsBanner({
+  toolCount,
+  postCount,
+}: {
+  toolCount: number;
+  postCount: number;
+}) {
   const stats = [
-    { value: '533', label: 'AI Tools', icon: '🛠️' },
+    { value: String(toolCount), label: 'AI Tools', icon: '🛠️' },
     { value: '6', label: 'Categories', icon: '📂' },
-    { value: '441', label: 'Articles', icon: '📝' },
+    { value: String(postCount), label: 'Articles', icon: '📝' },
     { value: 'Weekly', label: 'Updates', icon: '🔄' },
   ];
 

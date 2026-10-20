@@ -505,10 +505,11 @@ interface BlogPost {
 interface HomeClientProps {
   initialTools: Tool[];
   blogPosts: BlogPost[];
+  quickStartTools: Tool[];
   totalCount: number;
 }
 
-export default function HomeClient({ initialTools, blogPosts, totalCount }: HomeClientProps) {
+export default function HomeClient({ initialTools, blogPosts, quickStartTools, totalCount }: HomeClientProps) {
   const [displayedTools, setDisplayedTools] = useState<Tool[]>(initialTools);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
@@ -1744,7 +1745,7 @@ export default function HomeClient({ initialTools, blogPosts, totalCount }: Home
 
         {/* Quick Start: Profile-based Recommendations */}
         <div className="max-w-5xl mx-auto mb-4 sm:mb-8 px-3 sm:px-0">
-          <QuickStart />
+          <QuickStart tools={quickStartTools} />
         </div>
 
         {/* Recently Viewed Quick Access */}

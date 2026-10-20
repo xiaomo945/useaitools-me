@@ -5,7 +5,6 @@ import { Download, Mail, FileText, Image, BarChart3 } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Press Kit - Use AI Tools',
   description: 'Download Use AI Tools brand assets, logos, screenshots and key statistics. Media partners are welcome to use our resources for their coverage.',
-  keywords: ['press kit', 'brand assets', 'logo', 'statistics', 'media coverage'],
 };
 
 export default function PressPage() {

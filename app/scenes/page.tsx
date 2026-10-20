@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: 'AI Tool Scenes - Find the Right AI Tools for Your Task',
   description:
     'Browse curated AI tool collections by real-world scenario: blog writing, video creation, podcast production, SEO content, study, design, customer support and more.',
-  keywords: ['AI tool scenes', 'AI tools by use case', 'AI workflow collections'],
   alternates: { canonical: 'https://useaitools.me/scenes' },
 };
 

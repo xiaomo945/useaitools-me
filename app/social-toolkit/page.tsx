@@ -5,7 +5,6 @@ import { Share2, MessageSquare, BookOpen, CheckCircle, ArrowRight, Zap, Target, 
 export const metadata: Metadata = {
   title: 'Social Media Promotion Toolkit - Use AI Tools',
   description: 'Generate ready-to-use promotion templates for Twitter, Reddit, Dev.to and more, and share the AI tools you love in seconds.',
-  keywords: ['social media promotion', 'AI tool sharing', 'Twitter promotion', 'Reddit posting', 'content templates'],
 };
 
 const platforms = [

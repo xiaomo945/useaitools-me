@@ -288,7 +288,6 @@ export default async function BlogDetailPage({
       '@type': 'WebPage',
       '@id': `https://useaitools.me/blog/${slug}`
     },
-    keywords: `${post.category}, AI tools, ${post.category.toLowerCase()} tools, best AI tools 2026`,
     inLanguage: 'en',
     copyrightHolder: {
       '@type': 'Organization',

@@ -31,7 +31,6 @@ export async function generateMetadata({ params }: ComparePageProps): Promise<Me
   return {
     title: `${tool1.name} vs ${tool2.name}: Which is Best in 2026? – Use AI Tools`,
     description: `Compare ${tool1.name} and ${tool2.name} side-by-side. Features, pricing, pros & cons. Find the right ${tool1.category.toLowerCase()} AI tool for your needs.`,
-    keywords: [`${tool1.name} vs ${tool2.name}`, `compare ${tool1.name} ${tool2.name}`, `${tool1.category} AI tools comparison`],
     alternates: {
       canonical: `https://useaitools.me/compare/${slugs}`,
     },

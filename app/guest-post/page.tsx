@@ -5,7 +5,6 @@ import { PenTool, FileText, CheckCircle, ArrowRight, Users, TrendingUp, Globe } 
 export const metadata: Metadata = {
   title: 'Submit a Guest Post - Use AI Tools',
   description: 'Write for Use AI Tools and share your AI tool reviews, hands-on experience and industry insights with thousands of AI enthusiasts.',
-  keywords: ['guest post', 'contribute', 'AI tool reviews', 'content collaboration', 'write for us'],
 };
 
 const benefits = [

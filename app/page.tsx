@@ -12,6 +12,7 @@ import { ArrowRight } from 'lucide-react';
 import type { Tool } from '@/types';
 import type { Metadata } from 'next';
 import { getAffiliateLink } from '@/lib/affiliate';
+import { QUICK_START_TOOL_IDS } from '@/lib/quickStartProfiles';
 
 const SceneExplorer = dynamic(() => import('@/app/components/SceneExplorer'), {
   loading: () => <div className="h-64 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-2xl" />,
@@ -63,14 +64,26 @@ export default function Home() {
   // Only pass first 12 tools to client for initial load (performance optimization)
   const initialTools = sortedTools.slice(0, 12);
 
-  // Only hand the client the blog fields it actually renders.
-  // Post bodies average ~7KB and are never used client-side, so passing all 786
-  // of them serialized ~5.3MB into the RSC payload. Keep the newest 120 for
-  // search suggestions, and images only for the 5 cards that are displayed.
+  // Quick Start renders 16 specific tools by id. Resolve them here on the
+  // server instead of letting the client component import all 762.
+  // Same cast as enrichedTools above: the raw JSON types skill_level as string
+  // while the app's Tool type narrows it.
+  const quickStartTools = tools
+    .filter(t => QUICK_START_TOOL_IDS.includes(t.id))
+    .map(t => ({ ...t, affiliate_link: getAffiliateLink(t) })) as unknown as Tool[];
+
+  // Only hand the client the blog fields it actually renders. Listed
+  // explicitly rather than spread: a spread silently forwards every field a
+  // post gains in future, and post bodies alone average ~7KB each.
+  // HomeClient uses these for search (id, title, slug, description, category)
+  // and for the 5-card "latest guides" grid (date, images[0]).
   const clientBlogPosts = blogPosts.slice(0, 120).map((post, index) => ({
-    ...post,
-    content: '',
-    tldr: undefined,
+    id: post.id,
+    title: post.title,
+    slug: post.slug,
+    date: post.date,
+    description: post.description,
+    category: post.category,
     images: index < 5 ? post.images : [],
   }));
 
@@ -177,11 +190,12 @@ export default function Home() {
       <HomeClient
         initialTools={initialTools}
         blogPosts={clientBlogPosts}
+        quickStartTools={quickStartTools}
         totalCount={enrichedTools.length}
       />
       <FeaturedTools tools={selected} />
       <TrendingTools tools={sortedTools} />
-      <StatsBanner />
+      <StatsBanner toolCount={enrichedTools.length} postCount={blogPosts.length} />
       
       {/* Latest Blog Posts - Internal Linking */}
       <div className="mb-16">
