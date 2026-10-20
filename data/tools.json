@@ -37024,5 +37024,1905 @@
         "Recompilation needed whenever intent changes"
       ]
     }
+  },
+  {
+    "id": 1766,
+    "name": "DeepInfer",
+    "description": "DeepInfer is a high-performance, large-scale inference framework for DeepSeek models, open-sourced by DeepSeek. Written in Python, it targets teams serving DeepSeek checkpoints at scale rather than running a single local model.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/deepseek-ai/DeepInfer",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "DeepInfer is a high-performance, large-scale inference framework for DeepSeek models, open-sourced by DeepSeek. Written in Python, it targets teams serving DeepSeek checkpoints at scale rather than running a single local model.",
+    "last_updated": "2026-10-20",
+    "skill_level": "advanced",
+    "best_for": [
+      "Teams serving DeepSeek models in production",
+      "Engineers who need large-scale inference rather than a demo runner",
+      "Python infrastructure teams tuning throughput"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Production DeepSeek serving",
+        "detail": "Run DeepSeek checkpoints behind a service that is built for scale instead of adapting a research script."
+      },
+      {
+        "title": "Throughput work",
+        "detail": "Use a dedicated inference framework when batch size, batching policy and memory layout start dominating latency."
+      },
+      {
+        "title": "Self-hosted model stack",
+        "detail": "Keep inference on your own hardware when a hosted API is not an option for your data."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Built specifically for DeepSeek models",
+        "Open source, so the serving path is auditable",
+        "Targets large-scale deployment, not just single-GPU use"
+      ],
+      "cons": [
+        "Newly released, so the surrounding tooling is thin",
+        "Scoped to DeepSeek models rather than any checkpoint"
+      ]
+    }
+  },
+  {
+    "id": 1767,
+    "name": "Rea",
+    "description": "Rea is an open-source TypeScript project for reverse engineering anything with agents, from app behavior down to native binaries. It points coding agents at a target and lets them work outward from observable behavior instead of asking you to supply source.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/morluto/rea",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Rea is an open-source TypeScript project for reverse engineering anything with agents, from app behavior down to native binaries. It points coding agents at a target and lets them work outward from observable behavior instead of asking you to supply source.",
+    "last_updated": "2026-10-12",
+    "skill_level": "advanced",
+    "best_for": [
+      "Engineers investigating closed-source binaries",
+      "Security researchers documenting unknown app behavior",
+      "Developers who want agents driving the tedious first pass"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Behavior-first investigation",
+        "detail": "Start from what an app does at runtime and let the agent form hypotheses before any disassembly."
+      },
+      {
+        "title": "Native binary work",
+        "detail": "Hand an agent a compiled target and get a structured first pass instead of a blank disassembly window."
+      },
+      {
+        "title": "Documentation of unknowns",
+        "detail": "Turn a reverse engineering session into notes another engineer can pick up."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Covers app behavior through to native binaries in one tool",
+        "Agent-driven, so the mechanical pass is automated",
+        "Open source"
+      ],
+      "cons": [
+        "Early-stage project",
+        "Reverse engineering output still needs expert review"
+      ]
+    }
+  },
+  {
+    "id": 1768,
+    "name": "Harness2",
+    "description": "Harness2 is a plug-and-play framework for recursive agent harnessing from Google Research. A harness is the system around a model that lets it act as an agent: prompts, tools, memory, skills and orchestration. Harness2 is built for an open world where agents meet tasks unseen during harness design, and it ships benchmark guides including JobBench.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/google-research/harness2",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Harness2 is a plug-and-play framework for recursive agent harnessing from Google Research. A harness is the system around a model that lets it act as an agent: prompts, tools, memory, skills and orchestration. Harness2 is built for an open world where agents meet tasks unseen during harness design, and it ships benchmark guides including JobBench.",
+    "last_updated": "2026-10-19",
+    "skill_level": "advanced",
+    "best_for": [
+      "Researchers optimizing the system around a model",
+      "Teams comparing harness designs on benchmarks",
+      "Engineers whose agents face tasks outside the design set"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Harness optimization",
+        "detail": "Treat prompts, tools and memory as tunable parts of one system instead of fixing them by hand."
+      },
+      {
+        "title": "Recursive self-improvement experiments",
+        "detail": "Let a harness be applied to itself and measure whether the second level helps."
+      },
+      {
+        "title": "Benchmark runs",
+        "detail": "Run the bundled JobBench setup to compare harness variants under the same conditions."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Clear definition of what a harness is and is not",
+        "Ships benchmark guides and a working JobBench setup",
+        "Apache 2.0 licensed"
+      ],
+      "cons": [
+        "Research code, so expect rough edges",
+        "Assumes you already have a model and a task set to plug in"
+      ]
+    }
+  },
+  {
+    "id": 1769,
+    "name": "KiviDB",
+    "description": "KiviDB is a fast, multi-threaded Redis and Valkey alternative written in Rust. It is drop-in compatible and ships full-text and vector search built in, so the same store can serve caches and the embedding lookups an agent stack needs.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/kividbio/kividb",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "KiviDB is a fast, multi-threaded Redis and Valkey alternative written in Rust. It is drop-in compatible and ships full-text and vector search built in, so the same store can serve caches and the embedding lookups an agent stack needs.",
+    "last_updated": "2026-10-19",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams that want one store for cache and vector search",
+      "Rust infrastructure that avoids a separate search cluster",
+      "Migrating off Redis without rewriting clients"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Drop-in cache replacement",
+        "detail": "Point existing Redis clients at KiviDB and keep working while gaining multi-threaded throughput."
+      },
+      {
+        "title": "Built-in vector search",
+        "detail": "Store embeddings next to the hot data instead of running a second service for retrieval."
+      },
+      {
+        "title": "Full-text over cached data",
+        "detail": "Query cached records by text without exporting them to a search engine."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Drop-in compatibility with Redis and Valkey",
+        "Full-text and vector search in the same binary",
+        "Multi-threaded by design"
+      ],
+      "cons": [
+        "Young project compared with Redis",
+        "Rust deployment means no distro packages everywhere"
+      ]
+    }
+  },
+  {
+    "id": 1770,
+    "name": "Maxwell",
+    "description": "Maxwell is described by doubleAI as the first code execution model: it improves code while it runs, adapting to hardware and data, with every improvement formally proven equivalent to the original code. Access is through an early access programme.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://heymaxwell.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Maxwell is described by doubleAI as the first code execution model: it improves code while it runs, adapting to hardware and data, with every improvement formally proven equivalent to the original code. Access is through an early access programme.",
+    "last_updated": "2026-10-19",
+    "skill_level": "advanced",
+    "best_for": [
+      "Performance engineers chasing provably safe optimizations",
+      "Teams running the same kernels across different hardware",
+      "Researchers interested in execution-level code models"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Runtime code improvement",
+        "detail": "Let the model adjust code based on how it actually executes rather than only how it reads."
+      },
+      {
+        "title": "Hardware adaptation",
+        "detail": "Retarget the same routine to different hardware while keeping equivalence proofs."
+      },
+      {
+        "title": "Proof-backed refactors",
+        "detail": "Get an equivalence proof with each change instead of trusting a benchmark delta."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Equivalence is formally proven, not just tested",
+        "Adapts to real hardware and data",
+        "Targets a layer most code tools ignore"
+      ],
+      "cons": [
+        "Early access only at launch",
+        "Claims are vendor-stated and not yet independently benchmarked"
+      ]
+    }
+  },
+  {
+    "id": 1771,
+    "name": "Jevals",
+    "description": "Jevals runs agent evals and guardrails as Jev decisions: one request per trace, at a fraction of a cent, fast enough to sit inside the agent loop. It runs locally with Kev or Laya, so evaluation does not require shipping traces to a hosted judge.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/openlayer-ai/jevals",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Jevals runs agent evals and guardrails as Jev decisions: one request per trace, at a fraction of a cent, fast enough to sit inside the agent loop. It runs locally with Kev or Laya, so evaluation does not require shipping traces to a hosted judge.",
+    "last_updated": "2026-09-20",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams that need guardrails inside the loop, not after it",
+      "Engineers replacing LLM-as-a-judge with typed decisions",
+      "Local-first stacks that cannot send traces out"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Per-trace evaluation",
+        "detail": "Score every trace with one cheap request instead of sampling a small share of runs."
+      },
+      {
+        "title": "Inline guardrails",
+        "detail": "Block or reroute an agent step when the decision model flags it, while the loop is still running."
+      },
+      {
+        "title": "Local judging",
+        "detail": "Run evaluation on your own machine with Kev or Laya and keep trace data in house."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Cheap enough to evaluate every trace",
+        "Typed decisions instead of a verbose judge prompt",
+        "Runs locally"
+      ],
+      "cons": [
+        "Depends on the Jev model family",
+        "Newer than established eval frameworks"
+      ]
+    }
+  },
+  {
+    "id": 1772,
+    "name": "Veda",
+    "description": "Veda is an agentic-native operating system written in Rust: a hobby OS designed around AI agents as the primary actor rather than a human-driven desktop. It is aimed at people who want to see what an OS looks like when the agent is the user.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/vahmoh25/Veda",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Veda is an agentic-native operating system written in Rust: a hobby OS designed around AI agents as the primary actor rather than a human-driven desktop. It is aimed at people who want to see what an OS looks like when the agent is the user.",
+    "last_updated": "2026-10-11",
+    "skill_level": "advanced",
+    "best_for": [
+      "OS hobbyists exploring agent-first design",
+      "Engineers studying agent-system interfaces",
+      "Rust developers interested in system-level agents"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Agent-first OS experiments",
+        "detail": "Run a system where scheduling and interfaces assume an agent is driving."
+      },
+      {
+        "title": "Studying system interfaces",
+        "detail": "See what changes when the consumer of an API is a model instead of a person."
+      },
+      {
+        "title": "Rust systems practice",
+        "detail": "Work on a Rust codebase that spans kernel-level concerns."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Clear point of view: agents are the primary user",
+        "Readable Rust codebase",
+        "Small enough to understand end to end"
+      ],
+      "cons": [
+        "Hobby OS, not a daily-driver system",
+        "Documentation is still thin"
+      ]
+    }
+  },
+  {
+    "id": 1773,
+    "name": "AX Check",
+    "description": "AX Check grades how far a coding agent can get with your product. It inspects your site, then has three agents try to onboard end to end, and returns concrete guidance on what to fix in your docs, marketing site, CLI, MCP server or Skills files. A public leaderboard ranks products by grade.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://www.ax-check.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AX Check grades how far a coding agent can get with your product. It inspects your site, then has three agents try to onboard end to end, and returns concrete guidance on what to fix in your docs, marketing site, CLI, MCP server or Skills files. A public leaderboard ranks products by grade.",
+    "last_updated": "2026-09-17",
+    "skill_level": "beginner",
+    "best_for": [
+      "Developer tool companies whose users are now agents",
+      "Docs teams that need a prioritised fix list",
+      "Teams shipping MCP servers or agent Skills"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Agent onboarding audit",
+        "detail": "Let three agents attempt a real signup-to-first-call flow and watch where they stall."
+      },
+      {
+        "title": "Docs triage",
+        "detail": "Turn vague complaints about agent usability into a list of pages and endpoints to fix."
+      },
+      {
+        "title": "Benchmark against peers",
+        "detail": "Compare your grade with other developer products on the public leaderboard."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Tests with real agent sessions, not a checklist",
+        "Covers docs, marketing site, CLI, MCP and Skills",
+        "Public leaderboard gives context"
+      ],
+      "cons": [
+        "Pricing is not published",
+        "Grades come from a third party's agent setup"
+      ]
+    }
+  },
+  {
+    "id": 1774,
+    "name": "Jeff",
+    "description": "Jeff is a read-only command line code review tool from Alurith, written in Go, that uses Jev decision models to review changes. It reads a diff and reports issues without writing to your repository.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/Alurith/jeff",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Jeff is a read-only command line code review tool from Alurith, written in Go, that uses Jev decision models to review changes. It reads a diff and reports issues without writing to your repository.",
+    "last_updated": "2026-09-18",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developers who want a second pass before opening a PR",
+      "Teams that prefer read-only tooling in CI",
+      "Reviewers who want findings without an agent editing code"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Pre-PR review",
+        "detail": "Run Jeff over a diff locally and fix what it finds before anyone else sees the branch."
+      },
+      {
+        "title": "Read-only CI gate",
+        "detail": "Add a review step that reports findings and cannot modify the tree."
+      },
+      {
+        "title": "Understanding an unfamiliar change",
+        "detail": "Ask for a semantic read of a diff in a codebase you do not know."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Read-only by design",
+        "CLI fits into existing workflows",
+        "Uses typed decision models rather than a chat judge"
+      ],
+      "cons": [
+        "Depends on the Jev model family",
+        "Go binary rather than a language-native package"
+      ]
+    }
+  },
+  {
+    "id": 1775,
+    "name": "InstinctFlash",
+    "description": "InstinctFlash is a high-performance serving runtime for robotics models from General Instinct. It targets the latency and throughput constraints of robot control loops rather than batch inference on a server.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/General-Instinct/InstinctFlash",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "InstinctFlash is a high-performance serving runtime for robotics models from General Instinct. It targets the latency and throughput constraints of robot control loops rather than batch inference on a server.",
+    "last_updated": "2026-09-22",
+    "skill_level": "advanced",
+    "best_for": [
+      "Robotics teams serving policy models on real hardware",
+      "Engineers fighting control-loop latency",
+      "Researchers moving models off a laptop and onto a robot"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "On-robot policy serving",
+        "detail": "Serve a trained policy with a runtime tuned for tight control loops."
+      },
+      {
+        "title": "Latency budgets",
+        "detail": "Measure and hold inference latency inside the cycle time your platform requires."
+      },
+      {
+        "title": "Fleet deployment",
+        "detail": "Standardise how models are served across several robots."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Purpose-built for robotics models",
+        "Focused on serving rather than training",
+        "Open source"
+      ],
+      "cons": [
+        "Narrow domain: useful mostly if you run robots",
+        "Early project with limited documentation"
+      ]
+    }
+  },
+  {
+    "id": 1776,
+    "name": "Engrams",
+    "description": "Engrams is an open-source alternative to Devin from Cortex Apps: an AI software factory for the enterprise, written in Rust. It aims at the whole path from ticket to merged change rather than a single coding assistant session.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/cortexapps/engrams",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Engrams is an open-source alternative to Devin from Cortex Apps: an AI software factory for the enterprise, written in Rust. It aims at the whole path from ticket to merged change rather than a single coding assistant session.",
+    "last_updated": "2026-10-01",
+    "skill_level": "advanced",
+    "best_for": [
+      "Engineering orgs that want a self-hosted Devin-style system",
+      "Teams with compliance constraints on coding agents",
+      "Platform groups standardising agent workflows"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Self-hosted software factory",
+        "detail": "Run an agent pipeline from issue to pull request inside your own environment."
+      },
+      {
+        "title": "Enterprise controls",
+        "detail": "Keep code and tickets inside your perimeter instead of sending them to a hosted agent."
+      },
+      {
+        "title": "Standardising agent work",
+        "detail": "Give every team the same agent workflow instead of one prompt per developer."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Open source alternative to a hosted agent product",
+        "Enterprise framing rather than solo-developer framing",
+        "Rust core"
+      ],
+      "cons": [
+        "Heavy setup compared with a hosted agent",
+        "New project, so operational maturity is unproven"
+      ]
+    }
+  },
+  {
+    "id": 1777,
+    "name": "Perspica",
+    "description": "Perspica is a Rust tool for reviewing code changes by what they do and learning the concepts behind them. It presents a change in terms of behavior rather than line diffs, so a reviewer understands the effect before reading the implementation.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/sshah03/perspica",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Perspica is a Rust tool for reviewing code changes by what they do and learning the concepts behind them. It presents a change in terms of behavior rather than line diffs, so a reviewer understands the effect before reading the implementation.",
+    "last_updated": "2026-09-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Reviewers who inherit large unfamiliar diffs",
+      "Developers learning a new codebase",
+      "Teams that review by behavior rather than by line"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Behavior-first review",
+        "detail": "See what a change does before deciding whether the implementation is right."
+      },
+      {
+        "title": "Onboarding to a codebase",
+        "detail": "Use change review as a way to learn the concepts behind unfamiliar modules."
+      },
+      {
+        "title": "Catching intent mismatches",
+        "detail": "Spot a diff that does something other than what the commit message claims."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Reviews by behavior, not by line noise",
+        "Rust CLI that runs locally",
+        "Doubles as a learning aid"
+      ],
+      "cons": [
+        "Semantic summaries still need a human check",
+        "Young project"
+      ]
+    }
+  },
+  {
+    "id": 1778,
+    "name": "CallSitter",
+    "description": "CallSitter is an AI that answers your phone: scammers get their time wasted, sales calls get a polite no, and real callers get their message taken. Calls divert to a Telnyx number where a live voice agent handles them, and recordings of real scam, spam and genuine calls are published so you can hear how it behaves.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://github.com/szerintedmi/callsitter",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "CallSitter is an AI that answers your phone: scammers get their time wasted, sales calls get a polite no, and real callers get their message taken. Calls divert to a Telnyx number where a live voice agent handles them, and recordings of real scam, spam and genuine calls are published so you can hear how it behaves.",
+    "last_updated": "2026-10-18",
+    "skill_level": "advanced",
+    "best_for": [
+      "People flooded with spam and scam calls",
+      "Anyone who wants messages taken rather than voicemail",
+      "Developers studying live voice agent behavior"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Scam call deflection",
+        "detail": "Let a voice agent hold scammers on the line instead of you."
+      },
+      {
+        "title": "Message taking",
+        "detail": "Have genuine callers' messages captured and passed on."
+      },
+      {
+        "title": "Voice agent testing",
+        "detail": "Hear published recordings of real calls to judge how the agent handles pressure."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Real call recordings are published, not just claimed",
+        "Handles scams, sales and genuine callers differently",
+        "Open source"
+      ],
+      "cons": [
+        "Requires a number forwarding setup and a telephony account",
+        "Live voice agent costs accrue per call"
+      ]
+    }
+  },
+  {
+    "id": 1779,
+    "name": "Babytalk",
+    "description": "Babytalk is a fully offline speech-to-text and text-to-speech system optimised for ESP32-S3 and ESP32-P4 boards, running under Micropython and AtomVM. It includes a finetuned STT model for noisy environments, high-performance 4- and 8-bit integer kernels for Xtensa and RISC-V vector units, and a data generation, field capture and finetuning framework.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://github.com/tlack/babytalk",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Babytalk is a fully offline speech-to-text and text-to-speech system optimised for ESP32-S3 and ESP32-P4 boards, running under Micropython and AtomVM. It includes a finetuned STT model for noisy environments, high-performance 4- and 8-bit integer kernels for Xtensa and RISC-V vector units, and a data generation, field capture and finetuning framework.",
+    "last_updated": "2026-10-09",
+    "skill_level": "advanced",
+    "best_for": [
+      "Embedded developers adding voice to a device",
+      "Makers who need offline speech with no cloud bill",
+      "Anyone building voice interfaces for noisy settings"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Offline voice commands",
+        "detail": "Add speech input to an ESP32 device with no network dependency."
+      },
+      {
+        "title": "Noisy-environment recognition",
+        "detail": "Use the finetuned model where a general STT model fails."
+      },
+      {
+        "title": "Custom model finetuning",
+        "detail": "Capture field audio and finetune with the bundled data generation framework."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Fully offline, no cloud round trip",
+        "Optimised integer kernels for Xtensa and RISC-V",
+        "Includes the finetuning pipeline, not just inference"
+      ],
+      "cons": [
+        "Hardware-specific: ESP32-S3 and P4 only",
+        "Embedded work: expect to compile and flash"
+      ]
+    }
+  },
+  {
+    "id": 1780,
+    "name": "HN Hiring Ranker",
+    "description": "A Python tool that ranks every Hacker News Who is hiring post against your resume, then drafts emails and prefills applications from a local dashboard. It runs on Claude Code, so your resume and the ranking stay on your own machine.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/MaxwellVolz/hn_whos_hiring",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A Python tool that ranks every Hacker News Who is hiring post against your resume, then drafts emails and prefills applications from a local dashboard. It runs on Claude Code, so your resume and the ranking stay on your own machine.",
+    "last_updated": "2026-10-02",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Job seekers working the HN hiring threads",
+      "Anyone who wants ranking done locally",
+      "People tired of copying the same details into forms"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Resume-to-post matching",
+        "detail": "Rank hundreds of hiring comments against your resume instead of reading them in order."
+      },
+      {
+        "title": "Drafted outreach",
+        "detail": "Generate a first draft of the email for each match."
+      },
+      {
+        "title": "Prefilled applications",
+        "detail": "Carry your details into applications from the local dashboard."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Everything runs locally with Claude Code",
+        "Turns an unreadable thread into a ranked list",
+        "Also drafts the outreach"
+      ],
+      "cons": [
+        "Requires a Claude Code setup",
+        "Only covers Hacker News hiring threads"
+      ]
+    }
+  },
+  {
+    "id": 1781,
+    "name": "Reticle",
+    "description": "Reticle answers the question your agent will not: did it actually work. It drives your real running app and reads what happened, then returns a verdict of pass, fail or cannot tell with the file and line to fix. It brings Jev-style machine-native runtime perception to web and desktop applications.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/reticlehq/reticle",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Reticle answers the question your agent will not: did it actually work. It drives your real running app and reads what happened, then returns a verdict of pass, fail or cannot tell with the file and line to fix. It brings Jev-style machine-native runtime perception to web and desktop applications.",
+    "last_updated": "2026-10-20",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams whose agents claim completion without proof",
+      "Developers who want runtime verification, not screenshots",
+      "Web and desktop app maintainers"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Verifying agent work",
+        "detail": "Have Reticle exercise the running app after an agent says it is done."
+      },
+      {
+        "title": "Pointing at the fix",
+        "detail": "Get a file and line reference with a failure instead of a vague report."
+      },
+      {
+        "title": "Honest unknowns",
+        "detail": "Accept a cannot-tell verdict when the runtime evidence is genuinely missing."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Tests the running app, not a mock",
+        "Returns file and line with failures",
+        "Explicit cannot-tell state avoids false confidence"
+      ],
+      "cons": [
+        "Licence mixes Apache 2.0 and FSL terms",
+        "Requires the app to be runnable in the verification environment"
+      ]
+    }
+  },
+  {
+    "id": 1782,
+    "name": "Pi Cowboy",
+    "description": "Pi Cowboy is a Herdr-native agent orchestrator for Pi. Alongside Pi itself it can run Codex, Claude Code, OpenCode and more as subagents, each in an isolated copy-on-write Git worktree so parallel agents do not collide in the same tree.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/electric-dragon-80000v/pi-cowboy",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pi Cowboy is a Herdr-native agent orchestrator for Pi. Alongside Pi itself it can run Codex, Claude Code, OpenCode and more as subagents, each in an isolated copy-on-write Git worktree so parallel agents do not collide in the same tree.",
+    "last_updated": "2026-10-18",
+    "skill_level": "advanced",
+    "best_for": [
+      "Developers running several coding agents at once",
+      "Users of Pi who also pay for Codex or Claude Code",
+      "Teams that want isolation without cloning repositories"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Parallel subagents",
+        "detail": "Fan a task out to several agents and merge what survives review."
+      },
+      {
+        "title": "Mixed-vendor agents",
+        "detail": "Drive Codex, Claude Code and OpenCode from one orchestrator."
+      },
+      {
+        "title": "Collision-free worktrees",
+        "detail": "Give each subagent its own copy-on-write worktree."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs multiple agent vendors as subagents",
+        "Copy-on-write worktrees keep runs isolated",
+        "Open source"
+      ],
+      "cons": [
+        "Assumes you already use Pi",
+        "Orchestrating several paid agents multiplies cost"
+      ]
+    }
+  },
+  {
+    "id": 1783,
+    "name": "Karotte",
+    "description": "Karotte is a Python framework for building robust reinforcement learning environments to train aligned AI. It focuses on the environment layer, where most RL training runs actually break.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/preferencemodel/karotte",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Karotte is a Python framework for building robust reinforcement learning environments to train aligned AI. It focuses on the environment layer, where most RL training runs actually break.",
+    "last_updated": "2026-10-07",
+    "skill_level": "advanced",
+    "best_for": [
+      "Researchers building RL environments",
+      "Teams training agents with preference or alignment objectives",
+      "Engineers whose training runs break in the environment, not the model"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Environment authoring",
+        "detail": "Define tasks and reward surfaces in a framework built for robustness."
+      },
+      {
+        "title": "Alignment training",
+        "detail": "Run RL against objectives you care about beyond raw task score."
+      },
+      {
+        "title": "Reducing training failures",
+        "detail": "Use a structured environment layer instead of ad-hoc scripts."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Targets the failure-prone environment layer",
+        "Python, so it fits existing RL stacks",
+        "Open source"
+      ],
+      "cons": [
+        "Requires RL expertise to use well",
+        "Young project"
+      ]
+    }
+  },
+  {
+    "id": 1784,
+    "name": "Capy Flash",
+    "description": "Capy Flash runs Qwen3.8-Flash-Next, an MoE model in NVFP4, and Qwen3.8-27B on two 16 GB consumer GPUs. It uses two-GPU tensor parallelism with experts offloaded to the CPU, so large MoE checkpoints fit on hardware a hobbyist can own.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/ValerioDolci/capy-flash",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Capy Flash runs Qwen3.8-Flash-Next, an MoE model in NVFP4, and Qwen3.8-27B on two 16 GB consumer GPUs. It uses two-GPU tensor parallelism with experts offloaded to the CPU, so large MoE checkpoints fit on hardware a hobbyist can own.",
+    "last_updated": "2026-10-16",
+    "skill_level": "advanced",
+    "best_for": [
+      "Hobbyists with two consumer GPUs",
+      "Engineers testing MoE serving without a datacentre card",
+      "Anyone offloading experts to CPU RAM"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Two-GPU MoE serving",
+        "detail": "Split a large MoE model across two 16 GB cards with tensor parallelism."
+      },
+      {
+        "title": "CPU expert offload",
+        "detail": "Keep experts in system RAM when they do not fit in VRAM."
+      },
+      {
+        "title": "Local throughput testing",
+        "detail": "Measure what consumer hardware can actually sustain for a given checkpoint."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Targets realistic consumer hardware",
+        "Combines tensor parallel with expert offload",
+        "Open source"
+      ],
+      "cons": [
+        "Tied to specific Qwen checkpoints",
+        "C++ build and tuning required"
+      ]
+    }
+  },
+  {
+    "id": 1785,
+    "name": "Spotnote",
+    "description": "Spotnote is a Vite plugin for giving UI feedback to coding agents. Instead of describing a visual bug in words, you annotate the running dev server and the note reaches the agent with the context it needs.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/harukikuri/spotnote",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Spotnote is a Vite plugin for giving UI feedback to coding agents. Instead of describing a visual bug in words, you annotate the running dev server and the note reaches the agent with the context it needs.",
+    "last_updated": "2026-10-19",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Front-end developers working with coding agents",
+      "Teams where design feedback loses precision in chat",
+      "Vite projects of any size"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Pointing at a visual bug",
+        "detail": "Annotate the element that is wrong rather than describing its position."
+      },
+      {
+        "title": "Faster fix loops",
+        "detail": "Cut the round trips spent clarifying which component was meant."
+      },
+      {
+        "title": "Design review handoff",
+        "detail": "Pass reviewer comments into the agent's context directly."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Removes the worst part of describing UI bugs in text",
+        "Installs as a Vite plugin",
+        "Open source"
+      ],
+      "cons": [
+        "Vite only",
+        "New plugin with a small community"
+      ]
+    }
+  },
+  {
+    "id": 1786,
+    "name": "IHMT Memory",
+    "description": "IHMT Memory gives long-term memory to AI coding agents including Claude Code, Codex and opencode, structured as a tree of plain files. Memory lives in your repository as readable files rather than in a database the agent cannot show you.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/gonzaroman/IHMT-MEMORY",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "IHMT Memory gives long-term memory to AI coding agents including Claude Code, Codex and opencode, structured as a tree of plain files. Memory lives in your repository as readable files rather than in a database the agent cannot show you.",
+    "last_updated": "2026-10-12",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Coding agents that need to remember across sessions",
+      "Developers who want to read and edit agent memory",
+      "Teams using several different agent CLIs"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Cross-session memory",
+        "detail": "Keep decisions and conventions available to the agent next week."
+      },
+      {
+        "title": "Auditable memory",
+        "detail": "Read and diff the memory tree yourself instead of trusting a black box."
+      },
+      {
+        "title": "One memory for several agents",
+        "detail": "Share the same tree between Claude Code, Codex and opencode."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Memory is plain files you can inspect",
+        "Works with multiple agent CLIs",
+        "Hierarchical tree rather than a flat log"
+      ],
+      "cons": [
+        "Plain files mean you own the tidying",
+        "Python install and per-agent wiring required"
+      ]
+    }
+  },
+  {
+    "id": 1787,
+    "name": "Maali",
+    "description": "Maali is a personal finance app with an AI analyst that runs entirely on your own computer: it works with the Wi-Fi off, because your data never leaves the machine. You drop in your bank's statement files or connect once through SimpleFIN, and Maali sorts every charge and tells you how the month is going. Available for Mac and Windows.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://maali.app/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Maali is a personal finance app with an AI analyst that runs entirely on your own computer: it works with the Wi-Fi off, because your data never leaves the machine. You drop in your bank's statement files or connect once through SimpleFIN, and Maali sorts every charge and tells you how the month is going. Available for Mac and Windows.",
+    "last_updated": "2026-10-19",
+    "skill_level": "beginner",
+    "best_for": [
+      "People who will not upload bank data to a cloud service",
+      "Users who want an AI analyst over their own statements",
+      "Mac and Windows users tired of subscription budgeting apps"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Offline spending analysis",
+        "detail": "Import statements and get categorised spending with no network involved."
+      },
+      {
+        "title": "Monthly check-in",
+        "detail": "Ask the local analyst how the month is going."
+      },
+      {
+        "title": "SimpleFIN connection",
+        "detail": "Connect once to pull transactions instead of exporting files by hand."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs locally, including the AI analyst",
+        "Works fully offline",
+        "Mac and Windows builds available"
+      ],
+      "cons": [
+        "Pricing details are not on the landing page",
+        "Desktop only, no mobile app mentioned"
+      ]
+    }
+  },
+  {
+    "id": 1788,
+    "name": "Agent Chrome Relay",
+    "description": "Agent Chrome Relay lets your coding agents, including Claude Code, Codex, Cursor, Paseo and pi, use your everyday Chrome with your real logins. Agents drive background tabs in the browser you already use, so they inherit sessions instead of re-authenticating in a headless profile. There is also an iPhone app in TestFlight.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/aindeev/agent-chrome-relay",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Agent Chrome Relay lets your coding agents, including Claude Code, Codex, Cursor, Paseo and pi, use your everyday Chrome with your real logins. Agents drive background tabs in the browser you already use, so they inherit sessions instead of re-authenticating in a headless profile. There is also an iPhone app in TestFlight.",
+    "last_updated": "2026-10-10",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agents that need sites where you are already signed in",
+      "Developers who dislike headless browser setup",
+      "Anyone automating work behind a login"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Logged-in browsing",
+        "detail": "Let an agent work in a tab that already has your session."
+      },
+      {
+        "title": "Background automation",
+        "detail": "Run agent browsing in background tabs without taking over your foreground window."
+      },
+      {
+        "title": "Testing against real accounts",
+        "detail": "Exercise flows that require an authenticated user."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Uses your real Chrome profile and logins",
+        "Works with several agent CLIs",
+        "MIT licensed"
+      ],
+      "cons": [
+        "Giving an agent access to your logged-in browser is a real risk",
+        "iPhone companion is a TestFlight beta"
+      ]
+    }
+  },
+  {
+    "id": 1789,
+    "name": "FlexChords",
+    "description": "FlexChords extracts guitar chords, key and tempo from any YouTube video or audio track so you can play along in real time with a synced chord chart. The site reports 92 percent chord accuracy on songs the model has never heard, measured against the MIREX standard, and supports instant transposition.",
+    "category": "Audio",
+    "pricing": "Unknown",
+    "url": "https://www.flexchords.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "FlexChords extracts guitar chords, key and tempo from any YouTube video or audio track so you can play along in real time with a synced chord chart. The site reports 92 percent chord accuracy on songs the model has never heard, measured against the MIREX standard, and supports instant transposition.",
+    "last_updated": "2026-10-20",
+    "skill_level": "beginner",
+    "best_for": [
+      "Guitarists learning songs from video",
+      "Players who need a chart in a different key",
+      "Teachers preparing play-along material"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Play along with a video",
+        "detail": "Get a chord chart synced to the track you are listening to."
+      },
+      {
+        "title": "Instant transposition",
+        "detail": "Move a song into a key that suits your voice or capo."
+      },
+      {
+        "title": "Key and tempo detection",
+        "detail": "Find the key and tempo before you start practising."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works from a YouTube link or an audio file",
+        "Publishes how accuracy is measured",
+        "Transposition built in"
+      ],
+      "cons": [
+        "Accuracy is self-reported",
+        "Pricing is not stated on the landing page"
+      ]
+    }
+  },
+  {
+    "id": 1790,
+    "name": "Endo",
+    "description": "Endo is the Higher Order Harness: a unified chat interface that composes any agent, on the subscription you already have, into any workflow. It ships as a Mac app for Apple Silicon and is MIT licensed.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/longsurf-ai/endo",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Endo is the Higher Order Harness: a unified chat interface that composes any agent, on the subscription you already have, into any workflow. It ships as a Mac app for Apple Silicon and is MIT licensed.",
+    "last_updated": "2026-10-15",
+    "skill_level": "intermediate",
+    "best_for": [
+      "People paying for more than one coding agent",
+      "Users who want one interface over several subscriptions",
+      "Mac users on Apple Silicon"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One interface, several agents",
+        "detail": "Drive different agents from a single chat surface."
+      },
+      {
+        "title": "Composed workflows",
+        "detail": "Chain agents into repeatable workflows such as best-of-n."
+      },
+      {
+        "title": "Reuse existing subscriptions",
+        "detail": "Bring the agents you already pay for instead of buying a new seat."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Uses subscriptions you already have",
+        "MIT licensed",
+        "Mac build available for Apple Silicon"
+      ],
+      "cons": [
+        "macOS only",
+        "Relies on the agents you bring, so quality varies"
+      ]
+    }
+  },
+  {
+    "id": 1791,
+    "name": "Yila",
+    "description": "Yila is a Codex for research: it searches real papers across OpenAlex, PubMed, arXiv and Wanfang and covers scoping, search, reading and drafting. It produces cited literature reviews, annotated PDFs, evidence cards per paper and posters, with bilingual side-by-side reading.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://yila.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Yila is a Codex for research: it searches real papers across OpenAlex, PubMed, arXiv and Wanfang and covers scoping, search, reading and drafting. It produces cited literature reviews, annotated PDFs, evidence cards per paper and posters, with bilingual side-by-side reading.",
+    "last_updated": "2026-10-19",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Researchers running literature reviews",
+      "Graduate students screening large paper sets",
+      "Teams that need cited drafts rather than summaries"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Literature search across databases",
+        "detail": "Query OpenAlex, PubMed, arXiv and Wanfang at once instead of one at a time."
+      },
+      {
+        "title": "Paper triage",
+        "detail": "Screen which papers are worth reading before committing time."
+      },
+      {
+        "title": "Cited review drafting",
+        "detail": "Generate a review from 50 or more papers with citations attached."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Covers both Western and Wanfang sources",
+        "Evidence cards and annotated PDFs, not just chat",
+        "Citations are attached to generated text"
+      ],
+      "cons": [
+        "Pricing is not published",
+        "Output still needs domain review before submission"
+      ]
+    }
+  },
+  {
+    "id": 1792,
+    "name": "Sezwhere",
+    "description": "Sezwhere answers the question where does it say that. Paste text or upload a PDF, Word file, plain text or Markdown, ask in plain language, and it highlights the passages that answer you even when the document uses different words. It is built on TypeSafe Jev models.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://sezwhere.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Sezwhere answers the question where does it say that. Paste text or upload a PDF, Word file, plain text or Markdown, ask in plain language, and it highlights the passages that answer you even when the document uses different words. It is built on TypeSafe Jev models.",
+    "last_updated": "2026-09-29",
+    "skill_level": "beginner",
+    "best_for": [
+      "Anyone checking a claim against a long document",
+      "Lawyers, analysts and reviewers working from contracts",
+      "Readers who want the passage, not a summary"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Finding the supporting passage",
+        "detail": "Ask a question and get the matching text highlighted in context."
+      },
+      {
+        "title": "Reading across wording",
+        "detail": "Match meaning when the document phrases things differently from your question."
+      },
+      {
+        "title": "Contract and policy checks",
+        "detail": "Locate where a document says something before relying on it."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Returns passages with context rather than a generated answer",
+        "Handles PDF, Word, text and Markdown uploads",
+        "No account needed to try it"
+      ],
+      "cons": [
+        "Pricing is not stated",
+        "Depends on a hosted decision model"
+      ]
+    }
+  },
+  {
+    "id": 1793,
+    "name": "Mira",
+    "description": "Mira is an AI audio tour guide that tells you the story of what is around you as you walk. A browser demo lets you walk a city in street view with the guide running beside it; San Francisco and Paris are open to everyone with no sign-up, and signing in unlocks every other city plus your own tours.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.mira.tours/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Mira is an AI audio tour guide that tells you the story of what is around you as you walk. A browser demo lets you walk a city in street view with the guide running beside it; San Francisco and Paris are open to everyone with no sign-up, and signing in unlocks every other city plus your own tours.",
+    "last_updated": "2026-10-11",
+    "skill_level": "beginner",
+    "best_for": [
+      "Travellers who want narration instead of a guidebook",
+      "People planning a walking route",
+      "Curious users exploring cities from a desk"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Self-guided walking tour",
+        "detail": "Walk a city while an audio guide comments on what you pass."
+      },
+      {
+        "title": "Try before installing",
+        "detail": "Walk San Francisco or Paris in street view in the browser with no sign-up."
+      },
+      {
+        "title": "Custom tours",
+        "detail": "Sign in to access more cities and build your own route."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free cities need no sign-up",
+        "Street view demo shows the product before you install",
+        "Audio format suits walking"
+      ],
+      "cons": [
+        "Full city list requires an account",
+        "Depends on phone GPS and data while walking"
+      ]
+    }
+  },
+  {
+    "id": 1794,
+    "name": "OpenLume",
+    "description": "OpenLume is an interactive AI tutor for developers and engineers: ask a technical question and get a personalized explainer video with narration, diagrams, code and animation. You can pause mid-video and ask follow-up questions in context.",
+    "category": "Video",
+    "pricing": "Unknown",
+    "url": "https://openlume.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "OpenLume is an interactive AI tutor for developers and engineers: ask a technical question and get a personalized explainer video with narration, diagrams, code and animation. You can pause mid-video and ask follow-up questions in context.",
+    "last_updated": "2026-10-14",
+    "skill_level": "beginner",
+    "best_for": [
+      " Engineers learning an unfamiliar system quickly",
+      "Developers who prefer visual explanations to walls of text",
+      "Teams onboarding onto a new codebase"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Explaining a system visually",
+        "detail": "Turn a question about an architecture into a narrated video with diagrams."
+      },
+      {
+        "title": "Interruptible learning",
+        "detail": "Pause the explainer and ask a follow-up right where you got lost."
+      },
+      {
+        "title": "Onboarding material",
+        "detail": "Generate explainers for new team members instead of writing docs from scratch."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Explanations are video, not a chat transcript",
+        "Follow-up questions keep the context",
+        "Public examples let you judge quality first"
+      ],
+      "cons": [
+        "Pricing is not published",
+        "Video generation is slower than reading an answer"
+      ]
+    }
+  },
+  {
+    "id": 1795,
+    "name": "Smart Blur",
+    "description": "Smart Blur is a Chrome extension that blurs personal data on screen shares and screenshots. Emails, phone numbers and card numbers blur on any page as it loads, and anything else takes a click. Everything runs on your device with no account, and the Pro version switches itself on the moment a screen share starts.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://smartbuildlabs.com/apps/smart-blur/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Smart Blur is a Chrome extension that blurs personal data on screen shares and screenshots. Emails, phone numbers and card numbers blur on any page as it loads, and anything else takes a click. Everything runs on your device with no account, and the Pro version switches itself on the moment a screen share starts.",
+    "last_updated": "2026-10-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "People who demo or present from a live browser",
+      "Support staff sharing screens with customers",
+      "Anyone recording tutorials"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Safe screen sharing",
+        "detail": "Blur emails, phone numbers and card numbers before anyone sees your screen."
+      },
+      {
+        "title": "Screenshot redaction",
+        "detail": "Clean a capture of personal data without opening an image editor."
+      },
+      {
+        "title": "Automatic mode",
+        "detail": "With Pro, blurring turns on as soon as a share starts."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs on device, no account needed",
+        "Blurs automatically as pages load",
+        "Free tier covers the common cases"
+      ],
+      "cons": [
+        "Automatic screen-share detection is Pro only",
+        "Chrome only"
+      ]
+    }
+  },
+  {
+    "id": 1796,
+    "name": "Ekselio",
+    "description": "Ekselio by GPTBeyond is an AI-native office of the CFO: an AI designs the workflow and a deterministic engine executes it, producing auditable SQL and Excel models with Power Query that recompute and verify their own numbers. Connect QuickBooks Online or drop any export; your files are never uploaded because every step runs in your browser.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://www.gptbeyond.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Ekselio by GPTBeyond is an AI-native office of the CFO: an AI designs the workflow and a deterministic engine executes it, producing auditable SQL and Excel models with Power Query that recompute and verify their own numbers. Connect QuickBooks Online or drop any export; your files are never uploaded because every step runs in your browser.",
+    "last_updated": "2026-09-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Finance teams that need auditable analysis",
+      "QuickBooks users building repeatable reporting",
+      "CFOs who do not want their books in a model provider"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Auditable finance workflows",
+        "detail": "Get analysis whose every step is inspectable as SQL."
+      },
+      {
+        "title": "Excel-verifiable models",
+        "detail": "Export a model that recomputes and checks its own numbers."
+      },
+      {
+        "title": "QuickBooks reporting",
+        "detail": "Connect QuickBooks Online or drop an export and describe the analysis you need."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Deterministic execution rather than a generated guess",
+        "Runs in the browser, files are not uploaded",
+        "Exports to Excel with Power Query"
+      ],
+      "cons": [
+        "Pricing is not published",
+        "Oriented around QuickBooks workflows"
+      ]
+    }
+  },
+  {
+    "id": 1797,
+    "name": "0sql",
+    "description": "0sql is an open source semantic layer that returns SQL rather than answering questions itself. You model your warehouse in YAML, post a query spec in business terms, and get back one correct, deterministic SQL statement or a refusal that explains why. It never connects to your warehouse and never runs a query.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://0sql.io/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "0sql is an open source semantic layer that returns SQL rather than answering questions itself. You model your warehouse in YAML, post a query spec in business terms, and get back one correct, deterministic SQL statement or a refusal that explains why. It never connects to your warehouse and never runs a query.",
+    "last_updated": "2026-10-06",
+    "skill_level": "advanced",
+    "best_for": [
+      "Teams that do not want a model writing SQL",
+      "Data platform groups defining metrics once",
+      "Anyone burned by a plausible wrong query"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Metric definitions in YAML",
+        "detail": "Model the warehouse once and let every consumer share the definition."
+      },
+      {
+        "title": "Deterministic SQL generation",
+        "detail": "Post business terms and receive one SQL statement you can read."
+      },
+      {
+        "title": "Safe refusals",
+        "detail": "Get an explanation instead of SQL when the request cannot be answered from the model."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Never touches your warehouse or runs queries",
+        "Refuses with a reason instead of guessing",
+        "MIT licensed"
+      ],
+      "cons": [
+        "Requires modelling your warehouse in YAML first",
+        "Self-hosting and ops are on you"
+      ]
+    }
+  },
+  {
+    "id": 1798,
+    "name": "RooQL",
+    "description": "RooQL is an open source semantic layer built on Apache Ossie that ships inside your app rather than as a separate service. Define every metric once and give every Claude artifact one source of truth, with zero infrastructure. A browser playground lets you try it without signing up.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://rooql.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "RooQL is an open source semantic layer built on Apache Ossie that ships inside your app rather than as a separate service. Define every metric once and give every Claude artifact one source of truth, with zero infrastructure. A browser playground lets you try it without signing up.",
+    "last_updated": "2026-10-13",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams giving agents a consistent metric definition",
+      "Apps that cannot run another service",
+      "Developers embedding a semantic layer in a product"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One source of truth for metrics",
+        "detail": "Define a metric once and let every generated artifact use it."
+      },
+      {
+        "title": "In-app semantic layer",
+        "detail": "Ship the layer with your app instead of hosting a separate service."
+      },
+      {
+        "title": "Try before installing",
+        "detail": "Ask questions in the browser playground without an account."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No infrastructure to operate",
+        "Apache 2.0 licensed",
+        "Browser playground for evaluation"
+      ],
+      "cons": [
+        "Tied to Apache Ossie",
+        "Young project"
+      ]
+    }
+  },
+  {
+    "id": 1799,
+    "name": "OpenHand Sidekick",
+    "description": "Sidekick by OpenHand is an AI companion for telehealth visits. It joins the visit in real time, explains medical terms as they come up and suggests questions worth asking, so patients leave understanding what was said.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://openhand.health/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Sidekick by OpenHand is an AI companion for telehealth visits. It joins the visit in real time, explains medical terms as they come up and suggests questions worth asking, so patients leave understanding what was said.",
+    "last_updated": "2026-10-01",
+    "skill_level": "beginner",
+    "best_for": [
+      "Patients who leave appointments with unanswered questions",
+      "Caregivers joining on someone else's behalf",
+      "Anyone who wants jargon translated live"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Live terminology help",
+        "detail": "Get medical terms explained while the appointment is still running."
+      },
+      {
+        "title": "Question prompts",
+        "detail": "Receive suggested questions so nothing important goes unasked."
+      },
+      {
+        "title": "Post-visit recall",
+        "detail": "Leave with a clearer record of what was discussed."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works during the visit rather than after it",
+        "Explains terms and prompts questions",
+        "Simple patient-facing framing"
+      ],
+      "cons": [
+        "Limited early access at launch",
+        "Health context means extra care about accuracy"
+      ]
+    }
+  },
+  {
+    "id": 1800,
+    "name": "Rgpu",
+    "description": "Rgpu lets you keep Python on your laptop while running PyTorch operations and holding tensors on a remote GPU. It works from a Mac with no CUDA installation, so training and experiment code stays local while the compute happens elsewhere.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/ymcrcat/rgpu",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Rgpu lets you keep Python on your laptop while running PyTorch operations and holding tensors on a remote GPU. It works from a Mac with no CUDA installation, so training and experiment code stays local while the compute happens elsewhere.",
+    "last_updated": "2026-10-07",
+    "skill_level": "advanced",
+    "best_for": [
+      "Developers on laptops without a usable GPU",
+      "Mac users who cannot install CUDA",
+      "Teams sharing one remote machine for experiments"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Remote tensors from a Mac",
+        "detail": "Hold tensors on a remote GPU while your code runs locally."
+      },
+      {
+        "title": "Keeping the local workflow",
+        "detail": "Avoid rewriting scripts for a remote environment."
+      },
+      {
+        "title": "Sharing one GPU box",
+        "detail": "Point several laptops at a single machine with the accelerators."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No CUDA install needed on the client",
+        "Keeps the Python workflow on your own machine",
+        "Open source"
+      ],
+      "cons": [
+        "Requires a remote GPU you control",
+        "C++ extension and network setup to install"
+      ]
+    }
+  },
+  {
+    "id": 1801,
+    "name": "ForgeMesh",
+    "description": "ForgeMesh Labs runs paid APIs aimed at AI agents: notarization, anomaly detection, disruption intel, travel, voice, market signals and image generation. Agents pay per call over x402 or MPP with no accounts and no API keys, and the catalogue is also exposed as MCP servers.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://forgemesh.io/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ForgeMesh Labs runs paid APIs aimed at AI agents: notarization, anomaly detection, disruption intel, travel, voice, market signals and image generation. Agents pay per call over x402 or MPP with no accounts and no API keys, and the catalogue is also exposed as MCP servers.",
+    "last_updated": "2026-10-17",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agents that need to buy a service without human signup",
+      "Developers experimenting with machine payments",
+      "Teams avoiding per-vendor API key management"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Per-call paid services",
+        "detail": "Let an agent pay for a single call instead of holding a subscription."
+      },
+      {
+        "title": "Key-free integration",
+        "detail": "Access services over x402 or MPP without provisioning credentials."
+      },
+      {
+        "title": "MCP access",
+        "detail": "Expose the same catalogue to agents through MCP servers."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No accounts or API keys to manage",
+        "Pay-per-call pricing model",
+        "MCP servers available"
+      ],
+      "cons": [
+        "Depends on x402 or MPP payment rails",
+        "Pay-per-call costs need monitoring in an agent loop"
+      ]
+    }
+  },
+  {
+    "id": 1802,
+    "name": "Titan",
+    "description": "Titan is a desktop AI assistant that sees what is on your screen and does the work in the apps you already use. You say what you want, it works the apps you already pay for, and it remembers what you tell it. The site says it is free to download.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://titan-ai.co/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Titan is a desktop AI assistant that sees what is on your screen and does the work in the apps you already use. You say what you want, it works the apps you already pay for, and it remembers what you tell it. The site says it is free to download.",
+    "last_updated": "2026-10-11",
+    "skill_level": "beginner",
+    "best_for": [
+      "Users who want an assistant over existing desktop apps",
+      "People tired of AI that only lives in a browser tab",
+      "Anyone who wants an assistant that remembers context"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Working the apps you have",
+        "detail": "Ask for a task in an app you already use instead of switching to a chat window."
+      },
+      {
+        "title": "Screen-aware help",
+        "detail": "Let the assistant see what you are looking at when you ask."
+      },
+      {
+        "title": "Persistent context",
+        "detail": "Have it remember what you told it across sessions."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Operates on your screen rather than in a tab",
+        "Free to download at launch",
+        "Aims at apps you already pay for"
+      ],
+      "cons": [
+        "Screen access raises obvious privacy questions",
+        "New product with little track record"
+      ]
+    }
+  },
+  {
+    "id": 1803,
+    "name": "Pi Codex Connectors",
+    "description": "Pi Codex Connectors is a Pi extension that lets any Pi model use your connected Codex apps and direct web search. It starts codex app-server on first use, with Codex keeping ownership of your login and connector credentials, and exposes three tools instead of hundreds of schemas.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/wileai/pi-codex-connectors",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pi Codex Connectors is a Pi extension that lets any Pi model use your connected Codex apps and direct web search. It starts codex app-server on first use, with Codex keeping ownership of your login and connector credentials, and exposes three tools instead of hundreds of schemas.",
+    "last_updated": "2026-10-02",
+    "skill_level": "advanced",
+    "best_for": [
+      "Pi users with Codex connectors configured",
+      "Developers who want connector access from any model",
+      "Anyone avoiding giant tool schemas in context"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Connector access from Pi",
+        "detail": "Call your connected Codex apps from a non-Codex model."
+      },
+      {
+        "title": "Compact tool catalogue",
+        "detail": "Use three tools to list, inspect and call connectors instead of loading every schema."
+      },
+      {
+        "title": "Direct web search",
+        "detail": "Search and read the public web through the standalone search endpoint."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Keeps credentials with Codex, not the extension",
+        "Three tools instead of hundreds of schemas",
+        "Works with any Pi model"
+      ],
+      "cons": [
+        "Requires a Codex login and Pi setup",
+        "Backend behaviour of the search endpoint is not fully documented"
+      ]
+    }
   }
 ]
