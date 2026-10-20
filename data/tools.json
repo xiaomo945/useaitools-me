@@ -12334,7 +12334,7 @@
   },
   {
     "id": 920,
-    "name": "SketchAI",
+    "name": "SketchAI — Sketch to Image",
     "description": "SketchAI is an AI tool that converts rough sketches into finished images. Concept artists, illustrators, and designers can upload a simple drawing and receive rendered versions with color, shading, and detail. The tool supports early-stage ideation by turning quick doodles into presentable visuals without advanced rendering skills. A free tier is available for basic conversions, with paid plans for higher-fidelity output.",
     "category": "Image",
     "pricing": "Freemium",
@@ -18038,7 +18038,7 @@
   },
   {
     "id": 1233,
-    "name": "ReactNative AI",
+    "name": "ReactNative AI — RN Code Generator",
     "description": "AI code generator for React Native apps. Creates native modules, navigation flows, and responsive layouts with TypeScript support and best practice patterns. Aimed at mobile developers and small teams building cross-platform apps who want scaffolding that already follows React Native conventions. Generated code is a starting point that you review and adapt to your project.",
     "category": "Code",
     "pricing": "Freemium",
@@ -20323,52 +20323,6 @@
       "cons": [
         "Accuracy suffers with heavy accents, crosstalk, or poor audio quality",
         "Free plans limit monthly transcription minutes and advanced features"
-      ]
-    }
-  },
-  {
-    "id": 1388,
-    "name": "Fireflies.ai",
-    "description": "Fireflies.ai is an AI meeting assistant focused on conversation intelligence. It automates transcription, analyzes conversations, and extracts action items across conferencing platforms, helping sales and customer success teams review calls and spot talking points. Managers use the recordings to coach team members and keep records of commitments. A free tier allows basic recording and transcription, with paid plans for analytics and higher volume.",
-    "category": "Productivity",
-    "pricing": "Freemium",
-    "url": "https://fireflies.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "best_for": [
-      "Sales and customer success teams that need AI meeting analysis and insights"
-    ],
-    "description_en": "Fireflies.ai is an AI meeting assistant focused on conversation intelligence. It automates transcription, analyzes conversations, and extracts action items across conferencing platforms, helping sales and customer success teams review calls and spot talking points. Managers use the recordings to coach team members and keep records of commitments. A free tier allows basic recording and transcription, with paid plans for analytics and higher volume.",
-    "rating": null,
-    "rating_count": null,
-    "examples": [],
-    "use_cases": [
-      {
-        "title": "Call Reviews",
-        "detail": "Review recorded sales calls to find improvement opportunities"
-      },
-      {
-        "title": "Action Extraction",
-        "detail": "Pull commitments and follow-ups out of customer conversations"
-      },
-      {
-        "title": "Team Coaching",
-        "detail": "Share call recordings for coaching and onboarding sessions"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Conversation analysis built around sales and support calls",
-        "Action items are extracted automatically from each conversation",
-        "Recordings create a searchable history of customer discussions"
-      ],
-      "cons": [
-        "Recording calls requires transparency and consent from participants",
-        "Analytics and volume limits push users to paid plans"
       ]
     }
   },
