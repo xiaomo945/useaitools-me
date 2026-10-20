@@ -23,42 +23,34 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What Makes a Great Case Study?",
+        "name": "What makes an AI writing tool good for case studies specifically?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "An effective case study: - Tells a story: Has a clear beginning, middle, and end - Uses real data: Includes specific metrics and results - Features real customers: Authentic voices and experiences - Shows the journey: Challenge → Solution → Results - Is readable: Clear, concise, and engaging"
+          "text": "A case study has to hold a narrative — situation, action, result — without drifting into marketing fluff. A tool helps when it can keep the customer’s voice consistent across a long document and stay out of the way of your quotes and metrics. If you cannot get a structured first draft with the numbers placed sensibly, the tool is adding steps rather than removing them."
         }
       },
       {
         "@type": "Question",
-        "name": "What is 1. Rytr - Best for Structure and Writing?",
+        "name": "How much of a case study should AI actually write?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Rytr is excellent for case study writing because of its templates, tone control, and ability to maintain consistent narrative flow. Key Features for Case Studies: - Case study templates - Professional tone options - Data presentation suggestions - Multiple draft generation"
+          "text": "The structure, the transitions and the first pass on framing. The customer quotes, the specific numbers and the honest caveats should stay yours — the parts that make the case study credible are the parts a model cannot know. Use AI to get to a draft fast, then spend your time tightening the argument."
         }
       },
       {
         "@type": "Question",
-        "name": "What is 2. Jasper - Best for Brand Voice?",
+        "name": "Do I need a paid tool for case studies, or is free enough?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Jasper excels at maintaining your brand voice throughout the case study."
+          "text": "If you publish a handful a year, a free tier that gives generous everyday access is enough. Paid plans earn their keep when you are producing case studies at volume and need consistent brand voice, reusable templates, and long-form handling that does not fall apart past a few thousand words."
         }
       },
       {
         "@type": "Question",
-        "name": "What is 3. Copy.ai - Best for Marketing Focus?",
+        "name": "What is the biggest mistake people make with AI case studies?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Copy.ai can help ensure your case study has strong marketing impact. See our comparison in Rytr vs Jasper vs Copy.ai."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is case Study Template?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "1. Title: Clear and result-focused 2. Executive Summary: 2-3 sentence overview 3. The Challenge: What problem did the customer face? 4. The Solution: How did your product help? 5. The Results: Specific metrics and outcomes 6. Customer Quote: Direct testimonial"
+          "text": "Letting the tool write the results section. Invented or overstated numbers are the fastest way to lose a reader’s trust, and the model will happily produce plausible ones. Write the outcomes from your own data and let AI handle everything around them."
         }
       }
     ]
