@@ -34324,5 +34324,2705 @@
         "Agent behaviour depends on the model integrations the app ships"
       ]
     }
+  },
+  {
+    "id": 1712,
+    "name": "OKF Agent Memory",
+    "description": "Git-native persistent memory for AI coding agents. The project implements Google OKF v0.2 and ships sub-300 microsecond in-memory BM25 search, an embedded MCP server and progressive disclosure. Written in pure Go with no external database, it is built to cut the token bloat that re-reading a codebase into context normally costs.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/okf-memory/okf-agent-memory",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Git-native persistent memory for AI coding agents. The project implements Google OKF v0.2 and ships sub-300 microsecond in-memory BM25 search, an embedded MCP server and progressive disclosure. Written in pure Go with no external database, it is built to cut the token bloat that re-reading a codebase into context normally costs.",
+    "last_updated": "2026-09-05",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Coding agents that need memory to survive across sessions",
+      "Teams who want agent memory versioned in git",
+      "Developers avoiding an extra database dependency"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Persistent project memory",
+        "detail": "Store decisions, conventions and file facts in a git-native store the agent can query at the start of every session instead of re-deriving them."
+      },
+      {
+        "title": "BM25 recall over past work",
+        "detail": "Search accumulated notes with in-memory BM25 so the agent retrieves only the handful of entries relevant to the current task."
+      },
+      {
+        "title": "Lower context costs",
+        "detail": "Use progressive disclosure so the agent loads a short index first and pulls full entries only when it actually needs them."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No external database to operate or back up",
+        "Memory is stored in git, so it is diffable and reviewable",
+        "Ships an embedded MCP server"
+      ],
+      "cons": [
+        "Tied to the OKF v0.2 specification, which is still young",
+        "Go binary means no pip or npm install path"
+      ]
+    }
+  },
+  {
+    "id": 1713,
+    "name": "MCP Memory",
+    "description": "An OKF-backed Model Context Protocol server that gives AI agents persistent long-term memory with SQLite FTS5 search. It exposes memory as a standard MCP resource, so clients that already speak MCP can read and write long-term context without a custom integration layer.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/fellowgeek/mcp-memory",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An OKF-backed Model Context Protocol server that gives AI agents persistent long-term memory with SQLite FTS5 search. It exposes memory as a standard MCP resource, so clients that already speak MCP can read and write long-term context without a custom integration layer.",
+    "last_updated": "2026-08-13",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Adding long-term memory to an existing MCP client",
+      "Self-hosters who prefer SQLite over a vector database",
+      "Agents that need keyword search rather than embeddings"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Long-term agent memory",
+        "detail": "Let an agent write facts and preferences to disk once and recall them weeks later through the MCP interface."
+      },
+      {
+        "title": "SQLite FTS5 retrieval",
+        "detail": "Query stored memories with full-text search backed by SQLite FTS5, which keeps the deployment to a single file."
+      },
+      {
+        "title": "Shared memory across tools",
+        "detail": "Point several MCP-capable clients at the same server so the same memory store is available from each."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Standard MCP interface, no bespoke client code",
+        "SQLite keeps the storage footprint tiny",
+        "Follows the published OKF memory format"
+      ],
+      "cons": [
+        "Keyword search only, no semantic embeddings",
+        "Single-node SQLite is not designed for team-scale concurrency"
+      ]
+    }
+  },
+  {
+    "id": 1714,
+    "name": "I Have ADHD",
+    "description": "A skill that stops your coding agent from burying the answer. It reshapes agent output so the result, decision or error appears first instead of at the end of a long explanation, which makes agent responses far easier to scan when you are jumping between tasks.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/ayghri/i-have-adhd",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A skill that stops your coding agent from burying the answer. It reshapes agent output so the result, decision or error appears first instead of at the end of a long explanation, which makes agent responses far easier to scan when you are jumping between tasks.",
+    "last_updated": "2026-09-08",
+    "skill_level": "beginner",
+    "best_for": [
+      "Developers who skim agent output rather than read it",
+      "Anyone annoyed by agents that explain for ten paragraphs first",
+      "Coding agents that support installable skills"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Answer-first output",
+        "detail": "Force the agent to lead with the conclusion, then supply supporting reasoning underneath for when you need it."
+      },
+      {
+        "title": "Shorter status reporting",
+        "detail": "Reduce the wall of narration that coding agents emit after a multi-step run."
+      },
+      {
+        "title": "Consistent response shape",
+        "detail": "Give every agent in a team the same output convention so results are predictable."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Extremely small change with an immediate effect",
+        "Works as a skill, so no code changes in your project",
+        "Free and open source"
+      ],
+      "cons": [
+        "Only affects agents that load skills",
+        "Very opinionated output format that some workflows will not want"
+      ]
+    }
+  },
+  {
+    "id": 1715,
+    "name": "Vomit",
+    "description": "A small Go utility that cleans up Claude's token vomit with a separate LLM. It routes verbose model output through a cheaper secondary model so the readable version lands in your context instead of the raw stream, which saves tokens on the expensive model.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/zachahn/vomit",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A small Go utility that cleans up Claude's token vomit with a separate LLM. It routes verbose model output through a cheaper secondary model so the readable version lands in your context instead of the raw stream, which saves tokens on the expensive model.",
+    "last_updated": "2026-08-20",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Heavy Claude Code users watching their token budget",
+      "Long agent runs with repetitive narration",
+      "Developers already paying for a cheap secondary model"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Post-process agent output",
+        "detail": "Send verbose responses to a cheap model for summarising before they re-enter the main conversation."
+      },
+      {
+        "title": "Cut main-model token spend",
+        "detail": "Keep the expensive model's context clean so fewer tokens are re-read on every turn."
+      },
+      {
+        "title": "Readable logs after a long run",
+        "detail": "Turn a multi-thousand-line transcript into something a human can actually review."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Small single-purpose Go binary",
+        "Directly targets token cost, the main complaint with agentic coding",
+        "Open source and self-hosted"
+      ],
+      "cons": [
+        "Adds a second model call and its own latency",
+        "Depends on a cheap model being good enough to summarise faithfully"
+      ]
+    }
+  },
+  {
+    "id": 1716,
+    "name": "Tare",
+    "description": "Ask Claude Code where your usage went. Tare does token audit, limit diagnosis and usage forensics from the session logs already on your machine, and nothing leaves it. It answers the question of which session, file or command burned through a quota.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/kelviq/tare",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Ask Claude Code where your usage went. Tare does token audit, limit diagnosis and usage forensics from the session logs already on your machine, and nothing leaves it. It answers the question of which session, file or command burned through a quota.",
+    "last_updated": "2026-08-27",
+    "skill_level": "beginner",
+    "best_for": [
+      "Anyone who hit a Claude Code usage limit unexpectedly",
+      "Developers comparing cost across projects",
+      "Local-first tooling fans who refuse to upload logs"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Diagnose a usage limit",
+        "detail": "Find which sessions consumed the quota once a limit warning appears."
+      },
+      {
+        "title": "Per-file token audit",
+        "detail": "Break token consumption down by file or command to see what is expensive."
+      },
+      {
+        "title": "Plan around the reset",
+        "detail": "Estimate what remains before the next reset based on historical burn rate."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works entirely from local session logs",
+        "Answers a question most agent CLIs do not",
+        "No account or upload required"
+      ],
+      "cons": [
+        "Only covers clients whose logs it can parse",
+        "Forensics after the fact, not live prevention"
+      ]
+    }
+  },
+  {
+    "id": 1717,
+    "name": "Pacer",
+    "description": "A macOS menu-bar pace indicator for your AI coding subscriptions. Pacer tracks Claude Code, Codex, Antigravity and Cursor, telling you whether the allowance will last until its reset and what to change if it will not.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/dkremsa/claude-pacer",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A macOS menu-bar pace indicator for your AI coding subscriptions. Pacer tracks Claude Code, Codex, Antigravity and Cursor, telling you whether the allowance will last until its reset and what to change if it will not.",
+    "last_updated": "2026-10-08",
+    "skill_level": "beginner",
+    "best_for": [
+      "Developers juggling several AI coding subscriptions",
+      "Anyone who has run out of quota mid-sprint",
+      "Mac users who want usage visible without opening a dashboard"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Watch burn rate live",
+        "detail": "See in the menu bar whether current usage pace will survive until the reset."
+      },
+      {
+        "title": "Compare subscriptions",
+        "detail": "Track several agent subscriptions side by side instead of checking each vendor dashboard."
+      },
+      {
+        "title": "Decide what to defer",
+        "detail": "Use remaining headroom to decide whether a large refactor can run today."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Genuinely useful signal shown where you already look",
+        "Covers multiple agent subscriptions in one place",
+        "Free and open source"
+      ],
+      "cons": [
+        "macOS only",
+        "Depends on vendor usage endpoints staying stable"
+      ]
+    }
+  },
+  {
+    "id": 1718,
+    "name": "Claude Thermos",
+    "description": "A small utility that keeps your Claude session warm for you. It holds an idle coding session alive so you do not lose context to a timeout while you are reading, reviewing or away from the keyboard.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/izeigerman/claude-thermos",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A small utility that keeps your Claude session warm for you. It holds an idle coding session alive so you do not lose context to a timeout while you are reading, reviewing or away from the keyboard.",
+    "last_updated": "2026-07-23",
+    "skill_level": "beginner",
+    "best_for": [
+      "Long-running Claude Code sessions",
+      "Developers who step away mid-task",
+      "Anyone losing context to idle timeouts"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Keep a session alive",
+        "detail": "Hold an idle session open so the accumulated context is still there when you return."
+      },
+      {
+        "title": "Protect expensive context",
+        "detail": "Avoid rebuilding a large context window that took many turns to assemble."
+      },
+      {
+        "title": "Unattended workflows",
+        "detail": "Leave a session prepared while waiting on a review or a build."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Single clear job, easy to adopt",
+        "Open source and lightweight",
+        "Avoids the cost of rebuilding context"
+      ],
+      "cons": [
+        "Tied to Claude session behaviour",
+        "Keeping idle sessions open is not always what you want"
+      ]
+    }
+  },
+  {
+    "id": 1719,
+    "name": "Mcptoon",
+    "description": "One zero-dependency CLI for every MCP server and agent skill. Mcptoon handles token optimization, tool discovery and context compression so tool schemas stay out of context, and a single config works across Claude Code, Codex and Cursor. It is pure Python and ships as a compact package.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/activeing123/mcptoon",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "One zero-dependency CLI for every MCP server and agent skill. Mcptoon handles token optimization, tool discovery and context compression so tool schemas stay out of context, and a single config works across Claude Code, Codex and Cursor. It is pure Python and ships as a compact package.",
+    "last_updated": "2026-08-11",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Users running many MCP servers at once",
+      "Anyone whose tool schemas are eating the context window",
+      "Teams standardising agent config across several clients"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Compress tool discovery",
+        "detail": "Replace the full schema dump with a compact index the agent searches only when it needs a tool."
+      },
+      {
+        "title": "One config for every client",
+        "detail": "Maintain a single MCP configuration and point Claude Code, Codex and Cursor at it."
+      },
+      {
+        "title": "Manage agent skills",
+        "detail": "Handle MCP servers and installable skills through the same CLI."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Zero dependencies, pure Python",
+        "Directly attacks context bloat from MCP schemas",
+        "Client-agnostic configuration"
+      ],
+      "cons": [
+        "Adds an indirection layer between client and server",
+        "Compression depends on the agent searching rather than reading everything"
+      ]
+    }
+  },
+  {
+    "id": 1720,
+    "name": "Ctrlb Decompose",
+    "description": "An LLM-ready reasoning surface over logs. Ctrlb Decompose compresses and restructures raw log output so a model can reason over it, instead of drowning in repeated stack frames, timestamps and noise.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/ctrlb-hq/ctrlb-decompose",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An LLM-ready reasoning surface over logs. Ctrlb Decompose compresses and restructures raw log output so a model can reason over it, instead of drowning in repeated stack frames, timestamps and noise.",
+    "last_updated": "2026-09-09",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Engineers pasting logs into an LLM",
+      "Incident response with very large log files",
+      "Teams watching token spend on observability data"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Shrink a log before a prompt",
+        "detail": "Collapse repeated lines and boilerplate so only the signal reaches the model."
+      },
+      {
+        "title": "Debugging sessions",
+        "detail": "Hand an agent a structured view of a failure instead of ten thousand raw lines."
+      },
+      {
+        "title": "Telemetry triage",
+        "detail": "Prepare monitoring output for an agent that needs to summarise what changed."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Written in Rust, fast on large files",
+        "Targets a real cost problem with log-to-LLM workflows",
+        "Open source"
+      ],
+      "cons": [
+        "Compression can drop a line that turned out to matter",
+        "Extra step between the log and the model"
+      ]
+    }
+  },
+  {
+    "id": 1721,
+    "name": "AxiomCode Graph",
+    "description": "Turn any codebase into a knowledge graph grounded in formal methods. AxiomCode Graph gives AI agents exact answers about code structure, change impact and dependencies so they spend less time and fewer tokens on searching and more on the actual change.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/AxiomCodeAI/axiomcodegraph",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Turn any codebase into a knowledge graph grounded in formal methods. AxiomCode Graph gives AI agents exact answers about code structure, change impact and dependencies so they spend less time and fewer tokens on searching and more on the actual change.",
+    "last_updated": "2026-10-14",
+    "skill_level": "advanced",
+    "best_for": [
+      "Large codebases where grep-based agents stall",
+      "Change-impact analysis before a refactor",
+      "Teams measuring agent token spend"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Impact analysis",
+        "detail": "Ask which call sites and modules a signature change actually touches before making it."
+      },
+      {
+        "title": "Reduce agent rework",
+        "detail": "Give the agent a precise graph lookup instead of letting it guess and iterate."
+      },
+      {
+        "title": "Grounded code answers",
+        "detail": "Answer structural questions from the graph rather than from probabilistic recall."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Formal-methods grounding rather than fuzzy retrieval",
+        "Cuts repeated search loops by coding agents",
+        "Integrates with common agent clients"
+      ],
+      "cons": [
+        "Indexing a very large repo takes time and memory",
+        "Advanced setup compared with a plain search tool"
+      ]
+    }
+  },
+  {
+    "id": 1722,
+    "name": "Munder Difflin",
+    "description": "A free, open source multi-agent harness for Claude Code, Codex and ten more. Munder Difflin runs an office of AI employees against the subscriptions you already pay for, using hourly limits rather than separate API billing, and runs on macOS, Windows and Linux.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://munderdiffl.in/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A free, open source multi-agent harness for Claude Code, Codex and ten more. Munder Difflin runs an office of AI employees against the subscriptions you already pay for, using hourly limits rather than separate API billing, and runs on macOS, Windows and Linux.",
+    "last_updated": "2026-08-22",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Running several coding agents in parallel",
+      "Teams already paying for Claude Code or Codex seats",
+      "Developers who want multi-agent orchestration without new API keys"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Parallel task assignment",
+        "detail": "Split a backlog across several agents and let each work its own branch of the task."
+      },
+      {
+        "title": "Reuse existing subscriptions",
+        "detail": "Drive the harness from the agent subscriptions you already pay for rather than metered API usage."
+      },
+      {
+        "title": "Desktop multi-agent runs",
+        "detail": "Run the office locally on macOS, Windows or Linux and watch each agent's output."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source",
+        "Works with subscriptions you already have",
+        "Cross-platform desktop builds"
+      ],
+      "cons": [
+        "Fast-moving early project with frequent releases",
+        "Still assumes you have a paid agent subscription"
+      ]
+    }
+  },
+  {
+    "id": 1723,
+    "name": "Docker Agent",
+    "description": "An AI agent builder and runtime from Docker Engineering. Docker Agent packages agent definitions, tools and their dependencies into containers so an agent runs the same way on a laptop and in CI, and it plugs into the Docker tooling teams already use.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/docker/docker-agent",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An AI agent builder and runtime from Docker Engineering. Docker Agent packages agent definitions, tools and their dependencies into containers so an agent runs the same way on a laptop and in CI, and it plugs into the Docker tooling teams already use.",
+    "last_updated": "2026-10-07",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Teams standardising agent runs across environments",
+      "CI pipelines that need reproducible agent behaviour",
+      "Organisations already invested in Docker"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Reproducible agent runs",
+        "detail": "Ship the agent with its toolchain in an image so results do not depend on the host."
+      },
+      {
+        "title": "Agent builds in CI",
+        "detail": "Run the same agent in a pipeline as on a developer machine."
+      },
+      {
+        "title": "Sandboxed tool execution",
+        "detail": "Give the agent a container boundary instead of full access to the host."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Backed by Docker's own engineering team",
+        "Container isolation is a natural fit for untrusted agent actions",
+        "Fits existing Docker workflows"
+      ],
+      "cons": [
+        "Adds container build overhead to every agent change",
+        "Most valuable only if Docker is already in your stack"
+      ]
+    }
+  },
+  {
+    "id": 1724,
+    "name": "OneCLI",
+    "description": "An open-source sandboxed agent harness for teams. OneCLI gives every employee a secured personal agent that runs in a sandbox and keeps secrets out of the agent's reach, with credential handling built in rather than bolted on.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/onecli/onecli",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An open-source sandboxed agent harness for teams. OneCLI gives every employee a secured personal agent that runs in a sandbox and keeps secrets out of the agent's reach, with credential handling built in rather than bolted on.",
+    "last_updated": "2026-07-23",
+    "skill_level": "advanced",
+    "best_for": [
+      "Companies rolling agents out to non-engineers",
+      "Teams worried about agents reading production secrets",
+      "Self-hosters who need an audit trail"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Personal agent per employee",
+        "detail": "Give each person a sandboxed agent without handing out shared credentials."
+      },
+      {
+        "title": "Secret isolation",
+        "detail": "Route credentials through a gateway so the agent never sees raw secrets."
+      },
+      {
+        "title": "Governed rollout",
+        "detail": "Standardise which tools and scopes every agent in the company gets."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Security-first design aimed at real deployments",
+        "Open source and self-hostable",
+        "Addresses credential leakage, the main enterprise objection"
+      ],
+      "cons": [
+        "Heavier setup than a personal agent script",
+        "Requires someone to own the gateway"
+      ]
+    }
+  },
+  {
+    "id": 1725,
+    "name": "AgentsDock",
+    "description": "An IDE designed for agentic AI research. AgentsDock supports Claude Code, Codex, OpenCode and Cursor in one desktop and mobile workspace, so you can check how a run is going from a phone instead of needing the laptop that started it.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://agentsdock.net/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An IDE designed for agentic AI research. AgentsDock supports Claude Code, Codex, OpenCode and Cursor in one desktop and mobile workspace, so you can check how a run is going from a phone instead of needing the laptop that started it.",
+    "last_updated": "2026-09-12",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Researchers running long agent jobs",
+      "Anyone who wants to monitor runs from a phone",
+      "Users mixing several agent clients"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Monitor a run remotely",
+        "detail": "Check on a long agent or training run from a mobile client and receive images and results back."
+      },
+      {
+        "title": "One workspace, several agents",
+        "detail": "Switch between Claude Code, Codex, OpenCode and Cursor without a separate window each."
+      },
+      {
+        "title": "Multi-server work",
+        "detail": "Connect to several servers and move between them as runs move."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Mobile clients are unusual in this category",
+        "Supports multiple agent harnesses",
+        "Open source"
+      ],
+      "cons": [
+        "Desktop app to install and trust",
+        "Mobile monitoring only helps if your runs are long"
+      ]
+    }
+  },
+  {
+    "id": 1726,
+    "name": "Bough",
+    "description": "A terminal coding agent where the model writes one program instead of calling tools one at a time. Bough flips the usual tool-calling loop: the agent emits a single script that does the work, which removes a lot of round-trip overhead on multi-step tasks.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/andreylukin/bough",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A terminal coding agent where the model writes one program instead of calling tools one at a time. Bough flips the usual tool-calling loop: the agent emits a single script that does the work, which removes a lot of round-trip overhead on multi-step tasks.",
+    "last_updated": "2026-09-15",
+    "skill_level": "advanced",
+    "best_for": [
+      "Developers frustrated by slow tool-call loops",
+      "Batch operations over a codebase",
+      "Go and terminal-first workflows"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One-program edits",
+        "detail": "Have the agent generate a single program that performs a multi-file refactor in one pass."
+      },
+      {
+        "title": "Fewer round trips",
+        "detail": "Replace twenty tool calls with one script, cutting latency and tokens."
+      },
+      {
+        "title": "Terminal-native work",
+        "detail": "Run the whole session in a TUI without leaving the shell."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Genuinely different execution model",
+        "Terminal UI suits keyboard-first users",
+        "Open source"
+      ],
+      "cons": [
+        "Very early project with a small community",
+        "A generated program is harder to review than discrete tool calls"
+      ]
+    }
+  },
+  {
+    "id": 1727,
+    "name": "Kli",
+    "description": "A radically extensible coding agent for the modern Lisp hacker. Kli is built around extensibility first, so the agent's behaviour can be rewritten in Lisp rather than configured through a fixed set of options.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/kleisli-io/kli",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A radically extensible coding agent for the modern Lisp hacker. Kli is built around extensibility first, so the agent's behaviour can be rewritten in Lisp rather than configured through a fixed set of options.",
+    "last_updated": "2026-08-29",
+    "skill_level": "advanced",
+    "best_for": [
+      "Common Lisp programmers",
+      "Users who want to rewrite their agent's behaviour",
+      "Hackers who prefer extensibility over configuration"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Custom agent behaviour",
+        "detail": "Extend the agent in Lisp instead of waiting for a feature flag."
+      },
+      {
+        "title": "Lisp codebase work",
+        "detail": "Work on Lisp projects with an agent that understands the same language."
+      },
+      {
+        "title": "Experimentation",
+        "detail": "Prototype new agent loops without forking a large codebase."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Extensibility is the core design goal",
+        "Written in Common Lisp, rare in this space",
+        "Open source"
+      ],
+      "cons": [
+        "Small audience and small community",
+        "Requires Lisp familiarity to get real value"
+      ]
+    }
+  },
+  {
+    "id": 1728,
+    "name": "Legion",
+    "description": "An open-source Elixir runtime for AI agents that live inside your application and act by writing code. A Legion agent reaches into your app to find records, run reports or file tickets against functions you explicitly allow, and the same agent can sit behind a chat window, power an MCP server for Claude or Cursor, or run as an overnight background worker.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://legion.swmansion.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An open-source Elixir runtime for AI agents that live inside your application and act by writing code. A Legion agent reaches into your app to find records, run reports or file tickets against functions you explicitly allow, and the same agent can sit behind a chat window, power an MCP server for Claude or Cursor, or run as an overnight background worker.",
+    "last_updated": "2026-09-16",
+    "skill_level": "advanced",
+    "best_for": [
+      "Elixir and Phoenix applications",
+      "Teams embedding agents inside a product",
+      "Background agent jobs rather than chat"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Agent inside the app",
+        "detail": "Let an agent act on application data through functions you whitelist."
+      },
+      {
+        "title": "Expose the agent over MCP",
+        "detail": "Serve the same agent to Claude or Cursor through an MCP endpoint."
+      },
+      {
+        "title": "Overnight batch work",
+        "detail": "Run the agent as a background worker that clears a queue while nobody is watching."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Real application integration, not just a chat sidebar",
+        "Multiple deployment shapes from one agent definition",
+        "Backed by Software Mansion"
+      ],
+      "cons": [
+        "Elixir only",
+        "Giving an agent write access to application data needs careful scoping"
+      ]
+    }
+  },
+  {
+    "id": 1729,
+    "name": "ENZO",
+    "description": "A self-hosted AI workspace with agents, skills and tools such as Gmail and Calendar that runs entirely on your own provider API keys. ENZO is a bring-your-own-key setup supporting Groq, OpenRouter, NVIDIA, Hugging Face and Google AI, so no usage data has to pass through a vendor workspace.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/theguysudo/ENZO",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A self-hosted AI workspace with agents, skills and tools such as Gmail and Calendar that runs entirely on your own provider API keys. ENZO is a bring-your-own-key setup supporting Groq, OpenRouter, NVIDIA, Hugging Face and Google AI, so no usage data has to pass through a vendor workspace.",
+    "last_updated": "2026-09-19",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Self-hosters who want a ChatGPT-style workspace",
+      "Users with existing provider API keys",
+      "Teams that cannot send data to a hosted AI workspace"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Private AI workspace",
+        "detail": "Run chat, agents and skills on infrastructure you control."
+      },
+      {
+        "title": "Connect mail and calendar",
+        "detail": "Wire Gmail and Calendar into agents without routing them through a third party."
+      },
+      {
+        "title": "Switch model providers",
+        "detail": "Point the same workspace at Groq, OpenRouter, NVIDIA, Hugging Face or Google AI."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Bring-your-own-keys keeps data under your control",
+        "Docker deployment",
+        "Covers several major providers"
+      ],
+      "cons": [
+        "You manage API keys, budgets and rate limits yourself",
+        "Self-hosting means you own upgrades"
+      ]
+    }
+  },
+  {
+    "id": 1730,
+    "name": "Matt Pocock Skills",
+    "description": "A public collection of skills for real engineers, published straight from the author's own .agents directory. The repo is a working set of agent skill definitions you can read, copy and adapt rather than a framework, which makes it a useful reference for writing your own skills.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/mattpocock/skills",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A public collection of skills for real engineers, published straight from the author's own .agents directory. The repo is a working set of agent skill definitions you can read, copy and adapt rather than a framework, which makes it a useful reference for writing your own skills.",
+    "last_updated": "2026-09-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Engineers writing their first agent skills",
+      "Teams looking for skill conventions to copy",
+      "Users of agents that load skills from a directory"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Copy a working skill",
+        "detail": "Read a real skill file and adapt it to your own workflow."
+      },
+      {
+        "title": "Standardise team skills",
+        "detail": "Use the same layout across a team so skills are easy to share."
+      },
+      {
+        "title": "Learn skill conventions",
+        "detail": "See what a mature .agents directory looks like in practice."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Real skills from daily use, not synthetic examples",
+        "Easy to fork and adapt",
+        "Free"
+      ],
+      "cons": [
+        "Opinionated toward one engineer's workflow",
+        "Not a packaged distribution you can install wholesale"
+      ]
+    }
+  },
+  {
+    "id": 1731,
+    "name": "OpenSpender",
+    "description": "A self-custodial wallet for agents. OpenSpender lets you define spending limits and an address, then lets your agents spend and send money to each other, with each agent drawing from an allowance rather than a shared credential.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://app.openspender.com/agent-to-agent",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A self-custodial wallet for agents. OpenSpender lets you define spending limits and an address, then lets your agents spend and send money to each other, with each agent drawing from an allowance rather than a shared credential.",
+    "last_updated": "2026-09-04",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agent-to-agent payment experiments",
+      "Teams giving agents a bounded budget",
+      "Workflows where agents pay for APIs per call"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Bounded agent spending",
+        "detail": "Give an agent an allowance and a limit instead of an open API key."
+      },
+      {
+        "title": "Pay per tool call",
+        "detail": "Let an agent settle small charges for search, crawl and fetch calls it makes."
+      },
+      {
+        "title": "Agent-to-agent settlement",
+        "detail": "Have one agent pay another for work it delegates."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Self-custodial rather than a hosted sub-account",
+        "Allowance model is the right primitive for agent spending",
+        "CLI installable with npx"
+      ],
+      "cons": [
+        "Payments bring compliance and accounting questions",
+        "Early product in a fast-changing area"
+      ]
+    }
+  },
+  {
+    "id": 1732,
+    "name": "Recurse",
+    "description": "Your agent's universal toolbox. Recurse gives an agent access to hundreds of APIs through one account, so you can build and deploy API-powered tools and agents without wiring up a separate key and client for every provider.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://recurse.run/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Your agent's universal toolbox. Recurse gives an agent access to hundreds of APIs through one account, so you can build and deploy API-powered tools and agents without wiring up a separate key and client for every provider.",
+    "last_updated": "2026-09-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agents that need many third-party APIs",
+      "Builders tired of per-provider API key setup",
+      "Research and data-collection agents"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One account, many APIs",
+        "detail": "Reach search, scraping, enrichment and SEO providers through a single credential."
+      },
+      {
+        "title": "Compose a tool",
+        "detail": "Build a multi-provider tool such as competitor pricing evidence collection."
+      },
+      {
+        "title": "Deploy the tool",
+        "detail": "Ship the composed tool so an agent can call it repeatedly."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Removes most of the API key plumbing",
+        "Provider catalogue covers research, marketing and SEO use cases",
+        "Example library to start from"
+      ],
+      "cons": [
+        "Adds a dependency between your agent and the provider catalogue",
+        "Pricing is not published up front"
+      ]
+    }
+  },
+  {
+    "id": 1733,
+    "name": "MCP Stama",
+    "description": "An ultra-fast, single-binary MCP server written in Rust as a lightweight alternative to Node.js or Python MCP servers. Stama targets the case where you want an MCP endpoint without pulling in a language runtime.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/StamManif/mcp-stama",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An ultra-fast, single-binary MCP server written in Rust as a lightweight alternative to Node.js or Python MCP servers. Stama targets the case where you want an MCP endpoint without pulling in a language runtime.",
+    "last_updated": "2026-08-13",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Minimal MCP deployments",
+      "Environments without a Node or Python runtime",
+      "Users who care about startup latency"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Drop-in MCP endpoint",
+        "detail": "Run a single binary and point an MCP client at it with no runtime install."
+      },
+      {
+        "title": "Constrained hosts",
+        "detail": "Serve MCP on small machines where a language runtime is too heavy."
+      },
+      {
+        "title": "Fast startup",
+        "detail": "Keep tool latency low by avoiding runtime boot time."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Single binary, no dependencies",
+        "Rust performance and startup time",
+        "Open source"
+      ],
+      "cons": [
+        "Very small project with limited tooling around it",
+        "Fewer tools implemented than larger MCP servers"
+      ]
+    }
+  },
+  {
+    "id": 1734,
+    "name": "WhatsApp MCP",
+    "description": "A read-only MCP server that lets your AI agent search and read your own WhatsApp messages, running on Cloudflare Workers. The read-only design means an agent can query message history without being able to send anything.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/finereli/whatsapp-mcp",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A read-only MCP server that lets your AI agent search and read your own WhatsApp messages, running on Cloudflare Workers. The read-only design means an agent can query message history without being able to send anything.",
+    "last_updated": "2026-10-18",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Searching your own WhatsApp history from an agent",
+      "Users who want read-only access for safety",
+      "Serverless MCP deployments"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Search message history",
+        "detail": "Ask an agent to find what was said about a topic across your chats."
+      },
+      {
+        "title": "Summarise a thread",
+        "detail": "Pull a long conversation into context for a summary without copy-pasting."
+      },
+      {
+        "title": "Read-only safety",
+        "detail": "Give the agent query access without any ability to send messages."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Read-only by design",
+        "Hosted on Cloudflare Workers, no server to run",
+        "Open source"
+      ],
+      "cons": [
+        "Your messages are processed by whatever model the agent uses",
+        "Read-only means no drafting or replying"
+      ]
+    }
+  },
+  {
+    "id": 1735,
+    "name": "MCP Harbor",
+    "description": "An MCP server registry, directory and gateway. MCP Harbor mirrors the official MCP Registry and keeps it in sync, lets you search every listing by name, transport or the exact tool you need, and is itself an MCP server so an agent can search the catalogue and submit listings on its own.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://ai.mcpharbor.dev/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An MCP server registry, directory and gateway. MCP Harbor mirrors the official MCP Registry and keeps it in sync, lets you search every listing by name, transport or the exact tool you need, and is itself an MCP server so an agent can search the catalogue and submit listings on its own.",
+    "last_updated": "2026-09-14",
+    "skill_level": "beginner",
+    "best_for": [
+      "Finding an MCP server for a specific tool",
+      "Agents that need to discover servers at runtime",
+      "Anyone who wants one searchable catalogue"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Find a server by tool",
+        "detail": "Search for the exact tool name you need rather than browsing by category."
+      },
+      {
+        "title": "Let the agent search",
+        "detail": "Point a client at the registry endpoint so the agent can query and submit listings itself."
+      },
+      {
+        "title": "Mirror plus extras",
+        "detail": "Browse official registry entries alongside servers submitted only to Harbor."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Searches by tool name, not just server name",
+        "Mirrors the official registry",
+        "Registry is itself queryable over MCP"
+      ],
+      "cons": [
+        "Public directory means listing quality varies",
+        "Depends on the upstream registry staying available"
+      ]
+    }
+  },
+  {
+    "id": 1736,
+    "name": "Karada",
+    "description": "The infrastructure platform for Model Context Protocol. Karada auto-compiles APIs into MCP servers, keeps tools in sync with CI/CD on every deploy, bolts on composable middleware, and publishes to a registry so the same tools work across Cursor, Claude Code, Windsurf and agent fleets.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://karada.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "The infrastructure platform for Model Context Protocol. Karada auto-compiles APIs into MCP servers, keeps tools in sync with CI/CD on every deploy, bolts on composable middleware, and publishes to a registry so the same tools work across Cursor, Claude Code, Windsurf and agent fleets.",
+    "last_updated": "2026-09-23",
+    "skill_level": "advanced",
+    "best_for": [
+      "Teams exposing an existing API to agents",
+      "Keeping MCP tools in sync with API changes",
+      "Fleets of agents hitting the same tools"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Compile an API to MCP",
+        "detail": "Turn an OpenAPI spec into a hosted MCP server instead of hand-writing tool definitions."
+      },
+      {
+        "title": "Sync on deploy",
+        "detail": "Regenerate and redeploy MCP tools as part of CI/CD whenever the API changes."
+      },
+      {
+        "title": "Add middleware",
+        "detail": "Compose auth, rate limiting or logging around tool calls."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Treats MCP servers as deployable infrastructure, not scripts",
+        "CI/CD sync prevents tool drift",
+        "Targets multiple agent clients at once"
+      ],
+      "cons": [
+        "Platform dependency for something you could self-host",
+        "Pricing is not published"
+      ]
+    }
+  },
+  {
+    "id": 1737,
+    "name": "Chiplab",
+    "description": "The API between AI agents and silicon. Chiplab by Veecle is an MCP platform that lets agents compile, simulate and validate firmware against the actual target chip without physical hardware, which removes the hardware-in-the-loop bottleneck from embedded agent workflows.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://veecle.ai/chiplab",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "The API between AI agents and silicon. Chiplab by Veecle is an MCP platform that lets agents compile, simulate and validate firmware against the actual target chip without physical hardware, which removes the hardware-in-the-loop bottleneck from embedded agent workflows.",
+    "last_updated": "2026-10-14",
+    "skill_level": "advanced",
+    "best_for": [
+      "Embedded and firmware teams",
+      "Porting firmware to a new chip",
+      "Debugging without a board on the desk"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Test without hardware",
+        "detail": "Compile and simulate firmware on the real target chip definition instead of a dev board."
+      },
+      {
+        "title": "Port to a new chip",
+        "detail": "Validate a firmware port before the silicon arrives."
+      },
+      {
+        "title": "Reproduce a HardFault",
+        "detail": "Have an agent run and inspect a failing firmware build in simulation."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Removes the hardware bottleneck from firmware iteration",
+        "MCP interface means the agent drives the whole loop",
+        "Covers several boards at once"
+      ],
+      "cons": [
+        "Simulation is not a substitute for every real-world test",
+        "Beta product with unpublished pricing"
+      ]
+    }
+  },
+  {
+    "id": 1738,
+    "name": "Datamimic",
+    "description": "Model-driven synthetic test data for CI/CD and analytics, deterministic, privacy-preserving and domain-aware. Datamimic provides Python APIs, XML pipelines and MCP or IDE integration to orchestrate realistic datasets for finance, healthcare and other regulated environments.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/rapiddweller/datamimic",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Model-driven synthetic test data for CI/CD and analytics, deterministic, privacy-preserving and domain-aware. Datamimic provides Python APIs, XML pipelines and MCP or IDE integration to orchestrate realistic datasets for finance, healthcare and other regulated environments.",
+    "last_updated": "2026-09-16",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Pipelines that need realistic test data",
+      "Regulated domains where production data cannot be copied",
+      "Teams stopping agents from inventing their own fixtures"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Generate CI fixtures",
+        "detail": "Produce deterministic datasets on every pipeline run instead of hand-maintained fixtures."
+      },
+      {
+        "title": "Mask and anonymise",
+        "detail": "Create privacy-preserving copies of production-shaped data for analytics."
+      },
+      {
+        "title": "Agent-generated test worlds",
+        "detail": "Give a coding agent a realistic domain model rather than letting it fabricate one."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Deterministic output, so failures reproduce",
+        "Domain-aware models for finance and healthcare",
+        "MCP and IDE integration"
+      ],
+      "cons": [
+        "XML pipeline configuration will not suit everyone",
+        "Setup effort before the first useful dataset"
+      ]
+    }
+  },
+  {
+    "id": 1739,
+    "name": "MathKernel",
+    "description": "An evidence-aware multi-engine mathematics runtime for LLMs. MathKernel performs exact, symbolic, formal, certified-interval and numeric computation with typed MathIR, trust labels and full provenance, so a model can hand off arithmetic it should not be doing itself.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/Staatsgeheim/MathKernel",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An evidence-aware multi-engine mathematics runtime for LLMs. MathKernel performs exact, symbolic, formal, certified-interval and numeric computation with typed MathIR, trust labels and full provenance, so a model can hand off arithmetic it should not be doing itself.",
+    "last_updated": "2026-09-07",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agents doing quantitative work",
+      "Workflows that need certified bounds rather than approximations",
+      "Anyone tired of arithmetic hallucinations"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Offload computation",
+        "detail": "Route a calculation from the model to an exact or interval engine and return a labelled result."
+      },
+      {
+        "title": "Certified intervals",
+        "detail": "Get a guaranteed error bound instead of a single floating point guess."
+      },
+      {
+        "title": "Traceable results",
+        "detail": "Keep provenance for each step so a result can be audited later."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Multiple engines with trust labels",
+        "Provenance makes results auditable",
+        "Ships as an MCP server"
+      ],
+      "cons": [
+        "Narrow scope compared with a general tool-use agent",
+        "Requires the calling agent to actually delegate the maths"
+      ]
+    }
+  },
+  {
+    "id": 1740,
+    "name": "Lanes",
+    "description": "Lanes Link is a private, self-hostable MCP endpoint that connects your accounts, memory and skills to every AI agent you use, behind access profiles you manage. Instead of wiring every agent to every account, you connect once and decide which agent may reach what.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://lanes.sh/showcase/personal-context-mcp",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Lanes Link is a private, self-hostable MCP endpoint that connects your accounts, memory and skills to every AI agent you use, behind access profiles you manage. Instead of wiring every agent to every account, you connect once and decide which agent may reach what.",
+    "last_updated": "2026-09-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Users running several agents against the same accounts",
+      "Anyone who wants per-agent access control",
+      "Self-hosters keeping credentials local"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Connect once, use everywhere",
+        "detail": "Bring accounts and context together in one endpoint and authorise agents individually."
+      },
+      {
+        "title": "Access profiles",
+        "detail": "Create separate scopes so one agent can read mail while another cannot."
+      },
+      {
+        "title": "Shared memory and skills",
+        "detail": "Keep one memory store and skill set available across different agents."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Access profiles solve a real multi-agent problem",
+        "Self-hostable and private",
+        "Broad provider catalogue"
+      ],
+      "cons": [
+        "Another service to run and secure",
+        "Value depends on using more than one agent"
+      ]
+    }
+  },
+  {
+    "id": 1741,
+    "name": "StemJSON",
+    "description": "StemJSON is a declarative JSON-based language that turns descriptions into native mobile apps, written by AI, pushed by your backend or shaped by your users. The format is open and ships with StemStudio AI and an MCP server so features can be generated from an AI chat.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://stemjson.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "StemJSON is a declarative JSON-based language that turns descriptions into native mobile apps, written by AI, pushed by your backend or shaped by your users. The format is open and ships with StemStudio AI and an MCP server so features can be generated from an AI chat.",
+    "last_updated": "2026-09-14",
+    "skill_level": "advanced",
+    "best_for": [
+      "Mobile teams experimenting with generated UI",
+      "Backend-driven app features",
+      "Prototyping native flows quickly"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Generate native UI",
+        "detail": "Describe a screen and have an AI produce StemJSON that renders as native UI and logic."
+      },
+      {
+        "title": "Push features from the backend",
+        "detail": "Ship new mobile features without an app store release."
+      },
+      {
+        "title": "Extend an existing app",
+        "detail": "Drop the format into existing tooling, IDEs or prototyping environments."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Open declarative format rather than a closed builder",
+        "MCP server for generating features from chat",
+        "Targets native rather than webviews"
+      ],
+      "cons": [
+        "New ecosystem with a small community",
+        "Pricing not published"
+      ]
+    }
+  },
+  {
+    "id": 1742,
+    "name": "Television",
+    "description": "The missing GUI for personal agents. Television gives you and your agent a visual space for creating and working with artifacts, organised into persistent channels, so important output is pinned where you can revisit it instead of lost in a chat scroll.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://television.run/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "The missing GUI for personal agents. Television gives you and your agent a visual space for creating and working with artifacts, organised into persistent channels, so important output is pinned where you can revisit it instead of lost in a chat scroll.",
+    "last_updated": "2026-10-02",
+    "skill_level": "beginner",
+    "best_for": [
+      "Users drowning in agent chat history",
+      "Long-running personal agent projects",
+      "Anyone who wants a visual workspace over a transcript"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Pin artifacts",
+        "detail": "Have the agent save status cards, checklists or web pages as artifacts you can return to."
+      },
+      {
+        "title": "Organise into channels",
+        "detail": "Group artifacts into persistent channels per project or topic."
+      },
+      {
+        "title": "Works with any harness",
+        "detail": "Use it with any agent that can run commands and write files."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Harness-agnostic by design",
+        "Artifact model fixes a real problem with chat-only agents",
+        "Skills for generating interfaces"
+      ],
+      "cons": [
+        "macOS build is the main download",
+        "Pricing not published"
+      ]
+    }
+  },
+  {
+    "id": 1743,
+    "name": "Neckbeard",
+    "description": "An agent plugin that scaffolds tested, cost-honest cloud infrastructure from a versioned module catalog. Neckbeard gives a coding agent a curated set of infrastructure modules instead of letting it improvise Terraform, with cost visibility built into the scaffold.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/bealesh/neckbeard",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An agent plugin that scaffolds tested, cost-honest cloud infrastructure from a versioned module catalog. Neckbeard gives a coding agent a curated set of infrastructure modules instead of letting it improvise Terraform, with cost visibility built into the scaffold.",
+    "last_updated": "2026-10-14",
+    "skill_level": "advanced",
+    "best_for": [
+      "Platform and SRE teams using agents",
+      "Anyone who wants cost visibility at scaffold time",
+      "Teams standardising cloud modules"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Scaffold infrastructure",
+        "detail": "Have an agent generate infrastructure from reviewed modules rather than from scratch."
+      },
+      {
+        "title": "See the cost up front",
+        "detail": "Get an honest cost estimate for what the agent proposes to create."
+      },
+      {
+        "title": "Versioned module catalog",
+        "detail": "Pin infrastructure patterns to a version so teams stay consistent."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Cost honesty is rare in generated infrastructure",
+        "Versioned catalog keeps output consistent",
+        "Fits agent plugin workflows"
+      ],
+      "cons": [
+        "Only as good as the modules in the catalog",
+        "New project with a narrow focus"
+      ]
+    }
+  },
+  {
+    "id": 1744,
+    "name": "WebLLM",
+    "description": "A high-performance in-browser LLM inference engine. WebLLM runs language models directly in a browser tab on WebGPU with no server round trip, which makes it possible to ship model-backed features that never send user input anywhere.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/mlc-ai/web-llm",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A high-performance in-browser LLM inference engine. WebLLM runs language models directly in a browser tab on WebGPU with no server round trip, which makes it possible to ship model-backed features that never send user input anywhere.",
+    "last_updated": "2026-09-02",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Client-side AI features with a privacy story",
+      "Demos that need no backend",
+      "Web developers avoiding inference hosting costs"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "In-browser chat",
+        "detail": "Run a chat model entirely in the tab with no API key and no server."
+      },
+      {
+        "title": "Private document handling",
+        "detail": "Process text locally so it never leaves the device."
+      },
+      {
+        "title": "Offline-capable apps",
+        "detail": "Keep a model cached so the feature still works without a network."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No server or API key required",
+        "Strong privacy properties",
+        "Mature project from the MLC community"
+      ],
+      "cons": [
+        "Model size is limited by device memory",
+        "First load downloads model weights"
+      ]
+    }
+  },
+  {
+    "id": 1745,
+    "name": "Soup",
+    "description": "Fine-tune LLMs from one YAML file. Soup uses layer streaming so an 8B model can be trained on a 4 GB laptop GPU, and covers DPO as well as supervised fine-tuning with GGUF export.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/MakazhanAlpamys/Soup",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Fine-tune LLMs from one YAML file. Soup uses layer streaming so an 8B model can be trained on a 4 GB laptop GPU, and covers DPO as well as supervised fine-tuning with GGUF export.",
+    "last_updated": "2026-08-04",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developers with only a consumer GPU",
+      "Fine-tuning without a config sprawl",
+      "Experimenting with DPO locally"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Fine-tune on a laptop",
+        "detail": "Train an 8B model within 4 GB of VRAM using layer streaming."
+      },
+      {
+        "title": "One-file configuration",
+        "detail": "Describe the whole run in a single YAML instead of a training script."
+      },
+      {
+        "title": "Export for local runtime",
+        "detail": "Produce GGUF weights you can run in a local inference server."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Genuinely lowers the hardware floor for fine-tuning",
+        "Single YAML config",
+        "DPO support and GGUF export"
+      ],
+      "cons": [
+        "Consumer-GPU training is still slow",
+        "Layer streaming adds complexity versus plain fine-tuning"
+      ]
+    }
+  },
+  {
+    "id": 1746,
+    "name": "Yap",
+    "description": "Free, open source voice dictation for macOS. Yap does on-device transcription with Apple's Speech framework, so there is no cloud, no API key and no account involved.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://github.com/FrigadeHQ/yap",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free, open source voice dictation for macOS. Yap does on-device transcription with Apple's Speech framework, so there is no cloud, no API key and no account involved.",
+    "last_updated": "2026-07-27",
+    "skill_level": "beginner",
+    "best_for": [
+      "macOS users who want dictation without a subscription",
+      "Anyone avoiding cloud transcription for privacy",
+      "Developers who dictate into an agent"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "System-wide dictation",
+        "detail": "Dictate into any app from the menu bar without a hosted service."
+      },
+      {
+        "title": "Private transcription",
+        "detail": "Keep speech on the device instead of sending audio to an API."
+      },
+      {
+        "title": "Accessibility",
+        "detail": "Use voice input where typing is difficult."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No account, no API key, no cloud",
+        "Uses Apple's on-device Speech framework",
+        "Free and open source"
+      ],
+      "cons": [
+        "macOS only",
+        "Accuracy depends on Apple's speech model"
+      ]
+    }
+  },
+  {
+    "id": 1747,
+    "name": "Qwen Scribe",
+    "description": "Private, local transcription and system-wide dictation for Apple Silicon. Qwen Scribe runs Qwen3-ASR through MLX so transcription and dictation stay on the machine.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://github.com/VladUZH/qwen-scribe",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Private, local transcription and system-wide dictation for Apple Silicon. Qwen Scribe runs Qwen3-ASR through MLX so transcription and dictation stay on the machine.",
+    "last_updated": "2026-07-29",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Apple Silicon users wanting local speech-to-text",
+      "Recording and transcribing without a cloud service",
+      "Users who prefer open-weight ASR models"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Local transcription",
+        "detail": "Transcribe recordings on-device with an open-weight ASR model."
+      },
+      {
+        "title": "System-wide dictation",
+        "detail": "Dictate into any application without sending audio out."
+      },
+      {
+        "title": "Private meeting notes",
+        "detail": "Keep sensitive recordings off third-party infrastructure."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Fully local via MLX on Apple Silicon",
+        "Open-weight ASR model",
+        "Free"
+      ],
+      "cons": [
+        "Apple Silicon only",
+        "Local model quality trails the best hosted ASR"
+      ]
+    }
+  },
+  {
+    "id": 1748,
+    "name": "Egma",
+    "description": "The first open-source platform for simulation testing, monitoring and self-improving voice agents. Egma runs scripted and simulated calls against a voice agent so failures surface before real callers hit them.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://github.com/egma-ai/egma",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "The first open-source platform for simulation testing, monitoring and self-improving voice agents. Egma runs scripted and simulated calls against a voice agent so failures surface before real callers hit them.",
+    "last_updated": "2026-09-10",
+    "skill_level": "advanced",
+    "best_for": [
+      "Teams shipping voice agents to production",
+      "Regression testing conversational flows",
+      "Monitoring call quality over time"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Simulate calls",
+        "detail": "Run simulated conversations against a voice agent across many scenarios."
+      },
+      {
+        "title": "Monitor production",
+        "detail": "Track how the agent actually behaves once deployed."
+      },
+      {
+        "title": "Close the loop",
+        "detail": "Feed failures back into improvement of the agent."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Voice agents are badly underserved by test tooling",
+        "Open source and self-hostable",
+        "Covers simulation, monitoring and improvement"
+      ],
+      "cons": [
+        "Requires a voice agent to test in the first place",
+        "Simulation fidelity limits what failures you catch"
+      ]
+    }
+  },
+  {
+    "id": 1749,
+    "name": "Mole",
+    "description": "A deep-research agent with an enforced budget, verified quotes and a privacy boundary for local data. Mole is built for running multi-source research where you need to know what was spent and where every quote came from.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/lajosdeme/mole",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A deep-research agent with an enforced budget, verified quotes and a privacy boundary for local data. Mole is built for running multi-source research where you need to know what was spent and where every quote came from.",
+    "last_updated": "2026-08-14",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Research tasks where cost must be capped",
+      "Work that requires citable quotes",
+      "Users who do not want local files uploaded"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Budgeted research runs",
+        "detail": "Set a hard spend ceiling before the agent starts searching."
+      },
+      {
+        "title": "Verified citations",
+        "detail": "Require the agent to attach a verifiable quote to each claim."
+      },
+      {
+        "title": "Local-data boundary",
+        "detail": "Keep local documents inside the machine while still using web sources."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Enforced budget is unusual and useful",
+        "Verified quotes address citation hallucination",
+        "Explicit local-data privacy boundary"
+      ],
+      "cons": [
+        "Budget enforcement can cut a run short",
+        "Requires configuring providers yourself"
+      ]
+    }
+  },
+  {
+    "id": 1750,
+    "name": "Jev Ultrafast",
+    "description": "A web agent from the Browser Use team described as the fastest and cheapest option in their line-up, with a dynamic, indexed action space that keeps the number of steps per task down.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/browser-use/jev-ultrafast",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A web agent from the Browser Use team described as the fastest and cheapest option in their line-up, with a dynamic, indexed action space that keeps the number of steps per task down.",
+    "last_updated": "2026-09-17",
+    "skill_level": "intermediate",
+    "best_for": [
+      "High-volume browser automation",
+      "Teams watching per-task agent cost",
+      "Users already on the Browser Use stack"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Cut cost per task",
+        "detail": "Run routine web tasks with fewer model calls per completion."
+      },
+      {
+        "title": "Indexed action space",
+        "detail": "Let the agent select from an indexed set of page actions rather than re-reading the DOM."
+      },
+      {
+        "title": "Batch web jobs",
+        "detail": "Run many similar browser tasks where step count dominates cost."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Backed by an established browser-agent team",
+        "Explicit focus on speed and cost",
+        "Open source"
+      ],
+      "cons": [
+        "Benchmark claims are the vendor's own",
+        "Fastest does not always mean most reliable on hard pages"
+      ]
+    }
+  },
+  {
+    "id": 1751,
+    "name": "Sunk Cost",
+    "description": "A break-even calculator for local AI hardware. Sunk Cost takes a machine, its power draw and your usage assumptions, then tells you how long until running models locally pays for itself against an API bill.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://sunkcost.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A break-even calculator for local AI hardware. Sunk Cost takes a machine, its power draw and your usage assumptions, then tells you how long until running models locally pays for itself against an API bill.",
+    "last_updated": "2026-09-15",
+    "skill_level": "beginner",
+    "best_for": [
+      "Anyone considering a local inference build",
+      "Comparing a GPU purchase against monthly API spend",
+      "Users checking whether local is actually cheaper"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Break-even estimate",
+        "detail": "Enter a machine and usage pattern to see the payback period."
+      },
+      {
+        "title": "Adjust the assumptions",
+        "detail": "Change electricity price, generation speed and monthly bill to see sensitivity."
+      },
+      {
+        "title": "Share the result",
+        "detail": "Export a card of the calculation to post or keep."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Turns a vague argument into a number",
+        "Assumptions are visible and adjustable",
+        "Free to use"
+      ],
+      "cons": [
+        "Estimates depend on inputs you supply",
+        "Ignores non-financial reasons to go local"
+      ]
+    }
+  },
+  {
+    "id": 1752,
+    "name": "Stale",
+    "description": "How stale is your AI? Stale lists release age and training cutoff for 23 current models across 8 labs and counts upward from each date live, so you can see how far behind a model's knowledge actually is. The same data is published as models.json.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://stale.jock.pl/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "How stale is your AI? Stale lists release age and training cutoff for 23 current models across 8 labs and counts upward from each date live, so you can see how far behind a model's knowledge actually is. The same data is published as models.json.",
+    "last_updated": "2026-09-16",
+    "skill_level": "beginner",
+    "best_for": [
+      "Choosing a model for time-sensitive questions",
+      "Checking whether a cutoff is even published",
+      "Anyone comparing model freshness"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Check training cutoff",
+        "detail": "See when a model stopped reading before trusting it on recent events."
+      },
+      {
+        "title": "Compare labs",
+        "detail": "Look at release age and cutoff across 23 models side by side."
+      },
+      {
+        "title": "Pull the data",
+        "detail": "Use the published models.json in your own tooling."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Only some labs publish cutoffs, and this shows which",
+        "Data available as JSON",
+        "Free and quick to read"
+      ],
+      "cons": [
+        "Covers 23 models, not the whole market",
+        "Live counters need JavaScript"
+      ]
+    }
+  },
+  {
+    "id": 1753,
+    "name": "Nightcrawler",
+    "description": "A local AI-powered red teamer that runs on a phone. Nightcrawler brings an agent-driven security testing workflow to a mobile device, running the model locally rather than against a hosted API.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/garagehq/nightcrawler",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A local AI-powered red teamer that runs on a phone. Nightcrawler brings an agent-driven security testing workflow to a mobile device, running the model locally rather than against a hosted API.",
+    "last_updated": "2026-08-03",
+    "skill_level": "advanced",
+    "best_for": [
+      "Security practitioners who want a pocket testing rig",
+      "Local-model enthusiasts",
+      "Field work without a laptop"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "On-device recon",
+        "detail": "Run agent-assisted reconnaissance from a phone against targets you are authorised to test."
+      },
+      {
+        "title": "Local inference",
+        "detail": "Keep the model on the device instead of calling a hosted API."
+      },
+      {
+        "title": "Portable workflows",
+        "detail": "Carry a testing setup that does not need a laptop or cloud account."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Genuinely portable setup",
+        "Runs the model locally",
+        "Open source"
+      ],
+      "cons": [
+        "Phone hardware limits model size and speed",
+        "Only for authorised testing"
+      ]
+    }
+  },
+  {
+    "id": 1754,
+    "name": "Agentability",
+    "description": "An open experiment on the agentic web. Every day an AI producer turns what the world is searching into ten real errands, a real agent attempts them using nothing but plain web requests with no logins, no JavaScript and no human help, and every transcript is published verbatim. Alongside the show, the 1,219 most-visited sites are scored on how usable they actually are for an agent.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://agentability.org/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "An open experiment on the agentic web. Every day an AI producer turns what the world is searching into ten real errands, a real agent attempts them using nothing but plain web requests with no logins, no JavaScript and no human help, and every transcript is published verbatim. Alongside the show, the 1,219 most-visited sites are scored on how usable they actually are for an agent.",
+    "last_updated": "2026-10-06",
+    "skill_level": "beginner",
+    "best_for": [
+      "Anyone building for agent traffic",
+      "Checking how readable their own site is to an agent",
+      "Following real agent failure modes"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Read real transcripts",
+        "detail": "See exactly where an agent succeeded or failed on a daily errand."
+      },
+      {
+        "title": "Score your site",
+        "detail": "Look up how the index rates a domain for agent usability."
+      },
+      {
+        "title": "Track the index",
+        "detail": "Watch how the most-visited sites change over time."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Publishes failures as well as wins",
+        "Methodology is stated and repeatable",
+        "Free to read"
+      ],
+      "cons": [
+        "One agent configuration, not a general benchmark",
+        "Site index covers only the most-visited domains"
+      ]
+    }
+  },
+  {
+    "id": 1755,
+    "name": "Bullshit Detector",
+    "description": "Agent skills that fact-check the internet. Bullshit Detector does claim-by-claim verification with sources and returns a 0 to 10 BS score for any YouTube video, article, tweet or PDF you hand your agent.",
+    "category": "Writing",
+    "pricing": "Open Source",
+    "url": "https://github.com/SerhiiKorniienko/bullshit-detector",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Agent skills that fact-check the internet. Bullshit Detector does claim-by-claim verification with sources and returns a 0 to 10 BS score for any YouTube video, article, tweet or PDF you hand your agent.",
+    "last_updated": "2026-07-29",
+    "skill_level": "beginner",
+    "best_for": [
+      "Checking a source before citing it",
+      "Reviewing long videos or PDFs quickly",
+      "Anyone who wants claims separated from rhetoric"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Score an article",
+        "detail": "Have the agent extract claims and rate each with a source and a BS score."
+      },
+      {
+        "title": "Check a video",
+        "detail": "Run the same claim-level verification against a YouTube transcript."
+      },
+      {
+        "title": "Vet a PDF",
+        "detail": "Pull verifiable statements out of a long document before relying on it."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Claim-level output is more useful than a single verdict",
+        "Works on video, articles, tweets and PDFs",
+        "Installs as agent skills"
+      ],
+      "cons": [
+        "Score quality depends on the underlying model's searching",
+        "Verification is only as good as available sources"
+      ]
+    }
+  },
+  {
+    "id": 1756,
+    "name": "Explainroo",
+    "description": "Explainer videos and product demos made by your AI agent. Explainroo is free and open source: a local voice from Kokoro, word timing from Whisper and a canvas renderer turn a script into a narrated MP4 without a hosted video service.",
+    "category": "Video",
+    "pricing": "Open Source",
+    "url": "https://github.com/vincentsch/explainroo",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Explainer videos and product demos made by your AI agent. Explainroo is free and open source: a local voice from Kokoro, word timing from Whisper and a canvas renderer turn a script into a narrated MP4 without a hosted video service.",
+    "last_updated": "2026-09-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Turning a written script into a narrated video",
+      "Product demo clips generated in CI",
+      "Teams avoiding per-render video pricing"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Script to MP4",
+        "detail": "Feed the agent a script and get back a narrated video with animated canvas scenes."
+      },
+      {
+        "title": "Local voiceover",
+        "detail": "Generate narration with Kokoro so no audio leaves the machine."
+      },
+      {
+        "title": "Automated demos",
+        "detail": "Regenerate a product demo clip whenever the UI changes."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Entirely local pipeline, no render credits",
+        "Word-level timing via Whisper keeps narration in sync",
+        "Open source"
+      ],
+      "cons": [
+        "Output is canvas animation, not live screen capture",
+        "Voice quality is below commercial TTS"
+      ]
+    }
+  },
+  {
+    "id": 1757,
+    "name": "Drawgent",
+    "description": "A coding agent that works on a live Excalidraw canvas. Drawgent lets an agent read and modify a diagram you are editing, so architectural sketches and code can move together instead of living in separate tools.",
+    "category": "Image",
+    "pricing": "Open Source",
+    "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A coding agent that works on a live Excalidraw canvas. Drawgent lets an agent read and modify a diagram you are editing, so architectural sketches and code can move together instead of living in separate tools.",
+    "last_updated": "2026-09-26",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developers who sketch architecture before coding",
+      "Keeping diagrams and code in sync",
+      "Excalidraw users wanting an agent inside the canvas"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Agent edits the diagram",
+        "detail": "Ask the agent to add or rearrange boxes on the live canvas."
+      },
+      {
+        "title": "Diagram to code",
+        "detail": "Generate a scaffold from a sketch you just drew."
+      },
+      {
+        "title": "Explain a system",
+        "detail": "Have the agent annotate an existing diagram with what each part does."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works on the canvas you already use",
+        "Open source",
+        "Bridges a real gap between diagrams and code"
+      ],
+      "cons": [
+        "Early-stage project with a small community",
+        "Requires an Excalidraw workflow to be useful"
+      ]
+    }
+  },
+  {
+    "id": 1758,
+    "name": "OCR It",
+    "description": "A Chrome extension for pulling text out of documents you cannot copy. You pin a screen region once, then hotkey your way through a paginated document, and OCR runs completely offline through a bundled Tesseract build.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/thiagotigaz/ocr-it",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A Chrome extension for pulling text out of documents you cannot copy. You pin a screen region once, then hotkey your way through a paginated document, and OCR runs completely offline through a bundled Tesseract build.",
+    "last_updated": "2026-08-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Extracting text from scanned or locked PDFs",
+      "Feeding paginated documents to an LLM",
+      "Anyone avoiding an online OCR upload"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Bulk page capture",
+        "detail": "Pin a region and step through pages with a hotkey instead of reselecting each time."
+      },
+      {
+        "title": "Offline OCR",
+        "detail": "Run recognition locally with bundled Tesseract so nothing is uploaded."
+      },
+      {
+        "title": "Feed an LLM",
+        "detail": "Produce clean text you can paste or pipe into a model."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works fully offline",
+        "Pin-once workflow for long documents",
+        "Free and open source"
+      ],
+      "cons": [
+        "Region pinning is manual",
+        "Tesseract accuracy drops on poor scans"
+      ]
+    }
+  },
+  {
+    "id": 1759,
+    "name": "Accept Markdown",
+    "description": "A guide and reference for serving a Markdown variant of your site to AI agents using Accept headers. Serving Markdown lets agent clients skip nav, scripts and layout markup and read the content directly, which lowers token use and improves retrieval quality.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://acceptmarkdown.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A guide and reference for serving a Markdown variant of your site to AI agents using Accept headers. Serving Markdown lets agent clients skip nav, scripts and layout markup and read the content directly, which lowers token use and improves retrieval quality.",
+    "last_updated": "2026-08-26",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Site owners who want agents to read them correctly",
+      "Documentation sites seeing agent traffic",
+      "Anyone optimising content for RAG pipelines"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Content negotiation",
+        "detail": "Return Markdown when a client sends an Accept header requesting it."
+      },
+      {
+        "title": "Cut agent token use",
+        "detail": "Drop navigation, styles and scripts from what an agent has to read."
+      },
+      {
+        "title": "Cleaner retrieval",
+        "detail": "Remove ads and related-content rails that muddy embedded text."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Small change with a measurable effect on agent accuracy",
+        "Well documented with quick start and reference",
+        "Free"
+      ],
+      "cons": [
+        "Requires server-side changes",
+        "Adoption among agents is still uneven"
+      ]
+    }
+  },
+  {
+    "id": 1760,
+    "name": "Praxos",
+    "description": "Messaging for a world where you and your teammates each have ten conversations with AI going at once. Praxos remembers what people and agents said and did, so you can hand a thread to Claude or Codex without copying messages over, and a colleague can pick up where an agent left off.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://www.praxos.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Messaging for a world where you and your teammates each have ten conversations with AI going at once. Praxos remembers what people and agents said and did, so you can hand a thread to Claude or Codex without copying messages over, and a colleague can pick up where an agent left off.",
+    "last_updated": "2026-09-21",
+    "skill_level": "beginner",
+    "best_for": [
+      "Teams where several people use different agents",
+      "Handing context between humans and agents",
+      "Groups tired of pasting chat transcripts around"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Shared agent context",
+        "detail": "Let a teammate see what someone already worked through with an agent."
+      },
+      {
+        "title": "Hand off to an agent",
+        "detail": "Pass a conversation to Claude or Codex without re-explaining the background."
+      },
+      {
+        "title": "Persistent team memory",
+        "detail": "Keep what people and agents decided in one searchable place."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Targets a real coordination problem",
+        "Works with existing agents rather than replacing them",
+        "Free sign-up"
+      ],
+      "cons": [
+        "Pricing not published",
+        "Value depends on the whole team adopting it"
+      ]
+    }
+  },
+  {
+    "id": 1761,
+    "name": "Almanac",
+    "description": "A Mac workspace described as the most organised way to work with AI. Almanac keeps tasks, projects and knowledge in one place, combining a wiki, project boards and search so agent-assisted work does not scatter across tools.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://usealmanac.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A Mac workspace described as the most organised way to work with AI. Almanac keeps tasks, projects and knowledge in one place, combining a wiki, project boards and search so agent-assisted work does not scatter across tools.",
+    "last_updated": "2026-08-31",
+    "skill_level": "beginner",
+    "best_for": [
+      "Mac users organising AI-assisted projects",
+      "Teams wanting tasks and a wiki together",
+      "Anyone losing track of agent output"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Unified workspace",
+        "detail": "Keep tasks, project notes and a wiki in one Mac app."
+      },
+      {
+        "title": "Track agent work",
+        "detail": "See what needs attention across projects in a single home view."
+      },
+      {
+        "title": "Searchable knowledge",
+        "detail": "Search across wiki pages, projects and tasks."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Combines tasks, projects and knowledge in one place",
+        "Mac-native app",
+        "Backed by Y Combinator"
+      ],
+      "cons": [
+        "macOS only",
+        "Pricing not published on the landing page"
+      ]
+    }
+  },
+  {
+    "id": 1762,
+    "name": "Masala",
+    "description": "A research workspace where an agent works beside you. Masala puts chat, PDFs, notebooks and files in one dock, and the agent can build custom panes on request so the interface grows to match the task.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/infusius/masala",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A research workspace where an agent works beside you. Masala puts chat, PDFs, notebooks and files in one dock, and the agent can build custom panes on request so the interface grows to match the task.",
+    "last_updated": "2026-09-15",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Researchers juggling papers, notebooks and chat",
+      "Users who want the agent to build its own UI",
+      "Local-first research workflows"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Agent-built panes",
+        "detail": "Ask for a custom pane and let the agent construct it rather than settling for chat output."
+      },
+      {
+        "title": "Papers and notebooks together",
+        "detail": "Keep PDFs, Jupyter notebooks and files in the same dock as the conversation."
+      },
+      {
+        "title": "Multi-client support",
+        "detail": "Work with Claude Code or Codex from the same workspace."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Agent-built panes are a genuinely different idea",
+        "Brings PDFs and notebooks into one workspace",
+        "Open source"
+      ],
+      "cons": [
+        "Early project with a small community",
+        "Python desktop app to install and run"
+      ]
+    }
+  },
+  {
+    "id": 1763,
+    "name": "TradingAgents",
+    "description": "A multi-agent LLM financial trading framework. TradingAgents models a trading firm as a set of specialised agents that analyse fundamentals, sentiment, news and technicals, then debate and reach a decision, and it is published alongside a research paper.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/TauricResearch/TradingAgents",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A multi-agent LLM financial trading framework. TradingAgents models a trading firm as a set of specialised agents that analyse fundamentals, sentiment, news and technicals, then debate and reach a decision, and it is published alongside a research paper.",
+    "last_updated": "2026-09-08",
+    "skill_level": "advanced",
+    "best_for": [
+      "Researchers studying agent-based trading",
+      "Quant teams prototyping multi-agent analysis",
+      "Anyone wanting agent debate in a decision pipeline"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Multi-agent analysis",
+        "detail": "Split market analysis across specialised agents and aggregate their views."
+      },
+      {
+        "title": "Agent debate",
+        "detail": "Let bull and bear researchers argue before a decision is made."
+      },
+      {
+        "title": "Backtest research",
+        "detail": "Use the framework as a base for academic or internal experiments."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Well-known research framework with a large community",
+        "Explicit role separation among agents",
+        "Open source"
+      ],
+      "cons": [
+        "Research code, not a production trading system",
+        "Requires market data you have to supply"
+      ]
+    }
+  },
+  {
+    "id": 1764,
+    "name": "Spanda",
+    "description": "Zero-cost epistemic uncertainty quantification and hallucination detection for LLMs. Spanda estimates how uncertain a model is without resampling, which makes it cheap enough to run on every response instead of only on samples.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/nayakbhupen/Spnda",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Zero-cost epistemic uncertainty quantification and hallucination detection for LLMs. Spanda estimates how uncertain a model is without resampling, which makes it cheap enough to run on every response instead of only on samples.",
+    "last_updated": "2026-09-11",
+    "skill_level": "advanced",
+    "best_for": [
+      "Pipelines that need a confidence signal",
+      "Teams flagging likely hallucinations",
+      "Users who cannot afford resampling"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Flag uncertain answers",
+        "detail": "Attach an uncertainty estimate to each generation and route low-confidence ones for review."
+      },
+      {
+        "title": "Avoid resampling cost",
+        "detail": "Get a confidence signal without generating multiple samples per query."
+      },
+      {
+        "title": "Monitor a deployed model",
+        "detail": "Track uncertainty drift over time as inputs change."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No extra generation passes required",
+        "Targets hallucination detection directly",
+        "Open source"
+      ],
+      "cons": [
+        "Requires access to token-level information from the model",
+        "Research-grade project with limited packaging"
+      ]
+    }
+  },
+  {
+    "id": 1765,
+    "name": "Strot",
+    "description": "Compile-time LLM code synthesis with deterministic, self-routing NLU runtimes. Strot compiles an LLM's intent once and runs the resulting decisions locally, so the expensive model call happens at build time rather than on every request.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/strot-ai/Project-STROT",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Compile-time LLM code synthesis with deterministic, self-routing NLU runtimes. Strot compiles an LLM's intent once and runs the resulting decisions locally, so the expensive model call happens at build time rather than on every request.",
+    "last_updated": "2026-10-19",
+    "skill_level": "advanced",
+    "best_for": [
+      "Latency-sensitive classification or routing",
+      "Cutting per-request LLM cost",
+      "Deterministic NLU behaviour"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Compile intent once",
+        "detail": "Turn a natural-language intent definition into a runtime artefact."
+      },
+      {
+        "title": "Run decisions locally",
+        "detail": "Serve the compiled decisions without calling a model per request."
+      },
+      {
+        "title": "Deterministic routing",
+        "detail": "Get repeatable routing behaviour instead of a fresh model call each time."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Removes per-request inference cost",
+        "Deterministic output compared with live prompting",
+        "Installable from PyPI"
+      ],
+      "cons": [
+        "Very new project with minimal adoption",
+        "Recompilation needed whenever intent changes"
+      ]
+    }
   }
 ]
