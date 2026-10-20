@@ -23,6 +23,22 @@ import AuthProvider from "./components/AuthProvider";
 import WebVitals from "./components/WebVitals";
 import ServiceWorkerRegistration from "./components/ServiceWorkerRegistration";
 
+/**
+ * Google AdSense publisher id. Public by design — it is embedded in the ad
+ * script URL and in ads.txt, and both are served to anyone who asks.
+ *
+ * The snippet has to sit in <head> on every page: Google's crawler reads it to
+ * verify site ownership before the account is approved, and it must be present
+ * before the first ad request. Loaded with `afterInteractive` so the browser
+ * never blocks first paint on it.
+ *
+ * Consent is handled separately by CookieConsent (Google Consent Mode v2,
+ * `ad_storage` / `ad_user_data` / `ad_personalization`), which is the pattern
+ * Google prescribes for the EEA and UK rather than conditionally injecting the
+ * script.
+ */
+const ADSENSE_CLIENT = "ca-pub-2700548653982928";
+
 const inter = localFont({
   variable: "--font-inter",
   src: [
@@ -122,6 +138,13 @@ export default function RootLayout({
         {/* Prerender for high-traffic pages */}
         <link rel="prerender" href="/tool/midjourney" />
         <link rel="prerender" href="/search" />
+        {/* Google AdSense — must be in <head> on every page for site verification */}
+        <Script
+          id="google-adsense"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

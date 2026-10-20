@@ -62,4 +62,5 @@ _*.mjs
 _*.txt
 _*.cjs
 _*.md
+_*.html
 _rewrite/

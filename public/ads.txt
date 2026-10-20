@@ -1,0 +1,7 @@
+# ads.txt — declares who is authorized to sell ads on useaitools.me.
+#
+# Google AdSense requires this file at the site root once the account is
+# approved; without it AdSense serves far fewer ads and warns about
+# "unauthorized" inventory. Keep the certification id as-is: it is Google's
+# fixed TAG id for AdSense, not a per-site value.
+google.com, pub-2700548653982928, DIRECT, f08c47fec0942fa0
