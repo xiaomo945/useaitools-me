@@ -1,6 +1,6 @@
 {
   "id": 1087,
-  "title": "The Plumbing Underneath: Serving, Storage and Semantic Layers From Show HN",
+  "title": "Serving, Storage and Semantic Layers From Show HN",
   "slug": "serving-storage-semantic-layer-show-hn",
   "date": "2026-10-20",
   "description": "Eight Show HN projects that handle the unglamorous layer: consumer-GPU serving, remote tensors, vector-ready storage, semantic layers and agent payments.",

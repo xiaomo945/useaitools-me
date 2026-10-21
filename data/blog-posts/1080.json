@@ -1,6 +1,6 @@
 {
   "id": 1080,
-  "title": "Agent Context, Memory and Token Budgets: A Month of Show HN Posts",
+  "title": "Agent Context, Memory and Token Budgets",
   "slug": "agent-context-memory-token-budgets-show-hn",
   "date": "2026-10-19",
   "description": "Ten Hacker News launches that treat agent context, persistent memory and token accounting as first-class problems instead of afterthoughts.",

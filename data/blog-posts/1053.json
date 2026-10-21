@@ -1,9 +1,9 @@
 {
   "id": 1053,
-  "title": "AI Assistants and Chat Platforms: Choosing Between General Chat and Specialized APIs",
+  "title": "AI Assistants and Chat Platforms: A Guide",
   "slug": "ai-assistants-and-chat-platforms-compared",
   "date": "2026-10-17",
-  "description": "Eighteen AI assistants, chat platforms, embedding APIs and Chinese-market models compared. The real split is consumer chat versus developer API versus self-hosted RAG — and picking wrong wastes months.",
+  "description": "Eighteen AI assistants, chat platforms, embedding APIs and Chinese-market models. The real split: consumer chat, developer API, or self-hosted RAG.",
   "style": "technical",
   "images": [
     {

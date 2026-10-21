@@ -1,6 +1,6 @@
 {
   "id": 1034,
-  "title": "Self-Hosted Automation: n8n vs Zapier and When Owning the Workflow Matters",
+  "title": "Self-Hosted Automation: n8n vs Zapier",
   "slug": "self-hosted-automation-n8n-vs-zapier",
   "date": "2026-10-07",
   "description": "When to run your automation on your own infrastructure instead of a hosted platform — cost at volume, data residency, and what you take on by self-hosting.",

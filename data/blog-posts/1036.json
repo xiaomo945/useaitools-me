@@ -1,9 +1,9 @@
 {
   "id": 1036,
-  "title": "AI Coding Agents Write More Code. They Don't Write More Software.",
+  "title": "AI Coding Agents Write Code, Not Software",
   "slug": "ai-coding-agents-more-code-not-more-software",
   "date": "2026-10-16",
-  "description": "Coding agents dramatically increased output but not shipped software. The gap is not generation — it is verification, context and drift. Here is what actually converts agent output into working systems, and the tools built for each stage.",
+  "description": "Coding agents increased output but not shipped software. The gap is verification, context and drift. Here is what converts agent output into working systems.",
   "style": "perspective",
   "images": [
     {

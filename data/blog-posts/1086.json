@@ -1,6 +1,6 @@
 {
   "id": 1086,
-  "title": "One Agent Is Not Enough: Orchestrators, Subagents and Memory From Show HN",
+  "title": "Orchestrators, Subagents and Memory From Show HN",
   "slug": "orchestrating-subagents-memory-browser-show-hn",
   "date": "2026-10-20",
   "description": "Ten Show HN projects for running several agents at once: orchestrators, subagents in isolated worktrees, shared memory trees and browser relays.",

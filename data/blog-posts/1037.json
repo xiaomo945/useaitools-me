@@ -1,9 +1,9 @@
 {
   "id": 1037,
-  "title": "Deterministic Guardrails for AI Agents: Why Pattern Matching Fails and Data Flow Wins",
+  "title": "Deterministic Guardrails for AI Agents",
   "slug": "deterministic-guardrails-for-ai-agents",
   "date": "2026-10-16",
-  "description": "Every team running agents eventually needs guardrails. Blocklists and judge models both fail for the same reason — they cannot see data flow. Deterministic engines that track labels across tool calls are the alternative, and October 2026 shipped two serious ones.",
+  "description": "Agents need guardrails. Blocklists and judge models fail because they cannot see data flow. Deterministic engines track labels across tool calls instead.",
   "style": "technical",
   "images": [
     {

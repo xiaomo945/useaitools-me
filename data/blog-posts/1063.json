@@ -1,6 +1,6 @@
 {
   "id": 1063,
-  "title": "Guardrails for Agent Output: Lint, Sandboxes, Crawling and Memory",
+  "title": "Guardrails for Agent Output: Lint and Sandboxes",
   "slug": "agent-output-guardrails-lint-sandbox-memory-2026",
   "date": "2026-10-18",
   "description": "Nine tools that constrain what an agent can produce and reach: slop-detecting lint rules, declared sandbox tiers, cheaper crawling and signed messaging.",

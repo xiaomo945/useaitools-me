@@ -1,6 +1,6 @@
 {
   "id": 1058,
-  "title": "Agent Infrastructure in October 2026: Running and Containing AI Agents",
+  "title": "Agent Infrastructure: Running and Containing Agents",
   "slug": "agent-infrastructure-october-2026",
   "date": "2026-10-18",
   "description": "Ten October 2026 agent infrastructure launches: local inference engines, sandboxes that report their isolation boundary, agent memory and MCP testing.",

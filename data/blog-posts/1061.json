@@ -1,6 +1,6 @@
 {
   "id": 1061,
-  "title": "Running Large Models on Hardware You Already Own: Eight Local Inference Projects",
+  "title": "Running Large Models on Hardware You Already Own",
   "slug": "local-inference-hardware-you-own-october-2026",
   "date": "2026-10-18",
   "description": "Eight local inference projects that fit big models into small memory: a 26B model in 2 GB, MoE weight streaming, a console as a server and sub-1-bit compression",

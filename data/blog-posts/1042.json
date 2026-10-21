@@ -1,9 +1,9 @@
 {
   "id": 1042,
-  "title": "AI Coding Assistants and Open-Source Code Models: The 2026 Field",
+  "title": "AI Coding Assistants and Open-Source Models",
   "slug": "ai-coding-assistants-and-open-source-code-models",
   "date": "2026-10-17",
-  "description": "Twenty-five coding tools sorted by what they actually do: autocomplete, codebase comprehension, testing, or self-hostable models. Includes the open-weight options — CodeGeeX, StarCoder, Codestral, DeepSeek Coder — and the agents that work asynchronously.",
+  "description": "Twenty-five coding tools sorted by what they do: autocomplete, codebase comprehension, testing, or self-hostable models, from CodeGeeX to Codestral.",
   "style": "technical",
   "images": [
     {

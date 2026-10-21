@@ -1,9 +1,9 @@
 {
   "id": 1038,
-  "title": "Why AI Posters Look Bad, and What the Good Ones Do Differently",
+  "title": "Why AI Posters Look Bad, and What Good Ones Do",
   "slug": "why-ai-posters-look-bad",
   "date": "2026-10-16",
-  "description": "AI-generated posters have a recognisably bad look. The problem is not model quality — it is that generators optimise for a plausible single frame while posters need a designed system. Here is what separates the good work, and the tools built for it.",
+  "description": "AI-generated posters have a recognisably bad look. The problem is not model quality: generators make one plausible frame while posters need a system.",
   "style": "perspective",
   "images": [
     {
