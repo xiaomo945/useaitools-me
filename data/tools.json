@@ -38722,5 +38722,1655 @@
         "Backend behaviour of the search endpoint is not fully documented"
       ]
     }
+  },
+  {
+    "id": 1804,
+    "name": "Experiential",
+    "description": "Experiential is an open source gateway and router for agent workflows. It puts hosted, bring-your-own-key and local models behind one OpenAI-compatible API, controls which users and agents can use which models and how much they can spend, and turns production traffic into a custom router or model tuned for quality, speed and cost.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/experientiallabs/experiential",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Experiential is an open source gateway and router for agent workflows. It puts hosted, bring-your-own-key and local models behind one OpenAI-compatible API, controls which users and agents can use which models and how much they can spend, and turns production traffic into a custom router or model tuned for quality, speed and cost.",
+    "last_updated": "2026-08-27",
+    "skill_level": "advanced",
+    "best_for": [
+      "Model routing",
+      "Agent gateway",
+      "Spend control"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One API for every model",
+        "detail": "Call hosted, bring-your-own-key and local models through a single OpenAI-compatible endpoint instead of wiring each provider separately."
+      },
+      {
+        "title": "Budgets per agent",
+        "detail": "Decide which users and agents may use which models, for which use cases, and cap how much each of them can spend."
+      },
+      {
+        "title": "A router learned from your traffic",
+        "detail": "Turn real production traffic into a custom router or a specialized model you own, optimized for quality, speed and cost."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Open source gateway with no markup on model calls",
+        "Covers hosted, BYOK and self-hosted models in one place",
+        "Access control and spend limits per agent"
+      ],
+      "cons": [
+        "You run and operate the gateway yourself",
+        "Aimed at teams that already have agent traffic to shape"
+      ]
+    }
+  },
+  {
+    "id": 1805,
+    "name": "Channels SDK",
+    "description": "Channels SDK is the open-source SDK for bringing any AI agent into any chat platform: Slack, Microsoft Teams, Discord and Telegram, with native interactive UI. Your agent keeps its own tools, model and business logic, and Channels connects an AG-UI-compatible agent to the communication platforms your team already uses.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/CopilotKit/channels-sdk",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Channels SDK is the open-source SDK for bringing any AI agent into any chat platform: Slack, Microsoft Teams, Discord and Telegram, with native interactive UI. Your agent keeps its own tools, model and business logic, and Channels connects an AG-UI-compatible agent to the communication platforms your team already uses.",
+    "last_updated": "2026-08-06",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Slack bots",
+      "Agent deployment",
+      "Team chat"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Ship an agent to Slack or Teams",
+        "detail": "Connect an existing agent to the chat platform your team already works in without rewriting its logic."
+      },
+      {
+        "title": "Real UI inside the channel",
+        "detail": "Give the agent native, interactive controls instead of walls of plain text."
+      },
+      {
+        "title": "One agent, several channels",
+        "detail": "Point a single agent at Slack, Teams, Discord and Telegram at once."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed open source SDK",
+        "Your agent keeps its own model, tools and business logic",
+        "Targets Slack, Teams, Discord and Telegram"
+      ],
+      "cons": [
+        "Needs an AG-UI-compatible agent on your side",
+        "Developer-facing: you wire up the integration yourself"
+      ]
+    }
+  },
+  {
+    "id": 1806,
+    "name": "Wildstatic",
+    "description": "Wild Static is a public AI with one shared memory. There are no separate copies: what it learns from one conversation can shape how it responds to someone else. You talk to Static in the browser and the site keeps a public log of the updates where its views changed.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://wildstatic.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Wild Static is a public AI with one shared memory. There are no separate copies: what it learns from one conversation can shape how it responds to someone else. You talk to Static in the browser and the site keeps a public log of the updates where its views changed.",
+    "last_updated": "2026-08-16",
+    "skill_level": "beginner",
+    "best_for": [
+      "Shared memory",
+      "Public AI",
+      "Experiment"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Talk to one shared mind",
+        "detail": "Hold a conversation with an AI whose memory is common to everyone rather than reset per user."
+      },
+      {
+        "title": "Watch the memory change",
+        "detail": "Read the public update log that shows where and why Static changed its mind."
+      },
+      {
+        "title": "See what others asked",
+        "detail": "Browse the public conversation stream to understand what the shared memory picked up."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "A genuinely different model of AI memory: one instance, not per-user copies",
+        "Public update log makes the drift visible",
+        "Nothing to install, runs in the browser"
+      ],
+      "cons": [
+        "Free access is limited and sometimes unavailable",
+        "Anything you type is public by design"
+      ]
+    }
+  },
+  {
+    "id": 1807,
+    "name": "Penmentor",
+    "description": "Penmentor is an AI mentor that corrects your written math visually. You work by hand in xournal++, press a key, and Claude, Gemini or GPT marks your work on the screen like a teacher with coloured pens, gives hints instead of answers, and shows the idea behind the slip as a manim-style animation.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/AbdullahAlhariri/penmentor",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Penmentor is an AI mentor that corrects your written math visually. You work by hand in xournal++, press a key, and Claude, Gemini or GPT marks your work on the screen like a teacher with coloured pens, gives hints instead of answers, and shows the idea behind the slip as a manim-style animation.",
+    "last_updated": "2026-10-20",
+    "skill_level": "beginner",
+    "best_for": [
+      "Math study",
+      "Handwriting",
+      "Tutoring"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Marked where you wrote it",
+        "detail": "Get corrections drawn on the page of handwritten work instead of in a chat transcript."
+      },
+      {
+        "title": "Hints before answers",
+        "detail": "Receive a ladder of nudges that lead you to the step rather than the final result."
+      },
+      {
+        "title": "See the idea animated",
+        "detail": "Ask for the concept behind a mistake and watch a short generated animation of it."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works on your actual handwriting, not pasted text",
+        "Hint-first design deliberately avoids giving the answer",
+        "Runs against your own model subscription"
+      ],
+      "cons": [
+        "Built around xournal++ and a pen tablet",
+        "Early project with a single maintainer"
+      ]
+    }
+  },
+  {
+    "id": 1808,
+    "name": "Ambient Context",
+    "description": "Ambient Context is a macOS menu bar app that writes down what you worked on during the day, in plain markdown, in a folder you own, so your AI assistant gets the context you actually saw. While it is open it reads the text of the focused window through the macOS accessibility tree and keeps a running record you can point Claude Code, Cursor, Codex or any MCP client at.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://github.com/dragthelake/ambient-context",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Ambient Context is a macOS menu bar app that writes down what you worked on during the day, in plain markdown, in a folder you own, so your AI assistant gets the context you actually saw. While it is open it reads the text of the focused window through the macOS accessibility tree and keeps a running record you can point Claude Code, Cursor, Codex or any MCP client at.",
+    "last_updated": "2026-08-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Context capture",
+      "Work log",
+      "MCP"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Stop re-explaining your day",
+        "detail": "Hand your assistant the reading, writing and decisions it would otherwise never see."
+      },
+      {
+        "title": "Own the log",
+        "detail": "Keep the record as plain markdown files in a folder on your own disk."
+      },
+      {
+        "title": "Point any MCP client at it",
+        "detail": "Give Claude Code, Cursor or Codex access to the context folder directly."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Plain markdown output you control",
+        "Free and open source, shipped as a signed and notarised DMG",
+        "Works with any MCP client"
+      ],
+      "cons": [
+        "macOS only, version 14 or later on Apple Silicon",
+        "Relies on the macOS accessibility tree to read window text"
+      ]
+    }
+  },
+  {
+    "id": 1809,
+    "name": "Lights-on Software Factory",
+    "description": "A boilerplate repository for running a lights-on software factory with Claude Code. It packages the setup used on a real product: a container sandbox that shares only the workspace directory with the host, a deterministic bash command regulator that reduces approval friction, and an orchestrator the author reports cut token spend sharply compared with running Claude workflows directly.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/gojko/lights-on-software-factory",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A boilerplate repository for running a lights-on software factory with Claude Code. It packages the setup used on a real product: a container sandbox that shares only the workspace directory with the host, a deterministic bash command regulator that reduces approval friction, and an orchestrator the author reports cut token spend sharply compared with running Claude workflows directly.",
+    "last_updated": "2026-10-20",
+    "skill_level": "advanced",
+    "best_for": [
+      "Claude Code",
+      "Sandboxing",
+      "Boilerplate"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Start a sandboxed project",
+        "detail": "Run Claude Code in a container that shares only your workspace directory with the host machine."
+      },
+      {
+        "title": "Cut the approval clicks",
+        "detail": "Use a deterministic command regulator so routine shell commands stop asking for permission."
+      },
+      {
+        "title": "Study a worked factory",
+        "detail": "Read a complete, opinionated setup rather than assembling one from blog posts."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Concrete repository you can clone and run today",
+        "Isolates the agent from the rest of your machine",
+        "Doubles as a teaching example of software factory concepts"
+      ],
+      "cons": [
+        "Opinionated: expects you to accept its structure",
+        "Oriented to Claude Code rather than other agent CLIs"
+      ]
+    }
+  },
+  {
+    "id": 1810,
+    "name": "Chess Postmortem Skills",
+    "description": "Claude Code skills that turn one of your chess games into a post-mortem you can actually read: plain-language explanations of your mistakes checked against Stockfish, an annotated PGN, an HTML viewer and a narrated video of the whole game.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/brumar/chess-postmortem-skills",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Claude Code skills that turn one of your chess games into a post-mortem you can actually read: plain-language explanations of your mistakes checked against Stockfish, an annotated PGN, an HTML viewer and a narrated video of the whole game.",
+    "last_updated": "2026-09-26",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Chess",
+      "Game analysis",
+      "Claude Code skills"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Explain the blunder in words",
+        "detail": "Turn a PGN into annotated commentary about what actually went wrong."
+      },
+      {
+        "title": "Check it against an engine",
+        "detail": "Cross-check the plain-language advice with a Stockfish analysis."
+      },
+      {
+        "title": "Review on video",
+        "detail": "Render a narrated video of the game to watch instead of reading a move list."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Combines engine analysis with readable explanations",
+        "Ships an HTML viewer and a narrated video, not just text",
+        "Installs as skills inside Claude Code"
+      ],
+      "cons": [
+        "Narrow: one game at a time, chess only",
+        "Video rendering needs extra tooling on your machine"
+      ]
+    }
+  },
+  {
+    "id": 1811,
+    "name": "SIwithin",
+    "description": "SIwithin runs an agent CLI unattended on a brief, inside a fence around the folders you give it and under a dollar budget, leaving one record per run. Your home folder is refused for both reading and writing, the run cannot spend more than the dollars it was given, and every run writes a line in a ledger saying what it did.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/metahumansworld/SIwithin",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SIwithin runs an agent CLI unattended on a brief, inside a fence around the folders you give it and under a dollar budget, leaving one record per run. Your home folder is refused for both reading and writing, the run cannot spend more than the dollars it was given, and every run writes a line in a ledger saying what it did.",
+    "last_updated": "2026-10-20",
+    "skill_level": "advanced",
+    "best_for": [
+      "Unattended agents",
+      "Sandboxing",
+      "Budget caps"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Let it run overnight",
+        "detail": "Hand an agent a brief and walk away without supervising every command."
+      },
+      {
+        "title": "Cap the spend",
+        "detail": "Set a budget per run and a cap across all runs, with a timer on each one."
+      },
+      {
+        "title": "Keep a ledger",
+        "detail": "Get one line per run recording what the agent touched and what it cost."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Enforces folder boundaries with a tool rather than trust",
+        "Per-run and global budget ceilings",
+        "Metered loopback proxy so the run never holds your API key"
+      ],
+      "cons": [
+        "New project with a very small user base",
+        "Some agent CLIs cannot be interrupted mid-run and are refused by default"
+      ]
+    }
+  },
+  {
+    "id": 1812,
+    "name": "Aura AI Agent",
+    "description": "Aura is a self-hosted, multi-user AI agent written in Go. One binary hosts the runtime, tools, CLI, Telegram gateway and an embedded web cockpit, and each person signs in to their own identity with their own memory database and workspace. It ships with temporal graph memory, scheduled jobs, MCP tools and Telegram and WhatsApp channels as a Docker Compose appliance under the MIT licence.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/chetto1983/Aura",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Aura is a self-hosted, multi-user AI agent written in Go. One binary hosts the runtime, tools, CLI, Telegram gateway and an embedded web cockpit, and each person signs in to their own identity with their own memory database and workspace. It ships with temporal graph memory, scheduled jobs, MCP tools and Telegram and WhatsApp channels as a Docker Compose appliance under the MIT licence.",
+    "last_updated": "2026-10-08",
+    "skill_level": "advanced",
+    "best_for": [
+      "Self-hosting",
+      "Multi-user agents",
+      "Graph memory"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One appliance for a team",
+        "detail": "Run a single agent host where every person gets their own identity, memory and workspace."
+      },
+      {
+        "title": "Give agents a schedule",
+        "detail": "Set up scheduled jobs and document retrieval alongside interactive tool use."
+      },
+      {
+        "title": "Reach it from chat",
+        "detail": "Talk to the same agent over Telegram or WhatsApp as well as the web cockpit."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Provider-neutral and self-hosted on infrastructure you control",
+        "Per-person memory separation in one deployment",
+        "Ships as a Docker Compose appliance under MIT"
+      ],
+      "cons": [
+        "You operate the service and pay for your own models",
+        "Early-stage: expect to read the source to configure it"
+      ]
+    }
+  },
+  {
+    "id": 1813,
+    "name": "Yana",
+    "description": "Yana is a local-first, cross-platform control plane that sits between any AI model and real power over your machine. It runs, connects, orchestrates and governs agents across cloud and local model providers, with deterministic control over what an agent can access, change and execute, plus pre, post and stop hooks around every tool call.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/yanacuti1121/Yana-AI",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Yana is a local-first, cross-platform control plane that sits between any AI model and real power over your machine. It runs, connects, orchestrates and governs agents across cloud and local model providers, with deterministic control over what an agent can access, change and execute, plus pre, post and stop hooks around every tool call.",
+    "last_updated": "2026-10-20",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agent governance",
+      "Local-first",
+      "Tool permissions"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Give tools without giving the keys",
+        "detail": "Hand an agent real capabilities with explicit, deterministic limits on each one."
+      },
+      {
+        "title": "One runtime, many providers",
+        "detail": "Route the same governance layer across cloud models and local ones."
+      },
+      {
+        "title": "Gate every call",
+        "detail": "Inspect and approve tool calls before they run, and react afterwards."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Clear separation between what a model proposes and what it may do",
+        "Works across several agent hosts and model providers",
+        "Hooks before, after and on stop give real oversight"
+      ],
+      "cons": [
+        "Young project; the surface is large and still moving",
+        "Requires comfort with a CLI control plane"
+      ]
+    }
+  },
+  {
+    "id": 1814,
+    "name": "PageIndex",
+    "description": "PageIndex is a document index for vectorless, reasoning-based retrieval. Instead of chunking text into a vector database it builds a tree index and lets a model reason over it, so retrieval is context-aware and reads the way a person skims a document. It ships a Python SDK with local and cloud modes and a file-level layer for reasoning across a whole corpus.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/VectifyAI/PageIndex",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "PageIndex is a document index for vectorless, reasoning-based retrieval. Instead of chunking text into a vector database it builds a tree index and lets a model reason over it, so retrieval is context-aware and reads the way a person skims a document. It ships a Python SDK with local and cloud modes and a file-level layer for reasoning across a whole corpus.",
+    "last_updated": "2026-10-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "RAG",
+      "Document Q&A",
+      "Long PDFs"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Skip the vector database",
+        "detail": "Answer questions over long PDFs by reasoning over a tree index instead of embedding chunks."
+      },
+      {
+        "title": "Run it on your own key",
+        "detail": "Index and retrieve locally on your machine with your own LLM API key."
+      },
+      {
+        "title": "Search a whole corpus",
+        "detail": "Use the file-level layer to reason across many documents rather than one file at a time."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No chunking and no vector store to tune",
+        "Local mode keeps documents and keys on your machine",
+        "Retrieval behaves like human skimming, which is easier to debug"
+      ],
+      "cons": [
+        "Reasoning-based retrieval costs more tokens per query than a vector lookup",
+        "Best results depend on the model doing the reasoning"
+      ]
+    }
+  },
+  {
+    "id": 1815,
+    "name": "OpenFlow",
+    "description": "OpenFlow is a visual builder for multi-agent AI workflows. You drag role cards onto a canvas, wire a pipeline such as planner, architect and coder, save it, and run it with real parallel agents. It is built on and shipped as a fork of opencode, whose headless server drives execution.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/SeeRay11/OpenFlow",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "OpenFlow is a visual builder for multi-agent AI workflows. You drag role cards onto a canvas, wire a pipeline such as planner, architect and coder, save it, and run it with real parallel agents. It is built on and shipped as a fork of opencode, whose headless server drives execution.",
+    "last_updated": "2026-10-20",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Multi-agent",
+      "Visual builder",
+      "Workflow design"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Draw the pipeline",
+        "detail": "Lay out role cards and wire them together instead of editing configuration files by hand."
+      },
+      {
+        "title": "Run roles in parallel",
+        "detail": "Execute a planner, an architect and a coder at the same time rather than in sequence."
+      },
+      {
+        "title": "Reuse what worked",
+        "detail": "Save a pipeline and run it again on the next project."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Canvas view makes multi-agent handoffs readable",
+        "Built on an existing headless agent engine rather than a toy runtime",
+        "Pipelines are saved and reusable"
+      ],
+      "cons": [
+        "Fork-based approach means upgrades can lag upstream",
+        "New project, so the edges are still rough"
+      ]
+    }
+  },
+  {
+    "id": 1816,
+    "name": "DocuMemory",
+    "description": "DocuMemory is a memory engine that passively distils raw AI chat sessions into permanent architecture decisions and reusable, prompt-injectable context blocks. It captures sessions from Claude Code, ChatGPT, Cursor and Windsurf, strips noise through subtractive distillation, then recalls and injects what matters into the next session over MCP.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://www.documemory.dev/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "DocuMemory is a memory engine that passively distils raw AI chat sessions into permanent architecture decisions and reusable, prompt-injectable context blocks. It captures sessions from Claude Code, ChatGPT, Cursor and Windsurf, strips noise through subtractive distillation, then recalls and injects what matters into the next session over MCP.",
+    "last_updated": "2026-10-18",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Memory",
+      "Architecture decisions",
+      "MCP"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Keep the decisions, drop the chat",
+        "detail": "Turn long sessions into architecture decision records you can read later."
+      },
+      {
+        "title": "Start every session informed",
+        "detail": "Inject distilled context blocks into the next session automatically."
+      },
+      {
+        "title": "Work across clients",
+        "detail": "Capture from Claude Code, ChatGPT, Cursor, Windsurf or any MCP client."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Aimed at decisions rather than raw transcript storage",
+        "MCP-native, so it drops into the clients you already use",
+        "Promises hybrid search with sub-50ms recall"
+      ],
+      "cons": [
+        "Hosted service with a sign-up, not something you self-host",
+        "Value depends on how much of your work happens in chat sessions"
+      ]
+    }
+  },
+  {
+    "id": 1817,
+    "name": "Nobodywho",
+    "description": "Nobodywho runs AI on your own devices and servers. Its open-source inference engine ships SDKs for Rust, Python, Kotlin, Swift, Flutter, React Native and Godot, so you can run models locally with no per-token costs, no data leaving the machine and no dependency on an internet connection.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://www.nobodywho.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Nobodywho runs AI on your own devices and servers. Its open-source inference engine ships SDKs for Rust, Python, Kotlin, Swift, Flutter, React Native and Godot, so you can run models locally with no per-token costs, no data leaving the machine and no dependency on an internet connection.",
+    "last_updated": "2026-09-23",
+    "skill_level": "intermediate",
+    "best_for": [
+      "On-device AI",
+      "Local inference",
+      "Privacy"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Ship inference inside an app",
+        "detail": "Embed local model calls in desktop, mobile or game builds through a language SDK."
+      },
+      {
+        "title": "Keep sensitive data in house",
+        "detail": "Run models on-premises for data that is not allowed to leave your network."
+      },
+      {
+        "title": "Build offline features",
+        "detail": "Offer AI features that keep working with no internet connection."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No per-token costs and no vendor lock-in",
+        "Auditable engine released under an open source licence",
+        "Broad SDK coverage across languages and platforms"
+      ],
+      "cons": [
+        "You are responsible for model choice, hardware and updates",
+        "Enterprise support is a separate commercial offering"
+      ]
+    }
+  },
+  {
+    "id": 1818,
+    "name": "Ollaya",
+    "description": "Ollaya downloads and serves open decision models on your own machine. You ask typed questions about any text or JSON, the model scores the options you define and returns the top answer with calibrated scores in milliseconds, privately and on your own hardware.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://ollaya.dev/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Ollaya downloads and serves open decision models on your own machine. You ask typed questions about any text or JSON, the model scores the options you define and returns the top answer with calibrated scores in milliseconds, privately and on your own hardware.",
+    "last_updated": "2026-09-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Decision models",
+      "Local inference",
+      "Classification"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Classify support mail",
+        "detail": "Score incoming messages for intent, urgency and tone without sending them anywhere."
+      },
+      {
+        "title": "Get typed answers",
+        "detail": "Ask structured questions with fixed options instead of parsing free-form text."
+      },
+      {
+        "title": "Run it in a pipeline",
+        "detail": "Call the CLI from shell scripts and batch jobs as a scoring step."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Typed, calibrated output instead of prose you have to parse",
+        "Runs locally with no network dependency",
+        "Open source and independent of the vendors it borrows ideas from"
+      ],
+      "cons": [
+        "Limited to the decision models in its catalogue",
+        "Local inference speed depends on your hardware"
+      ]
+    }
+  },
+  {
+    "id": 1819,
+    "name": "Cloudflare cf CLI",
+    "description": "cf is Cloudflare agentic CLI for the whole Cloudflare API. Commands are discoverable through built-in search and steering so an agent can find the command it needs, JSON is the default interface, pretty printed for humans and condensed for agents to save context, and cloudflare.config.ts becomes the single configuration format for the platform.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/cloudflare/cf",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "cf is Cloudflare agentic CLI for the whole Cloudflare API. Commands are discoverable through built-in search and steering so an agent can find the command it needs, JSON is the default interface, pretty printed for humans and condensed for agents to save context, and cloudflare.config.ts becomes the single configuration format for the platform.",
+    "last_updated": "2026-09-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Cloudflare",
+      "Agentic CLI",
+      "Infrastructure"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Let an agent drive your account",
+        "detail": "Expose the whole Cloudflare API to an agent through commands it can discover itself."
+      },
+      {
+        "title": "Save context on output",
+        "detail": "Get condensed JSON for agents and readable output for humans from the same commands."
+      },
+      {
+        "title": "Unify configuration",
+        "detail": "Move to a single cloudflare.config.ts instead of scattered per-service config."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Built for agents first, with search and steering baked in",
+        "JSON-native interface reduces parsing glue code",
+        "Official Cloudflare project covering the full API"
+      ],
+      "cons": [
+        "Only useful if you already run on Cloudflare",
+        "Replaces habits built around the older Wrangler workflow"
+      ]
+    }
+  },
+  {
+    "id": 1820,
+    "name": "Imp",
+    "description": "Imp is a full port of DSPy to the BEAM. You describe what each language-model step takes and returns, choose how it thinks, and let an optimizer improve the program against examples of what good looks like, giving you signatures, modules, optimizers, agent loops and retrieval with the concurrency and reliability of OTP.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/deepfates/imp",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Imp is a full port of DSPy to the BEAM. You describe what each language-model step takes and returns, choose how it thinks, and let an optimizer improve the program against examples of what good looks like, giving you signatures, modules, optimizers, agent loops and retrieval with the concurrency and reliability of OTP.",
+    "last_updated": "2026-09-27",
+    "skill_level": "advanced",
+    "best_for": [
+      "Elixir",
+      "DSPy",
+      "LM programs"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Write declarative LM programs",
+        "detail": "Describe inputs and outputs per step rather than hand-writing prompts."
+      },
+      {
+        "title": "Optimize against examples",
+        "detail": "Let an optimizer tune the program using examples of good output."
+      },
+      {
+        "title": "Run it on OTP",
+        "detail": "Get agent loops and retrieval supervised by the BEAM runtime."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Brings the DSPy programming model to Elixir and Erlang teams",
+        "Concurrency and supervision come from OTP rather than bolted-on plumbing",
+        "Optimizers mean less manual prompt tuning"
+      ],
+      "cons": [
+        "Requires Elixir and willingness to think in signatures",
+        "Smaller ecosystem than the Python original"
+      ]
+    }
+  },
+  {
+    "id": 1821,
+    "name": "Konnect",
+    "description": "Konnect brings AI-assisted PCB design to KiCad 10. It is a native KiCad plugin, a single Rust binary, that exposes hundreds of schematic, layout, routing, placement, design-review and manufacturing tools to Claude or the model of your choice over the Model Context Protocol, grouped into on-demand toolsets.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/mixelpixx/Konnect",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Konnect brings AI-assisted PCB design to KiCad 10. It is a native KiCad plugin, a single Rust binary, that exposes hundreds of schematic, layout, routing, placement, design-review and manufacturing tools to Claude or the model of your choice over the Model Context Protocol, grouped into on-demand toolsets.",
+    "last_updated": "2026-10-14",
+    "skill_level": "advanced",
+    "best_for": [
+      "KiCad",
+      "PCB design",
+      "MCP"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Capture a schematic by asking",
+        "detail": "Have an assistant place parts and wire a schematic from a description."
+      },
+      {
+        "title": "Audit before fabrication",
+        "detail": "Run ERC, DRC and design-review checks through the same conversational interface."
+      },
+      {
+        "title": "Search parts in context",
+        "detail": "Look up distributor parts and reference circuits without leaving KiCad."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Deep KiCad coverage rather than a thin wrapper",
+        "Toolsets load on demand so the model context stays manageable",
+        "Model-agnostic over MCP"
+      ],
+      "cons": [
+        "Beta release tied to KiCad 10",
+        "Hardware work still needs a human to sanity-check the result"
+      ]
+    }
+  },
+  {
+    "id": 1822,
+    "name": "JetBrains Air",
+    "description": "JetBrains Air is one system for building software with agents. It works with the agents you already use, Claude Agent, Codex, Junie, Copilot, OpenCode and anything you can connect over ACP, and gives you tasks, automations and projects you can drive from JetBrains IDEs, the web, the CLI or a phone.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://www.jetbrains.com/air/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "JetBrains Air is one system for building software with agents. It works with the agents you already use, Claude Agent, Codex, Junie, Copilot, OpenCode and anything you can connect over ACP, and gives you tasks, automations and projects you can drive from JetBrains IDEs, the web, the CLI or a phone.",
+    "last_updated": "2026-09-22",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agentic development",
+      "JetBrains",
+      "Automations"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Keep your existing agent",
+        "detail": "Bring Claude Agent, Codex, Junie, Copilot or OpenCode into one task system."
+      },
+      {
+        "title": "Automate the chores",
+        "detail": "Set up automations such as rebasing a branch or updating agent instructions on merge."
+      },
+      {
+        "title": "Work from anywhere",
+        "detail": "Drive the same projects from an IDE, a browser, a terminal or mobile."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Agent-agnostic through the ACP protocol",
+        "Spans IDE, web, CLI and mobile rather than one surface",
+        "Tasks, automations and projects share one model"
+      ],
+      "cons": [
+        "Commercial product with a credit-based pricing model",
+        "Most valuable if you already live in JetBrains tooling"
+      ]
+    }
+  },
+  {
+    "id": 1823,
+    "name": "PatchWave",
+    "description": "PatchWave is a GitHub app that automatically analyzes, fixes and merges your Dependabot pull requests. Its agent checks each dependency update against your code and repairs what breaks, so dependency bumps stop piling up in the review queue.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://patchwave.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "PatchWave is a GitHub app that automatically analyzes, fixes and merges your Dependabot pull requests. Its agent checks each dependency update against your code and repairs what breaks, so dependency bumps stop piling up in the review queue.",
+    "last_updated": "2026-10-20",
+    "skill_level": "beginner",
+    "best_for": [
+      "Dependabot",
+      "Dependency updates",
+      "CI automation"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Clear the PR backlog",
+        "detail": "Let an agent work the queue of dependency bumps instead of a human."
+      },
+      {
+        "title": "Fix what the bump broke",
+        "detail": "Check the update against your code and repair the fallout before merging."
+      },
+      {
+        "title": "Keep the audit trail",
+        "detail": "Every merge arrives as a normal pull request with its analysis attached."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Attacks a queue almost every team has given up on",
+        "Free tier covers a monthly allowance of merged PRs",
+        "Installs as a GitHub app with no pipeline rewrite"
+      ],
+      "cons": [
+        "Merging automatically needs trust in the analysis",
+        "Focused on Dependabot rather than other update sources"
+      ]
+    }
+  },
+  {
+    "id": 1824,
+    "name": "MirrorMD",
+    "description": "MirrorMD is a facial analysis built by a cosmetic surgeon. It measures your face the way a consultation does and tells you which treatments may suit you, which would waste your money and which could harm you, before you spend anything on them.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://mymirrormd.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "MirrorMD is a facial analysis built by a cosmetic surgeon. It measures your face the way a consultation does and tells you which treatments may suit you, which would waste your money and which could harm you, before you spend anything on them.",
+    "last_updated": "2026-10-15",
+    "skill_level": "beginner",
+    "best_for": [
+      "Facial analysis",
+      "Treatment planning",
+      "Consultation"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Screen the treatment first",
+        "detail": "Get an opinion on whether a procedure suits your face before booking it."
+      },
+      {
+        "title": "Avoid the wasted spend",
+        "detail": "Find out which popular treatments would do nothing for you."
+      },
+      {
+        "title": "Hear the risks",
+        "detail": "Learn which options carry harm rather than benefit in your case."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Written by a practising cosmetic surgeon rather than a generic beauty quiz",
+        "Explicitly willing to say a treatment is a bad idea",
+        "Positioned before you spend money, not after"
+      ],
+      "cons": [
+        "Paid analysis, not a free checker",
+        "Advice from a tool is not a substitute for an in-person examination"
+      ]
+    }
+  },
+  {
+    "id": 1825,
+    "name": "Worklicant",
+    "description": "Worklicant is a tech hiring platform where AI reads every resume and ranks your applicants. You share one apply link, it scores each applicant against the job, hides spam and fake resumes, and auto-rejects people who fail your deal-breaker, while candidates book their own interviews.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://worklicant.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Worklicant is a tech hiring platform where AI reads every resume and ranks your applicants. You share one apply link, it scores each applicant against the job, hides spam and fake resumes, and auto-rejects people who fail your deal-breaker, while candidates book their own interviews.",
+    "last_updated": "2026-10-20",
+    "skill_level": "beginner",
+    "best_for": [
+      "Hiring",
+      "Resume screening",
+      "Recruiting"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Post once, share everywhere",
+        "detail": "Put a single apply link on LinkedIn, job boards and your careers page."
+      },
+      {
+        "title": "Rank by fit",
+        "detail": "See applicants sorted by a score against the role instead of arrival order."
+      },
+      {
+        "title": "Filter the noise",
+        "detail": "Hide spam, fake resumes and anyone who fails a deal-breaker you set."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Pay per vacancy rather than a monthly seat subscription",
+        "Unlimited team members on a posting",
+        "Candidates self-schedule interviews"
+      ],
+      "cons": [
+        "Newest entrant in a crowded applicant-tracking field",
+        "Automated rejection needs care to avoid filtering out good candidates"
+      ]
+    }
+  },
+  {
+    "id": 1826,
+    "name": "Tori",
+    "description": "Tori is an AI support agent for customer success teams, built on TalkJS messaging infrastructure. It learns your product from the help docs, product pages and company knowledge you already have, then answers even complex customer questions through a UI you can customize, handing off to a human with full context when a customer needs one.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://asktori.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Tori is an AI support agent for customer success teams, built on TalkJS messaging infrastructure. It learns your product from the help docs, product pages and company knowledge you already have, then answers even complex customer questions through a UI you can customize, handing off to a human with full context when a customer needs one.",
+    "last_updated": "2026-10-20",
+    "skill_level": "beginner",
+    "best_for": [
+      "Customer support",
+      "Help center",
+      "Knowledge base"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Answer from what you published",
+        "detail": "Point it at your URL and let it answer from your own documentation."
+      },
+      {
+        "title": "Keep your branding",
+        "detail": "Customize the support UI instead of embedding someone else widget."
+      },
+      {
+        "title": "Escalate cleanly",
+        "detail": "Hand a conversation to a human with the history attached."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Built on production messaging infrastructure with real delivery and history",
+        "Setup starts from a URL rather than a data migration",
+        "Customizable front end"
+      ],
+      "cons": [
+        "Best for teams whose answers already exist in documentation",
+        "Pricing is not published up front"
+      ]
+    }
+  },
+  {
+    "id": 1827,
+    "name": "Invofox",
+    "description": "Invofox turns invoices, payslips, contracts and other documents into structured JSON through one API. You pay only for pages it extracts correctly, and the extraction keeps learning from corrections you make.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://www.invofox.com/en/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Invofox turns invoices, payslips, contracts and other documents into structured JSON through one API. You pay only for pages it extracts correctly, and the extraction keeps learning from corrections you make.",
+    "last_updated": "2026-10-05",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Document extraction",
+      "Invoices",
+      "API"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Replace the template zoo",
+        "detail": "Extract fields from any document layout through one endpoint."
+      },
+      {
+        "title": "Pay for correct pages",
+        "detail": "Get billed only on pages the extraction got right."
+      },
+      {
+        "title": "Improve over time",
+        "detail": "Feed corrections back so recurring layouts get cleaner."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Single API across invoices, payslips and contracts",
+        "Billing tied to correct extractions rather than raw volume",
+        "Continuous learning from corrections"
+      ],
+      "cons": [
+        "Commercial API, so documents leave your infrastructure",
+        "Correct-page billing model is unusual and worth reading carefully"
+      ]
+    }
+  },
+  {
+    "id": 1828,
+    "name": "Layout",
+    "description": "Layout lets you order food from any restaurant using AI. It connects Claude and ChatGPT to real ordering, so your assistant can place the order end to end, and it exposes a developer console and merchant dashboard for building on top of the same rails.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://layout.link/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Layout lets you order food from any restaurant using AI. It connects Claude and ChatGPT to real ordering, so your assistant can place the order end to end, and it exposes a developer console and merchant dashboard for building on top of the same rails.",
+    "last_updated": "2026-09-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Food ordering",
+      "Agent commerce",
+      "Connectors"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Order through your assistant",
+        "detail": "Ask Claude or ChatGPT to place a real food order rather than just find a restaurant."
+      },
+      {
+        "title": "Connect a platform",
+        "detail": "Add a connector so an agent can transact on an existing delivery service."
+      },
+      {
+        "title": "Build on the rails",
+        "detail": "Use the developer console to integrate ordering into your own product."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One of the first attempts at real agent-side commerce rather than recommendations",
+        "Has both developer and merchant sides from the start",
+        "Explicit model of delegated spending authority"
+      ],
+      "cons": [
+        "Availability depends on participating merchants",
+        "Handing spending authority to an agent needs trust in the limits you set"
+      ]
+    }
+  },
+  {
+    "id": 1829,
+    "name": "Jurl",
+    "description": "Jurl is curl for pages you want read rather than fetched. You tell it what you want from a URL and it scrapes with intent, returning only what you asked for word for word, and following links when the answer sits several pages away.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://jurl.dev/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Jurl is curl for pages you want read rather than fetched. You tell it what you want from a URL and it scrapes with intent, returning only what you asked for word for word, and following links when the answer sits several pages away.",
+    "last_updated": "2026-10-05",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Scraping",
+      "CLI",
+      "Agent browsing"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Ask instead of grep",
+        "detail": "Describe the value you want and get it back rather than a document to parse."
+      },
+      {
+        "title": "Follow the trail",
+        "detail": "Let it walk links when the fact you need is not on the first page."
+      },
+      {
+        "title": "Keep it scriptable",
+        "detail": "Use it as a command line step in shell pipelines and agent tools."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Returns the answer, not the page",
+        "Follows links when the target is pages away",
+        "Fits naturally into a terminal workflow"
+      ],
+      "cons": [
+        "Depends on a model call per query",
+        "Accuracy on long trails still needs a human eye"
+      ]
+    }
+  },
+  {
+    "id": 1830,
+    "name": "AgentSocialX",
+    "description": "AgentSocialX is a Second Brain Network. You start your second brain from LinkedIn and X, then use the network to get answers and opinions from other peoples second brains and to set up one-on-ones. The pitch is that your AI keeps learning from the network while your own thinking gets found by the right mind.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://agentsocialx.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AgentSocialX is a Second Brain Network. You start your second brain from LinkedIn and X, then use the network to get answers and opinions from other peoples second brains and to set up one-on-ones. The pitch is that your AI keeps learning from the network while your own thinking gets found by the right mind.",
+    "last_updated": "2026-10-08",
+    "skill_level": "beginner",
+    "best_for": [
+      "Second brain",
+      "Networking",
+      "Knowledge sharing"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Seed it from your profiles",
+        "detail": "Build a second brain starting from what you already posted on LinkedIn and X."
+      },
+      {
+        "title": "Ask people, not feeds",
+        "detail": "Get answers and opinions from other members second brains."
+      },
+      {
+        "title": "Turn matches into calls",
+        "detail": "Move from a shared interest to a one-on-one conversation."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Focuses on connecting people through their notes rather than follower counts",
+        "Imports from profiles you already have",
+        "Public counters make network activity visible"
+      ],
+      "cons": [
+        "Value depends on who else joins",
+        "Handing your notes to a network means thinking about what you publish there"
+      ]
+    }
+  },
+  {
+    "id": 1831,
+    "name": "Plannotator",
+    "description": "Plannotator is free, open-source review tooling for Claude Code, OpenCode, Codex, Pi and Droid. You review an agent plan before it executes, annotate agent-written code in a full diff viewer, and send structured feedback straight back to the agent, all running locally. Its Inbox collects your agents questions, plans and reviews in one window.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://plannotator.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Plannotator is free, open-source review tooling for Claude Code, OpenCode, Codex, Pi and Droid. You review an agent plan before it executes, annotate agent-written code in a full diff viewer, and send structured feedback straight back to the agent, all running locally. Its Inbox collects your agents questions, plans and reviews in one window.",
+    "last_updated": "2026-10-03",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Plan review",
+      "Code review",
+      "Agent feedback"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Read the plan first",
+        "detail": "Inspect and edit what an agent intends to do before it touches the repository."
+      },
+      {
+        "title": "Annotate the diff",
+        "detail": "Comment on agent-written code in a viewer rather than in a chat log."
+      },
+      {
+        "title": "Answer from one window",
+        "detail": "Use the Inbox to handle questions, plans and reviews from several agents."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source, running locally rather than as a hosted service",
+        "Works across several agent CLIs instead of one",
+        "Feedback goes back to the agent in structured form"
+      ],
+      "cons": [
+        "Adds a deliberate pause to agent workflows",
+        "Local-only means no shared review with a team by default"
+      ]
+    }
+  },
+  {
+    "id": 1832,
+    "name": "Daydream Studio",
+    "description": "Daydream Studio is a hybrid recording studio in the browser for crafting and producing music. You generate or record a part, add live session-player tracks over it, and reshape the parts as they play. The page also exposes a scriptable interface so agents can drive the studio directly.",
+    "category": "Audio",
+    "pricing": "Unknown",
+    "url": "https://labs.daydream.live/studio/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Daydream Studio is a hybrid recording studio in the browser for crafting and producing music. You generate or record a part, add live session-player tracks over it, and reshape the parts as they play. The page also exposes a scriptable interface so agents can drive the studio directly.",
+    "last_updated": "2026-10-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Music production",
+      "Session players",
+      "Browser studio"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Build a track in the browser",
+        "detail": "Generate or record a part without installing a DAW."
+      },
+      {
+        "title": "Add real players",
+        "detail": "Layer live session-player tracks over what you generated."
+      },
+      {
+        "title": "Let an agent drive it",
+        "detail": "Script the studio through its exposed interface for agent-driven sessions."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Combines generated parts with human session playing",
+        "Runs in a browser tab with no install",
+        "Scriptable surface makes it usable by agents"
+      ],
+      "cons": [
+        "Best on a desktop rather than a phone",
+        "Output quality still depends on your own ear and editing"
+      ]
+    }
+  },
+  {
+    "id": 1833,
+    "name": "Reduck",
+    "description": "Reduck is an MCP server that lets your agent create and run reusable automation scripts for the web. Instead of reasoning through every click, the agent writes or reuses a script that returns the same structured output each time, runs in your own Chrome, and burns no tokens while it executes.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://reduck.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Reduck is an MCP server that lets your agent create and run reusable automation scripts for the web. Instead of reasoning through every click, the agent writes or reuses a script that returns the same structured output each time, runs in your own Chrome, and burns no tokens while it executes.",
+    "last_updated": "2026-09-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Browser automation",
+      "MCP",
+      "Reusable scripts"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Make the web deterministic",
+        "detail": "Turn a flaky click-by-click task into a script with a clear contract."
+      },
+      {
+        "title": "Stop paying per step",
+        "detail": "Run scripts that cost no tokens and do not grow the context window."
+      },
+      {
+        "title": "Reuse across sites",
+        "detail": "Keep a library of scripts the agent can call on any website."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Scripts return consistent structured output instead of varying per run",
+        "Runs in your own Chrome with your own logged-in sessions",
+        "Ships ready-made scripts for common sites"
+      ],
+      "cons": [
+        "Someone still has to write or fix the script when a site changes",
+        "Hosted MCP service rather than a local-only tool"
+      ]
+    }
+  },
+  {
+    "id": 1834,
+    "name": "Datastory",
+    "description": "Datastory is a no-code platform for data storytellers. You upload your own data or search a curated catalog of open datasets, then build interactive charts, websites and reports with its Studio, CMS and AI features.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://www.datastory.tech/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Datastory is a no-code platform for data storytellers. You upload your own data or search a curated catalog of open datasets, then build interactive charts, websites and reports with its Studio, CMS and AI features.",
+    "last_updated": "2026-09-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Data storytelling",
+      "Charts",
+      "Reports"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Start from your own file",
+        "detail": "Upload a spreadsheet and turn it into an interactive chart or report."
+      },
+      {
+        "title": "Or start from open data",
+        "detail": "Search a catalog of curated open datasets instead of sourcing your own."
+      },
+      {
+        "title": "Publish the result",
+        "detail": "Use the CMS to turn charts into a website rather than a static image."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No-code path from raw data to a published story",
+        "Bundles a catalog of open datasets to start from",
+        "Studio, CMS and AI features in one product"
+      ],
+      "cons": [
+        "Aimed at storytellers rather than analysts needing deep statistics",
+        "Commercial platform with tiered plans"
+      ]
+    }
+  },
+  {
+    "id": 1835,
+    "name": "Privatemode",
+    "description": "Privatemode is a confidential AI service that protects your data end to end. Using confidential computing, it encrypts your data before it leaves your device and keeps it protected even while the model is processing it, including inside Excel, Word and PowerPoint.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://www.privatemode.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Privatemode is a confidential AI service that protects your data end to end. Using confidential computing, it encrypts your data before it leaves your device and keeps it protected even while the model is processing it, including inside Excel, Word and PowerPoint.",
+    "last_updated": "2026-09-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Confidential AI",
+      "Encryption",
+      "Enterprise"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Use AI on sensitive files",
+        "detail": "Work with documents that are not allowed to be exposed to a model provider."
+      },
+      {
+        "title": "Keep Office in the loop",
+        "detail": "Get AI help inside Excel, Word and PowerPoint with the same protection."
+      },
+      {
+        "title": "Prove it technically",
+        "detail": "Rely on confidential computing isolation rather than a contractual promise."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Encryption holds during processing, not only in transit",
+        "Extends to the Office tools people actually work in",
+        "Aimed at regulated and security-conscious teams"
+      ],
+      "cons": [
+        "Commercial service you have to evaluate and trust",
+        "Protection depends on the attestation model behind it"
+      ]
+    }
+  },
+  {
+    "id": 1836,
+    "name": "Feyn",
+    "description": "Feyn is a platform for training custom models on your own data. It keeps learning in production, serves faster and cheaper inference, and lets you own the weights. Its open-source releases include MultiMatte and FeyNoBg, models for promptable image background removal.",
+    "category": "Image",
+    "pricing": "Unknown",
+    "url": "https://usefeyn.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Feyn is a platform for training custom models on your own data. It keeps learning in production, serves faster and cheaper inference, and lets you own the weights. Its open-source releases include MultiMatte and FeyNoBg, models for promptable image background removal.",
+    "last_updated": "2026-07-27",
+    "skill_level": "advanced",
+    "best_for": [
+      "Custom models",
+      "Background removal",
+      "Fine-tuning"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Train on your own examples",
+        "detail": "Build a model around your data instead of prompting a general one."
+      },
+      {
+        "title": "Keep improving after launch",
+        "detail": "Let the model keep learning once it is in production."
+      },
+      {
+        "title": "Cut the background",
+        "detail": "Use its open matting models for promptable image background removal."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "You own the weights rather than renting a behaviour",
+        "Production learning loop rather than a one-off fine-tune",
+        "Open source model releases alongside the platform"
+      ],
+      "cons": [
+        "Platform is commercially oriented; pricing is not published",
+        "Training and serving your own models needs ML ops maturity"
+      ]
+    }
   }
 ]
