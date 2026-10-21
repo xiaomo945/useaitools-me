@@ -506,10 +506,12 @@ interface HomeClientProps {
   initialTools: Tool[];
   blogPosts: BlogPost[];
   quickStartTools: Tool[];
+  /** Total tools in the dataset — also the number the hero advertises. */
   totalCount: number;
+  categoriesCount: number;
 }
 
-export default function HomeClient({ initialTools, blogPosts, quickStartTools, totalCount }: HomeClientProps) {
+export default function HomeClient({ initialTools, blogPosts, quickStartTools, totalCount, categoriesCount }: HomeClientProps) {
   const [displayedTools, setDisplayedTools] = useState<Tool[]>(initialTools);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
@@ -1665,6 +1667,8 @@ export default function HomeClient({ initialTools, blogPosts, quickStartTools, t
         <HeroSection
           mysteryCount={mysteryCount}
           openMysteryBox={openMysteryBox}
+          toolsCount={totalCount}
+          categoriesCount={categoriesCount}
         />
         
         {/* Search Box */}

@@ -66,16 +66,17 @@ export async function GET() {
   } catch (error) {
     console.error('Failed to fetch stats:', error);
     
-    // 返回默认数据
+    // 数据库不可用时返回真实零值，绝不回退到编造的数字（旧的 1358 / 4.2 默认值
+    // 曾原样出现在被抓取的 HTML 里，与站点实际数据不符）。
     return NextResponse.json({
-      toolsCount: 1358,
+      toolsCount: 0,
       reviewsCount: 0,
       usersCount: 0,
       bookmarksCount: 0,
-      categoriesCount: 6,
+      categoriesCount: 0,
       newToolsThisMonth: 0,
       newReviewsThisMonth: 0,
-      avgRating: 4.2,
+      avgRating: 0,
       lastUpdated: new Date().toISOString(),
     });
   }

@@ -76,8 +76,10 @@ export default function Home() {
   // explicitly rather than spread: a spread silently forwards every field a
   // post gains in future, and post bodies alone average ~7KB each.
   // HomeClient uses these for search (id, title, slug, description, category)
-  // and for the 5-card "latest guides" grid (date, images[0]).
-  const clientBlogPosts = blogPosts.slice(0, 120).map((post, index) => ({
+  // and for the 5-card "latest guides" grid (date, images[0]). The full blog
+  // is reachable at /blog; keeping the shipped slice small (24) trims the
+  // payload by ~30KB without affecting the visible grid (needs 5).
+  const clientBlogPosts = blogPosts.slice(0, 24).map((post, index) => ({
     id: post.id,
     title: post.title,
     slug: post.slug,
@@ -89,6 +91,11 @@ export default function Home() {
 
   // Select featured tools on server to prevent hydration mismatch
   const selected: Tool[] = initialTools.slice(0, 3);
+
+  // Real totals from the dataset, so the hero shows accurate numbers in the
+  // server-rendered HTML instead of relying on a client fetch that fails when
+  // the stats database is unreachable.
+  const categoriesCount = new Set(enrichedTools.map(t => t.category).filter(Boolean)).size;
 
   // WebSite Schema with SearchAction
   const webSiteSchema = {
@@ -192,6 +199,7 @@ export default function Home() {
         blogPosts={clientBlogPosts}
         quickStartTools={quickStartTools}
         totalCount={enrichedTools.length}
+        categoriesCount={categoriesCount}
       />
       <FeaturedTools tools={selected} />
       <TrendingTools tools={sortedTools} />
