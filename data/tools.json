@@ -7621,58 +7621,6 @@
     }
   },
   {
-    "id": 359,
-    "name": "Social Media Manager AI",
-    "description": "Social Media Manager AI is a paid tool that lets teams run multiple social accounts from one place. It combines AI-assisted content creation with scheduling across major platforms, so marketers can plan posts, keep a consistent calendar, and manage community activity without switching between apps. Built for social media managers and marketing teams, it aims to reduce the manual work of cross-platform publishing and content planning.",
-    "category": "Productivity",
-    "pricing": "Paid",
-    "url": "https://social-media-manager.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "Social Media Manager AI is a paid tool that lets teams run multiple social accounts from one place. It combines AI-assisted content creation with scheduling across major platforms, so marketers can plan posts, keep a consistent calendar, and manage community activity without switching between apps. Built for social media managers and marketing teams, it aims to reduce the manual work of cross-platform publishing and content planning.",
-    "last_updated": "2026-10-07",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Social Media",
-      "Scheduling",
-      "Management"
-    ],
-    "rating": null,
-    "rating_count": null,
-    "unverified": true,
-    "unverified_reason": "social-media-manager.com is an unrelated German career-info page",
-    "use_cases": [
-      {
-        "title": "Unified Scheduling",
-        "detail": "Queue posts across several social networks from one calendar"
-      },
-      {
-        "title": "Content Drafting",
-        "detail": "Use AI to draft posts and adapt them per platform"
-      },
-      {
-        "title": "Account Management",
-        "detail": "Oversee multiple brand accounts and track their posting activity"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Single dashboard for scheduling and managing multiple social accounts",
-        "AI content assistance speeds up routine post drafting",
-        "Paid structure typically means fuller feature set than free tools"
-      ],
-      "cons": [
-        "Requires a paid subscription with no free tier to test first",
-        "Generic positioning means less depth than platform-specific specialist tools"
-      ]
-    }
-  },
-  {
     "id": 431,
     "name": "Soundscape AI",
     "description": "Soundscape AI generates custom ambient audio environments from text prompts. Users describe a scene, such as a rainy forest or a busy cafe, and the tool builds a layered mix of nature sounds, room tones and subtle textures. It suits content creators who need original background audio for videos, games or focus sessions, without relying on stock libraries. A free tier supports basic soundscape design before paid plans unlock longer or higher-resolution output.",
@@ -14483,58 +14431,6 @@
     "rating_count": null
   },
   {
-    "id": 997,
-    "name": "FreelanceFlow AI",
-    "description": "FreelanceFlow AI is a management platform for freelancers. It generates proposals, tracks invoices, provides client communication templates, and estimates project timelines so independent workers can run their business from one place. It suits solo consultants and creative freelancers who handle their own admin work. A free tier covers basic tracking, with paid plans for more projects and clients.",
-    "category": "Productivity",
-    "pricing": "Freemium",
-    "url": "https://freelanceflow.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "FreelanceFlow AI is a management platform for freelancers. It generates proposals, tracks invoices, provides client communication templates, and estimates project timelines so independent workers can run their business from one place. It suits solo consultants and creative freelancers who handle their own admin work. A free tier covers basic tracking, with paid plans for more projects and clients.",
-    "last_updated": "2026-10-07",
-    "skill_level": "beginner",
-    "best_for": [
-      "Freelancers",
-      "Proposal Writing",
-      "Client Management"
-    ],
-    "use_cases": [
-      {
-        "title": "Proposal Drafts",
-        "detail": "Generate client proposals with scope and pricing outlines"
-      },
-      {
-        "title": "Invoice Tracking",
-        "detail": "Track sent invoices and outstanding payments in one place"
-      },
-      {
-        "title": "Timeline Estimates",
-        "detail": "Estimate project timelines before committing to deadlines"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Proposal generation speeds up winning new client work",
-        "Invoice tracking keeps freelance payments visible and organized",
-        "Client communication templates simplify routine project update messages"
-      ],
-      "cons": [
-        "More projects and clients require a paid plan",
-        "Timeline estimates still need freelancer judgment on scope"
-      ]
-    },
-    "rating": null,
-    "rating_count": null,
-    "unverified": true,
-    "unverified_reason": "freelanceflow.ai returns 404"
-  },
-  {
     "id": 999,
     "name": "CollabSpace AI",
     "description": "CollabSpace AI is a team collaboration platform for remote and distributed teams. It summarizes meetings, extracts action items, and synchronizes workflows across time zones so handoffs do not stall when people are offline. Remote-first companies and global project teams are its main audience. A free tier supports basic collaboration, with paid plans for advanced features and larger teams.",
@@ -14583,58 +14479,6 @@
     },
     "rating": null,
     "rating_count": null
-  },
-  {
-    "id": 1000,
-    "name": "DataSync AI",
-    "description": "DataSync AI is an AI-powered data integration tool that maps, transforms, and synchronizes data between business applications. Its zero-code setup lets operations teams connect systems such as CRMs, ERPs, and spreadsheets without writing integration code. The platform targets small and medium businesses that need records to stay consistent across tools. Access requires a paid subscription, with no free tier listed.",
-    "category": "Productivity",
-    "pricing": "Paid",
-    "url": "https://datasync-ai.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "DataSync AI is an AI-powered data integration tool that maps, transforms, and synchronizes data between business applications. Its zero-code setup lets operations teams connect systems such as CRMs, ERPs, and spreadsheets without writing integration code. The platform targets small and medium businesses that need records to stay consistent across tools. Access requires a paid subscription, with no free tier listed.",
-    "last_updated": "2026-10-07",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Data Integration",
-      "App Sync",
-      "Automation"
-    ],
-    "use_cases": [
-      {
-        "title": "CRM Sync",
-        "detail": "Keep customer records consistent between CRM and other systems"
-      },
-      {
-        "title": "Data Cleanup",
-        "detail": "Transform and normalize records during transfer between apps"
-      },
-      {
-        "title": "Reporting Pipelines",
-        "detail": "Move order and inventory data into reporting tools"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Zero-code setup avoids custom integration development work",
-        "Automated mapping and transformation reduce manual data entry",
-        "Keeps records consistent across connected business applications"
-      ],
-      "cons": [
-        "No free tier; subscription required to use the platform",
-        "Complex integrations may still need oversight during initial setup"
-      ]
-    },
-    "rating": null,
-    "rating_count": null,
-    "unverified": true,
-    "unverified_reason": "datasync-ai.com serves an unrelated investment-industry product"
   },
   {
     "id": 1002,

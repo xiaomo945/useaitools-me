@@ -63,4 +63,6 @@ _*.txt
 _*.cjs
 _*.md
 _*.html
+_*.json
+_*.log
 _rewrite/
