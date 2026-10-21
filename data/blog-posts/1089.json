@@ -1,6 +1,6 @@
 {
   "id": 1089,
-  "title": "The Layer Under the Agent: Gateways, Retrieval and Local Runtimes",
+  "title": "Under the Agent: Gateways, Retrieval, Local Runtimes",
   "slug": "under-the-agent-gateways-retrieval-local-runtimes",
   "date": "2026-10-21",
   "description": "Nine Show HN launches sitting under the agent: a model gateway, vectorless retrieval, on-device inference, an MCP browser layer and connectors for real systems.",
