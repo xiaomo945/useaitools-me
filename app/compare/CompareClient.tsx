@@ -33,24 +33,36 @@ function loadVotes(): VoteMap {
   }
 }
 
+// Monotonic counter bumped whenever votes are persisted. useSyncExternalStore
+// needs getSnapshot to return a *stable* value between changes; returning a new
+// object every call makes React loop forever ("Maximum update depth exceeded")
+// and white-screens the page. We subscribe to this counter instead and recompute
+// the vote state with useMemo, so the snapshot reference only changes on a real
+// vote (or when the selection changes).
+let voteTick = 0;
+
 function saveVotes(votes: VoteMap) {
   if (typeof window === 'undefined') return;
   try {
     localStorage.setItem(VOTE_STORAGE_KEY, JSON.stringify(votes));
+    voteTick++;
     window.dispatchEvent(new Event('useaitools:votes-change'));
   } catch {
     // Ignore quota errors
   }
 }
 
+function getVoteSnapshot(): number {
+  return voteTick;
+}
+
+function getServerVoteSnapshot(): number {
+  return 0;
+}
+
 type VoteState = {
   userVotedFor: number | null;
   voteCounts: Record<number, number>;
-};
-
-const initialVoteState: VoteState = {
-  userVotedFor: null,
-  voteCounts: {},
 };
 
 function makeVoteStateKey(selectedIds: number[]): string {
@@ -90,12 +102,19 @@ export default function ComparePage() {
   const [pickerSearch, setPickerSearch] = useState('');
   const [pickerCategory, setPickerCategory] = useState<string>('All');
 
-  // useSyncExternalStore handles SSR-safe localStorage reads without
-  // calling setState inside an effect.
-  const voteState = useSyncExternalStore(
+  // useSyncExternalStore gives us a stable tick (0 on the server, bumped on each
+  // vote). The actual vote state is derived with useMemo so its reference only
+  // changes when the selection or the tick changes — never on every render.
+  const voteTickValue = useSyncExternalStore(
     subscribeVotes,
+    getVoteSnapshot,
+    getServerVoteSnapshot,
+  );
+
+  const voteState = useMemo(
     () => readVoteStateFromStorage(selectedIds),
-    () => initialVoteState,
+    // selectedIds is an array; join it to get a stable dependency key.
+    [selectedIds.join('-'), voteTickValue],
   );
 
   const { userVotedFor, voteCounts } = voteState;
