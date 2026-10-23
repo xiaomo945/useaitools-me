@@ -12,7 +12,6 @@ import { ArrowRight } from 'lucide-react';
 import type { Tool } from '@/types';
 import type { Metadata } from 'next';
 import { getAffiliateLink } from '@/lib/affiliate';
-import { QUICK_START_TOOL_IDS } from '@/lib/quickStartProfiles';
 
 const SceneExplorer = dynamic(() => import('@/app/components/SceneExplorer'), {
   loading: () => <div className="h-64 animate-pulse bg-slate-100 dark:bg-gray-800 rounded-2xl" />,
@@ -23,26 +22,38 @@ const StoryCard = dynamic(() => import('@/app/components/StoryCard'), {
 });
 
 export const metadata: Metadata = {
-  title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
+  title: 'Use AI Tools — Discover & Compare 500+ AI Tools',
   description: 'Curated directory of the best AI tools. Browse 500+ tools across Writing, Image, Video, Audio, Code & Productivity. Find your perfect AI tool in seconds.',
   metadataBase: new URL('https://useaitools.me'),
-  // No hreflang yet: `?lang=zh` renders the same English HTML (no [locale]
-  // segment, no i18n config), which sends a duplicate-content signal. Restored
-  // with real locale URLs when the bilingual routing plan ships.
   alternates: {
     canonical: '/',
+    languages: {
+      'en': '/',
+      'zh': '/?lang=zh',
+    },
   },
   openGraph: {
-    title: 'Use AI Tools — Discover, Compare & Choose the Best AI Tools in 2026',
+    title: 'Use AI Tools — Discover & Compare 500+ AI Tools',
     description: 'Curated directory of the best AI tools. Browse 500+ tools across 6 categories.',
     url: 'https://useaitools.me',
     siteName: 'Use AI Tools',
     type: 'website',
     locale: 'en_US',
+    alternateLocale: 'zh_CN',
+    // 显式引用动态 og 路由：目录式 route.tsx 不会被 Next 自动注入 metadata，
+    // 不写这一行 og:image 会整个缺失（曾因此全网分享无预览图）。
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Use AI Tools - Discover & Compare 500+ AI Tools',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Use AI Tools — Discover the Best AI Tools',
+    title: 'Use AI Tools — Discover & Compare 500+ AI Tools',
     description: 'Curated directory of the best AI tools. Browse 500+ tools across 6 categories.',
   },
 };
@@ -64,38 +75,19 @@ export default function Home() {
   // Only pass first 12 tools to client for initial load (performance optimization)
   const initialTools = sortedTools.slice(0, 12);
 
-  // Quick Start renders 16 specific tools by id. Resolve them here on the
-  // server instead of letting the client component import all 762.
-  // Same cast as enrichedTools above: the raw JSON types skill_level as string
-  // while the app's Tool type narrows it.
-  const quickStartTools = tools
-    .filter(t => QUICK_START_TOOL_IDS.includes(t.id))
-    .map(t => ({ ...t, affiliate_link: getAffiliateLink(t) })) as unknown as Tool[];
-
-  // Only hand the client the blog fields it actually renders. Listed
-  // explicitly rather than spread: a spread silently forwards every field a
-  // post gains in future, and post bodies alone average ~7KB each.
-  // HomeClient uses these for search (id, title, slug, description, category)
-  // and for the 5-card "latest guides" grid (date, images[0]). The full blog
-  // is reachable at /blog; keeping the shipped slice small (24) trims the
-  // payload by ~30KB without affecting the visible grid (needs 5).
-  const clientBlogPosts = blogPosts.slice(0, 24).map((post, index) => ({
-    id: post.id,
-    title: post.title,
-    slug: post.slug,
-    date: post.date,
-    description: post.description,
-    category: post.category,
+  // Only hand the client the blog fields it actually renders.
+  // Post bodies average ~7KB and are never used client-side, so passing all 786
+  // of them serialized ~5.3MB into the RSC payload. Keep the newest 120 for
+  // search suggestions, and images only for the 5 cards that are displayed.
+  const clientBlogPosts = blogPosts.slice(0, 120).map((post, index) => ({
+    ...post,
+    content: '',
+    tldr: undefined,
     images: index < 5 ? post.images : [],
   }));
 
   // Select featured tools on server to prevent hydration mismatch
   const selected: Tool[] = initialTools.slice(0, 3);
-
-  // Real totals from the dataset, so the hero shows accurate numbers in the
-  // server-rendered HTML instead of relying on a client fetch that fails when
-  // the stats database is unreachable.
-  const categoriesCount = new Set(enrichedTools.map(t => t.category).filter(Boolean)).size;
 
   // WebSite Schema with SearchAction
   const webSiteSchema = {
@@ -194,16 +186,22 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }}
       />
+      <div className="mb-4 sm:mb-5">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+          Browse AI Tools
+        </h2>
+        <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+          {enrichedTools.length} tools — search, filter and compare to find the right one
+        </p>
+      </div>
       <HomeClient
         initialTools={initialTools}
         blogPosts={clientBlogPosts}
-        quickStartTools={quickStartTools}
         totalCount={enrichedTools.length}
-        categoriesCount={categoriesCount}
       />
       <FeaturedTools tools={selected} />
       <TrendingTools tools={sortedTools} />
-      <StatsBanner toolCount={enrichedTools.length} postCount={blogPosts.length} />
+      <StatsBanner />
       
       {/* Latest Blog Posts - Internal Linking */}
       <div className="mb-16">

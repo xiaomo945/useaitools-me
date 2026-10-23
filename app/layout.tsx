@@ -5,7 +5,6 @@ import Script from "next/script";
 import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 import PageProgress from "./components/PageProgress";
-import Header from "./components/Header";
 import BackToTop from "./components/BackToTop";
 import CookieConsent from "./components/CookieConsent";
 import MobileNav from "./components/MobileNav";
@@ -22,22 +21,6 @@ import HolidayBanner from "./components/HolidayBanner";
 import AuthProvider from "./components/AuthProvider";
 import WebVitals from "./components/WebVitals";
 import ServiceWorkerRegistration from "./components/ServiceWorkerRegistration";
-
-/**
- * Google AdSense publisher id. Public by design — it is embedded in the ad
- * script URL and in ads.txt, and both are served to anyone who asks.
- *
- * The snippet has to sit in <head> on every page: Google's crawler reads it to
- * verify site ownership before the account is approved, and it must be present
- * before the first ad request. Loaded with `afterInteractive` so the browser
- * never blocks first paint on it.
- *
- * Consent is handled separately by CookieConsent (Google Consent Mode v2,
- * `ad_storage` / `ad_user_data` / `ad_personalization`), which is the pattern
- * Google prescribes for the EEA and UK rather than conditionally injecting the
- * script.
- */
-const ADSENSE_CLIENT = "ca-pub-2700548653982928";
 
 const inter = localFont({
   variable: "--font-inter",
@@ -71,18 +54,19 @@ export const metadata: Metadata = {
   // Without this, every page that resolves a relative OG/Twitter image URL falls
   // back to http://localhost:3000, so shared links show a broken preview.
   metadataBase: new URL('https://useaitools.me'),
-  title: "Best AI Tools Directory 2026 – Discover & Compare 500+ AI Tools",
+  title: "Best AI Tools Directory 2026 – 500+ AI Tools",
   description: "Find the best AI tools for writing, image generation, video creation, coding, and more. Compare features, pricing, and alternatives side by side. Updated weekly.",
+  keywords: ["AI tools", "AI directory", "AI writing tools", "AI image generators", "AI coding assistants", "AI video tools", "AI audio tools", "AI productivity tools", "best AI tools", "AI tools comparison", "free AI tools", "AI tools 2026"],
   robots: 'index, follow',
   openGraph: {
-    title: "Best AI Tools Directory 2026 – Discover & Compare 500+ AI Tools",
+    title: "Best AI Tools Directory 2026 – 500+ AI Tools",
     description: "Find the best AI tools for writing, image generation, video creation, coding, and more. Compare features, pricing, and alternatives side by side. Updated weekly.",
     siteName: 'Use AI Tools',
     type: 'website',
     url: 'https://useaitools.me',
     images: [
       {
-        url: '/og-image.png',
+        url: '/opengraph-image.png',
         width: 1200,
         height: 630,
         alt: 'Use AI Tools - Best AI Tools Directory',
@@ -91,7 +75,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best AI Tools Directory 2026 – Discover & Compare 500+ AI Tools',
+    title: 'Best AI Tools Directory 2026 – 500+ AI Tools',
     description: 'Find the best AI tools for writing, image generation, video creation, coding, and more. Compare features, pricing, and alternatives side by side. Updated weekly.',
     site: '@jiongxiaomo',
     creator: '@jiongxiaomo',
@@ -137,13 +121,6 @@ export default function RootLayout({
         {/* Prerender for high-traffic pages */}
         <link rel="prerender" href="/tool/midjourney" />
         <link rel="prerender" href="/search" />
-        {/* Google AdSense — must be in <head> on every page for site verification */}
-        <Script
-          id="google-adsense"
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -214,7 +191,6 @@ export default function RootLayout({
           </Suspense>
           <ErrorBoundary>
             <AuthProvider>
-              <Header />
               <main id="main-content">
                 <PageTransition>{children}</PageTransition>
               </main>
