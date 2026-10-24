@@ -45922,5 +45922,855 @@
         "Requires Apple silicon on macOS 26 or later"
       ]
     }
+  },
+  {
+    "id": 1948,
+    "name": "Jevstiller",
+    "description": "Jevstiller distils a hosted model into a local one that answers like it. A local model is trained to match the original on your own traffic, a bound on how often the two disagree is part of the contract so you know when a local answer is unreliable, and it ships as a drop-in proxy you point an existing client at. The pitch is cutting an API bill and dodging rate limits without silently changing behaviour.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://jevstiller.pages.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Jevstiller distils a hosted model into a local one that answers like it. A local model is trained to match the original on your own traffic, a bound on how often the two disagree is part of the contract so you know when a local answer is unreliable, and it ships as a drop-in proxy you point an existing client at. The pitch is cutting an API bill and dodging rate limits without silently changing behaviour.",
+    "last_updated": "2026-10-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Model distillation",
+      "API cost reduction",
+      "Rate-limit avoidance"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Match a hosted model locally",
+        "detail": "A local model is trained to answer like the original, and the site documents what it trains and how the guarantee is kept true after the first day."
+      },
+      {
+        "title": "Know when not to trust the local answer",
+        "detail": "A disagreement bound is stated as a contract rather than a threshold, so you can tell when the local model was unsure."
+      },
+      {
+        "title": "Point your existing client at it",
+        "detail": "It runs as a drop-in proxy, with deployment, configuration and a Python API documented."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "The disagreement bound is a contract, not a threshold",
+        "MIT licensed with a design document and published benchmarks",
+        "Runs as a drop-in proxy, so clients change only the base URL"
+      ],
+      "cons": [
+        "Young project with a small public track record",
+        "Savings depend on how much of your traffic the local model actually covers"
+      ]
+    }
+  },
+  {
+    "id": 1949,
+    "name": "Luke",
+    "description": "Luke is a macOS app for planning with a coding agent by voice. You talk through a feature, it reads your code while you speak, and it writes a plan you can paste straight into Claude Code or Codex. It needs macOS 14 or later on Apple silicon and is Apache-2.0.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://tryluke.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Luke is a macOS app for planning with a coding agent by voice. You talk through a feature, it reads your code while you speak, and it writes a plan you can paste straight into Claude Code or Codex. It needs macOS 14 or later on Apple silicon and is Apache-2.0.",
+    "last_updated": "2026-10-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Voice-driven planning",
+      "Agent prompt drafting",
+      "Mac developer tools"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Talk through a feature",
+        "detail": "Describe what you want out loud while Luke reads the code, and it turns that into a plan."
+      },
+      {
+        "title": "Paste the plan into your agent",
+        "detail": "The output is written to be pasted into Claude Code or Codex."
+      },
+      {
+        "title": "Keep it on the machine",
+        "detail": "A native macOS app rather than a web service."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Apache-2.0 and native to macOS",
+        "Reads your code while you talk, so the plan is grounded",
+        "Output is formatted for the agent you already use"
+      ],
+      "cons": [
+        "macOS 14 or later on Apple silicon only",
+        "Early project with a small public track record"
+      ]
+    }
+  },
+  {
+    "id": 1950,
+    "name": "LLM Fuzz CI",
+    "description": "LLM Fuzz CI is a GitHub Action that lets a coding agent attack the tests you wrote. The agent reads your code and writes adversarial inputs for the tests you mark, your normal test run replays them, and the action only reports inputs that actually fail, so every report is a real failure of your own assertions rather than another CVE list.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/Tiime-Software/llm-fuzz-ci",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "LLM Fuzz CI is a GitHub Action that lets a coding agent attack the tests you wrote. The agent reads your code and writes adversarial inputs for the tests you mark, your normal test run replays them, and the action only reports inputs that actually fail, so every report is a real failure of your own assertions rather than another CVE list.",
+    "last_updated": "2026-10-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Adversarial test generation",
+      "CI test hardening",
+      "Bug hunting with agents"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Have an agent write the nasty inputs",
+        "detail": "A coding agent reads your code and produces adversarial inputs for the tests you mark."
+      },
+      {
+        "title": "Only hear about real failures",
+        "detail": "Your own test run replays the inputs, so a report means your assertion actually failed."
+      },
+      {
+        "title": "Run it in CI",
+        "detail": "It ships as a GitHub Action, so it fits the pipeline you already have."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Reports are real failures of your own assertions, not scanner noise",
+        "Works on Python and JavaScript",
+        "MIT licensed"
+      ],
+      "cons": [
+        "Very new, with one star and no public track record",
+        "Only as good as the tests you mark for it"
+      ]
+    }
+  },
+  {
+    "id": 1951,
+    "name": "Vibivibi",
+    "description": "Vibivibi backs up and shares coding agent sessions end to end. You push a Claude Code, Codex CLI, OpenCode or Pi session from one machine with one CLI command and pull it onto another so a resume carries on with the full history, or send it to a teammate. Everything is encrypted on your machine with keys only you and your recipient hold, and the service stores ciphertext it cannot read. Free for two machines and 200 MB.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://vibivibi.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Vibivibi backs up and shares coding agent sessions end to end. You push a Claude Code, Codex CLI, OpenCode or Pi session from one machine with one CLI command and pull it onto another so a resume carries on with the full history, or send it to a teammate. Everything is encrypted on your machine with keys only you and your recipient hold, and the service stores ciphertext it cannot read. Free for two machines and 200 MB.",
+    "last_updated": "2026-10-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agent session backup",
+      "Cross-machine continuity",
+      "Encrypted sharing"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Start on the laptop, finish on the workstation",
+        "detail": "Push lists the sessions started in a project directory; pull installs one exactly where your agent expects it."
+      },
+      {
+        "title": "Send a session to a teammate",
+        "detail": "The encrypted copy can be shared, with keys only the two of you hold."
+      },
+      {
+        "title": "Keep every version",
+        "detail": "Each push keeps earlier versions, and any of them can be pulled."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "X25519 and AES-256-GCM with zero-access server storage",
+        "One CLI client on every machine",
+        "Free tier covers two machines and 200 MB"
+      ],
+      "cons": [
+        "Paid tiers beyond two machines and 200 MB",
+        "Requires trusting the client implementation with your keys"
+      ]
+    }
+  },
+  {
+    "id": 1952,
+    "name": "DevBoard",
+    "description": "devBoard is a project tracker for freelancers and small dev teams, with boards, epics, releases and a timer in native apps for iPhone, Android and Mac. It opens at once and answers to the keyboard, and it ships an MCP server so the board lives inside Claude Code and Cursor. It is free while in early access.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://getdevboard.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "devBoard is a project tracker for freelancers and small dev teams, with boards, epics, releases and a timer in native apps for iPhone, Android and Mac. It opens at once and answers to the keyboard, and it ships an MCP server so the board lives inside Claude Code and Cursor. It is free while in early access.",
+    "last_updated": "2026-10-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Small-team project tracking",
+      "Native issue boards",
+      "MCP-connected planning"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Keep the board in the agent",
+        "detail": "An MCP server puts the board inside Claude Code and Cursor rather than a browser tab."
+      },
+      {
+        "title": "Ship without the overhead",
+        "detail": "Boards, epics, releases and a timer, with no extra methodology to adopt."
+      },
+      {
+        "title": "Use it on the desktop and the phone",
+        "detail": "Native apps for iPhone, Android and Mac, with Windows and Linux announced."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free while in early access",
+        "MCP server included rather than bolted on",
+        "Native apps instead of a web wrapper"
+      ],
+      "cons": [
+        "Early access, so features and pricing can move",
+        "Windows and Linux builds are not out yet"
+      ]
+    }
+  },
+  {
+    "id": 1953,
+    "name": "Tofu",
+    "description": "Tofu turns something an agent built into a link people can open. You paste one message into your coding agent and Tofu gives your app a URL with saved data and sign-in handled, with one account covering the rest. It works with Claude Code, Codex, Cursor, Copilot, Windsurf, Devin and others, and is free for one app.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://trytofu.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Tofu turns something an agent built into a link people can open. You paste one message into your coding agent and Tofu gives your app a URL with saved data and sign-in handled, with one account covering the rest. It works with Claude Code, Codex, Cursor, Copilot, Windsurf, Devin and others, and is free for one app.",
+    "last_updated": "2026-10-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Publishing AI-built apps",
+      "Agent-to-deploy handoff",
+      "Shareable demos"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Get a link for a vibe-coded app",
+        "detail": "Paste the message into your agent and Tofu returns a URL anyone can open."
+      },
+      {
+        "title": "Keep data and sign-in working",
+        "detail": "Saved data and sign-in are included rather than left to you."
+      },
+      {
+        "title": "Start free",
+        "detail": "One app is free, and paid plans can be tried for seven days."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free tier includes saved data and sign-in",
+        "Works across the major coding agents",
+        "One message to deploy, no dashboard required"
+      ],
+      "cons": [
+        "A hosted service, so your app runs on their infrastructure",
+        "Free tier is limited to one app"
+      ]
+    }
+  },
+  {
+    "id": 1954,
+    "name": "VoiceGremlin",
+    "description": "VoiceGremlin is CI for AI voice agents. It calls your voice agent number from a real carrier line and runs functional tests over REST, so an end-to-end test covers the SIP integration, the speech-to-text and text-to-speech stack and the agent behaviour, not just a text prompt. Runs are queued over the API and come back with a pass or fail and a reason per test.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://voicegremlin.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "VoiceGremlin is CI for AI voice agents. It calls your voice agent number from a real carrier line and runs functional tests over REST, so an end-to-end test covers the SIP integration, the speech-to-text and text-to-speech stack and the agent behaviour, not just a text prompt. Runs are queued over the API and come back with a pass or fail and a reason per test.",
+    "last_updated": "2026-10-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Voice agent testing",
+      "Telephony CI",
+      "AI phone agent QA"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Call the agent for real",
+        "detail": "Tests run over an actual phone line, so the SIP and audio stack is covered."
+      },
+      {
+        "title": "Assert on behaviour, not text",
+        "detail": "Each test comes back with a pass or fail and a stated reason."
+      },
+      {
+        "title": "Wire it into a pipeline",
+        "detail": "Runs are started and polled over a REST API."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Real carrier calls rather than simulated audio",
+        "Per-test reasons make failures debuggable",
+        "Free minutes to start"
+      ],
+      "cons": [
+        "Paid beyond the free minutes",
+        "Testing a live phone agent costs real calls"
+      ]
+    }
+  },
+  {
+    "id": 1955,
+    "name": "Sensii",
+    "description": "Sensii is an open-source voice coach for League of Legends. It reads your live match from the Riot Live Client API — champion, items, gold, KDA and levels for everyone in the game — and answers questions out loud while you are still playing, with builds that adapt to what the enemy team is actually buying. It keeps track of what you asked during the session, and the coaching agent is Apache-2.0.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://sensii.gg",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Sensii is an open-source voice coach for League of Legends. It reads your live match from the Riot Live Client API — champion, items, gold, KDA and levels for everyone in the game — and answers questions out loud while you are still playing, with builds that adapt to what the enemy team is actually buying. It keeps track of what you asked during the session, and the coaching agent is Apache-2.0.",
+    "last_updated": "2026-10-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Live game coaching",
+      "Voice assistants for games",
+      "League of Legends"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Ask mid-game without alt-tabbing",
+        "detail": "A voice coach answers while you keep playing."
+      },
+      {
+        "title": "Get advice that fits the moment",
+        "detail": "Live match data is read from the Live Client API before it says anything."
+      },
+      {
+        "title": "Follow up without repeating yourself",
+        "detail": "The session context is kept across questions."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Open source under Apache 2.0",
+        "Answers are grounded in live match data",
+        "Champion knowledge covers 172 champions"
+      ],
+      "cons": [
+        "League of Legends only",
+        "Needs the game client running locally"
+      ]
+    }
+  },
+  {
+    "id": 1956,
+    "name": "Ramen",
+    "description": "Ramen is a self-hosted platform for running MCP servers in production on GKE, EKS and AKS. A git repository of Python tools becomes canary-deployed, autoscaled Rust and Python workers with NeMo guardrails per tool, Entra ID or Google Workspace SSO, custom roles, OAuth 2.1, secrets, IP rules and audit. Clients on macOS, Windows and Linux connect to it.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/bkraad47/ramen",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Ramen is a self-hosted platform for running MCP servers in production on GKE, EKS and AKS. A git repository of Python tools becomes canary-deployed, autoscaled Rust and Python workers with NeMo guardrails per tool, Entra ID or Google Workspace SSO, custom roles, OAuth 2.1, secrets, IP rules and audit. Clients on macOS, Windows and Linux connect to it.",
+    "last_updated": "2026-10-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "MCP server deployment",
+      "Multi-zone Kubernetes",
+      "Agent tool governance"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Turn Python tools into a service",
+        "detail": "A repository of tools is deployed as canaried, autoscaled workers across zones."
+      },
+      {
+        "title": "Guard and authenticate per tool",
+        "detail": "NeMo guardrails, SSO, custom roles and OAuth 2.1 are configured per tool."
+      },
+      {
+        "title": "Run it on your own cloud",
+        "detail": "Self-hosted on GKE, EKS or AKS, managed from one console."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Guardrails, SSO and audit are first-class rather than add-ons",
+        "BSD-3-Clause with releases and CI",
+        "Clients on macOS, Windows and Linux"
+      ],
+      "cons": [
+        "Needs a Kubernetes cluster to be worth running",
+        "Young project with three stars"
+      ]
+    }
+  },
+  {
+    "id": 1957,
+    "name": "Rashomon",
+    "description": "Rashomon keeps an independent record of what your Claude Code agent actually did — every tool call, subagent and failed command — and puts it beside the agent own summary, flagging discrepancies at the end of the turn in one line. It is local-only with no telemetry, and the full report includes what subagents did, which the main conversation does not show. Claude Code only, on macOS and Linux, at alpha.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/altrace-dev-role/rashomon",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Rashomon keeps an independent record of what your Claude Code agent actually did — every tool call, subagent and failed command — and puts it beside the agent own summary, flagging discrepancies at the end of the turn in one line. It is local-only with no telemetry, and the full report includes what subagents did, which the main conversation does not show. Claude Code only, on macOS and Linux, at alpha.",
+    "last_updated": "2026-10-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agent verification",
+      "Audit trails",
+      "Hallucination detection"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Catch a summary that does not match reality",
+        "detail": "The end-of-turn line flags when the agent claims all tests pass but something failed."
+      },
+      {
+        "title": "See what subagents did",
+        "detail": "The full report lists subagent activity the main conversation hides."
+      },
+      {
+        "title": "Keep it local",
+        "detail": "The record stays on your machine with no telemetry."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "An independent record rather than the agent own account",
+        "16 stars and Apache-2.0",
+        "Flags discrepancies in one line at the end of a turn"
+      ],
+      "cons": [
+        "Claude Code only, on macOS and Linux",
+        "Alpha software"
+      ]
+    }
+  },
+  {
+    "id": 1958,
+    "name": "Rowan",
+    "description": "Rowan is a static security scanner for AI applications. It reads source code and model files and reports likely vulnerabilities — injection, unsafe deserialisation, SSRF, leaked secrets, risky agent tools, unsafe model loading — with evidence for every finding, and it never runs your code. It is at alpha, and the README is explicit that a finding is a lead to check and a clean report does not prove a project is secure.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/hedgerow-dev/rowan",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Rowan is a static security scanner for AI applications. It reads source code and model files and reports likely vulnerabilities — injection, unsafe deserialisation, SSRF, leaked secrets, risky agent tools, unsafe model loading — with evidence for every finding, and it never runs your code. It is at alpha, and the README is explicit that a finding is a lead to check and a clean report does not prove a project is secure.",
+    "last_updated": "2026-10-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "AI app security scanning",
+      "Model file auditing",
+      "MCP config review"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Scan the AI parts too",
+        "detail": "Model files and agent or MCP configuration are scanned alongside source code."
+      },
+      {
+        "title": "Review the evidence",
+        "detail": "Every finding ships with the evidence behind it."
+      },
+      {
+        "title": "Run it without executing anything",
+        "detail": "Static analysis only, so nothing of yours is run."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Covers model files and agent configuration, not just code",
+        "MIT licensed with CI",
+        "Honest about being alpha"
+      ],
+      "cons": [
+        "Alpha, so expect false positives",
+        "Findings are leads to check, not confirmed bugs"
+      ]
+    }
+  },
+  {
+    "id": 1959,
+    "name": "Laya guard",
+    "description": "Laya guard is a free local guardrail for AI coding agents. Every tool call is judged on-device before it runs, using regex plus a local model, and is allowed, sent for review or blocked. It ships as a PyPI package with a dashboard, supports Claude Code and other agents, and runs on macOS and Linux.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/scs0209/laya-guard",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Laya guard is a free local guardrail for AI coding agents. Every tool call is judged on-device before it runs, using regex plus a local model, and is allowed, sent for review or blocked. It ships as a PyPI package with a dashboard, supports Claude Code and other agents, and runs on macOS and Linux.",
+    "last_updated": "2026-10-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Local agent guardrails",
+      "Tool-call filtering",
+      "On-device safety"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Judge every tool call locally",
+        "detail": "Each call is evaluated on your machine before it executes."
+      },
+      {
+        "title": "Choose allow, review or block",
+        "detail": "The verdict is three-way rather than a binary."
+      },
+      {
+        "title": "See what was blocked",
+        "detail": "A dashboard records the decisions."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "33 stars, the strongest traction in this batch",
+        "MIT licensed and runs fully locally",
+        "Regex plus a local model rather than a hosted service"
+      ],
+      "cons": [
+        "macOS and Linux only",
+        "Local judging adds latency to every tool call"
+      ]
+    }
+  },
+  {
+    "id": 1960,
+    "name": "BitRun",
+    "description": "BitRun is a zero-compile runner and terminal dashboard for 1-bit and 1.58-bit ternary language models on CPU. It manages the models, runs them without a build toolchain and shows live wattage telemetry, claiming 70+ tokens per second on laptops and support for 8B models on Apple Silicon and x86_64. It is at v0.2.0-beta.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/IshekKhal/bitrun",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "BitRun is a zero-compile runner and terminal dashboard for 1-bit and 1.58-bit ternary language models on CPU. It manages the models, runs them without a build toolchain and shows live wattage telemetry, claiming 70+ tokens per second on laptops and support for 8B models on Apple Silicon and x86_64. It is at v0.2.0-beta.",
+    "last_updated": "2026-10-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Local CPU inference",
+      "Ternary model running",
+      "Low-power LLM use"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run a ternary model with no build",
+        "detail": "Models are downloaded and run without cloning C++ submodules or configuring a toolchain."
+      },
+      {
+        "title": "Watch the power cost",
+        "detail": "Real-time wattage telemetry is shown in the terminal cockpit."
+      },
+      {
+        "title": "Try 1-bit models on a laptop",
+        "detail": "It targets Apple Silicon and x86_64 CPUs rather than a GPU."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed with releases",
+        "Removes the toolchain pain of research implementations",
+        "Live power telemetry is unusual and useful"
+      ],
+      "cons": [
+        "v0.2.0-beta with eight stars",
+        "Ternary models are a narrow slice of what is available"
+      ]
+    }
+  },
+  {
+    "id": 1961,
+    "name": "DBJoy",
+    "description": "DBJoy is a native macOS client for PostgreSQL with an AI assistant built in. You ask questions about your data in plain language and get answers backed by real queries, or have the SQL written for you, using your own Anthropic or OpenAI key. Around that it does the normal client job — schemas, safe data editing, SQL, export, ER diagrams and schema comparison with generated migration SQL — in a keyboard-friendly SwiftUI app.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/agustind/dbjoy",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "DBJoy is a native macOS client for PostgreSQL with an AI assistant built in. You ask questions about your data in plain language and get answers backed by real queries, or have the SQL written for you, using your own Anthropic or OpenAI key. Around that it does the normal client job — schemas, safe data editing, SQL, export, ER diagrams and schema comparison with generated migration SQL — in a keyboard-friendly SwiftUI app.",
+    "last_updated": "2026-10-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "PostgreSQL clients",
+      "AI-assisted SQL",
+      "Mac database tools"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Ask about your data in plain language",
+        "detail": "The assistant answers with the query it ran, using your own model key."
+      },
+      {
+        "title": "Compare schemas",
+        "detail": "Staging and production schemas can be compared, with migration SQL generated."
+      },
+      {
+        "title": "Keep it keyboard-driven",
+        "detail": "A native SwiftUI app rather than a browser tool."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Bring your own Anthropic or OpenAI key",
+        "MIT licensed and native to macOS",
+        "Schema comparison and migration SQL included"
+      ],
+      "cons": [
+        "PostgreSQL only for now; other engines need drivers",
+        "Small project with six stars"
+      ]
+    }
+  },
+  {
+    "id": 1962,
+    "name": "ScratchCAD",
+    "description": "ScratchCAD is AI-driven parametric CAD. A Rust solid modelling API built on the OpenCASCADE kernel is paired with a local MCP server and an editor, so an AI assistant can build parts from Rhai scripts that produce exact B-rep solids and export to STEP, IGES, BREP, STL, OBJ and 3MF. It runs under Docker Compose, and the README warns that it is under active development.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/scratchcad/scratchcad",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ScratchCAD is AI-driven parametric CAD. A Rust solid modelling API built on the OpenCASCADE kernel is paired with a local MCP server and an editor, so an AI assistant can build parts from Rhai scripts that produce exact B-rep solids and export to STEP, IGES, BREP, STL, OBJ and 3MF. It runs under Docker Compose, and the README warns that it is under active development.",
+    "last_updated": "2026-10-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Parametric CAD",
+      "Text-to-CAD via MCP",
+      "3D model export"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Let an agent build a part",
+        "detail": "A local MCP server exposes the modelling API to an AI assistant."
+      },
+      {
+        "title": "Keep geometry exact",
+        "detail": "Parts are B-rep solids rather than meshes, and export to standard CAD formats."
+      },
+      {
+        "title": "Run it locally",
+        "detail": "The server, MCP server and editor come up under Docker Compose."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Apache-2.0 and built on OpenCASCADE",
+        "Exports to STEP, IGES, BREP, STL, OBJ and 3MF",
+        "Local MCP server rather than a hosted service"
+      ],
+      "cons": [
+        "Under active development; the API can break between commits",
+        "The first Docker build takes a while"
+      ]
+    }
+  },
+  {
+    "id": 1963,
+    "name": "Ternlux",
+    "description": "Ternlux is a local-first, bring-your-own-key AI pipeline builder. You connect any source, transform data with natural language and load to any destination in a visual ETL canvas, without writing pipeline code. It runs on the desktop, ships an online demo and has a community edition on GitHub.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.ternlux.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Ternlux is a local-first, bring-your-own-key AI pipeline builder. You connect any source, transform data with natural language and load to any destination in a visual ETL canvas, without writing pipeline code. It runs on the desktop, ships an online demo and has a community edition on GitHub.",
+    "last_updated": "2026-10-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Visual ETL",
+      "Natural-language data transforms",
+      "Local-first pipelines"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Build a pipeline by describing it",
+        "detail": "Connect a source, describe the transform in plain language, and load to a destination."
+      },
+      {
+        "title": "Keep data on your own machine",
+        "detail": "The desktop app is local-first and uses your own model key."
+      },
+      {
+        "title": "Start without installing",
+        "detail": "An online demo runs the same canvas in the browser."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free desktop download with an online demo",
+        "Natural-language transforms instead of hand-written pipeline code",
+        "Community edition on GitHub"
+      ],
+      "cons": [
+        "Early project; the enterprise tier is the commercial focus",
+        "Connector coverage depends on your stack"
+      ]
+    }
+  },
+  {
+    "id": 1964,
+    "name": "Cr34te.it",
+    "description": "Cr34te.it is a website anyone can rewrite one turn at a time with AI. You copy the instructions, tell your AI what to change, paste the result back and the site updates, with a queue so only one change lands at a time, a history of every version and a report button. There is a payment option to skip the queue.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://cr34te.it",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Cr34te.it is a website anyone can rewrite one turn at a time with AI. You copy the instructions, tell your AI what to change, paste the result back and the site updates, with a queue so only one change lands at a time, a history of every version and a report button. There is a payment option to skip the queue.",
+    "last_updated": "2026-10-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Collaborative AI editing",
+      "Live website experiments",
+      "Versioned web pages"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Change the site in one turn",
+        "detail": "Copy the instructions, describe the change to your AI, and paste its result."
+      },
+      {
+        "title": "Take turns",
+        "detail": "A queue means one change lands at a time and every version stays in history."
+      },
+      {
+        "title": "Use a coding agent",
+        "detail": "The page has a mode for existing agent chats and a URL to copy for agents."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free to use, with the whole history visible",
+        "Works with Grok, ChatGPT, Claude and Gemini",
+        "Changes are queued rather than racing"
+      ],
+      "cons": [
+        "Anonymous changes store the submitter IP address for up to 30 days",
+        "One turn at a time makes large changes slow"
+      ]
+    }
   }
 ]
