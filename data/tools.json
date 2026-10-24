@@ -42072,5 +42072,1205 @@
         "Granting an assistant an Accessibility service on your phone is a large amount of trust"
       ]
     }
+  },
+  {
+    "id": 1871,
+    "name": "OpenShell",
+    "description": "OpenShell is NVIDIA's open-source runtime for fleets of autonomous AI agents. Written in Rust and licensed under Apache 2.0, it gives agents a sandboxed place to execute with isolation primitives and an extension surface, so a team can let agents act on real systems without handing over the host. It installs from PyPI as the openshell package and ships published documentation and a 0.1.x upgrade guide.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/NVIDIA/OpenShell",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "OpenShell is NVIDIA's open-source runtime for fleets of autonomous AI agents. Written in Rust and licensed under Apache 2.0, it gives agents a sandboxed place to execute with isolation primitives and an extension surface, so a team can let agents act on real systems without handing over the host. It installs from PyPI as the openshell package and ships published documentation and a 0.1.x upgrade guide.",
+    "last_updated": "2026-10-22",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agent sandboxes",
+      "Autonomous agent fleets",
+      "Secure agent runtime"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run agents against real systems",
+        "detail": "Agents execute inside an isolated runtime instead of directly on the developer machine."
+      },
+      {
+        "title": "Scale past a single session",
+        "detail": "The runtime is built for fleets of agents rather than one long-running conversation."
+      },
+      {
+        "title": "Extend the runtime safely",
+        "detail": "Version 0.1.x adds new isolation primitives and an expanded extension surface with a documented upgrade path."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Apache 2.0 and installable from PyPI",
+        "Isolation primitives designed specifically for autonomous agents",
+        "Published documentation and a stated release cadence"
+      ],
+      "cons": [
+        "Early 0.1.x line, so interfaces are still moving",
+        "Rust and container tooling make this a developer-facing install"
+      ]
+    }
+  },
+  {
+    "id": 1872,
+    "name": "MIKE",
+    "description": "MIKE (Integrated Kanban Environment) is an open-source LLM harness for software development work. It pairs a Kanban board with strong sandbox isolation through gVisor, supports custom extensions in sandboxed iframes or WebAssembly through wazero, ships a Progressive Web App optimized for spotty networks, and runs against llama.cpp or any provider that speaks the OpenAI Chat Completions API.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/SoftwareRenderer/MIKE",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "MIKE (Integrated Kanban Environment) is an open-source LLM harness for software development work. It pairs a Kanban board with strong sandbox isolation through gVisor, supports custom extensions in sandboxed iframes or WebAssembly through wazero, ships a Progressive Web App optimized for spotty networks, and runs against llama.cpp or any provider that speaks the OpenAI Chat Completions API.",
+    "last_updated": "2026-10-18",
+    "skill_level": "advanced",
+    "best_for": [
+      "Sandboxed coding agents",
+      "Self-hosted LLM harness",
+      "Kanban work tracking"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Give an agent a walled garden",
+        "detail": "Units of work run under gVisor isolation rather than straight on your machine."
+      },
+      {
+        "title": "Work from a weak connection",
+        "detail": "The Progressive Web App is built to stay usable on spotty networks."
+      },
+      {
+        "title": "Bring your own inference",
+        "detail": "Point it at local llama.cpp or at any OpenAI-compatible endpoint."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "gVisor sandboxing is part of the design, not an add-on",
+        "Works with local llama.cpp or OpenAI-compatible providers",
+        "Extensions run sandboxed through iframes and wazero"
+      ],
+      "cons": [
+        "Needs Docker or Podman plus a generated encryption key to start",
+        "The API and extension interfaces are explicitly unstable before 1.0"
+      ]
+    }
+  },
+  {
+    "id": 1873,
+    "name": "Corgi",
+    "description": "Corgi is a terminal multiplexer for humans and agents. It keeps watch over every agent you have running, shows which ones need you, tracks where your tokens went, replays every file an agent touched and organizes workspaces into worktrees, while processes keep running in the background the way they do in tmux. It installs with a curl one-liner and supports macOS, Linux and WSL.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://corgi.computer/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Corgi is a terminal multiplexer for humans and agents. It keeps watch over every agent you have running, shows which ones need you, tracks where your tokens went, replays every file an agent touched and organizes workspaces into worktrees, while processes keep running in the background the way they do in tmux. It installs with a curl one-liner and supports macOS, Linux and WSL.",
+    "last_updated": "2026-10-23",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agent multiplexing",
+      "Terminal workspaces",
+      "Token tracking"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Watch several agents at once",
+        "detail": "A status line marks each agent as working, needing you, finished or idle, with F1 to catch up."
+      },
+      {
+        "title": "See where tokens went",
+        "detail": "Per-agent activity tracking shows what each one did, with detail on hover."
+      },
+      {
+        "title": "Review what an agent changed",
+        "detail": "Replay lists every file the agent touched in one scroll, and worktrees keep tasks apart."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Agents and dev servers keep running in the background like tmux",
+        "Reuses your existing Claude Code, Codex, Pi and OpenCode accounts",
+        "Workspace-aware, with worktree organization and per-workspace resource usage"
+      ],
+      "cons": [
+        "macOS, Linux and WSL only",
+        "Installs by piping a shell script from the site"
+      ]
+    }
+  },
+  {
+    "id": 1874,
+    "name": "Craig CLI",
+    "description": "Craig is a keyboard-driven terminal workspace that runs Claude Code, Codex and Cursor in parallel, each task in its own Git worktree, and keeps tasks, changes, pull requests and checks together in one place. It installs from npm, needs Node 22 or newer, is MIT licensed and requires no Craig account.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://craig-cli.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Craig is a keyboard-driven terminal workspace that runs Claude Code, Codex and Cursor in parallel, each task in its own Git worktree, and keeps tasks, changes, pull requests and checks together in one place. It installs from npm, needs Node 22 or newer, is MIT licensed and requires no Craig account.",
+    "last_updated": "2026-10-19",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Parallel coding agents",
+      "Git worktree workflows",
+      "Pull request orchestration"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Split a bug and a feature",
+        "detail": "Give one agent the bug and another the feature; Craig creates a branch and worktree for each."
+      },
+      {
+        "title": "Watch checks without leaving the terminal",
+        "detail": "Pull requests and CI checks sit next to the agent that produced them."
+      },
+      {
+        "title": "Go from task to merged PR on the keyboard",
+        "detail": "The whole loop from starting a task to merging runs inside one TUI."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed and no vendor account required",
+        "Agnostic across Claude Code, Codex and Cursor",
+        "One worktree per task keeps parallel agents from colliding"
+      ],
+      "cons": [
+        "Requires Node 22 or newer",
+        "Terminal only, with no graphical interface"
+      ]
+    }
+  },
+  {
+    "id": 1875,
+    "name": "Twine",
+    "description": "Twine is a native macOS workspace for coordinating coding agents, described by its authors as an Agentic Development Environment. Written in Rust and released under the MIT license, it runs on macOS 26 or later and keeps several agents, their workspaces and their output inside one native app instead of scattered terminal tabs.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/standing-desks/twine",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Twine is a native macOS workspace for coordinating coding agents, described by its authors as an Agentic Development Environment. Written in Rust and released under the MIT license, it runs on macOS 26 or later and keeps several agents, their workspaces and their output inside one native app instead of scattered terminal tabs.",
+    "last_updated": "2026-10-22",
+    "skill_level": "intermediate",
+    "best_for": [
+      "macOS agent workspace",
+      "Multi-agent coordination",
+      "Native developer tooling"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Coordinate several agents at once",
+        "detail": "Agents run side by side in a native macOS app instead of separate terminal windows."
+      },
+      {
+        "title": "Keep agent work where you can see it",
+        "detail": "Workspace state and agent output stay in one place you can return to."
+      },
+      {
+        "title": "Install without building a toolchain",
+        "detail": "CI publishes release assets you can download directly."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Native macOS app under the MIT license",
+        "Written in Rust with CI on every push",
+        "Purpose-built for coordinating agents rather than generic terminal multiplexing"
+      ],
+      "cons": [
+        "Requires macOS 26 or later",
+        "Young project with a narrow platform target"
+      ]
+    }
+  },
+  {
+    "id": 1876,
+    "name": "Halv",
+    "description": "Halv is an open-source desktop workspace that runs Claude Code, Codex, Kimi and GLM side by side on the subscriptions you already pay for. Its local savings engine filters command output and compresses context on your own machine, and a Crux code index answers caller, reference and blast-radius questions from an index instead of reading files. Halv Cloud adds a router that sends each task to the model it needs, a savings dashboard and automatic account rotation, for 10 dollars a month.",
+    "category": "Code",
+    "pricing": "Open Source; Cloud $10/month",
+    "url": "https://halv.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Halv is an open-source desktop workspace that runs Claude Code, Codex, Kimi and GLM side by side on the subscriptions you already pay for. Its local savings engine filters command output and compresses context on your own machine, and a Crux code index answers caller, reference and blast-radius questions from an index instead of reading files. Halv Cloud adds a router that sends each task to the model it needs, a savings dashboard and automatic account rotation, for 10 dollars a month.",
+    "last_updated": "2026-10-22",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Multi-agent workspaces",
+      "Cutting agent spend",
+      "Model routing"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run four agents in one window",
+        "detail": "Claude Code, Codex, Kimi and GLM each use their own subscription."
+      },
+      {
+        "title": "Cut context and output cost locally",
+        "detail": "Command output filtering and context compression both run on your device."
+      },
+      {
+        "title": "Let a router pick the model",
+        "detail": "Halv Cloud routes each task and can move work to another account when one plan hits its usage ceiling."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Apache 2.0, free forever for the desktop workspace and every local savings layer",
+        "Crux code index answers structural questions without reading every file",
+        "Live savings meter shows what each conversation saved as you work"
+      ],
+      "cons": [
+        "The Cloud router is a separate 10 dollar a month subscription",
+        "Published savings percentages come from the project own SWE-rebench paired runs, not from your codebase"
+      ]
+    }
+  },
+  {
+    "id": 1877,
+    "name": "EditMD",
+    "description": "EditMD is a small native macOS editor for markdown files that lets you edit the rendered document in place and saves plain markdown back. It uses Y.js to merge edits made by coding agents in real time, so you can keep writing while an agent changes the same file instead of one side clobbering the other or hitting a file-changed-on-disk dialog.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/kirahowe/editmd",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "EditMD is a small native macOS editor for markdown files that lets you edit the rendered document in place and saves plain markdown back. It uses Y.js to merge edits made by coding agents in real time, so you can keep writing while an agent changes the same file instead of one side clobbering the other or hitting a file-changed-on-disk dialog.",
+    "last_updated": "2026-10-23",
+    "skill_level": "beginner",
+    "best_for": [
+      "Markdown editing",
+      "Working alongside agents",
+      "macOS writing"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Write while an agent edits",
+        "detail": "Y.js merges your edits and the agent edits in real time, like a shared document."
+      },
+      {
+        "title": "Edit rendered markdown",
+        "detail": "Work on the rendered document and still get plain markdown on disk."
+      },
+      {
+        "title": "Send an agent for references",
+        "detail": "Have an agent add links or fill in quotes while you keep writing in the same file."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed and deliberately small",
+        "Real-time merge removes clobbering and reload dialogs",
+        "Files stay plain markdown"
+      ],
+      "cons": [
+        "macOS only",
+        "Early release at version 0.1.0"
+      ]
+    }
+  },
+  {
+    "id": 1878,
+    "name": "Keen Code",
+    "description": "Keen Code is a context-aware terminal-based coding agent written in Go. It supports multiple providers, MCP servers, subagents and agent skills, and adds controllable tool output retention, hashline edits, compaction, a permission system, session management, multi-agent orchestration and a task classifier that routes work using decision models.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/mochow13/keen-code",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Keen Code is a context-aware terminal-based coding agent written in Go. It supports multiple providers, MCP servers, subagents and agent skills, and adds controllable tool output retention, hashline edits, compaction, a permission system, session management, multi-agent orchestration and a task classifier that routes work using decision models.",
+    "last_updated": "2026-10-19",
+    "skill_level": "advanced",
+    "best_for": [
+      "Terminal coding agents",
+      "Multi-provider setups",
+      "Agent skills and MCP"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Swap providers without swapping tools",
+        "detail": "Several AI providers sit behind the same CLI."
+      },
+      {
+        "title": "Control what stays in context",
+        "detail": "Tool output retention is configurable and compaction trims long sessions."
+      },
+      {
+        "title": "Route tasks by classification",
+        "detail": "A decision-model classifier decides how a request is handled, with documented fail-open behaviour."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Single Go binary driving a terminal agent",
+        "Documented subsystems for permissions, memory, subagents and MCP",
+        "Skills system and queuing built in"
+      ],
+      "cons": [
+        "Documentation is still being filled out alongside the code",
+        "Terminal-first, so there is no editor UI"
+      ]
+    }
+  },
+  {
+    "id": 1879,
+    "name": "TenseMem",
+    "description": "TenseMem is embedded, deterministic state memory for AI agents, described as memory that knows its tenses. One SQLite file with no server: the model proposes typed facts and the engine decides what is current, keeping one current value per slot, reporting whether a read is fresh and refusing to learn from its own output. Installed with pip, it works with a rule-based extractor or with OpenAI, Anthropic, Ollama, LiteLLM or Gemini.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/tensemem/tensemem",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "TenseMem is embedded, deterministic state memory for AI agents, described as memory that knows its tenses. One SQLite file with no server: the model proposes typed facts and the engine decides what is current, keeping one current value per slot, reporting whether a read is fresh and refusing to learn from its own output. Installed with pip, it works with a rule-based extractor or with OpenAI, Anthropic, Ollama, LiteLLM or Gemini.",
+    "last_updated": "2026-10-22",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agent memory",
+      "State tracking",
+      "Local-first storage"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Replace stale duplicate facts",
+        "detail": "Similarity search returns both an old address and a new one; TenseMem keeps one current value per slot."
+      },
+      {
+        "title": "Run without an API key",
+        "detail": "The bundled FakeExtractor is rule-based, so the same API works offline."
+      },
+      {
+        "title": "Check freshness before acting",
+        "detail": "A read returns whether the value is current, not just the nearest match."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Single SQLite file with no server to operate",
+        "Deterministic: the engine, not the model, decides what is current",
+        "Refuses to learn from its own output"
+      ],
+      "cons": [
+        "Python package, so Python agents get the smoothest path today",
+        "Opinionated memory model that replaces rather than augments vector search"
+      ]
+    }
+  },
+  {
+    "id": 1880,
+    "name": "Inillucent",
+    "description": "Inillucent is an embedded SQL database written in Rust and built as an agentic database. It implements the SQLite dialect with a Postgres dialect listed as upcoming, adds vector embeddings for semantic search and keyword search, and ships with a command line, a shell and an MCP server so an agent can query structured and semantic data through one database.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://inillucent.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Inillucent is an embedded SQL database written in Rust and built as an agentic database. It implements the SQLite dialect with a Postgres dialect listed as upcoming, adds vector embeddings for semantic search and keyword search, and ships with a command line, a shell and an MCP server so an agent can query structured and semantic data through one database.",
+    "last_updated": "2026-10-22",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agentic databases",
+      "Embedded SQL",
+      "Vector and keyword search"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Give an agent one database",
+        "detail": "Relational SQL and vector search live in the same embedded file."
+      },
+      {
+        "title": "Wire it into MCP",
+        "detail": "The bundled MCP toolset lets an agent query data without custom glue code."
+      },
+      {
+        "title": "Keep the dialect you know",
+        "detail": "The SQLite dialect is implemented, so existing queries carry over."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Ships a CLI, a shell and an MCP server",
+        "Vector and keyword search built into the database itself",
+        "Embedded, so there is no separate server to operate"
+      ],
+      "cons": [
+        "Speed comparisons come from the vendor own benchmark workloads",
+        "The Postgres dialect is still listed as upcoming"
+      ]
+    }
+  },
+  {
+    "id": 1881,
+    "name": "Lumabri",
+    "description": "Lumabri runs a private inference service across your own computers and servers, powered by Colibri and written in pure C. You choose the models, select which computers may help and approve how their memory is used. A worker loads only the weights for its assigned layers rather than a complete copy of the model, and you chat from the terminal or the bundled web page.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/JustVugg/lumabri",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Lumabri runs a private inference service across your own computers and servers, powered by Colibri and written in pure C. You choose the models, select which computers may help and approve how their memory is used. A worker loads only the weights for its assigned layers rather than a complete copy of the model, and you chat from the terminal or the bundled web page.",
+    "last_updated": "2026-10-22",
+    "skill_level": "advanced",
+    "best_for": [
+      "Distributed inference",
+      "Local model hosting",
+      "Home lab clusters"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run a model that does not fit one machine",
+        "detail": "Workers share the work, each loading only the layers it is assigned."
+      },
+      {
+        "title": "Keep several models resident",
+        "detail": "Approved models stay loaded within explicit memory budgets."
+      },
+      {
+        "title": "Watch the cluster from one place",
+        "detail": "Computers, allocations and measured workloads show up in one local workspace."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "A worker does not need its own complete copy of the model",
+        "Controller, terminal interface and inference integration are pure C",
+        "Conversation state stays with the nodes that execute those layers"
+      ],
+      "cons": [
+        "Adding computers adds memory and capacity but does not guarantee more tokens per second",
+        "Only worth the setup if you have several machines on one network"
+      ]
+    }
+  },
+  {
+    "id": 1882,
+    "name": "Skillstore",
+    "description": "Skillstore is a searchable skills library for Claude Code and Codex. You connect through MCP to find expert instructions for whatever you are building, publish your own team methods so teammates and coding agents follow the same standards, and improve skills with feedback. The public library needs no Skillstore account, so you keep using your existing AI account.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://skillstore-jk.fly.dev/developers",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Skillstore is a searchable skills library for Claude Code and Codex. You connect through MCP to find expert instructions for whatever you are building, publish your own team methods so teammates and coding agents follow the same standards, and improve skills with feedback. The public library needs no Skillstore account, so you keep using your existing AI account.",
+    "last_updated": "2026-10-22",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agent skills",
+      "Team coding standards",
+      "Claude Code and Codex"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Find instructions for the job",
+        "detail": "Search the library for a skill covering the specific task at hand."
+      },
+      {
+        "title": "Share house style with agents",
+        "detail": "Publish team methods so every agent applies the same standards."
+      },
+      {
+        "title": "Harden code before review",
+        "detail": "Sample skills cover checking access to each resource, validating untrusted input at the boundary and writing an abuse case."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No account needed to try the public library",
+        "Works through MCP with the agents you already run",
+        "Skills can be improved with feedback over time"
+      ],
+      "cons": [
+        "Aimed at Claude Code and Codex rather than every agent",
+        "Value depends on the skills the community publishes"
+      ]
+    }
+  },
+  {
+    "id": 1883,
+    "name": "Ego Lite",
+    "description": "Ego Lite is a browser built for AI agents to run browser automation in parallel while you keep browsing yourself. Each agent gets its own fully isolated Space so background work never collides with your tabs, agents write JavaScript functions directly instead of looping through CLI commands, and the project is MIT licensed and free to download for macOS.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://ego-lite.apposters.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Ego Lite is a browser built for AI agents to run browser automation in parallel while you keep browsing yourself. Each agent gets its own fully isolated Space so background work never collides with your tabs, agents write JavaScript functions directly instead of looping through CLI commands, and the project is MIT licensed and free to download for macOS.",
+    "last_updated": "2026-10-22",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Browser automation",
+      "Parallel agents",
+      "Agent-friendly browsing"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Let agents work while you browse",
+        "detail": "Agents run in their own Spaces in the background without touching your tabs."
+      },
+      {
+        "title": "Run several agents at once",
+        "detail": "One agent can enrich leads while another scrapes competitor sites."
+      },
+      {
+        "title": "Avoid command-loop dead ends",
+        "detail": "Agents write JavaScript functions against the page instead of chained CLI calls."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed, zero cost and zero configuration",
+        "A dedicated isolated Space for every agent",
+        "Code-based automation rather than CLI-based"
+      ],
+      "cons": [
+        "macOS build today, with Windows and Linux listed as coming soon",
+        "Speed comparisons come from the project own benchmarks"
+      ]
+    }
+  },
+  {
+    "id": 1884,
+    "name": "RigCheck",
+    "description": "RigCheck answers whether your GPU or Mac can run a given local AI model. You pick your graphics card or Mac plus the amount of RAM, and each model own checker answers from the requirements and benchmarks published by the model developers, covering language, image and video model routes, complete workflow files and sourced memory limits.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://localrigcheck.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "RigCheck answers whether your GPU or Mac can run a given local AI model. You pick your graphics card or Mac plus the amount of RAM, and each model own checker answers from the requirements and benchmarks published by the model developers, covering language, image and video model routes, complete workflow files and sourced memory limits.",
+    "last_updated": "2026-10-22",
+    "skill_level": "beginner",
+    "best_for": [
+      "Local model planning",
+      "Hardware sizing",
+      "VRAM estimates"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Check a card before downloading",
+        "detail": "Pick a specific card and RAM and see which model sizes fit with every layer in GPU memory."
+      },
+      {
+        "title": "Compare quantizations",
+        "detail": "File choices such as Q5_K_M or IQ4_XS are compared per model rather than collapsed into one verdict."
+      },
+      {
+        "title": "Get a workflow, not just a verdict",
+        "detail": "Model routes come with complete workflow files and sourced memory limits."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Answers come from developer-published requirements and benchmarks",
+        "Covers language, image and video model routes",
+        "Shows which quantization actually fits instead of a single yes or no"
+      ],
+      "cons": [
+        "Figures are capacity estimates for llama.cpp at a 32K context, not measured runs",
+        "Only covers models the site has on file"
+      ]
+    }
+  },
+  {
+    "id": 1885,
+    "name": "Agent Usage Guard",
+    "description": "Agent Usage Guard is a Claude Code mod that holds subagent fan-out, heavy-context prompts and retry loops before they spend your usage window. It runs inside Claude Code, reads your plan live usage, counts agents across every session and asks for confirmation in Claude Code own dialog rather than after the budget is already gone.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/rbartoli/agent-usage-guard",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Agent Usage Guard is a Claude Code mod that holds subagent fan-out, heavy-context prompts and retry loops before they spend your usage window. It runs inside Claude Code, reads your plan live usage, counts agents across every session and asks for confirmation in Claude Code own dialog rather than after the budget is already gone.",
+    "last_updated": "2026-10-22",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Usage limits",
+      "Claude Code guardrails",
+      "Cost control"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Stop runaway subagents",
+        "detail": "It holds subagent fan-out before it multiplies across sessions."
+      },
+      {
+        "title": "Catch context churn",
+        "detail": "Heavy-context churn and retry loops are held before they burn the window."
+      },
+      {
+        "title": "Decide in the moment",
+        "detail": "The prompt appears in Claude Code own dialog, backed by the live usage numbers."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs inside Claude Code as a mod, with no separate service",
+        "Reads live plan usage and counts agents across every session",
+        "Asks before spend happens rather than reporting afterwards"
+      ],
+      "cons": [
+        "Only works with Claude Code",
+        "As a mod it depends on Claude Code plugin surface staying stable"
+      ]
+    }
+  },
+  {
+    "id": 1886,
+    "name": "XTrace",
+    "description": "XTrace is an open-source macOS app that shows where your coding time and money go. It reads the Claude Code, Codex and Cursor history already on your Mac and reports agent activity, estimated human time and API-equivalent spend, tracks Claude and Codex account usage and pace in the sidebar, and lets you tune the numbers with customizable scoring skills.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/XTraceAI/xtrace-desktop",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "XTrace is an open-source macOS app that shows where your coding time and money go. It reads the Claude Code, Codex and Cursor history already on your Mac and reports agent activity, estimated human time and API-equivalent spend, tracks Claude and Codex account usage and pace in the sidebar, and lets you tune the numbers with customizable scoring skills.",
+    "last_updated": "2026-10-21",
+    "skill_level": "beginner",
+    "best_for": [
+      "Agent productivity metrics",
+      "Coding cost visibility",
+      "macOS dashboards"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Compare agent time to human time",
+        "detail": "Estimated human time sits next to the agent time for the same work."
+      },
+      {
+        "title": "Watch your usage window",
+        "detail": "Claude and Codex account usage and pace show in the sidebar."
+      },
+      {
+        "title": "Score work your way",
+        "detail": "Scoring skills are customizable so the ranking matches your own definition of useful."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Apache 2.0 and works from history already on your Mac",
+        "Covers Claude Code, Codex and Cursor in one dashboard",
+        "Customizable scoring skills"
+      ],
+      "cons": [
+        "macOS 14 or later on Apple Silicon only",
+        "Human-time and spend figures are estimates, not billing data"
+      ]
+    }
+  },
+  {
+    "id": 1887,
+    "name": "Consumer Agent Testing Tool",
+    "description": "CATT (Consumer Agent Testing Tool) tests how an assistant uses your service. You run a scripted or model-driven agent against an MCP server, an MCP app, a website or an HTTP API, check what the service actually did on its side, inspect sealed evidence and compare results across builds. Muse and Instinct are supported as surrogate emulation targets.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/Coverage-Cat/consumer-agent-testing-tool",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "CATT (Consumer Agent Testing Tool) tests how an assistant uses your service. You run a scripted or model-driven agent against an MCP server, an MCP app, a website or an HTTP API, check what the service actually did on its side, inspect sealed evidence and compare results across builds. Muse and Instinct are supported as surrogate emulation targets.",
+    "last_updated": "2026-10-22",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agent testing in CI",
+      "MCP server QA",
+      "Regression checks"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Test an MCP server before shipping",
+        "detail": "Drive an agent at the server and assert on service-side outcomes."
+      },
+      {
+        "title": "Compare builds over time",
+        "detail": "Results are kept as sealed evidence so runs can be diffed across builds."
+      },
+      {
+        "title": "Cover more than one assistant",
+        "detail": "Muse and Instinct emulation targets share one connector testing contract."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Tests service-side outcomes rather than only the agent transcript",
+        "Works against MCP servers, MCP apps, websites and HTTP APIs",
+        "MIT licensed, with sealed evidence for each run"
+      ],
+      "cons": [
+        "It is a surrogate: a passing test approximates a host and does not certify compatibility with a real assistant",
+        "The model driving a trial is separate from the assistant being emulated, which adds configuration"
+      ]
+    }
+  },
+  {
+    "id": 1888,
+    "name": "Jahan",
+    "description": "Jahan simulates how a population reacts to a product. It builds a population of LLM personas, each grounded in a real survey respondent drawn from a one-million-row dataset rather than invented by a prompt, places them on a social network, and lets them meet a product on an X-like feed, a Reddit-like forum and through word of mouth before answering survey waves about whether they would buy it.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/fm882/jahan",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Jahan simulates how a population reacts to a product. It builds a population of LLM personas, each grounded in a real survey respondent drawn from a one-million-row dataset rather than invented by a prompt, places them on a social network, and lets them meet a product on an X-like feed, a Reddit-like forum and through word of mouth before answering survey waves about whether they would buy it.",
+    "last_updated": "2026-10-21",
+    "skill_level": "advanced",
+    "best_for": [
+      "Market research simulation",
+      "Persona modeling",
+      "Message testing"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Test a launch message",
+        "detail": "Personas see the product on a feed and a forum and change their minds out loud."
+      },
+      {
+        "title": "Audit any number",
+        "detail": "Every turn is written to an append-only trace, so any run can be replayed, resumed or audited."
+      },
+      {
+        "title": "Measure intent in words",
+        "detail": "Personas answer in their own words and answers are scored by semantic similarity instead of being asked for as a number."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Personas are sampled from a real survey dataset rather than generated from a prompt",
+        "Append-only trace makes every run replayable and auditable",
+        "Prompts are rebuilt from the record and hash-checked rather than stored"
+      ],
+      "cons": [
+        "Simulation output is a signal, not a substitute for real customers",
+        "Large populations mean real inference spend"
+      ]
+    }
+  },
+  {
+    "id": 1889,
+    "name": "Firmenza",
+    "description": "Firmenza is an AI assistant for SAM.gov and federal contracting. It monitors your registration, finds relevant opportunities, explains what a government section asks and checks the format of what you type, emails you before your registration expires and prepares renewal answers in a worksheet. A free health check shows what SAM.gov lists publicly for your UEI or legal name.",
+    "category": "Productivity",
+    "pricing": "Free check; paid packages",
+    "url": "https://firmenza.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Firmenza is an AI assistant for SAM.gov and federal contracting. It monitors your registration, finds relevant opportunities, explains what a government section asks and checks the format of what you type, emails you before your registration expires and prepares renewal answers in a worksheet. A free health check shows what SAM.gov lists publicly for your UEI or legal name.",
+    "last_updated": "2026-10-16",
+    "skill_level": "beginner",
+    "best_for": [
+      "Government contracting",
+      "SAM.gov registration",
+      "Opportunity matching"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Check your public record",
+        "detail": "Enter a UEI or legal name and see what SAM.gov lists publicly."
+      },
+      {
+        "title": "Do not miss a renewal",
+        "detail": "An email arrives before the registration expires and a worksheet walks the renewal questions."
+      },
+      {
+        "title": "Match opportunities",
+        "detail": "Relevant contract opportunities are surfaced against your registration."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free health check with no signup barrier",
+        "Explains what a section asks and checks the format of your answers",
+        "Spanish-language version of the site"
+      ],
+      "cons": [
+        "Not a lawyer and not part of the government, only software",
+        "New registrations and renewals at scale sit behind paid packages"
+      ]
+    }
+  },
+  {
+    "id": 1890,
+    "name": "ORION Catalyst Calendar",
+    "description": "ORION is a biotech catalyst calendar that shows the sentence behind every date. Each readout or FDA date links to the SEC filing it came from, both versions are kept when a company changes its wording, and there are no forecasts. It is free with no signup and covers readouts, FDA dates and company-stated windows by ticker, company or program.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://www.orionbiotechai.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ORION is a biotech catalyst calendar that shows the sentence behind every date. Each readout or FDA date links to the SEC filing it came from, both versions are kept when a company changes its wording, and there are no forecasts. It is free with no signup and covers readouts, FDA dates and company-stated windows by ticker, company or program.",
+    "last_updated": "2026-10-19",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Biotech catalysts",
+      "SEC-linked calendars",
+      "Clinical readouts"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "See the source of a date",
+        "detail": "Every date links back to the SEC sentence that produced it."
+      },
+      {
+        "title": "Track wording changes",
+        "detail": "When a company moves from one phrasing to another, both versions are kept."
+      },
+      {
+        "title": "Watch a window close",
+        "detail": "Company-stated windows show a countdown to the day they end."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Every date is sourced to a filing rather than estimated",
+        "Free and no signup",
+        "Revision history of company wording is preserved"
+      ],
+      "cons": [
+        "Only covers companies with published timing records",
+        "Email alerts are listed as temporarily unavailable"
+      ]
+    }
+  },
+  {
+    "id": 1891,
+    "name": "this+that",
+    "description": "this+that is a company brain for teams. It keeps operational knowledge in one place, turns the requests arriving in your messages into tasks with an owner through DoBox, assembles a contacts list from your own channels, and exposes the same knowledge to agents through an MCP server and an assistant you can delegate to.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://www.thisandthat.chat/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "this+that is a company brain for teams. It keeps operational knowledge in one place, turns the requests arriving in your messages into tasks with an owner through DoBox, assembles a contacts list from your own channels, and exposes the same knowledge to agents through an MCP server and an assistant you can delegate to.",
+    "last_updated": "2026-10-23",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Company knowledge base",
+      "Inbox to task",
+      "Agent context"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Stop maintaining the wiki by hand",
+        "detail": "Updates arrive as proposals a person approves instead of manual edits."
+      },
+      {
+        "title": "Turn requests into owned tasks",
+        "detail": "DoBox converts what arrives in your messages into tasks with an owner."
+      },
+      {
+        "title": "Give agents company context",
+        "detail": "An MCP server exposes the brain to assistants you already use."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Knowledge updates arrive as proposals a human approves",
+        "DoBox works from the messages you already receive",
+        "MCP server for connecting your own assistants"
+      ],
+      "cons": [
+        "Aimed at teams, so it is heavy for one person",
+        "Pricing is not published on the site"
+      ]
+    }
+  },
+  {
+    "id": 1892,
+    "name": "A2O LITE AI",
+    "description": "A2O LITE AI is a dance video generator built around one fixed template. You upload two photos: photo 1 maps to the foreground dancer with white sunglasses in the opening shot and photo 2 to the dancer standing behind at the start, and the tool returns a NEON-style dance duo video. Credit cost is shown before you render, and a short 480p preview costs far less than the full video.",
+    "category": "Video",
+    "pricing": "Unknown",
+    "url": "https://a2oliteai.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A2O LITE AI is a dance video generator built around one fixed template. You upload two photos: photo 1 maps to the foreground dancer with white sunglasses in the opening shot and photo 2 to the dancer standing behind at the start, and the tool returns a NEON-style dance duo video. Credit cost is shown before you render, and a short 480p preview costs far less than the full video.",
+    "last_updated": "2026-10-20",
+    "skill_level": "beginner",
+    "best_for": [
+      "Dance videos",
+      "Photo to video",
+      "Short social clips"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Make a duo clip from two photos",
+        "detail": "Two photos in, a NEON-style dance duo out, with no timeline to learn."
+      },
+      {
+        "title": "Preview before paying",
+        "detail": "A 480p four-second preview costs far fewer credits than the full render."
+      },
+      {
+        "title": "Ship a social-ready clip",
+        "detail": "The generator targets one fixed template rather than acting as a general video editor."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No editing skills, choreography or timeline work required",
+        "Credit cost is shown before you render",
+        "Fixed template makes results predictable"
+      ],
+      "cons": [
+        "Only does the one NEON duo template",
+        "Credit pricing is not shown in a currency on the page"
+      ]
+    }
+  },
+  {
+    "id": 1893,
+    "name": "OraStage",
+    "description": "OraStage is a Hotel Lobby AI video generator. You upload two photos or one duo photo and it places your performers in the orange booth beneath a hanging microphone as a rap duo, at 9:16 or 16:9 MP4, in 480p or 720p, at 5, 10 or 15 seconds. The beat is generated rather than licensed, the first video is free with 10 credits, and failed renders are refunded.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://orastage.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "OraStage is a Hotel Lobby AI video generator. You upload two photos or one duo photo and it places your performers in the orange booth beneath a hanging microphone as a rap duo, at 9:16 or 16:9 MP4, in 480p or 720p, at 5, 10 or 15 seconds. The beat is generated rather than licensed, the first video is free with 10 credits, and failed renders are refunded.",
+    "last_updated": "2026-10-14",
+    "skill_level": "beginner",
+    "best_for": [
+      "Music videos from photos",
+      "Short-form vertical video",
+      "Meme-format clips"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Make a Hotel Lobby clip",
+        "detail": "Two photos become a stage video built for that one scene."
+      },
+      {
+        "title": "Pick your format",
+        "detail": "Portrait 9:16 for social or landscape 16:9, at three lengths."
+      },
+      {
+        "title": "Try it before paying",
+        "detail": "The first video is free and failed generations are refunded."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "First video free and failed renders refunded",
+        "Original AI-generated beat, so no licensed track is used",
+        "Built for one scene instead of a general tool stretched to fit"
+      ],
+      "cons": [
+        "Purpose-built for the Hotel Lobby format only",
+        "The free tier is limited to starting credits"
+      ]
+    }
+  },
+  {
+    "id": 1894,
+    "name": "BeatsFlow",
+    "description": "BeatsFlow is an AI beat maker and four-track stem studio. You generate instrumental beats from a text prompt or from reference audio, isolate four stems (drums, bass, melody and FX), and clone a reference style, with output aimed at finishing in FL Studio, Ableton or Logic Pro. Sign-up is instant with Google and 15 free studio credits need no credit card.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.getbeatsflow.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "BeatsFlow is an AI beat maker and four-track stem studio. You generate instrumental beats from a text prompt or from reference audio, isolate four stems (drums, bass, melody and FX), and clone a reference style, with output aimed at finishing in FL Studio, Ableton or Logic Pro. Sign-up is instant with Google and 15 free studio credits need no credit card.",
+    "last_updated": "2026-10-20",
+    "skill_level": "beginner",
+    "best_for": [
+      "AI beat making",
+      "Stem separation",
+      "Reference-style cloning"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Start from a prompt",
+        "detail": "Describe the track and audition the synthesized instrumental in the browser."
+      },
+      {
+        "title": "Work the stems",
+        "detail": "Split drums, bass, melody and FX for arrangement in your own DAW."
+      },
+      {
+        "title": "Match a reference",
+        "detail": "Clone the style of a reference track instead of writing the prompt from scratch."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Four isolated stems ready for real DAW work",
+        "15 free studio credits with no credit card required",
+        "Reference-audio cloning alongside text prompts"
+      ],
+      "cons": [
+        "Credit-based, so heavy use becomes a subscription",
+        "Showcase leans toward trap, boom bap, lofi and Afrobeats styles"
+      ]
+    }
   }
 ]
