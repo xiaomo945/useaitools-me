@@ -54,7 +54,7 @@ export async function GET() {
               fontWeight: '300',
             }}
           >
-            Discover &amp; Compare 500+ AI Tools
+            Discover &amp; Compare 990+ AI Tools
           </p>
           <div
             style={{

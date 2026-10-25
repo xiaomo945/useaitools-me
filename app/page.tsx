@@ -23,8 +23,8 @@ const StoryCard = dynamic(() => import('@/app/components/StoryCard'), {
 });
 
 export const metadata: Metadata = {
-  title: 'Use AI Tools — Discover & Compare 500+ AI Tools',
-  description: 'Curated directory of the best AI tools. Browse 500+ tools across Writing, Image, Video, Audio, Code & Productivity. Find your perfect AI tool in seconds.',
+  title: 'Use AI Tools — Discover & Compare 990+ AI Tools',
+  description: 'Curated directory of the best AI tools. Browse 990+ tools across Writing, Image, Video, Audio, Code & Productivity. Find your perfect AI tool in seconds.',
   metadataBase: new URL('https://useaitools.me'),
   // No hreflang yet: `?lang=zh` renders the same English HTML (no [locale]
   // segment, no i18n config), which sends a duplicate-content signal. Restored
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Use AI Tools — Discover & Compare 500+ AI Tools',
-    description: 'Curated directory of the best AI tools. Browse 500+ tools across 6 categories.',
+    title: 'Use AI Tools — Discover & Compare 990+ AI Tools',
+    description: 'Curated directory of the best AI tools. Browse 990+ tools across 6 categories.',
     url: 'https://useaitools.me',
     siteName: 'Use AI Tools',
     type: 'website',
@@ -46,16 +46,39 @@ export const metadata: Metadata = {
         url: '/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: 'Use AI Tools - Discover & Compare 500+ AI Tools',
+        alt: 'Use AI Tools - Discover & Compare 990+ AI Tools',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Use AI Tools — Discover & Compare 500+ AI Tools',
-    description: 'Curated directory of the best AI tools. Browse 500+ tools across 6 categories.',
+    title: 'Use AI Tools — Discover & Compare 990+ AI Tools',
+    description: 'Curated directory of the best AI tools. Browse 990+ tools across 6 categories.',
   },
 };
+
+// Only the fields the client bundle actually renders. A full tool object
+// carries use_cases, pros_cons, examples and a duplicate description_en that
+// together roughly double its serialized size; all of that is dead weight in
+// the RSC flight payload (it measured 162 KB, with a single 68 KB chunk).
+// Consumers verified: HomeClient (id, name, description, category, pricing,
+// url, needs_vpn, skill_level, best_for, last_updated), QuickStart (+ rating,
+// affiliate_link), RecentlyViewed and CompareBar (subset of the above).
+const toClientTool = (tool: Tool): Tool => ({
+  id: tool.id,
+  name: tool.name,
+  description: tool.description,
+  category: tool.category,
+  pricing: tool.pricing,
+  url: tool.url,
+  needs_vpn: tool.needs_vpn,
+  skill_level: tool.skill_level,
+  best_for: tool.best_for,
+  rating: tool.rating ?? null,
+  rating_count: tool.rating_count ?? null,
+  affiliate_link: tool.affiliate_link ?? '',
+  last_updated: tool.last_updated,
+}) as unknown as Tool;
 
 export default function Home() {
   // Enrich tools with affiliate links from environment variables
@@ -72,7 +95,7 @@ export default function Home() {
   );
 
   // Only pass first 12 tools to client for initial load (performance optimization)
-  const initialTools = sortedTools.slice(0, 12);
+  const initialTools = sortedTools.slice(0, 12).map(toClientTool);
 
   // Quick Start renders 16 specific tools by id. Resolve them here on the
   // server instead of letting the client component import all 762.
@@ -80,7 +103,7 @@ export default function Home() {
   // while the app's Tool type narrows it.
   const quickStartTools = tools
     .filter(t => QUICK_START_TOOL_IDS.includes(t.id))
-    .map(t => ({ ...t, affiliate_link: getAffiliateLink(t) })) as unknown as Tool[];
+    .map(t => toClientTool({ ...t, affiliate_link: getAffiliateLink(t) } as unknown as Tool));
 
   // Only hand the client the blog fields it actually renders. Listed
   // explicitly rather than spread: a spread silently forwards every field a
@@ -96,7 +119,7 @@ export default function Home() {
     date: post.date,
     description: post.description,
     category: post.category,
-    images: index < 5 ? post.images : [],
+    images: index < 5 ? (post.images || []).map(img => ({ url: img.url, alt: img.alt })) : [],
   }));
 
   // Select featured tools on server to prevent hydration mismatch

@@ -71,11 +71,11 @@ export const metadata: Metadata = {
   // Without this, every page that resolves a relative OG/Twitter image URL falls
   // back to http://localhost:3000, so shared links show a broken preview.
   metadataBase: new URL('https://useaitools.me'),
-  title: "Best AI Tools Directory 2026 – 500+ AI Tools",
+  title: "Best AI Tools Directory 2026 – 990+ AI Tools",
   description: "Find the best AI tools for writing, image generation, video creation, coding, and more. Compare features, pricing, and alternatives side by side. Updated weekly.",
   robots: 'index, follow',
   openGraph: {
-    title: "Best AI Tools Directory 2026 – 500+ AI Tools",
+    title: "Best AI Tools Directory 2026 – 990+ AI Tools",
     description: "Find the best AI tools for writing, image generation, video creation, coding, and more. Compare features, pricing, and alternatives side by side. Updated weekly.",
     siteName: 'Use AI Tools',
     type: 'website',
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best AI Tools Directory 2026 – 500+ AI Tools',
+    title: 'Best AI Tools Directory 2026 – 990+ AI Tools',
     description: 'Find the best AI tools for writing, image generation, video creation, coding, and more. Compare features, pricing, and alternatives side by side. Updated weekly.',
     site: '@jiongxiaomo',
     creator: '@jiongxiaomo',
@@ -152,7 +152,7 @@ export default function RootLayout({
               "@type": ["Organization", "WebSite"],
               "name": "Use AI Tools",
               "url": "https://useaitools.me",
-              "description": "Handpicked directory of 500+ AI tools across Writing, Image, Productivity, Code, Audio, and Video. Compare features, pricing, and alternatives side by side.",
+              "description": "Handpicked directory of 990+ AI tools across Writing, Image, Productivity, Code, Audio, and Video. Compare features, pricing, and alternatives side by side.",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://useaitools.me/logo.png",
