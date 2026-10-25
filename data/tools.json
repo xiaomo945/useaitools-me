@@ -49722,5 +49722,705 @@
         "Requires giving the service access to the documents you check"
       ]
     }
+  },
+  {
+    "id": 2024,
+    "name": "Project Arena",
+    "description": "Project Arena is a vendor-neutral Kubernetes incident benchmark for testing AI investigation tools. It deploys a disposable cluster, injects faults across 21 scenarios, saves investigation records from any product, and scores them with a configurable AI judge.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/edgedelta/project-arena",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Project Arena is a vendor-neutral Kubernetes incident benchmark for testing AI investigation tools. It deploys a disposable cluster, injects faults across 21 scenarios, saves investigation records from any product, and scores them with a configurable AI judge.",
+    "last_updated": "2026-10-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Benchmarking AI SRE and investigation tools",
+      "Comparing agents on identical incidents",
+      "Kubernetes fault-injection drills"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Score tools on the same faults",
+        "detail": "The benchmark injects faults into a disposable Kubernetes fixture and saves each product’s investigation record for scoring."
+      },
+      {
+        "title": "Bring your own product",
+        "detail": "Investigation records from any tool can be captured and scored, so the comparison is not limited to one vendor."
+      },
+      {
+        "title": "Run a small suite first",
+        "detail": "A six-scenario smoke fixture runs alongside the full 21-scenario suite when you want a quicker pass."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed and vendor-neutral by design",
+        "A configurable judge rather than a fixed rubric",
+        "Runs on a local kind cluster or AWS EKS"
+      ],
+      "cons": [
+        "Needs Docker plus kind or an EKS cluster",
+        "Python 3.10+ and kubectl required"
+      ]
+    }
+  },
+  {
+    "id": 2025,
+    "name": "Shotstash",
+    "description": "Shotstash is a self-hosted media cloud for creators and small teams. It stores project footage on your own PC, NAS or S3-compatible bucket, with resumable uploads, a portrait-aware viewer and share links per file, section or project.",
+    "category": "Video",
+    "pricing": "Open Source",
+    "url": "https://github.com/Aldyernesto/shotstash",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Shotstash is a self-hosted media cloud for creators and small teams. It stores project footage on your own PC, NAS or S3-compatible bucket, with resumable uploads, a portrait-aware viewer and share links per file, section or project.",
+    "last_updated": "2026-10-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Storing and sharing project footage",
+      "Delivering to clients without a subscription",
+      "Running a media library on hardware you own"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Keep footage on your own hardware",
+        "detail": "Storage can be a local disk, a NAS mount, or any S3-compatible bucket such as MinIO or Cloudflare R2."
+      },
+      {
+        "title": "Uploads that survive bad Wi-Fi",
+        "detail": "Parallel parts with retries resume after a reload or a dropped connection, and every file is checksum-verified."
+      },
+      {
+        "title": "Share a project, not a folder",
+        "detail": "Share links work per file, section or project, public or private."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed with no paid tier or locked features",
+        "Video-first viewer that respects real aspect ratios",
+        "Live demo with read-only accounts"
+      ],
+      "cons": [
+        "No mobile app in v1",
+        "Quick start is Linux x64 with Docker"
+      ]
+    }
+  },
+  {
+    "id": 2026,
+    "name": "AgentIntersect World",
+    "description": "AgentIntersect World is a local-first 3D workspace for your repositories and your own AI coding agents. It renders a repository as a city you can walk, hosts up to four agents with their own identities, and turns conversation into workstreams with diffs and previews.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://agentintersect.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AgentIntersect World is a local-first 3D workspace for your repositories and your own AI coding agents. It renders a repository as a city you can walk, hosts up to four agents with their own identities, and turns conversation into workstreams with diffs and previews.",
+    "last_updated": "2026-10-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Exploring a repository spatially",
+      "Running several coding agents side by side",
+      "Keeping agent work in one local workspace"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "See your code as a place",
+        "detail": "Load a repository and navigate it as a code city instead of a file tree."
+      },
+      {
+        "title": "Bring your own agents",
+        "detail": "Saved native connections to Claude Code, Codex, Hermes or OpenClaw, with up to four agents at once."
+      },
+      {
+        "title": "Turn talk into work",
+        "detail": "Create a workstream, inspect source and diffs, read validation results and open an approved preview."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Local-first and built for a single operator",
+        "Works with agent harnesses you already pay for",
+        "Windows and Linux builds"
+      ],
+      "cons": [
+        "Public preview at 0.15.0-rc.4 with rough edges",
+        "Windows builds are unsigned"
+      ]
+    }
+  },
+  {
+    "id": 2027,
+    "name": "Return Ledger",
+    "description": "Return Ledger is a client-side portfolio tracker that logs contributions, withdrawals and valuation checkpoints, then computes time-weighted and money-weighted returns in the page. An AI feature reads a broker PDF and proposes the row, but nothing is added until you confirm.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://returnledger.site",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Return Ledger is a client-side portfolio tracker that logs contributions, withdrawals and valuation checkpoints, then computes time-weighted and money-weighted returns in the page. An AI feature reads a broker PDF and proposes the row, but nothing is added until you confirm.",
+    "last_updated": "2026-10-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Tracking portfolio returns without an account",
+      "Importing broker statements with AI",
+      "Keeping financial data in the browser"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Compute returns in the browser",
+        "detail": "TWR and XIRR are computed entirely in the page, with ledgers kept in this browser’s local storage."
+      },
+      {
+        "title": "Import a statement with AI",
+        "detail": "Upload a buy/sell confirmation, coupon notice or position statement and a model proposes one row for review."
+      },
+      {
+        "title": "Check before you commit",
+        "detail": "Every proposed row waits for confirmation, because the reader is alpha and tested mainly on Italian broker documents."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No account, and ledgers stay in local storage",
+        "AI import adds nothing until you confirm each row",
+        "CSV import and export for moving data"
+      ],
+      "cons": [
+        "PDF reading is experimental and format-limited",
+        "Alpha proof of concept, and it states it is not financial advice"
+      ]
+    }
+  },
+  {
+    "id": 2028,
+    "name": "SafeBox",
+    "description": "SafeBox is a local guardrail layer that sits between an AI coding agent and infrastructure tools such as Terraform and the AWS CLI. Deterministic TOML policy rules decide which commands pass, blocking destructive operations like terraform destroy before they reach the real executable.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/aws-safebox/aws-safebox",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SafeBox is a local guardrail layer that sits between an AI coding agent and infrastructure tools such as Terraform and the AWS CLI. Deterministic TOML policy rules decide which commands pass, blocking destructive operations like terraform destroy before they reach the real executable.",
+    "last_updated": "2026-10-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Guarding AI agents against destructive commands",
+      "Enforcing infrastructure policy locally",
+      "Seeing what an agent tried to run"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Block destructive commands first",
+        "detail": "The default policy stops terraform destroy, kubectl delete, aws ec2 terminate-instances and similar operations."
+      },
+      {
+        "title": "Decide with policy, not a model",
+        "detail": "Rules are explicit TOML files, so a verdict never depends on asking an AI whether a command looks safe."
+      },
+      {
+        "title": "Proxy the real executable",
+        "detail": "SafeBox sits earlier in PATH than the real binary, so planning and read operations pass through untouched."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Deterministic and fail-closed on unsupported shell syntax",
+        "MIT licensed with a packaged CLI entry point",
+        "Safe operations pass through unchanged"
+      ],
+      "cons": [
+        "Very early at 0.1.0",
+        "A policy file per tool to maintain"
+      ]
+    }
+  },
+  {
+    "id": 2029,
+    "name": "Pristine",
+    "description": "Pristine is an agent skill that critiques, designs and polishes web UI. It captures the real page in light and dark mode, scores it out of 10 across 11 dimensions through the eyes of your personas, and can then apply the fixes it found.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/maddhruv/pristine",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pristine is an agent skill that critiques, designs and polishes web UI. It captures the real page in light and dark mode, scores it out of 10 across 11 dimensions through the eyes of your personas, and can then apply the fixes it found.",
+    "last_updated": "2026-10-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Getting an honest UI critique from an agent",
+      "Polishing an existing interface",
+      "Defining a design system for a project"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Score a page honestly",
+        "detail": "The critique command rates a URL or screenshot out of 10 across 11 dimensions, with the exact fix for every finding."
+      },
+      {
+        "title": "Fix what it found",
+        "detail": "The polish command keeps the look and raises every detail, with 16 named lenses such as bolder or typeset."
+      },
+      {
+        "title": "Start from a design brief",
+        "detail": "The init command reads your code and writes DESIGN.md with product, personas, brand and design system."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works with Claude Code, Codex, Copilot, Cursor and any agent that reads SKILL.md",
+        "Eight published before/after pairs with full critiques",
+        "Apache-2.0 licensed"
+      ],
+      "cons": [
+        "Needs a browser tool such as Playwright MCP to capture pages",
+        "Scores are the agent’s judgement, not user research"
+      ]
+    }
+  },
+  {
+    "id": 2030,
+    "name": "Agent Archive",
+    "description": "Agent Archive saves your Claude Code, Codex and Cursor sessions to your own S3 or Cloudflare R2 bucket. It hands a session’s context to another agent or machine, browses history by topic, project or branch, and tracks tokens and estimated spend.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/wangjohn/agent-archive",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Agent Archive saves your Claude Code, Codex and Cursor sessions to your own S3 or Cloudflare R2 bucket. It hands a session’s context to another agent or machine, browses history by topic, project or branch, and tracks tokens and estimated spend.",
+    "last_updated": "2026-10-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Backing up coding-agent sessions",
+      "Continuing a session in a different agent",
+      "Tracking agent token spend"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Continue a session elsewhere",
+        "detail": "The handoff command picks a session and carries its conversation context into another coding agent or computer."
+      },
+      {
+        "title": "Archive automatically",
+        "detail": "Transcripts from Claude Code, Codex and Cursor upload to your own S3 or R2 bucket."
+      },
+      {
+        "title": "See usage and spend",
+        "detail": "The stats command breaks down session counts, tokens and estimated cost by agent, model and project."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed with release binaries for macOS and Linux",
+        "Storage stays in your own bucket",
+        "Filters by topic, project, branch or PR number"
+      ],
+      "cons": [
+        "Needs your own S3 or R2 bucket for automatic archiving",
+        "A CLI that lives beside your agent rather than inside it"
+      ]
+    }
+  },
+  {
+    "id": 2031,
+    "name": "Jarvis",
+    "description": "Jarvis is an experimental Android voice assistant that drives other apps for you. Say the wake word and it opens apps, searches, plays music, sets reminders and can remote-control a Windows PC, with the brain running inside the app rather than on a server.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/AnaaySampat/jarvis",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Jarvis is an experimental Android voice assistant that drives other apps for you. Say the wake word and it opens apps, searches, plays music, sets reminders and can remote-control a Windows PC, with the brain running inside the app rather than on a server.",
+    "last_updated": "2026-10-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Controlling an Android phone by voice",
+      "Automating app tasks without taps",
+      "A self-hosted voice assistant"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Drive apps by voice",
+        "detail": "One command opens Spotify, searches and plays the song, using the Android accessibility service."
+      },
+      {
+        "title": "Bring your own model keys",
+        "detail": "Vertex AI, Gemini or Groq, plus optional free OpenRouter, NVIDIA or Mistral keys, with smart routing between them."
+      },
+      {
+        "title": "Reach the PC too",
+        "detail": "The same assistant can remote-control a Windows desktop."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No server or Python needed on the phone",
+        "MIT licensed and under active development",
+        "Auto mode routes to the weakest model that can handle a request"
+      ],
+      "cons": [
+        "Experimental and tested on one phone",
+        "Read the security docs before giving it control of your phone"
+      ]
+    }
+  },
+  {
+    "id": 2032,
+    "name": "SelfBench",
+    "description": "SelfBench builds private coding-agent benchmarks from your own repository’s merged pull requests. Each PR becomes a task with hidden tests, agents and models run against them, and accuracy is plotted against cost with the Pareto frontier drawn in.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://selfbench.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SelfBench builds private coding-agent benchmarks from your own repository’s merged pull requests. Each PR becomes a task with hidden tests, agents and models run against them, and accuracy is plotted against cost with the Pareto frontier drawn in.",
+    "last_updated": "2026-10-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Finding the best model for your codebase",
+      "Building evals from merged PRs",
+      "Comparing agents by accuracy and cost"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Turn PRs into tasks",
+        "detail": "For each merged PR the task is rebuilt from the commit before the change, with hidden tests and a reference solution."
+      },
+      {
+        "title": "Accept only tasks that hold up",
+        "detail": "A task is accepted only if the tests fail without a solution, pass with the original, pass on rerun and survive an independent review."
+      },
+      {
+        "title": "Read the leaderboard",
+        "detail": "Public repositories get a live leaderboard on selfbench.dev ranking models, harnesses and reasoning settings."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed with public leaderboards for open-source repos",
+        "Tasks are native Harbor format",
+        "Every accepted task passes four verification gates"
+      ],
+      "cons": [
+        "Batch generation takes hours",
+        "Everything happens in the hosted web app"
+      ]
+    }
+  },
+  {
+    "id": 2033,
+    "name": "LLM Usage Widget",
+    "description": "LLM Usage Widget is a desktop widget that shows your Claude and Codex plan usage limits where your system tray icons live. It reuses the logins Claude Code and the Codex CLI already store, so there is nothing to configure.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/aleph-void/LLM-Usage-Desktop-Widget",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "LLM Usage Widget is a desktop widget that shows your Claude and Codex plan usage limits where your system tray icons live. It reuses the logins Claude Code and the Codex CLI already store, so there is nothing to configure.",
+    "last_updated": "2026-10-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Watching Claude and Codex usage limits",
+      "Avoiding rate-limit surprises",
+      "A tray widget instead of a browser tab"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "See limits in the tray",
+        "detail": "The menu bar, top bar or taskbar shows Claude and Codex percentages, with a dropdown listing every limit and its reset countdown."
+      },
+      {
+        "title": "Nothing to configure",
+        "detail": "It reuses the credentials Claude Code and the Codex CLI already store on your machine, read-only."
+      },
+      {
+        "title": "Know when credits are what is left",
+        "detail": "Once a plan is at 100%, the widget switches to showing the remaining usage credits instead."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed across Linux, macOS and Windows",
+        "Credentials are only read and sent only to the issuing provider",
+        "Colour-coded bars marked stale when a refresh fails"
+      ],
+      "cons": [
+        "Claude and Codex only",
+        "A small project with three stars"
+      ]
+    }
+  },
+  {
+    "id": 2034,
+    "name": "VoxScribe",
+    "description": "VoxScribe is free, open-source voice typing for Windows and Android. Hold a hotkey or tap the floating button, talk, and the text is typed into whatever app you are using, with transcription running locally on Whisper.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://github.com/ahmedhmam1994/voxscribe-ai-voice-dictation",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "VoxScribe is free, open-source voice typing for Windows and Android. Hold a hotkey or tap the floating button, talk, and the text is typed into whatever app you are using, with transcription running locally on Whisper.",
+    "last_updated": "2026-10-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Dictating into any app offline",
+      "Captioning audio and video files",
+      "Private voice typing with no account"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Type by talking, anywhere",
+        "detail": "A system-wide hotkey types directly into the focused window rather than pasting from the clipboard."
+      },
+      {
+        "title": "Caption a whole folder",
+        "detail": "Drop in episodes and VoxScribe writes an .srt beside each file, reporting what it saved, skipped and failed."
+      },
+      {
+        "title": "Fix recurring mistakes",
+        "detail": "A vocabulary list covers names and jargon, and word replacements handle anything the model mishears the same way."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed with no account or subscription",
+        "100% local transcription with faster-whisper",
+        "Spoken commands for punctuation and corrections"
+      ],
+      "cons": [
+        "Windows and Android only",
+        "CPU-only transcription, so speed depends on your machine"
+      ]
+    }
+  },
+  {
+    "id": 2035,
+    "name": "Abyss",
+    "description": "Abyss is an orchestrator that runs your AI coding agents inside containers. You configure your editor like a normal ACP agent and Abyss handles Docker, intercepting every filesystem and shell request so nothing executes on your real machine.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://abyss.scurry.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Abyss is an orchestrator that runs your AI coding agents inside containers. You configure your editor like a normal ACP agent and Abyss handles Docker, intercepting every filesystem and shell request so nothing executes on your real machine.",
+    "last_updated": "2026-10-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Isolating coding agents in containers",
+      "Running agents without touching the host",
+      "ACP middleware and provisioning"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Keep the agent in a container",
+        "detail": "Every filesystem and shell request is intercepted and executed inside the container, never on the host."
+      },
+      {
+        "title": "Keep secrets in the dark",
+        "detail": "Nothing is visible to the agent by default until you explicitly mount or copy it in."
+      },
+      {
+        "title": "Use any ACP client",
+        "detail": "Abyss speaks ACP, so your existing editor or client can drive the isolated agent."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed control plane rather than a general container tool bent into one",
+        "Native ACP support with middleware plugins",
+        "Startup scripts and provisioning built in"
+      ],
+      "cons": [
+        "Needs Docker on the host",
+        "An early project with four stars"
+      ]
+    }
+  },
+  {
+    "id": 2036,
+    "name": "agentc",
+    "description": "agentc is a minimal coding agent written in freestanding C23 with no libc. It ships as a static binary under 1 MB, starts in under a millisecond, speaks MCP first, and exposes a versioned C ABI for C and Rust extensions.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/abird-ai/agentc",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "agentc is a minimal coding agent written in freestanding C23 with no libc. It ships as a static binary under 1 MB, starts in under a millisecond, speaks MCP first, and exposes a versioned C ABI for C and Rust extensions.",
+    "last_updated": "2026-10-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Embedding an agent in a small footprint",
+      "MCP tools without a runtime",
+      "Comparing agent resource use"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run in under a megabyte",
+        "detail": "The stripped binary is about 940 KiB with roughly 0.7 MB of RSS at cold start and no runtime to install."
+      },
+      {
+        "title": "Speak MCP first",
+        "detail": "Tools, prompts and resources come first, then a versioned C ABI in include/agentc_ext.h for extensions."
+      },
+      {
+        "title": "Measure it yourself",
+        "detail": "A bench target reports cold-start time, peak RSS and binary size, and compares the same numbers against codex, Claude Code and pi."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed and builds for six targets from one tree",
+        "Observed rather than estimated footprint numbers",
+        "MCP first with a C ABI for extensions"
+      ],
+      "cons": [
+        "Freestanding C23, so expect to work without libc",
+        "A very new project with nine stars"
+      ]
+    }
+  },
+  {
+    "id": 2037,
+    "name": "Perch",
+    "description": "Perch is a free beta Mac app that gives your Claude Code work one calm home. It keeps every session, PR and link in one place, stays quiet while you are in flow, and only speaks up when Claude, a reviewer or CI is waiting on you.",
+    "category": "Productivity",
+    "pricing": "Beta",
+    "url": "https://perchfocus.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Perch is a free beta Mac app that gives your Claude Code work one calm home. It keeps every session, PR and link in one place, stays quiet while you are in flow, and only speaks up when Claude, a reviewer or CI is waiting on you.",
+    "last_updated": "2026-10-25",
+    "skill_level": "beginner",
+    "best_for": [
+      "Tracking many Claude Code sessions",
+      "Seeing which PR is waiting on you",
+      "A local-first workspace for agent work"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Bring your sessions with you",
+        "detail": "Pick existing Claude Code sessions and Perch resumes each one exactly where it left off."
+      },
+      {
+        "title": "Hear only what needs you",
+        "detail": "Perch speaks up only when Claude, a reviewer or CI is waiting, and deep focus mutes everything else."
+      },
+      {
+        "title": "Keep PRs in context",
+        "detail": "Linked PRs across repos and worktrees are detected automatically, with a one-line status Claude writes as it works."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free beta with contexts, notes and status in a local database",
+        "No account, no Perch servers and no analytics",
+        "Sessions keep running when Perch quits"
+      ],
+      "cons": [
+        "macOS on Apple Silicon only",
+        "Requires the Claude Code CLI, and GitHub features need your gh login"
+      ]
+    }
   }
 ]
