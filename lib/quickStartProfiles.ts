@@ -19,25 +19,25 @@ export const QUICK_START_PROFILES: Record<string, QuickStartProfile> = {
     label: 'Content Creator',
     emoji: '🎨',
     description: 'Video, image, and audio tools for creators',
-    toolIds: [1, 8, 9, 12, 13], // Midjourney, ElevenLabs, Runway ML, Pika Labs, Suno AI
+    toolIds: [1, 8, 9, 1465, 1397], // Midjourney, ElevenLabs, Runway ML, Pika, Suno
   },
   developer: {
     label: 'Developer',
     emoji: '💻',
     description: 'Code assistants and productivity tools',
-    toolIds: [6, 7, 11, 14, 15], // ChatGPT, GitHub Copilot, Cursor, Tabnine, Obsidian Copilot
+    toolIds: [7, 13, 17, 6, 20], // GitHub Copilot, Cursor, Tabnine, ChatGPT, Claude
   },
   student: {
     label: 'Student',
     emoji: '📚',
     description: 'Writing and research tools for learning',
-    toolIds: [5, 6, 10, 16, 17], // Notion AI, ChatGPT, Whisper, Jasper, Claude
+    toolIds: [5, 6, 10, 11, 18], // Notion AI, ChatGPT, Perplexity AI, Whisper, Jasper
   },
   marketer: {
     label: 'Marketer',
     emoji: '📊',
     description: 'Marketing copy and social media tools',
-    toolIds: [5, 6, 16, 18, 19], // Notion AI, ChatGPT, Jasper, Adobe Firefly, Copy.ai
+    toolIds: [18, 74, 19, 5, 6], // Jasper, Copy.ai, Adobe Firefly, Notion AI, ChatGPT
   },
 };
 
