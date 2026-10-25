@@ -50887,5 +50887,2605 @@
         "A web product, so nothing works offline"
       ]
     }
+  },
+  {
+    "id": 2047,
+    "name": "Radian",
+    "description": "Radian is a coding agent shipped as one Rust binary. It starts with no runtime to boot and spends context on the lines a task needs, and its headless command prints every step as a JSON line and exits with a code that says how it ended.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://getrad.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Radian is a coding agent shipped as one Rust binary. It starts with no runtime to boot and spends context on the lines a task needs, and its headless command prints every step as a JSON line and exits with a code that says how it ended.",
+    "last_updated": "2026-10-25",
+    "skill_level": "advanced",
+    "best_for": [
+      "Running a coding agent inside a pipeline",
+      "Keeping context spend on the lines a task needs",
+      "Driving an agent headlessly from a script"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run it headlessly",
+        "detail": "The headless command prints every step as a JSON line and exits with a code that says how it ended, so a task can be driven from a script or a CI job."
+      },
+      {
+        "title": "Install one binary",
+        "detail": "Radian is one Rust binary with no runtime to boot, installed with brew install hisea/tap/radian."
+      },
+      {
+        "title": "Work in the terminal",
+        "detail": "The terminal session shows the agent thinking, running shell commands, reading files and patching code, with timings and exit codes for each step."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One Rust binary with no runtime to boot",
+        "Headless mode prints JSON lines with a meaningful exit code",
+        "Open source under MIT or Apache-2.0"
+      ],
+      "cons": [
+        "Source install and a Rust-centric workflow rather than a hosted product",
+        "Parts of the site and documentation are Chinese-language"
+      ]
+    }
+  },
+  {
+    "id": 2048,
+    "name": "SeekStorm",
+    "description": "SeekStorm is sub-millisecond lexical, vector and hybrid search written in Rust. It embeds as an in-process library, runs as a multi-tenancy server, or gives your agents search over MCP.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/SeekStorm/SeekStorm",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SeekStorm is sub-millisecond lexical, vector and hybrid search written in Rust. It embeds as an in-process library, runs as a multi-tenancy server, or gives your agents search over MCP.",
+    "last_updated": "2026-10-21",
+    "skill_level": "advanced",
+    "best_for": [
+      "Adding hybrid search to a Rust service",
+      "Serving many tenants from one index",
+      "Giving agents a search tool over MCP"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Embed it",
+        "detail": "Use SeekStorm as an in-process library when you want search inside your own binary rather than a separate service."
+      },
+      {
+        "title": "Run it as a server",
+        "detail": "Run the multi-tenancy server with its console and web UI, with a REST API documented on the project site."
+      },
+      {
+        "title": "Wire it to agents",
+        "detail": "Expose search to AI agents through MCP so they can query indexes you own."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Lexical, vector and hybrid search from one engine",
+        "Apache License 2.0, in production since 2020",
+        "Live demo and benchmarks published by the project"
+      ],
+      "cons": [
+        "Rust-only as a library, so other stacks go through the server or REST API",
+        "Self-managed: you run and tune the deployment yourself"
+      ]
+    }
+  },
+  {
+    "id": 2049,
+    "name": "MeetCap",
+    "description": "MeetCap records any meeting you want, free, for as long as you like. It transcribes recordings on your computer and never uploads them, produces live summaries and minutes, and lets your AI agent record, search past meetings or use them as context.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://meetcap.seacen.dev/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "MeetCap records any meeting you want, free, for as long as you like. It transcribes recordings on your computer and never uploads them, produces live summaries and minutes, and lets your AI agent record, search past meetings or use them as context.",
+    "last_updated": "2026-10-18",
+    "skill_level": "beginner",
+    "best_for": [
+      "Recording meetings without sending audio anywhere",
+      "Getting minutes ready when a call ends",
+      "Letting an agent search past meetings"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Record without a time limit",
+        "detail": "Record any meeting free and for as long as you like, with the recording staying on your Mac."
+      },
+      {
+        "title": "Catch up mid-call",
+        "detail": "Live summaries catch you up and explain the terms when your mind drifts or the topic is new."
+      },
+      {
+        "title": "Hand meetings to your agent",
+        "detail": "Your AI agent can record, search past meetings or use them as context."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Transcribes on your computer and never uploads recordings",
+        "Minutes with an executive summary, recap timestamps, speakers, to-dos and transcript",
+        "Free downloads for Apple silicon and Intel Macs"
+      ],
+      "cons": [
+        "macOS 14.2 or later only; Windows and iPhone versions are still coming",
+        "Not open source, so transcription runs inside the app you install"
+      ]
+    }
+  },
+  {
+    "id": 2050,
+    "name": "Brod",
+    "description": "Brod is the self-hosted cloud your AI agent deploys team tools to, over MCP. Your agent deploys to it directly and gets back an address that only the right people can open, with one sign-in for every app.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/brodsh/brod",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Brod is the self-hosted cloud your AI agent deploys team tools to, over MCP. Your agent deploys to it directly and gets back an address that only the right people can open, with one sign-in for every app.",
+    "last_updated": "2026-10-15",
+    "skill_level": "advanced",
+    "best_for": [
+      "Giving agent-built internal tools a home",
+      "Sharing one sign-in across small apps",
+      "Deploying from Claude Code or Cursor over MCP"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Deploy from your agent",
+        "detail": "Add Brod as an MCP server in Claude Code, Claude Desktop or Cursor, then ask your agent to deploy an app; it answers with the app address."
+      },
+      {
+        "title": "One sign-in for every app",
+        "detail": "People sign in with an emailed link or Google, and apps read who is signed in with their role and groups, keeping no user table of their own."
+      },
+      {
+        "title": "Workspaces per team",
+        "detail": "One workspace per team or company, each with its own people, groups and apps."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Starts with docker compose up and a one-time sign-in link from the log",
+        "AGPL-3.0-only and self-hosted on your own infrastructure",
+        "Agents deploy over MCP instead of a bespoke CLI"
+      ],
+      "cons": [
+        "Requires Docker with the Compose plugin and a host you run",
+        "Early project: OAuth sign-in and more clients are still in progress"
+      ]
+    }
+  },
+  {
+    "id": 2051,
+    "name": "Pasteface",
+    "description": "Pasteface records, transcribes and copies speech from your terminal. It organises recordings into named transcript tabs, keeps recording while earlier chunks transcribe, and copies results to your clipboard, using whisper.cpp on your machine or the OpenAI transcription API.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://github.com/blairjordan/pasteface",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pasteface records, transcribes and copies speech from your terminal. It organises recordings into named transcript tabs, keeps recording while earlier chunks transcribe, and copies results to your clipboard, using whisper.cpp on your machine or the OpenAI transcription API.",
+    "last_updated": "2026-10-15",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Dictating into a terminal workflow",
+      "Transcribing locally with whisper.cpp",
+      "Keeping several recordings in named tabs"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Record and queue",
+        "detail": "Space starts and stops recording, and stopping enqueues the chunk, so you can keep recording while earlier chunks transcribe."
+      },
+      {
+        "title": "Copy a transcript",
+        "detail": "C copies the selected tab transcript and E exports it, so a dictation session goes straight to the clipboard."
+      },
+      {
+        "title": "Choose the backend",
+        "detail": "Transcribe on your machine with whisper.cpp or use the OpenAI transcription API, depending on whether you want audio to leave the machine."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Local whisper.cpp transcription as well as the OpenAI API",
+        "Named transcript tabs and queued recordings",
+        "Tray companion plus a terminal interface, with a tray-free build that drops the GTK dependencies"
+      ],
+      "cons": [
+        "Linux and macOS only; Windows is not currently supported",
+        "Source build with a Rust toolchain and FFmpeg, and macOS builds are ad-hoc signed rather than notarized"
+      ]
+    }
+  },
+  {
+    "id": 2052,
+    "name": "Ghx",
+    "description": "Ghx is a caching proxy for the GitHub CLI built for AI agent workflows. Singleflight coalescing means several agents asking the same thing trigger one API call, and only allowlisted read-only commands are cached while mutations pass through.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://brunoborges.github.io/ghx/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Ghx is a caching proxy for the GitHub CLI built for AI agent workflows. Singleflight coalescing means several agents asking the same thing trigger one API call, and only allowlisted read-only commands are cached while mutations pass through.",
+    "last_updated": "2026-10-15",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Stopping agent fleets hitting GitHub rate limits",
+      "Caching repeated gh calls in scripts",
+      "Watching cache hit rates on a dashboard"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Drop it in",
+        "detail": "Use ghx instead of gh; the daemon auto-starts and needs no configuration."
+      },
+      {
+        "title": "Collapse duplicate calls",
+        "detail": "Five agents requesting the same PR list simultaneously make only one API call, and all five get the result."
+      },
+      {
+        "title": "Watch the cache",
+        "detail": "A real-time web dashboard shows hit rates, per-command stats and a live request log, and the same data is available as JSON."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Context-aware cache keys prevent cross-repo collisions",
+        "Mutations pass through directly and invalidate related cache entries",
+        "No tokens stored; the daemon listens on a Unix socket with strict permissions"
+      ],
+      "cons": [
+        "Adds a daemon and a cache to reason about before trusting a stale answer",
+        "Only explicitly allowlisted read-only commands are cached"
+      ]
+    }
+  },
+  {
+    "id": 2053,
+    "name": "Fresh",
+    "description": "Fresh is an agent skill that starts you clean after a merged PR. It syncs your default branch and removes branches and worktrees whose changes already landed, including squash merges, and shows you the cleanup plan first.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/Obedience-Corp/fresh",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Fresh is an agent skill that starts you clean after a merged PR. It syncs your default branch and removes branches and worktrees whose changes already landed, including squash merges, and shows you the cleanup plan first.",
+    "last_updated": "2026-10-14",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Cleaning up branches after a squash merge",
+      "Removing stale worktrees left by agents",
+      "Running cleanup from Claude Code, Codex or Cursor"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run it in your agent",
+        "detail": "Install the skill for Claude Code, Codex, Cursor, Grok or OpenCode, then ask the agent to use fresh once your PR merges."
+      },
+      {
+        "title": "See the plan first",
+        "detail": "Fresh previews the cleanup before running it, stops on uncommitted changes, and keeps branches with unmerged work."
+      },
+      {
+        "title": "Use it from the shell",
+        "detail": "The same cleanup runs as camp fresh in your terminal."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Handles squash merges, which naive branch cleanup misses",
+        "Preview before run, with uncommitted changes halting the run",
+        "Works across several coding agents plus a CLI"
+      ],
+      "cons": [
+        "Requires macOS or Linux, Bash and Python 3, with WSL2 on Windows",
+        "Installs Festival on first use to provide the camp command"
+      ]
+    }
+  },
+  {
+    "id": 2054,
+    "name": "Mixdog",
+    "description": "Mixdog is an open-source desktop coding agent where a lead model plans and cheaper models handle search, edits and review. It reports 63% fewer tokens than Codex CLI on the same model at the same success rate, with auto reasoning effort judged by a small model that runs locally on the CPU.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/tribgames/mixdog",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Mixdog is an open-source desktop coding agent where a lead model plans and cheaper models handle search, edits and review. It reports 63% fewer tokens than Codex CLI on the same model at the same success rate, with auto reasoning effort judged by a small model that runs locally on the CPU.",
+    "last_updated": "2026-10-14",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Cutting token spend on routine agent steps",
+      "Running a desktop coding agent on Windows, macOS or Linux",
+      "Keeping a lead model for planning only"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Split the work by cost",
+        "detail": "A lead model plans while cheaper models handle search, edits and review."
+      },
+      {
+        "title": "Let it pick the effort",
+        "detail": "Auto reasoning effort gives each message and tool step the effort it needs, judged in about 0.1 s by a 150 MB model that runs locally on the CPU."
+      },
+      {
+        "title": "Install a desktop build",
+        "detail": "Downloadable builds are published for Windows, macOS on Apple silicon and Intel, and Linux."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Apache-2.0 licensed with published terminal-bench benchmarks",
+        "A desktop app rather than a terminal-only agent",
+        "Auto reasoning effort is on by default"
+      ],
+      "cons": [
+        "The token saving is the project own benchmark claim against Codex CLI",
+        "Early desktop release, so expect rough edges"
+      ]
+    }
+  },
+  {
+    "id": 2055,
+    "name": "Graft",
+    "description": "Graft is source control for agent-scale monorepos, an open-source implementation of the design in Anthropic Redesigning source control post. History, blame, diffs and merges happen server-side, commits are changesets, landing is lock-free, and working copies are optional and sparse.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/VishiATChoudhary/graft",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Graft is source control for agent-scale monorepos, an open-source implementation of the design in Anthropic Redesigning source control post. History, blame, diffs and merges happen server-side, commits are changesets, landing is lock-free, and working copies are optional and sparse.",
+    "last_updated": "2026-10-14",
+    "skill_level": "advanced",
+    "best_for": [
+      "Serving many agent or CI clients from one repo",
+      "Landing changes without a merge queue",
+      "Mounting a sparse writable checkout"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Do the work server-side",
+        "detail": "History, blame, diffs, merge bases, search, commits, rebases and merges all happen server-side, each as an HTTP API, so many jobs never need a local repository."
+      },
+      {
+        "title": "Land without contention",
+        "detail": "gft land rebases server-side and moves the ref with a compare-and-swap on one row: no global lock, no merge queue."
+      },
+      {
+        "title": "Mount what you need",
+        "detail": "gft mount gives a writable virtual checkout that fetches files on first read, commits only what you changed, and switches revisions instantly."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Want-only tiered fetch with no packfiles and no negotiation",
+        "Repository and directory-level access control plus review gates",
+        "Prebuilt binaries for Linux, macOS and Windows, or go install"
+      ],
+      "cons": [
+        "An independent implementation, not Anthropic own tool",
+        "Requires running and operating a server rather than just a local clone"
+      ]
+    }
+  },
+  {
+    "id": 2056,
+    "name": "Kryzz AI",
+    "description": "Kryzz AI is a private, local-first Android AI workspace with chat, voice and autonomous agents running on your own API keys. It ships as a Kotlin and Jetpack Compose app with no account, no subscription and no telemetry, so conversations stay on the phone.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/kriddss3/kryzz-ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Kryzz AI is a private, local-first Android AI workspace with chat, voice and autonomous agents running on your own API keys. It ships as a Kotlin and Jetpack Compose app with no account, no subscription and no telemetry, so conversations stay on the phone.",
+    "last_updated": "2026-10-14",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Running agents on Android with your own keys",
+      "Voice sessions without an account",
+      "Keeping conversations on the device"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Bring your own key",
+        "detail": "Paste an OpenRouter key, test it in the onboarding screen and start talking; no bundled keys."
+      },
+      {
+        "title": "Pick a workflow",
+        "detail": "The workflow picker offers Auto, Deep search, Wide search, Document, Spreadsheet, Database and Code."
+      },
+      {
+        "title": "Talk instead of type",
+        "detail": "A voice session overlay shows the listening state while the agent works."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed, with no telemetry and no analytics",
+        "About a 19 MB APK, Android 9 and later",
+        "Chat, autonomous agents and voice in one app"
+      ],
+      "cons": [
+        "Android only; there is no desktop or iOS build",
+        "You supply and pay for the model API keys yourself"
+      ]
+    }
+  },
+  {
+    "id": 2057,
+    "name": "pg_vectorsearch",
+    "description": "pg_vectorsearch is a PostgreSQL extension for high-performance approximate nearest neighbor search. It adds a PRISM index built for 100M+ vectors with hierarchical routing, RaBitQ quantization with theoretical error bounds, and SIMD-optimized distance computation, and it can index existing pgvector columns as-is.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/timescale/pg_vectorsearch",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "pg_vectorsearch is a PostgreSQL extension for high-performance approximate nearest neighbor search. It adds a PRISM index built for 100M+ vectors with hierarchical routing, RaBitQ quantization with theoretical error bounds, and SIMD-optimized distance computation, and it can index existing pgvector columns as-is.",
+    "last_updated": "2026-10-13",
+    "skill_level": "advanced",
+    "best_for": [
+      "Scaling vector search inside Postgres",
+      "Indexing an existing pgvector table",
+      "Keeping inserts, updates and deletes working"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Index at scale",
+        "detail": "The PRISM index is IVF-style with hierarchical routing and is built for 100M+ vectors."
+      },
+      {
+        "title": "Reuse pgvector tables",
+        "detail": "Index existing vector and halfvec columns as-is instead of migrating data."
+      },
+      {
+        "title": "Keep the index fresh",
+        "detail": "Inserts, updates and deletes are supported, with posting-list splits through prism_rebalance."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "pgvector compatible, so existing tables can be indexed without a rewrite",
+        "RaBitQ quantization with theoretical error bounds for two-stage search",
+        "SIMD-optimized distance computation across AVX2, AVX512 and NEON"
+      ],
+      "cons": [
+        "Status alpha: meant for testing, not production, and prerelease upgrades may require dropping and recreating the extension",
+        "You run and maintain the extension and its indexes yourself"
+      ]
+    }
+  },
+  {
+    "id": 2058,
+    "name": "Bomfather",
+    "description": "Bomfather is an open source runtime security agent you deploy on your Linux servers to protect the resources your workloads depend on, such as GPUs, databases and filesystems. It enforces policies with eBPF from inside the kernel.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/bomfather/agent",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Bomfather is an open source runtime security agent you deploy on your Linux servers to protect the resources your workloads depend on, such as GPUs, databases and filesystems. It enforces policies with eBPF from inside the kernel.",
+    "last_updated": "2026-10-13",
+    "skill_level": "advanced",
+    "best_for": [
+      "Protecting GPU, database and filesystem access at runtime",
+      "Writing one small policy file for a fleet",
+      "Enforcing policy below userspace"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Protect runtime resources",
+        "detail": "Deploy the agent on Linux servers to protect GPUs, databases, filesystems and more from the processes that touch them."
+      },
+      {
+        "title": "Enforce at the kernel",
+        "detail": "Policies are enforced with eBPF, which the project reports adds 1% to 3% overhead against much higher overhead for confidential computing."
+      },
+      {
+        "title": "Keep policy small",
+        "detail": "One small policy file can cover a whole infrastructure, with inheritance between policies."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs in the kernel via eBPF rather than tamperable userspace",
+        "A background process that needs no changes to your infrastructure or programs",
+        "Open sourced agent alongside published runtime and GPU protection products"
+      ],
+      "cons": [
+        "Linux servers only",
+        "The surrounding products are commercial; only the agent is open source"
+      ]
+    }
+  },
+  {
+    "id": 2059,
+    "name": "Enki LLM",
+    "description": "Enki LLM is a pure Rust Transformer inference engine of about 2,000 lines that runs Llama-3.2 1B at roughly 40 tokens per second on an Nvidia Tesla T4, with live brain migration between GPU VRAM and CPU RAM mid generation and no CUDA dependencies.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/enkiruntime/enki_llm",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Enki LLM is a pure Rust Transformer inference engine of about 2,000 lines that runs Llama-3.2 1B at roughly 40 tokens per second on an Nvidia Tesla T4, with live brain migration between GPU VRAM and CPU RAM mid generation and no CUDA dependencies.",
+    "last_updated": "2026-10-13",
+    "skill_level": "advanced",
+    "best_for": [
+      "Running a small model in pure Rust",
+      "Migrating a running generation between GPU and CPU",
+      "Studying a small, readable inference engine"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Infer without CUDA",
+        "detail": "Unquantized F16 weights with FP32 accumulators run in pure Rust, with no CUDA or C++ wrapper."
+      },
+      {
+        "title": "Migrate mid-sentence",
+        "detail": "Live brain migration hot-swaps active execution and mirrors the KV-cache between GPU VRAM and CPU RAM without losing context."
+      },
+      {
+        "title": "Run one binary everywhere",
+        "detail": "The same binary runs on discrete Nvidia GPUs, integrated Intel graphics and multi-core CPUs without changing a line of code."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Around 2,000 lines with the safetensors parser, tokenizer, RoPE, RMSNorm and sampling built from scratch",
+        "One-click Google Colab demo on a free T4 GPU",
+        "Host fallback executes the same kernels across CPU cores with Rayon"
+      ],
+      "cons": [
+        "Demonstrated on Llama-3.2 1B, so it is a small-model engine rather than a serving stack",
+        "Depends on the separate Enki runtime and Vulkan 1.3"
+      ]
+    }
+  },
+  {
+    "id": 2060,
+    "name": "Shadowclone",
+    "description": "Shadowclone keeps your engineering preferences the same in every coding agent. It maintains one set of skills and instructions for Claude Code, Codex, Cursor, Pi, Antigravity and OpenCode, and can learn new preferences from the sessions you allow.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/theonly1me/shadowclone",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Shadowclone keeps your engineering preferences the same in every coding agent. It maintains one set of skills and instructions for Claude Code, Codex, Cursor, Pi, Antigravity and OpenCode, and can learn new preferences from the sessions you allow.",
+    "last_updated": "2026-10-13",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Sharing one set of rules across agents",
+      "Letting an agent work while you are away",
+      "Turning corrections into reusable skills"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Equip every agent",
+        "detail": "One set of skills and instructions is delivered to Claude Code, Codex, Cursor, Pi and Antigravity, and as a GitHub cloud bot."
+      },
+      {
+        "title": "Work while you are away",
+        "detail": "Ask your agent to start a clone: it works with your skills, on your own subscription, in Docker on your own machine, and opens a draft pull request as you."
+      },
+      {
+        "title": "Learn from sessions",
+        "detail": "Shadowclone can learn from your past sessions and keep skills in sync, if you agreed to it during setup."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Not a separate agent: it equips the agent you already use",
+        "Installs by pasting one line into your agent, or with npm install -g @shadowclone/cli",
+        "Consent questions control whether it learns from your history"
+      ],
+      "cons": [
+        "Gives an agent your credentials and subscription to work unsupervised",
+        "Early project with an eval and results section rather than mature documentation"
+      ]
+    }
+  },
+  {
+    "id": 2061,
+    "name": "Commit-Aware Router",
+    "description": "Commit-Aware Router is an open-source proof of concept that makes AI traffic decisions reflect the commercial commitments an organisation has already made, such as prepaid capacity or minimum-spend agreements, without sending contract amounts to the routing layer.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/tejaspruthi/CommitAwareRouter",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Commit-Aware Router is an open-source proof of concept that makes AI traffic decisions reflect the commercial commitments an organisation has already made, such as prepaid capacity or minimum-spend agreements, without sending contract amounts to the routing layer.",
+    "last_updated": "2026-10-13",
+    "skill_level": "advanced",
+    "best_for": [
+      "Routing LLM traffic with finance in the loop",
+      "Keeping contract values inside your own environment",
+      "Auditing why a route was chosen"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Add a commercial signal",
+        "detail": "Guidance from Finance becomes a routing signal with limits on its influence, which can change how the router ranks eligible routes."
+      },
+      {
+        "title": "Keep contracts private",
+        "detail": "Detailed commercial inputs stay inside the customer environment; the router receives a short-lived, authenticated policy signal instead of raw contract values."
+      },
+      {
+        "title": "Enforce constraints first",
+        "detail": "The router always enforces quality, capability, latency, reliability, residency and policy constraints before considering commercial preferences."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Written for finance, FinOps, procurement and platform teams together",
+        "Produces an audit trail of routing decisions",
+        "Privacy is treated as a core requirement in the architecture"
+      ],
+      "cons": [
+        "An early open-source proof of concept, not a production router",
+        "You have to supply the finance data and policy signal yourself"
+      ]
+    }
+  },
+  {
+    "id": 2062,
+    "name": "Personal Agent Proxy",
+    "description": "Personal Agent Proxy is an open-source, self-hostable access layer for the accounts your AI agents work with. You connect your services once, give each agent granular permissions, and audit its activity, without copying the contents of your connected services into its database.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/personalagentproxy/proxy",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Personal Agent Proxy is an open-source, self-hostable access layer for the accounts your AI agents work with. You connect your services once, give each agent granular permissions, and audit its activity, without copying the contents of your connected services into its database.",
+    "last_updated": "2026-10-12",
+    "skill_level": "advanced",
+    "best_for": [
+      "Stopping re-connecting every service to every agent",
+      "Giving each agent scoped, revocable access",
+      "Auditing what an agent did with your accounts"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Connect once",
+        "detail": "Connect email, calendar and notes once, then give each agent its own login instead of trusting one more company with all of them."
+      },
+      {
+        "title": "Take connections with you",
+        "detail": "When you move to another agent your connections come with you, like an adapter."
+      },
+      {
+        "title": "Audit every request",
+        "detail": "Every request an agent makes is checked against what you allowed and written to a log, allowed or denied."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Nothing is copied from your connected services into its database",
+        "Designed to self-host with Postgres on your own server",
+        "Granular per-agent permissions rather than one shared token"
+      ],
+      "cons": [
+        "You run and secure the proxy and its Postgres database yourself",
+        "Only worth it once you have several agents that need the same accounts"
+      ]
+    }
+  },
+  {
+    "id": 2063,
+    "name": "Organ",
+    "description": "Organ runs AI agents as departments for small agencies on a schedule, preparing plans, pull requests and drafts. Merges, outbound email and publishing wait for your approval.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://organ.app/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Organ runs AI agents as departments for small agencies on a schedule, preparing plans, pull requests and drafts. Merges, outbound email and publishing wait for your approval.",
+    "last_updated": "2026-10-12",
+    "skill_level": "beginner",
+    "best_for": [
+      "Running routine agency work on a schedule",
+      "Getting drafts and pull requests queued for review",
+      "Keeping publish and merge behind your approval"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Ship code from tickets",
+        "detail": "The daily pipeline clones the repository, analyses the codebase, implements changes, runs validation, reviews and opens a pull request."
+      },
+      {
+        "title": "Queue content",
+        "detail": "The content queue produces drafts with word counts, and approved posts go live; nothing publishes without your approval unless auto-publish is on."
+      },
+      {
+        "title": "Escalate decisions",
+        "detail": "Daily operations runs report what needs you, including AI spend measured against a cap."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Approval gates on merges, sending and publishing",
+        "Departments run on a schedule rather than one chat at a time",
+        "Public signup is open with a free start"
+      ],
+      "cons": [
+        "The marketing pages flag the workflows as illustrative",
+        "Pricing is not stated on the pages we read"
+      ]
+    }
+  },
+  {
+    "id": 2064,
+    "name": "Baa",
+    "description": "Baa is a menu bar app that tells you when your Mac is about to run out of RAM or disk, finds what is quietly eating it, and frees it in one click. It was written for the dev servers, builds and agent leftovers that hold memory after you close the window.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/selviarora/baa",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Baa is a menu bar app that tells you when your Mac is about to run out of RAM or disk, finds what is quietly eating it, and frees it in one click. It was written for the dev servers, builds and agent leftovers that hold memory after you close the window.",
+    "last_updated": "2026-10-12",
+    "skill_level": "beginner",
+    "best_for": [
+      "Finding agent leftovers that hold RAM",
+      "Freeing memory from the menu bar",
+      "Watching disk space as well as RAM"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Watch the menu bar",
+        "detail": "Baa warns you when your Mac is about to run out of RAM or disk."
+      },
+      {
+        "title": "Find the culprits",
+        "detail": "It finds the processes quietly eating memory, typically dev servers, builds and agent leftovers rather than open apps."
+      },
+      {
+        "title": "Free it in one click",
+        "detail": "Shear the leftovers from the menu bar panel and watch free RAM climb."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Menu bar app with a one-click action, no terminal",
+        "Covers disk as well as RAM",
+        "Small, single-purpose and open source"
+      ],
+      "cons": [
+        "macOS only",
+        "It frees memory; it does not fix whatever allocated it"
+      ]
+    }
+  },
+  {
+    "id": 2065,
+    "name": "Mastershot",
+    "description": "Mastershot Studio is a free online video editor with no watermark on anything you export. You trim, combine and add music, text and subtitles in one project, and files open straight from your computer so nothing has to be uploaded first.",
+    "category": "Video",
+    "pricing": "Free",
+    "url": "https://mastershot.app/video-editor/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Mastershot Studio is a free online video editor with no watermark on anything you export. You trim, combine and add music, text and subtitles in one project, and files open straight from your computer so nothing has to be uploaded first.",
+    "last_updated": "2026-10-12",
+    "skill_level": "beginner",
+    "best_for": [
+      "Editing a video without paying or watermarking",
+      "Working on large local files in the browser",
+      "Adding subtitles and music in one project"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Edit on a timeline",
+        "detail": "Drag clips into order, trim their ends and split them at the playhead, with text, pictures and music on the rows above and below."
+      },
+      {
+        "title": "Export once",
+        "detail": "Pick a size and export an MP4 with no watermark, in up to 4K, made on your computer."
+      },
+      {
+        "title": "Skip the upload",
+        "detail": "Files open straight from your computer, so even a 2 GB video is ready right away."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No watermark on exports",
+        "Runs in Chrome, Edge or Safari on a computer with local file access",
+        "Free to start with no card needed"
+      ],
+      "cons": [
+        "A browser editor, so heavy projects depend on your machine",
+        "The AI tools panel sits beyond the described free editor"
+      ]
+    }
+  },
+  {
+    "id": 2066,
+    "name": "Vigil",
+    "description": "Vigil is an AI harness for code audits, web pentests and bug bounty hunting. It coordinates Claude Code or Codex through broad review, focused rereads, authenticated testing and runtime reproduction, and carries findings, evidence and coverage across sessions.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/VigilOSS/Vigil",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Vigil is an AI harness for code audits, web pentests and bug bounty hunting. It coordinates Claude Code or Codex through broad review, focused rereads, authenticated testing and runtime reproduction, and carries findings, evidence and coverage across sessions.",
+    "last_updated": "2026-10-12",
+    "skill_level": "advanced",
+    "best_for": [
+      "Running long code audits with an agent",
+      "Reproducing a candidate bug before reporting it",
+      "Keeping findings and evidence across sessions"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Start broad, then focus",
+        "detail": "The first pass is a starting point; higher-risk code gets another look with a different objective, and specialists follow callers, challenge guards and hunt variants."
+      },
+      {
+        "title": "Prove it at runtime",
+        "detail": "Promising leads stay on the books when runtime proof or access is still missing, so an unsupported impact claim does not ship."
+      },
+      {
+        "title": "Hand off between sessions",
+        "detail": "Findings, evidence, coverage and handoffs carry across sessions rather than restarting each run."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Built by an application security engineer and refined over eight months of hands-on use",
+        "Apache-2.0, Python 3.11+, and works from a codebase, a live application or both",
+        "You stay the operator: you review what the agents test and why"
+      ],
+      "cons": [
+        "Authorized use only: it drives offensive tooling against live systems",
+        "Investigation quality still depends on the model and on your review"
+      ]
+    }
+  },
+  {
+    "id": 2067,
+    "name": "Faplex",
+    "description": "Faplex is a status list for the Claude Code, Codex and OpenCode sessions you already have, on every machine you can ssh to. It reads what the harnesses report and opens the harness own CLI on the row you pick.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/kkrausse/faplex",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Faplex is a status list for the Claude Code, Codex and OpenCode sessions you already have, on every machine you can ssh to. It reads what the harnesses report and opens the harness own CLI on the row you pick.",
+    "last_updated": "2026-10-10",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Seeing every agent session across machines",
+      "Attaching a session started somewhere else",
+      "Avoiding a wrapper around your harness"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One grouped list",
+        "detail": "Working, Needs input and Finished across every machine and harness, with context tokens and subagent counts."
+      },
+      {
+        "title": "Open the real CLI",
+        "detail": "A row is claude attach, codex resume or opencode -s handed your terminal, so every harness feature works as it does without faplex."
+      },
+      {
+        "title": "Add hosts with no config",
+        "detail": "Run faplex devbox pi to cover this machine plus two ssh hosts."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No hooks, plugins or wrapper, and nothing to install on remote machines",
+        "Sessions started anywhere show up, not only ones started from faplex",
+        "No live CLI per idle session; a client starts when you open a row"
+      ],
+      "cons": [
+        "Early alpha with rough edges",
+        "Requires Bun, and only covers Claude Code, Codex and OpenCode"
+      ]
+    }
+  },
+  {
+    "id": 2068,
+    "name": "Tutor",
+    "description": "Tutor is a self-hosted AI tutor that turns your books, online documentation and YouTube videos into a course. It maps the concepts, tests what you know, and teaches the rest with references to the sources.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://github.com/demetrius-edelin/tutor",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Tutor is a self-hosted AI tutor that turns your books, online documentation and YouTube videos into a course. It maps the concepts, tests what you know, and teaches the rest with references to the sources.",
+    "last_updated": "2026-10-10",
+    "skill_level": "beginner",
+    "best_for": [
+      "Turning a book into a course",
+      "Studying online documentation with references",
+      "Learning from YouTube playlists with transcripts"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Add any material",
+        "detail": "Add EPUB and tagged PDF files, online books and documentation by address, or YouTube videos and playlists where a video model writes the transcript including code on screen."
+      },
+      {
+        "title": "See the concept map",
+        "detail": "Every source becomes a book with chapters on one concept map, with colour showing the status of each concept."
+      },
+      {
+        "title": "Learn and test",
+        "detail": "The tutor checks which concepts you know, teaches the others one at a time with references to the books, and tests each one."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs on your computer with your own key from Anthropic, OpenAI, OpenRouter or Google",
+        "Covers all the concepts in the material, not just the ones you ask about",
+        "Lessons carry numbered references back to the source"
+      ],
+      "cons": [
+        "You pay for the model API calls and supply the keys",
+        "Self-hosted, so setup and model choice are on you"
+      ]
+    }
+  },
+  {
+    "id": 2069,
+    "name": "Rutter",
+    "description": "Rutter is a personal memory layer for AI agents. It keeps a record of what you decided, which notes the session cited and how your thinking changed, stored as plain Markdown in a folder you own, and any MCP client can recall it.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://ruttermemory.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Rutter is a personal memory layer for AI agents. It keeps a record of what you decided, which notes the session cited and how your thinking changed, stored as plain Markdown in a folder you own, and any MCP client can recall it.",
+    "last_updated": "2026-10-10",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Sharing one memory across several agents",
+      "Keeping decisions in Markdown you own",
+      "Recalling a stance you formed weeks ago"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Capture after each turn",
+        "detail": "Six harnesses have a working capture hook: Claude Code, Codex, Grok, GitHub Copilot CLI, Antigravity CLI and Muse Code."
+      },
+      {
+        "title": "Recall from any client",
+        "detail": "Once registered in each client and pointed at the same notes folder, each can recall the same records, including any MCP client."
+      },
+      {
+        "title": "Track positions",
+        "detail": "A stance you formed or changed is recorded as a position, so you can see how your thinking moved."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Records are plain Markdown in your own notes folder, not inside a model or a vendor account",
+        "Memory travels when you switch tools",
+        "Setup takes a few minutes with Claude Code"
+      ],
+      "cons": [
+        "Capture needs the hook to run and the model to leave a line",
+        "Only the six listed harnesses have a capture hook today"
+      ]
+    }
+  },
+  {
+    "id": 2070,
+    "name": "Kenerate",
+    "description": "Kenerate is an AI creative studio that makes images, videos and music in one workspace. You start from text or reference media, choose a model and try it with free signup credits.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://kenerateai.app/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Kenerate is an AI creative studio that makes images, videos and music in one workspace. You start from text or reference media, choose a model and try it with free signup credits.",
+    "last_updated": "2026-10-10",
+    "skill_level": "beginner",
+    "best_for": [
+      "Generating image, video and audio in one place",
+      "Trying named video and image models",
+      "Making product and ad clips from a prompt"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Generate video",
+        "detail": "Start from a first frame or a reference image, then pick a model with length and resolution shown before you generate."
+      },
+      {
+        "title": "Generate images",
+        "detail": "Make the image you have in mind from text or reference media."
+      },
+      {
+        "title": "Generate audio",
+        "detail": "Give an idea a soundtrack, or create through an agent in a conversation."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Image, video and music in one workspace rather than three subscriptions",
+        "Free signup credits so you can try models before paying",
+        "The credit cost is shown per generation before you run it"
+      ],
+      "cons": [
+        "Credit-based pricing, so heavy video generation gets expensive",
+        "A model aggregator, so output depends on the third-party model you pick"
+      ]
+    }
+  },
+  {
+    "id": 2071,
+    "name": "Moching",
+    "description": "Moching is a desktop AI operator that controls a whole PC: 219 tools covering screen perception, HID control, browser automation, an Office suite and AI media. One sentence in, finished work out, running locally with data that stays on the device.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://github.com/moching-ai-dev/moching",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Moching is a desktop AI operator that controls a whole PC: 219 tools covering screen perception, HID control, browser automation, an Office suite and AI media. One sentence in, finished work out, running locally with data that stays on the device.",
+    "last_updated": "2026-10-09",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Automating desktop and Office work by voice or text",
+      "Driving a browser and the mouse and keyboard",
+      "Running tasks on many machines at once"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Control the desktop",
+        "detail": "Screen perception plus keyboard and mouse control take over the machine from one instruction."
+      },
+      {
+        "title": "Work across Office",
+        "detail": "Word, Excel, PowerPoint and PDF are driven with natural language instructions."
+      },
+      {
+        "title": "Write and build software",
+        "detail": "It writes code through to compilation and build, with LSP-level understanding of the project."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "219 built-in tools covering screen, HID, browser, Office and media",
+        "Local SQLite storage with data that stays on the device and your own API keys",
+        "Supports any model API as well as locally deployed models"
+      ],
+      "cons": [
+        "A desktop app for Windows and macOS with a closed-source client",
+        "Credits are consumed per token, per second of video and per image on top of your own model costs"
+      ]
+    }
+  },
+  {
+    "id": 2072,
+    "name": "Spectra",
+    "description": "Spectra is a drop-in optimizer replacement for AdamW that shifts gradient optimization to the frequency domain and factorizes second-moment variance, cutting optimizer state memory by 50% while keeping full 32-bit floating-point stability.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/SpectraSI/SpectraAdamw",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Spectra is a drop-in optimizer replacement for AdamW that shifts gradient optimization to the frequency domain and factorizes second-moment variance, cutting optimizer state memory by 50% while keeping full 32-bit floating-point stability.",
+    "last_updated": "2026-10-09",
+    "skill_level": "advanced",
+    "best_for": [
+      "Training an LLM when optimizer state does not fit",
+      "Replacing AdamW in one line",
+      "Keeping full float stability without quantization"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Swap it in",
+        "detail": "Replace torch.optim.AdamW with Spectra in one line and leave the training loop unchanged."
+      },
+      {
+        "title": "Halve optimizer state",
+        "detail": "The project benchmarks optimizer state at 4130 MB against 8256 MB for standard AdamW on a 12-layer transformer block."
+      },
+      {
+        "title": "Watch the run",
+        "detail": "Training logs for the benchmark runs are published on Weights and Biases."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One-line drop-in for PyTorch AdamW",
+        "No quantization collapse: full 32-bit floating-point stability is retained",
+        "Apache 2.0 licensed"
+      ],
+      "cons": [
+        "The benchmarks are the project own, on a single 12-layer block",
+        "Requires PyTorch 2.0+ and Python 3.10+"
+      ]
+    }
+  },
+  {
+    "id": 2073,
+    "name": "Widefleet",
+    "description": "Widefleet is an open-source platform for agent-built apps and workflows. Your coding agent creates and manages apps through the Widefleet CLI, with company login, a database and file storage per app, and controlled access to your systems.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/widefleet/widefleet",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Widefleet is an open-source platform for agent-built apps and workflows. Your coding agent creates and manages apps through the Widefleet CLI, with company login, a database and file storage per app, and controlled access to your systems.",
+    "last_updated": "2026-10-09",
+    "skill_level": "advanced",
+    "best_for": [
+      "Letting agents deploy internal apps",
+      "Giving each app its own database and files",
+      "Keeping company login in front of agent-built apps"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Keep working in your tools",
+        "detail": "Your coding agent creates and manages apps through the Widefleet CLI, so you stay in the tools you already use."
+      },
+      {
+        "title": "Give each app storage",
+        "detail": "Each app gets its own database and private file storage, preserved across code deployments."
+      },
+      {
+        "title": "Deploy and roll back",
+        "detail": "Deploy changes, test them in isolated previews, inspect logs and errors, and roll back to an earlier code version."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Fully open source and self-hostable on your own infrastructure",
+        "Connects to your company identity provider and existing systems",
+        "Background jobs and schedules keep routine work moving beyond the browser"
+      ],
+      "cons": [
+        "You operate the platform yourself; a hosted cloud option is still coming",
+        "Early project with a narrow set of documented integrations"
+      ]
+    }
+  },
+  {
+    "id": 2074,
+    "name": "Pullboard",
+    "description": "Pullboard is a work board that lives in your git repo, where governed agents build from specs you approve and follow the rules you set. Nothing merges until another agent proves it, and every claim, submit, reject and accept is recorded in order.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/pullboard-dev/pullboard",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pullboard is a work board that lives in your git repo, where governed agents build from specs you approve and follow the rules you set. Nothing merges until another agent proves it, and every claim, submit, reject and accept is recorded in order.",
+    "last_updated": "2026-10-09",
+    "skill_level": "advanced",
+    "best_for": [
+      "Running several agents on one repo",
+      "Approving specs before agents build",
+      "Enforcing house rules automatically"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Pick up the next task",
+        "detail": "Items each carry a bar they are checked against, and one agent works an item at a time."
+      },
+      {
+        "title": "Approve the spec",
+        "detail": "Spec holds the plan one row per requirement, and only the rows you approve count."
+      },
+      {
+        "title": "Enforce doctrine",
+        "detail": "Doctrine holds your house rules, each with what enforces it, from a git hook to review."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "A second agent verdict gates the merge",
+        "Blueprints capture software patterns your agents cannot forget",
+        "Relay lets agents on any machine share one board, runnable from your phone"
+      ],
+      "cons": [
+        "Requires agents running in a shell on your repos",
+        "Heavy process: specs, doctrine and a gate before anything lands"
+      ]
+    }
+  },
+  {
+    "id": 2075,
+    "name": "Narwhal",
+    "description": "Narwhal is adaptive hot-swap disaggregation for LLM inference on a role-free fleet, so GPUs move between prefill and decode instead of being pinned to one role. It ships with documentation for deploying, measuring and operating the fleet.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/athrael-soju/Narwhal",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Narwhal is adaptive hot-swap disaggregation for LLM inference on a role-free fleet, so GPUs move between prefill and decode instead of being pinned to one role. It ships with documentation for deploying, measuring and operating the fleet.",
+    "last_updated": "2026-10-09",
+    "skill_level": "advanced",
+    "best_for": [
+      "Disaggregating prefill and decode on your own GPUs",
+      "Qualifying a fleet before serving",
+      "Benchmarking a router against measured targets"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Deploy a fleet",
+        "detail": "Docs cover discovering the deployment, installing an approved revision, validating and starting engines, qualifying the transfer fabric and attesting live engines."
+      },
+      {
+        "title": "Measure before you trust it",
+        "detail": "Measuring covers the measurement contract and profiling, targets and a deployment freeze, a synthetic load trial and reconciling accepted benchmark points."
+      },
+      {
+        "title": "Operate it",
+        "detail": "Control covers engine restart and process replacement, upgrade and rollback with release drills, and dashboards read through Grafana."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Role-free fleet: GPUs are not pinned to prefill or decode",
+        "Full documentation for deployment, measurement and operations",
+        "Installable from PyPI with a documented recovery and qualification path"
+      ],
+      "cons": [
+        "Documentation-heavy: you profile and qualify the transfer fabric before serving",
+        "Targets GPU fleets, so it is not a single-machine setup"
+      ]
+    }
+  },
+  {
+    "id": 2076,
+    "name": "Senro",
+    "description": "Senro is a WebMCP evaluation and observability platform. It tests your WebMCP tools and monitors how AI agents use them in production, without requiring you to build the reliability infrastructure yourself.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://senro.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Senro is a WebMCP evaluation and observability platform. It tests your WebMCP tools and monitors how AI agents use them in production, without requiring you to build the reliability infrastructure yourself.",
+    "last_updated": "2026-10-09",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Testing WebMCP tools before production",
+      "Watching how agents use your site",
+      "Tracking tool errors in production"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Evaluate before production",
+        "detail": "Smoke testing, goal evaluation, trajectory evaluation, page checks, simulated users and multi-model comparison."
+      },
+      {
+        "title": "Observe in production",
+        "detail": "Tool activity, inputs, results and errors, session timelines, production context, issue tracking and usage and error metrics."
+      },
+      {
+        "title": "Make the site agent-native",
+        "detail": "Use the findings to make your website reliable for AI agents."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Covers both pre-production evaluation and production observability",
+        "Try free with no credit card required",
+        "Focused specifically on WebMCP rather than generic analytics"
+      ],
+      "cons": [
+        "A new product surface that only pays off if you expose WebMCP tools",
+        "Pricing tiers are not stated on the pages we read"
+      ]
+    }
+  },
+  {
+    "id": 2077,
+    "name": "Wy",
+    "description": "Wy turns an uncommitted diff into the questions you would need to answer to accept it, and shows which of them the agent own record actually answers. It imports existing local Codex, Claude Code, pi and OpenCode history, so no recorder has to be running first.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/grandimam/wy",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Wy turns an uncommitted diff into the questions you would need to answer to accept it, and shows which of them the agent own record actually answers. It imports existing local Codex, Claude Code, pi and OpenCode history, so no recorder has to be running first.",
+    "last_updated": "2026-10-09",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Reviewing AI changes in a domain you do not know",
+      "Seeing where the agent gave no reason",
+      "Feeding your verdicts back to the agent"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Read the plan screen",
+        "detail": "Four boxes: What changed, What to worry about, Was it tested and Progress, and every row opens its evidence."
+      },
+      {
+        "title": "Follow the audit trail",
+        "detail": "The Steps screen shows the session as intent-sized steps, each with Why, Check, Gap and the worries it raises."
+      },
+      {
+        "title": "Export your verdicts",
+        "detail": "Verdicts persist and export as a review in your voice, push-backs first, so they paste back to the agent as the next instruction."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Missing evidence stays missing; a nearby message is never treated as a proven reason",
+        "Nothing calls a model until you open the ? row on the plan",
+        "Attribution is a textual match between a hunk and a captured edit, or nothing"
+      ],
+      "cons": [
+        "Depends on captured session history from the four supported harnesses",
+        "A terminal tool, so there is no GUI"
+      ]
+    }
+  },
+  {
+    "id": 2078,
+    "name": "Seahaven",
+    "description": "Seahaven is an open-source Python framework for building synthetic worlds: working copies of your agent tools, realistic enough that the agent cannot tell the difference. It is used for RL and evaluation environments.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/Kiln-AI/Seahaven",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Seahaven is an open-source Python framework for building synthetic worlds: working copies of your agent tools, realistic enough that the agent cannot tell the difference. It is used for RL and evaluation environments.",
+    "last_updated": "2026-10-08",
+    "skill_level": "advanced",
+    "best_for": [
+      "Building RL environments for agents",
+      "Running evals against realistic tool copies",
+      "Grading on state instead of transcripts"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One world per run",
+        "detail": "Each instance is its own SQLite database, copied from a fixture in milliseconds and thrown away at the end."
+      },
+      {
+        "title": "Freeze starting states",
+        "detail": "Fixtures freeze states such as small_startup or big_co once and reuse them, so the same fixture, clock and seed give the same run."
+      },
+      {
+        "title": "Run hundreds in one process",
+        "detail": "seahaven serve hosts hundreds of world instances per process at thousands of requests per second."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Grades on state: every row the agent changed is logged before and after in one JSON document",
+        "Worlds are throwaway, so runs do not contaminate each other",
+        "Open source, from Kiln AI"
+      ],
+      "cons": [
+        "A Python framework, so you build and maintain the worlds yourself",
+        "Aimed at evals and RL rather than production agent traffic"
+      ]
+    }
+  },
+  {
+    "id": 2079,
+    "name": "LLMSchema",
+    "description": "LLMSchema extracts database schemas from PostgreSQL, MySQL and SQLite into simple, concise Markdown documentation for LLMs and AI agents, so they get an accurate data model without reconstructing it from application code and migration histories.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/tordrt/LLMSchema",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "LLMSchema extracts database schemas from PostgreSQL, MySQL and SQLite into simple, concise Markdown documentation for LLMs and AI agents, so they get an accurate data model without reconstructing it from application code and migration histories.",
+    "last_updated": "2026-10-08",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Giving an agent an accurate schema",
+      "Keeping schema docs in Markdown",
+      "Feeding schema context without blowing the window"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Generate one document",
+        "detail": "Run llmschema -o schema.md to write tables, columns, types, indexes, constraints and relationships into a single portable Markdown file."
+      },
+      {
+        "title": "Split per table",
+        "detail": "Optional per-table files are available when one document is too large."
+      },
+      {
+        "title": "Install it with an agent",
+        "detail": "You can give your AI coding agent the repository URL and ask it to install LLMSchema and set it up for your project."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works with PostgreSQL, MySQL and SQLite from one CLI",
+        "Usable as a Go library as well as a CLI",
+        "Concise output designed not to overwhelm a context window"
+      ],
+      "cons": [
+        "Intended for development databases, not production-critical documentation",
+        "Static output: it does not track schema changes on its own"
+      ]
+    }
+  },
+  {
+    "id": 2080,
+    "name": "DiffGuardian",
+    "description": "DiffGuardian gives you a spoken walkthrough of a pull request or codebase, highlighting the code and building live visuals as it answers. It reads Spec Kit, OpenSpec, Kiro and plain PLAN.md files and turns them into a summary, an architecture diagram, a data model and API tables.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://diffguardian.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "DiffGuardian gives you a spoken walkthrough of a pull request or codebase, highlighting the code and building live visuals as it answers. It reads Spec Kit, OpenSpec, Kiro and plain PLAN.md files and turns them into a summary, an architecture diagram, a data model and API tables.",
+    "last_updated": "2026-10-08",
+    "skill_level": "beginner",
+    "best_for": [
+      "Understanding agent-written plans without reading them",
+      "Getting a spoken pull request walkthrough",
+      "Reviewing a codebase you did not write"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Understand the plan",
+        "detail": "Plans from Spec Kit, OpenSpec, Kiro or PLAN.md become a summary, an architecture diagram, a data model and API tables."
+      },
+      {
+        "title": "Ask by voice",
+        "detail": "Hold Space, ask, and hear the answer while the code is highlighted and live visuals build."
+      },
+      {
+        "title": "Trace the codebase",
+        "detail": "Ask questions about the codebase and get answers with the relevant code highlighted."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Native apps for Apple silicon, Intel Mac, Windows and Linux",
+        "Your code never touches their servers: your own keys or fully local models",
+        "Voice runs on OpenAI, ElevenLabs or your system voice"
+      ],
+      "cons": [
+        "Pricing is not stated on the pages we read",
+        "Centred on voice, which will not suit every review setting"
+      ]
+    }
+  },
+  {
+    "id": 2081,
+    "name": "CloudGrip",
+    "description": "CloudGrip is a lightweight, self-hosted AI proxy gateway and dashboard built with Node.js, Express and SQLite. It enforces strict budget caps and gives real-time visibility over LLM API spend and request logs.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/Aliyunazeer/cloudgrip-backend",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "CloudGrip is a lightweight, self-hosted AI proxy gateway and dashboard built with Node.js, Express and SQLite. It enforces strict budget caps and gives real-time visibility over LLM API spend and request logs.",
+    "last_updated": "2026-10-07",
+    "skill_level": "advanced",
+    "best_for": [
+      "Capping LLM spend before it runs away",
+      "Watching request logs from one dashboard",
+      "Keeping proxy logs on your own instance"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Break the circuit",
+        "detail": "A budget circuit-breaker automatically halts requests when spending reaches the configured cap."
+      },
+      {
+        "title": "Watch telemetry",
+        "detail": "Real-time telemetry tracks client spend, request metadata and token metrics."
+      },
+      {
+        "title": "Self-host it",
+        "detail": "Run the Express server against your own database connection string; logs and proxy state stay in your instance."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed and self-hosted",
+        "Built-in dark-mode admin dashboard for active users and token metrics",
+        "Targets runaway agent loops and unmonitored context reloads specifically"
+      ],
+      "cons": [
+        "You run Node, Express and a database yourself",
+        "Small early project with few integrations beyond the proxy and dashboard"
+      ]
+    }
+  },
+  {
+    "id": 2082,
+    "name": "KORA Doctor",
+    "description": "KORA Doctor is a small open-source CLI that analyzes AUDR JSON and JSONL and surfaces execution waste across tool usage, context growth, deterministic work, repeated inference, orchestration and model choice. There is no dashboard, no account and no hosted service.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/Krako-Labs/kora-doctor",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "KORA Doctor is a small open-source CLI that analyzes AUDR JSON and JSONL and surfaces execution waste across tool usage, context growth, deterministic work, repeated inference, orchestration and model choice. There is no dashboard, no account and no hosted service.",
+    "last_updated": "2026-10-07",
+    "skill_level": "advanced",
+    "best_for": [
+      "Finding avoidable cost in agent runs",
+      "Auditing repeated tool and read calls",
+      "Getting a machine-readable waste report"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Audit a run",
+        "detail": "Run kora-doctor audit on an AUDR file to see observed cost, potentially avoidable spend and an estimated optimized cost."
+      },
+      {
+        "title": "Get JSON out",
+        "detail": "Add --json for machine-readable output you can diff or feed to another system."
+      },
+      {
+        "title": "Join OTel data",
+        "detail": "Pass --otel with an OTel sidecar file to combine execution records with telemetry."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs entirely locally with no account or hosted service",
+        "Gives a concrete avoidable-cost figure per run",
+        "Works on the open AUDR record format"
+      ],
+      "cons": [
+        "Only reads AUDR records, so your agent has to emit them first",
+        "Heuristics are early and the sample is synthetic, not a benchmark"
+      ]
+    }
+  },
+  {
+    "id": 2083,
+    "name": "Zetteldesk",
+    "description": "Zetteldesk is a mail agent plugin for Claude, ChatGPT and Claude Code: your agent writes the letter in the chat and checks the PDF against DIN 5008, and Zetteldesk prints it, puts it in an envelope and takes it to the post office.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://zetteldesk.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Zetteldesk is a mail agent plugin for Claude, ChatGPT and Claude Code: your agent writes the letter in the chat and checks the PDF against DIN 5008, and Zetteldesk prints it, puts it in an envelope and takes it to the post office.",
+    "last_updated": "2026-10-07",
+    "skill_level": "beginner",
+    "best_for": [
+      "Sending physical mail from an AI assistant",
+      "Cancellations and notices that need registered post",
+      "Letting an agent verify a letter before it is sent"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Connect once",
+        "detail": "Enter one URL in Claude.ai, ChatGPT or Claude Code and sign in with standard OAuth, so no API keys sit in the chat history."
+      },
+      {
+        "title": "Let the agent check it",
+        "detail": "Before anything costs money, the agent checks the A4 format, address field and page count and gets an exact price quote to show you."
+      },
+      {
+        "title": "Track the post",
+        "detail": "After you confirm, the letter is printed and posted in Germany, with status visible on the web or by asking your agent."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Registered mail and proof of delivery available",
+        "Prepaid from EUR 1.12 per letter with no subscription and a money-back promise if a letter is rejected",
+        "Works with any client that supports remote MCP servers with OAuth sign-in"
+      ],
+      "cons": [
+        "Letters are posted from Germany, so delivery times and coverage are regional",
+        "Per-letter cost, which does not suit bulk mail"
+      ]
+    }
+  },
+  {
+    "id": 2084,
+    "name": "Liatir",
+    "description": "Liatir is a local-first desktop environment for bioinformatics, built with Rust, Tauri 2 and SvelteKit. It brings native tools, locally managed AI models, .lia plugins, visual pipelines and scientific viewers into one application, with a controlled local MCP interface.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/Liatir/liatir-app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Liatir is a local-first desktop environment for bioinformatics, built with Rust, Tauri 2 and SvelteKit. It brings native tools, locally managed AI models, .lia plugins, visual pipelines and scientific viewers into one application, with a controlled local MCP interface.",
+    "last_updated": "2026-10-07",
+    "skill_level": "advanced",
+    "best_for": [
+      "Running bioinformatics tools locally",
+      "Managing AI models on your own machine",
+      "Building visual analysis pipelines"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run analyses offline",
+        "detail": "Local analyses keep working offline once their dependencies are installed."
+      },
+      {
+        "title": "Keep provenance",
+        "detail": "Workspaces retain inputs, execution logs, results and provenance."
+      },
+      {
+        "title": "Connect other apps",
+        "detail": "A controlled local MCP interface connects other applications, alongside API connectors and external workflow integrations."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Data never leaves the machine, with Rust-powered speed even on multi-gigabyte files",
+        "Plugins, visual pipelines and scientific viewers in one app",
+        "Published scientific showcases documenting methods, results and limitations"
+      ],
+      "cons": [
+        "GPL v3 licensed desktop app for scientists, not a general-purpose AI tool",
+        "You install and manage the underlying tools and models yourself"
+      ]
+    }
+  },
+  {
+    "id": 2085,
+    "name": "Manifestack",
+    "description": "Manifestack is a free skill for your coding agent that prices every service at your usage on the vendor own pages. Ask what your stack will cost at 50k users and it finds the bills, plan limits and compliance gaps ahead, each with a fix.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://github.com/manifestack/manifestack",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Manifestack is a free skill for your coding agent that prices every service at your usage on the vendor own pages. Ask what your stack will cost at 50k users and it finds the bills, plan limits and compliance gaps ahead, each with a fix.",
+    "last_updated": "2026-10-07",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Pricing a stack before you ship it",
+      "Finding plan limits that break at scale",
+      "Spotting services you pay for twice"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Price at your usage",
+        "detail": "Ask what a stack costs at 50k users and get every service priced on the vendor own pages."
+      },
+      {
+        "title": "Find what breaks",
+        "detail": "The report flags the plan limits that take a product down, the data rules it breaks and services you pay for twice."
+      },
+      {
+        "title": "Fix each finding",
+        "detail": "Every finding comes with the fix that cuts it."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free skill for Claude Code, Cursor, Codex and others",
+        "Prices are read from vendor pages rather than a static table",
+        "Aimed at developers, small teams and agencies rather than enterprise FinOps"
+      ],
+      "cons": [
+        "Prices are read from vendor pages at a point in time and drift",
+        "Requires Node.js 22 or newer"
+      ]
+    }
+  },
+  {
+    "id": 2086,
+    "name": "Mcpward",
+    "description": "Mcpward is contract and security testing for MCP servers, in CI. It snapshots an MCP server contract and fails the build when it changes underneath you, catching schema drift, silently changed tool descriptions, protocol violations and tool-poisoning patterns.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/TsvetanG2/mcpward",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Mcpward is contract and security testing for MCP servers, in CI. It snapshots an MCP server contract and fails the build when it changes underneath you, catching schema drift, silently changed tool descriptions, protocol violations and tool-poisoning patterns.",
+    "last_updated": "2026-10-06",
+    "skill_level": "advanced",
+    "best_for": [
+      "Testing third-party MCP servers in CI",
+      "Catching a rug-pull before it ships",
+      "Reporting MCP drift as a pull-request comment"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Pin the contract",
+        "detail": "Run mcpward baseline to capture tools into mcpward.lock.json and commit it, refreshing it only deliberately."
+      },
+      {
+        "title": "Fail on drift",
+        "detail": "Run mcpward diff in CI to catch schema drift, a readOnlyHint flip or a breaking schema change."
+      },
+      {
+        "title": "Report it",
+        "detail": "Results go to console, JSON, JUnit, SARIF or Markdown, and can be posted as a pull-request comment."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Black-box, so it works against servers you did not write, over stdio or Streamable HTTP",
+        "Runs entirely on your machine: no account, no API calls, no telemetry",
+        "Works against MCP servers written in any language"
+      ],
+      "cons": [
+        "Requires Node.js 22 or newer",
+        "A CI job that re-baselines automatically would accept a rug-pull as the new contract"
+      ]
+    }
+  },
+  {
+    "id": 2087,
+    "name": "Octri",
+    "description": "Octri takes an OpenAPI spec all the way to production: a docs site, SDKs in ten languages, an MCP server that exposes your API as tools for AI agents, and monitoring of errors from your SDKs and your API.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://octri.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Octri takes an OpenAPI spec all the way to production: a docs site, SDKs in ten languages, an MCP server that exposes your API as tools for AI agents, and monitoring of errors from your SDKs and your API.",
+    "last_updated": "2026-10-06",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Generating docs and SDKs from one spec",
+      "Exposing an API to agents over MCP",
+      "Monitoring SDK errors"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Build the docs",
+        "detail": "Octri builds a docs site and API guides from your OpenAPI spec."
+      },
+      {
+        "title": "Ship SDKs",
+        "detail": "Client libraries are generated in ten languages."
+      },
+      {
+        "title": "Give agents tools",
+        "detail": "An MCP server turns your API into tools for AI agents, and monitoring captures errors from your SDKs and your API."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Docs, SDKs, MCP and monitoring from one spec",
+        "Free tools include a spec audit, an OpenAPI parser and a spec converter",
+        "Public samples built from OpenAI, Anthropic, GitHub and other real specs"
+      ],
+      "cons": [
+        "Built around OpenAPI, so other API descriptions need conversion first",
+        "A commercial product whose migration guides target switching from other vendors"
+      ]
+    }
+  },
+  {
+    "id": 2088,
+    "name": "Azurade",
+    "description": "Azurade gives you one API key for Veo 3.1, Seedance and Nano Banana: pay as you go for 45 image and video models, from a REST API or from an MCP server that Claude, ChatGPT, Cursor and Codex connect to with one sign-in.",
+    "category": "Image",
+    "pricing": "Paid",
+    "url": "https://azurade.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Azurade gives you one API key for Veo 3.1, Seedance and Nano Banana: pay as you go for 45 image and video models, from a REST API or from an MCP server that Claude, ChatGPT, Cursor and Codex connect to with one sign-in.",
+    "last_updated": "2026-10-06",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Reaching many image and video models from one key",
+      "Generating media from Claude or Codex over MCP",
+      "Paying per generation without a subscription"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Use it from an agent",
+        "detail": "Connect the MCP server to Claude, ChatGPT, Claude Code, Codex, Gemini CLI, Cursor or VS Code with one sign-in."
+      },
+      {
+        "title": "Call the REST API",
+        "detail": "Use /api/v2 with keys as Bearer tokens from your own code."
+      },
+      {
+        "title": "Track credits",
+        "detail": "A credit costs USD 0.02 to 0.04 with no subscription, credits never expire, and failed generations are refunded automatically."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One key and one balance across 45 models, including Veo 3.1, Seedance and Nano Banana",
+        "Credits never expire and failures are refunded without a ticket",
+        "The same credit balance and prices as the web app"
+      ],
+      "cons": [
+        "Pay as you go only, with 4 free credits on signup",
+        "An aggregator, so availability and quality depend on upstream models"
+      ]
+    }
+  },
+  {
+    "id": 2089,
+    "name": "SEO Audit Console",
+    "description": "SEO Audit Console is a free, open-source MCP server that pulls your crawl and Google Search Console data into a database on your own PC, merging DataForSEO and Majestic SEO into one prioritised audit that Claude runs.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://github.com/houtini-ai/seo-audit",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SEO Audit Console is a free, open-source MCP server that pulls your crawl and Google Search Console data into a database on your own PC, merging DataForSEO and Majestic SEO into one prioritised audit that Claude runs.",
+    "last_updated": "2026-10-06",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Running a technical SEO audit with Claude",
+      "Keeping crawl data on your own machine",
+      "Ranking fixes by priority"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Capture the raw data",
+        "detail": "The server captures and stores crawl, Search Console, DataForSEO and Majestic data locally so the audit runs from your own database."
+      },
+      {
+        "title": "Rank the fixes",
+        "detail": "The merged audit is prioritised, and the published guide covers how findings become fixes with a dashboard."
+      },
+      {
+        "title": "Replace paid tools",
+        "detail": "The walkthrough runs on a real site with no Semrush or Screaming Frog."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source, with data stored on your own PC",
+        "Combines a first-party crawl with Search Console, DataForSEO and Majestic",
+        "Documented end to end in a published guide"
+      ],
+      "cons": [
+        "You still supply API access for the third-party data sources",
+        "Requires Claude and an MCP client to drive the audit"
+      ]
+    }
+  },
+  {
+    "id": 2090,
+    "name": "LangGraph Harness",
+    "description": "LangGraph Harness is a self-hosted AI coding agent platform for GitLab, built with LangGraph. It reviews merge requests, resolves issues autonomously and chats with full project context, remembering what matters so every run builds on the last.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/vrajpal-jhala/langgraph-harness",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "LangGraph Harness is a self-hosted AI coding agent platform for GitLab, built with LangGraph. It reviews merge requests, resolves issues autonomously and chats with full project context, remembering what matters so every run builds on the last.",
+    "last_updated": "2026-10-06",
+    "skill_level": "advanced",
+    "best_for": [
+      "Reviewing GitLab merge requests automatically",
+      "Turning GitLab issues into merge requests",
+      "Keeping agent memory across runs"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Review merge requests",
+        "detail": "The MR Review webhook fires on webhook events, reads the diff, drafts comments and publishes them, with no polling or manual triage."
+      },
+      {
+        "title": "Assign an issue",
+        "detail": "Assign an issue and get a merge request back."
+      },
+      {
+        "title": "Watch the runs",
+        "detail": "A React admin UI shows live runs, queue state and per-project analytics including reliability, guardrail health and comment acceptance rate."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Self-hosted, so code and project context stay on your infrastructure",
+        "Built on LangGraph with documented architecture and deployment",
+        "Live analytics rather than a black box you find out about later"
+      ],
+      "cons": [
+        "GitLab only; there is no GitHub support",
+        "Setup needs a GitLab PAT, a GitLab OAuth app and an LLM backend key"
+      ]
+    }
+  },
+  {
+    "id": 2091,
+    "name": "Genjutsu AI",
+    "description": "Genjutsu AI transfers the original motion and timing of a video into a new scene, style or set of objects, without swapping who or what is in the shot. Motion transfer and object swap both run up to 1080p.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://genjutsuai.net/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Genjutsu AI transfers the original motion and timing of a video into a new scene, style or set of objects, without swapping who or what is in the shot. Motion transfer and object swap both run up to 1080p.",
+    "last_updated": "2026-10-06",
+    "skill_level": "beginner",
+    "best_for": [
+      "Keeping a subject while changing the scene",
+      "Swapping objects and products into a clip",
+      "Starting from a proven motion template"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Transfer motion",
+        "detail": "Add a reference video of 4 to 30 seconds and carry its motion and timing into a new scene or style."
+      },
+      {
+        "title": "Swap objects",
+        "detail": "Add up to 8 images to put products, clothes, objects or scenes into the shot."
+      },
+      {
+        "title": "Start from a template",
+        "detail": "Motion templates fill the generator with a proven setup, then you add images and generate."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Keeps the original subject and timing instead of regenerating the shot",
+        "Output up to 1080p",
+        "A template library to start from"
+      ],
+      "cons": [
+        "Credit-based generation with the balance shown in the interface",
+        "Trend-led templates, so results depend on the template and reference video"
+      ]
+    }
+  },
+  {
+    "id": 2092,
+    "name": "PR Lens",
+    "description": "PR Lens draws animated architecture and data-flow walkthroughs inside the pull request itself, so you can understand a change and catch what could break before reading a single line. It runs as a GitHub App, GitHub Action, CLI or agent skill.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/coldteadotai/pr-lens",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "PR Lens draws animated architecture and data-flow walkthroughs inside the pull request itself, so you can understand a change and catch what could break before reading a single line. It runs as a GitHub App, GitHub Action, CLI or agent skill.",
+    "last_updated": "2026-10-05",
+    "skill_level": "beginner",
+    "best_for": [
+      "Understanding a large pull request quickly",
+      "Seeing architecture changes in motion",
+      "Reviewing without reading every line"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "See the architecture",
+        "detail": "Animated diagrams show services, data stores and endpoints as changed, new or removed."
+      },
+      {
+        "title": "Follow the data flow",
+        "detail": "A second view traces the flow, with per-file additions and deletions and a written description of the change."
+      },
+      {
+        "title": "Install it your way",
+        "detail": "Use the GitHub App, a GitHub Action, the CLI, or add it as a skill with npx skills add coldteadotai/pr-lens."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Open source core that works locally",
+        "Four install paths, including inside your coding agent",
+        "Diagrams live in the pull request rather than a separate site"
+      ],
+      "cons": [
+        "Best value on large architectural changes; small diffs gain less",
+        "The hosted app and some features sit outside the open-source core"
+      ]
+    }
+  },
+  {
+    "id": 2093,
+    "name": "Recast",
+    "description": "Recast is a Smalltalk application that uses an LLM to repair itself while it runs. A failing call supplies the stack, method source, receiver state and tests, and a separate VM checks the proposed repair before the application replaces the method in its live image.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/rot13maxi/recast",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Recast is a Smalltalk application that uses an LLM to repair itself while it runs. A failing call supplies the stack, method source, receiver state and tests, and a separate VM checks the proposed repair before the application replaces the method in its live image.",
+    "last_updated": "2026-10-05",
+    "skill_level": "advanced",
+    "best_for": [
+      "Exploring self-repairing applications",
+      "Studying live method replacement",
+      "Experimenting with runtime evidence for repairs"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Let it repair",
+        "detail": "The first call fails, investigation and verification run asynchronously, the image applies the accepted patch, and the next call succeeds."
+      },
+      {
+        "title": "Check before applying",
+        "detail": "A separate VM verifies a proposed repair before the running application adopts it, with no rebuild or restart."
+      },
+      {
+        "title": "Try the tour",
+        "detail": "GUIDE.md walks through booting, editing live code, breaking the app and promoting the result, with an offline fake LLM option."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No rebuild or restart: subsequent calls use the new code immediately",
+        "Verification is a separate step, not a blind patch",
+        "Exercised with a real LLM on Pharo 12"
+      ],
+      "cons": [
+        "An experiment in Smalltalk, not a production self-healing framework",
+        "Needs a Smalltalk image and a guided tour to get anything running"
+      ]
+    }
+  },
+  {
+    "id": 2094,
+    "name": "Usermods",
+    "description": "Usermods is an open-source browser extension that lets you customize any website by chatting with the LLM of your choice. It inspects the page, writes a userscript, tests it live and hands it to you with Try and Save buttons, and saved mods run on every matching page load.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/kballenegger/usermods",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Usermods is an open-source browser extension that lets you customize any website by chatting with the LLM of your choice. It inspects the page, writes a userscript, tests it live and hands it to you with Try and Save buttons, and saved mods run on every matching page load.",
+    "last_updated": "2026-10-05",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Changing a website you do not control",
+      "Writing userscripts by describing them",
+      "Migrating a Tampermonkey library"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Describe the change",
+        "detail": "Open the side panel on any page, describe what you want changed, and the model reads a pruned DOM, computed styles and screenshots before proposing anything."
+      },
+      {
+        "title": "Keep the mods",
+        "detail": "Saved mods run automatically on every matching page load and export as standard .user.js files."
+      },
+      {
+        "title": "Bring your library",
+        "detail": "Install mods from Greasy Fork or migrate your whole Tampermonkey library in one file."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Any backend: Anthropic, OpenAI, OpenRouter or anything OpenAI-compatible including Ollama and LM Studio",
+        "Mods are plain userscripts with a ==UserScript== header, MIT licensed",
+        "Can sign in with ChatGPT or SuperGrok to use the subscription you already pay for, in the build from source"
+      ],
+      "cons": [
+        "Early status, and the Chrome Web Store version leaves sign-in out",
+        "A browser extension with page access, so it needs trust"
+      ]
+    }
+  },
+  {
+    "id": 2095,
+    "name": "Recursant",
+    "description": "Recursant sits between your AI agents and the models they use and picks a model for every step: a top model for the hard steps, a cheaper model for routine ones, and your own private model whenever personal data is involved.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/ajensenwaud/recursant",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Recursant sits between your AI agents and the models they use and picks a model for every step: a top model for the hard steps, a cheaper model for routine ones, and your own private model whenever personal data is involved.",
+    "last_updated": "2026-10-05",
+    "skill_level": "advanced",
+    "best_for": [
+      "Cutting the agent bill without changing the agent",
+      "Keeping personal data on your own GPUs",
+      "Mixing local and hosted inference"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Route per step",
+        "detail": "Routine steps such as reading a file or running tests go to a cheaper model while thinking-heavy steps stay on the main model, and a stronger model is brought in if the agent keeps failing."
+      },
+      {
+        "title": "Keep personal data private",
+        "detail": "Every request is checked with regexes for tax file numbers, Medicare numbers, card numbers, phone numbers and email addresses before it leaves your machine; matches go to your private model."
+      },
+      {
+        "title": "Point your agent at it",
+        "detail": "It speaks the OpenAI API, so you point your agent at Recursant instead of the provider, with no plugins and no code changes."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "A deterministic privacy check runs before any request leaves the machine",
+        "Models on your own GPUs and paid services sit in one pool",
+        "Written in C with minimal dependencies"
+      ],
+      "cons": [
+        "Linux only today; macOS support is underway and Windows is described as tricky",
+        "Tested with Hermes and pi, with other harnesses still being validated"
+      ]
+    }
+  },
+  {
+    "id": 2096,
+    "name": "Recly",
+    "description": "Recly turns the Galaxy Watch or Apple Watch you already wear into an AI recorder. One shortcut records, transcription is free on a supported device, and a ChatGPT agent starts on the minutes by itself through MCP when the transcript lands.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://recly.dev/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Recly turns the Galaxy Watch or Apple Watch you already wear into an AI recorder. One shortcut records, transcription is free on a supported device, and a ChatGPT agent starts on the minutes by itself through MCP when the transcript lands.",
+    "last_updated": "2026-10-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Recording without buying a dedicated device",
+      "Transcribing on device for free",
+      "Letting an agent write the minutes"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Use the watch you own",
+        "detail": "One shortcut on a Galaxy Watch or Apple Watch starts recording, instead of buying a dedicated recorder."
+      },
+      {
+        "title": "Transcribe for free",
+        "detail": "Transcription runs for free on a supported device, and the original audio stays in your own Google Drive."
+      },
+      {
+        "title": "Hand it to an agent",
+        "detail": "A ChatGPT agent starts on the minutes by itself through MCP the moment the transcript lands."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source under AGPL-3.0-or-later",
+        "On the App Store and Google Play, with macOS and Windows builds too",
+        "Keeps the original audio in your own Google Drive"
+      ],
+      "cons": [
+        "Depends on you already owning a supported watch",
+        "You supply the AI that writes the notes"
+      ]
+    }
+  },
+  {
+    "id": 2097,
+    "name": "Baloo",
+    "description": "Baloo is an open source GitHub App for AI pull request review. It installs on your repositories, reads PR diffs and relevant project context, and posts inline review comments that catch bugs, security issues, missing error handling and repository guideline violations.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/bluebear-io/baloo-bear",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Baloo is an open source GitHub App for AI pull request review. It installs on your repositories, reads PR diffs and relevant project context, and posts inline review comments that catch bugs, security issues, missing error handling and repository guideline violations.",
+    "last_updated": "2026-10-04",
+    "skill_level": "advanced",
+    "best_for": [
+      "Self-hosted AI code review on GitHub",
+      "Enforcing AGENTS.md and CONTRIBUTING.md",
+      "Reviewing every push automatically"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Review on every push",
+        "detail": "New commits on non-draft PRs are reviewed automatically with discussion thread tracking across iterations; comment @baloo review for another pass."
+      },
+      {
+        "title": "Follow your conventions",
+        "detail": "Baloo reads AGENTS.md and CONTRIBUTING.md from the repo and enforces them, and follows a per-PR review brief when one is included."
+      },
+      {
+        "title": "Self-host it",
+        "detail": "You run the service, control the GitHub App installation scope, and provide your own model credentials."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Self-hosted with no Baloo-hosted backend; review context goes only to your configured model provider",
+        "Posts like a teammate: inline comments, severity labels and an approval when no CRITICAL or HIGH issues remain",
+        "MIT licensed with OpenSSF Scorecard and CI in place"
+      ],
+      "cons": [
+        "You operate the app and supply model credentials",
+        "GitHub only, and it never blocks a merge: humans decide"
+      ]
+    }
+  },
+  {
+    "id": 2098,
+    "name": "EditUI",
+    "description": "EditUI is a Chrome extension for reviewing your running app: click any element, leave the edit you want, collect as many as you like, then send them all to Claude Code, Cursor or your coding agent in one copy.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://www.editui.app/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "EditUI is a Chrome extension for reviewing your running app: click any element, leave the edit you want, collect as many as you like, then send them all to Claude Code, Cursor or your coding agent in one copy.",
+    "last_updated": "2026-10-04",
+    "skill_level": "beginner",
+    "best_for": [
+      "Pointing at the element you mean",
+      "Collecting UI feedback across a page",
+      "Handing a batch of edits to an agent"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Point and prompt",
+        "detail": "Click anything on the running UI and describe what you want changed."
+      },
+      {
+        "title": "Collect the review",
+        "detail": "Keep reviewing; EditUI remembers every edit."
+      },
+      {
+        "title": "Send it all",
+        "detail": "Copy the whole review and paste it into your coding agent, instead of explaining which element you mean."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free with no repo setup",
+        "Works against the running app in Chrome rather than a screenshot",
+        "Outputs plain text you can paste into any agent"
+      ],
+      "cons": [
+        "A Chrome extension only",
+        "You still paste the review into an agent yourself"
+      ]
+    }
   }
 ]
