@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const SITE_NAME = "Use AI Tools";
 export const SITE_URL = "https://useaitools.me";
-export const DEFAULT_DESC = "A handpicked directory of 990+ AI tools for writing, image, video, audio, code and productivity. Compare features, pricing and alternatives side by side.";
+export const DEFAULT_DESC = "A handpicked directory of 1000+ AI tools for writing, image, video, audio, code and productivity. Compare features, pricing and alternatives side by side.";
 
 export interface BuildMetadataOptions {
   title?: string;
@@ -15,7 +15,7 @@ export interface BuildMetadataOptions {
 export function buildMetadata(options: BuildMetadataOptions = {}): Metadata {
   const { title, description, canonicalPath, image, noindex } = options;
 
-  const fullTitle = title ? `${title} – ${SITE_NAME}` : `Best AI Tools Directory 2026 – Discover & Compare 990+ AI Tools`;
+  const fullTitle = title ? `${title} – ${SITE_NAME}` : `Best AI Tools Directory 2026 – Discover & Compare 1000+ AI Tools`;
   const desc = description || DEFAULT_DESC;
   const canonical = canonicalPath
     ? `${SITE_URL}${canonicalPath.startsWith("/") ? canonicalPath : `/${canonicalPath}`}`

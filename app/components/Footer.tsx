@@ -39,7 +39,7 @@ export default function Footer() {
               </h2>
             </div>
             <p className="text-slate-600 dark:text-gray-400 mb-4">
-              {t('footer.tagline')} · 990+ tools · 6 categories
+              {t('footer.tagline')} · 1000+ tools · 6 categories
             </p>
 
             {/* Social Media Links */}

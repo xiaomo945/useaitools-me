@@ -50422,5 +50422,470 @@
         "Requires the Claude Code CLI, and GitHub features need your gh login"
       ]
     }
+  },
+  {
+    "id": 2038,
+    "name": "Kolo",
+    "description": "Kolo is an open-source alpha that turns a local AI coding agent into a multiplayer session: run agents on one machine, share a link, and your team can watch, type or take over the same terminal from a browser.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/komovaar/kolo",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Kolo is an open-source alpha that turns a local AI coding agent into a multiplayer session: run agents on one machine, share a link, and your team can watch, type or take over the same terminal from a browser.",
+    "last_updated": "2026-10-26",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Sharing a coding agent session with a team",
+      "Pairing on an agent run without screen sharing",
+      "Running Claude Code, Codex CLI or opencode for a group"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Join a session from a link",
+        "detail": "Teammates open the invitation link printed in the host terminal, choose a name and join. No install and no token to paste."
+      },
+      {
+        "title": "Take over the same terminal",
+        "detail": "Everyone sees the same terminal, so you can type a prompt, approve a step, or pick up where a teammate left off."
+      },
+      {
+        "title": "Keep observers read-only",
+        "detail": "The host decides who can control sessions while read-only members follow along."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Built-in adapters for Claude Code, Codex CLI and opencode",
+        "Only the host installs Kolo; teammates just open a link",
+        "One Go binary runs both the hub and the host",
+        "AGPL-3.0 licensed"
+      ],
+      "cons": [
+        "Experimental alpha meant for trusted teams",
+        "Agents run with the host user permissions, so the isolation setup matters",
+        "Hosts support Linux and macOS on amd64 and arm64, WSL2 on Windows"
+      ]
+    }
+  },
+  {
+    "id": 2039,
+    "name": "ReviewerAgent",
+    "description": "ReviewerAgent is an open-source commit gate for Claude Code and Codex: a separate review agent checks each plan and commit, and the commit cannot proceed until the issues it lists are fixed.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/rladr-org/reviewer-agent",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ReviewerAgent is an open-source commit gate for Claude Code and Codex: a separate review agent checks each plan and commit, and the commit cannot proceed until the issues it lists are fixed.",
+    "last_updated": "2026-10-26",
+    "skill_level": "advanced",
+    "best_for": [
+      "Catching bugs an agent missed before it commits",
+      "Letting one model review another model work",
+      "Stopping an agent from quitting a task too early"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Gate every commit",
+        "detail": "A review agent you choose completes a plan or code review, and any issue it specifies must be fixed by the coding agent before the commit is allowed to proceed."
+      },
+      {
+        "title": "Use any model as the reviewer",
+        "detail": "Codex, Pi with any model, or Claude Code itself can act as the reviewer and stop-continue agent, each in its own session."
+      },
+      {
+        "title": "Decide when the agent may stop",
+        "detail": "Stop Continue examines the project plan, the task list and any background tasks the agent is waiting on, then either allows the stop or tells the agent what to do next."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Author reports 3,877 gated commits across four months of daily use",
+        "Rejection rate scales with commit size: 23% under 50 lines, 72% over 1,000",
+        "Reviewer and stop-continue are separately controllable features"
+      ],
+      "cons": [
+        "Adds a review round trip to every commit",
+        "Those numbers come from the author own single-project log",
+        "MPL-2.0 licensed but a very small project"
+      ]
+    }
+  },
+  {
+    "id": 2040,
+    "name": "Token Beggar",
+    "description": "Token Beggar is an open-source Claude Code plugin that checks whether a cheaper model can do a job just as well before the big model takes it, sending large tasks to one cheaper worker while design decisions stay with the model you picked.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/Arthur031221/Token-Beggar",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Token Beggar is an open-source Claude Code plugin that checks whether a cheaper model can do a job just as well before the big model takes it, sending large tasks to one cheaper worker while design decisions stay with the model you picked.",
+    "last_updated": "2026-10-26",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Cutting Claude Code quota and API spend",
+      "Routing bug fixes in unfamiliar repos to cheaper models",
+      "Keeping the final answer with the model you chose"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Route each task by size",
+        "detail": "Small tasks stay in the chat. A large task, such as fixing a bug in a repository you have not read yet, goes to one cheaper worker."
+      },
+      {
+        "title": "Verify the worker diff",
+        "detail": "The chat then checks the whole diff and runs the tests, while design, root causes and the final answer stay with the model you picked."
+      },
+      {
+        "title": "Diagnose silent failures",
+        "detail": "token-beggar doctor lists what can quietly stop routing and exits 1 when something is broken."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Author reports 1.42x less quota and money across 18 real bug fixes",
+        "Same share of hidden tests passing, 69% against 70% working alone",
+        "Python 3.10 or newer, standard library only, zero dependencies",
+        "Runs locally inside your own Claude Code session"
+      ],
+      "cons": [
+        "Needs Claude Code and Python 3.10 or newer",
+        "The benchmark is 18 fixes measured by the author",
+        "MIT licensed but a brand new project"
+      ]
+    }
+  },
+  {
+    "id": 2041,
+    "name": "Zilla",
+    "description": "Zilla is a source-available multi-protocol gateway whose MCP Gateway gives AI agents one governed endpoint for MCP servers, HTTP APIs, OpenAPI services and Kafka, all configured in a single zilla.yaml.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://github.com/aklivity/zilla",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Zilla is a source-available multi-protocol gateway whose MCP Gateway gives AI agents one governed endpoint for MCP servers, HTTP APIs, OpenAPI services and Kafka, all configured in a single zilla.yaml.",
+    "last_updated": "2026-10-26",
+    "skill_level": "advanced",
+    "best_for": [
+      "Giving agents one governed MCP endpoint",
+      "Exposing Kafka operations to agents over MCP",
+      "Federating several MCP servers behind one catalog"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Federate providers behind one endpoint",
+        "detail": "Existing MCP servers, HTTP APIs, OpenAPI-described services and Apache Kafka all connect to a single agent-facing MCP endpoint."
+      },
+      {
+        "title": "Namespace capabilities per provider",
+        "detail": "Capabilities are namespaced as toolkit__capability, so github__create_pr, payments__refund and kafka__produce_message route without collisions."
+      },
+      {
+        "title": "Govern identity, guardrails and telemetry",
+        "detail": "The gateway validates the agent identity, filters capability listings by authorization, applies schema guardrails and exports MCP metrics and lifecycle events."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Event Gateway and MCP Gateway share one routing and security model",
+        "Large catalogs split into eager and cold tools so agents load only what they need",
+        "Docker and Helm installs with metrics on port 7190",
+        "Over 1,600 GitHub stars and an active release cadence"
+      ],
+      "cons": [
+        "Aklivity Community License, not OSI open source",
+        "Offering Zilla as a standalone commercial service is not permitted",
+        "Advanced OAuth grants and distributed stores need the paid Plus edition",
+        "Java stack, so Docker Compose or Helm is the normal way to run it"
+      ]
+    }
+  },
+  {
+    "id": 2042,
+    "name": "AiSniff",
+    "description": "AiSniff is an open-source linter that underlines phrases in English and Chinese text matching documented AI-writing patterns, naming the rule, citing a public source and suggesting a plain rewrite, with no server and no model call.",
+    "category": "Writing",
+    "pricing": "Open Source",
+    "url": "https://github.com/Arthur031221/AiSniff",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AiSniff is an open-source linter that underlines phrases in English and Chinese text matching documented AI-writing patterns, naming the rule, citing a public source and suggesting a plain rewrite, with no server and no model call.",
+    "last_updated": "2026-10-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Editing AI-sounding phrasing out of a draft",
+      "Checking copy before you publish it",
+      "Running the same rules from a CLI or an agent skill"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "See the rule behind every hit",
+        "detail": "Each mark names its rule, cites a public source and suggests a plain rewrite, all driven by one set of JSON rules."
+      },
+      {
+        "title": "Run it wherever you write",
+        "detail": "The web editor, the CLI (npx github:Arthur031221/AiSniff lint draft.md) and the agent skill all read the same rule set."
+      },
+      {
+        "title": "Read the honest evaluation",
+        "detail": "On held-out HC3 answers the English rules marked at least one phrase in 29% of chatbot answers and 2% of human ones, and the docs publish per-rule counts."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No server and no model call, so it runs entirely locally",
+        "Covers English and Chinese text",
+        "Publishes its own limits, including an AUROC of 0.63 for English hit density",
+        "MIT licensed with a live demo"
+      ],
+      "cons": [
+        "Density alone is a weak detector, 0.59 AUROC for Chinese",
+        "71% of held-out English chatbot answers had no hit at all",
+        "It reports patterns, not authorship",
+        "A very new project"
+      ]
+    }
+  },
+  {
+    "id": 2043,
+    "name": "Boba",
+    "description": "Boba is a free AI assistant you text or open on the web, built for group chats as much as for one-on-one use: it researches trips, splits costs, keeps family lists and books things once you say yes.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://boba.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Boba is a free AI assistant you text or open on the web, built for group chats as much as for one-on-one use: it researches trips, splits costs, keeps family lists and books things once you say yes.",
+    "last_updated": "2026-10-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Coordinating plans inside a group chat",
+      "Trip research and splitting the cost",
+      "Reminders and shared family lists"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Work inside the group chat",
+        "detail": "Drop Boba in the trip chat and it researches cabins, flights and trains, splits the cost and lays out options everyone can weigh in on."
+      },
+      {
+        "title": "Keep the shared memory",
+        "detail": "Grocery lists, school pickups and appointments stay in the family chat, with reminders going to the right person at the right time."
+      },
+      {
+        "title": "Let it handle email and calendar",
+        "detail": "Connect Gmail or Outlook and Boba flags what matters, drafts replies, puts plans on your calendar and books the table once you say yes."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free with no app to download and no sign-up",
+        "Works over text and on the web, one-on-one or in a group",
+        "Books restaurants and appointments once you confirm"
+      ],
+      "cons": [
+        "Messages you send may be used to improve Boba",
+        "The site itself notes the assistant can get things wrong",
+        "Texting it means handing over a phone number"
+      ]
+    }
+  },
+  {
+    "id": 2044,
+    "name": "Otaku AI",
+    "description": "Otaku AI is a free, fan-built browser assistant for anime fans: it answers questions about currently airing shows, recommends series by mood and lets you talk to or roleplay as characters from a series you love.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://otaku.animearray.site",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Otaku AI is a free, fan-built browser assistant for anime fans: it answers questions about currently airing shows, recommends series by mood and lets you talk to or roleplay as characters from a series you love.",
+    "last_updated": "2026-10-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Anime recommendations filtered by mood",
+      "Chatting or roleplaying as a character",
+      "Checking what is airing right now"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Turn a mood into a shortlist",
+        "detail": "Ask about currently airing shows or pick a mood such as sad, hype, chill or dark, and get recommendations filtered by your own taste."
+      },
+      {
+        "title": "Talk to a character",
+        "detail": "Character RP lets you converse with or roleplay as characters from a series as if they were really there, all through plain conversation."
+      },
+      {
+        "title": "Use the anime tools",
+        "detail": "Anime search, a character creator, a quiz, power-scaling deep dives and a philosophy chat sit beside the recommendation tools."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free in the browser with nothing to install",
+        "Conversations stay lightweight and are not shared with anyone else",
+        "Share a chat as text or as a downloadable card image"
+      ],
+      "cons": [
+        "An independent fan project, not affiliated with any studio",
+        "Login is required to save chat history",
+        "Single-topic scope, useful only to anime fans"
+      ]
+    }
+  },
+  {
+    "id": 2045,
+    "name": "FrameCap",
+    "description": "FrameCap is a free Chrome extension that lets AI watch a YouTube video: one click captures a timestamped transcript plus sharp frames of the screen and sends both to ChatGPT, Claude, Gemini or Perplexity.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://getframecap.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "FrameCap is a free Chrome extension that lets AI watch a YouTube video: one click captures a timestamped transcript plus sharp frames of the screen and sends both to ChatGPT, Claude, Gemini or Perplexity.",
+    "last_updated": "2026-10-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Asking an AI about a video tutorial",
+      "Getting the exact formula or code line from a screencast",
+      "Feeding frames to Claude Code, Codex or Cursor"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Capture words and visuals together",
+        "detail": "FrameCap reads the captions as a timestamped transcript and snaps a sharp frame every 1 to 15 seconds, right inside your browser."
+      },
+      {
+        "title": "Send it straight to your AI",
+        "detail": "ChatGPT, Claude, Gemini or Perplexity opens with a PDF of the frames and a ready prompt, and a ZIP download works for Claude Code, Codex and Cursor."
+      },
+      {
+        "title": "Keep it private",
+        "detail": "Everything runs inside your browser with no account and no API key, on Chrome, Edge, Brave and Arc."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free extension with no account and no API key",
+        "Frames up to 4K, sharp enough to read code on screen",
+        "One click to paste into every major AI assistant"
+      ],
+      "cons": [
+        "YouTube only",
+        "Frame interval is fixed when you capture, between 1 and 15 seconds",
+        "The transcript comes from the video captions, so uncaptioned videos give you frames only"
+      ]
+    }
+  },
+  {
+    "id": 2046,
+    "name": "Four-Leaf",
+    "description": "Four-Leaf is an AI job search assistant with over 100,000 live openings scraped from company career pages, ghost-job checks, voice mock interviews and an MCP server that puts it inside Claude, Cursor and ChatGPT.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://four-leaf.ai/jobs",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Four-Leaf is an AI job search assistant with over 100,000 live openings scraped from company career pages, ghost-job checks, voice mock interviews and an MCP server that puts it inside Claude, Cursor and ChatGPT.",
+    "last_updated": "2026-10-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Searching real openings without ghost jobs",
+      "Practising voice mock interviews",
+      "Tailoring a resume to one job description"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Search live openings",
+        "detail": "Openings are scraped directly from company career pages with ghost-job checks built in, and search is free with no account needed."
+      },
+      {
+        "title": "Turn a listing into an offer",
+        "detail": "Save a search for weekly matches, then run voice mock interviews, build a resume and cover letters, and prepare negotiation with a coach."
+      },
+      {
+        "title": "Bring it into your AI",
+        "detail": "An MCP server puts Four-Leaf inside Claude, Cursor and ChatGPT, alongside hiring data, job trends and interview guides."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Over 100,000 live openings with ghost-job checks",
+        "Free search with no account needed",
+        "Interview guides and question banks organised by role"
+      ],
+      "cons": [
+        "The seven AI assistants sit behind a paid trial; only search and the standalone tools are free",
+        "Coverage limited to employers whose career pages it can scrape",
+        "A web product, so nothing works offline"
+      ]
+    }
   }
 ]

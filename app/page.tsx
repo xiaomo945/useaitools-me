@@ -23,8 +23,8 @@ const StoryCard = dynamic(() => import('@/app/components/StoryCard'), {
 });
 
 export const metadata: Metadata = {
-  title: 'Use AI Tools — Discover & Compare 990+ AI Tools',
-  description: 'Curated directory of the best AI tools. Browse 990+ tools across Writing, Image, Video, Audio, Code & Productivity. Find your perfect AI tool in seconds.',
+  title: 'Use AI Tools — Discover & Compare 1000+ AI Tools',
+  description: 'Curated directory of the best AI tools. Browse 1000+ tools across Writing, Image, Video, Audio, Code & Productivity. Find your perfect AI tool in seconds.',
   metadataBase: new URL('https://useaitools.me'),
   // No hreflang yet: `?lang=zh` renders the same English HTML (no [locale]
   // segment, no i18n config), which sends a duplicate-content signal. Restored
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Use AI Tools — Discover & Compare 990+ AI Tools',
-    description: 'Curated directory of the best AI tools. Browse 990+ tools across 6 categories.',
+    title: 'Use AI Tools — Discover & Compare 1000+ AI Tools',
+    description: 'Curated directory of the best AI tools. Browse 1000+ tools across 6 categories.',
     url: 'https://useaitools.me',
     siteName: 'Use AI Tools',
     type: 'website',
@@ -46,14 +46,14 @@ export const metadata: Metadata = {
         url: '/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: 'Use AI Tools - Discover & Compare 990+ AI Tools',
+        alt: 'Use AI Tools - Discover & Compare 1000+ AI Tools',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Use AI Tools — Discover & Compare 990+ AI Tools',
-    description: 'Curated directory of the best AI tools. Browse 990+ tools across 6 categories.',
+    title: 'Use AI Tools — Discover & Compare 1000+ AI Tools',
+    description: 'Curated directory of the best AI tools. Browse 1000+ tools across 6 categories.',
   },
 };
 
