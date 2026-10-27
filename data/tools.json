@@ -56637,5 +56637,1205 @@
         "Account creation flow sends no email, which is easy to miss"
       ]
     }
+  },
+  {
+    "id": 2162,
+    "name": "Limma",
+    "description": "Limma is an MCP server for your company's data. It reads your documents and data, builds a structured map of every detail in them, and gives your agent the complete answer with proof, instead of splitting documents into fragments and fetching them by similarity.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://limma.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Limma is an MCP server for your company's data. It reads your documents and data, builds a structured map of every detail in them, and gives your agent the complete answer with proof, instead of splitting documents into fragments and fetching them by similarity.",
+    "last_updated": "2026-10-27",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Answering questions over company documents and data",
+      "Getting complete answers with proof rather than similarity-ranked fragments",
+      "Retrieval where coverage matters more than a close match"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Connect your company data",
+        "detail": "Point Limma at the documents and data your organisation already has and it builds a structured map of every detail in them."
+      },
+      {
+        "title": "Answer through MCP",
+        "detail": "Your agent asks for what it needs and gets back the complete answer, with the proof behind it."
+      },
+      {
+        "title": "Compare against chunking",
+        "detail": "Limma's own page lays out why chunking and retrieval were built for reading rather than for answering completely, which is the gap it targets."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Aims at complete answers with proof rather than a ranked handful of fragments",
+        "Builds a structured map of every detail across your documents",
+        "Speaks MCP, so it drops into an agent you already use"
+      ],
+      "cons": [
+        "Pricing is not published; the main call to action is a demo",
+        "Aimed at company-wide data, not a single project or personal notes"
+      ]
+    }
+  },
+  {
+    "id": 2163,
+    "name": "Better Design",
+    "description": "Better Design gives AI coding agents a real design system. You connect your editor by running npx better-design, and its documentation index is served at /llms.txt with every page also available as Markdown, so an agent can read it directly.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://better-design.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Better Design gives AI coding agents a real design system. You connect your editor by running npx better-design, and its documentation index is served at /llms.txt with every page also available as Markdown, so an agent can read it directly.",
+    "last_updated": "2026-10-27",
+    "skill_level": "beginner",
+    "best_for": [
+      "Giving an AI coding agent a real design system",
+      "Making agent-built apps look like one product instead of separate screens",
+      "Letting an agent read design docs from the terminal"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Connect your editor",
+        "detail": "Run npx better-design in your project; it resolves the registry, writes globals.css and adds components to your components/ui directory."
+      },
+      {
+        "title": "Let the agent read the docs",
+        "detail": "The documentation index sits at /llms.txt, and every page is served as Markdown through an Accept header or by adding .md to the URL."
+      },
+      {
+        "title": "Keep screens consistent",
+        "detail": "The pitch is that new features slot into the same system rather than each screen being a fresh fight."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One command to connect, and the components land in your own components/ui",
+        "Docs served as Markdown and indexed at /llms.txt specifically for agents",
+        "Targets the real problem of agent-built screens each looking different"
+      ],
+      "cons": [
+        "Pricing and Enterprise pages exist but no prices are shown on the landing page",
+        "Components come from a hosted registry rather than being fully local"
+      ]
+    }
+  },
+  {
+    "id": 2164,
+    "name": "Hob",
+    "description": "Hob is a free, open source alternative to Claude and ChatGPT that runs open-weight models like Gemma and gpt-oss locally on Mac, Windows and Linux. It picks the best frontier open-weight model that fits your computer and sets everything up, and it works offline.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://github.com/FrigadeHQ/hob",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Hob is a free, open source alternative to Claude and ChatGPT that runs open-weight models like Gemma and gpt-oss locally on Mac, Windows and Linux. It picks the best frontier open-weight model that fits your computer and sets everything up, and it works offline.",
+    "last_updated": "2026-10-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Running open-weight models locally instead of in a chat tab",
+      "Working through documents and PDFs without sending them anywhere",
+      "A desktop AI app that keeps working without a connection"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Install on your own machine",
+        "detail": "Builds are published for Mac, Windows and Linux, and Hob chooses a model that fits your computer rather than asking you to pick weights."
+      },
+      {
+        "title": "Work through documents",
+        "detail": "The README shows Hob reading a sales spreadsheet inside a project, charting revenue by region and summing up what stands out, as well as filling out PDFs."
+      },
+      {
+        "title": "Work offline",
+        "detail": "Everything runs on your own computer, so it stays private and works without a connection."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source under the MIT licence",
+        "Handles model selection for you instead of asking you to choose weights",
+        "Mac, Windows and Linux builds, and it works offline"
+      ],
+      "cons": [
+        "Limited to open-weight models, so it is not a drop-in for frontier hosted models",
+        "Local inference is bounded by the machine you run it on"
+      ]
+    }
+  },
+  {
+    "id": 2165,
+    "name": "Hashgrid DNA",
+    "description": "Hashgrid DNA is a search engine that learns from feedback. You send one embedding per item from any model, DNA finds the best result, and every score you send back trains it on its side, so there is no model for you to host or tune.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://dna.hashgrid.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Hashgrid DNA is a search engine that learns from feedback. You send one embedding per item from any model, DNA finds the best result, and every score you send back trains it on its side, so there is no model for you to host or tune.",
+    "last_updated": "2026-10-26",
+    "skill_level": "advanced",
+    "best_for": [
+      "Search that improves as people give feedback",
+      "Adding learning to retrieval without hosting a model",
+      "Searching over tools, products, documents or people"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Populate with embeddings",
+        "detail": "Send one embedding per item, from any embedder, under a key of your choice, to the REST API at dna.hashgrid.ai/api/v1."
+      },
+      {
+        "title": "Search, then score",
+        "detail": "Search returns candidates; when you have a score, send it back and DNA trains on it."
+      },
+      {
+        "title": "Bring your own judge",
+        "detail": "The score you return can come from an LLM, a small model, or your own users."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Learning happens on DNA's side, so there is no model to host or tune",
+        "Accepts embeddings produced by any model",
+        "Nodes can be tools, products, documents, people or anything else you can name"
+      ],
+      "cons": [
+        "Needs an API key, and pricing is not shown on the landing page",
+        "The counters on the page are described by the site itself as illustrative of the mechanism, not a measurement"
+      ]
+    }
+  },
+  {
+    "id": 2166,
+    "name": "Tabichat",
+    "description": "Tabichat is a shared chat layer that brings humans and multiple LLM agent sessions into a single MQTT room. The agent side is a pi extension that loads when pi runs with --tabichat, and pi is the only supported agent harness.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://tabichat.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Tabichat is a shared chat layer that brings humans and multiple LLM agent sessions into a single MQTT room. The agent side is a pi extension that loads when pi runs with --tabichat, and pi is the only supported agent harness.",
+    "last_updated": "2026-10-26",
+    "skill_level": "advanced",
+    "best_for": [
+      "Watching several agent sessions in one room",
+      "Hosting a chat broker locally over MQTT",
+      "Letting a lead agent coordinate a group of agents"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run the room",
+        "detail": "Host an MQTT broker locally using the IoT mosquitto protocol, so chats are not readable by a third party and can be encrypted with mTLS."
+      },
+      {
+        "title": "Auto-renew context",
+        "detail": "At a configurable context percentage agents auto-renew; the gate fires only when the policy is armed, the seat has not renewed this boot, the context reading is at or over the floor, and a RESUME file exists on disk."
+      },
+      {
+        "title": "Coordinate the fleet",
+        "detail": "A lead agent can be configured to coordinate group effort and remotely renew other agents."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Local MQTT broker, so the chat stays private and is lightweight to host",
+        "Thinking stays visible in the harness whether the prompt arrived there or in the room",
+        "Auto-renew is gated on four explicit conditions instead of firing freely"
+      ],
+      "cons": [
+        "pi is the only supported agent harness",
+        "No pricing is published, and the site is a single page of details"
+      ]
+    }
+  },
+  {
+    "id": 2167,
+    "name": "Mainplane",
+    "description": "Mainplane is an open source agent ecosystem you self-host. You run a server on any always-on machine, then add providers, workers, which are the computers your agents control, and connectors, which are the ways you message your agents.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/mainplane-ai/mainplane",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Mainplane is an open source agent ecosystem you self-host. You run a server on any always-on machine, then add providers, workers, which are the computers your agents control, and connectors, which are the ways you message your agents.",
+    "last_updated": "2026-10-26",
+    "skill_level": "advanced",
+    "best_for": [
+      "Self-hosting an agent server on an always-on machine",
+      "Giving agents control of other computers as workers",
+      "Messaging your agents through connectors"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Install the server",
+        "detail": "Run the install script on Linux or macOS, or the PowerShell one-liner on Windows, and the quickstart walks you through the rest."
+      },
+      {
+        "title": "Add workers and connectors",
+        "detail": "Workers are the computers your agents control; connectors are the ways you message them."
+      },
+      {
+        "title": "Keep control in one place",
+        "detail": "The server holds secrets and controls, observability and the file server, and the network joins it to every worker."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Self-hosted on hardware you already have, including an old PC",
+        "Secrets, controls and observability sit in one server",
+        "Install scripts for Linux, macOS and Windows"
+      ],
+      "cons": [
+        "Needs a machine left running to be useful",
+        "The architecture diagrams carry most of the explanation, with written detail in separate docs"
+      ]
+    }
+  },
+  {
+    "id": 2168,
+    "name": "MindThread MCP",
+    "description": "MindThread MCP is a Threads scheduler built for AI agents. Through Meta's official Threads API it lets Claude, Cursor or any MCP client write, schedule and publish posts, review drafted replies and read insights, with 40+ tools and per-permission controls.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://github.com/ppcvote/mindthread-mcp",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "MindThread MCP is a Threads scheduler built for AI agents. Through Meta's official Threads API it lets Claude, Cursor or any MCP client write, schedule and publish posts, review drafted replies and read insights, with 40+ tools and per-permission controls.",
+    "last_updated": "2026-10-26",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Scheduling Threads posts from an AI agent",
+      "Keeping an agent's posting inside brand rules",
+      "Reviewing drafted replies before they go out"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Write and schedule",
+        "detail": "Generate one to five drafts in the account's voice, or threads of two to ten parts, then publish text, a single image, a carousel or video, now or at an exact time."
+      },
+      {
+        "title": "Enforce content rules",
+        "detail": "Length limits, banned phrases, no hashtags and only numbers from your fact list are enforced by the server rather than suggested in a prompt."
+      },
+      {
+        "title": "Approve before posting",
+        "detail": "Every key has per-permission allow, ask or deny; with ask, the post waits until you confirm it."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Content rules are enforced server-side instead of being asked for in a prompt",
+        "Per-permission allow, ask or deny on every key",
+        "Cloud patrol searches Threads for your keywords and drafts replies for you to approve or reject"
+      ],
+      "cons": [
+        "Bound to Threads and to Meta's official API",
+        "A free sandbox key is offered, which suggests it is early"
+      ]
+    }
+  },
+  {
+    "id": 2169,
+    "name": "Kashkeshet",
+    "description": "Kashkeshet is an MCP server written in Rust that lets your AI agents set up chat channels and talk to each other. It is deliberately non-opinionated: it hands agents a basic set of primitives and leaves how they use them to you and to them.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/sam-mfb/kashkeshet",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Kashkeshet is an MCP server written in Rust that lets your AI agents set up chat channels and talk to each other. It is deliberately non-opinionated: it hands agents a basic set of primitives and leaves how they use them to you and to them.",
+    "last_updated": "2026-10-26",
+    "skill_level": "advanced",
+    "best_for": [
+      "Letting several agents talk to each other",
+      "Watching agent-to-agent conversation from a web page",
+      "Running agent chat on localhost or a tailnet"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Install and serve",
+        "detail": "Install with the release script on macOS or Linux, then run kkt service install to start it at each login, or kkt serve in a terminal."
+      },
+      {
+        "title": "Connect your clients",
+        "detail": "The server listens on localhost at 127.0.0.1:7420, and every client and the web page share an access key that kkt creates for you."
+      },
+      {
+        "title": "Watch the conversation",
+        "detail": "A web page lets you monitor the channels your agents set up and the messages going between them."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Gives agents primitives rather than a prescribed workflow",
+        "A web page for monitoring what the agents are actually saying",
+        "Installs as a background service and starts again at login"
+      ],
+      "cons": [
+        "Security is minimal by design: it prevents accidental connections and nothing more",
+        "Intended for localhost or a network you control, such as a tailnet"
+      ]
+    }
+  },
+  {
+    "id": 2170,
+    "name": "Free ASR",
+    "description": "Free ASR is a zero-dependency, pure-Swift real-time streaming speech-to-text client and complete protocol specification, reverse-engineered from Doubao Input Method for macOS. It documents what the gateway actually validates and what it does not.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://github.com/nomoat/free-asr",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Free ASR is a zero-dependency, pure-Swift real-time streaming speech-to-text client and complete protocol specification, reverse-engineered from Doubao Input Method for macOS. It documents what the gateway actually validates and what it does not.",
+    "last_updated": "2026-10-26",
+    "skill_level": "advanced",
+    "best_for": [
+      "Streaming speech-to-text on macOS without an account",
+      "Understanding how a commercial ASR WebSocket gateway authenticates",
+      "Building a Swift ASR client with no dependencies"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Stream audio",
+        "detail": "A pure-Swift client for the streaming ASR WebSocket gateway, which works without signing into an account."
+      },
+      {
+        "title": "Read the protocol",
+        "detail": "The repository documents how authentication and streaming work, including which fields the server checks and which it ignores."
+      },
+      {
+        "title": "Generate a device id",
+        "detail": "Any randomly generated 16-digit numeric string is accepted; the server uses device_id only for rate-limiting buckets and log tracing."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Zero dependencies and pure Swift",
+        "Documents the protocol rather than only shipping a binary",
+        "No account login and no device registration required"
+      ],
+      "cons": [
+        "Reverse-engineered from a commercial app, so it can break without notice",
+        "Rate limiting still applies through the device_id bucket"
+      ]
+    }
+  },
+  {
+    "id": 2171,
+    "name": "Skill Spotter",
+    "description": "Skill Spotter is a Claude Code plugin that notices tasks you keep repeating and offers to save them as a skill you can run with /name. It compares what Claude did, not just what you typed, so a rephrased request still counts.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://github.com/ykisana/skill-spotter",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Skill Spotter is a Claude Code plugin that notices tasks you keep repeating and offers to save them as a skill you can run with /name. It compares what Claude did, not just what you typed, so a rephrased request still counts.",
+    "last_updated": "2026-10-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Turning repeated Claude Code requests into reusable skills",
+      "Spotting instructions you keep retyping",
+      "Keeping automation local and private"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Spot the repeat",
+        "detail": "After the third request of a kind, a band offers to create a named skill; Claude drafts it, and next time /name does the task."
+      },
+      {
+        "title": "Match the task, not the words",
+        "detail": "It compares the commands, files and tools Claude used as well as your prompt, and it also spots multi-prompt workflows."
+      },
+      {
+        "title": "Retire repeated rules",
+        "detail": "When you add the same instruction to many different requests, it offers to put it in CLAUDE.md instead."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Everything stays on your computer, with no upload, telemetry or account",
+        "Uses no tokens per turn; suggestions are shown to you, not to Claude",
+        "Never creates a skill on its own; you decide with /skill-spotter:draft"
+      ],
+      "cons": [
+        "Claude Code only, and demonstrated in a session of version 2.1.308",
+        "It only suggests; running the draft command is still up to you"
+      ]
+    }
+  },
+  {
+    "id": 2172,
+    "name": "App Factory",
+    "description": "App Factory is a Claude Code plugin marketplace of 42 skills in eight opt-in tracks that build, describe, ship and announce apps to the App Store, Google Play, and directly on Mac and Windows. You enable only the tracks a repo needs.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/yybd/app-factory",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "App Factory is a Claude Code plugin marketplace of 42 skills in eight opt-in tracks that build, describe, ship and announce apps to the App Store, Google Play, and directly on Mac and Windows. You enable only the tracks a repo needs.",
+    "last_updated": "2026-10-22",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Shipping an app to the App Store or Google Play with an agent",
+      "Loading only the skills a given repository needs",
+      "Automating store metadata and release announcements"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Add the marketplace",
+        "detail": "Run claude plugin marketplace add yybd/app-factory, then enable.py picks the tracks for your repo and prints the install lines."
+      },
+      {
+        "title": "Check a name",
+        "detail": "The skills ship ordinary command-line scripts, including check_name.py, which audits a name against the live App Store."
+      },
+      {
+        "title": "Catch a dropped claim",
+        "detail": "measure_copy.py catches a translation that dropped a claim from the original copy."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Opt-in tracks mean a session only carries the skills that repo needs",
+        "The scripts are ordinary command-line tools, not agent-only magic",
+        "QUICKSTART walks the whole thing in about fifteen minutes, for one app"
+      ],
+      "cons": [
+        "Built for Claude Code and tested only there; most skills find scripts through CLAUDE_PLUGIN_ROOT",
+        "42 skills across eight tracks is a lot to learn before it pays off"
+      ]
+    }
+  },
+  {
+    "id": 2173,
+    "name": "SuperCMO Skills",
+    "description": "SuperCMO Skills are open source skills that let any AI agent generate end-to-end marketing campaigns. You provide a product photo and a brief; the agent extracts product details, selects image and video models, casts AI actors and edits the result.",
+    "category": "Video",
+    "pricing": "Open Source",
+    "url": "https://github.com/SupercmoHQ/superCMO-skills",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SuperCMO Skills are open source skills that let any AI agent generate end-to-end marketing campaigns. You provide a product photo and a brief; the agent extracts product details, selects image and video models, casts AI actors and edits the result.",
+    "last_updated": "2026-10-22",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Generating UGC and ad videos from one product photo",
+      "Keeping actors and products consistent across a campaign",
+      "Running marketing generation in Claude Code, Cursor or Codex"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Install into your agent",
+        "detail": "One npx command installs the skills into Claude Code, Cursor and Codex; for Cursor you add --cursor --project-dir . so they land in the project too."
+      },
+      {
+        "title": "Give it a photo and a brief",
+        "detail": "The agent extracts the product details, picks the models, casts AI actors and edits the generated content into finished assets."
+      },
+      {
+        "title": "Make longer pieces",
+        "detail": "It can produce videos of any length while maintaining actor and product consistency."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One command installs into several different agents",
+        "Actor and product consistency is an explicit goal rather than a side effect",
+        "Apache-2.0 licensed and open source, as an alternative to closed marketing agents"
+      ],
+      "cons": [
+        "Installation requires uv",
+        "Output quality depends on the external image and video models it routes to"
+      ]
+    }
+  },
+  {
+    "id": 2174,
+    "name": "Bitty",
+    "description": "Bitty fills the gaps while your AI works, with brain games sized to the wait. You hit a shortcut or tell it roughly how long the agent will take, and a math, memory, pattern, logic, estimate or code challenge is already there.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://playbitty.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Bitty fills the gaps while your AI works, with brain games sized to the wait. You hit a shortcut or tell it roughly how long the agent will take, and a math, memory, pattern, logic, estimate or code challenge is already there.",
+    "last_updated": "2026-10-17",
+    "skill_level": "beginner",
+    "best_for": [
+      "Filling short waits while an agent runs",
+      "Avoiding the scroll that turns thirty seconds into eight minutes",
+      "Getting back to work the moment the agent finishes"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Start a challenge",
+        "detail": "Hit the shortcut when the agent starts working, or tell Bitty roughly how long it will take."
+      },
+      {
+        "title": "Play to the clock",
+        "detail": "Challenges are sized to the wait, from a five second blitz upward, so you choose how long the AI is taking rather than which game."
+      },
+      {
+        "title": "Bow out instantly",
+        "detail": "Press Esc and the challenge leaves mid-question; the site is explicit that work always wins."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free, with direct downloads for macOS, Windows and Linux and no app store",
+        "Works offline",
+        "Esc exits immediately, so it never competes with the actual work"
+      ],
+      "cons": [
+        "Only useful if your agent really does leave you waiting",
+        "The games are deliberately tiny, so it is not a general training app"
+      ]
+    }
+  },
+  {
+    "id": 2175,
+    "name": "Roadster AI",
+    "description": "Roadster AI turns a photo of your car into a stunt video. You choose one of six stunts, upload a photo with the whole vehicle in frame and all wheels visible, and get a short clip of lift-off, a roll over a line of cars and a landing.",
+    "category": "Video",
+    "pricing": "Unknown",
+    "url": "https://flyingcar-ai.net",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Roadster AI turns a photo of your car into a stunt video. You choose one of six stunts, upload a photo with the whole vehicle in frame and all wheels visible, and get a short clip of lift-off, a roll over a line of cars and a landing.",
+    "last_updated": "2026-10-17",
+    "skill_level": "beginner",
+    "best_for": [
+      "Turning a car photo into a stunt clip",
+      "Making product ads that borrow the same stunt format",
+      "Short social video in 16:9, 9:16 or 1:1"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Pick a stunt",
+        "detail": "Six stunts are available to preview: ramp flip, ramp kickflip, side kickflip, trackside kickflip, thruster close-up and overhead ramp."
+      },
+      {
+        "title": "Upload your car or product",
+        "detail": "Cars, SUVs, trucks and bikes, or products for ads; JPG, PNG or WebP up to 20 MB, with the whole vehicle in frame and all wheels visible."
+      },
+      {
+        "title": "Choose a shape",
+        "detail": "Output comes in 16:9, 9:16 and 1:1, with sound effects."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One narrow, well-defined output instead of a generic text-to-video prompt box",
+        "Products can stand in for cars, which makes it usable for ads",
+        "Three aspect ratios for different social surfaces"
+      ],
+      "cons": [
+        "One trick, tied to a specific stunt format",
+        "The upload rules are strict: whole vehicle in frame, all wheels visible, side or three-quarter view"
+      ]
+    }
+  },
+  {
+    "id": 2176,
+    "name": "JSONEx Lab",
+    "description": "JSONEx Lab classifies products into HS (Harmonized System) customs codes with AI. Type a product description and get a six to ten digit code with a confidence score, through the web form, a REST API, an MCP server or a Google Sheets add-on.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://jsonexlab.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "JSONEx Lab classifies products into HS (Harmonized System) customs codes with AI. Type a product description and get a six to ten digit code with a confidence score, through the web form, a REST API, an MCP server or a Google Sheets add-on.",
+    "last_updated": "2026-10-16",
+    "skill_level": "beginner",
+    "best_for": [
+      "Classifying products for import and export",
+      "Adding HS code lookup to an AI agent over MCP",
+      "Batch-classifying a whole product catalogue"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Classify one product",
+        "detail": "Type a product on the home page with no signup and get a code with a confidence score; the example returns 8471.30 at 90% for an iPhone 15 Pro."
+      },
+      {
+        "title": "Call it from an agent",
+        "detail": "There is a REST API, a Model Context Protocol server for AI agents, and a Google Sheets add-on."
+      },
+      {
+        "title": "Do a whole catalogue",
+        "detail": "Batch up to 100 items in a single request."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free tier of 50 classifications a day with no credit card and no signup",
+        "Four surfaces: web form, REST API, MCP server and Google Sheets",
+        "x402 payments let an agent pay per call in USDC on Base without an API key"
+      ],
+      "cons": [
+        "The free tier is capped at 50 classifications a day",
+        "Confidence is a model estimate, so customs-critical work still needs checking"
+      ]
+    }
+  },
+  {
+    "id": 2177,
+    "name": "Heldkeys",
+    "description": "Heldkeys answers one question: if a prompt injection hijacked the AI agent running here, which credentials could it use? It lists them for your terminal, the agent's sandbox or the CI job, without printing a single secret.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/hugomn/heldkeys",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Heldkeys answers one question: if a prompt injection hijacked the AI agent running here, which credentials could it use? It lists them for your terminal, the agent's sandbox or the CI job, without printing a single secret.",
+    "last_updated": "2026-10-16",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Seeing which credentials an agent can reach",
+      "Checking a CI job for risky agent steps",
+      "Auditing access without exposing secrets"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "List what is reachable",
+        "detail": "Run it in the terminal, inside the agent's sandbox, or in CI to see which credentials are in reach there."
+      },
+      {
+        "title": "Check GitHub workflows",
+        "detail": "It flags risky AI agent steps in GitHub workflows."
+      },
+      {
+        "title": "Keep secrets out of output",
+        "detail": "The README is explicit that it never prints secrets, and the project carries a badge saying so."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Answers one concrete threat-model question rather than scanning broadly",
+        "Works in the terminal, the sandbox and CI",
+        "Never prints a secret"
+      ],
+      "cons": [
+        "It lists what is reachable; deciding what to remove is still yours",
+        "Scoped to the machine it runs on rather than a fleet"
+      ]
+    }
+  },
+  {
+    "id": 2178,
+    "name": "Termexo",
+    "description": "Termexo is a Windows workbench where one AI operates your other coding agents. It works with Claude Code, Codex, OpenCode, Antigravity and Grok Build: you see which agent needs you, resume sessions, and reconnect from your phone.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/gemron/Termexo",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Termexo is a Windows workbench where one AI operates your other coding agents. It works with Claude Code, Codex, OpenCode, Antigravity and Grok Build: you see which agent needs you, resume sessions, and reconnect from your phone.",
+    "last_updated": "2026-10-16",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Running several coding agents on Windows",
+      "Seeing which agent is waiting for you",
+      "Resuming an agent session from your phone"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Install on Windows",
+        "detail": "A Tauri 2 desktop app at version 0.11.0, also published to npm, with downloads on the releases page."
+      },
+      {
+        "title": "Watch your agents",
+        "detail": "See which agent needs you instead of checking each one yourself."
+      },
+      {
+        "title": "Resume from elsewhere",
+        "detail": "Resume sessions and reconnect from your phone."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Covers several agent harnesses at once rather than one",
+        "Phone reconnects mean you are not tied to the Windows machine",
+        "Open source, and also installable from npm"
+      ],
+      "cons": [
+        "Windows only",
+        "It sits above your agents, so it is another thing to keep updated"
+      ]
+    }
+  },
+  {
+    "id": 2179,
+    "name": "Ecsodus",
+    "description": "Ecsodus migrates AWS Copilot CLI apps to Terraform-managed ECS in place, with no downtime and no data loss. It inventories, reports, generates, retain-patches, imports and tears down, as a read-only, gated runbook.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/moneytool/ecsodus",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Ecsodus migrates AWS Copilot CLI apps to Terraform-managed ECS in place, with no downtime and no data loss. It inventories, reports, generates, retain-patches, imports and tears down, as a read-only, gated runbook.",
+    "last_updated": "2026-10-13",
+    "skill_level": "advanced",
+    "best_for": [
+      "Leaving AWS Copilot CLI after support ended",
+      "Moving ECS apps to Terraform without an outage",
+      "Importing existing infrastructure instead of rebuilding it"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Inventory and report",
+        "detail": "Read-only steps come first, so you see what would change before anything does."
+      },
+      {
+        "title": "Generate and import",
+        "detail": "Terraform is generated, then existing resources are imported, with retain patches applied so teardown cannot delete them."
+      },
+      {
+        "title": "Tear down safely",
+        "detail": "The Copilot stack is removed only after the import has been verified."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Migration in place with no downtime and no data loss as the stated goal",
+        "Read-only first, and the runbook is gated",
+        "A documented end-to-end run on AWS reports 44 of 44 imports and zero data loss"
+      ],
+      "cons": [
+        "Narrow in scope: AWS Copilot CLI to Terraform on ECS only",
+        "Needs Terraform 1.10 or newer and Python"
+      ]
+    }
+  },
+  {
+    "id": 2180,
+    "name": "Squeeze",
+    "description": "Squeeze reads a tool's output on stdin and prints only what an agent acts on: every change, failure and decision, plus a note naming what it cut. It detects the format, so a terraform plan of 6,294 bytes comes back as 485.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/cauebraz/squeeze",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Squeeze reads a tool's output on stdin and prints only what an agent acts on: every change, failure and decision, plus a note naming what it cut. It detects the format, so a terraform plan of 6,294 bytes comes back as 485.",
+    "last_updated": "2026-10-13",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Cutting the tokens an agent spends reading tool output",
+      "Piping test and plan output into an agent",
+      "Keeping context for decisions instead of noise"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Pipe it",
+        "detail": "squeeze detects the format: run go test -json ./... 2>&1 | squeeze, or terraform show -json plan.out | squeeze."
+      },
+      {
+        "title": "Tell your agent",
+        "detail": "Add a line to AGENTS.md or CLAUDE.md telling the agent to pipe long tool output through squeeze, in the tool's JSON mode when it has one."
+      },
+      {
+        "title": "Recover the detail",
+        "detail": "Rerun with the flag squeeze names, such as --max-attrs 0, only when the output lacks what you need."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Detects the format, so you just pipe",
+        "Names what it cut, so the agent knows something was removed",
+        "Installs with go install and needs no running service"
+      ],
+      "cons": [
+        "No release yet; the output can change until 1.0",
+        "Lossy by design, so the agent may need a rerun with a flag"
+      ]
+    }
+  },
+  {
+    "id": 2181,
+    "name": "Scaled Thought",
+    "description": "Scaled Thought is an OpenAI-compatible API for open-weight models. Paste one line and your coding agent sets up models, keys and budgets itself, or point your existing OpenAI SDK at the base URL and pay per token from prepaid credits.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://scaledthought.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Scaled Thought is an OpenAI-compatible API for open-weight models. Paste one line and your coding agent sets up models, keys and budgets itself, or point your existing OpenAI SDK at the base URL and pay per token from prepaid credits.",
+    "last_updated": "2026-10-12",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Giving a coding agent its own model budget",
+      "Calling open-weight models through the OpenAI SDK",
+      "Prepaid per-token spend instead of a subscription"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Let the agent sign up",
+        "detail": "Paste one line into Claude Code, Codex, Cursor or any agent that can run commands, or run npx -y scaledthought@0.5 init yourself."
+      },
+      {
+        "title": "Keep your SDK code",
+        "detail": "Change the base URL and keep using the OpenAI SDK, with models such as MiMo-V2.6-Flash and DeepSeek-V4.1-Flash."
+      },
+      {
+        "title": "Pay per token",
+        "detail": "Usage is billed from prepaid credits rather than a monthly subscription."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "OpenAI-compatible, so existing code keeps working",
+        "An agent can provision its own key and budget",
+        "Prepaid credits keep the spend bounded"
+      ],
+      "cons": [
+        "Prepaid credits only, with no subscription option described",
+        "The free usage offer is limited to new accounts in the US region and expires after 30 days"
+      ]
+    }
+  },
+  {
+    "id": 2182,
+    "name": "Nyrion",
+    "description": "Nyrion is practice for the new AI-assisted coding interview format. Each problem is a small multi-stage repository, an AI assistant sits in the editor with you, and passing tests unlocks stages that escalate the requirements.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://nyrion.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Nyrion is practice for the new AI-assisted coding interview format. Each problem is a small multi-stage repository, an AI assistant sits in the editor with you, and passing tests unlocks stages that escalate the requirements.",
+    "last_updated": "2026-10-12",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Preparing for AI-assisted coding interviews",
+      "Reading unfamiliar code under time pressure",
+      "Practising directing an agent rather than typing"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Open a real codebase",
+        "detail": "Problems are small multi-stage repositories rather than isolated snippets."
+      },
+      {
+        "title": "Direct the agent",
+        "detail": "The assistant sits in the editor with you; the posture is full execution and zero novel ideas, so you stay the architect."
+      },
+      {
+        "title": "Pass to escalate",
+        "detail": "Tests gate progression, so passing them unlocks stricter requirements."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Matches the format that Meta, Shopify, Canva, LinkedIn and Rippling are described as using",
+        "Stage-gated progression mirrors how interviewers raise the bar in the room",
+        "Tests reading unfamiliar code and directing an assistant, not puzzle recall"
+      ],
+      "cons": [
+        "No pricing shown on the landing page",
+        "Only worth the time if you are actually interviewing in this format"
+      ]
+    }
+  },
+  {
+    "id": 2183,
+    "name": "XCrashlytics",
+    "description": "XCrashlytics is a macOS CLI for Firebase Crashlytics and local Xcode Organizer reports. It gives you and your coding agent access to crash messages, app stacks and impact reports without copying data out of the console by hand.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/0xfirattamur/xcrashlytics",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "XCrashlytics is a macOS CLI for Firebase Crashlytics and local Xcode Organizer reports. It gives you and your coding agent access to crash messages, app stacks and impact reports without copying data out of the console by hand.",
+    "last_updated": "2026-10-08",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Investigating production crashes from the terminal",
+      "Giving a coding agent real crash context",
+      "Finding which files crash most"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Start with a question",
+        "detail": "Begin from something like what is crashing checkout since the last release, rather than from a dashboard."
+      },
+      {
+        "title": "Pull the evidence",
+        "detail": "It reads crash messages, app stacks and impact reports from Firebase Crashlytics, and on iOS also reads reports Xcode has already downloaded."
+      },
+      {
+        "title": "Hand it to the agent",
+        "detail": "The argument is that your agent cannot investigate evidence it has never seen."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works with iOS, Android, macOS and other Crashlytics apps",
+        "Also reads Xcode Organizer reports already sitting on disk",
+        "Swift 6.0, MIT licensed, macOS 15 or newer"
+      ],
+      "cons": [
+        "macOS only",
+        "Needs Crashlytics or Xcode data to exist before it is useful"
+      ]
+    }
+  },
+  {
+    "id": 2184,
+    "name": "Truth Firewall",
+    "description": "Truth Firewall independently verifies your acceptance conditions before accepting DONE from a coding agent, and returns VERIFIED_DONE, REJECT_DONE or HUMAN_REQUIRED. The agent does the work; Truth Firewall decides whether DONE was earned.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/aldi949/truth-firewall",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Truth Firewall independently verifies your acceptance conditions before accepting DONE from a coding agent, and returns VERIFIED_DONE, REJECT_DONE or HUMAN_REQUIRED. The agent does the work; Truth Firewall decides whether DONE was earned.",
+    "last_updated": "2026-10-07",
+    "skill_level": "advanced",
+    "best_for": [
+      "Verifying an agent really finished the task",
+      "Catching skipped requirements and broken edge cases",
+      "Stopping the habit of re-checking everything yourself"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Install it",
+        "detail": "Install with pipx on Python 3.11 or newer, then run truth-firewall --version and truth-firewall demo."
+      },
+      {
+        "title": "Give Codex the task",
+        "detail": "Codex works, says DONE, and Truth Firewall verifies the required work before anything is accepted."
+      },
+      {
+        "title": "Read the verdict",
+        "detail": "The result is one of VERIFIED_DONE, REJECT_DONE or HUMAN_REQUIRED; on a rejection, Codex keeps working."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Three explicit outcomes instead of a vague pass",
+        "Verifies acceptance conditions independently of what the agent reported",
+        "A demo runs offline without a Codex account"
+      ],
+      "cons": [
+        "Authenticated Codex execution in 0.1.0 is a Windows-only pilot",
+        "You still have to write the acceptance conditions"
+      ]
+    }
+  },
+  {
+    "id": 2185,
+    "name": "ESP32 Pie ASR",
+    "description": "ESP32 Pie ASR runs live English speech recognition on an ESP32-P4: a 65.7M-parameter streaming Zipformer2 transducer whose weights were brought from 71 MB to 26.65 MB in 2 and 4 bits, running faster than real time on the chip alone.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://github.com/BoumedineBillal/esp32-pie-asr",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ESP32 Pie ASR runs live English speech recognition on an ESP32-P4: a 65.7M-parameter streaming Zipformer2 transducer whose weights were brought from 71 MB to 26.65 MB in 2 and 4 bits, running faster than real time on the chip alone.",
+    "last_updated": "2026-10-27",
+    "skill_level": "advanced",
+    "best_for": [
+      "On-device speech recognition on a microcontroller",
+      "Voice control with no cloud and no neural accelerator",
+      "Streaming ASR on RISC-V cores with PIE SIMD"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Flash from the browser",
+        "detail": "The project page flashes the firmware straight from your browser, and releases are published on GitHub."
+      },
+      {
+        "title": "Speak to the board",
+        "detail": "The board's microphone in, the words on its screen as you speak, with no cloud and no neural accelerator."
+      },
+      {
+        "title": "Try the demos",
+        "detail": "Six voice-control demos ship with the firmware."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Open vocabulary streaming ASR that runs faster than real time on a microcontroller",
+        "Weights are published on Hugging Face, built from Banafo's Kroko model",
+        "Firmware builds are automated, and you can flash from a browser"
+      ],
+      "cons": [
+        "English only, and tied to the ESP32-P4",
+        "Quantising to 2 and 4 bits trades accuracy for fitting on the chip"
+      ]
+    }
   }
 ]
