@@ -136,6 +136,52 @@ function buildJsonLd(tool: Tool, slug: string) {
   };
 }
 
+/**
+ * Title and description for a tool page.
+ *
+ * The old title was `${name} – ${category} AI Tool (${pricing})`, which gave all
+ * 1,141 pages the same shape and promised nothing a searcher wants - nobody
+ * clicks "Video AI Tool (Paid)". Search Console showed 111 clicks on 19,600
+ * impressions (0.6% CTR) at an average position of 17.1, and every top query was
+ * a brand name: people looking up one product to decide whether to use it. The
+ * page already answers exactly that, with an "Honest Review" section, pros and
+ * cons, a pricing badge, an FAQ block and "Alternatives to {name}". So the title
+ * now promises what is on the page instead of restating the category.
+ *
+ * The pattern stays under 60 characters for 97% of the catalogue and stays
+ * unique across all of them because the name is always in it.
+ */
+function buildToolMeta(tool: Tool) {
+  const pricingUnknown = !tool.pricing || tool.pricing === 'Unknown';
+  const title = `${tool.name} Review ${new Date().getFullYear()}: ${
+    pricingUnknown ? 'Features' : 'Pricing'
+  }, Pros & Alternatives`;
+
+  // A hard slice at 160 cut descriptions mid-word, so SERPs showed fragments
+  // like "assembling footage, a". Prefer the last complete sentence, but only
+  // when it fills enough of the snippet: cutting at a short first sentence
+  // wastes half the space (the average description here is 220 characters, so
+  // most tools have a second sentence worth showing). Below the threshold, fall
+  // back to a word boundary and mark the truncation.
+  const full = (tool.description_en || tool.description || '').trim();
+  let description = full;
+  if (full.length > 158) {
+    const head = full.slice(0, 158);
+    const sentenceEnd = Math.max(
+      head.lastIndexOf('. '),
+      head.lastIndexOf('! '),
+      head.lastIndexOf('? '),
+    );
+    if (sentenceEnd >= 130) {
+      description = head.slice(0, sentenceEnd + 1);
+    } else {
+      const wordEnd = head.lastIndexOf(' ');
+      description = `${head.slice(0, wordEnd > 0 ? wordEnd : 158).trimEnd()}…`;
+    }
+  }
+  return { title, description };
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const tool = findToolBySlug(slug);
@@ -148,8 +194,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
-  const title = `${tool.name} – ${tool.category} AI Tool (${tool.pricing})`;
-  const description = (tool.description_en || tool.description).slice(0, 160);
+  const { title, description } = buildToolMeta(tool);
 
   // Pages with no use cases, no pros/cons and no article pointing at them are
   // about 30 words of unique text. Google crawled those and declined to index
