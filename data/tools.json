@@ -12781,56 +12781,6 @@
     "rating_count": null
   },
   {
-    "id": 939,
-    "name": "VideoForge AI",
-    "description": "VideoForge AI is a paid AI video production suite aimed at marketing teams. It applies AI across the video production workflow — assembling footage, applying consistent styles and turning raw material into finished marketing videos — so campaigns can output more video without a larger crew. It is built for brand managers and agencies that produce video regularly, where speed and consistency matter more than one-off craft.",
-    "category": "Video",
-    "pricing": "Paid",
-    "url": "https://videoforge.ai",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "VideoForge AI is a paid AI video production suite aimed at marketing teams. It applies AI across the video production workflow — assembling footage, applying consistent styles and turning raw material into finished marketing videos — so campaigns can output more video without a larger crew. It is built for brand managers and agencies that produce video regularly, where speed and consistency matter more than one-off craft.",
-    "last_updated": "2026-05-31",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Marketing Teams",
-      "Brand Managers",
-      "Ad Agencies"
-    ],
-    "use_cases": [
-      {
-        "title": "Campaign Videos",
-        "detail": "Produce marketing videos for a campaign from existing footage"
-      },
-      {
-        "title": "Team Production",
-        "detail": "Let marketing teams assemble video without an external agency"
-      },
-      {
-        "title": "Brand Consistency",
-        "detail": "Apply consistent style across videos from the same brand"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Aimed at marketing teams producing video at volume",
-        "AI assistance targets repetitive steps in video production workflows",
-        "Fits agencies and brand teams that need consistent output"
-      ],
-      "cons": [
-        "Paid-only, so there is no free tier to trial",
-        "Single-purpose focus on marketing video, not general editing"
-      ]
-    },
-    "rating": null,
-    "rating_count": null
-  },
-  {
     "id": 941,
     "name": "HustleAI",
     "description": "HustleAI is a free tool that generates side-hustle ideas and turns them into simple action plans. Users describe their interests, available time, or skills, and the tool suggests business directions along with first steps such as target audience and next moves. It is aimed at aspiring entrepreneurs, students, and anyone exploring extra income without spending money upfront. Because it costs nothing to use, it serves as a low-risk starting point for brainstorming before investing further in an idea.",
@@ -15175,56 +15125,6 @@
       "cons": [
         "Paid-only pricing puts it out of reach for hobby writers",
         "English-only support limits its use for multilingual manuscripts"
-      ]
-    },
-    "rating": null,
-    "rating_count": null
-  },
-  {
-    "id": 1050,
-    "name": "ChoirAI",
-    "description": "ChoirAI is an AI vocal harmony generator for choral and vocal arrangers. From a lead melody it creates multi-part choral arrangements, assigning parts to voice types such as soprano or bass, and can export results as sheet music. It suits choir directors, arrangers and hobbyist composers who want quick harmony sketches or practice material rather than replacing live singers.",
-    "category": "Audio",
-    "pricing": "Freemium",
-    "url": "https://choirai.com",
-    "affiliate_link": "",
-    "icon_url": "",
-    "examples": [],
-    "needs_vpn": false,
-    "languages": [
-      "English"
-    ],
-    "description_en": "ChoirAI is an AI vocal harmony generator for choral and vocal arrangers. From a lead melody it creates multi-part choral arrangements, assigning parts to voice types such as soprano or bass, and can export results as sheet music. It suits choir directors, arrangers and hobbyist composers who want quick harmony sketches or practice material rather than replacing live singers.",
-    "last_updated": "2026-05-31",
-    "skill_level": "intermediate",
-    "best_for": [
-      "Vocal Harmony",
-      "Choral Music",
-      "Arrangement"
-    ],
-    "use_cases": [
-      {
-        "title": "Harmony Sketching",
-        "detail": "Generate four-part harmonies from a simple lead melody"
-      },
-      {
-        "title": "Sheet Music",
-        "detail": "Export arranged parts as notation for rehearsal and printing"
-      },
-      {
-        "title": "Practice Material",
-        "detail": "Create demo harmonies for choir rehearsals and learning parts"
-      }
-    ],
-    "pros_cons": {
-      "pros": [
-        "Assigns parts across voice types for realistic choral textures",
-        "Sheet music export bridges AI output with traditional notation",
-        "Helpful for arrangers sketching harmonies before writing full scores"
-      ],
-      "cons": [
-        "MIDI choir sounds may not suit final commercial releases",
-        "Limited to vocal harmony rather than full arrangement or mixing"
       ]
     },
     "rating": null,
@@ -21741,7 +21641,7 @@
   {
     "id": 1441,
     "name": "Nichesss",
-    "description": "Nichesss is an AI content tool built around niche business discovery. It helps users find profitable niche ideas, then generates marketing content such as ad copy, blog outlines, and social posts tailored to those niches. Side hustlers, affiliate marketers, and small business owners use it to validate ideas and start content plans quickly, and the tool operates on a paid subscription rather than a free tier.",
+    "description": "Nichesss is an AI writer built from a library of more than 150 single-task templates rather than one chat box. Each template handles a specific job: blog post titles and outlines, Facebook and Google ad copy, YouTube descriptions and video ideas, book blurbs, business and band names, author bios, tweets and threads. A long-form editor generates drafts of 500 words or more from a few variables. It sells on price rather than model quality: a free trial with no contract, then a $59 lifetime deal with a 30-day refund window, positioned against the monthly subscriptions of Jasper, Copy.ai and Rytr, which its own site names as alternatives.",
     "category": "Writing",
     "pricing": "Paid",
     "url": "https://nichesss.com",
@@ -21752,7 +21652,9 @@
       "English"
     ],
     "best_for": [
-      "Side hustlers who need AI to generate niche business and marketing ideas"
+      "Template-based copywriting",
+      "One-off budgets",
+      "Blog and YouTube production"
     ],
     "description_en": "Nichesss is an AI content tool built around niche business discovery. It helps users find profitable niche ideas, then generates marketing content such as ad copy, blog outlines, and social posts tailored to those niches. Side hustlers, affiliate marketers, and small business owners use it to validate ideas and start content plans quickly, and the tool operates on a paid subscription rather than a free tier.",
     "rating": null,
@@ -21760,29 +21662,32 @@
     "examples": [],
     "use_cases": [
       {
-        "title": "Niche Discovery",
-        "detail": "Explore business and content niche ideas before committing to one direction"
+        "title": "Template-driven copy",
+        "detail": "Pick one of 150+ task templates, fill in the inputs, get copy for that exact format."
       },
       {
-        "title": "Marketing Content",
-        "detail": "Generate ad copy and social posts tailored to discovered niches"
+        "title": "Long-form drafts",
+        "detail": "Use the long-form editor to generate 500-word-plus articles from a few variables."
       },
       {
-        "title": "Idea Validation",
-        "detail": "Turn rough business concepts into structured plans and content outlines"
+        "title": "Naming and channel copy",
+        "detail": "Generate business names, band names, YouTube channel names and playlist descriptions."
       }
     ],
     "pros_cons": {
       "pros": [
-        "Combines niche research with content generation in one subscription",
-        "Helps side hustlers move from idea to first marketing copy quickly",
-        "Content templates cover common formats like ads, outlines, and posts"
+        "150+ templates cover narrow formats that a general chatbot makes you specify by hand",
+        "A $59 lifetime deal with a 30-day refund window, where comparable tools bill monthly",
+        "A free trial runs before any payment is taken",
+        "The long-form editor handles drafts of 500 words and up"
       ],
       "cons": [
-        "No free tier means users pay before testing output quality",
-        "Niche suggestions should be validated with real market research before acting"
+        "Template output settles into a recognisable house style, so expect a voice-editing pass",
+        "No monthly plan is shown on the site, so the lifetime price is the only route past the trial",
+        "With 150+ tools, most users will end up using a handful and ignoring the rest"
       ]
-    }
+    },
+    "last_updated": "2026-10-28"
   },
   {
     "id": 1442,
