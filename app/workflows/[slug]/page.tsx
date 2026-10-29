@@ -47,12 +47,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return { title: 'Not Found – Use AI Tools' };
   }
 
+  // The stored description is one short sentence (53-68 characters), which
+  // left the snippet half empty on all ten workflow pages. The steps, the
+  // time estimate and the named tools are already in the data, so the snippet
+  // is assembled from those instead of inventing anything.
+  const namedTools: string[] = [];
+  for (const step of workflow.steps) {
+    for (const id of step.tool_ids) {
+      const tool = tools.find(t => t.id === id);
+      if (tool && !namedTools.includes(tool.name)) namedTools.push(tool.name);
+    }
+  }
+  const stepCount = workflow.steps.length;
+  const toolsPart = namedTools.length
+    ? ` Uses ${namedTools.slice(0, 3).join(', ')}${namedTools.length > 3 ? ' and more' : ''}.`
+    : '';
+  const description = `${workflow.description_en.replace(/\.$/, '')}: ${stepCount} steps, about ${workflow.estimated_time_en}, ${workflow.difficulty} level.${toolsPart}`;
+
   const title = `${workflow.name_en} – Use AI Tools`;
-  const description = workflow.description_en;
 
   return {
     title,
     description,
+    alternates: { canonical: `https://useaitools.me/workflows/${workflow.id}` },
     openGraph: {
       title,
       description,
@@ -118,7 +135,7 @@ export default async function WorkflowDetailPage({ params }: { params: Promise<{
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                {workflow.estimated_time}
+                {workflow.estimated_time_en}
               </span>
             </div>
 

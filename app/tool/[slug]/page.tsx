@@ -148,14 +148,28 @@ function buildJsonLd(tool: Tool, slug: string) {
  * cons, a pricing badge, an FAQ block and "Alternatives to {name}". So the title
  * now promises what is on the page instead of restating the category.
  *
- * The pattern stays under 60 characters for 97% of the catalogue and stays
- * unique across all of them because the name is always in it.
+ * The pattern is capped at 62 characters and stays unique across the whole
+ * catalogue because the name is always in it.
  */
 function buildToolMeta(tool: Tool) {
   const pricingUnknown = !tool.pricing || tool.pricing === 'Unknown';
-  const title = `${tool.name} Review ${new Date().getFullYear()}: ${
-    pricingUnknown ? 'Features' : 'Pricing'
-  }, Pros & Alternatives`;
+  const year = new Date().getFullYear();
+  const pricingWord = pricingUnknown ? 'Features' : 'Pricing';
+
+  // The full pattern is 41 characters of suffix, which pushes a long product
+  // name past the ~60 characters Google shows before truncating - nine tools
+  // were over, the worst at 76. Truncation cuts the part that earns the click
+  // ("Pros & Alternatives"), so drop qualifiers from the tail instead until the
+  // whole thing fits. Every variant still leads with the name and "Review",
+  // which is what these pages are searched for.
+  const titleCandidates = [
+    `${tool.name} Review ${year}: ${pricingWord}, Pros & Alternatives`,
+    `${tool.name} Review ${year}: ${pricingWord} & Pros`,
+    `${tool.name} Review ${year}`,
+    `${tool.name} Review`,
+  ];
+  const title =
+    titleCandidates.find(candidate => candidate.length <= 62) ?? `${tool.name} Review`;
 
   // A hard slice at 160 cut descriptions mid-word, so SERPs showed fragments
   // like "assembling footage, a". Prefer the last complete sentence, but only

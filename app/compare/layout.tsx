@@ -1,5 +1,14 @@
 import type { Metadata } from 'next';
 
+// Deliberately no `alternates.canonical` here.
+//
+// A layout-level canonical is inherited by every route underneath it, so
+// setting it to /compare made /compare/video, /compare/audio and
+// /compare/writing each declare themselves duplicates of the hub - they could
+// never be indexed for their own category. /compare itself declares its own
+// canonical in app/compare/page.tsx. Any new page below /compare must do the
+// same rather than rely on inheritance.
+
 export const metadata: Metadata = {
   title: 'Compare AI Tools Side by Side – Use AI Tools',
   description: 'Compare AI tools side by side. See features, pricing, ratings, and reviews for writing, image, video, audio, code, and productivity tools all in one place.',
@@ -15,44 +24,6 @@ export const metadata: Metadata = {
     title: 'Compare AI Tools Side by Side – Use AI Tools',
     description: 'Compare AI tools side by side. See features, pricing, ratings, and reviews for writing, image, video, audio, code, and productivity tools all in one place.',
   },
-  alternates: {
-    canonical: 'https://useaitools.me/compare',
-  },
-};
-
-const breadcrumbLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  'itemListElement': [
-    {
-      '@type': 'ListItem',
-      'position': 1,
-      'name': 'Home',
-      'item': 'https://useaitools.me',
-    },
-    {
-      '@type': 'ListItem',
-      'position': 2,
-      'name': 'Compare AI Tools',
-      'item': 'https://useaitools.me/compare',
-    },
-  ],
-};
-
-const webPageLd = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  'name': 'Compare AI Tools Side by Side',
-  'description': 'Compare AI tools side by side. See features, pricing, ratings, and reviews for writing, image, video, audio, code, and productivity tools all in one place.',
-  'url': 'https://useaitools.me/compare',
-  'publisher': {
-    '@type': 'Organization',
-    'name': 'Use AI Tools',
-    'logo': {
-      '@type': 'ImageObject',
-      'url': 'https://useaitools.me/logo.png',
-    },
-  },
 };
 
 export default function CompareLayout({
@@ -60,17 +31,5 @@ export default function CompareLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageLd) }}
-      />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }

@@ -16,12 +16,15 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title,
     description,
+    // Search result pages are the canonical example of a page that should never
+    // be indexed: the same tools are already listed on the category pages, and
+    // every query string (?q=...) minted another URL that competed with them.
+    // The old canonical included the query, so it could not consolidate either.
+    // `follow` stays on so the links to real tool pages still count.
+    robots: { index: false, follow: true },
     openGraph: {
       title,
       description,
-    },
-    alternates: {
-      canonical: `https://useaitools.me/search${query ? `?q=${encodeURIComponent(query)}` : ''}`,
     },
   };
 }

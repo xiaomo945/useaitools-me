@@ -9,6 +9,9 @@ import { generateSlugFromName } from '@/lib/slug';
 export const metadata: Metadata = {
   title: 'AI Writing Tools Comparison - Use AI Tools',
   description: 'Compare the best AI writing tools including Rytr, Copy.ai, and Jasper. Find the perfect AI writing assistant for your content creation needs.',
+  // See the note in /compare/video: the layout canonical pointed all three of
+  // these at /compare, so none of them could rank for its own category.
+  alternates: { canonical: 'https://useaitools.me/compare/writing' },
 };
 
 type Tool = {
@@ -186,56 +189,6 @@ export default function WritingComparePage() {
               </tbody>
             </table>
           </div>
-        </div>
-
-        {/* Tool Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sortedTools.map((tool) => {
-            const pricingColors = getPricingColors(tool.pricing);
-            return (
-              <div
-                key={tool.id}
-                className="bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 p-6 hover:shadow-xl hover:shadow-blue-500/5 hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className={`w-12 h-12 rounded-xl ${getCategoryColors().bgLight} ${getCategoryColors().text} flex items-center justify-center text-xl font-bold`}>
-                      {tool.name.charAt(0)}
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg text-gray-900 dark:text-white">
-                        {tool.name}
-                      </h3>
-                      <div className="flex items-center gap-2 mt-1">
-                        <StarRating rating={tool.rating || 0} count={tool.rating_count || 0} size="sm" />
-                      </div>
-                    </div>
-                  </div>
-                  <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
-                    {tool.pricing}
-                  </span>
-                </div>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
-                  {tool.description}
-                </p>
-                <div className="flex gap-2">
-                  <Link
-                    href={`/tool/${generateSlugFromName(tool.name)}`}
-                    className="flex-1 px-4 py-2.5 text-sm font-semibold text-gray-600 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-center"
-                  >
-                    View Details
-                  </Link>
-                  <a
-                    href={getAffiliateLink(tool)}
-                    target="_blank" rel="noopener noreferrer"
-                    className="flex-1 px-4 py-2.5 text-sm font-semibold bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-colors text-center"
-                  >
-                    Try Now
-                  </a>
-                </div>
-              </div>
-            );
-          })}
         </div>
 
         {/* CTA Section */}

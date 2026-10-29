@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo, Suspense } from 'react';
+import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import type { Tool } from '@/types';
 import SearchFilters from '@/app/components/SearchFilters';
@@ -8,6 +9,18 @@ import { searchTools } from '@/lib/fuzzySearch';
 import toolsData from '@/data/tools.json';
 
 const tools = toolsData as unknown as Tool[];
+
+// An empty query used to fall through to "show every tool", which meant the
+// bare /search URL rendered all 1,165 result cards - a 3.9 MB document whose
+// only purpose was to sit there until someone typed. It is the largest page on
+// the site and it was in the sitemap. Now the empty state is a small set of
+// links into the category pages, which are the pages that should rank.
+const BROWSE_CATEGORIES = ['Writing', 'Image', 'Video', 'Audio', 'Code', 'Productivity'];
+const categoryCounts = BROWSE_CATEGORIES.map(name => ({
+  name,
+  slug: name.toLowerCase(),
+  count: tools.filter(t => t.category === name).length,
+}));
 
 function SearchPageInner() {
   const searchParams = useSearchParams();
@@ -85,7 +98,46 @@ function SearchPageInner() {
         </div>
 
         {/* Filters + Results */}
-        <SearchFilters tools={textFiltered} initialQuery={searchQuery} />
+        {searchQuery.trim() ? (
+          <SearchFilters tools={textFiltered} initialQuery={searchQuery} />
+        ) : (
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4 text-center">
+              Browse by category
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {categoryCounts.map(c => (
+                <Link
+                  key={c.slug}
+                  href={`/category/${c.slug}`}
+                  className="group flex flex-col gap-1 rounded-2xl border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-5 py-4 hover:border-emerald-500 hover:shadow-lg hover:shadow-emerald-500/5 transition-all"
+                >
+                  <span className="font-semibold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
+                    {c.name}
+                  </span>
+                  <span className="text-sm text-slate-500 dark:text-slate-400">
+                    {c.count} tools
+                  </span>
+                </Link>
+              ))}
+            </div>
+            <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-8">
+              Or start from{' '}
+              <Link href="/leaderboard" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">
+                the leaderboard
+              </Link>
+              ,{' '}
+              <Link href="/compare" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">
+                side-by-side comparisons
+              </Link>{' '}
+              or{' '}
+              <Link href="/blog" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">
+                our reviews
+              </Link>
+              .
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

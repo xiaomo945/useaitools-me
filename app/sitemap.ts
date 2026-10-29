@@ -112,6 +112,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // /history and /saved are deliberately absent: they are per-visitor pages
   // whose content is whatever the reader browsed or bookmarked, so there is no
   // stable page for a crawler. They carry `noindex` in their own layout.
+  //
+  // /search is absent for the same reason, one step removed: it is a noindex
+  // result page, and every ?q= variant would otherwise be offered for crawling.
   const staticPages = [
     { url: baseUrl, lastModified: currentDate, changeFrequency: 'daily' as const, priority: 1 },
     { url: `${baseUrl}/about`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.5 },
@@ -129,7 +132,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/press`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.4 },
     { url: `${baseUrl}/privacy`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
     { url: `${baseUrl}/scenes`, lastModified: currentDate, changeFrequency: 'weekly' as const, priority: 0.7 },
-    { url: `${baseUrl}/search`, lastModified: currentDate, changeFrequency: 'daily' as const, priority: 0.7 },
     { url: `${baseUrl}/submit`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.3 },
     { url: `${baseUrl}/writer`, lastModified: currentDate, changeFrequency: 'monthly' as const, priority: 0.6 },

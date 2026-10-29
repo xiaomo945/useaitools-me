@@ -161,6 +161,12 @@ const nextConfig: NextConfig = {
       { from: 'ai-audio-tools-professional-podcasts-2026', to: 'ai-audio-tools-podcasters-2026' },
       { from: 'best-ai-tools-facebook-marketing-2026', to: 'ai-tools-social-media-management-2026' },
       { from: 'best-free-ai-tools-small-teams-2026', to: 'best-free-ai-tools-need-to-try-2026' },
+      // Three articles were competing for "best free AI tools for startups":
+      // two generic 7-tool listicles and one essay about the four jobs a
+      // pre-revenue team does. The weaker listicle is gone, the survivor owns
+      // the plain slug, and the essay moved to a slug that describes it.
+      { from: 'best-free-ai-tools-startups-2026-613', to: 'best-free-ai-tools-startups-2026' },
+      { from: 'best-free-ai-tools-startups-2026-704', to: 'best-free-ai-tools-startups-2026' },
     ];
 
     return [
