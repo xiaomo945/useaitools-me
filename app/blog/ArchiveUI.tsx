@@ -102,34 +102,43 @@ function pageWindow(current: number, total: number): (number | 'gap')[] {
 }
 
 /**
+ * Pagination lives in the path, never in a query string.
+ *
+ * `?page=2` used to be the pager's URL shape, and reading `searchParams` on the
+ * server forces the whole route to render per request: Next answers with
+ * `Cache-Control: private, no-store`, so the CDN can never hold the archive and
+ * every crawler hit on /blog re-rendered ~200 KB of HTML at the origin. That was
+ * a large part of the site's Fast Origin Transfer bill.
+ *
+ * Putting the page number in the path lets each page be prerendered at build
+ * time and served from cache, and hands crawlers a plain static URL per page.
+ */
+export function archivePageHref(base: string, page: number): string {
+  return page <= 1 ? base : `${base}/page/${page}`;
+}
+
+/**
  * Crawlable pagination. The archive used to page with `router.push()`, which
  * emits no anchors at all, so pages 2..N of the blog were unreachable for
  * anything that does not run the site's JavaScript.
  *
- * `base` is '/blog' for the index and '/blog/category/<slug>' for a category.
+ * `base` is '/blog' for the index and '/blog/category/<slug>' for a category;
+ * `archivePageHref` turns that into '/blog/page/2' and so on.
  */
 export function ArchivePager({
   current,
   total,
   totalPosts,
-  category,
   base,
 }: {
   current: number;
   total: number;
   totalPosts: number;
-  category: string | null;
   base: string;
 }) {
   if (total <= 1) return null;
 
-  const href = (page: number) => {
-    const params = new URLSearchParams();
-    if (category) params.set('category', category);
-    if (page > 1) params.set('page', String(page));
-    const qs = params.toString();
-    return qs ? `${base}?${qs}` : base;
-  };
+  const href = (page: number) => archivePageHref(base, page);
 
   const edge = 'pointer-events-none opacity-40';
   const normal =
