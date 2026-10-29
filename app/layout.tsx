@@ -96,9 +96,18 @@ export const metadata: Metadata = {
     site: '@jiongxiaomo',
     creator: '@jiongxiaomo',
   },
-  alternates: {
-    canonical: 'https://useaitools.me',
-  },
+  // No `alternates.canonical` here on purpose.
+  //
+  // This block used to set `canonical: 'https://useaitools.me'` for the entire
+  // site. A canonical belongs to one page, so a root-layout default means every
+  // route that does not override it declares itself a duplicate of the
+  // homepage. /about, /privacy, /terms, /collections, /community, /leaderboard,
+  // /workflows and /press were all doing exactly that — Google could never index
+  // them as themselves, and it burned crawl budget fetching pages it was then
+  // told to discard.
+  //
+  // Pages now declare their own canonical, or declare none and let the URL speak
+  // for itself. The homepage sets `alternates: { canonical: '/' }` in app/page.tsx.
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },

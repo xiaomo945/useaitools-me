@@ -118,6 +118,11 @@ export function categoryMetadata(category: Category, page: number): Metadata {
     title: `${categoryName} AI Tools – Page ${page}`,
     description,
     robots: { index: false, follow: true },
+    // Self-referencing, not omitted. `app/layout.tsx` sets a global
+    // `canonical: https://useaitools.me`, so any page that does not override it
+    // claims to be a duplicate of the homepage — which is what this route did
+    // before this line existed.
+    alternates: { canonical: `${canonical}/page/${page}` },
   };
 }
 
