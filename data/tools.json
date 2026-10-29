@@ -57742,5 +57742,1305 @@
         "Quantising to 2 and 4 bits trades accuracy for fitting on the chip"
       ]
     }
+  },
+  {
+    "id": 2186,
+    "name": "Pidgeon",
+    "description": "Pidgeon gives AI agents email inboxes of their own: send and receive over an API, read whole threads, work over webhooks, IMAP and MCP, and let a person take a thread back when it needs one. Mail is hosted in the EU and is never trained on, and every inbound message passes a Firewall that returns a verdict.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://pidgeon.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pidgeon gives AI agents email inboxes of their own: send and receive over an API, read whole threads, work over webhooks, IMAP and MCP, and let a person take a thread back when it needs one. Mail is hosted in the EU and is never trained on, and every inbound message passes a Firewall that returns a verdict.",
+    "last_updated": "2026-10-29",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agents that need to send mail at volume from their own address",
+      "Reading invoices, forms and attachments out of inbound mail",
+      "Signing up for third-party tools without handing over your credentials"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Hold a conversation",
+        "detail": "Read what comes in, answer in the same thread, and hand it to a person when it needs one; the agent stops and picks up again when the thread is handed back."
+      },
+      {
+        "title": "Keep the calendar",
+        "detail": "Set up meetings, confirm bookings and deal with changes, all by email."
+      },
+      {
+        "title": "Register for other tools",
+        "detail": "Sign up for third-party services with the agent's own address rather than your credentials, with every confirmation code arriving with a Firewall verdict."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "An inbox is one API call, with threads, webhooks, IMAP and MCP supported",
+        "Hosted in the EU, and the content of your mail is never used for training",
+        "Founders get three inboxes on their own domain free"
+      ],
+      "cons": [
+        "New product, so the integration surface is still moving",
+        "The Firewall verdict is only as good as the screening rules behind it"
+      ]
+    }
+  },
+  {
+    "id": 2187,
+    "name": "Dante AI Agent Antivirus",
+    "description": "Dante is a zero-dependency auditor for AI agent exposure: it checks the places an agent or a thief reaches for on your own machine, including leaked keys, SSH configuration and MCP configs, and shows the proof line behind every verdict. It runs offline with no account, ships as MIT-licensed plain JavaScript with no install scripts, and extends through signed data packs that carry rules rather than code.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://ai-agent-antivirus.space/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Dante is a zero-dependency auditor for AI agent exposure: it checks the places an agent or a thief reaches for on your own machine, including leaked keys, SSH configuration and MCP configs, and shows the proof line behind every verdict. It runs offline with no account, ships as MIT-licensed plain JavaScript with no install scripts, and extends through signed data packs that carry rules rather than code.",
+    "last_updated": "2026-10-29",
+    "skill_level": "advanced",
+    "best_for": [
+      "Checking what a coding agent can reach before you let it run",
+      "Auditing SSH, secrets and MCP configuration on your own machines",
+      "Teams that want a readable, auditable scanner rather than a signature database"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Check your own machine",
+        "detail": "Install it, turn Wi-Fi off and run it: the watchman needs no internet and no account to check keys, SSH, MCP configs and servers."
+      },
+      {
+        "title": "Bait files",
+        "detail": "Optional bait watch looks for files an agent should not be reading, and only runs after you approve the exact command it shows first."
+      },
+      {
+        "title": "Read the library",
+        "detail": "A library of agent risks documents what each check looks for, so you can verify the rule behind a verdict."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No dependencies and no install scripts, so nothing runs when you install it",
+        "Offline by default; the only outbound calls happen after you approve the command",
+        "MIT-licensed plain JavaScript you can read end to end"
+      ],
+      "cons": [
+        "It reports exposure rather than blocking it, so you still act on the findings",
+        "Only three features reach the network, and each needs an explicit command first"
+      ]
+    }
+  },
+  {
+    "id": 2188,
+    "name": "FENGARDE",
+    "description": "FENGARDE is an open-source, self-hosted security pipeline for IT, AI and OT that turns a raw log line into a verified incident and a draft NIS2 notification. It normalises to OCSF, ships 46 detection rules tagged against MITRE ATT&CK, ATLAS and ICS, runs nine services over one bus so any stage can be restarted alone, and adds local AI triage. Apache-2.0.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/supermhel/fengarde",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "FENGARDE is an open-source, self-hosted security pipeline for IT, AI and OT that turns a raw log line into a verified incident and a draft NIS2 notification. It normalises to OCSF, ships 46 detection rules tagged against MITRE ATT&CK, ATLAS and ICS, runs nine services over one bus so any stage can be restarted alone, and adds local AI triage. Apache-2.0.",
+    "last_updated": "2026-10-29",
+    "skill_level": "advanced",
+    "best_for": [
+      "Self-hosted detection and correlation over OCSF-normalised logs",
+      "Teams that need evidence packages and a draft NIS2 notification",
+      "Security engineers who want every rule readable in the repository"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Replay an attack",
+        "detail": "Press replay and a recorded lab attack, or a generated AI-to-OT chain, runs through the real console while the departure board announces each stage."
+      },
+      {
+        "title": "Read the capability board",
+        "detail": "Every capability is marked on time, on request, replacement or cancelled, so stubbed and opt-in parts are stated rather than implied."
+      },
+      {
+        "title": "Check the rules",
+        "detail": "All 46 rules are listed straight from the rule files, with level, title and MITRE tag, and every service box opens its directory on GitHub."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Nine services over one bus, so no service calls another and any stage can be swapped",
+        "Rules are readable in the repository and tagged against ATT&CK, ATLAS and ICS",
+        "Apache-2.0 and self-hosted, with a GitHub Pages demo you can run without installing"
+      ],
+      "cons": [
+        "A nine-service stack is a real deployment, not a drop-in log viewer",
+        "The public console runs on recorded data, not your live logs"
+      ]
+    }
+  },
+  {
+    "id": 2189,
+    "name": "hackerscad",
+    "description": "hackerscad is a parametric CAD where the model is code: you type in a small sandboxed language with units, selectors and libraries, and the 3D view follows, while every mouse edit is written back into the file. It exports 3MF with a colour per part, STL, STEP and dimensioned drawings, checks parts with unittest blocks from the command line or CI, and exposes an MCP server so an AI coding assistant can read the language, render and show models in your window.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://hackerscad.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "hackerscad is a parametric CAD where the model is code: you type in a small sandboxed language with units, selectors and libraries, and the 3D view follows, while every mouse edit is written back into the file. It exports 3MF with a colour per part, STL, STEP and dimensioned drawings, checks parts with unittest blocks from the command line or CI, and exposes an MCP server so an AI coding assistant can read the language, render and show models in your window.",
+    "last_updated": "2026-10-29",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Printable parts written as versionable, reviewable code",
+      "Exact solids and real threads with 3MF, STL and STEP export",
+      "Letting a coding assistant check and render its own models"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Write a part",
+        "detail": "Code is the model: a small language with units and parameters where a battery holder is a handful of lines you can diff and review."
+      },
+      {
+        "title": "Click instead",
+        "detail": "Fillets, holes, sketches on a face, parts moved and patterned: every click lands in the file as readable code."
+      },
+      {
+        "title": "Hand it to an agent",
+        "detail": "Paste one prompt and your assistant installs the hackerscad skill, the MCP server and docs written for agents, then checks and renders its models."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source on Linux, Windows and macOS",
+        "unittest blocks hold what the part must do, and the CLI checks and exports in CI",
+        "Mouse edits write code, so the file stays the source of truth"
+      ],
+      "cons": [
+        "You have to learn a new small language rather than drag in a familiar CAD UI",
+        "Agent support depends on your assistant following the published skill"
+      ]
+    }
+  },
+  {
+    "id": 2190,
+    "name": "Visible by AI Checker",
+    "description": "Visible by AI runs 16 AI-visibility checks over HTTPS against your website and gives you a score plus the fixes that matter. It reads your homepage as a server-rendered document plus robots.txt, sitemap.xml and llms.txt, four requests in total, looking at schema, AI crawler access and answer formatting. No signup and no email, and results are not stored.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://checker.visiblebyagents.com/self-check.html",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Visible by AI runs 16 AI-visibility checks over HTTPS against your website and gives you a score plus the fixes that matter. It reads your homepage as a server-rendered document plus robots.txt, sitemap.xml and llms.txt, four requests in total, looking at schema, AI crawler access and answer formatting. No signup and no email, and results are not stored.",
+    "last_updated": "2026-10-29",
+    "skill_level": "beginner",
+    "best_for": [
+      "A quick read on whether ChatGPT, Perplexity and Google AI can read your site",
+      "Checking schema, robots.txt, llms.txt and AI crawler access in one pass",
+      "Site owners who want a snapshot before paying for an audit"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run the 16 checks",
+        "detail": "Paste your homepage address and get a score plus which checks you fail, in a couple of seconds with nothing to install."
+      },
+      {
+        "title": "See what it looked at",
+        "detail": "The report covers the server-rendered homepage plus robots.txt, sitemap.xml and llms.txt, and nothing else."
+      },
+      {
+        "title": "Know the limits",
+        "detail": "It reads what a crawler can read without running your JavaScript, and does not predict where you will rank or get cited."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free, with no signup, no email and nothing to install",
+        "Four requests only, so it is fast and easy to re-run",
+        "Honest about being a snapshot of crawlable signals rather than a ranking prediction"
+      ],
+      "cons": [
+        "It cannot execute JavaScript, so client-rendered content is invisible to it",
+        "The free check is a starting point for the paid audit, not a full review"
+      ]
+    }
+  },
+  {
+    "id": 2191,
+    "name": "AIVideosUGC",
+    "description": "AIVideosUGC is an AI video generator for brands, agencies and creators: animate one product photo into a short clip, paste a product link to get a video, or turn a written brief into an editable video plan. It also covers white-background, lifestyle and model product photos, ships 18 templates and 53 AI actors, and lets you download a file for Meta or TikTok with no watermark.",
+    "category": "Video",
+    "pricing": "Unknown",
+    "url": "https://www.aivideosugc.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AIVideosUGC is an AI video generator for brands, agencies and creators: animate one product photo into a short clip, paste a product link to get a video, or turn a written brief into an editable video plan. It also covers white-background, lifestyle and model product photos, ships 18 templates and 53 AI actors, and lets you download a file for Meta or TikTok with no watermark.",
+    "last_updated": "2026-10-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Product videos built from a single photo or a product URL",
+      "Short ads for TikTok, Reels and Shorts",
+      "Before-and-after and spokesperson clips without a shoot"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One photo to a clip",
+        "detail": "Image to Video animates a single product shot into a short clip, while URL to Video takes a product link and returns a video."
+      },
+      {
+        "title": "Product photography",
+        "detail": "White Background Photos come ready for Amazon and Shopify, alongside lifestyle shots and model photos for clothing and accessories."
+      },
+      {
+        "title": "Seasonal campaigns",
+        "detail": "Templates are grouped by industry, platform and occasion, including Beauty Routine, Black Friday Video and Launch Promo."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Video and image tools in one place, with 18 templates and 53 AI actors to pick from",
+        "Downloads carry no watermark and are sized for Meta or TikTok",
+        "Templates are organised by industry, platform and occasion"
+      ],
+      "cons": [
+        "Pricing is not stated on the public pages",
+        "Template-led output means many brands using it will look similar"
+      ]
+    }
+  },
+  {
+    "id": 2192,
+    "name": "UserRank",
+    "description": "UserRank collects the AI practices other builders actually use and shows you the ones you are missing. Your own Claude or ChatGPT scans locally and only names and counts reach UserRank; you install it as a plugin for Claude Code, Codex or Claude Desktop and ask for your UserRank. The site then lists the tools, skills and MCP servers other builders run.",
+    "category": "Code",
+    "pricing": "Beta",
+    "url": "https://userrank.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "UserRank collects the AI practices other builders actually use and shows you the ones you are missing. Your own Claude or ChatGPT scans locally and only names and counts reach UserRank; you install it as a plugin for Claude Code, Codex or Claude Desktop and ask for your UserRank. The site then lists the tools, skills and MCP servers other builders run.",
+    "last_updated": "2026-10-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Finding the skills and MCP servers other builders actually use",
+      "Comparing your own agent setup against a peer group",
+      "Sharing practices without handing over your transcripts"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Get your UserRank",
+        "detail": "Add the plugin marketplace, install the plugin, and ask your agent for your UserRank; the scan runs on your computer and takes 10 to 20 minutes."
+      },
+      {
+        "title": "Scan from a chat instead",
+        "detail": "If you would rather not install anything, copy the prompt into Claude or ChatGPT and answer a few questions in a couple of minutes."
+      },
+      {
+        "title": "Browse what others run",
+        "detail": "See the tools, skills and MCP servers builders use, with counts of what was added recently and who scanned."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "The scan runs locally and only names and counts leave your machine",
+        "Works as a plugin for Claude Code, Codex and Claude Desktop",
+        "You choose who sees your results"
+      ],
+      "cons": [
+        "In beta, and the full scan needs Python 3 and 10 to 20 minutes",
+        "The value of the comparison depends on how many builders have scanned"
+      ]
+    }
+  },
+  {
+    "id": 2193,
+    "name": "Chopstick",
+    "description": "Chopstick notices what you repeat on your Mac and builds notch widgets for it, using the coding agent you already have. Your activity log stays local: it tracks how long you were active, your longest focus stretch, app switches, keystrokes and a timeline of the day, then turns a description into a widget with Claude Code, Codex, Gemini CLI, Cursor, Copilot or OpenCode.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://chopstick.sh/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Chopstick notices what you repeat on your Mac and builds notch widgets for it, using the coding agent you already have. Your activity log stays local: it tracks how long you were active, your longest focus stretch, app switches, keystrokes and a timeline of the day, then turns a description into a widget with Claude Code, Codex, Gemini CLI, Cursor, Copilot or OpenCode.",
+    "last_updated": "2026-10-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Mac users who want widgets for their own repeated actions",
+      "Turning a local activity log into something glanceable",
+      "People who already run a coding agent and want it to build small UI"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Start with the built-ins",
+        "detail": "Download and pick from widgets already made for the notch, covering counters, timers and app activity."
+      },
+      {
+        "title": "Describe your own",
+        "detail": "Say what you want in words and your existing agent builds it; Chopstick decides what to build from the activity it has already recorded."
+      },
+      {
+        "title": "Read the day",
+        "detail": "See active time, longest focus, app switches, keystrokes and a per-app timeline of when you worked."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "The activity log never leaves your Mac",
+        "Works with the agent you already pay for rather than its own model",
+        "Launch price of $14.99 with a 3-day free trial on macOS 15 or later"
+      ],
+      "cons": [
+        "macOS only, and 15 or later",
+        "It is a paid app, and building widgets still burns your agent's tokens"
+      ]
+    }
+  },
+  {
+    "id": 2194,
+    "name": "Survival LLM",
+    "description": "Survival LLM is a free, open-source AI assistant and emergency library that runs entirely on your own computer and works with no internet. It answers from medical references, FEMA and CDC guidance, survival manuals, how-to and repair guides and about 930,000 Wikipedia articles, and every answer lists the articles it read with the exact passage highlighted. The app checks your memory on first run and downloads the model that fits.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://www.brangus.io/survival-llm",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Survival LLM is a free, open-source AI assistant and emergency library that runs entirely on your own computer and works with no internet. It answers from medical references, FEMA and CDC guidance, survival manuals, how-to and repair guides and about 930,000 Wikipedia articles, and every answer lists the articles it read with the exact passage highlighted. The app checks your memory on first run and downloads the model that fits.",
+    "last_updated": "2026-10-27",
+    "skill_level": "beginner",
+    "best_for": [
+      "Answers that still work during a blackout or with no connectivity",
+      "Emergency medical, water and food guidance with sources attached",
+      "Anyone who wants a local reference library instead of a chat subscription"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Ask in a blackout",
+        "detail": "Ask how to keep food safe without power, how to treat a burn or how to purify water, and get an answer drawn from the bundled library."
+      },
+      {
+        "title": "Check the source",
+        "detail": "Every answer lists the articles it read; click one to read it yourself with the exact passage highlighted."
+      },
+      {
+        "title": "Let it pick a model",
+        "detail": "On first run the app checks your memory and downloads the model that fits, from IBM Granite 4.2 8B on 16 GB up to NVIDIA Nemotron 3.5 Super on 128 GB."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source, and it needs no internet after setup",
+        "Answers cite the passage they came from, so you can check them",
+        "The library covers medical, FEMA, CDC, repair and how-to material plus Wikipedia"
+      ],
+      "cons": [
+        "The full library is a 9 GB download and about 19 GB once installed",
+        "Smaller models make more mistakes, so the source panel matters"
+      ]
+    }
+  },
+  {
+    "id": 2195,
+    "name": "Spec-First",
+    "description": "Spec-first agentic development is specification-driven development for AI coding agents: you describe a feature in your own words and four commands turn it into a spec, check it against your code, build it in its own worktree and deliver it through your checks. Specs are plain YAML and Markdown in your repository, a script verifies every cited file and line exists, and a second agent with no chat history attacks the spec before anything is built. MIT licensed.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://spec-first.dev/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Spec-first agentic development is specification-driven development for AI coding agents: you describe a feature in your own words and four commands turn it into a spec, check it against your code, build it in its own worktree and deliver it through your checks. Specs are plain YAML and Markdown in your repository, a script verifies every cited file and line exists, and a second agent with no chat history attacks the spec before anything is built. MIT licensed.",
+    "last_updated": "2026-10-27",
+    "skill_level": "advanced",
+    "best_for": [
+      "Teams that want reviewed specs before an agent touches code",
+      "Running several agent features side by side in isolated worktrees",
+      "Anyone who wants gated commits rather than vibe coding"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Describe and create",
+        "detail": "Talk through the feature; create-spec writes goal, facts with file and line, steps and done criteria on a fresh branch in its own worktree, with no code yet."
+      },
+      {
+        "title": "Let a second agent attack it",
+        "detail": "A script checks every cited file and line exists, then a fresh agent with no chat history reviews the spec against the code and its cuts are applied first."
+      },
+      {
+        "title": "Apply and deliver",
+        "detail": "apply-spec works through the steps and writes the tests the spec names, logging every non-obvious choice, and deliver-spec runs your checks before the pull request lands."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Plain YAML and Markdown in your repo, so the spec is reviewable like any other file",
+        "Isolated worktrees let you run several features side by side",
+        "MIT licensed, and it works as a Claude Code plugin or with any agent"
+      ],
+      "cons": [
+        "Five commands is a real process to learn, not a one-line install",
+        "The review step costs extra agent turns before any code appears"
+      ]
+    }
+  },
+  {
+    "id": 2196,
+    "name": "Trama",
+    "description": "Trama keeps a map of your app next to your code, as plain Markdown in .trama/ drawn as a diagram. Your agent reads the map before it writes a line, and every change arrives as a Proposal you approve before any code exists: you describe a change, answer only the questions the agent cannot decide, approve the proposal, run the tasks, and resolve Drifts when code and map stop agreeing.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://github.com/nicchia-code/trama",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Trama keeps a map of your app next to your code, as plain Markdown in .trama/ drawn as a diagram. Your agent reads the map before it writes a line, and every change arrives as a Proposal you approve before any code exists: you describe a change, answer only the questions the agent cannot decide, approve the proposal, run the tasks, and resolve Drifts when code and map stop agreeing.",
+    "last_updated": "2026-10-27",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Approving what an agent builds before it builds it",
+      "Keeping a readable map of an app that agents also read",
+      "Catching the moments when code and intent drift apart"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Approve the proposal",
+        "detail": "The change is drawn on the map with every decision and assumption beside it, and nothing is built until you approve."
+      },
+      {
+        "title": "Answer only what matters",
+        "detail": "The agent asks only what it cannot decide from memory or the repository, with its recommendation already selected."
+      },
+      {
+        "title": "Resolve drifts",
+        "detail": "When code and map disagree, Trama raises a Drift and you choose which one is right: fix the code or update the map."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "The map is plain Markdown you can read and version with the code",
+        "Nothing is written until a human approves the Proposal",
+        "Drifts surface the gap between what was described and what got built"
+      ],
+      "cons": [
+        "VS Code 1.106 or later is the only editor supported",
+        "Pricing and licensing are not stated on the public pages"
+      ]
+    }
+  },
+  {
+    "id": 2197,
+    "name": "StoreRouter",
+    "description": "StoreRouter is a shopping layer for agents and engineers: a CLI, REST API, Python and TypeScript SDKs and an MCP connection that search ecommerce products across all covered domains, parse any product page into a token-efficient version, look up a product by URL and find similar products across domains. A browser playground runs the CLI so you can try it before installing, and brand search and profiles are part of the same surface.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://storerouter.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "StoreRouter is a shopping layer for agents and engineers: a CLI, REST API, Python and TypeScript SDKs and an MCP connection that search ecommerce products across all covered domains, parse any product page into a token-efficient version, look up a product by URL and find similar products across domains. A browser playground runs the CLI so you can try it before installing, and brand search and profiles are part of the same surface.",
+    "last_updated": "2026-10-27",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agents that need product search and similar-product lookup",
+      "Turning a product page into something small enough to fit a context window",
+      "Shopping workflows driven from a terminal rather than a browser"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Search from a terminal",
+        "detail": "Install with npm i -g @storerouter/cli, then search, filter and pipe the JSON through jq without leaving the shell."
+      },
+      {
+        "title": "Parse a product page",
+        "detail": "The Parse endpoint returns a token-efficient version of any product page, which is what you want before handing it to a model."
+      },
+      {
+        "title": "Connect an agent",
+        "detail": "Point your agent at StoreRouter over MCP, or call the REST API from Python or TypeScript."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "CLI, REST API, SDKs and MCP all cover the same endpoints",
+        "A browser playground runs the real CLI before you install anything",
+        "Parse exists specifically to keep product pages small enough for a model"
+      ],
+      "cons": [
+        "Pricing is not published on the public pages",
+        "Coverage varies by store, so you have to check the catalog first"
+      ]
+    }
+  },
+  {
+    "id": 2198,
+    "name": "Sectr",
+    "description": "Sectr is a serverless backend platform for deploying AI agents: serverless handles your agent's requests while Sectr keeps one source of truth for every message, tool call and approval. You keep writing agents in LangGraph, the OpenAI Agents SDK or Pydantic AI, add two lines, stream to any frontend over AG-UI, and mark a tool as needing approval so your agent scales to zero while it waits.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://sectr.dev/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Sectr is a serverless backend platform for deploying AI agents: serverless handles your agent's requests while Sectr keeps one source of truth for every message, tool call and approval. You keep writing agents in LangGraph, the OpenAI Agents SDK or Pydantic AI, add two lines, stream to any frontend over AG-UI, and mark a tool as needing approval so your agent scales to zero while it waits.",
+    "last_updated": "2026-10-27",
+    "skill_level": "advanced",
+    "best_for": [
+      "Deploying an existing agent without restructuring it into workflows",
+      "Human-in-the-loop approvals on individual tool calls",
+      "Streaming agent state to a CopilotKit or AG-UI frontend"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Deploy in two lines",
+        "detail": "Run sectr init with a template for your framework, wrap your agent in AgentApp and add a route; no checkpointer and no restructuring into steps."
+      },
+      {
+        "title": "Pause for approval",
+        "detail": "Mark a tool as needing approval and the agent scales to zero while it waits for a human, with the request recorded in the journal."
+      },
+      {
+        "title": "Stream to your frontend",
+        "detail": "Anything that speaks AG-UI can consume the stream, including CopilotKit React apps."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No rewrite: keep LangGraph, OpenAI Agents SDK or Pydantic AI and add two lines",
+        "The journal is the checkpoint, so no separate checkpointer is needed",
+        "Free during beta"
+      ],
+      "cons": [
+        "Beta, so the platform surface is still changing",
+        "Python-first: the published adapters are for Python agent frameworks"
+      ]
+    }
+  },
+  {
+    "id": 2199,
+    "name": "SlopIt",
+    "description": "SlopIt is a blog your AI runs: your agent signs up, writes the post and sends back a live link, free on a your-name.slopit.io subdomain with your own domain on Pro. It works with Claude, Codex, Meta's Muse and Hermes, the core is open source under MIT, and you or your agent can self-host the same thing on your own server as a REST plus MCP service over static HTML and one SQLite file.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://slopit.io/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SlopIt is a blog your AI runs: your agent signs up, writes the post and sends back a live link, free on a your-name.slopit.io subdomain with your own domain on Pro. It works with Claude, Codex, Meta's Muse and Hermes, the core is open source under MIT, and you or your agent can self-host the same thing on your own server as a REST plus MCP service over static HTML and one SQLite file.",
+    "last_updated": "2026-10-27",
+    "skill_level": "beginner",
+    "best_for": [
+      "A blog for a side project with no editor to log into",
+      "Changelogs your agent posts every time you ship",
+      "Publishing something Google and AI answers can actually find"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Hand it a prompt",
+        "detail": "Paste the skill link into your assistant, tell it to start a blog about your project and publish the first post, and it returns a live URL."
+      },
+      {
+        "title": "Set it up yourself",
+        "detail": "If you would rather click, there is a manual path that does not go through an agent."
+      },
+      {
+        "title": "Run it yourself",
+        "detail": "The code is MIT licensed and self-hostable: REST plus MCP, static HTML output and a single SQLite file."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free tier on a slopit.io subdomain, and the core is open source under MIT",
+        "Works with several assistants, not just one harness",
+        "Self-hosting is a single SQLite file and static HTML"
+      ],
+      "cons": [
+        "Custom domains sit behind the Pro plan",
+        "There is no editor, so editing means asking the agent again"
+      ]
+    }
+  },
+  {
+    "id": 2200,
+    "name": "MCPTask",
+    "description": "MCPTask runs autonomous AI developers against a real backlog and lets you watch the whole path: task, branch, pull request, tests and merge. Its runners work around the clock on its own machines, none of them has direct access to the main branch, and a live view shows the open-source mcp4mail project being built, with 182 finished tasks delivered in 42 days.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://mcptask.online/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "MCPTask runs autonomous AI developers against a real backlog and lets you watch the whole path: task, branch, pull request, tests and merge. Its runners work around the clock on its own machines, none of them has direct access to the main branch, and a live view shows the open-source mcp4mail project being built, with 182 finished tasks delivered in 42 days.",
+    "last_updated": "2026-10-27",
+    "skill_level": "advanced",
+    "best_for": [
+      "Handing an agent a real task and following it to merge",
+      "Teams that want an audit trail from task to pull request",
+      "Watching autonomous runners before trusting them with your repo"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Watch the live build",
+        "detail": "Open the live page and see runners take tasks on mcp4mail, with the branch, pull request, tests and resulting code all checkable on GitHub."
+      },
+      {
+        "title": "Onboard your own",
+        "detail": "Treat the AI developer like a new hire: give it a computer, accounts and a first task, then install mcptask_runner in your project."
+      },
+      {
+        "title": "Verify before trusting",
+        "detail": "Every merged change is deployed to the project site once a day, so you can check that what was merged is what shipped."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "The whole path from task to merge is public and checkable",
+        "Runners have no direct access to the main branch",
+        "A real open-source product is being built by it, not a demo repo"
+      ],
+      "cons": [
+        "Pricing is not stated on the public pages",
+        "Merged work only reaches the live site once a day, not immediately"
+      ]
+    }
+  },
+  {
+    "id": 2201,
+    "name": "Crulon",
+    "description": "Crulon is an AI-first business phone system: an agent answers your business line, does the work in your tools, and hands the call to your team with a summary. Your team sees every live call and can take over any of them, and you give the agent a voice, a greeting, your files or your website plus the Tools it may use.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://crulon.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Crulon is an AI-first business phone system: an agent answers your business line, does the work in your tools, and hands the call to your team with a summary. Your team sees every live call and can take over any of them, and you give the agent a voice, a greeting, your files or your website plus the Tools it may use.",
+    "last_updated": "2026-10-27",
+    "skill_level": "beginner",
+    "best_for": [
+      "After-hours answering that still does the work, not just takes a message",
+      "Teams that want to watch live calls and take over",
+      "Businesses where the first responder is an agent with tool access"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "After-hours calls",
+        "detail": "A call enters your Call Flow; out of hours it goes to the agent, which opens a ticket and connects the caller to the on-call technician."
+      },
+      {
+        "title": "Take over live",
+        "detail": "Watch the transcript as it happens and take the call yourself at any point, with the agent's summary handed over."
+      },
+      {
+        "title": "Give it tools",
+        "detail": "Point the agent at your files or website and choose which Tools it may use, so it can act rather than just answer."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Live visibility of every call, with one-click takeover",
+        "The agent acts in your tools instead of leaving a voicemail",
+        "From $24 a seat, and you can talk to the demo agent in your browser"
+      ],
+      "cons": [
+        "Paid product with per-seat pricing",
+        "Callers are talking to an AI before they reach a person"
+      ]
+    }
+  },
+  {
+    "id": 2202,
+    "name": "Amni-CAD",
+    "description": "Amni-CAD is free parametric 3D CAD in the browser: OpenCascade solids with STEP export, GPU stress and modal analysis, wind-tunnel CFD and automatic 2D drawings with tolerances, behind a ribbon interface with two layouts. An AI assistant works with Claude, ChatGPT, Gemini or a local model, so an external agent can drive the model over MCP.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://amni-scient.com/amni-cad",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Amni-CAD is free parametric 3D CAD in the browser: OpenCascade solids with STEP export, GPU stress and modal analysis, wind-tunnel CFD and automatic 2D drawings with tolerances, behind a ribbon interface with two layouts. An AI assistant works with Claude, ChatGPT, Gemini or a local model, so an external agent can drive the model over MCP.",
+    "last_updated": "2026-10-26",
+    "skill_level": "advanced",
+    "best_for": [
+      "Parametric CAD without installing a desktop application",
+      "Stress, modal and CFD checks on a model in the same browser tab",
+      "Letting Claude, ChatGPT, Gemini or a local model drive the geometry"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Model in the browser",
+        "detail": "Build parametric solids with OpenCascade and export STEP, with a ribbon interface that offers two layouts."
+      },
+      {
+        "title": "Check the part",
+        "detail": "Run GPU stress and modal analysis or a wind-tunnel CFD pass on the model you just built."
+      },
+      {
+        "title": "Let an agent drive it",
+        "detail": "The AI assistant connects to Claude, ChatGPT, Gemini or a local model, so an external agent can work on the geometry over MCP."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free, and it runs entirely in the browser",
+        "FEA and CFD sit next to the modelling tools rather than in another package",
+        "You can bring your own model provider, including a local one"
+      ],
+      "cons": [
+        "A browser session is still a browser session for large assemblies",
+        "It lives inside a much larger AMNI-SCIENT project catalogue"
+      ]
+    }
+  },
+  {
+    "id": 2203,
+    "name": "Inference Cooperative",
+    "description": "Inference Cooperative is a member-governed cooperative for AI inference: members choose among powerful open-weights models and pick by the values they care about, with options for models running in encrypted enclaves and models served on 100% renewable power. One membership opens the chat, the developer API and a seat in governance; dues are a sliding scale starting at $5 a month and every member gets a $15 monthly credit.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://inference.coop/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Inference Cooperative is a member-governed cooperative for AI inference: members choose among powerful open-weights models and pick by the values they care about, with options for models running in encrypted enclaves and models served on 100% renewable power. One membership opens the chat, the developer API and a seat in governance; dues are a sliding scale starting at $5 a month and every member gets a $15 monthly credit.",
+    "last_updated": "2026-10-24",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Open-weights inference bought through a cooperative rather than a vendor",
+      "Privacy-sensitive prompts that should run in encrypted enclaves",
+      "Users who want a vote in how the service is run"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Pay what is fair",
+        "detail": "Dues are a sliding scale from $5 a month; everyone gets the same $15 monthly credit for chat and API regardless of what they pay."
+      },
+      {
+        "title": "Choose by values",
+        "detail": "Pick privacy, with models in encrypted enclaves so even the cooperative cannot read your prompts, or renewable energy, with models served on 100% renewable power."
+      },
+      {
+        "title": "Use the API",
+        "detail": "One membership covers chat, the developer API and governance, and extra credits never expire and carry over month to month."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Members govern pricing and direction, and pricing is a co-op decision",
+        "Open-weights models with privacy and renewable-energy options",
+        "Dues start at $5 a month and include a $15 credit"
+      ],
+      "cons": [
+        "Paid membership, and the sliding scale is a co-op decision that will change",
+        "Model choice is limited to what the cooperative serves"
+      ]
+    }
+  },
+  {
+    "id": 2204,
+    "name": "Run LLM Locally",
+    "description": "Run LLM Locally is a VRAM calculator that tells you which local LLMs your GPU or Mac can actually run: enter your graphics card or Apple Silicon machine and see the models that fit, the memory each needs at each quantization and an estimated tokens per second for Llama, Qwen, Gemma and more. It also works the other way round, picking the hardware a model needs or building you a compatible machine.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://www.runllmlocally.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Run LLM Locally is a VRAM calculator that tells you which local LLMs your GPU or Mac can actually run: enter your graphics card or Apple Silicon machine and see the models that fit, the memory each needs at each quantization and an estimated tokens per second for Llama, Qwen, Gemma and more. It also works the other way round, picking the hardware a model needs or building you a compatible machine.",
+    "last_updated": "2026-10-19",
+    "skill_level": "beginner",
+    "best_for": [
+      "Checking whether a model fits your GPU before you download it",
+      "Comparing quantization levels by memory and speed",
+      "Planning a PC or Mac build around a target model"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Pick your hardware",
+        "detail": "Choose a PC with a GPU, an Apple Silicon Mac, a unified-memory PC or a PC with no GPU, then pick your card from a long list."
+      },
+      {
+        "title": "See what fits",
+        "detail": "Get the models that run on your machine with the VRAM they need and an estimated tokens per second for each."
+      },
+      {
+        "title": "Build a machine",
+        "detail": "Name the model you want and the configurator returns PC and Mac configurations that will run it."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free, with no signup, and it works in both directions",
+        "Covers a long list of NVIDIA, AMD and Intel cards plus Apple Silicon",
+        "Estimated tokens per second, not just a fits-or-not answer"
+      ],
+      "cons": [
+        "Speed figures are estimates, not benchmarks on your machine",
+        "Coverage depends on the model list staying current"
+      ]
+    }
+  },
+  {
+    "id": 2205,
+    "name": "TensorPix",
+    "description": "TensorPix is an AI video and image toolkit whose best-known use case turns property photos into walkthrough videos in minutes, but the same account covers a video enhancer, TensorShots, an AI video generator, an AI image generator and a video compressor. Use cases include enhancing video calls, restoring old footage, frame interpolation, unblurring, stabilising, denoising, upscaling and boosting Instagram and TikTok engagement, with an API on top.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://tensorpix.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "TensorPix is an AI video and image toolkit whose best-known use case turns property photos into walkthrough videos in minutes, but the same account covers a video enhancer, TensorShots, an AI video generator, an AI image generator and a video compressor. Use cases include enhancing video calls, restoring old footage, frame interpolation, unblurring, stabilising, denoising, upscaling and boosting Instagram and TikTok engagement, with an API on top.",
+    "last_updated": "2026-10-16",
+    "skill_level": "beginner",
+    "best_for": [
+      "Real estate walkthrough videos made from still photos",
+      "Rescuing old, blurry or shaky footage",
+      "Getting video up to platform quality standards"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Listings from photos",
+        "detail": "Turn property photos into scroll-stopping videos for Instagram, Reels and beyond without a shoot."
+      },
+      {
+        "title": "Fix what you have",
+        "detail": "Unblur, stabilise, denoise, interpolate frames and upscale footage, including AI-generated video and anime."
+      },
+      {
+        "title": "Automate it",
+        "detail": "An API covers the same pipeline, so enhancement can run without a person clicking through the editor."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Three free videos to start, with no credit card required",
+        "Enhancement, generation and compression in one account",
+        "An API for running the same jobs automatically"
+      ],
+      "cons": [
+        "Most jobs beyond the free tier are paid",
+        "Heavily degraded source footage will still show artefacts"
+      ]
+    }
+  },
+  {
+    "id": 2206,
+    "name": "Virgil CLI",
+    "description": "Virgil is a CLI that routes tasks through a local library before calling any model: it keeps four local libraries for speech, debug, code and UI/HTML, checks them against every request, answers straight from the library on a match, adapts with a single call on a partial pattern, and only solves from scratch when it has nothing, storing the result for next time. Injection runs through your own APIs, your own server or a central backbone.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://virgil-ai.cloud/intro",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Virgil is a CLI that routes tasks through a local library before calling any model: it keeps four local libraries for speech, debug, code and UI/HTML, checks them against every request, answers straight from the library on a match, adapts with a single call on a partial pattern, and only solves from scratch when it has nothing, storing the result for next time. Injection runs through your own APIs, your own server or a central backbone.",
+    "last_updated": "2026-10-08",
+    "skill_level": "advanced",
+    "best_for": [
+      "Cutting model calls on tasks you have already solved",
+      "Developers whose API spend is the binding constraint",
+      "Routing through your own API key or server rather than a vendor"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Answer without a model",
+        "detail": "A request such as making a clock is matched against the local libraries first; on a hit it answers with no model call at all."
+      },
+      {
+        "title": "Bring your own key",
+        "detail": "Point Virgil at your own API or server for its calls, or fall back to the central backbone it ships with."
+      },
+      {
+        "title": "Let it learn",
+        "detail": "The libraries start empty and fill as you work, so repeated scenarios stop costing a full generation."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Installs with npx virgil-cli and works in the terminal you already use",
+        "Bring your own API or server instead of being locked to one provider",
+        "Reuse turns a repeated task into a lookup"
+      ],
+      "cons": [
+        "Early software: version 0.1.15, and the libraries start empty",
+        "Savings depend entirely on how much your tasks repeat"
+      ]
+    }
+  },
+  {
+    "id": 2207,
+    "name": "Cirkit",
+    "description": "Cirkit turns schematic PDFs into a shared workspace for hardware teams: BOM-aware parts, notes your whole team can search, equations that use real part values, trace maps across boards and proposed changes sketched right on the drawing. An AI reads the page and answers against your BOM rather than guessing, and it works with the PDFs your EDA tool already exports, so there is nothing to install.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://www.cirkit.us/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Cirkit turns schematic PDFs into a shared workspace for hardware teams: BOM-aware parts, notes your whole team can search, equations that use real part values, trace maps across boards and proposed changes sketched right on the drawing. An AI reads the page and answers against your BOM rather than guessing, and it works with the PDFs your EDA tool already exports, so there is nothing to install.",
+    "last_updated": "2026-10-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Hardware teams working from schematic PDFs instead of EDA files",
+      "Notes, measurements and equations attached to real parts",
+      "Asking questions an answer engine can only get right with your BOM"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Upload the PDF",
+        "detail": "Drop in multi-page or multi-board schematic PDFs plus your BOM; the PDF stays the source of truth with everything layered on top."
+      },
+      {
+        "title": "Annotate the board",
+        "detail": "Pin notes, photos, measurements, equations and trace maps to the parts they are about, and sketch proposed changes on the drawing."
+      },
+      {
+        "title": "Ask about a region",
+        "detail": "Box an area and ask; the AI reads the page and answers citing your BOM, for example working out an output voltage and a switching frequency."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works with PDFs your EDA tool already exports, and nothing to install",
+        "Answers cite your BOM instead of the internet's guess",
+        "Live equations show outputs on the board in volts, ohms, HIGH or LOW"
+      ],
+      "cons": [
+        "Early access, open to its first teams only",
+        "Pricing is not stated on the public pages"
+      ]
+    }
+  },
+  {
+    "id": 2208,
+    "name": "Marlow",
+    "description": "Marlow turns your ideas into real applications with AI, and you keep the code, the infrastructure and the freedom to deploy anywhere. Rather than locking the result into a hosted builder, the output is yours: a full-stack app you can host wherever you like.",
+    "category": "Code",
+    "pricing": "Beta",
+    "url": "https://marlow.app/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Marlow turns your ideas into real applications with AI, and you keep the code, the infrastructure and the freedom to deploy anywhere. Rather than locking the result into a hosted builder, the output is yours: a full-stack app you can host wherever you like.",
+    "last_updated": "2026-10-27",
+    "skill_level": "beginner",
+    "best_for": [
+      "Building a full-stack app with AI and keeping the source",
+      "Teams that do not want to be locked to one host",
+      "Non-developers who still want a codebase at the end"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Describe the app",
+        "detail": "Start from an idea in your own words and let Marlow build the application around it."
+      },
+      {
+        "title": "Keep the code",
+        "detail": "The code, the infrastructure and the deployment target stay yours rather than living only inside the builder."
+      },
+      {
+        "title": "Deploy anywhere",
+        "detail": "Because you own the output, hosting is your choice rather than a platform constraint."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "You own the generated code and infrastructure",
+        "Full-stack output rather than a single-page prototype",
+        "No lock-in to a single deployment target"
+      ],
+      "cons": [
+        "In beta, so features and pricing are still settling",
+        "Public pages give little detail beyond the ownership promise"
+      ]
+    }
+  },
+  {
+    "id": 2209,
+    "name": "Saanora",
+    "description": "Saanora is a single AI assistant for everything, built around a chat called Mark that answers, researches the web, writes and codes in more than 20 languages. It gives answers as diagrams, quizzes and 3D models where that is clearer than prose, reasons through problems, cites its sources and remembers you across chats.",
+    "category": "Productivity",
+    "pricing": "Unknown",
+    "url": "https://saanora.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Saanora is a single AI assistant for everything, built around a chat called Mark that answers, researches the web, writes and codes in more than 20 languages. It gives answers as diagrams, quizzes and 3D models where that is clearer than prose, reasons through problems, cites its sources and remembers you across chats.",
+    "last_updated": "2026-10-23",
+    "skill_level": "beginner",
+    "best_for": [
+      "One assistant for research, writing and code instead of three",
+      "Answers that come back as diagrams, quizzes or 3D models",
+      "Conversations that carry context across sessions"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Ask anything",
+        "detail": "Ask Mark a question and get an answer that can come back as a diagram, a quiz or a 3D model rather than only text."
+      },
+      {
+        "title": "Research with sources",
+        "detail": "It searches the web and cites where each answer came from, so you can check the underlying material."
+      },
+      {
+        "title": "Write and code",
+        "detail": "Draft documents and write code in more than 20 languages in the same workspace."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Chat, web research, writing and coding in one assistant",
+        "Visual answers: diagrams, quizzes and 3D models",
+        "Memory carries across chats, and answers are cited"
+      ],
+      "cons": [
+        "Pricing is not stated on the public pages",
+        "The public site is a chat shell, so little is documented before you sign in"
+      ]
+    }
+  },
+  {
+    "id": 2210,
+    "name": "Nevermined",
+    "description": "Nevermined is an agentic payments platform: register AI agents, design usage-based plans and accept payments in fiat and crypto from any consumer, with HTTP-native x402 access alongside MCP and A2A. It is built for agents that charge per call rather than per seat.",
+    "category": "Code",
+    "pricing": "Unknown",
+    "url": "https://nevermined.app/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Nevermined is an agentic payments platform: register AI agents, design usage-based plans and accept payments in fiat and crypto from any consumer, with HTTP-native x402 access alongside MCP and A2A. It is built for agents that charge per call rather than per seat.",
+    "last_updated": "2026-10-16",
+    "skill_level": "advanced",
+    "best_for": [
+      "Charging for agent usage instead of seats",
+      "Accepting fiat and crypto from both humans and other agents",
+      "Agents reachable over x402, MCP or A2A"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Register an agent",
+        "detail": "Register your agent on the platform and attach a usage-based plan to it."
+      },
+      {
+        "title": "Take payments",
+        "detail": "Accept fiat and crypto from any consumer, with HTTP-native x402 rather than a bespoke checkout."
+      },
+      {
+        "title": "Reach other agents",
+        "detail": "Expose the same paid access over MCP and A2A, so agent-to-agent payment works like any other call."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Usage-based pricing designed for agents rather than humans",
+        "Fiat and crypto in one platform",
+        "x402, MCP and A2A access from the same registration"
+      ],
+      "cons": [
+        "Pricing is not published on the public pages",
+        "It assumes you already have an agent worth charging for"
+      ]
+    }
+  },
+  {
+    "id": 2211,
+    "name": "SkillScout",
+    "description": "SkillScout asks the AI you already use how you work, scores every AI tool against your gaps and hands back a short list. Rather than ranking tools by popularity, it starts from what you actually do and recommends against the holes it finds, and it is free.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://skillscout.si/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SkillScout asks the AI you already use how you work, scores every AI tool against your gaps and hands back a short list. Rather than ranking tools by popularity, it starts from what you actually do and recommends against the holes it finds, and it is free.",
+    "last_updated": "2026-10-27",
+    "skill_level": "beginner",
+    "best_for": [
+      "Choosing tools against your own workflow rather than a popularity list",
+      "Finding the gaps in your current AI setup",
+      "Anyone tired of best-of lists that all recommend the same ten tools"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Ask your own assistant",
+        "detail": "SkillScout queries the AI you already use about how you work instead of making you fill in a survey."
+      },
+      {
+        "title": "Score against gaps",
+        "detail": "Every tool in its index is scored against the gaps it found in your workflow rather than against a global ranking."
+      },
+      {
+        "title": "Get a short list",
+        "detail": "You get a handful of recommendations back rather than a directory to browse."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free",
+        "Personalised to how you work, not to aggregate popularity",
+        "Returns a short list instead of an endless catalogue"
+      ],
+      "cons": [
+        "New product with a small public footprint",
+        "The recommendation is only as good as what your existing assistant knows about you"
+      ]
+    }
   }
 ]
