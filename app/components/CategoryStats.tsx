@@ -1,7 +1,15 @@
-'use client';
-
 import type { Tool } from '@/types';
 
+/**
+ * Deliberately NOT a client component.
+ *
+ * It used to carry `'use client'`, which made it a client boundary that received
+ * the whole `Tool[]` for the category as a prop — 481 fully populated tool
+ * objects for /category/code, serialized into the RSC payload of every response.
+ * The component only ever derived three numbers from that array (total, updated
+ * this month, free) and renders no interactivity, so all of that serialization
+ * bought nothing. As a server component the array never leaves the server.
+ */
 interface CategoryStatsProps {
   category: string;
   tools: Tool[];
