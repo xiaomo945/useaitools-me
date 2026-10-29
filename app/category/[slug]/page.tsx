@@ -43,6 +43,26 @@ const colorMap: Record<Category, { bg: string; bgDark: string; text: string; tex
   Video:      { bg: 'bg-indigo-500', bgDark: 'bg-indigo-500/20', text: 'text-indigo-300', textLight: 'text-indigo-600', border: 'border-indigo-300', ring: 'hover:shadow-indigo-500/20' }
 };
 
+/**
+ * The six categories are a fixed set, so they can be prerendered at build time.
+ *
+ * Without this the route had no `generateStaticParams`, which makes Next render
+ * it on demand for every single request and mark the response
+ * `private, no-cache, no-store` — the CDN can never cache it. Category hubs sit
+ * in the main navigation, so every crawler sweep paid for a full server render
+ * of each one. These are now static pages served from cache.
+ *
+ * `dynamicParams` is deliberately left at its default (`true`) instead of being
+ * set to `false`. `/category/Writing` has been a live URL for a long time and
+ * returns the same list as `/category/writing`; 404-ing it would drop whatever
+ * Google has indexed under the capitalised form. The lowercase six are cached,
+ * the capitalised variants still render on demand and canonicalise to lowercase
+ * via the metadata below.
+ */
+export function generateStaticParams() {
+  return Object.keys(categoryNames).map((name) => ({ slug: name.toLowerCase() }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const categorySlug = slug.charAt(0).toUpperCase() + slug.slice(1);

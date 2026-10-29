@@ -5,8 +5,14 @@ import { generateSlugFromName } from '@/lib/slug';
 import { toolsWorthIndexing } from '@/lib/toolQuality';
 import { COMPARISON_SLUGS } from '@/lib/comparisons';
 
-// 动态生成 sitemap
-export const dynamic = 'force-dynamic';
+// Sitemap 在构建时生成一次，之后由 CDN 缓存。
+//
+// 这里原本是 `force-dynamic`，意味着每次抓取都要重新读 tools.json + 遍历
+// 1700+ 条目重新拼 XML。搜索引擎和 IndexNow 会反复抓 sitemap，这份开销是
+// 纯浪费 —— 内容只在部署时变化，构建期生成一次就够了。
+//
+// 注意：新增工具/文章后必须重新部署，sitemap 才会更新。本项目的发布流程
+// 本来就是「改内容 → push → Vercel 重新构建」，所以不受影响。
 
 // 分类名称映射
 const categories = ['Image', 'Writing', 'Code', 'Video', 'Productivity', 'Audio'];
