@@ -56,8 +56,7 @@ export default function TopTools({ tools, category, categoryColors }: TopToolsPr
           const isTop3 = index < 3;
 
           return (
-            <Link
-              href={`/tool/${generateSlugFromName(tool.name)}`}
+            <div
               key={tool.id}
               className={`relative rounded-xl overflow-hidden border transition-all duration-300 hover:-translate-y-1 ${
                 isTop3
@@ -65,6 +64,19 @@ export default function TopTools({ tools, category, categoryColors }: TopToolsPr
                   : 'border-slate-200/60 dark:border-gray-800/80 shadow-sm hover:shadow-md'
               } bg-white dark:bg-gray-900 group`}
             >
+              {/* The whole card stays clickable through a stretched overlay link
+                  instead of by wrapping the card in <Link>. The card contains its
+                  own affiliate <a>, and anchors cannot nest — the old version put one
+                  inside the other and relied on `onClick={e => e.stopPropagation()}`
+                  to prevent a double navigation. A server component cannot pass an
+                  event handler, and that handler is exactly what made `next build`
+                  fail the moment the category pages started being prerendered.
+                  Overlay + z-index does the same job with valid HTML and no JS. */}
+              <Link
+                href={`/tool/${generateSlugFromName(tool.name)}`}
+                aria-label={`Read the ${tool.name} review`}
+                className="absolute inset-0 z-20"
+              />
               {/* Rank Badge */}
               <div className="absolute top-2 left-2 z-10">
                 <span className={`text-sm ${isTop3 ? '' : 'font-bold text-slate-500 dark:text-slate-400'}`}>
@@ -123,8 +135,7 @@ export default function TopTools({ tools, category, categoryColors }: TopToolsPr
                   href={affiliateUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                  className={`w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5 ${
+                  className={`relative z-30 w-full inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5 ${
                     isTop3
                       ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm hover:shadow-md'
                       : hasAffiliate
@@ -136,7 +147,7 @@ export default function TopTools({ tools, category, categoryColors }: TopToolsPr
                   <ArrowRight className="w-3 h-3" />
                 </a>
               </div>
-            </Link>
+            </div>
           );
         })}
       </div>
