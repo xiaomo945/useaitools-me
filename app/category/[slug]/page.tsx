@@ -1,363 +1,52 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import toolsData from '@/data/tools.json';
-import { ArrowRight } from 'lucide-react';
-import Footer from '@/app/components/Footer';
-import { Metadata } from 'next';
-import CategoryHero from './CategoryHero';
-import Breadcrumbs from '@/app/components/Breadcrumbs';
-import { generateSlugFromName } from '@/lib/slug';
-import CategoryStats from '@/app/components/CategoryStats';
-import GoldPicks from '@/app/components/GoldPicks';
-import TopTools from '@/app/components/TopTools';
-import type { Tool } from '@/types';
-import { getAffiliateLink, hasAffiliateLink } from '@/lib/affiliate';
-
-const tools = toolsData as unknown as Tool[];
-type Category = Tool['category'];
-
-const categoryDescriptions: Record<Category, string> = {
-  Writing: 'Discover powerful AI writing tools that help you create high-quality content faster, from blog posts and marketing copy to creative stories and academic papers.',
-  Image: 'Explore cutting-edge AI image generation and editing tools that transform your creative ideas into stunning visuals with just a few words.',
-  Productivity: 'Boost your workflow with AI-powered productivity tools that automate tasks, manage your schedule, and help you get more done in less time.',
-  Code: 'Supercharge your development with AI coding assistants that write, refactor, and debug code for you, making programming faster and more accessible.',
-  Audio: 'Create professional audio content with AI tools that generate realistic voices, produce music, and edit sound with incredible precision.',
-  Video: 'Bring your videos to life with AI video tools that generate, edit, and enhance video content, from animated avatars to full-length productions.'
-};
-
-const categoryNames: Record<Category, string> = {
-  Writing: 'Writing',
-  Image: 'Image',
-  Productivity: 'Productivity',
-  Code: 'Code',
-  Audio: 'Audio',
-  Video: 'Video'
-};
-
-const colorMap: Record<Category, { bg: string; bgDark: string; text: string; textLight: string; border: string; ring: string }> = {
-  Writing:    { bg: 'bg-blue-500',    bgDark: 'bg-blue-500/20',    text: 'text-blue-300',    textLight: 'text-blue-600',    border: 'border-blue-300',    ring: 'hover:shadow-blue-500/20' },
-  Image:      { bg: 'bg-violet-500', bgDark: 'bg-violet-500/20', text: 'text-violet-300', textLight: 'text-violet-600', border: 'border-violet-300', ring: 'hover:shadow-violet-500/20' },
-  Productivity: { bg: 'bg-teal-500',  bgDark: 'bg-teal-500/20',  text: 'text-teal-300',  textLight: 'text-teal-600',  border: 'border-teal-300',  ring: 'hover:shadow-teal-500/20' },
-  Code:       { bg: 'bg-orange-500', bgDark: 'bg-orange-500/20', text: 'text-orange-300', textLight: 'text-orange-600', border: 'border-orange-300', ring: 'hover:shadow-orange-500/20' },
-  Audio:      { bg: 'bg-pink-500',   bgDark: 'bg-pink-500/20',   text: 'text-pink-300',   textLight: 'text-pink-600',   border: 'border-pink-300',   ring: 'hover:shadow-pink-500/20' },
-  Video:      { bg: 'bg-indigo-500', bgDark: 'bg-indigo-500/20', text: 'text-indigo-300', textLight: 'text-indigo-600', border: 'border-indigo-300', ring: 'hover:shadow-indigo-500/20' }
-};
+import {
+  CATEGORY_SLUGS,
+  CategoryView,
+  categoryMetadata,
+  resolveCategory,
+} from './CategoryView';
 
 /**
- * The six categories are a fixed set, so they can be prerendered at build time.
+ * The six categories are a fixed set, so they are prerendered at build time.
  *
  * Without this the route had no `generateStaticParams`, which makes Next render
  * it on demand for every single request and mark the response
  * `private, no-cache, no-store` — the CDN can never cache it. Category hubs sit
  * in the main navigation, so every crawler sweep paid for a full server render
- * of each one. These are now static pages served from cache.
+ * of each one.
  *
  * `dynamicParams` is deliberately left at its default (`true`) instead of being
  * set to `false`. `/category/Writing` has been a live URL for a long time and
  * returns the same list as `/category/writing`; 404-ing it would drop whatever
  * Google has indexed under the capitalised form. The lowercase six are cached,
  * the capitalised variants still render on demand and canonicalise to lowercase
- * via the metadata below.
+ * via `categoryMetadata`.
  */
 export function generateStaticParams() {
-  return Object.keys(categoryNames).map((name) => ({ slug: name.toLowerCase() }));
+  return CATEGORY_SLUGS.map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
-  const categorySlug = slug.charAt(0).toUpperCase() + slug.slice(1);
-  const category = categorySlug as Category;
-
-  if (!Object.keys(categoryNames).includes(category)) {
-    return {
-      title: 'Not Found – Use AI Tools',
-    };
-  }
-
-  const categoryName = categoryNames[category];
-  const description = categoryDescriptions[category];
-  const title = `${categoryName} AI Tools - Use AI Tools`;
-
-  // /category/Productivity and /category/productivity both render, and each
-  // used to canonicalise to itself, so Google saw two unrelated pages with the
-  // same content and dropped one. Lowercase is what the sitemap uses, so it is
-  // the canonical form; the capitalised URL points at it.
-  const canonicalSlug = slug.toLowerCase();
-
-  return {
-    title,
-    description,
-    openGraph: {
-      title,
-      description,
-      siteName: 'Use AI Tools',
-      type: 'website',
-      url: `https://useaitools.me/category/${canonicalSlug}`,
-      locale: 'en_US',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description,
-    },
-    // No hreflang: `?lang=zh` serves identical English HTML (no [locale]
-    // segment exists), so it only creates duplicate-content signals.
-    alternates: {
-      canonical: `https://useaitools.me/category/${canonicalSlug}`,
-    },
-  };
+  const category = resolveCategory(slug);
+  if (!category) return { title: 'Not Found – Use AI Tools' };
+  return categoryMetadata(category, 1);
 }
 
-export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+/** Page 1 of a category listing. Pages 2..N live at /category/<slug>/page/<n>. */
+export default async function CategoryPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
-  const categorySlug = slug.charAt(0).toUpperCase() + slug.slice(1);
-  const category = categorySlug as Category;
+  const category = resolveCategory(slug);
+  if (!category) notFound();
 
-  if (!Object.keys(categoryNames).includes(category)) {
-    notFound();
-  }
-
-  // Enrich tools with affiliate links from environment variables
-  const categoryTools = tools
-    .filter(t => t.category === category)
-    .map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
-  const colors = colorMap[category];
-  const description = categoryDescriptions[category];
-  const categoryName = categoryNames[category];
-
-  const breadcrumbLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    'itemListElement': [
-      {
-        '@type': 'ListItem',
-        'position': 1,
-        'name': 'Home',
-        'item': 'https://useaitools.me',
-      },
-      {
-        '@type': 'ListItem',
-        'position': 2,
-        'name': `${categoryName} AI Tools`,
-        'item': `https://useaitools.me/category/${slug}`,
-      },
-    ],
-  };
-
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    'name': `${categoryName} AI Tools - Use AI Tools`,
-    'description': description,
-    'url': `https://useaitools.me/category/${slug}`,
-    'publisher': {
-      '@type': 'Organization',
-      'name': 'Use AI Tools',
-      'logo': {
-        '@type': 'ImageObject',
-        'url': 'https://useaitools.me/logo.png'
-      }
-    },
-    'author': {
-      '@type': 'Organization',
-      'name': 'Use AI Tools'
-    },
-    'mainEntity': {
-      '@type': 'ItemList',
-      'numberOfItems': categoryTools.length,
-      'itemListElement': categoryTools.map((tool, index) => ({
-        '@type': 'ListItem',
-        'position': index + 1,
-        'name': tool.name,
-        // The canonical tool URL - /tools/<id> only 308-redirects here, and a
-        // structured-data URL should point at the page that actually exists.
-        'url': `https://useaitools.me/tool/${generateSlugFromName(tool.name)}`,
-        'description': tool.description_en || tool.description
-      }))
-    }
-  };
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <div className="min-h-screen bg-slate-50 dark:bg-gray-950 py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          {/* Breadcrumbs */}
-          <Breadcrumbs 
-            items={[
-              { label: 'Home', href: '/' },
-              { label: categoryName, href: `/category/${slug}`, current: true }
-            ]} 
-          />
-          
-          <div className="mb-8" />
-
-          {/* Writer Promotion Banner for Writing Category */}
-          {category === 'Writing' && (
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-500 via-teal-500 to-blue-500 p-px mb-10 shadow-xl">
-              <div className="relative overflow-hidden rounded-3xl bg-emerald-50 dark:bg-gray-900 p-8 sm:p-10 border-l-4 border-emerald-600">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                  <div>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 mb-4">
-                      <span className="animate-pulse">✨</span> Live Now
-                    </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2">
-                      🖋️ Looking for an affordable AI writer? Try our own tool — built for creators who refuse to overpay.
-                    </h2>
-                    <p className="text-lg text-slate-600 dark:text-gray-300 max-w-xl">
-                      Write 3x faster with AI — try it free.
-                    </p>
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <a
-                      href="https://tryaiwriter.com"
-                      target="_blank" rel="noopener noreferrer"
-                      className="flex-shrink-0 inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition-all duration-300"
-                    >
-                      Try Use AI Writer Free
-                      <ArrowRight className="w-5 h-5" />
-                    </a>
-                    <Link
-                      href="/writer"
-                      className="flex-shrink-0 inline-flex items-center justify-center gap-2 px-8 py-4 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-300 font-semibold rounded-xl hover:bg-emerald-100/50 dark:hover:bg-emerald-500/10 transition-all duration-300"
-                    >
-                      Explore Tools
-                      <ArrowRight className="w-5 h-5" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Hero Component */}
-          <CategoryHero 
-            category={category}
-            categoryName={categoryName}
-            description={description}
-            toolCount={categoryTools.length}
-          />
-
-          {/* Stats Component */}
-          <CategoryStats category={category} tools={categoryTools} />
-
-          {/* Gold Picks: Top 3 Editor Recommendations */}
-          <GoldPicks tools={categoryTools} categoryColors={colors} />
-
-          {/* Top 10 Tools by Rating */}
-          <TopTools tools={categoryTools} category={categoryName} categoryColors={colors} />
-
-          <div className={`h-px bg-gradient-to-r from-transparent via-${categorySlug.toLowerCase()}-300 dark:via-${categorySlug.toLowerCase()}-500/20 to-transparent mb-10 mx-auto max-w-2xl`} />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-7">
-            {categoryTools.map((tool, index) => {
-              const hasAffiliate = hasAffiliateLink(tool);
-              const ctaText = hasAffiliate ? '🔗 Try It Free' : 'Visit Website';
-              
-              return (
-              <div
-                key={tool.id}
-                className={`bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 shadow-sm dark:shadow-xl rounded-2xl overflow-hidden group hover:-translate-y-1.5 transition-all duration-300 ease-out ${colors.ring} relative`}
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                {/* Staff Pick Badge for affiliate tools */}
-                {hasAffiliate && (
-                  <div className="absolute top-3 right-3 z-10">
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-md shadow-emerald-500/25">
-                      🏷️ Staff Pick
-                    </span>
-                  </div>
-                )}
-                
-                <div className={`h-0.75 w-full ${colors.bg}`} style={{ height: '3px' }} />
-                <div className="p-7">
-                  <div className="flex items-start justify-between gap-4 mb-4">
-                    <div className="flex items-start gap-3">
-                      <div className={`w-11 h-11 rounded-xl ${colors.bgDark} ${colors.textLight} dark:${colors.text} flex items-center justify-center text-xl font-bold group-hover:scale-105 transition-transform duration-300`}>
-                        {tool.name.charAt(0)}
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-xl text-slate-900 dark:text-white">
-                          {tool.name}
-                        </h3>
-                        <div className="flex items-center gap-1.5 mt-1">
-                          {tool.needs_vpn ? (
-                            <span title="Not available in every region." className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300">
-                              🌐 Region-locked
-                            </span>
-                          ) : (
-                            <span title="Available worldwide without a VPN." className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300">
-                              ✅ Global
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                    <span className="px-3 py-1.5 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">
-                      {tool.pricing}
-                    </span>
-                  </div>
-                  <p className="text-slate-600 dark:text-gray-300 leading-relaxed mb-6">
-                    {tool.description}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${colors.bg} text-white dark:${colors.bgDark} dark:${colors.text}`}>
-                      {tool.category}
-                    </span>
-                    <a
-                      href={getAffiliateLink(tool) || tool.url}
-                      target="_blank" rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-2 px-4 py-2 border ${colors.border} dark:${colors.bgDark} dark:border-transparent ${colors.textLight} dark:${colors.text} text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:${colors.bg} hover:text-white hover:border-transparent`}
-                    >
-                      {ctaText}
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            );
-            })}
-          </div>
-
-          {/* Promote Your Tool — Featured Listing */}
-          <div className="mt-12 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 border border-emerald-200/60 dark:border-emerald-800/40 rounded-2xl p-6 sm:p-8">
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <div className="flex-1 text-center sm:text-left">
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1">🚀 Promote Your AI Tool</h3>
-                <p className="text-sm text-slate-600 dark:text-slate-400">
-                  Get featured in this category and reach thousands of AI enthusiasts. Starting at <span className="font-semibold text-emerald-600 dark:text-emerald-400">$19/listing</span>.
-                </p>
-              </div>
-              <Link
-                href="/submit/featured"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-semibold rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
-              >
-                Get Featured →
-              </Link>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 font-medium transition-colors duration-300"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-              Back to Home
-            </Link>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
+  return <CategoryView category={category} page={1} />;
 }
