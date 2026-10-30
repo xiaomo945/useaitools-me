@@ -331,6 +331,15 @@ type RelatedTool = {
   category: string;
 };
 
+// The Next Read cards render a thumbnail, category, date, title and summary.
+// Receiving whole BlogPosts put three full articles - roughly 27 KB - into the
+// payload of every one of the 538 posts, next to the one article that page is
+// actually about.
+type RelatedPost = Pick<
+  BlogPost,
+  'id' | 'title' | 'slug' | 'date' | 'description' | 'category' | 'images'
+>;
+
 export default function ClientBlogDetail({
   post,
   slug,
@@ -340,7 +349,7 @@ export default function ClientBlogDetail({
 }: {
   post: BlogPost;
   slug: string;
-  relatedPosts?: BlogPost[];
+  relatedPosts?: RelatedPost[];
   relatedTools?: RelatedTool[];
   demoted?: boolean;
 }) {

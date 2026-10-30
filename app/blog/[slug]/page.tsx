@@ -342,7 +342,21 @@ export default async function BlogDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
-      <ClientBlogDetail post={processedPost} slug={slug} relatedPosts={relatedPosts} relatedTools={relatedTools} demoted={isDemoted} />
+      <ClientBlogDetail
+        post={processedPost}
+        slug={slug}
+        relatedPosts={relatedPosts.map(p => ({
+          id: p.id,
+          title: p.title,
+          slug: p.slug,
+          date: p.date,
+          description: p.description,
+          category: p.category,
+          images: p.images?.slice(0, 1),
+        }))}
+        relatedTools={relatedTools}
+        demoted={isDemoted}
+      />
     </>
   );
 }

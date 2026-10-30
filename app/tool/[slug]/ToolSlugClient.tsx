@@ -66,6 +66,22 @@ type BlogPost = {
   images?: { url: string; alt: string }[];
 };
 
+// Both card grids below render seven fields and nothing else, but they used to
+// receive the whole record. A BlogPost carries its full article body, so five
+// recommendations dragged 45 KB of other people's articles into the RSC payload
+// of every tool page - the single largest block in a 191 KB document. A Tool
+// carries use_cases, examples and pros_cons, none of which a 5-line card reads.
+// These projections are what actually crosses the server/client boundary now.
+export type RelatedTool = Pick<
+  Tool,
+  'id' | 'name' | 'category' | 'description'
+>;
+
+export type RelatedArticle = Pick<
+  BlogPost,
+  'id' | 'title' | 'slug' | 'date' | 'description' | 'category' | 'images'
+>;
+
 // Affiliate link helpers — unified in lib/affiliate.ts
 import { hasAffiliateLink, getAffiliateLink as getAffiliateLinkWithUTM } from '@/lib/affiliate';
 
@@ -137,8 +153,8 @@ export default function ToolSlugClient({
   slug,
 }: {
   tool: Tool;
-  relatedTools: Tool[];
-  relatedArticles: BlogPost[];
+  relatedTools: RelatedTool[];
+  relatedArticles: RelatedArticle[];
   slug: string;
 }) {
   const colors = getCategoryColors(tool.category);
@@ -545,12 +561,6 @@ export default function ToolSlugClient({
                         {relatedTool.description.slice(0, 100)}...
                       </p>
                     </Link>
-                    {relatedTool.rating && (
-                      <div className="flex items-center gap-1.5 mb-3">
-                        <StarRating rating={Math.round(relatedTool.rating)} />
-                        <span className="text-xs text-slate-500 dark:text-gray-400">{relatedTool.rating}</span>
-                      </div>
-                    )}
                     <div className="mt-auto flex gap-2">
                       <Link
                         href={`/tool/${altSlug}`}

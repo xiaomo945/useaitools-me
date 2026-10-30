@@ -269,7 +269,12 @@ export default async function ToolSlugPage({ params }: { params: Promise<{ slug:
     const next = byId.findIndex(t => t.id > tool.id);
     const start = next === -1 ? 0 : next;
     return Array.from({ length: 5 }, (_, k) => byId[(start + k) % byId.length]);
-  })().map(t => ({ ...t, affiliate_link: getAffiliateLink(t) }));
+  })().map(t => ({
+    id: t.id,
+    name: t.name,
+    category: t.category,
+    description: t.description,
+  }));
 
   // Same rotation for articles: taking the five newest per category left 411
   // of 441 posts with no link from any tool page. Offsetting by the tool id
@@ -311,7 +316,19 @@ export default async function ToolSlugPage({ params }: { params: Promise<{ slug:
       seenSlug.add(post.slug);
       return true;
     })
-    .slice(0, 5);
+    .slice(0, 5)
+    // The card shows a thumbnail, a category, a date, a title and two lines of
+    // summary. Sending the whole post meant every tool page carried the full
+    // text of five unrelated articles - about 45 KB of the 191 KB document.
+    .map(post => ({
+      id: post.id,
+      title: post.title,
+      slug: post.slug,
+      date: post.date,
+      description: post.description,
+      category: post.category,
+      images: post.images?.slice(0, 1),
+    }));
 
   return (
     <>
