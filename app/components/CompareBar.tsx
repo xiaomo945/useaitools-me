@@ -80,7 +80,7 @@ const CompareBar: React.FC<CompareBarProps> = ({
             </button>
             {selectedForCompare.length >= 2 ? (
               <Link
-                href={`/compare?tool=${selectedForCompare[0]}&tool=${selectedForCompare[1]}`}
+                href={`/compare#tool=${selectedForCompare[0]},${selectedForCompare[1]}`}
                 className="px-6 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
               >
                 Compare Now →

@@ -284,7 +284,7 @@ export default function ToolSlugClient({
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <Link
-                href={`/compare?tool=${tool.id}`}
+                href={`/compare#tool=${tool.id}`}
                 className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -569,7 +569,7 @@ export default function ToolSlugClient({
                         Details
                       </Link>
                       <Link
-                        href={`/compare?tool=${tool.id},${relatedTool.id}`}
+                        href={`/compare#tool=${tool.id},${relatedTool.id}`}
                         className="flex-1 inline-flex items-center justify-center gap-1 px-3 py-2 rounded-lg text-xs font-semibold bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/50 hover:bg-emerald-100 dark:hover:bg-emerald-500/20 transition-all"
                       >
                         Compare

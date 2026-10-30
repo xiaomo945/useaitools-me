@@ -306,7 +306,7 @@ const ToolCard = memo(function ToolCard({
           
           <div className="flex items-center gap-1 sm:gap-2">
             <button
-              onClick={() => router.push(`/compare?tool=${tool.id}`)}
+              onClick={() => router.push(`/compare#tool=${tool.id}`)}
               className="inline-flex items-center justify-center gap-0.5 sm:gap-1.5 px-1.5 sm:px-3 min-h-[44px] min-w-[44px] border border-gray-300 dark:border-gray-600 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm text-gray-600 dark:text-gray-400 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-white dark:hover:bg-gray-800 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:shadow-md focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.98]"
             >
               <svg
@@ -1709,10 +1709,10 @@ export default function HomeClient({ initialTools, blogPosts, quickStartTools, t
         <div className="max-w-2xl mx-auto mb-4 sm:mb-8 px-3 sm:px-0">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
             {[
-              { icon: '✍️', label: 'Write a blog post', href: '/compare?category=Writing', desc: 'Find AI writing tools' },
-              { icon: '🎬', label: 'Edit a video', href: '/compare?category=Video', desc: 'Compare video editors' },
-              { icon: '🎨', label: 'Generate images', href: '/compare?category=Image', desc: 'Explore AI image tools' },
-              { icon: '📊', label: 'Boost productivity', href: '/compare?category=Productivity', desc: 'Top productivity AI' },
+              { icon: '✍️', label: 'Write a blog post', href: '/compare#category=Writing', desc: 'Find AI writing tools' },
+              { icon: '🎬', label: 'Edit a video', href: '/compare#category=Video', desc: 'Compare video editors' },
+              { icon: '🎨', label: 'Generate images', href: '/compare#category=Image', desc: 'Explore AI image tools' },
+              { icon: '📊', label: 'Boost productivity', href: '/compare#category=Productivity', desc: 'Top productivity AI' },
             ].map((card) => (
               <Link
                 key={card.label}

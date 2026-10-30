@@ -51,8 +51,11 @@ export default function GuidedTour() {
   // 启动引导 + 智能检测用户是否已经交互
   useEffect(() => {
     try {
-      const params = new URLSearchParams(window.location.search);
-      if (params.get('replay-tour') === '1') {
+      // The footer link used to be `/?replay-tour=1`, which is a second URL for
+      // the homepage: a separate cache key for a 324 KB document, and a URL a
+      // crawler has to reconcile against `/`. A fragment never leaves the
+      // browser, so the link is just `/` again.
+      if (window.location.hash === '#replay-tour') {
         localStorage.removeItem(STORAGE_KEY);
         localStorage.removeItem(INTERACTION_KEY);
         window.history.replaceState({}, '', '/');

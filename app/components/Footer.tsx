@@ -148,7 +148,7 @@ export default function Footer() {
                 Dashboard
               </Link>
               <Link
-                href="/?replay-tour=1"
+                href="/#replay-tour"
                 className="text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-300 text-sm"
               >
                 Replay Guide

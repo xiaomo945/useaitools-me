@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useSyncExternalStore, useCallback } from 'react';
+import { useState, useMemo, useSyncExternalStore, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import type { Tool } from '@/types';
 import { Plus, X, Star, ArrowRight, Check, Trophy } from 'lucide-react';
@@ -19,6 +19,7 @@ const categoryColorMap: Record<string, { bg: string; text: string }> = {
 };
 
 const MAX_TOOLS = 4;
+const categories = ['All', 'Writing', 'Image', 'Productivity', 'Code', 'Audio', 'Video'];
 const VOTE_STORAGE_KEY = 'useaitools_compare_votes';
 
 type VoteMap = { [toolsKey: string]: { [toolId: number]: number } };
@@ -101,6 +102,40 @@ export default function ComparePage() {
   const [showPicker, setShowPicker] = useState(false);
   const [pickerSearch, setPickerSearch] = useState('');
   const [pickerCategory, setPickerCategory] = useState<string>('All');
+
+  // Deep links used to arrive as `/compare?tool=6,23`, and every tool page
+  // emitted five of them. The parameters were never read, so all ~7,000 of
+  // those URLs rendered this same component with the default pair already
+  // selected - 7,000 cache keys for one page, 7,000 origin renders, and 7,000
+  // duplicates of /compare for a crawler to work through on a site that is
+  // already struggling to get its real pages indexed.
+  //
+  // The selection now travels in the fragment. Fragments are never sent to the
+  // server, so every one of those links is just /compare again, and the link
+  // finally does what it always claimed to: it opens with both tools compared.
+  useEffect(() => {
+    const hash = window.location.hash;
+
+    const byTool = /^#tool=([\d,]+)$/.exec(hash);
+    if (byTool) {
+      const ids = byTool[1]
+        .split(',')
+        .map(Number)
+        .filter(id => Number.isFinite(id) && tools.some(t => t.id === id));
+      if (ids.length > 0) setSelectedIds(ids.slice(0, MAX_TOOLS));
+      return;
+    }
+
+    const byCategory = /^#category=([A-Za-z]+)$/.exec(hash);
+    if (byCategory) {
+      const wanted = byCategory[1].toLowerCase();
+      const match = categories.find(c => c.toLowerCase() === wanted);
+      if (match && match !== 'All') {
+        setPickerCategory(match);
+        setShowPicker(true);
+      }
+    }
+  }, [categories]);
 
   // useSyncExternalStore gives us a stable tick (0 on the server, bumped on each
   // vote). The actual vote state is derived with useMemo so its reference only
@@ -189,8 +224,6 @@ export default function ComparePage() {
     }
     return result.slice(0, 20);
   }, [availableTools, pickerCategory, pickerSearch]);
-
-  const categories = ['All', 'Writing', 'Image', 'Productivity', 'Code', 'Audio', 'Video'];
 
   const addTool = (id: number) => {
     if (selectedIds.length < MAX_TOOLS) {

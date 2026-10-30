@@ -813,7 +813,7 @@ const [hasReferrer] = useState(() => {
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <Link
-                href={`/compare?tool=${tool.id}`}
+                href={`/compare#tool=${tool.id}`}
                 className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 sm:py-4 border border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-slate-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-slate-50 dark:hover:bg-gray-700 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all duration-300"
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
