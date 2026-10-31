@@ -15,8 +15,10 @@ import {
 
 export const BLOG_META = {
   title: 'AI Tools Blog – Reviews, Comparisons & How-To Guides',
+  // 170 characters used to get cut off mid-word in results on all 23 archive
+  // pages, which share this string. 150 fits whole.
   description:
-    'In-depth reviews, side-by-side comparisons, and practical guides for AI tools. Discover the best AI tools for writing, image generation, video creation, coding, and more.',
+    'Reviews, side-by-side comparisons and practical guides for AI tools — writing, image, video, audio, code and productivity.',
 } as const;
 
 /**

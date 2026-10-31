@@ -34,7 +34,11 @@ import { MetadataRoute } from 'next';
  * renders without ever producing an indexable page.
  */
 export default function robots(): MetadataRoute.Robots {
-  const disallow = ['/api/', '/admin/', '/private/', '/checkout/', '/search'];
+  // Trailing slashes matter here. `Disallow: /admin/` does not match `/admin` -
+  // robots.txt is a prefix match, and the prefix it matches is "/admin/". The
+  // bare index of each of these sections was therefore crawlable, thin, and
+  // carrying the site's own <title>. Dropping the slash covers both.
+  const disallow = ['/api', '/admin', '/private', '/checkout', '/search'];
 
   // Training-only crawlers: block entirely.
   const trainingCrawlers = [

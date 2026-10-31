@@ -416,9 +416,13 @@ export function CategoryView({ category, page }: { category: Category; page: num
                               grid only linked out to vendor sites, so none of the
                               481 tools in Code had an internal link from their own
                               category listing - the review pages were reachable
-                              only through the sitemap and the top-10 rail. */}
+                              only through the sitemap and the top-10 rail.
+                              prefetch is off: a reader opens one of these 48
+                              cards, not all of them, and a renderer that never
+                              clicks - Googlebot included - should not be
+                              fetching 48 RSC payloads to draw one page. */}
                           <h3 className="font-semibold text-xl text-slate-900 dark:text-white">
-                            <Link href={toolHref} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                            <Link prefetch={false} href={toolHref} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                               {tool.name}
                             </Link>
                           </h3>

@@ -203,6 +203,10 @@ export function ArchiveCard({ post }: { post: ArchivePost }) {
   const c = categoryColors(post.category.slug);
   return (
     <Link
+      // Twelve cards per archive page, twenty-four pages of archives. Left on
+      // the default, every one of them that enters the viewport pulls a full
+      // RSC payload from the origin, for a reader who will open one.
+      prefetch={false}
       href={`/blog/${post.slug}`}
       className="group bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 overflow-hidden hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 ease-out"
     >

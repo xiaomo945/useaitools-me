@@ -1023,6 +1023,7 @@ export default function ClientBlogDetail({
                 return (
                   <Link
                     key={relatedPost.id}
+                    prefetch={false}
                     href={`/blog/${relatedPost.slug}`}
                     className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out"
                   >

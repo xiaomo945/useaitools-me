@@ -59,10 +59,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
   }
   const stepCount = workflow.steps.length;
+  const base = `${workflow.description_en.replace(/\.$/, '')}: ${stepCount} steps, about ${workflow.estimated_time_en}, ${workflow.difficulty} level.`;
+
+  // The tools tail is the most droppable part of the sentence: the duration and
+  // the step count are what a reader scanning results is deciding on. wf-010 ran
+  // to 180 characters with it, which Google cut off mid-phrase, so it only goes
+  // on when the whole snippet still fits.
   const toolsPart = namedTools.length
     ? ` Uses ${namedTools.slice(0, 3).join(', ')}${namedTools.length > 3 ? ' and more' : ''}.`
     : '';
-  const description = `${workflow.description_en.replace(/\.$/, '')}: ${stepCount} steps, about ${workflow.estimated_time_en}, ${workflow.difficulty} level.${toolsPart}`;
+  const description = base.length + toolsPart.length <= 158 ? base + toolsPart : base;
 
   const title = `${workflow.name_en} – Use AI Tools`;
 

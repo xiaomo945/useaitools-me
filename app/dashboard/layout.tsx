@@ -3,6 +3,10 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Dashboard – Site Statistics – Use AI Tools',
   description: 'View site statistics, category distribution, tool counts, and weekly activity for the Use AI Tools directory.',
+  // The footer links here from every page, so a crawler finds it constantly.
+  // It is an account surface plus an internal Product Hunt checklist, and all
+  // three pages under it shared one <title>. Nothing here belongs in an index.
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'Dashboard – Site Statistics – Use AI Tools',
     description: 'View site statistics, category distribution, tool counts, and weekly activity for the Use AI Tools directory.',

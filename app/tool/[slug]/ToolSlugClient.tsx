@@ -543,7 +543,7 @@ export default function ToolSlugClient({
                     key={relatedTool.id}
                     className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-2xl p-5 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 ease-out flex flex-col"
                   >
-                    <Link href={`/tool/${altSlug}`} className="flex items-center gap-3 mb-3">
+                    <Link prefetch={false} href={`/tool/${altSlug}`} className="flex items-center gap-3 mb-3">
                       <div className={`w-9 h-9 rounded-lg ${relatedColors.bg}/10 flex items-center justify-center ${relatedColors.textLight} dark:${relatedColors.text} text-sm font-bold`}>
                         {relatedTool.name.charAt(0)}
                       </div>
@@ -556,13 +556,14 @@ export default function ToolSlugClient({
                         </span>
                       </div>
                     </Link>
-                    <Link href={`/tool/${altSlug}`}>
+                    <Link prefetch={false} href={`/tool/${altSlug}`}>
                       <p className="text-slate-600 dark:text-gray-300 text-xs leading-relaxed mb-3 line-clamp-2">
                         {relatedTool.description.slice(0, 100)}...
                       </p>
                     </Link>
                     <div className="mt-auto flex gap-2">
                       <Link
+                        prefetch={false}
                         href={`/tool/${altSlug}`}
                         className="flex-1 inline-flex items-center justify-center px-3 py-2 rounded-lg text-xs font-semibold border border-slate-200 dark:border-gray-700 text-slate-600 dark:text-slate-300 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all"
                       >
@@ -610,6 +611,7 @@ export default function ToolSlugClient({
                 return (
                   <Link
                     key={article.id}
+                    prefetch={false}
                     href={`/blog/${article.slug}`}
                     className="group bg-white dark:bg-gray-900 border border-slate-200 dark:border-gray-800 rounded-xl p-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out"
                   >
