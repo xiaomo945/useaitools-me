@@ -59042,5 +59042,4005 @@
         "The recommendation is only as good as what your existing assistant knows about you"
       ]
     }
+  },
+  {
+    "id": 2212,
+    "name": "SpecDeck",
+    "description": "SpecDeck keeps product context, requirements and acceptance criteria in one reviewed spec so coding agents start from the decision instead of a bare ticket. Issues describe changes; specs describe the product. Works with Claude Code, Codex, OpenCode and OpenClaw, and ships an AI assistant that brings product colleagues into the loop.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://specdeck.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SpecDeck keeps product context, requirements and acceptance criteria in one reviewed spec so coding agents start from the decision instead of a bare ticket. Issues describe changes; specs describe the product. Works with Claude Code, Codex, OpenCode and OpenClaw, and ships an AI assistant that brings product colleagues into the loop.",
+    "last_updated": "2026-10-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Handing agents a reviewed spec instead of a ticket",
+      "Keeping product decisions where a coding agent can read them",
+      "Teams where product and engineering share one spec"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Write the spec first",
+        "detail": "Turn product decisions into a reviewed spec with acceptance criteria before an agent touches code."
+      },
+      {
+        "title": "Agent reads context",
+        "detail": "The coding agent gets the spec and the decisions behind it rather than an isolated issue."
+      },
+      {
+        "title": "Check acceptance",
+        "detail": "Every acceptance criterion is listed as a check the build has to pass."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free tier to start with your existing coding agents",
+        "Explicit about the difference between an issue and a spec",
+        "Works across the main agent CLIs rather than one"
+      ],
+      "cons": [
+        "Another spec document to maintain alongside your tracker",
+        "Value depends on the team actually reviewing specs"
+      ]
+    }
+  },
+  {
+    "id": 2213,
+    "name": "Wavefunction",
+    "description": "A minimal open-source coding agent for macOS that keeps the conversation at the centre instead of piling on sidebars. Send the next task while the last one runs: each independent piece of work gets a subagent in its own worktree, and computer use happens inside a local Docker container. Free and MIT licensed.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://www.wavefunction.si",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "A minimal open-source coding agent for macOS that keeps the conversation at the centre instead of piling on sidebars. Send the next task while the last one runs: each independent piece of work gets a subagent in its own worktree, and computer use happens inside a local Docker container. Free and MIT licensed.",
+    "last_updated": "2026-10-29",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Developers who want a desktop coding agent without the super-app bloat",
+      "Parallel work split across subagents",
+      "Running local models or your own API keys"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Parallel subagents",
+        "detail": "Each task that can run on its own gets a subagent in its own worktree, so nothing waits its turn."
+      },
+      {
+        "title": "Containerised computer use",
+        "detail": "When the agent needs a desktop it uses its own, inside a local Docker container."
+      },
+      {
+        "title": "Bring your own model",
+        "detail": "Run models locally, use your own API keys, or sign in with ChatGPT."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed, open source down to the prompt",
+        "Deliberately minimal interface with no built-in browser or bundled apps",
+        "Subagent worktrees keep parallel tasks from colliding"
+      ],
+      "cons": [
+        "macOS only",
+        "Minimal by design, so no editor or terminal panels"
+      ]
+    }
+  },
+  {
+    "id": 2214,
+    "name": "Recto",
+    "description": "Recto is a native visual canvas for coding agents on Windows, Mac and Linux. It auto-detects the agents installed on your machine — Claude Code, Codex, Cursor, OpenCode — and gives them a real design surface for UI, SVG, motion and 3D, so you can select an element and move it yourself or reprompt instead of describing it in a terminal.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://recto.design",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Recto is a native visual canvas for coding agents on Windows, Mac and Linux. It auto-detects the agents installed on your machine — Claude Code, Codex, Cursor, OpenCode — and gives them a real design surface for UI, SVG, motion and 3D, so you can select an element and move it yourself or reprompt instead of describing it in a terminal.",
+    "last_updated": "2026-10-29",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Designing UI with a coding agent instead of describing it in text",
+      "Moving between several agents on one design",
+      "Visual work in 3D and motion from an agent"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Agent detects your tools",
+        "detail": "Recto finds the coding agents already installed and runs their CLI inside the canvas."
+      },
+      {
+        "title": "Direct manipulation",
+        "detail": "Select a card and move it yourself, or tell the agent what to change."
+      },
+      {
+        "title": "Several agents, one canvas",
+        "detail": "Run Claude Code, Codex, Cursor and OpenCode against the same design without switching windows."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Native app rather than a browser tab",
+        "Free",
+        "Works with the agent CLIs you already have installed"
+      ],
+      "cons": [
+        "New product with a small public footprint",
+        "No collaboration or team features mentioned"
+      ]
+    }
+  },
+  {
+    "id": 2215,
+    "name": "Chemical X",
+    "description": "Chemical X is an architecture layer for coding agents: a SQLite symbol index plus AST auditing that replaces whole-file reads and noisy compiler dumps with a small, checkable result. It reports roughly 12 tokens for a verification turn that costs about 12,960 through a raw test run, and gates task completion on AST rules so agents stop degrading the codebase.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://chemicalx.xophz.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Chemical X is an architecture layer for coding agents: a SQLite symbol index plus AST auditing that replaces whole-file reads and noisy compiler dumps with a small, checkable result. It reports roughly 12 tokens for a verification turn that costs about 12,960 through a raw test run, and gates task completion on AST rules so agents stop degrading the codebase.",
+    "last_updated": "2026-10-27",
+    "skill_level": "advanced",
+    "best_for": [
+      "Teams whose agents burn context on CLI noise",
+      "Enforcing structural rules on agent-written code",
+      "Codebases where AI slop has started to accumulate"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Index instead of dump",
+        "detail": "A SQLite symbol index answers queries so the agent reads symbols rather than whole files."
+      },
+      {
+        "title": "AST audit",
+        "detail": "Rules on file budgets and structure run locally and feed a verified triage queue."
+      },
+      {
+        "title": "Gated completion",
+        "detail": "An MCP server re-checks AST rules before a task can be marked done."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Concrete token benchmark published on the site",
+        "Local audit runs with zero upload",
+        "Targets the real failure mode: silent structural decay"
+      ],
+      "cons": [
+        "Commercial licence required beyond the free audit",
+        "Node and TypeScript tooling assumed"
+      ]
+    }
+  },
+  {
+    "id": 2216,
+    "name": "SkillWire",
+    "description": "SkillWire is a searchable catalog for coding-agent skills that also runs a paired trial before you trust one. It pins the source, shows every warning line it matched, downloads a ZIP with original bytes and file hashes, then freezes your task and grader so the same starting files go to both arms and you review the artifacts blind.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://skillwire.net",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SkillWire is a searchable catalog for coding-agent skills that also runs a paired trial before you trust one. It pins the source, shows every warning line it matched, downloads a ZIP with original bytes and file hashes, then freezes your task and grader so the same starting files go to both arms and you review the artifacts blind.",
+    "last_updated": "2026-10-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Vetting a coding-agent skill before installing it",
+      "Comparing whether a skill actually improves results",
+      "Auditing third-party skills for risky instructions"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Inspect the source",
+        "detail": "Filter the catalog by harness, model and evidence, then read the pinned snapshot before choosing."
+      },
+      {
+        "title": "Download with hashes",
+        "detail": "The ZIP carries original bytes, file hashes and the matched warning lines."
+      },
+      {
+        "title": "Paired trial",
+        "detail": "One task, two arms, same starting files, reviewed blind before you reveal which had the skill."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free",
+        "Publishes source warnings rather than just install counts",
+        "Explicit that discovery does not prove a skill works"
+      ],
+      "cons": [
+        "Requires you to run a local Python trial kit",
+        "Small catalog"
+      ]
+    }
+  },
+  {
+    "id": 2217,
+    "name": "Castov",
+    "description": "Castov is a developer toolkit that runs the same utilities in the browser, the terminal and inside an AI agent. Sixty-one tools — JSON to TypeScript, cron across timezones, JWT inspection, CIDR maths — execute client-side with zero server logging, and an MCP server exposes them to Cursor and Claude.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://castov.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Castov is a developer toolkit that runs the same utilities in the browser, the terminal and inside an AI agent. Sixty-one tools — JSON to TypeScript, cron across timezones, JWT inspection, CIDR maths — execute client-side with zero server logging, and an MCP server exposes them to Cursor and Claude.",
+    "last_updated": "2026-10-31",
+    "skill_level": "beginner",
+    "best_for": [
+      "Quick conversions without sending data to a server",
+      "Giving an agent safe, deterministic dev utilities",
+      "Offline work on a locked-down machine"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Same tool, three surfaces",
+        "detail": "The web app, the castov CLI and the MCP server share the same utilities."
+      },
+      {
+        "title": "Pipe between tools",
+        "detail": "Chain JSON straight into TypeScript interfaces or cron into world timezones without clipboard juggling."
+      },
+      {
+        "title": "Encrypted shares",
+        "detail": "Inputs and diffs are compressed into the URL hash so the server never sees them."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "100 percent client-side with WebCrypto",
+        "Works offline",
+        "MCP server exposes the tools to agents"
+      ],
+      "cons": [
+        "Free tier pushes you toward a paid workspace",
+        "Sixty-one utilities is a lot of surface for a small team"
+      ]
+    }
+  },
+  {
+    "id": 2218,
+    "name": "CodeConnect",
+    "description": "CodeConnect puts every coding agent running on your Mac or Linux machines onto your iPhone. You see what each one is doing and answer the one that is waiting: the exact command, never shortened, with its risk level. A read is one tap; a git push --force needs a deliberate hold and Face ID.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://codeconnect.sh",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "CodeConnect puts every coding agent running on your Mac or Linux machines onto your iPhone. You see what each one is doing and answer the one that is waiting: the exact command, never shortened, with its risk level. A read is one tap; a git push --force needs a deliberate hold and Face ID.",
+    "last_updated": "2026-10-31",
+    "skill_level": "beginner",
+    "best_for": [
+      "Approving agent commands while away from the desk",
+      "Watching several machines from one screen",
+      "Keeping risky commands behind Face ID"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Ranked by who is waiting",
+        "detail": "Projects counts everything stopped on you and orders it riskiest first."
+      },
+      {
+        "title": "The whole command",
+        "detail": "The phone shows the exact command with what it does and how risky it is, never truncated."
+      },
+      {
+        "title": "Several computers",
+        "detail": "Pair a Mac and a Linux build box and see their sessions together."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free for iPhone",
+        "Runs over your own tailnet rather than a relay",
+        "Risk-weighted approvals with biometrics"
+      ],
+      "cons": [
+        "One more surface that can reach your shell",
+        "iPhone only on the client side"
+      ]
+    }
+  },
+  {
+    "id": 2219,
+    "name": "Umtri",
+    "description": "Umtri draws your project as a single tree — trunk, limb, twig, leaf, vein — so you can see how it grew and how far a change reaches. You connect a token to the agent you already use, say \"draw my project on Umtri\", and the map keeps growing as you build. Bugs get pinned where they happen, so the record survives a forgotten chat.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://umtri.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Umtri draws your project as a single tree — trunk, limb, twig, leaf, vein — so you can see how it grew and how far a change reaches. You connect a token to the agent you already use, say \"draw my project on Umtri\", and the map keeps growing as you build. Bugs get pinned where they happen, so the record survives a forgotten chat.",
+    "last_updated": "2026-10-15",
+    "skill_level": "beginner",
+    "best_for": [
+      "Seeing project structure without reading every file",
+      "Handing context to an agent in a brand-new session",
+      "Tracking how far a change propagates"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Draw the project",
+        "detail": "Ask your agent to draw the project and Umtri renders the structure as a tree."
+      },
+      {
+        "title": "Impact lines",
+        "detail": "Connections show how far a change in one place reaches."
+      },
+      {
+        "title": "Pin bugs on the tree",
+        "detail": "Each bug is pinned where it happens, so it stays visible after the conversation is gone."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works with Claude Code, Codex and Gemini without switching tools",
+        "Time slider shows how the project grew",
+        "Bugs persist independently of chat history"
+      ],
+      "cons": [
+        "Another hosted service holding a model of your code",
+        "Free tier limits are not stated on the landing page"
+      ]
+    }
+  },
+  {
+    "id": 2220,
+    "name": "rostr",
+    "description": "rostr gives every coding-agent session a name from a roster you pick, so you remember who is doing what. A small CLI plus hooks draft a name when a session starts and return it to the bench when the session ends. Works across machines and integrates with Claude Code and Codex, plus herdr and tmux.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://getrostr.sh",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "rostr gives every coding-agent session a name from a roster you pick, so you remember who is doing what. A small CLI plus hooks draft a name when a session starts and return it to the bench when the session ends. Works across machines and integrates with Claude Code and Codex, plus herdr and tmux.",
+    "last_updated": "2026-10-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Running many agent sessions at once",
+      "Remembering which session is on which task",
+      "Letting agents refer to each other by name"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Assemble a roster",
+        "detail": "Pick a prebuilt team or run rostr assemble to build your own."
+      },
+      {
+        "title": "Sessions draft a name",
+        "detail": "A hook runs rostr draft so each session shows its agent name in the title."
+      },
+      {
+        "title": "Back to the bench",
+        "detail": "When a session ends another hook frees the name for reuse."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Small CLI plus hooks, nothing to host",
+        "Makes multi-session work legible at a glance",
+        "Open source"
+      ],
+      "cons": [
+        "Needs hook configuration per agent",
+        "Novelty rosters may not suit everyone"
+      ]
+    }
+  },
+  {
+    "id": 2221,
+    "name": "Evlat",
+    "description": "Evlat docks a thin strip to the edge of your Mac showing which agent is waiting on you, and one click takes you back to it. It covers Claude Code, Codex, Antigravity and OpenCode, and any long command through evlat watch, including jobs on servers you reach over ssh.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://evlat.komalor.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Evlat docks a thin strip to the edge of your Mac showing which agent is waiting on you, and one click takes you back to it. It covers Claude Code, Codex, Antigravity and OpenCode, and any long command through evlat watch, including jobs on servers you reach over ssh.",
+    "last_updated": "2026-10-14",
+    "skill_level": "beginner",
+    "best_for": [
+      "Knowing which agent needs input without hunting tabs",
+      "Watching long builds and deploys",
+      "Monitoring agents across several machines"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One strip, every agent",
+        "detail": "Each agent gets a row with its state: waiting, working, done or idle."
+      },
+      {
+        "title": "One click back",
+        "detail": "Jump straight to the iTerm, Warp, Ghostty, VS Code or tmux pane that needs you."
+      },
+      {
+        "title": "Remote machines too",
+        "detail": "Jobs on servers arrive tagged with the machine name over your existing ssh."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free, no permissions required",
+        "Honest when a remote link drops instead of showing stale state",
+        "Works with anything through evlat watch"
+      ],
+      "cons": [
+        "macOS only",
+        "Apple silicon only"
+      ]
+    }
+  },
+  {
+    "id": 2222,
+    "name": "Beeuni",
+    "description": "Beeuni is an AI-native computer for your agents: an isolated execution environment with persistent files, agent identities, skills, memory and scoped tool permissions. Define agents in a beeuni.yaml, run them from web, desktop, CLI or API, and review the changes they propose to their own instructions and memory before those stick.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://www.beeuni.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Beeuni is an AI-native computer for your agents: an isolated execution environment with persistent files, agent identities, skills, memory and scoped tool permissions. Define agents in a beeuni.yaml, run them from web, desktop, CLI or API, and review the changes they propose to their own instructions and memory before those stick.",
+    "last_updated": "2026-10-12",
+    "skill_level": "advanced",
+    "best_for": [
+      "Running agents with real files and tools in isolation",
+      "Giving several agents separate identities and permissions",
+      "Keeping context across sessions"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Define agents in a file",
+        "detail": "Each agent gets instructions, skills and tool access in beeuni.yaml."
+      },
+      {
+        "title": "Scoped credentials",
+        "detail": "Credentials stay brokered and are never copied into a session."
+      },
+      {
+        "title": "Review improvements",
+        "detail": "Agents propose changes to skills, instructions and memory; you approve what persists."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Persistent environment rather than a fresh sandbox per turn",
+        "Credentials brokered rather than pasted",
+        "Works as a backend through API and SDK"
+      ],
+      "cons": [
+        "Paid product with demo-gated pricing",
+        "Setup is heavier than a single-agent CLI"
+      ]
+    }
+  },
+  {
+    "id": 2223,
+    "name": "Enso Method",
+    "description": "The Enso Method is an open-source set of agent skills for Claude Code and Codex built around one idea: settle the requirements before the build. You state what you want in plain language, open questions get answered up front or written down as assumptions, and every acceptance criterion is proven before the work is called done.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://ensomethod.org",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "The Enso Method is an open-source set of agent skills for Claude Code and Codex built around one idea: settle the requirements before the build. You state what you want in plain language, open questions get answered up front or written down as assumptions, and every acceptance criterion is proven before the work is called done.",
+    "last_updated": "2026-10-12",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Agents that guess at requirements",
+      "Building production software with Claude Code or Codex",
+      "Keeping intent written down between sessions"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Requirements first",
+        "detail": "Work starts from a PRD and technical design, and meaningful changes amend them before being built."
+      },
+      {
+        "title": "Assumptions are green lights",
+        "detail": "Open questions become recorded assumptions instead of silent guesses."
+      },
+      {
+        "title": "Prove the criteria",
+        "detail": "Each acceptance criterion has to be demonstrated, not asserted."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source",
+        "Over 20 skills covering idea to production",
+        "Explicitly addresses the guess-and-patch loop"
+      ],
+      "cons": [
+        "Requires discipline the agent will not supply on its own",
+        "Written for Claude Code and Codex specifically"
+      ]
+    }
+  },
+  {
+    "id": 2224,
+    "name": "Toolmaker Agent",
+    "description": "Toolmaker Agent is a free AI-native development workbench where humans and coding agents share one structured record of what you build. It ships as a single binary that runs locally, and publishes its documentation as plain text at llms.txt for agents to read.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://toolmaker.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Toolmaker Agent is a free AI-native development workbench where humans and coding agents share one structured record of what you build. It ships as a single binary that runs locally, and publishes its documentation as plain text at llms.txt for agents to read.",
+    "last_updated": "2026-10-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Keeping humans and agents on one record of the build",
+      "Local-only AI development workbench",
+      "Agents that need machine-readable project documentation"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One shared record",
+        "detail": "Humans and coding agents work from the same structured description of the project."
+      },
+      {
+        "title": "Runs locally",
+        "detail": "A single binary, no hosted service in the loop."
+      },
+      {
+        "title": "Docs as plain text",
+        "detail": "The full documentation is served at llms.txt so an agent can read it directly."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free",
+        "Single binary, runs locally",
+        "Publishes agent-readable documentation"
+      ],
+      "cons": [
+        "Landing page is thin, so most detail lives in the docs",
+        "Early product"
+      ]
+    }
+  },
+  {
+    "id": 2225,
+    "name": "SLCR",
+    "description": "SLCR is an open standard for software requirements that coding agents can read in slices and tools can check. Each requirement is sliceable so an agent gets only what its task needs, linked so requirements refine each other, and checkable through validators like tests and linters, with slcr check reporting what is met.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://slcr.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SLCR is an open standard for software requirements that coding agents can read in slices and tools can check. Each requirement is sliceable so an agent gets only what its task needs, linked so requirements refine each other, and checkable through validators like tests and linters, with slcr check reporting what is met.",
+    "last_updated": "2026-10-29",
+    "skill_level": "advanced",
+    "best_for": [
+      "Spec-driven development with agents",
+      "Stopping context rot from long prose specs",
+      "Tying acceptance criteria to real validators"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Write in JSON, TOML or YAML",
+        "detail": "A requirement carries its body, modality and acceptance criteria in a standard format."
+      },
+      {
+        "title": "Attach a validator",
+        "detail": "Map each criterion to ast-grep, a test suite or an agent check."
+      },
+      {
+        "title": "Run the check",
+        "detail": "slcr check reports what is met and runs in CI."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Open standard with a reference implementation",
+        "Slices keep the spec out of the context window",
+        "Validators are tools you already run"
+      ],
+      "cons": [
+        "Another spec format to adopt",
+        "CLI-oriented, so no GUI for authoring"
+      ]
+    }
+  },
+  {
+    "id": 2226,
+    "name": "fastbrowse",
+    "description": "fastbrowse gives an agent a browser and returns results you can verify: cited answers or schema-validated data, with the quote the answer came from. Controls on the page are indexed into a list that a model picks from, credentials are passed by name so passwords never enter a prompt, and irreversible actions pause for approval.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://www.fastbrowse.ai",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "fastbrowse gives an agent a browser and returns results you can verify: cited answers or schema-validated data, with the quote the answer came from. Controls on the page are indexed into a list that a model picks from, credentials are passed by name so passwords never enter a prompt, and irreversible actions pause for approval.",
+    "last_updated": "2026-10-30",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agent browser automation with evidence",
+      "Workflows that must not leak credentials",
+      "Automating checkouts and forms safely"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Indexed controls",
+        "detail": "The page offers a list of controls; the model selects an operation and target from that list."
+      },
+      {
+        "title": "Secrets by name",
+        "detail": "A password is resolved on the allowed origin and never enters a prompt."
+      },
+      {
+        "title": "Authorised actions",
+        "detail": "Actions classified as irreversible pause unless the caller authorised them."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed",
+        "Publishes the cost and step count of the demo run",
+        "Answers cite the page text they came from"
+      ],
+      "cons": [
+        "Requires uv and a Chrome install to run locally",
+        "Model cost is real per run"
+      ]
+    }
+  },
+  {
+    "id": 2227,
+    "name": "llmrun",
+    "description": "llmrun answers the question every local-model user asks: which open models will actually run on this machine, and how good are they. It detects your hardware in the browser without uploading anything, then ranks open models by its own composite score with VRAM at Q4, speed and the hardware each needs.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://llmrun.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "llmrun answers the question every local-model user asks: which open models will actually run on this machine, and how good are they. It detects your hardware in the browser without uploading anything, then ranks open models by its own composite score with VRAM at Q4, speed and the hardware each needs.",
+    "last_updated": "2026-10-27",
+    "skill_level": "beginner",
+    "best_for": [
+      "Checking what fits your GPU before downloading",
+      "Choosing between open models at a given VRAM budget",
+      "Comparing speed across cards"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Detect hardware",
+        "detail": "One click reads your GPU or Mac and nothing leaves the browser."
+      },
+      {
+        "title": "Ranked by fit",
+        "detail": "Models are ranked by composite score, filtered to the ones your memory allows."
+      },
+      {
+        "title": "See the hardware",
+        "detail": "Each model lists VRAM at Q4, tokens per second and the GPU that runs it."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and client-side",
+        "Shows VRAM, speed and hardware together",
+        "No account needed"
+      ],
+      "cons": [
+        "Composite score is llmrun own metric",
+        "Benchmarks only as current as the last update"
+      ]
+    }
+  },
+  {
+    "id": 2228,
+    "name": "Kitepod",
+    "description": "Kitepod connects the Claude, ChatGPT or Cursor plan you already pay for to every WordPress site you run, free and with no daily tool-call cap. Fifty-one tools cover pages, themes, page builders and WooCommerce, every change is staged for preview, and any change can be undone byte for byte.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://kitepod.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Kitepod connects the Claude, ChatGPT or Cursor plan you already pay for to every WordPress site you run, free and with no daily tool-call cap. Fifty-one tools cover pages, themes, page builders and WooCommerce, every change is staged for preview, and any change can be undone byte for byte.",
+    "last_updated": "2026-10-30",
+    "skill_level": "beginner",
+    "best_for": [
+      "Editing WordPress by asking an assistant",
+      "Avoiding a second AI subscription",
+      "Making changes without breaking a live site"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Install a plugin",
+        "detail": "Upload the plugin, click Connect and pick which WordPress user the AI acts as."
+      },
+      {
+        "title": "Ask for changes",
+        "detail": "Add kitepod.com/mcp as a connector and describe the edit."
+      },
+      {
+        "title": "Undo anything",
+        "detail": "Changes are staged for preview and can be restored byte for byte."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free with no daily cap",
+        "Acts as a chosen WordPress user, never more",
+        "Byte-for-byte undo"
+      ],
+      "cons": [
+        "WordPress only",
+        "Plugin required on each site"
+      ]
+    }
+  },
+  {
+    "id": 2229,
+    "name": "Flightdeck",
+    "description": "Flightdeck is a self-hosted observability and control plane for agent fleets. Every LLM call, MCP event and tool call streams to a per-agent timeline and a live fleet feed, and you can set token budgets that warn at 80 percent, swap models at 90 and block at 100, plus MCP allow and block rules. Apache 2.0.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://flightdeck-hq.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Flightdeck is a self-hosted observability and control plane for agent fleets. Every LLM call, MCP event and tool call streams to a per-agent timeline and a live fleet feed, and you can set token budgets that warn at 80 percent, swap models at 90 and block at 100, plus MCP allow and block rules. Apache 2.0.",
+    "last_updated": "2026-10-27",
+    "skill_level": "advanced",
+    "best_for": [
+      "Watching what production agents actually do",
+      "Capping token spend per agent",
+      "Controlling which MCP servers agents may reach"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Live fleet view",
+        "detail": "Every agent on a shared timeline with LLM calls, tool uses and MCP events as they arrive."
+      },
+      {
+        "title": "Budgets that act",
+        "detail": "Warn, downgrade or block at configurable thresholds, enforced in-process."
+      },
+      {
+        "title": "MCP protection",
+        "detail": "Allowlist or blocklist MCP servers per flavor before the call leaves the process."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Apache 2.0 and self-hosted",
+        "Sensor wraps SDK clients with no other code changes",
+        "Prompt capture off by default"
+      ],
+      "cons": [
+        "Requires running your own dashboard",
+        "Configuration surface is broad"
+      ]
+    }
+  },
+  {
+    "id": 2230,
+    "name": "barn",
+    "description": "barn is a macOS menu-bar app that watches every AI coding agent on your Mac — Claude Code, Codex, Gemini, Mistral Vibe and more — and takes you to the exact terminal tab when one needs you. It reads the process table and the agents own session files, so there is no setup, and nothing leaves the machine.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://barn.ope.cool",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "barn is a macOS menu-bar app that watches every AI coding agent on your Mac — Claude Code, Codex, Gemini, Mistral Vibe and more — and takes you to the exact terminal tab when one needs you. It reads the process table and the agents own session files, so there is no setup, and nothing leaves the machine.",
+    "last_updated": "2026-10-19",
+    "skill_level": "beginner",
+    "best_for": [
+      "Too many agent sessions open at once",
+      "Getting a notification when an agent asks a question",
+      "Switching to the right split or tmux pane"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One dot per agent",
+        "detail": "The menu bar shows a dot per agent; coral means it needs you."
+      },
+      {
+        "title": "The exact tab",
+        "detail": "barn picks the right Ghostty split, iTerm tab, VS Code window or tmux pane."
+      },
+      {
+        "title": "Floating deck",
+        "detail": "A strip of glass tiles stays on top as a glanceable status board."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source",
+        "Zero setup, reads local process state",
+        "No account, no telemetry"
+      ],
+      "cons": [
+        "macOS only",
+        "Needs hooks for the most precise agent states"
+      ]
+    }
+  },
+  {
+    "id": 2231,
+    "name": "Drop Sandbox",
+    "description": "Drop is a rootless Linux sandbox for developers. It isolates coding agents and third-party packages inside a disposable environment with its own home directory, so a hallucinated rm -rf never reaches your real files and a prompt injection aimed at ~/.ssh finds nothing. It uses your existing distribution instead of containers, and can run on gVisor.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://droprun.sh",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Drop is a rootless Linux sandbox for developers. It isolates coding agents and third-party packages inside a disposable environment with its own home directory, so a hallucinated rm -rf never reaches your real files and a prompt injection aimed at ~/.ssh finds nothing. It uses your existing distribution instead of containers, and can run on gVisor.",
+    "last_updated": "2026-09-22",
+    "skill_level": "advanced",
+    "best_for": [
+      "Running agents with permissions skipped",
+      "Installing untrusted packages safely",
+      "Testing code against a hostile prompt injection"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Disposable environments",
+        "detail": "Each environment gets its own home while the original home stays hidden."
+      },
+      {
+        "title": "Your own distribution",
+        "detail": "Unlike Docker, every program you already installed is available inside."
+      },
+      {
+        "title": "Optional gVisor",
+        "detail": "Run programs on the gVisor user-space kernel for an extra isolation layer."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Rootless, no container setup",
+        "TOML config with a shared base profile",
+        "gVisor integration as an option"
+      ],
+      "cons": [
+        "Linux only",
+        "Requires understanding namespaces to tune"
+      ]
+    }
+  },
+  {
+    "id": 2232,
+    "name": "Arketum",
+    "description": "Arketum is an MCP server with a single build tool that makes coding agents stop for human approval. It runs nothing and calls no model: it says where the work stands, what comes next and with what context, then records the person decisions with their provenance. Requirements carry versions and states, and every change is tied to one.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://www.npmjs.com/package/@rlabs-cl/arketum",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Arketum is an MCP server with a single build tool that makes coding agents stop for human approval. It runs nothing and calls no model: it says where the work stands, what comes next and with what context, then records the person decisions with their provenance. Requirements carry versions and states, and every change is tied to one.",
+    "last_updated": "2026-10-28",
+    "skill_level": "advanced",
+    "best_for": [
+      "Agents that need human gates before building",
+      "Keeping requirements versioned with their evidence",
+      "Proving a decision was respected in CI"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One tool, every step",
+        "detail": "The agent calls build at each step and gets the state, next action and context."
+      },
+      {
+        "title": "Human gates",
+        "detail": "The person confirms what will be done before it is built."
+      },
+      {
+        "title": "Evidence in CI",
+        "detail": "arketum ci re-runs the recorded evidence of units."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Works as a Claude Code plugin or any MCP client",
+        "Runs nothing and calls no model, so it is cheap",
+        "Explicit about what it cannot guarantee"
+      ],
+      "cons": [
+        "Licence is not a standard OSI one",
+        "Adds ceremony to small changes"
+      ]
+    }
+  },
+  {
+    "id": 2233,
+    "name": "GenClass",
+    "description": "GenClass Runtime catches the bugs your tests never see: stale responses, races, double submits and failure storms. One import records user actions, async work, network traffic, store writes and errors, then a small model running in the browser answers what is happening and which action is best. In guard mode it can stop the failure before users see it.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://www.npmjs.com/package/@genclass/runtime",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "GenClass Runtime catches the bugs your tests never see: stale responses, races, double submits and failure storms. One import records user actions, async work, network traffic, store writes and errors, then a small model running in the browser answers what is happening and which action is best. In guard mode it can stop the failure before users see it.",
+    "last_updated": "2026-10-14",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Race conditions and double submits in production",
+      "Apps where timing bugs escape the test suite",
+      "Catching stale responses without writing more tests"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One line to install",
+        "detail": "A single import observes network traffic, user actions, errors and state."
+      },
+      {
+        "title": "Small local model",
+        "detail": "A model runs in a Web Worker over WebGPU or WASM and decides what is risky."
+      },
+      {
+        "title": "Guard mode",
+        "detail": "Beyond reporting, it can block the failure before the user sees it."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Apache 2.0",
+        "Runs in the browser with no server round trip",
+        "Finds bugs that unit tests structurally miss"
+      ],
+      "cons": [
+        "Anonymous diagnostics are on by default",
+        "Adds a runtime dependency to the client bundle"
+      ]
+    }
+  },
+  {
+    "id": 2234,
+    "name": "Casco",
+    "description": "Casco is an AI-native application security platform built around continuous AI pentesting. Its agents sign in as real users with their own identity, email, phone and TOTP device, test authenticated workflows and business logic behind Cloudflare and CAPTCHAs, prove exploitable paths with reproducible evidence, and retest the fix. It also publishes a free CVE feed for agents.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://casco.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Casco is an AI-native application security platform built around continuous AI pentesting. Its agents sign in as real users with their own identity, email, phone and TOTP device, test authenticated workflows and business logic behind Cloudflare and CAPTCHAs, prove exploitable paths with reproducible evidence, and retest the fix. It also publishes a free CVE feed for agents.",
+    "last_updated": "2026-10-29",
+    "skill_level": "advanced",
+    "best_for": [
+      "Continuous pentesting of authenticated app flows",
+      "Validating findings before they hit a backlog",
+      "Giving agents a CVE feed to look up vulnerabilities"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Authenticated testing",
+        "detail": "The agent signs in with username and password, MFA, SSO or a magic link."
+      },
+      {
+        "title": "Prove the path",
+        "detail": "Findings come with reproducible evidence rather than a scanner signature."
+      },
+      {
+        "title": "Retest the fix",
+        "detail": "The same agent rechecks after a patch and reports what closed."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "States its scope limits explicitly",
+        "Publishes a free CVE feed for agents",
+        "Retesting built into the loop"
+      ],
+      "cons": [
+        "Enterprise pricing, no public tier",
+        "Requires giving an agent real credentials in scope"
+      ]
+    }
+  },
+  {
+    "id": 2235,
+    "name": "Supercomputer",
+    "description": "Supercomputer gives agents GPU and CPU sessions that keep their code and files between runs. Stop a box when the work is done and billing stops while the files stay; resume when you need them. Rates are published per GPU-hour, and there are worked examples for training, biology, robotics and reinforcement learning.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://supercomputer.sh",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Supercomputer gives agents GPU and CPU sessions that keep their code and files between runs. Stop a box when the work is done and billing stops while the files stay; resume when you need them. Rates are published per GPU-hour, and there are worked examples for training, biology, robotics and reinforcement learning.",
+    "last_updated": "2026-10-13",
+    "skill_level": "advanced",
+    "best_for": [
+      "Giving an agent a GPU without babysitting a box",
+      "Long training runs that pause and resume",
+      "Reproducible ML examples to start from"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Persistent sessions",
+        "detail": "Code and files survive between runs while billing stops when you stop the box."
+      },
+      {
+        "title": "Published rates",
+        "detail": "Per-GPU-hour pricing from T4 up to B200, listed on the site."
+      },
+      {
+        "title": "Worked examples",
+        "detail": "nanoGPT, protein design, robot policy and Gaussian splatting setups you can open."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Files persist across stop and resume",
+        "Transparent hourly rates",
+        "Real examples with reported results"
+      ],
+      "cons": [
+        "Usage-based cost that can surprise you",
+        "Requires ML setup knowledge"
+      ]
+    }
+  },
+  {
+    "id": 2236,
+    "name": "Jog",
+    "description": "Jog is GitHub Actions infrastructure for agent-scale development: change runs-on to jog and pay about 80 percent less than GitHub-hosted runners. It is billed by the second, gives 5,000 free minutes a month with no subscription, and the action cache works automatically with no config.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://usejog.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Jog is GitHub Actions infrastructure for agent-scale development: change runs-on to jog and pay about 80 percent less than GitHub-hosted runners. It is billed by the second, gives 5,000 free minutes a month with no subscription, and the action cache works automatically with no config.",
+    "last_updated": "2026-10-31",
+    "skill_level": "intermediate",
+    "best_for": [
+      "CI bills that balloon when agents open many PRs",
+      "Cutting runner cost without rewriting workflows",
+      "Repos where cache setup is the friction"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Change one line",
+        "detail": "Set runs-on to jog and nothing else in the workflow changes."
+      },
+      {
+        "title": "Cache for free",
+        "detail": "setup-node cache and Docker pulls work without extra configuration."
+      },
+      {
+        "title": "Billed by the second",
+        "detail": "A job ending at 25 seconds is charged for 25 seconds."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Roughly 80 percent cheaper than GitHub-hosted runners",
+        "5,000 free minutes monthly",
+        "Per-second billing"
+      ],
+      "cons": [
+        "Only helps private repositories",
+        "Runs on their hardware, so a few large runner tools must be installed"
+      ]
+    }
+  },
+  {
+    "id": 2237,
+    "name": "boostmyagents",
+    "description": "boostmyagents lets supporters fund AI capacity for open-source work. You create a boost page, put the badge in your README, and supporters buy a one-time boost through hosted Stripe Checkout. The capacity runs through bma-cli with Claude Code or Codex, either on its own or as a separate lane when your plan hits its limit.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://boostmyagents.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "boostmyagents lets supporters fund AI capacity for open-source work. You create a boost page, put the badge in your README, and supporters buy a one-time boost through hosted Stripe Checkout. The capacity runs through bma-cli with Claude Code or Codex, either on its own or as a separate lane when your plan hits its limit.",
+    "last_updated": "2026-10-14",
+    "skill_level": "beginner",
+    "best_for": [
+      "Open-source maintainers whose AI plan runs out",
+      "Funders who want to support a repo without cash changing hands",
+      "Using AI capacity separate from a subscription"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Create a boost page",
+        "detail": "Sign in with GitHub and add pages for public repositories you own."
+      },
+      {
+        "title": "Supporters boost",
+        "detail": "They follow the README badge, pick an amount and pay through Stripe."
+      },
+      {
+        "title": "Use the capacity",
+        "detail": "Run Claude Code or Codex through bma-cli until the balance runs out."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Capacity rather than cash, which avoids payment complications",
+        "Hard spend limits per boost",
+        "Prompts are not inspected"
+      ],
+      "cons": [
+        "Eligibility requires an OSI-approved licence",
+        "Depends on supporters actually showing up"
+      ]
+    }
+  },
+  {
+    "id": 2238,
+    "name": "Whenever",
+    "description": "Whenever is a platform for AI workflow automation: deterministic flows, AI steps and full agents, built in the app or written by your coding agent and deployed through an MCP server. You describe what should happen, Claude Code, Codex or Cursor writes the workflow code, and Whenever runs it with your connected accounts. Priced per run.",
+    "category": "Code",
+    "pricing": "Freemium",
+    "url": "https://www.whenever.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Whenever is a platform for AI workflow automation: deterministic flows, AI steps and full agents, built in the app or written by your coding agent and deployed through an MCP server. You describe what should happen, Claude Code, Codex or Cursor writes the workflow code, and Whenever runs it with your connected accounts. Priced per run.",
+    "last_updated": "2026-10-27",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Turning a repeated agent task into a scheduled workflow",
+      "Deploying workflows your coding agent wrote",
+      "Mixing deterministic steps with AI steps"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Describe the outcome",
+        "detail": "Say what should happen and the agent writes the steps."
+      },
+      {
+        "title": "Deploy over MCP",
+        "detail": "The coding agent saves a draft and deploys it through mcp.whenever.dev."
+      },
+      {
+        "title": "You connect the accounts",
+        "detail": "You decide which integrations go live and when the workflow runs."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Build with the agent you already use",
+        "Workflow code is real code you can read",
+        "Deterministic steps available alongside AI steps"
+      ],
+      "cons": [
+        "Per-run pricing scales with volume",
+        "Another platform holding your integration credentials"
+      ]
+    }
+  },
+  {
+    "id": 2239,
+    "name": "Portus",
+    "description": "Portus is a Kubernetes gateway written in Rust that carries HTTP, LLM and MCP traffic on one data plane. It passes all 130 Gateway API v1.6.2 conformance tests with no skips and measured 224,173 requests per second at 2.98 ms p99 through three proxy pods on a 32-vCPU machine.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://portus-gateway.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Portus is a Kubernetes gateway written in Rust that carries HTTP, LLM and MCP traffic on one data plane. It passes all 130 Gateway API v1.6.2 conformance tests with no skips and measured 224,173 requests per second at 2.98 ms p99 through three proxy pods on a 32-vCPU machine.",
+    "last_updated": "2026-10-02",
+    "skill_level": "advanced",
+    "best_for": [
+      "Consolidating HTTP, LLM and MCP gateways",
+      "Kubernetes clusters that need full Gateway API conformance",
+      "High-throughput ingress with published benchmarks"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Three gateways, one install",
+        "detail": "Kubernetes routes, LLM providers and MCP tool servers sit behind the same data plane."
+      },
+      {
+        "title": "Full conformance",
+        "detail": "All 130 Gateway API v1.6.2 tests pass with no skips."
+      },
+      {
+        "title": "Published benchmarks",
+        "detail": "Every round and every number is published alongside the method."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Full Gateway API conformance with no skips",
+        "Rust implementation with strong measured throughput",
+        "Open about where a competitor wins"
+      ],
+      "cons": [
+        "Operational complexity of running a gateway",
+        "Requires Kubernetes"
+      ]
+    }
+  },
+  {
+    "id": 2240,
+    "name": "Open Components",
+    "description": "Open Components is a written standard for UI components covering three axes: user experience, developer experience and agentic experience. The third is the interesting one — semantic roles agents can read from markup, published machine-readable anatomy and props, deterministic rendering, and rules an agent can verify its own work against before shipping.",
+    "category": "Code",
+    "pricing": "Free",
+    "url": "https://opencomponents.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Open Components is a written standard for UI components covering three axes: user experience, developer experience and agentic experience. The third is the interesting one — semantic roles agents can read from markup, published machine-readable anatomy and props, deterministic rendering, and rules an agent can verify its own work against before shipping.",
+    "last_updated": "2026-10-10",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Component libraries that agents have to build with",
+      "Setting rules an agent can self-check",
+      "Teams whose AI-written UI drifts from their own"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "UX rules",
+        "detail": "Accessibility, predictable interaction and every state designed."
+      },
+      {
+        "title": "DX rules",
+        "detail": "One consistent API, typed props and composable parts."
+      },
+      {
+        "title": "AX rules",
+        "detail": "Semantic markup, machine-readable specs and verifiable rules for agents."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free to read and apply",
+        "Covers agentic experience, which most standards ignore",
+        "Backed by a GitHub repo and changelog"
+      ],
+      "cons": [
+        "A guideline document, not a component library",
+        "Adoption is entirely manual"
+      ]
+    }
+  },
+  {
+    "id": 2241,
+    "name": "ProvenMetal MCP",
+    "description": "ProvenMetal MCP lets you quote and order assembled PCBs through an AI assistant. Your agent prices the board with JLCPCB rates plus assembly, parts, shipping and import charges, shows what each option adds or saves before you pay, and can reprice an order with changes in one step. No account is needed to start.",
+    "category": "Code",
+    "pricing": "Paid",
+    "url": "https://provenmetal.com/mcp",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ProvenMetal MCP lets you quote and order assembled PCBs through an AI assistant. Your agent prices the board with JLCPCB rates plus assembly, parts, shipping and import charges, shows what each option adds or saves before you pay, and can reprice an order with changes in one step. No account is needed to start.",
+    "last_updated": "2026-10-19",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Quoting a PCB without filling in a form",
+      "Comparing options before committing",
+      "Hardware teams already working inside an agent"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Open Codex or Claude",
+        "detail": "The MCP server connects the assistant to ProvenMetal quoting."
+      },
+      {
+        "title": "Price every option",
+        "detail": "The agent shows what a faster build or another carrier adds or saves."
+      },
+      {
+        "title": "Reprice in one step",
+        "detail": "Changes are priced again without re-entering the order."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Tax and import included in instant prices",
+        "No account required before checkout",
+        "Checks the design before ordering"
+      ],
+      "cons": [
+        "Single supplier, single fabrication route",
+        "Physical order means real money"
+      ]
+    }
+  },
+  {
+    "id": 2242,
+    "name": "Jev Browser",
+    "description": "Jev Browser is a browser-driving skill built around a small typed decision model instead of screenshots. The skill lists every control the page offers, Jev picks one and states its confidence, and the answer is validated as a key into that table, so anything outside it throws and nothing runs. Stateless, a few thousand input tokens per step, MIT licensed.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://jev-browser.rovira.sh",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Jev Browser is a browser-driving skill built around a small typed decision model instead of screenshots. The skill lists every control the page offers, Jev picks one and states its confidence, and the answer is validated as a key into that table, so anything outside it throws and nothing runs. Stateless, a few thousand input tokens per step, MIT licensed.",
+    "last_updated": "2026-10-21",
+    "skill_level": "advanced",
+    "best_for": [
+      "Cheap browser automation without screenshots",
+      "Driving sites where DOM reading is enough",
+      "Agents that must not act outside a known set of controls"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "The skill lists controls",
+        "detail": "The page is reduced to a table of things you could click, type into or select."
+      },
+      {
+        "title": "Jev picks and scores",
+        "detail": "The model selects one operation and target and says how sure it is."
+      },
+      {
+        "title": "Validated answers",
+        "detail": "An answer outside the table throws before anything runs."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed with the logic readable in one file",
+        "Very low token cost per step",
+        "Confidence is part of the answer"
+      ],
+      "cons": [
+        "Limited to what the control table exposes",
+        "Needs good labels on form fields"
+      ]
+    }
+  },
+  {
+    "id": 2243,
+    "name": "RondoFlow",
+    "description": "RondoFlow is a local-first, open-source platform for visually orchestrating Claude Code agents. A drag-and-drop canvas lets you create agents, attach skills, define security policies and run multi-agent workflows entirely on your own machine with your own files.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/rondoflow/rondoflow",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "RondoFlow is a local-first, open-source platform for visually orchestrating Claude Code agents. A drag-and-drop canvas lets you create agents, attach skills, define security policies and run multi-agent workflows entirely on your own machine with your own files.",
+    "last_updated": "2026-09-23",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Designing multi-agent teams visually",
+      "Running Claude Code agents locally",
+      "Applying security policies per agent"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Drag agents onto a canvas",
+        "detail": "Build a team of specialised agents without writing orchestration code."
+      },
+      {
+        "title": "Attach skills",
+        "detail": "Each agent gets the skills its role needs."
+      },
+      {
+        "title": "Set policies",
+        "detail": "Define security policy per agent before anything runs."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed and local-first",
+        "Visual orchestration of a text-first tool",
+        "Node 20 or later, TypeScript"
+      ],
+      "cons": [
+        "Small project, early version",
+        "Claude Code specific"
+      ]
+    }
+  },
+  {
+    "id": 2244,
+    "name": "phpClaw",
+    "description": "phpClaw is an open-source AI agent framework for PHP with tools, memory, security guards and a ReAct loop already built. The core has zero framework dependencies, the builder picks whichever API key it finds first, and adapters cover Laravel, Symfony, WordPress, Drupal, Magento, Joomla, OpenCart and PrestaShop.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/phpclaw-php/phpclaw-monorepo",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "phpClaw is an open-source AI agent framework for PHP with tools, memory, security guards and a ReAct loop already built. The core has zero framework dependencies, the builder picks whichever API key it finds first, and adapters cover Laravel, Symfony, WordPress, Drupal, Magento, Joomla, OpenCart and PrestaShop.",
+    "last_updated": "2026-10-29",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Adding an agent to a PHP application",
+      "Laravel or WordPress projects that need AI",
+      "Teams that cannot adopt a Python stack"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One builder, one send",
+        "detail": "Set an API key and the builder constructs an agent that answers."
+      },
+      {
+        "title": "Register tools",
+        "detail": "Give the agent the tools your application already has."
+      },
+      {
+        "title": "Framework adapters",
+        "detail": "Works inside the major PHP frameworks without a rewrite."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed",
+        "Zero framework dependencies in core",
+        "Any LLM provider through environment variables"
+      ],
+      "cons": [
+        "PHP ecosystem, so fewer community examples",
+        "29 stars, very early project"
+      ]
+    }
+  },
+  {
+    "id": 2245,
+    "name": "PhreshOS",
+    "description": "PhreshOS is an open-source, self-hosted system for apps built with web technologies. It runs on the machine you install it on, keeps your Programs running there, and gives you a Desktop in the browser. The System provides one sign-in, storage, communication between Programs and per-Program permissions, so each Program only holds its own logic.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/PhreshOS/system",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "PhreshOS is an open-source, self-hosted system for apps built with web technologies. It runs on the machine you install it on, keeps your Programs running there, and gives you a Desktop in the browser. The System provides one sign-in, storage, communication between Programs and per-Program permissions, so each Program only holds its own logic.",
+    "last_updated": "2026-10-01",
+    "skill_level": "advanced",
+    "best_for": [
+      "Self-hosting small web apps behind one sign-in",
+      "Running web-tool programs on your own hardware",
+      "Experimenting with a local app platform"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Install and run",
+        "detail": "The System runs on your machine and serves a Desktop in the browser."
+      },
+      {
+        "title": "Programs are web apps",
+        "detail": "Build them with the web tools you already know."
+      },
+      {
+        "title": "Scoped permissions",
+        "detail": "Each Program gets storage and access without holding the platform logic."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed with 305 stars",
+        "Everything on the Desktop is itself a Program",
+        "One sign-in across Programs"
+      ],
+      "cons": [
+        "Explicitly experimental, not production ready",
+        "Requires self-hosting"
+      ]
+    }
+  },
+  {
+    "id": 2246,
+    "name": "Blender Copilot",
+    "description": "Blender Copilot is a chat panel that lives inside Blender and runs an agent loop in Blender own Python process. It executes the model bpy code against your live scene and wraps the whole turn in one Ctrl+Z. There is no bridge and no sidecar, so bpy.context is live and correct by construction.",
+    "category": "Code",
+    "pricing": "Open Source",
+    "url": "https://github.com/XEonAX/blender-copilot",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Blender Copilot is a chat panel that lives inside Blender and runs an agent loop in Blender own Python process. It executes the model bpy code against your live scene and wraps the whole turn in one Ctrl+Z. There is no bridge and no sidecar, so bpy.context is live and correct by construction.",
+    "last_updated": "2026-09-26",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Building 3D scenes by describing them",
+      "Letting a model run bpy against a live scene",
+      "Undoing an entire agent turn at once"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Chat inside Blender",
+        "detail": "A Copilot-style panel rather than a separate app."
+      },
+      {
+        "title": "Runs in Blender Python",
+        "detail": "The agent loop is Blender own interpreter, so the scene context is real."
+      },
+      {
+        "title": "One Ctrl+Z per turn",
+        "detail": "A whole agent turn is a single undo step."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No bridge or sidecar process",
+        "Scene context correct by construction",
+        "Works with DeepSeek and OpenAI-compatible providers"
+      ],
+      "cons": [
+        "Only 4 GitHub stars, very early",
+        "Blender 5.2.2 specific"
+      ]
+    }
+  },
+  {
+    "id": 2247,
+    "name": "ForensicDbg",
+    "description": "ForensicDbg is a modern post-mortem debugger for native Windows x64 and x86 crashes, built to make hard-to-catch bugs easier to track down. It combines visual debugging with an AI debugging mode and ships an MCP setup guide, and is currently running a private beta.",
+    "category": "Code",
+    "pricing": "Beta",
+    "url": "https://www.forensicdbg.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ForensicDbg is a modern post-mortem debugger for native Windows x64 and x86 crashes, built to make hard-to-catch bugs easier to track down. It combines visual debugging with an AI debugging mode and ships an MCP setup guide, and is currently running a private beta.",
+    "last_updated": "2026-09-23",
+    "skill_level": "advanced",
+    "best_for": [
+      "Diagnosing native Windows crashes after the fact",
+      "Crashes that will not reproduce under a debugger",
+      "Teams that want AI assistance on a dump"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Open the dump",
+        "detail": "Post-mortem analysis of a native crash rather than live debugging."
+      },
+      {
+        "title": "Visual debugging",
+        "detail": "Inspect state graphically instead of through a console debugger."
+      },
+      {
+        "title": "AI debugging",
+        "detail": "An assisted mode for reading the crash, plus MCP setup for agents."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free beta access on request",
+        "Visual and AI modes in one tool",
+        "MCP setup guide included"
+      ],
+      "cons": [
+        "Private beta, invite required",
+        "Windows native only"
+      ]
+    }
+  },
+  {
+    "id": 2248,
+    "name": "Qovilio",
+    "description": "Qovilio is a subscription tracker that reads your bills for you. Forward a billing email to your own Qovilio address, drop a PDF or photo of a receipt, or import a CSV, and every subscription, renewal and trial lands in one view. You can also just ask it questions in plain words, and every change can be undone.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://qovilio.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Qovilio is a subscription tracker that reads your bills for you. Forward a billing email to your own Qovilio address, drop a PDF or photo of a receipt, or import a CSV, and every subscription, renewal and trial lands in one view. You can also just ask it questions in plain words, and every change can be undone.",
+    "last_updated": "2026-10-21",
+    "skill_level": "beginner",
+    "best_for": [
+      "Losing track of recurring charges",
+      "Finding out what you spend on AI tools",
+      "Catching trials before they convert"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Forward the bill",
+        "detail": "Your own Qovilio address turns any receipt or renewal email into a tracked subscription."
+      },
+      {
+        "title": "Snap or import",
+        "detail": "A PDF, a photo or a CSV of your old tracker comes in with amount, plan and renewal date."
+      },
+      {
+        "title": "Ask in plain words",
+        "detail": "Ask what renews this week or what you spend on AI tools, and change entries by asking."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Three input routes, so no manual entry",
+        "Answers questions about spend in plain language",
+        "Changes are undoable"
+      ],
+      "cons": [
+        "Another service that sees your billing email",
+        "Free tier limits are not stated on the landing page"
+      ]
+    }
+  },
+  {
+    "id": 2249,
+    "name": "AI Knows Us",
+    "description": "AI Knows Us works on a specific problem: when a buyer asks ChatGPT, Gemini or Perplexity who to use, somebody gets named, and it is rarely you. The service finds the questions your buyers actually ask, shows who gets named and which pages the AI trusted, then publishes answer-first pages built to be quoted, and re-checks on a schedule.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://www.aiknowsus.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AI Knows Us works on a specific problem: when a buyer asks ChatGPT, Gemini or Perplexity who to use, somebody gets named, and it is rarely you. The service finds the questions your buyers actually ask, shows who gets named and which pages the AI trusted, then publishes answer-first pages built to be quoted, and re-checks on a schedule.",
+    "last_updated": "2026-10-29",
+    "skill_level": "beginner",
+    "best_for": [
+      "Getting named when buyers ask an AI for a recommendation",
+      "Seeing which pages an AI cites in your category",
+      "Tracking AI visibility week by week"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Find the real questions",
+        "detail": "Buyer questions in their own words for your category and city, with your name never in them."
+      },
+      {
+        "title": "See who gets named",
+        "detail": "For each question you see the businesses recommended and the sources read to decide."
+      },
+      {
+        "title": "Re-check on a schedule",
+        "detail": "Rates come with a range so you see movement rather than noise."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Publishes its own Search Console exports as proof",
+        "Free scan before paying",
+        "Explicit that the questions never include your name"
+      ],
+      "cons": [
+        "Paid monthly after the free scan",
+        "Focused on India-based founders and local services"
+      ]
+    }
+  },
+  {
+    "id": 2250,
+    "name": "Spotlytt",
+    "description": "Spotlytt replaces the resume screen with a role-specific AI interview. You answer adaptive questions in a video conversation, and your strongest answers become verified skill evidence: skill-by-skill scores, short clips recruiters can watch, and a public profile with a job-readiness estimate.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://www.spotlytt.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Spotlytt replaces the resume screen with a role-specific AI interview. You answer adaptive questions in a video conversation, and your strongest answers become verified skill evidence: skill-by-skill scores, short clips recruiters can watch, and a public profile with a job-readiness estimate.",
+    "last_updated": "2026-10-29",
+    "skill_level": "beginner",
+    "best_for": [
+      "Proving skills rather than listing them",
+      "Getting discovered by recruiters without a pedigree",
+      "Preparing for interviews with feedback"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Take the AI interview",
+        "detail": "Questions adapt to your target role, skills and experience, with follow-ups."
+      },
+      {
+        "title": "Get evidence",
+        "detail": "Each strength comes with a score and a short video clip."
+      },
+      {
+        "title": "Publish a profile",
+        "detail": "A recruiter-ready public profile with an AI-written summary and gap analysis."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Evidence beats a keyword-filtered resume",
+        "Shows strong, weak and missing skills",
+        "Free to start"
+      ],
+      "cons": [
+        "Another platform holding interview video",
+        "Employer demand side is not described"
+      ]
+    }
+  },
+  {
+    "id": 2251,
+    "name": "OpenSparta",
+    "description": "OpenSparta is an AI agent for Telegram: it finds relevant conversations, writes contextual comments, and manages your accounts and proxies from one workspace. It uses official Telegram client protocols with per-account safety limits, FloodWait quarantine and account health checks, and offers a 14-day trial with 500 AI credits.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://opensparta.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "OpenSparta is an AI agent for Telegram: it finds relevant conversations, writes contextual comments, and manages your accounts and proxies from one workspace. It uses official Telegram client protocols with per-account safety limits, FloodWait quarantine and account health checks, and offers a 14-day trial with 500 AI credits.",
+    "last_updated": "2026-10-25",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Finding leads in Telegram groups",
+      "Running several Telegram accounts safely",
+      "Automating engagement without a custom bot"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Discover conversations",
+        "detail": "The agent finds relevant Telegram conversations for your niche."
+      },
+      {
+        "title": "Comment in context",
+        "detail": "It writes comments meant to make the right people notice you."
+      },
+      {
+        "title": "Manage the fleet",
+        "detail": "Accounts and proxies are kept healthy from one workspace."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Official client protocols rather than a hacked client",
+        "FloodWait quarantine and per-account limits",
+        "Trial before paying"
+      ],
+      "cons": [
+        "Automated commenting carries real platform risk",
+        "Paid modules on top of a trial"
+      ]
+    }
+  },
+  {
+    "id": 2252,
+    "name": "Ins Autopilot",
+    "description": "Ins Autopilot runs Instagram outreach inside your own signed-in Chrome browser. It finds contacts among followers, likers and commenters, keeps notes and message history per account, and with Pro drafts DMs with AI and runs follow-up sequences that stop when a reply arrives. No Instagram password is required.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://insautopilot.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Ins Autopilot runs Instagram outreach inside your own signed-in Chrome browser. It finds contacts among followers, likers and commenters, keeps notes and message history per account, and with Pro drafts DMs with AI and runs follow-up sequences that stop when a reply arrives. No Instagram password is required.",
+    "last_updated": "2026-10-14",
+    "skill_level": "beginner",
+    "best_for": [
+      "Finding and messaging Instagram leads",
+      "Remembering who you already talked to",
+      "Following up without a spreadsheet"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Find your people",
+        "detail": "Contacts are surfaced from followers, likers and commenters."
+      },
+      {
+        "title": "Keep the context",
+        "detail": "Notes, message history and next steps stay with each account, stored locally."
+      },
+      {
+        "title": "Draft and follow up",
+        "detail": "Pro drafts with your own provider key and runs sequences that stop on a reply."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs in your existing browser session, no password",
+        "Records stay local rather than in a cloud CRM",
+        "Explicit about platform risk and limits"
+      ],
+      "cons": [
+        "AI drafts require your own API key and provider charges",
+        "Automation carries account risk the tool cannot remove"
+      ]
+    }
+  },
+  {
+    "id": 2253,
+    "name": "FreeApply",
+    "description": "FreeApply is a free job-application agent that runs through the AI app you already use — Claude Desktop, Claude Code, Cursor, VS Code or Windsurf. It searches the job sites you pick, fills in applications with your real details, refuses to invent experience, and keeps a dashboard of every application. About 90 KB, and your resume stays on your computer.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://www.mybotsai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "FreeApply is a free job-application agent that runs through the AI app you already use — Claude Desktop, Claude Code, Cursor, VS Code or Windsurf. It searches the job sites you pick, fills in applications with your real details, refuses to invent experience, and keeps a dashboard of every application. About 90 KB, and your resume stays on your computer.",
+    "last_updated": "2026-10-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Applying to many jobs without retyping everything",
+      "Keeping track of what you applied to",
+      "Avoiding AI that invents experience"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Tell it once",
+        "detail": "Set roles, pay floor, locations and the sites you use."
+      },
+      {
+        "title": "It applies",
+        "detail": "Applications are filled with your details, resume and saved answers."
+      },
+      {
+        "title": "It refuses to invent",
+        "detail": "Cover letters are checked against your resume; anything unbacked is refused and it asks you."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and runs on your own AI plan",
+        "Resume and applications stay on your computer",
+        "Refuses to fabricate experience"
+      ],
+      "cons": [
+        "Not available in ChatGPT",
+        "Requires one of the supported AI apps on a computer"
+      ]
+    }
+  },
+  {
+    "id": 2254,
+    "name": "Winch",
+    "description": "Winch is App Store optimization run by your own coding agent. It tracks keywords in 175 countries across the App Store and Google Play, rewrites listings in every language and draws store art, and an agent answers in plain words and can drive the interface for you. It runs on the Claude, ChatGPT or OpenRouter plan you already pay for, with a one-time $69 licence.",
+    "category": "Productivity",
+    "pricing": "Paid",
+    "url": "https://getwinch.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Winch is App Store optimization run by your own coding agent. It tracks keywords in 175 countries across the App Store and Google Play, rewrites listings in every language and draws store art, and an agent answers in plain words and can drive the interface for you. It runs on the Claude, ChatGPT or OpenRouter plan you already pay for, with a one-time $69 licence.",
+    "last_updated": "2026-10-31",
+    "skill_level": "intermediate",
+    "best_for": [
+      "ASO without a separate subscription",
+      "Localising a store listing into every language",
+      "Letting an agent run keyword research"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Ask in plain words",
+        "detail": "The agent sees ranks, rivals, reviews and earlier conversations and answers with numbers you can check."
+      },
+      {
+        "title": "Watch it drive",
+        "detail": "Turn on Act and the cursor goes where it works and taps what it opens."
+      },
+      {
+        "title": "Confirm before shipping",
+        "detail": "Drafted listings never reach the store until you confirm."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "One-time licence rather than a subscription",
+        "Uses the AI plan you already have",
+        "Runs on macOS with a free one-day trial"
+      ],
+      "cons": [
+        "macOS only",
+        "Agent-driven UI control takes some getting used to"
+      ]
+    }
+  },
+  {
+    "id": 2255,
+    "name": "OpenDesk",
+    "description": "OpenDesk is an open-source helpdesk and team inbox under Apache-2.0. Support email, live chat, your help centre and your team own mail accounts land in one queue, and Ollie drafts replies in any language, summarises and triages. Free for one mailbox in the cloud, or self-host it in one command.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://opendesk.sh",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "OpenDesk is an open-source helpdesk and team inbox under Apache-2.0. Support email, live chat, your help centre and your team own mail accounts land in one queue, and Ollie drafts replies in any language, summarises and triages. Free for one mailbox in the cloud, or self-host it in one command.",
+    "last_updated": "2026-10-18",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Replacing Zendesk or Intercom without the per-seat bill",
+      "Self-hosting support for privacy reasons",
+      "Shared inboxes across a small team"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One queue",
+        "detail": "Email, live chat, help centre and team mail accounts in a single inbox."
+      },
+      {
+        "title": "Ollie drafts",
+        "detail": "AI drafts, summaries, triage and translation in 14 languages."
+      },
+      {
+        "title": "Self-host in one command",
+        "detail": "A shell installer stands the whole thing up on your own servers."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Apache-2.0 with a self-host path",
+        "Free for one mailbox in the cloud",
+        "Real-time presence and typing across the team"
+      ],
+      "cons": [
+        "Self-hosting is your operational problem",
+        "Newer project with a smaller integration ecosystem"
+      ]
+    }
+  },
+  {
+    "id": 2256,
+    "name": "Formstep",
+    "description": "Formstep sends one-person forms instead of a generic survey: values you already know are prefilled and locked, the recipient answers without making an account, and answers arrive under your field keys with an AI validation that checks an upload against what was claimed. Responses route into n8n, Zapier, Claude or ChatGPT, and it is hosted in the EU.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://formstep.io",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Formstep sends one-person forms instead of a generic survey: values you already know are prefilled and locked, the recipient answers without making an account, and answers arrive under your field keys with an AI validation that checks an upload against what was claimed. Responses route into n8n, Zapier, Claude or ChatGPT, and it is hosted in the EU.",
+    "last_updated": "2026-10-27",
+    "skill_level": "beginner",
+    "best_for": [
+      "Supplier and customer onboarding",
+      "Collecting documents that need checking",
+      "Getting structured data out of email threads"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Send a request",
+        "detail": "A form is built for one person with known values prefilled and locked."
+      },
+      {
+        "title": "They answer without an account",
+        "detail": "They open a link, answer, and upload what is asked for."
+      },
+      {
+        "title": "Validation runs",
+        "detail": "An AI check confirms an upload matches the claim before it reaches you."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Prefilled and locked fields remove most back-and-forth",
+        "AI validation on uploaded documents",
+        "EU-hosted with a free-forever tier"
+      ],
+      "cons": [
+        "Another form tool in a crowded category",
+        "AI validation is only as good as the fields you define"
+      ]
+    }
+  },
+  {
+    "id": 2257,
+    "name": "Squint",
+    "description": "Squint is a desktop app that explains whatever is on your screen. Press the hotkey, drag a box around the confusing thing, and the answer streams in beside it — no screenshot, no tab switch, no describing what you are looking at. Follow-up questions happen in the same panel. Windows, macOS and Linux.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://heysquint.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Squint is a desktop app that explains whatever is on your screen. Press the hotkey, drag a box around the confusing thing, and the answer streams in beside it — no screenshot, no tab switch, no describing what you are looking at. Follow-up questions happen in the same panel. Windows, macOS and Linux.",
+    "last_updated": "2026-09-27",
+    "skill_level": "beginner",
+    "best_for": [
+      "Understanding something on screen without leaving it",
+      "Reading a chart, error or menu you do not recognise",
+      "Asking follow-ups without re-explaining"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Draw a box",
+        "detail": "The screen freezes and you drag around whatever you want explained."
+      },
+      {
+        "title": "Read it stream in",
+        "detail": "The first words arrive while you are still looking at the box."
+      },
+      {
+        "title": "Ask again in the panel",
+        "detail": "Follow-ups need no second screenshot."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Removes the screenshot-and-upload detour entirely",
+        "Two models, fast and best, chosen per capture",
+        "Free plan with no card"
+      ],
+      "cons": [
+        "Desktop only, no browser version",
+        "Needs screen capture permission"
+      ]
+    }
+  },
+  {
+    "id": 2258,
+    "name": "freehire",
+    "description": "freehire is an open-source search engine for tech jobs indexed straight from company career boards — nearly 5 million unique jobs across 677,857 companies, deduplicated and tagged by stack, seniority and location. It connects over MCP so an agent can search with no account, and ships a CLI plus a Chrome side-panel agent that reads a posting and scores it against your CV.",
+    "category": "Productivity",
+    "pricing": "Free",
+    "url": "https://freehire.me",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "freehire is an open-source search engine for tech jobs indexed straight from company career boards — nearly 5 million unique jobs across 677,857 companies, deduplicated and tagged by stack, seniority and location. It connects over MCP so an agent can search with no account, and ships a CLI plus a Chrome side-panel agent that reads a posting and scores it against your CV.",
+    "last_updated": "2026-10-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Searching jobs that are not reposted by aggregators",
+      "Letting an agent search jobs over MCP",
+      "Scoring a posting against your CV"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Search the source",
+        "detail": "Jobs come from company career boards and 428 ATS platforms, deduplicated."
+      },
+      {
+        "title": "Connect over MCP",
+        "detail": "An agent searches, reads facets and moves an application along with no account."
+      },
+      {
+        "title": "Apply where you are",
+        "detail": "A Chrome side panel reads any posting, scores it and fills the form."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source",
+        "Live counts with the endpoint behind each number",
+        "Agent skills and CLI included"
+      ],
+      "cons": [
+        "Breadth depends on which career boards are indexed",
+        "Job hunting still ends with a human decision"
+      ]
+    }
+  },
+  {
+    "id": 2259,
+    "name": "Videre",
+    "description": "Videre is a local-first media library: one Rust binary, one SQLite file inside your library. It finds identical and near-identical duplicates, fixes wrong dates, groups faces so you name a person once, and searches by description or example image. It exposes an MCP server and structured JSON so an agent can organise your library, and nothing is ever uploaded.",
+    "category": "Productivity",
+    "pricing": "Open Source",
+    "url": "https://videre.sh",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Videre is a local-first media library: one Rust binary, one SQLite file inside your library. It finds identical and near-identical duplicates, fixes wrong dates, groups faces so you name a person once, and searches by description or example image. It exposes an MCP server and structured JSON so an agent can organise your library, and nothing is ever uploaded.",
+    "last_updated": "2026-10-16",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Cleaning up a photo library without uploading it",
+      "Finding duplicates before deleting anything",
+      "Letting an agent search and organise media"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Scan a folder",
+        "detail": "videre scan reads metadata and writes hashes into a database inside the library."
+      },
+      {
+        "title": "Review duplicates",
+        "detail": "Exact copies sit side by side; removed files go to the Trash and one command restores them."
+      },
+      {
+        "title": "Search by meaning",
+        "detail": "Find untagged media with a natural-language description or an example image."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Apache-2.0 and fully local",
+        "Review before anything is deleted",
+        "MCP server for agent access"
+      ],
+      "cons": [
+        "CLI-first, so there is a learning curve",
+        "Face grouping is only as good as your photos"
+      ]
+    }
+  },
+  {
+    "id": 2260,
+    "name": "Scone Money",
+    "description": "Scone Money is a personal finance app built around a cash flow forecast rather than a budget. It finds the paychecks, rent and bills in your history, projects them forward day by day, and shows the lowest point your balance will reach before it happens.",
+    "category": "Productivity",
+    "pricing": "Freemium",
+    "url": "https://stoke.money",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Scone Money is a personal finance app built around a cash flow forecast rather than a budget. It finds the paychecks, rent and bills in your history, projects them forward day by day, and shows the lowest point your balance will reach before it happens.",
+    "last_updated": "2026-10-16",
+    "skill_level": "beginner",
+    "best_for": [
+      "Seeing whether a bill will bounce",
+      "Planning around irregular paychecks",
+      "Understanding the low point of the month"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "It reads your history",
+        "detail": "Paychecks, rent and recurring bills are picked out of your transactions."
+      },
+      {
+        "title": "Projects forward",
+        "detail": "A day-by-day balance line shows what is coming."
+      },
+      {
+        "title": "Flags the low point",
+        "detail": "You see the lowest balance before it arrives."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Forecast-first rather than category budgets",
+        "Shows the number that actually matters",
+        "Free tier available"
+      ],
+      "cons": [
+        "Requires connecting financial accounts",
+        "US-centric framing of paychecks and bills"
+      ]
+    }
+  },
+  {
+    "id": 2261,
+    "name": "CiteLLM",
+    "description": "CiteLLM makes AI answers checkable: every claim links to the exact passage in your PDF, highlighted in the original. It works as a plugin inside ChatGPT or Claude, as a search across a document collection, and as structured extraction where every value carries a source. A reviewer approves or flags each result, and the report records who approved what.",
+    "category": "Writing",
+    "pricing": "Paid",
+    "url": "https://citellm.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "CiteLLM makes AI answers checkable: every claim links to the exact passage in your PDF, highlighted in the original. It works as a plugin inside ChatGPT or Claude, as a search across a document collection, and as structured extraction where every value carries a source. A reviewer approves or flags each result, and the report records who approved what.",
+    "last_updated": "2026-10-31",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Checking AI answers against source documents",
+      "Extracting fields from PDFs with provenance",
+      "Keeping a review record for compliance"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Check a PDF in your chat",
+        "detail": "Point the plugin at a document and each claim resolves to the passage behind it."
+      },
+      {
+        "title": "Search a collection",
+        "detail": "Ask across documents and get grounded answers with passage-level citations."
+      },
+      {
+        "title": "Extract with sources",
+        "detail": "Defined fields come out as structured data with a source for every value."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Highlight shows provenance rather than correctness, and says so",
+        "Human approval recorded in an evidence report",
+        "Works inside the tools people already use"
+      ],
+      "cons": [
+        "Paid product, no free tier described",
+        "Only as good as the PDFs you supply"
+      ]
+    }
+  },
+  {
+    "id": 2262,
+    "name": "CiteProof",
+    "description": "CiteProof checks the citations and quoted passages in a legal brief against public court records before you file, including the AI-fabricated citations that have started drawing sanctions. The free check confirms a citation exists and resolves to the case cited; a $49 Verification Record adds quote verification with the closest passage and pin cite.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://getciteproof.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "CiteProof checks the citations and quoted passages in a legal brief against public court records before you file, including the AI-fabricated citations that have started drawing sanctions. The free check confirms a citation exists and resolves to the case cited; a $49 Verification Record adds quote verification with the closest passage and pin cite.",
+    "last_updated": "2026-10-16",
+    "skill_level": "advanced",
+    "best_for": [
+      "Catching AI-hallucinated case citations",
+      "Verifying quotes against the record",
+      "Auditing the other side brief"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run the check",
+        "detail": "Every citation in the brief is resolved against public court records."
+      },
+      {
+        "title": "See what did not land",
+        "detail": "A citation that points to a different case is flagged with what it actually resolves to."
+      },
+      {
+        "title": "Audit the other side",
+        "detail": "Mismatches and altered quotes in an opposing brief come back ready for attorney review."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free existence check before paying",
+        "Publishes a false-clean ledger",
+        "Explicit that good-law verdicts still need Shepardize or KeyCite"
+      ],
+      "cons": [
+        "Paid record is $49 per brief",
+        "US court records only"
+      ]
+    }
+  },
+  {
+    "id": 2263,
+    "name": "Pen",
+    "description": "Pen is a writing tool where conversation is the editor. You say what you want to understand, and Pen researches it and writes the piece you will read. Nothing is shared until you choose to share it.",
+    "category": "Writing",
+    "pricing": "Unknown",
+    "url": "https://pen.xyz",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Pen is a writing tool where conversation is the editor. You say what you want to understand, and Pen researches it and writes the piece you will read. Nothing is shared until you choose to share it.",
+    "last_updated": "2026-09-08",
+    "skill_level": "beginner",
+    "best_for": [
+      "Getting a researched piece written for you",
+      "Understanding a topic without assembling sources",
+      "Private drafting before sharing"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Say what you want",
+        "detail": "Describe the subject rather than the structure."
+      },
+      {
+        "title": "It researches and writes",
+        "detail": "Pen does the reading and produces the piece you read."
+      },
+      {
+        "title": "Private until shared",
+        "detail": "The draft stays yours until you share it."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Conversation as the editing surface rather than a sidebar",
+        "Private by default",
+        "No prompt engineering required"
+      ],
+      "cons": [
+        "Landing page is thin, so feature detail is limited",
+        "Pricing is not published on the landing page"
+      ]
+    }
+  },
+  {
+    "id": 2264,
+    "name": "Buildnotes",
+    "description": "Buildnotes is a skill for coding agents that turns a feature into a post, a video or a deck. It reads the issues, pull requests, commits and reviews behind a feature, finds the few decisions that shaped it, draws the figures and writes it up. Install with npx skills add and ask inside the repo.",
+    "category": "Writing",
+    "pricing": "Open Source",
+    "url": "https://buildnotes.releases.sh",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Buildnotes is a skill for coding agents that turns a feature into a post, a video or a deck. It reads the issues, pull requests, commits and reviews behind a feature, finds the few decisions that shaped it, draws the figures and writes it up. Install with npx skills add and ask inside the repo.",
+    "last_updated": "2026-10-22",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Turning shipped work into a written post",
+      "Explaining a feature without writing it from scratch",
+      "Producing launch videos and slides from a PR"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Gather the record",
+        "detail": "It reads issues, PRs, commits and reviews for the feature."
+      },
+      {
+        "title": "Plan the decisions",
+        "detail": "It picks the few decisions worth a chapter rather than summarising everything."
+      },
+      {
+        "title": "Write and check",
+        "detail": "Figures are drawn, the piece written, and the output checked."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Installs as a skill in Claude Code, Codex or OpenCode",
+        "Produces post, video, deck and standalone figures",
+        "Works from the real PR history rather than a prompt"
+      ],
+      "cons": [
+        "Requires a repo with meaningful commit history",
+        "Output still needs a human read"
+      ]
+    }
+  },
+  {
+    "id": 2265,
+    "name": "OpenDocBot",
+    "description": "OpenDocBot brings your own model into Word, Excel and PowerPoint as a client-side add-in. It supports OpenAI, Anthropic, Gemini, DeepSeek, OpenRouter or local models through Ollama, keeps document data out of any intermediate server, and offers an optional approval gate before edits are applied. Free for individuals and teams up to 30 users.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://opendocbot.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "OpenDocBot brings your own model into Word, Excel and PowerPoint as a client-side add-in. It supports OpenAI, Anthropic, Gemini, DeepSeek, OpenRouter or local models through Ollama, keeps document data out of any intermediate server, and offers an optional approval gate before edits are applied. Free for individuals and teams up to 30 users.",
+    "last_updated": "2026-09-16",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Using an AI model inside Office without a vendor",
+      "Air-gapped document workflows with local models",
+      "Reviewing proposed edits before they land"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Bring your own key",
+        "detail": "Connect any supported provider or a local Ollama endpoint."
+      },
+      {
+        "title": "Work across the suite",
+        "detail": "Summarise in Word, analyse and write formulas in Excel, draft slides in PowerPoint."
+      },
+      {
+        "title": "Approve before applying",
+        "detail": "An optional human-in-the-loop gate shows the proposal before it changes the document."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "100 percent client-side with no proxy",
+        "Free up to 30 users",
+        "Works with local models for offline use"
+      ],
+      "cons": [
+        "Requires your own API key or local runner",
+        "Add-in installation path only"
+      ]
+    }
+  },
+  {
+    "id": 2266,
+    "name": "KnowNote",
+    "description": "KnowNote is a local-first desktop workspace for reading and questioning your own documents. The embedder runs inside the app, so retrieval works offline, and every answer keeps the source passage behind it with its place in the document recorded. No Docker, no server, no account.",
+    "category": "Writing",
+    "pricing": "Open Source",
+    "url": "https://knownote.pages.dev/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "KnowNote is a local-first desktop workspace for reading and questioning your own documents. The embedder runs inside the app, so retrieval works offline, and every answer keeps the source passage behind it with its place in the document recorded. No Docker, no server, no account.",
+    "last_updated": "2026-09-28",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Researching a private document set",
+      "Getting answers you can check against the source",
+      "Working offline on sensitive material"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Install and open",
+        "detail": "Download, open, start reading — no Docker, server or account."
+      },
+      {
+        "title": "Ask across sources",
+        "detail": "Retrieval runs on your machine with the embedder inside the app."
+      },
+      {
+        "title": "Trace the answer",
+        "detail": "Point at a citation and the thread runs back to the passage."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "GPL-3.0 and fully local",
+        "Answers carry the source passage",
+        "No server or account to set up"
+      ],
+      "cons": [
+        "Desktop app only",
+        "Unsigned builds prompt on first launch"
+      ]
+    }
+  },
+  {
+    "id": 2267,
+    "name": "ParkourNote",
+    "description": "ParkourNote is a research workspace that takes papers, books, web pages, videos and recordings into one library, transcribes and translates them, and keeps your notes beside the page. What you mark on your computer is still there in Chrome side panel, and Claude or ChatGPT can read your library.",
+    "category": "Writing",
+    "pricing": "Freemium",
+    "url": "https://note.parkourlabs.io/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ParkourNote is a research workspace that takes papers, books, web pages, videos and recordings into one library, transcribes and translates them, and keeps your notes beside the page. What you mark on your computer is still there in Chrome side panel, and Claude or ChatGPT can read your library.",
+    "last_updated": "2026-09-28",
+    "skill_level": "beginner",
+    "best_for": [
+      "Reading papers with notes in the margin",
+      "Recording a meeting and keeping the transcript",
+      "Asking an AI from your own material"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Everything in one library",
+        "detail": "Papers, saved pages, recordings and lectures live together."
+      },
+      {
+        "title": "Mark and note in place",
+        "detail": "Highlight a sentence and work it out in the margin; quoted text keeps its page number."
+      },
+      {
+        "title": "Ask from your own material",
+        "detail": "The AI answers from your library, and Claude or ChatGPT can read it."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Notes stay beside the source",
+        "Works in browser, Chrome side panel and phone",
+        "Handles papers, web, video and audio in one place"
+      ],
+      "cons": [
+        "Beta",
+        "Spreadsheet support is still listed as coming"
+      ]
+    }
+  },
+  {
+    "id": 2268,
+    "name": "Arsaze",
+    "description": "Arsaze is an AI-native video editor that edits a real timeline while you watch. Ask in plain words, edit the transcript like a document — delete a word and it is cut from the video — or take over by hand. Press Tab to accept the next edit it predicts from the way you just worked, and any turn can be undone.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.arsaze.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Arsaze is an AI-native video editor that edits a real timeline while you watch. Ask in plain words, edit the transcript like a document — delete a word and it is cut from the video — or take over by hand. Press Tab to accept the next edit it predicts from the way you just worked, and any turn can be undone.",
+    "last_updated": "2026-10-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Editing by describing the cut",
+      "Cutting video by editing a transcript",
+      "Taking client notes on an exact frame"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Say the cut",
+        "detail": "Describe the edit and Arsaze changes the real timeline, then tells you what changed."
+      },
+      {
+        "title": "Transcript as the editor",
+        "detail": "Delete a word and it is removed from the video as a tracked change."
+      },
+      {
+        "title": "Client review on the frame",
+        "detail": "Clients watch a link, draw on the frame and leave notes the AI can act on."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free plan with no card",
+        "Works with Claude, ChatGPT, Gemini, Grok, Codex and Cursor",
+        "Windows, Mac, Linux and web"
+      ],
+      "cons": [
+        "Another timeline to learn",
+        "Free tier limits are not spelled out"
+      ]
+    }
+  },
+  {
+    "id": 2269,
+    "name": "AgentReel",
+    "description": "AgentReel is a browser AI video editor for short-form content built around B-roll. Paste a voiceover script, drop in hundreds of clips, and the agent screens the footage and cuts a captioned short video. It also generates missing shots with current models and turns stills into four-second clips.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://agentreel.co",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "AgentReel is a browser AI video editor for short-form content built around B-roll. Paste a voiceover script, drop in hundreds of clips, and the agent screens the footage and cuts a captioned short video. It also generates missing shots with current models and turns stills into four-second clips.",
+    "last_updated": "2026-10-26",
+    "skill_level": "beginner",
+    "best_for": [
+      "Turning a script into a B-roll cut",
+      "Filling gaps in footage with generated shots",
+      "Making captioned shorts at volume"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Paste the script",
+        "detail": "The agent screens your clips against the voiceover."
+      },
+      {
+        "title": "It cuts the reel",
+        "detail": "Footage is selected and cut with captions, in under 20 minutes according to the site."
+      },
+      {
+        "title": "Generate what is missing",
+        "detail": "Stills become four-second clips with a slow zoom."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Daily free credits",
+        "Handles hundreds of clips at once",
+        "Image-to-video for missing shots"
+      ],
+      "cons": [
+        "Credit-based beyond the free tier",
+        "Quality depends on the footage you bring"
+      ]
+    }
+  },
+  {
+    "id": 2270,
+    "name": "BakeVideos",
+    "description": "BakeVideos makes faceless short videos from a single line of text: it writes the script, records the voice, matches licensed footage, syncs captions and adds music. It picks the format that fits the idea — real footage for explainers, AI animation for stories, a phone chat for drama — and every scene stays editable afterwards.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://bakevideos.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "BakeVideos makes faceless short videos from a single line of text: it writes the script, records the voice, matches licensed footage, syncs captions and adds music. It picks the format that fits the idea — real footage for explainers, AI animation for stories, a phone chat for drama — and every scene stays editable afterwards.",
+    "last_updated": "2026-10-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Producing shorts without appearing on camera",
+      "Making explainers from a topic",
+      "Shipping text-message or story-style videos"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Type an idea",
+        "detail": "One line becomes a script, voice, footage, captions and music."
+      },
+      {
+        "title": "Pick the format automatically",
+        "detail": "Footage for explainers, animation for stories, chat for drama."
+      },
+      {
+        "title": "Edit only what you want",
+        "detail": "Change a line and only that scene is re-recorded."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Fully automated pipeline",
+        "Scene-level editing after generation",
+        "Format chosen to suit the idea"
+      ],
+      "cons": [
+        "Paid with a launch offer rather than a free tier",
+        "Automated narration still sounds automated sometimes"
+      ]
+    }
+  },
+  {
+    "id": 2271,
+    "name": "Vezur AI",
+    "description": "Vezur AI cleans up footage you already have: it reduces noise and compression artifacts, sharpens detail and upscales up to 4x at up to 60 fps. Processing runs in the cloud, the original file stays unchanged, and you compare the processed preview against the source before downloading.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://vezurai.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Vezur AI cleans up footage you already have: it reduces noise and compression artifacts, sharpens detail and upscales up to 4x at up to 60 fps. Processing runs in the cloud, the original file stays unchanged, and you compare the processed preview against the source before downloading.",
+    "last_updated": "2026-10-23",
+    "skill_level": "beginner",
+    "best_for": [
+      "Fixing blurry or over-compressed video",
+      "Upscaling old recordings",
+      "Cleaning phone footage before editing"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Upload",
+        "detail": "MP4, MOV or WebM up to 200 MB per video, or batch upload."
+      },
+      {
+        "title": "Review the preview",
+        "detail": "Compare faces, text and textures against the original before committing."
+      },
+      {
+        "title": "Download the full version",
+        "detail": "Full access comes with a paid plan."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Batch upload for several clips",
+        "Honest that results depend on source quality",
+        "Original file is never overwritten"
+      ],
+      "cons": [
+        "Cloud processing, so files leave your machine",
+        "Credit-based pricing above 4K"
+      ]
+    }
+  },
+  {
+    "id": 2272,
+    "name": "Filmcraft",
+    "description": "Filmcraft is a browser video editor with a large AI generation layer on top. You can import clips, grade colour and clean audio without an account, then use credits for AI generation, video upscaling, background removal, face swap, lip sync and product video across a long list of current video and image models.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://filmcraft.tools",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Filmcraft is a browser video editor with a large AI generation layer on top. You can import clips, grade colour and clean audio without an account, then use credits for AI generation, video upscaling, background removal, face swap, lip sync and product video across a long list of current video and image models.",
+    "last_updated": "2026-10-27",
+    "skill_level": "beginner",
+    "best_for": [
+      "Editing clips in a browser with no install",
+      "Trying many video models in one place",
+      "Making product and ad video from stills"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Edit without an account",
+        "detail": "Import clips and refine colour and audio before signing in."
+      },
+      {
+        "title": "Generate with credits",
+        "detail": "Pick from the listed models for text to video, image to video or upscaling."
+      },
+      {
+        "title": "Export for free",
+        "detail": "Signing in unlocks saving projects and exporting."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free editing with no account",
+        "Very broad model coverage",
+        "Also covers image tools in the same studio"
+      ],
+      "cons": [
+        "AI generation is credit-metered separately",
+        "Model list is long enough to be overwhelming"
+      ]
+    }
+  },
+  {
+    "id": 2273,
+    "name": "ArtCraft",
+    "description": "ArtCraft is a web studio for images, video and 3D in one workspace: compose images, stage 3D scenes, edit video, keep a moodboard and train a character, with AI generation and editing metered by credits. Character training and a 3D world viewer are part of the same product rather than separate tools.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://artcraft.tools",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ArtCraft is a web studio for images, video and 3D in one workspace: compose images, stage 3D scenes, edit video, keep a moodboard and train a character, with AI generation and editing metered by credits. Character training and a 3D world viewer are part of the same product rather than separate tools.",
+    "last_updated": "2026-10-27",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Keeping images, video and 3D in one studio",
+      "Training a consistent character across assets",
+      "Building a moodboard alongside production"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "One workspace",
+        "detail": "Create image, video, audio, 3D object and 3D world in the same place."
+      },
+      {
+        "title": "Edit what you made",
+        "detail": "Separate editors for image, 3D and video plus background change and frame extraction."
+      },
+      {
+        "title": "Train a character",
+        "detail": "Character training keeps a subject consistent across generated assets."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Covers image, video and 3D together",
+        "Character training included",
+        "Assets library and moodboard built in"
+      ],
+      "cons": [
+        "Credit-metered AI on top of the subscription",
+        "Breadth means a lot of surface to learn"
+      ]
+    }
+  },
+  {
+    "id": 2274,
+    "name": "Fluxcut",
+    "description": "Fluxcut makes product demo videos from one paragraph, with you approving every step. It writes a brief, lists the shots it needs and drafts a script timed to each shot; each line is voiced as its own take, music is composed to the exact length, and the final cut is rendered with loudness levelled for the platform. Your own coding agent can drive it too.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://www.fluxcut.dev",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Fluxcut makes product demo videos from one paragraph, with you approving every step. It writes a brief, lists the shots it needs and drafts a script timed to each shot; each line is voiced as its own take, music is composed to the exact length, and the final cut is rendered with loudness levelled for the platform. Your own coding agent can drive it too.",
+    "last_updated": "2026-10-13",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Making a product demo without an editor",
+      "Keeping script, footage and voiceover in sync",
+      "Letting an agent build the video while you approve"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Plan together",
+        "detail": "A brief names the audience, the pain and the value; shots you cannot show drop out."
+      },
+      {
+        "title": "It makes the takes",
+        "detail": "Each line is voiced separately and checked for fit, loudness and clipping."
+      },
+      {
+        "title": "You publish",
+        "detail": "Nothing goes out until you say so, and later changes show what must be remade."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Approval at every checkpoint",
+        "Script and timeline stay in sync as you edit either",
+        "Works from Claude Code or a pasted URL"
+      ],
+      "cons": [
+        "One free sample before signing up",
+        "Agent-made footage still needs your approval"
+      ]
+    }
+  },
+  {
+    "id": 2275,
+    "name": "MarketMee",
+    "description": "MarketMee turns GitHub pushes into marketing: it reads the code you actually changed, works out what is new for customers in plain English, then makes a narrated video in your brand colours plus an on-brand image and post, scheduled to LinkedIn, X, Facebook and Instagram. Autopilot keeps doing it on every push.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://marketmee.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "MarketMee turns GitHub pushes into marketing: it reads the code you actually changed, works out what is new for customers in plain English, then makes a narrated video in your brand colours plus an on-brand image and post, scheduled to LinkedIn, X, Facebook and Instagram. Autopilot keeps doing it on every push.",
+    "last_updated": "2026-10-22",
+    "skill_level": "beginner",
+    "best_for": [
+      "Marketing a developer product without a marketer",
+      "Turning releases into social posts",
+      "Keeping a posting schedule full"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Connect the repo",
+        "detail": "Set Autopilot on every push to main or on a schedule."
+      },
+      {
+        "title": "It reads the diff",
+        "detail": "The angle comes from the changed code, not just commit messages."
+      },
+      {
+        "title": "It publishes",
+        "detail": "Video, image and caption land in the next open slot on each account."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "First video and three images free",
+        "Reads the code rather than the commit message",
+        "Horizontal, square and vertical outputs"
+      ],
+      "cons": [
+        "Social publishing needs account access",
+        "Brand voice is inferred from the repo"
+      ]
+    }
+  },
+  {
+    "id": 2276,
+    "name": "Kario",
+    "description": "Kario makes motion graphics from a brief, a website or your own footage, with every layer still editable afterwards. Paste your site, describe the video or upload a recording and it uses your logo and colours, cuts the ums and pauses, and animates a finished video with effects, transitions and camera moves you can adjust.",
+    "category": "Video",
+    "pricing": "Paid",
+    "url": "https://www.karioai.com/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Kario makes motion graphics from a brief, a website or your own footage, with every layer still editable afterwards. Paste your site, describe the video or upload a recording and it uses your logo and colours, cuts the ums and pauses, and animates a finished video with effects, transitions and camera moves you can adjust.",
+    "last_updated": "2026-09-14",
+    "skill_level": "beginner",
+    "best_for": [
+      "Making a launch or feature video without a designer",
+      "Turning a website into a product video",
+      "Cleaning up a screen recording into a polished clip"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Brief it",
+        "detail": "Paste a website or describe the video, and add a logo or screenshots."
+      },
+      {
+        "title": "It builds the animation",
+        "detail": "Your logo, colours and screens are used, with effects and transitions applied."
+      },
+      {
+        "title": "Edit every layer",
+        "detail": "Each element stays editable rather than baked into a render."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Every layer is editable after generation",
+        "Reads brand assets from your site",
+        "Presets modelled on well-known launch videos"
+      ],
+      "cons": [
+        "Single video costs $19",
+        "Layer-level editing still needs design judgement"
+      ]
+    }
+  },
+  {
+    "id": 2277,
+    "name": "geneva",
+    "description": "geneva is a command-line video editor where an edit is a JSON document and titles are HTML and CSS drawn without a browser. One MIT-licensed binary for Linux, macOS and Windows; the planner, compositor and layout engine are Rust and the codecs come from FFmpeg. Every command becomes a document you can print and diff.",
+    "category": "Video",
+    "pricing": "Open Source",
+    "url": "https://genevarender.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "geneva is a command-line video editor where an edit is a JSON document and titles are HTML and CSS drawn without a browser. One MIT-licensed binary for Linux, macOS and Windows; the planner, compositor and layout engine are Rust and the codecs come from FFmpeg. Every command becomes a document you can print and diff.",
+    "last_updated": "2026-10-14",
+    "skill_level": "advanced",
+    "best_for": [
+      "Scripted, repeatable video edits",
+      "Rendering titles with HTML and CSS",
+      "Putting video work into CI"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Run a command",
+        "detail": "trim, concat, convert, subtitles and probe each turn into a JSON document."
+      },
+      {
+        "title": "Write the document",
+        "detail": "An edit names assets, layers and clip timing as JSON."
+      },
+      {
+        "title": "Draw graphics as HTML",
+        "detail": "A card is an HTML file that plays the same in a browser."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed, single binary",
+        "Edits are diffable documents",
+        "Titles use HTML and CSS rather than a proprietary editor"
+      ],
+      "cons": [
+        "Command line only",
+        "Requires understanding the document format"
+      ]
+    }
+  },
+  {
+    "id": 2278,
+    "name": "Kino Transcode",
+    "description": "Kino Transcode converts footage straight off a cinema camera — Blackmagic RAW, RED R3D, ProRes, DNxHR, MXF — to H.264 MP4 or ProRes MOV in the browser tab, with nothing uploaded. Camera raw is developed with the ISO and white balance the clip recorded.",
+    "category": "Video",
+    "pricing": "Freemium",
+    "url": "https://kino.ai/tools/transcode",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Kino Transcode converts footage straight off a cinema camera — Blackmagic RAW, RED R3D, ProRes, DNxHR, MXF — to H.264 MP4 or ProRes MOV in the browser tab, with nothing uploaded. Camera raw is developed with the ISO and white balance the clip recorded.",
+    "last_updated": "2026-10-22",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Converting camera raw without uploading footage",
+      "Getting R3D or BRAW into an editable format",
+      "Working on a machine without a full NLE"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Drop the clips",
+        "detail": "BRAW, R3D, ProRes, DNxHR and MXF all open."
+      },
+      {
+        "title": "It develops the raw",
+        "detail": "ISO and white balance come from what the camera recorded."
+      },
+      {
+        "title": "Export MP4 or ProRes",
+        "detail": "The conversion runs in the tab with no upload."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Runs locally in the browser with no upload",
+        "Handles professional camera formats",
+        "Free with no account"
+      ],
+      "cons": [
+        "One clip at a time in the tab",
+        "Not a substitute for a grading suite"
+      ]
+    }
+  },
+  {
+    "id": 2279,
+    "name": "BricksChat",
+    "description": "BricksChat turns an idea or a photo into a real brick model you can build. It picks existing parts, borrows techniques from official sets, renders the model and checks every version for real stud and pin connections and colliding parts. You can also photograph your shelf so it builds with bricks you already own.",
+    "category": "Image",
+    "pricing": "Freemium",
+    "url": "https://brickschat.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "BricksChat turns an idea or a photo into a real brick model you can build. It picks existing parts, borrows techniques from official sets, renders the model and checks every version for real stud and pin connections and colliding parts. You can also photograph your shelf so it builds with bricks you already own.",
+    "last_updated": "2026-10-18",
+    "skill_level": "beginner",
+    "best_for": [
+      "Designing a model from a description or photo",
+      "Building with bricks you already own",
+      "Getting instructions and a parts list"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Describe or photograph",
+        "detail": "Type an idea or drop a photo of what you want to build."
+      },
+      {
+        "title": "It designs and checks",
+        "detail": "Parts are real, connections are verified, and it fixes what looks wrong."
+      },
+      {
+        "title": "Take it home",
+        "detail": "Spin it in 3D, read the parts list and download for an LDraw app."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Every build is checked for real connections",
+        "Can work from a photo of your own bricks",
+        "Exports to LDraw-compatible apps"
+      ],
+      "cons": [
+        "Large or unusual builds may still need hand fixes",
+        "Not affiliated with the LEGO Group"
+      ]
+    }
+  },
+  {
+    "id": 2280,
+    "name": "Fabivo",
+    "description": "Fabivo takes a freehand sketch and turns it into a parametric piece of furniture: it recognises the sketch, straightens the lines and builds cabinets, shelving, tables and desks at real dimensions. Then a guillotine optimizer lays the parts on your actual sheets with kerf, grain and trim accounted for, and assembly instructions come from the model itself.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://www.fabivo.app/en",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Fabivo takes a freehand sketch and turns it into a parametric piece of furniture: it recognises the sketch, straightens the lines and builds cabinets, shelving, tables and desks at real dimensions. Then a guillotine optimizer lays the parts on your actual sheets with kerf, grain and trim accounted for, and assembly instructions come from the model itself.",
+    "last_updated": "2026-10-29",
+    "skill_level": "beginner",
+    "best_for": [
+      "Designing furniture from a rough sketch",
+      "Optimising plywood or MDF cut lists",
+      "Getting assembly instructions from a model"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Sketch the piece",
+        "detail": "A few freehand strokes become a parametric model with sides, shelves and dividers."
+      },
+      {
+        "title": "Optimise the cut",
+        "detail": "Parts are placed on real sheets with kerf, edge trim and grain direction."
+      },
+      {
+        "title": "Follow the cut order",
+        "detail": "Each sheet gets a diagram and a numbered cut order a saw can follow."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free with no account and works offline",
+        "Cut optimizer accounts for real sheet constraints",
+        "Exports GLB, DXF, PDF, SVG and CSV"
+      ],
+      "cons": [
+        "Not a general CAD tool",
+        "Furniture-shaped outputs only"
+      ]
+    }
+  },
+  {
+    "id": 2281,
+    "name": "UIPalooza",
+    "description": "UIPalooza is a design lab that tests whether AI models have a recognizable taste. Give the same brief to several models with different design skills and compare the resulting interfaces side by side, with desktop and mobile variants, the runtime and tokens behind each, and a published methodology.",
+    "category": "Image",
+    "pricing": "Free",
+    "url": "https://uipalooza.ai/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "UIPalooza is a design lab that tests whether AI models have a recognizable taste. Give the same brief to several models with different design skills and compare the resulting interfaces side by side, with desktop and mobile variants, the runtime and tokens behind each, and a published methodology.",
+    "last_updated": "2026-10-26",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Comparing AI-generated interfaces across models",
+      "Judging whether a design skill changes output",
+      "Choosing a model for UI work"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Pick a brief",
+        "detail": "Use a published brief or bring your own."
+      },
+      {
+        "title": "Compare samples",
+        "detail": "Rows are models, columns group samples by skill variant."
+      },
+      {
+        "title": "Open the artifact",
+        "detail": "Click a preview to open the working interface rather than a screenshot."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free to browse",
+        "Compares models and skills on the same brief",
+        "Publishes runtime and token counts"
+      ],
+      "cons": [
+        "A comparison lab rather than a design tool",
+        "Sample sizes are small by design"
+      ]
+    }
+  },
+  {
+    "id": 2282,
+    "name": "Sonia",
+    "description": "Sonia is a local voice assistant that runs entirely on your machine in under 15 GB of RAM with no dedicated GPU, and keeps the microphone open while it talks so you can cut it off mid-sentence. Turn detection stacks Silero VAD, a Smart Turn classifier and a small LISTEN-or-REPLY prompt, and it supports timers, interval checks and Linux commands through tool calling.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://grigio.org/sonia-local-voice-assistant-in-less-than-13gb-ram-no-dedicated-gpu-skills-tool-calling-supported/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Sonia is a local voice assistant that runs entirely on your machine in under 15 GB of RAM with no dedicated GPU, and keeps the microphone open while it talks so you can cut it off mid-sentence. Turn detection stacks Silero VAD, a Smart Turn classifier and a small LISTEN-or-REPLY prompt, and it supports timers, interval checks and Linux commands through tool calling.",
+    "last_updated": "2026-10-13",
+    "skill_level": "advanced",
+    "best_for": [
+      "Running a voice assistant without a GPU",
+      "Interrupting an assistant mid-sentence",
+      "Local tool calling and timers by voice"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Keep talking",
+        "detail": "The mic never closes; it distinguishes echo and backchannels from a real interruption."
+      },
+      {
+        "title": "Layered turn detection",
+        "detail": "VAD, a turn classifier and a four-token prompt decide whether you finished."
+      },
+      {
+        "title": "Use skills",
+        "detail": "Timers, interval checks and Linux commands are callable by voice."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No dedicated GPU and under 15 GB of RAM",
+        "Full-duplex with echo rejection",
+        "Tool calling built in"
+      ],
+      "cons": [
+        "Linux-focused setup",
+        "Requires assembling a local model stack"
+      ]
+    }
+  },
+  {
+    "id": 2283,
+    "name": "SpeakoFlow",
+    "description": "SpeakoFlow is free, open-source voice dictation that types into whatever app you are using, in up to 99 languages. Hold a key and talk; it also answers questions about selected text, runs a hands-free spoken conversation, and writes up meetings with who said what, a summary and next steps. Works offline with local models.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://www.speakoflow.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "SpeakoFlow is free, open-source voice dictation that types into whatever app you are using, in up to 99 languages. Hold a key and talk; it also answers questions about selected text, runs a hands-free spoken conversation, and writes up meetings with who said what, a summary and next steps. Works offline with local models.",
+    "last_updated": "2026-10-17",
+    "skill_level": "beginner",
+    "best_for": [
+      "Dictating into any app",
+      "Asking about selected text by voice",
+      "Getting meeting notes without a bot joining"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Hold and talk",
+        "detail": "Words appear at the cursor in Slack, Gmail, Notion, Cursor or anywhere else."
+      },
+      {
+        "title": "Ask about a selection",
+        "detail": "Select text and say what you need: translate, reply, explain."
+      },
+      {
+        "title": "Meetings written down",
+        "detail": "Records any call app with no bot, splitting speakers and writing a summary."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free and open source",
+        "99 languages with local and cloud models",
+        "Meeting notes without a bot joining the call"
+      ],
+      "cons": [
+        "Key-hold interaction takes adjustment",
+        "Intel Mac build needs a Terminal command to clear the warning"
+      ]
+    }
+  },
+  {
+    "id": 2284,
+    "name": "Whistle Translator",
+    "description": "Whistle Translator turns your voice into text and translates it entirely on your computer. Speak and translate in eight languages including Arabic, dictate into any app with a shortcut, record whole meetings with a timestamped transcript, and transcribe WAV files. After a one-time model download it works with the Wi-Fi off.",
+    "category": "Audio",
+    "pricing": "Free",
+    "url": "https://mahmoud.sh/whistle-translator/",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Whistle Translator turns your voice into text and translates it entirely on your computer. Speak and translate in eight languages including Arabic, dictate into any app with a shortcut, record whole meetings with a timestamped transcript, and transcribe WAV files. After a one-time model download it works with the Wi-Fi off.",
+    "last_updated": "2026-10-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Offline dictation and translation",
+      "Meeting transcripts that never leave the machine",
+      "Translating while typing in another app"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Hold to dictate",
+        "detail": "A shortcut types your words at the cursor in any app."
+      },
+      {
+        "title": "Translate as you type",
+        "detail": "Speak one language and type another, with a live transcript."
+      },
+      {
+        "title": "Meeting mode",
+        "detail": "Transcribes for as long as you talk and saves transcript plus translation."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free with no account or telemetry",
+        "Works fully offline after the model download",
+        "Mac, Windows and Linux builds"
+      ],
+      "cons": [
+        "Unsigned builds trigger a security prompt",
+        "Eight languages only"
+      ]
+    }
+  },
+  {
+    "id": 2285,
+    "name": "Book2Speech",
+    "description": "Book2Speech turns a DRM-free EPUB, PDF, TXT, DOCX, MOBI or AZW3 into an audiobook. Drop the file, pick one of 265 narrators across 42 languages, and start listening within seconds — chapters kept, front matter skipped, and your place following you from browser to iPhone.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.book2speech.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Book2Speech turns a DRM-free EPUB, PDF, TXT, DOCX, MOBI or AZW3 into an audiobook. Drop the file, pick one of 265 narrators across 42 languages, and start listening within seconds — chapters kept, front matter skipped, and your place following you from browser to iPhone.",
+    "last_updated": "2026-10-18",
+    "skill_level": "beginner",
+    "best_for": [
+      "Listening to a book with no audiobook edition",
+      "Converting textbooks and papers to audio",
+      "Reading along with highlighting"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Drop the file",
+        "detail": "EPUB, PDF, TXT, DOCX, MOBI or AZW3."
+      },
+      {
+        "title": "Pick a narrator",
+        "detail": "265 voices across 42 languages."
+      },
+      {
+        "title": "Listen anywhere",
+        "detail": "Chapters preserved, place synced between browser and app."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Wide format support",
+        "265 narrators in 42 languages",
+        "Read-along highlighting"
+      ],
+      "cons": [
+        "DRM-free files only",
+        "Free tier is limited to classics and samples"
+      ]
+    }
+  },
+  {
+    "id": 2286,
+    "name": "Deckdrill",
+    "description": "Deckdrill turns flashcards into long audio drills you can speak along with. Describe a topic and your own AI key writes the Anki cards, then native neural voices or a clone of your own voice render Pimsleur- and Glossika-style MP3s with pauses timed to each sentence. You bring the API keys, so you pay providers directly and nothing is stored.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://www.deckdrill.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Deckdrill turns flashcards into long audio drills you can speak along with. Describe a topic and your own AI key writes the Anki cards, then native neural voices or a clone of your own voice render Pimsleur- and Glossika-style MP3s with pauses timed to each sentence. You bring the API keys, so you pay providers directly and nothing is stored.",
+    "last_updated": "2026-10-30",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Studying languages hands-free on a commute",
+      "Turning an existing Anki deck into audio",
+      "Drilling with your own cloned voice"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Get your cards",
+        "detail": "Your AI key writes cards from a topic and grammar focus, or import an Anki deck."
+      },
+      {
+        "title": "Choose voices",
+        "detail": "ElevenLabs, Azure, your cloned voice, or the device built-in voices for free."
+      },
+      {
+        "title": "Render the drills",
+        "detail": "Hour-long MP3s with timed pauses, or an .apkg with audio on every card."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Pimsleur-style build-up and recall scheduling",
+        "Works with your own API keys",
+        "Downloads back into Anki"
+      ],
+      "cons": [
+        "Requires your own AI and voice keys for best results",
+        "Key entry per browser unless remembered"
+      ]
+    }
+  },
+  {
+    "id": 2287,
+    "name": "Loudwalk",
+    "description": "Loudwalk asks your Anki cards out loud through your headphones and grades what you say back in your own words. It imports the .apkg or .colpkg you export from Anki with review history intact, grades on meaning rather than spelling, and checks its schedule against Anki own answers. Say \"tell me more\" to open a conversation with an AI teacher.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://loudwalk.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Loudwalk asks your Anki cards out loud through your headphones and grades what you say back in your own words. It imports the .apkg or .colpkg you export from Anki with review history intact, grades on meaning rather than spelling, and checks its schedule against Anki own answers. Say \"tell me more\" to open a conversation with an AI teacher.",
+    "last_updated": "2026-10-23",
+    "skill_level": "beginner",
+    "best_for": [
+      "Reviewing flashcards while walking",
+      "Studying medicine, law or languages hands-free",
+      "Asking follow-up questions mid-review"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Import your deck",
+        "detail": ".apkg or .colpkg, with every review you have ever done."
+      },
+      {
+        "title": "Answer out loud",
+        "detail": "Grading is on meaning, so clinical shorthand or a spoken translation counts."
+      },
+      {
+        "title": "Ask to go deeper",
+        "detail": "\"Tell me more\" opens a live conversation with the teacher, then returns to the cards."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Screen review is free forever with no account",
+        "Grades meaning rather than wording",
+        "Your Anki collection is read once and never written to"
+      ],
+      "cons": [
+        "Voice tutor costs $9.99 a month after a 7-day trial",
+        "iPhone and Apple silicon Mac only"
+      ]
+    }
+  },
+  {
+    "id": 2288,
+    "name": "TrueScribe",
+    "description": "TrueScribe is transcription software that runs on your own machine. It turns interviews, meetings, lectures, podcasts and videos into text, then lets you edit with timestamps, identify speakers, translate locally, search the transcript with AI and export documents, subtitles or structured data — on Windows and Linux.",
+    "category": "Audio",
+    "pricing": "Freemium",
+    "url": "https://truescribe.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "TrueScribe is transcription software that runs on your own machine. It turns interviews, meetings, lectures, podcasts and videos into text, then lets you edit with timestamps, identify speakers, translate locally, search the transcript with AI and export documents, subtitles or structured data — on Windows and Linux.",
+    "last_updated": "2026-10-01",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Transcribing interviews and lectures privately",
+      "Recording meetings without a bot joining",
+      "Getting subtitles out of a recording"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Start from anywhere",
+        "detail": "A link, your microphone, a file or a meeting."
+      },
+      {
+        "title": "Edit with timestamps",
+        "detail": "Listen while you work and correct segments precisely."
+      },
+      {
+        "title": "Research the transcript",
+        "detail": "Ask questions over the transcript with saved prompts, using a local or cloud model."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "Free transcription with local processing",
+        "Speaker identification with NVIDIA Nemotron",
+        "Exports TXT, SRT, WebVTT, DOCX, PDF, Markdown, JSON and CSV"
+      ],
+      "cons": [
+        "Windows and Linux only",
+        "Some features are behind Pro"
+      ]
+    }
+  },
+  {
+    "id": 2289,
+    "name": "Memorynotch",
+    "description": "Memory Notch is an offline recorder that lives in your Mac notch. Record a conversation, follow the live transcript with speaker labels, and come back to what was said — audio and notes stay on your Mac. Double-tap Command anywhere to dictate, and it can hand transcripts to your own AI tools.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://memorynotch.app",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Memory Notch is an offline recorder that lives in your Mac notch. Record a conversation, follow the live transcript with speaker labels, and come back to what was said — audio and notes stay on your Mac. Double-tap Command anywhere to dictate, and it can hand transcripts to your own AI tools.",
+    "last_updated": "2026-09-24",
+    "skill_level": "beginner",
+    "best_for": [
+      "Recording meetings without a cloud service",
+      "Dictating into any app on a Mac",
+      "Keeping a private transcript archive"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Record from the notch",
+        "detail": "Mic and Mac audio are captured together with your permission."
+      },
+      {
+        "title": "Follow the live transcript",
+        "detail": "Speaker labels separate both sides of the conversation."
+      },
+      {
+        "title": "Dictate anywhere",
+        "detail": "Double-tap Command and a pill appears beside your cursor."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "On-device transcription and storage",
+        "Dictation is free even without a licence",
+        "Plain files you own"
+      ],
+      "cons": [
+        "US$79 licence after a five-minute trial",
+        "macOS only"
+      ]
+    }
+  },
+  {
+    "id": 2290,
+    "name": "ROAL",
+    "description": "ROAL is an AI phone host for restaurants. Paste your website or Google Maps link and in about two minutes it has learned your menu and hours, then answers calls, takes pickup and delivery orders from the live menu, quotes a ready time, sends a clean kitchen ticket and hands tricky calls to your team. $0.90 per completed order with no monthly fee.",
+    "category": "Audio",
+    "pricing": "Paid",
+    "url": "https://tryroal.com",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "ROAL is an AI phone host for restaurants. Paste your website or Google Maps link and in about two minutes it has learned your menu and hours, then answers calls, takes pickup and delivery orders from the live menu, quotes a ready time, sends a clean kitchen ticket and hands tricky calls to your team. $0.90 per completed order with no monthly fee.",
+    "last_updated": "2026-10-29",
+    "skill_level": "beginner",
+    "best_for": [
+      "Answering the phone during service",
+      "Taking pickup orders without staff time",
+      "Handling calls in the caller language"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Paste a link",
+        "detail": "Your website or Maps listing is enough to build the phone host."
+      },
+      {
+        "title": "It takes the order",
+        "detail": "Items, modifiers, name and phone are confirmed and a ready time quoted."
+      },
+      {
+        "title": "Ticket to the kitchen",
+        "detail": "Confirmed orders land on the kitchen screen with notes and caller details."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "No monthly fee, $0.90 per completed order",
+        "Learns the menu from your existing site",
+        "Unanswered questions become an answer you add once"
+      ],
+      "cons": [
+        "Restaurant-specific",
+        "Depends on an accurate menu on your site"
+      ]
+    }
+  },
+  {
+    "id": 2291,
+    "name": "Overtone",
+    "description": "Overtone is an open caption format plus the tooling around it: reliable transcription, a video.js plugin with style packs, and a CLI that recuts, burns in and exports word-timed captions. One source file produces captions cut for every screen shape, so vertical and square versions do not need their own transcription pass.",
+    "category": "Audio",
+    "pricing": "Open Source",
+    "url": "https://github.com/lonthq/overtone-captions",
+    "affiliate_link": "",
+    "icon_url": "",
+    "examples": [],
+    "needs_vpn": false,
+    "languages": [
+      "English"
+    ],
+    "description_en": "Overtone is an open caption format plus the tooling around it: reliable transcription, a video.js plugin with style packs, and a CLI that recuts, burns in and exports word-timed captions. One source file produces captions cut for every screen shape, so vertical and square versions do not need their own transcription pass.",
+    "last_updated": "2026-10-29",
+    "skill_level": "intermediate",
+    "best_for": [
+      "Captions that work in vertical and square cuts",
+      "Getting word-timed subtitles from one transcript",
+      "Styling captions consistently across a site"
+    ],
+    "rating": null,
+    "rating_count": null,
+    "use_cases": [
+      {
+        "title": "Transcribe once",
+        "detail": "One source produces word-timed captions in an open format."
+      },
+      {
+        "title": "Recut for each shape",
+        "detail": "The CLI recuts captions for vertical, square and widescreen."
+      },
+      {
+        "title": "Burn in or export",
+        "detail": "Burns captions in or exports them, with a video.js plugin for playback."
+      }
+    ],
+    "pros_cons": {
+      "pros": [
+        "MIT licensed",
+        "Open caption format rather than a proprietary one",
+        "One transcription serves every aspect ratio"
+      ],
+      "cons": [
+        "49 GitHub stars, early project",
+        "CLI and plugin require developer setup"
+      ]
+    }
   }
 ]
