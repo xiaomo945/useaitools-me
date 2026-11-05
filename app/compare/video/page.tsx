@@ -2,16 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import tools from '@/data/tools.json';
 import Footer from '@/app/components/Footer';
-import StarRating from '@/app/components/StarRating';
 import { getAffiliateLink } from '@/lib/affiliate';
 import { generateSlugFromName } from '@/lib/slug';
 
 export const metadata: Metadata = {
   title: 'AI Video Tools Comparison - Use AI Tools',
   description: 'Compare the best AI video editing tools including VEED.io, Runway ML, and more. Find the perfect AI video tool for your video production needs.',
-  // The /compare layout declares a canonical of /compare, which these three
-  // per-category pages inherited - so all three told Google they were copies of
-  // the hub and could never be indexed on their own.
+  // Each category comparison owns its own canonical. The /compare layout used
+  // to declare one for the hub, which made all three of these copies of it.
   alternates: { canonical: 'https://useaitools.me/compare/video' },
 };
 
@@ -23,20 +21,9 @@ type Tool = {
   pricing: string;
   url: string;
   affiliate_link: string;
-  icon_url: string;
-  needs_vpn: boolean;
-  rating?: number | null;
-  rating_count?: number | null;
 };
 
 const videoTools = (tools as unknown as Tool[]).filter(tool => tool.category === 'Video');
-
-const getCategoryColors = () => ({
-  bg: 'bg-indigo-500',
-  bgLight: 'bg-indigo-500/10',
-  text: 'text-indigo-600',
-  border: 'border-indigo-300',
-});
 
 const getPricingColors = (pricing: string) => {
   switch (pricing) {
@@ -54,8 +41,9 @@ const getPricingColors = (pricing: string) => {
 };
 
 export default function VideoComparePage() {
-  const sortedTools = [...videoTools].sort((a, b) => (b.rating || 0) - (a.rating || 0));
-  const recommendedTool = sortedTools[0];
+  // Every rating in tools.json is null, so sorting by rating was a no-op that
+  // still implied a ranking. A-Z is deterministic and makes no claim.
+  const sortedTools = [...videoTools].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-gray-950">
@@ -76,39 +64,20 @@ export default function VideoComparePage() {
           </p>
         </div>
 
-        {/* Recommended Tool Highlight */}
-        {recommendedTool && (
-          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl p-8 mb-12 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
-            <div className="relative z-10">
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center text-3xl font-bold">
-                    {recommendedTool.name.charAt(0)}
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-semibold bg-white/20">
-                        🏆 Top Pick
-                      </span>
-                      <StarRating rating={recommendedTool.rating || 0} count={recommendedTool.rating_count || 0} size="sm" />
-                    </div>
-                    <h3 className="text-2xl font-bold">{recommendedTool.name}</h3>
-                    <p className="text-indigo-100">{recommendedTool.description}</p>
-                  </div>
-                </div>
-                <a
-                  href={getAffiliateLink(recommendedTool)}
-                  target="_blank" rel="noopener noreferrer"
-                  className="px-6 py-3 bg-white text-indigo-600 font-semibold rounded-xl hover:bg-indigo-50 transition-colors whitespace-nowrap"
-                >
-                  Try {recommendedTool.name} Free →
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* Count is derived at render time, never hardcoded. There is no rating
+            data in the catalogue, so this page makes no "Top Pick" claim. */}
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 px-6 py-5 mb-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-slate-600 dark:text-gray-400">
+            <span className="font-semibold text-slate-900 dark:text-white">{sortedTools.length}</span> Video tools, listed A–Z. Open any tool for its full breakdown, pricing and hands-on notes.
+          </p>
+          <Link
+            href="/category/video"
+            prefetch={false}
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold bg-indigo-500/10 text-indigo-600 rounded-lg whitespace-nowrap"
+          >
+            Browse the Video category →
+          </Link>
+        </div>
 
         {/* Comparison Table */}
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-slate-200 dark:border-gray-800 overflow-hidden mb-12">
@@ -120,24 +89,24 @@ export default function VideoComparePage() {
               <thead>
                 <tr className="border-b border-slate-200 dark:border-gray-700">
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-600 dark:text-gray-400">Tool</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-600 dark:text-gray-400">Rating</th>
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-600 dark:text-gray-400">Pricing</th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-600 dark:text-gray-400">Key Features</th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-600 dark:text-gray-400">Action</th>
+                  <th className="px-6 py-4 text-right text-sm font-semibold text-gray-600 dark:text-gray-400">Action</th>
                 </tr>
               </thead>
               <tbody>
                 {sortedTools.map((tool) => {
                   const pricingColors = getPricingColors(tool.pricing);
+                  const toolHref = '/tool/' + generateSlugFromName(tool.name);
+                  const visitHref = getAffiliateLink(tool) || tool.url;
                   return (
                     <tr key={tool.id} className="border-b border-slate-100 dark:border-gray-700 hover:bg-slate-50 dark:hover:bg-gray-800/50 transition-colors">
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
-                          <div className={`w-10 h-10 rounded-xl ${getCategoryColors().bgLight} ${getCategoryColors().text} flex items-center justify-center text-lg font-bold`}>
+                          <div className="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center text-lg font-bold shrink-0">
                             {tool.name.charAt(0)}
                           </div>
-                          <div>
-                            <Link href={`/tool/${generateSlugFromName(tool.name)}`} className="font-semibold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">
+                          <div className="min-w-0">
+                            <Link href={toolHref} prefetch={false} className="font-semibold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400">
                               {tool.name}
                             </Link>
                             <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2">{tool.description}</p>
@@ -145,43 +114,18 @@ export default function VideoComparePage() {
                         </div>
                       </td>
                       <td className="px-6 py-4">
-                        <StarRating rating={tool.rating || 0} count={tool.rating_count || 0} size="sm" />
-                      </td>
-                      <td className="px-6 py-4">
-                        <span className={`px-3 py-1.5 rounded-full text-xs font-semibold ${pricingColors.bg} ${pricingColors.text}`}>
+                        <span className={'px-3 py-1.5 rounded-full text-xs font-semibold ' + pricingColors.bg + ' ' + pricingColors.text}>
                           {tool.pricing}
                         </span>
                       </td>
                       <td className="px-6 py-4">
-                        <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                          <li className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                            AI video editing
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                            Auto-subtitles
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                            Text-to-video
-                          </li>
-                        </ul>
-                      </td>
-                      <td className="px-6 py-4">
-                        <div className="flex justify-center gap-2">
-                          <Link
-                            href={`/tool/${generateSlugFromName(tool.name)}`}
-                            className="px-3 py-2 text-sm font-semibold text-gray-600 dark:text-gray-300 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
-                          >
-                            Details
-                          </Link>
+                        <div className="flex justify-end">
                           <a
-                            href={getAffiliateLink(tool)}
+                            href={visitHref}
                             target="_blank" rel="noopener noreferrer"
-                            className="px-3 py-2 text-sm font-semibold bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors"
+                            className="px-3 py-2 text-sm font-semibold text-white rounded-lg transition-colors bg-indigo-500 hover:bg-indigo-600"
                           >
-                            Visit
+                            Visit →
                           </a>
                         </div>
                       </td>
@@ -198,10 +142,11 @@ export default function VideoComparePage() {
           <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl p-8 text-white">
             <h2 className="text-2xl font-bold mb-4">Find Your Perfect AI Video Tool</h2>
             <p className="text-indigo-100 mb-6 max-w-xl mx-auto">
-              Compare features, pricing, and reviews to find the best AI video editing tool for your production needs.
+              Compare pricing and features, then open any tool for its full breakdown and hands-on notes.
             </p>
             <Link
               href="/category/video"
+              prefetch={false}
               className="inline-flex items-center gap-2 px-6 py-3 bg-white text-indigo-600 font-semibold rounded-xl hover:bg-indigo-50 transition-colors"
             >
               View All Video Tools →

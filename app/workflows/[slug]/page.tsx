@@ -5,7 +5,6 @@ import workflows from '@/data/workflows.json';
 import tools from '@/data/tools.json';
 import Footer from '@/app/components/Footer';
 import Breadcrumbs from '@/app/components/Breadcrumbs';
-import StarRating from '@/app/components/StarRating';
 import { generateSlugFromName } from '@/lib/slug';
 
 type Tool = (typeof tools)[0];
@@ -213,12 +212,6 @@ export default async function WorkflowDetailPage({ params }: { params: Promise<{
                               <p className="text-xs text-slate-500 dark:text-gray-400 leading-relaxed mb-2 line-clamp-2">
                                 {truncate(tool.description_en || tool.description, 80)}
                               </p>
-                              <div className="flex items-center gap-2">
-                                <StarRating rating={tool.rating || 0} size="sm" />
-                                <span className="text-[10px] text-slate-400 dark:text-gray-500">
-                                  ({tool.rating_count || 0})
-                                </span>
-                              </div>
                             </Link>
                           );
                         })}
