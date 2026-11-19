@@ -197,17 +197,28 @@ const nextConfig: NextConfig = {
         headers: securityHeaders,
       },
       {
-        // Static assets - long-term cache
-        source: '/:all*(svg|jpg|jpeg|png|gif|webp|avif|ico|woff|woff2|ttf|eot)',
+        // HTML pages - CDN cache with stale-while-revalidate.
+        //
+        // Previously this was `max-age=0, must-revalidate`, which forced every
+        // request back to the origin. With 776 blog posts + 1400 tool pages
+        // that burned through Vercel Hobby's ISR reads (1M), CDN requests (1M)
+        // and fast origin transfer (10 GB) in a single month.
+        //
+        // All pages are statically pre-rendered at build time
+        // (generateStaticParams + dynamicParams=false), so there is no runtime
+        // ISR to keep warm: content updates ship with the next deployment.
+        // A 1-day CDN cache is therefore safe and cuts origin traffic ~99%.
+        source: '/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            value: 'public, s-maxage=86400, stale-while-revalidate=604800',
           },
         ],
       },
       {
-        // API routes - short cache with revalidation
+        // API routes - short cache. Listed after the generic HTML rule so its
+        // more specific s-maxage wins (later matching headers override earlier).
         source: '/api/:path*',
         headers: [
           {
@@ -217,12 +228,12 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        // HTML pages - no cache, always revalidate
-        source: '/:path*',
+        // Static assets - long-term cache. Last so it overrides the generic rule.
+        source: '/:all*(svg|jpg|jpeg|png|gif|webp|avif|ico|woff|woff2|ttf|eot)',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=0, must-revalidate',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
